@@ -4,16 +4,15 @@ import org.eclipse.emf.mwe.utils.*
 
 /**
  * Workflow for generation of pdf documentation.
- * Requires a reference to the pdflatex executable.
- *
- * Installation of pdflatex in ubuntu: wajig install texlive-latex-base.
  */
 Workflow {
 
     component = @workflow.XDocGenerator {
         modelPath = "xdoc"
         targetDir = "pdfmanual"
+        // must conform to document title
         document = "ModuleStudio User's Guide v0.5.2"
+        // installation of pdflatex in ubuntu: wajig install texlive-latex-base texlive-latex-recommended
         pdfLatex = "/usr/bin/pdflatex"
         // whether to create todo elements or not
         release = true
