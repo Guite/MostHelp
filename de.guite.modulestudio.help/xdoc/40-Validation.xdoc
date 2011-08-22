@@ -401,6 +401,11 @@ table[
         entity at the same time.]
         td[]
     ]
+    tr[
+        td[Entity]
+        td[The length of all entity fields must not be higher than 21845.]
+        td[The limit is 65535 bytes, while UTF-8 requires three bytes for each char.]
+    ]
 ]
 
 section4[Extension-related entity settings]
