@@ -12,7 +12,8 @@ Workflow {
         targetDir = "pdfmanual"
         // must conform to document title
         document = "ModuleStudio User's Guide v0.5.2"
-        // installation of pdflatex in ubuntu: wajig install texlive-latex-base texlive-latex-recommended
+        // installation of pdflatex including all required components in *buntu involves:
+        //     wajig install texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-lang-german texlive-lang-french
         pdfLatex = "/usr/bin/pdflatex"
         // whether to create todo elements or not
         release = true
