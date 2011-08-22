@@ -9,13 +9,11 @@ import org.eclipse.emf.mwe.utils.*
  * Installation of pdflatex in ubuntu: wajig install texlive-latex-base.
  */
 Workflow {
-    bean = StandaloneSetup {
-        platformUri="."
-	}
+
     component = @workflow.XDocGenerator {
         modelPath = "xdoc"
         targetDir = "pdfmanual"
-        document = "00-Main"//""ModuleStudio Documentation"
+        document = "ModuleStudio User's Guide v0.5.2"
         pdfLatex = "/usr/bin/pdflatex"
         // whether to create todo elements or not
         release = true
