@@ -1,10 +1,17 @@
 chapter:Validation[Validation]
 
+a[ValidationReference]
+This chapter explains the intention behind validation in ModuleStudio. The biggest part is a reference
+section listing all validation rules in detail and explains the motivation behind them. You can use
+this reference to search for certain error messages if you want to know more about the background. If
+you are unsure about the terminology used in a description please refer to the ref:Generator[generator chapter]
+in this documentation.
+
 section:ValidationIntroduction[Introduction]
 
-Validation is an essential part of a modeling language. With the help of e[constraints]
-it ensures that certain scenarios can not happen in order to avoid problems
-based on invalid states of model elements.
+Validation is an essential part of a modeling language. By checking the current model against several
+e[constraints] it ensures that certain scenarios can not happen in order to avoid problems based on invalid
+states of model elements.
 
 With the help of validation in ModuleStudio all subsequent components can process
 the given application model without having to revalidate common concerns.
@@ -46,16 +53,9 @@ state accordingly.
 In case live validation has been deactivated you can start a e[manual validation] in
 the main menu, too.
 
-section:ValidationReference[Reference]
+section:ValidationApplicationLayer[Application layer]
 
-This section lists all validation rules in detail and explains the motivation behind them. You can use
-this reference to search for certain error messages if you want to know more about the background. If
-you are unsure about the terminology used in a description please refer to the ref:Generator[generator chapter]
-in this documentation.
-
-section2:ValidationApplicationLayer[Application layer]
-
-section3[Global rules]
+section2[Global rules]
 
 table[
     tr[
@@ -70,7 +70,7 @@ table[
     ]
 ]
 
-section3[Application]
+section2[Application]
 
 table[
     tr[
@@ -167,7 +167,7 @@ table[
     ]
 ]
 
-section3[Model container]
+section2[Model container]
 
 table[
     tr[
@@ -193,7 +193,7 @@ table[
     ]
 ]
 
-section3[Controller container]
+section2[Controller container]
 
 table[
     tr[
@@ -237,7 +237,7 @@ table[
     ]
 ]
 
-section3[View container]
+section2[View container]
 
 table[
     tr[
@@ -258,9 +258,9 @@ table[
     ]
 ]
 
-section2:ValidationModelLayer[Model layer]
+section:ValidationModelLayer[Model layer]
 
-section3[Model container]
+section2[Model container]
 
 table[
     tr[
@@ -294,9 +294,10 @@ table[
     ]
 ]
 
-section3:ValidationEntity[Entity]
+section2:ValidationEntity[Entity]
 
-section4[General entity settings]
+section3[General entity settings]
+
 
 table[
     tr[
@@ -352,7 +353,7 @@ table[
     ]
 ]
 
-section4[Inheritance-related entity settings]
+section3[Inheritance-related entity settings]
 
 table[
     tr[
@@ -408,7 +409,7 @@ table[
     ]
 ]
 
-section4[Extension-related entity settings]
+section3[Extension-related entity settings]
 
 table[
     tr[
@@ -465,9 +466,9 @@ table[
     ]
 ]
 
-section3[Entity field]
+section2[Entity field]
 
-section4[General field settings]
+section3[General field settings]
 
 table[
     tr[
@@ -514,7 +515,7 @@ table[
     ]
 ]
 
-section4:ReservedDBKeywords[Reserved database keywords]
+section3:ReservedDBKeywords[Reserved database keywords]
 
 The following list has been merged and includes therefore all keywords of all supported DBMS.
 
@@ -595,7 +596,7 @@ ul[
     item[zerofill]
 ]
 
-section4[Extension-related field settings]
+section3[Extension-related field settings]
 
 table[
     tr[
@@ -710,7 +711,7 @@ table[
     ]
 ]
 
-section4[Numeric fields]
+section3[Numeric fields]
 
 table[
     tr[
@@ -779,7 +780,7 @@ table[
     ]
 ]
 
-section4[String and text fields]
+section3[String and text fields]
 
 table[
     tr[
@@ -842,7 +843,7 @@ table[
     ]
 ]
 
-section4[Date and time fields]
+section3[Date and time fields]
 
 This section includes rules which apply only for datetime, date and time fields.
 
@@ -891,7 +892,7 @@ table[
     ]
 ]
 
-section4[Other fields]
+section3[Other fields]
 
 table[
     tr[
@@ -907,7 +908,7 @@ table[
 ]
 
 
-section3[Relationship]
+section2[Relationship]
 
 table[
     tr[
@@ -927,7 +928,7 @@ table[
     ]
 ]
 
-section4[Join relationship]
+section3[Join relationship]
 
 Includes basically all relationships in the data layer except inheritance.
 
@@ -988,7 +989,7 @@ table[
     ]
 ]
 
-section4[One to one relationship]
+section3[One to one relationship]
 
 table[
     tr[
@@ -1008,7 +1009,7 @@ table[
     ]
 ]
 
-section4[Many to one relationship]
+section3[Many to one relationship]
 
 table[
     tr[
@@ -1033,7 +1034,7 @@ table[
     ]
 ]
 
-section4[One to many relationship]
+section3[One to many relationship]
 
 table[
     tr[
@@ -1070,7 +1071,7 @@ table[
     ]
 ]
 
-section4[Many to many relationship]
+section3[Many to many relationship]
 
 table[
     tr[
@@ -1115,7 +1116,7 @@ table[
     ]
 ]
 
-section4[Inheritance relationship]
+section3[Inheritance relationship]
 
 table[
     tr[
@@ -1148,7 +1149,7 @@ table[
     ]
 ]
 
-section3[Entity index]
+section2[Entity index]
 
 table[
     tr[
@@ -1199,7 +1200,7 @@ table[
     ]
 ]
 
-section3[Variables]
+section2[Variables]
 
 table[
     tr[
@@ -1255,7 +1256,7 @@ table[
     ]
 ]
 
-section3[Other elements]
+section2[Other elements]
 
 table[
     tr[
@@ -1280,9 +1281,9 @@ table[
     ]
 ]
 
-section2:ValidationControllerLayer[Controller layer]
+section:ValidationControllerLayer[Controller layer]
 
-section3[Controller container]
+section2[Controller container]
 
 table[
     tr[
@@ -1316,7 +1317,7 @@ table[
     ]
 ]
 
-section3[Controller]
+section2[Controller]
 
 table[
     tr[
@@ -1361,7 +1362,7 @@ table[
     ]
 ]
 
-section3[Action]
+section2[Action]
 
 table[
     tr[
@@ -1392,7 +1393,7 @@ table[
     ]
 ]
 
-section3[Action handler]
+section2[Action handler]
 
 table[
     tr[
@@ -1427,7 +1428,7 @@ table[
     ]
 ]
 
-section3[Action event]
+section2[Action event]
 
 table[
     tr[
@@ -1447,7 +1448,7 @@ table[
     ]
 ]
 
-section3[Transition]
+section2[Transition]
 
 table[
     tr[
@@ -1477,9 +1478,9 @@ table[
     ]
 ]
 
-section2:ValidationViewLayer[View layer]
+section:ValidationViewLayer[View layer]
 
-section3[View container]
+section2[View container]
 
 table[
     tr[
@@ -1499,7 +1500,7 @@ table[
     ]
 ]
 
-section3[View]
+section2[View]
 
 table[
     tr[
@@ -1524,7 +1525,7 @@ table[
     ]
 ]
 
-section3[Root panel]
+section2[Root panel]
 
 table[
     tr[
@@ -1554,7 +1555,7 @@ table[
     ]
 ]
 
-section3[Other UI elements]
+section2[Other UI elements]
 
 table[
     tr[
@@ -1594,7 +1595,7 @@ table[
     ]
 ]
 
-section3[Layout order]
+section2[Layout order]
 
 table[
     tr[
@@ -1619,7 +1620,7 @@ table[
     ]
 ]
 
-section2:ValidationWorkflowLayer[Workflow layer]
+section:ValidationWorkflowLayer[Workflow layer]
 
 The workflow layer is not implemented yet. This section is just a dummy for future.
 
