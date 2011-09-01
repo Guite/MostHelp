@@ -1360,6 +1360,12 @@ table[
         td[Names of custom states in one controller must be unique.]
         td[]
     ]
+    tr[
+        td[Controller with actions]
+        td[This controller may not contain a (view | display | edit | delete) action. Please remove it.]
+        td[Appears for special controllers, like account, ajax and search. Those are reserved for special
+        purposes and not intended to be called by the user as normal controllers.]
+    ]
 ]
 
 section2[Action]
