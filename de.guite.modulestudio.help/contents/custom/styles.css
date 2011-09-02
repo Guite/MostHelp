@@ -5,12 +5,12 @@ color: #222222
 }
 
 a {
-color: #ff8700;
+color: #FF0000;
 text-decoration: none;
 }
 
 a:hover, a:active, a:focus {
-color: #ff6600;
+color: #00C8FF;
 text-decoration: underline;
 }
 
@@ -41,12 +41,12 @@ color: #222222;
 table#quicklinks tbody tr td ul li,
 table#quicklinks tbody tr td ul li a {
 font-size: 9px;
-color: #ff8700;
+color: #FF0000;
 text-decoration: none;
 }
 table#quicklinks tbody tr td ul li a:hover,
 table#quicklinks tbody tr td ul li a:focus,
 table#quicklinks tbody tr td ul li a:active {
-color: #ff6600;
+color: #00C8FF;
 text-decoration: underline;
 }
