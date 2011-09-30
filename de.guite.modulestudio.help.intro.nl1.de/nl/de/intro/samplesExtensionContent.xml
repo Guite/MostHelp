@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<introContent>
-  	<extensionContent id="samples-top-left" style="css/style.css" name="Beispiele Extension" path="samples/@">
-		<group style-id="content-group" id="deguitemodulestudio-introLink-group">
-       		<text>Es sind einige Beispielmodelle verfügbar.</text>
-       	</group>
-  	</extensionContent>
-</introContent>
