@@ -453,8 +453,14 @@ section4:GenRefBooleanField[Boolean field]
 
 Represents a field type for storing boolean values.
 
-A boolean field has no fields or references in addition to the common ref:GenRefEntityField[entity
-field] settings.
+A boolean field has the following properties in addition to the common ref:GenRefEntityField[entity
+field] settings:
+
+ul[
+    item[e[ajaxTogglability] - Boolean indicating whether it is possible to switch this flag with ajax
+    or not. If set to e[true] all view and display pages will contain corresponding links instead of
+    only simple state images.]
+]
 
 The generator will treat boolean values as checkbox input elements in ref:GenRefEditAction[edit] pages.
 For the output in ref:GenRefViewAction[view] and ref:GenRefDisplayAction[display] templates the e[yesno]
@@ -569,8 +575,9 @@ string field] settings:
 
 ul[
     item[e[country] - A boolean specifying whether this field represents a country code or not. If set
-    to e[true] this still results in a normal text input element as there is link[http://code.zikula.org/core/ticket/2446][no
-    country selector available yet] in Zikula.]
+    to e[true] a country selector is used in ref:GenRefEditAction[edit] pages. For the output in ref:GenRefViewAction[view]
+    and ref:GenRefDisplayAction[display] templates an output modifier is used to display the full country
+    name instead of the unreadable country code.]
     item[e[htmlcolour] - A boolean specifying whether this field represents a html color code (like #003399)
     or not. If set to e[true] a colour picker is used in ref:GenRefEditAction[edit] pages for convenient
     selection of colour codes.]

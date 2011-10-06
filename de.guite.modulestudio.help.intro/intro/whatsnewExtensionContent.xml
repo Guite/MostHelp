@@ -2,6 +2,26 @@
 <introContent>
   	<extensionContent id="whatsnew-top-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group052">
+            <text>Added possibility to model ajax-based toggling of boolean flags (easy switch in view and display pages).</text>
+            <text>Added option to view action for switching between paginated and full lists.</text>
+            <text>Added menu links to switch between user and admin area.</text>
+            <text>Added missing translation for form label documentation tooltips.</text>
+            <text>Added check for existing and writable upload folders before installing an application.</text>
+            <text>Added meta data of uploaded files (e.g. file size, image dimensions and other things) to xml output templates.</text>
+            <text>Improved country field support by adding form selector plugin and output modifier.</text>
+            <text>Improved boolean setters for more type safety.</text>
+            <text>Added convenience method for easier assignment of additional template vars per object type.</text>
+            <text>Changed pdf processing code to reuse the new dompdf system plugin.</text>
+            <text>Separated generator implementations of entity event handlers by introducing delegates.</text>
+            <text>Refactored handling of controller action arguments to ensure preference against request vars.</text>
+            <text>Readded support for Paginator component for a more reliable compution of pager options.</text>
+            <text>Fixed wrong pagination offset in content type, mailz plugin and generic block.</text>
+            <text>Fixed detail links in rss feed templates (pointed to delete instead display, atom was fine).</text>
+            <text>Fixed wrong check in unique validator method.</text>
+            <text>Decode html entity for template title in display pages.</text>
+            <text>Fixed missing unset of creation repeat property for cancel commands in form handlers.</text>
+            <text>Several bugfixes for trees (ajax operations, repository methods, form plugin for tree selectors).</text>
+            <text>Updated to Eclipse 3.7.1 (Indigo SR1).</text>
             <text>Added support for json templates in the generator.</text>
             <text>Use Imagine image processing library instead of Thumbnails module for creating preview images on demand.</text>
             <text>First version of user manual as reference (very simple version without interaction capabilities).</text>
