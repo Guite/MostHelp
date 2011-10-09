@@ -2,6 +2,7 @@
 <introContent>
   	<extensionContent id="whatsnew-top-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group052">
+            <text>Enhanced model creation wizard by adding a second page for basic application settings.</text>
             <text>Added possibility to model ajax-based toggling of boolean flags (easy switch in view and display pages).</text>
             <text>Added option to view action for switching between paginated and full lists.</text>
             <text>Added menu links to switch between user and admin area.</text>
