@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <introContent>
   	<extensionContent id="whatsnew-top-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
-        <group style-id="content-group" id="deguitemodulestudio-introLink-group052">
+        <group style-id="content-group" id="deguitemodulestudio-introLink-group053">
             <text>Enhanced model creation wizard by adding a second page for basic application settings.</text>
             <text>Added possibility to model ajax-based toggling of boolean flags (easy switch in view and display pages).</text>
             <text>Added option to view action for switching between paginated and full lists.</text>
@@ -23,6 +23,16 @@
             <text>Fixed missing unset of creation repeat property for cancel commands in form handlers.</text>
             <text>Several bugfixes for trees (ajax operations, repository methods, form plugin for tree selectors).</text>
             <text>Updated to Eclipse 3.7.1 (Indigo SR1).</text>
+        </group>
+  	</extensionContent>
+    <extensionContent id="whatsnew-top-right" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
+        <group style-id="content-group" id="news-web" label="MOST News">
+            <contentProvider id="url=http://modulestudio.de/en/news.rss##welcome_items=20##no_news_url=http://modulestudio.de/en/news/##no_news_text=MOST news articles feed" pluginId="org.eclipse.ui.intro" class="org.eclipse.ui.intro.contentproviders.EclipseRSSViewer">
+            </contentProvider>
+        </group>
+    </extensionContent>
+    <extensionContent id="whatsnew-bottom-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
+        <group style-id="content-group" id="deguitemodulestudio-introLink-group052">
             <text>Added support for json templates in the generator.</text>
             <text>Use Imagine image processing library instead of Thumbnails module for creating preview images on demand.</text>
             <text>First version of user manual as reference (very simple version without interaction capabilities).</text>
@@ -59,14 +69,6 @@
             <text>Adapted newest core hook system changes.</text>
             <text>Changes for better support of i18n behavour.</text>
         </group>
-  	</extensionContent>
-    <extensionContent id="whatsnew-top-right" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
-        <group style-id="content-group" id="news-web" label="MOST News">
-            <contentProvider id="url=http://modulestudio.de/en/news.rss##welcome_items=20##no_news_url=http://modulestudio.de/en/news/##no_news_text=MOST news articles feed" pluginId="org.eclipse.ui.intro" class="org.eclipse.ui.intro.contentproviders.EclipseRSSViewer">
-            </contentProvider>
-        </group>
-    </extensionContent>
-    <extensionContent id="whatsnew-bottom-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group051">
             <text>Editors: performance of live validation has been improved by closing a memory leak.</text>
             <text>Many bugfixes and corrections, especially for handling relations with Doctrine.</text>
