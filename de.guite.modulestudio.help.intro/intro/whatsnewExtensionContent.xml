@@ -3,6 +3,14 @@
     <extensionContent id="whatsnew-top-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group054">
             <text>Added import of xml table definitions for migrating existing modules. See the Migrate page for more information.</text>
+            <text>Make sort links in view templates consider the parameter for showing all items instead of paginated list properly.</text>
+            <text>Improved language detection in bootstrap file when using translatable fields.</text>
+            <text>Object actions in admin view templates contain now a preview icon if a user display action exists in the controller model.</text>
+            <text>Fixed errors in Content type, generic block and mailz plugin.</text>
+            <text>Added forgotten string field validation calls.</text>
+            <text>Fixed JavaScript problems for inline editing of related objects linked by many-to-many relationships.</text>
+            <text>Fixed missing generation of view modifier for displaying country names.</text>
+            <text>Updated Imagine pathes for thumbnail generation due to vendor changes.</text>
         </group>
         <group style-id="content-group" id="deguitemodulestudio-introLink-group053">
             <text>Enhanced model creation wizard by adding a second page for basic application settings.</text>
