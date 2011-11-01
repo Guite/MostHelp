@@ -3,6 +3,8 @@
     <extensionContent id="whatsnew-top-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group054">
             <text>Added import of xml table definitions for migrating existing modules. See the Migrate page for more information.</text>
+            <text>It is now possible to use also now as default value for datetime, date and time field types.</text>
+            <text>Validation hooks in form handlers have been armed now (errors cause abortion).</text>
             <text>Added generation of templates for custom controller actions.</text>
             <text>Config variables may contain documentation tooltips now, too.</text>
             <text>Using getOneOrNullResult method for single entity selections.</text>

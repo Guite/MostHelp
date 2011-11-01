@@ -877,18 +877,19 @@ table[
     ]
     tr[
         td[Datetime field]
-        td[The default value for a datetime field must conform to the pattern YYYY-MM-DD HH:MM:SS .]
-        td[]
+        td[The default value for a datetime field must conform to the pattern YYYY-MM-DD HH:MM:SS or
+        now.]
+        td[You can either set a certain value or use e[now] to specify the current timestamp.]
     ]
     tr[
         td[Date field]
-        td[The default value for a date field must conform to the pattern YYYY-MM-DD .]
-        td[]
+        td[The default value for a date field must conform to the pattern YYYY-MM-DD or now.]
+        td[You can either set a certain value or use e[now] to specify today.]
     ]
     tr[
         td[Time field]
-        td[The default value for a time field must conform to the pattern HH:MM:SS .]
-        td[]
+        td[The default value for a time field must conform to the pattern HH:MM:SS or now.]
+        td[You can either set a certain value or use e[now] to specify the current moment.]
     ]
 ]
 
