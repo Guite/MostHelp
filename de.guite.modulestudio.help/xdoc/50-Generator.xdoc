@@ -345,7 +345,7 @@ code[PHP][
 
 One exception for this scheme is ref:GenRefEntityInheritanceStructure[inheritance].
 
-Please note that arbitrary e[filtering is not possible at the moment] until FilterUtil has been link[http://code.zikula.org/core/ticket/3138][upgraded
+Please note that arbitrary e[filtering is not possible at the moment] until FilterUtil has been link[https://github.com/zikula/core/issues/118][upgraded
 to support Doctrine 2].
 
 Whenever you want to change the default implementation you can add corresponding extensions. If you recognise
@@ -618,7 +618,7 @@ searching users by their name. For the output in ref:GenRefViewAction[view] and 
 templates the user name is shown and linked to the corresponding user profile in case a profile module
 has been set in the Settings module administration.
 
-(Note: The implementation of the auto completion should be replaced by a central forms plugin, see link[http://code.zikula.org/core/ticket/2444][this
+(Note: The implementation of the auto completion should be replaced by a central forms plugin, see link[https://github.com/Guite/MostGenerator/issues/86][this
 ticket] for more information.)
 
 section4:GenRefEmailField[Email field]
@@ -780,7 +780,7 @@ A time field has no fields or references in addition to the common ref:GenRefAbs
 date field] settings.
 
 The generator will treat time values as text input elements with a maximum length in ref:GenRefEditAction[edit]
-pages as long as there is link[http://code.zikula.org/core/ticket/2445][no time field available] in Zikula).
+pages as long as there is link[https://github.com/Guite/MostGenerator/issues/87][no time field plugin] implemented).
 For the output in ref:GenRefViewAction[view] and ref:GenRefDisplayAction[display] templates the e[datetime]
 modifier is used to format the time according to the current locale.
 
