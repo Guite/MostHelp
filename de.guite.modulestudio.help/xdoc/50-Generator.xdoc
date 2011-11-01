@@ -234,9 +234,8 @@ ul[
 ]
 
 As there is no view editor available yet this element is not relevant for the generator yet. Instead
-it only creates default templates foreach existing ref:GenRefAction[controller action] and ref:GenRefEntity[entity],
-as well as some common templates which are included or required for some extensions. There are no templates
-generated though for ref:GenRefCustomAction[custom actions] as this has not been implemented yet.
+it only creates default templates for each existing ref:GenRefAction[controller action] and ref:GenRefEntity[entity],
+as well as some common templates which are included or required for some extensions.
 
 section3:GeneratorApplicationCombinations[Combinations and edge cases]
 
@@ -1429,11 +1428,12 @@ ul[
 ]
 
 The generator creates sensitive default implementations for all action types except custom actions which
-are not treated very well yet.
+do only return an empty template.
 
 It is possible to create special versions for all templates by adding a suffix which will be assigned
 by the e[tpl] parameter. For example you can call e[display_myversion.tpl] by adding e[&tpl=myversion]
-to the url.
+to the url. Note this additional override capability is mainly intended for all actions which have a
+template for each entity and has therefore not been considered for main and custom actions yet.
 
 section4:GenRefMainAction[Main action]
 
@@ -1464,7 +1464,7 @@ really wants to delete the given entity.
 section4:GenRefCustomAction[Custom action]
 
 A custom action is only created as a mockup which contains the permission check as well as some other
-stuff which is always required. It is not complete yet, as for example a template file is missing.
+stuff which is always required, like returning the output from a template fetched by the view.
 
 section4:GenRefActionHandler[Action handler]
 
@@ -1553,8 +1553,6 @@ section2:GeneratorViewLayer[View layer]
 As there is no view editor available yet all the following elements are not relevant for the generator
 yet. Instead it only creates default templates foreach existing ref:GenRefAction[controller action] and
 ref:GenRefEntity[entity], as well as some common templates which are included or required for some extensions.
-There are no templates generated though for ref:GenRefCustomAction[custom actions] as this has not been
-implemented yet.
 
 section3:GeneratorViewElements[Language elements]
 

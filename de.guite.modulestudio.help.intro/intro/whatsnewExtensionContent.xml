@@ -3,6 +3,14 @@
     <extensionContent id="whatsnew-top-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group054">
             <text>Added import of xml table definitions for migrating existing modules. See the Migrate page for more information.</text>
+            <text>Added generation of templates for custom controller actions.</text>
+            <text>Config variables may contain documentation tooltips now, too.</text>
+            <text>Using getOneOrNullResult method for single entity selections.</text>
+            <text>Improved formatting of action icons in list views.</text>
+            <text>Moved form handler base class location.</text>
+            <text>Added standard fields to list of allowed sorting criteria.</text>
+            <text>Parameter in image creation util class to be able to crop thumbnails individually, too.</text>
+            <text>Bugfixes for error handling and post processing in form handlers.</text>
             <text>Make sort links in view templates consider the parameter for showing all items instead of paginated list properly.</text>
             <text>Improved language detection in bootstrap file when using translatable fields.</text>
             <text>Object actions in admin view templates contain now a preview icon if a user display action exists in the controller model.</text>
