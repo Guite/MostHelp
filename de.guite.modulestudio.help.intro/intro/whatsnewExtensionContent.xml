@@ -3,6 +3,10 @@
     <extensionContent id="whatsnew-top-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group054">
             <text>Added import of xml table definitions for migrating existing modules. See the Migrate page for more information.</text>
+            <text>A new selection api simplifies data selection in controller layers.</text>
+            <text>Entity actions are now centrally collected for easier extendability and reusability.</text>
+            <text>Bugfix for correct initialisation of incoming m:n relations.</text>
+            <text>Bugfixes for user fields in combination with tree root nodes and edit forms.</text>
             <text>It is now possible to use also now as default value for datetime, date and time field types.</text>
             <text>Validation hooks in form handlers have been armed now (errors cause abortion).</text>
             <text>Added generation of templates for custom controller actions.</text>
