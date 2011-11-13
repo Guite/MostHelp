@@ -502,7 +502,7 @@ ul[
 
 In ref:GenRefEditAction[edit] pages the generator will use int input elements as well as validation
 on client and server side. For the output in ref:GenRefViewAction[view] and ref:GenRefDisplayAction[display]
-the value will just be shown.
+templates the value will just be shown.
 
 section4:GenRefDecimalField[Decimal field]
 
@@ -524,7 +524,7 @@ ul[
 
 In ref:GenRefEditAction[edit] pages the generator will use float input elements as well as validation
 on client and server side. For the output in ref:GenRefViewAction[view] and ref:GenRefDisplayAction[display]
-the value will just be shown using the e[formatnumber] modifier.
+templates the value will just be shown using the e[formatnumber] modifier.
 
 section4:GenRefFloatField[Float field]
 
@@ -545,7 +545,7 @@ ul[
 
 In ref:GenRefEditAction[edit] pages the generator will use float input elements as well as validation
 on client and server side. For the output in ref:GenRefViewAction[view] and ref:GenRefDisplayAction[display]
-the value will just be shown using the e[formatnumber] modifier.
+pages the value will just be shown using the e[formatnumber] modifier.
 
 section4:GenRefAbstractStringField[Abstract string field]
 
@@ -634,7 +634,7 @@ ul[
 
 In ref:GenRefEditAction[edit] pages the generator will use email input elements as well as validation
 on client and server side. For the output in ref:GenRefViewAction[view] and ref:GenRefDisplayAction[display]
-an icon will be shown linking the email address.
+pages an icon will be shown linking the email address.
 
 section4:GenRefUrlField[Url field]
 
@@ -649,7 +649,7 @@ ul[
 
 In ref:GenRefEditAction[edit] pages the generator will use url input elements as well as validation
 on client and server side. For the output in ref:GenRefViewAction[view] and ref:GenRefDisplayAction[display]
-an icon will be shown linking the url.
+pages an icon will be shown linking the url.
 
 section4:GenRefUploadField[Upload field]
 
@@ -670,7 +670,7 @@ In ref:GenRefEditAction[edit] pages the generator will use upload input elements
 the upload will be required when creating a new entity, but not when editing an existing one. If a field
 is optional (not mandatory) then it will be possible to delete existing uploads on editing.
 
-For the output in ref:GenRefViewAction[view] and ref:GenRefDisplayAction[display]
+For the output in ref:GenRefViewAction[view] and ref:GenRefDisplayAction[display] pages
 a download link is shown together with the filesize. If the file is an image then a small version of
 it is shown instead of a text link (on edit pages too by the way).
 
@@ -699,6 +699,48 @@ ul[
 
 Within the generated e[upload handler] class one of those strategies will be selected depending on from
 which entity the currently treated upload file.
+
+section4:GenRefListField[List field]
+
+Represents a field type for realising a selection of list values.
+
+A list field has the following properties in addition to the common ref:GenRefAbstractStringField[abstract
+string field] settings:
+
+ul[
+    item[e[length] - The length of this field. Default value is 255.]
+    item[e[multiple] - A boolean specifying whether multiple items can be selected concurrently or not.
+    The default value is e[false].]
+    item[e[useChecks] - A boolean to enable a checkbox list (only if e[multiple] is set to e[true]). The
+    default value is e[false].]
+]
+
+A list field may have the following references:
+
+ul[
+    item[e[items] - Allows referencing one or more ref:GenRefListFieldItem[items].]
+]
+
+The generator creates an additional class for handling the available list items centrally. Based on this
+information ref:GenRefEditAction[edit] pages provide either a dropdown list (for single or multiple values
+depending on the e[multiple] property) or a checkbox list (if e[multiple] and e[useChecks] are both set
+to e[true]). For the output in ref:GenRefViewAction[view] and ref:GenRefDisplayAction[display] templates
+there is a modifier generated which cares for showing the names instead of the raw option values.
+
+section4:GenRefListFieldItem[List field item]
+
+Represents an entry for a list field.
+
+It includes the following properties:
+
+ul[
+    item[e[default] - A boolean specifying whether this entry is selected by default or not. The default
+    value is false.]
+    item[e[name] - Name of the item.]
+]
+
+See the ref:GenRefListField[list field] section for a description of what the generator does with those
+elements.
 
 section4:GenRefArrayField[Array field]
 
