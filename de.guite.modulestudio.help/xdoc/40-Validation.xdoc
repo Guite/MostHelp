@@ -906,6 +906,16 @@ table[
         td[There must not exist a field named fooMeta because this is reserved for an automatic field storing meta data for this upload.]
         td[]
     ]
+    tr[
+        td[List field]
+        td[The list must contain at least one item.]
+        td[]
+    ]
+    tr[
+        td[List field]
+        td[The list is not set to multiple and may therefore only contain one item with default property set to true.]
+        td[]
+    ]
 ]
 
 
