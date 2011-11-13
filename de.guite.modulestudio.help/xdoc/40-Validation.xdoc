@@ -916,6 +916,12 @@ table[
         td[The list is not set to multiple and may therefore only contain one item with default property set to true.]
         td[]
     ]
+    tr[
+        td[List field]
+        td[Only lists with multiple selections can consist of checkboxes.]
+        td[Occurs if you set e[useChecks] to e[true], but not e[multiple]. Checkbox lists with only one
+        selection allowed are postponed to a future version.]
+    ]
 ]
 
 
