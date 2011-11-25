@@ -6,6 +6,7 @@
             <text>Further improvements for new model creation wizard.</text>
             <text>It is now possible to describe dropdowns or list fields in the model (simple lists, lists with multiple selection, checkbox lists).</text>
             <text>A new selection api simplifies data selection in controller layers.</text>
+            <text>Fixed wrong regular expression in date and datetime validation inside MOST.</text>
             <text>Entity actions are now centrally collected for easier extendability and reusability.</text>
             <text>Bugfix for correct initialisation of incoming m:n relations.</text>
             <text>Bugfixes for user fields in combination with tree root nodes and edit forms.</text>
