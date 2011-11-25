@@ -426,7 +426,7 @@ ul[
     item[e[translatable] - A boolean specifying whether this field is translatable or not. The default
     value is e[false]. If at least one field in an entity is translatable the generator creates an additional
     class for managing the translation entities. Overall support for translations in the application
-    is almost finished (see link[https://github.com/Guite/MostGenerator/issues/31][#31] for more information).]
+    should get you started.]
     item[e[unique] - A boolean specifying whether this field is unique or not. The default value is e[false].
     If set to e[true] then an additional validator cares for enforcing the unique constraint on client
     and server level.]
