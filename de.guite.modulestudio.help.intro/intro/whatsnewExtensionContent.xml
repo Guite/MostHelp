@@ -12,6 +12,7 @@
             <text>Bugfixes for user fields in combination with tree root nodes and edit forms.</text>
             <text>It is now possible to use also now as default value for datetime, date and time field types.</text>
             <text>Validation hooks in form handlers have been armed now (errors cause abortion).</text>
+            <text>Form handler refactoring outsourcing common code parts into generic parent class.</text>
             <text>Added generation of templates for custom controller actions.</text>
             <text>Config variables may contain documentation tooltips now, too.</text>
             <text>Using getOneOrNullResult method for single entity selections.</text>
