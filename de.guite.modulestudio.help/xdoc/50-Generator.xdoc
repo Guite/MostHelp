@@ -1006,7 +1006,7 @@ It includes the following properties in addition to the common ref:GenRefRelatio
 
 ul[
     item[e[cascade] - The ref:GenRefCascadeType[cascade type] used on application level.]
-    item[e[editType] - The ref:GenRefRelationEditType[edit type] for this association.]
+    item[e[editType] - The ref:GenRefRelationEditType[edit type] for this association, only applicable if e[useAutoCompletion] is set to e[true].]
     item[e[fetchType] - The ref:GenRefRelationFetchType[fetch type] for this association.]
     item[e[nullable] - A boolean specifying whether the field for this relationship may be null or not.
     The default value is e[true].]
@@ -1014,6 +1014,8 @@ ul[
     or e[SETNULL]).]
     item[e[onDelete] - String for optional delete cascade options on database level (for example e[RESTRICT]
     or e[SETNULL]).]
+    item[e[useAutoCompletion] - If set to e[true] the generator will create an auto completion field instead
+    of a normal dropdown select field.]
     item[e[sourceAlias] - The alias for the source entity, required to have multiple associations between
     the same entities. The name should reflect the cardinality on the source side (singular or plural
     forms) depending on the relationship type. As with all names camel case is preferred, for example

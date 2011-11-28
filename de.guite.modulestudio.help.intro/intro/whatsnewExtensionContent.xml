@@ -8,6 +8,7 @@
             <text>A new selection api simplifies data selection in controller layers.</text>
             <text>Fixed wrong regular expression in date and datetime validation inside MOST.</text>
             <text>Entity actions are now centrally collected for easier extendability and reusability.</text>
+            <text>Added join relationship property to become able to distinguish between representations with normal dropdown lists and auto completion fields.</text>
             <text>Bugfix for correct initialisation of incoming m:n relations.</text>
             <text>Bugfixes for user fields in combination with tree root nodes and edit forms.</text>
             <text>It is now possible to use also now as default value for datetime, date and time field types.</text>
