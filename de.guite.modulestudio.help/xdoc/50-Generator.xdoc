@@ -514,6 +514,8 @@ settings:
 ul[
     item[e[aggregationField] - A boolean specifying whether this field should act as an aggregate field.
     If set to e[true] the generator creates special methods for aggregation.]
+    item[e[currency] - A boolean specifying whether this field should be treated as currency. If set to
+    e[true] the generator will use the e[formatcurrency] modifier instead of e[formatnumber] during output.]
     item[e[length] - The length of this field. Default value is 10.]
     item[e[maxValue] - Maximal value. If set to a value other than 0 then a validator will enforce this
     constraint on client and server side.]
@@ -536,6 +538,8 @@ settings:
 ul[
     item[e[aggregationField] - A boolean specifying whether this field should act as an aggregate field.
     If set to e[true] the generator creates special methods for aggregation.]
+    item[e[currency] - A boolean specifying whether this field should be treated as currency. If set to
+    e[true] the generator will use the e[formatcurrency] modifier instead of e[formatnumber] during output.]
     item[e[length] - The length of this field. Default value is 10.]
     item[e[maxValue] - Maximal value. If set to a value other than 0 then a validator will enforce this
     constraint on client and server side.]
