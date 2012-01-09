@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <introContent>
     <extensionContent id="whatsnew-top-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
+        <group style-id="content-group" id="deguitemodulestudio-introLink-group055">
+            <text>Entities with Geographical extension show a map in display and edit templates now.</text>
+            <text>KML export functionality for entities with Geographical extension.</text>
+            <text>Float and decimal fields now have a currency flag property.</text>
+            <text>Fixed storage of attributes, outsourced attribute field names into own method for easier customisation.</text>
+            <text>Fixed installation of list vars by using array serialisation only for multiple lists.</text>
+            <text>Allow value of 0 for list fields.</text>
+            <text>Fixed problems with creating root nodes in nested sets if length of title or description fields are too small.</text>
+            <text>Fixed definition and handling of many-to-many relations.</text>
+            <text>Fixed id field list retrieval in delete action.</text>
+            <text>Fixed repeated object creation.</text>
+            <text>Fixed modifier for displaying list field entries.</text>
+            <text>Fixed logical error in validation method isStringNotContaining.</text>
+            <text>Fixed usage of Gettext in JavaScript.</text>
+            <text>Fixed list field handling in form handlers.</text>
+            <text>Fixed values for precision and scale of coordinate fields.</text>
+            <text>Fixed query for retrieving related objects during editing.</text>
+            <text>Fixed validation of string fields with regular expressions.</text>
+        </group>
         <group style-id="content-group" id="deguitemodulestudio-introLink-group054">
             <text>Added import of xml table definitions for migrating existing modules. See the Migrate page for more information.</text>
             <text>Further improvements for new model creation wizard.</text>
@@ -31,6 +50,14 @@
             <text>Fixed missing generation of view modifier for displaying country names.</text>
             <text>Updated Imagine pathes for thumbnail generation due to vendor changes.</text>
         </group>
+  	</extensionContent>
+    <extensionContent id="whatsnew-top-right" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
+        <group style-id="content-group" id="news-web" label="MOST News">
+            <contentProvider id="url=http://modulestudio.de/en/news.rss##welcome_items=20##no_news_url=http://modulestudio.de/en/news/##no_news_text=MOST news articles feed" pluginId="org.eclipse.ui.intro" class="org.eclipse.ui.intro.contentproviders.EclipseRSSViewer">
+            </contentProvider>
+        </group>
+    </extensionContent>
+    <extensionContent id="whatsnew-bottom-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group053">
             <text>Enhanced model creation wizard by adding a second page for basic application settings.</text>
             <text>Added possibility to model ajax-based toggling of boolean flags (easy switch in view and display pages).</text>
@@ -54,14 +81,6 @@
             <text>Several bugfixes for trees (ajax operations, repository methods, form plugin for tree selectors).</text>
             <text>Updated to Eclipse 3.7.1 (Indigo SR1).</text>
         </group>
-  	</extensionContent>
-    <extensionContent id="whatsnew-top-right" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
-        <group style-id="content-group" id="news-web" label="MOST News">
-            <contentProvider id="url=http://modulestudio.de/en/news.rss##welcome_items=20##no_news_url=http://modulestudio.de/en/news/##no_news_text=MOST news articles feed" pluginId="org.eclipse.ui.intro" class="org.eclipse.ui.intro.contentproviders.EclipseRSSViewer">
-            </contentProvider>
-        </group>
-    </extensionContent>
-    <extensionContent id="whatsnew-bottom-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group052">
             <text>Added support for json templates in the generator.</text>
             <text>Use Imagine image processing library instead of Thumbnails module for creating preview images on demand.</text>
