@@ -1009,7 +1009,8 @@ Collects all foreign key and join relationships.
 It includes the following properties in addition to the common ref:GenRefRelationship[relationship] settings:
 
 ul[
-    item[e[cascade] - The ref:GenRefCascadeType[cascade type] used on application level.]
+    item[e[cascade] - The ref:GenRefCascadeType[cascade type] used on application level from source view.]
+    item[e[cascadeReverse] - The ref:GenRefCascadeType[cascade type] used on application level from target view (only for bidirectional relationships).]
     item[e[editType] - The ref:GenRefRelationEditType[edit type] for this association, only applicable if e[useAutoCompletion] is set to e[true].]
     item[e[fetchType] - The ref:GenRefRelationFetchType[fetch type] for this association.]
     item[e[nullable] - A boolean specifying whether the field for this relationship may be null or not.
