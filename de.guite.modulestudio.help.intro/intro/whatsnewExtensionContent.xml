@@ -8,20 +8,29 @@
             <text>Fixed storage of attributes, outsourced attribute field names into own method for easier customisation.</text>
             <text>Fixed installation of list vars by using array serialisation only for multiple lists.</text>
             <text>Allow value of 0 for list fields.</text>
+            <text>Use text data type for text fields again.</text>
             <text>Fixed problems with creating root nodes in nested sets if length of title or description fields are too small.</text>
             <text>Fixed definition and handling of many-to-many relations.</text>
+            <text>AutoComplete bugfixes for many-to-many and one-to-many relations.</text>
             <text>Further fixes for relation handling during edit.</text>
+            <text>Removed obsolete generation of entity classes for m:n reference tables.</text>
             <text>Bugfix for deleting entities with optional upload fields.</text>
+            <text>Fixed wrong case keyword for status message determination in edit forms.</text>
+            <text>Various bugfixes related with version fields and optimistic locking in the form handlers and validators.</text>
+            <text>Added missing tooltip declaration in config templates.</text>
             <text>Fixed id field list retrieval in delete action.</text>
             <text>Fixed repeated object creation.</text>
             <text>Fixed modifier for displaying list field entries.</text>
             <text>Fixed logical error in validation method isStringNotContaining.</text>
             <text>Fixed usage of Gettext in JavaScript.</text>
+            <text>Fixed obsolete condition for display hooks output in edit templates.</text>
             <text>Fixed list field handling in form handlers as well as in the output modifier.</text>
             <text>Fixed values for precision and scale of coordinate fields.</text>
             <text>Fixed query for retrieving related objects during editing.</text>
             <text>Fixed validation of string fields with regular expressions.</text>
-            <text>Many minor bugfixes.</text>
+            <text>Removed wrong application of client-side validation to input buttons.</text>
+            <text>Also for form plugins there are base classes generated now, for easier extensibility and customisability.</text>
+            <text>Many minor bugfixes und Refaktorisierungen (e.g. request object usage).</text>
         </group>
         <group style-id="content-group" id="deguitemodulestudio-introLink-group054">
             <text>Added import of xml table definitions for migrating existing modules. See the Migrate page for more information.</text>
