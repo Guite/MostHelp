@@ -30,7 +30,7 @@
             <text>Fixed validation of string fields with regular expressions.</text>
             <text>Removed wrong application of client-side validation to input buttons.</text>
             <text>Also for form plugins there are base classes generated now, for easier extensibility and customisability.</text>
-            <text>Many minor bugfixes und Refaktorisierungen (e.g. request object usage).</text>
+            <text>Many minor bugfixes und refactorings (e.g. request object usage).</text>
         </group>
         <group style-id="content-group" id="deguitemodulestudio-introLink-group054">
             <text>Added import of xml table definitions for migrating existing modules. See the Migrate page for more information.</text>
