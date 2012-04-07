@@ -34,7 +34,16 @@
             <text>Also for form plugins there are base classes generated now, for easier extensibility and customisability.</text>
             <text>Many minor bugfixes und refactorings in the generator (e.g. request object usage).</text>
             <text>Removed custom beautifier component as it caused more problems than benefits.</text>
+            <text>Updated to Eclipse 3.7.2 (Indigo SR2).</text>
         </group>
+  	</extensionContent>
+    <extensionContent id="whatsnew-top-right" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
+        <group style-id="content-group" id="news-web" label="MOST News">
+            <contentProvider id="url=http://modulestudio.de/en/news.rss##welcome_items=20##no_news_url=http://modulestudio.de/en/news/##no_news_text=MOST news articles feed" pluginId="org.eclipse.ui.intro" class="org.eclipse.ui.intro.contentproviders.EclipseRSSViewer">
+            </contentProvider>
+        </group>
+    </extensionContent>
+    <extensionContent id="whatsnew-bottom-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group054">
             <text>Added import of xml table definitions for migrating existing modules. See the Migrate page for more information.</text>
             <text>Further improvements for new model creation wizard.</text>
@@ -64,85 +73,6 @@
             <text>Fixed JavaScript problems for inline editing of related objects linked by many-to-many relationships.</text>
             <text>Fixed missing generation of view modifier for displaying country names.</text>
             <text>Updated Imagine pathes for thumbnail generation due to vendor changes.</text>
-        </group>
-  	</extensionContent>
-    <extensionContent id="whatsnew-top-right" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
-        <group style-id="content-group" id="news-web" label="MOST News">
-            <contentProvider id="url=http://modulestudio.de/en/news.rss##welcome_items=20##no_news_url=http://modulestudio.de/en/news/##no_news_text=MOST news articles feed" pluginId="org.eclipse.ui.intro" class="org.eclipse.ui.intro.contentproviders.EclipseRSSViewer">
-            </contentProvider>
-        </group>
-    </extensionContent>
-    <extensionContent id="whatsnew-bottom-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
-        <group style-id="content-group" id="deguitemodulestudio-introLink-group053">
-            <text>Enhanced model creation wizard by adding a second page for basic application settings.</text>
-            <text>Added possibility to model ajax-based toggling of boolean flags (easy switch in view and display pages).</text>
-            <text>Added option to view action for switching between paginated and full lists.</text>
-            <text>Added menu links to switch between user and admin area.</text>
-            <text>Added missing translation for form label documentation tooltips.</text>
-            <text>Added check for existing and writable upload folders before installing an application.</text>
-            <text>Added meta data of uploaded files (e.g. file size, image dimensions and other things) to xml output templates.</text>
-            <text>Improved country field support by adding form selector plugin and output modifier.</text>
-            <text>Improved boolean setters for more type safety.</text>
-            <text>Added convenience method for easier assignment of additional template vars per object type.</text>
-            <text>Changed pdf processing code to reuse the new dompdf system plugin.</text>
-            <text>Separated generator implementations of entity event handlers by introducing delegates.</text>
-            <text>Refactored handling of controller action arguments to ensure preference against request vars.</text>
-            <text>Readded support for Paginator component for a more reliable compution of pager options.</text>
-            <text>Fixed wrong pagination offset in content type, mailz plugin and generic block.</text>
-            <text>Fixed detail links in rss feed templates (pointed to delete instead display, atom was fine).</text>
-            <text>Fixed wrong check in unique validator method.</text>
-            <text>Decode html entity for template title in display pages.</text>
-            <text>Fixed missing unset of creation repeat property for cancel commands in form handlers.</text>
-            <text>Several bugfixes for trees (ajax operations, repository methods, form plugin for tree selectors).</text>
-            <text>Updated to Eclipse 3.7.1 (Indigo SR1).</text>
-        </group>
-        <group style-id="content-group" id="deguitemodulestudio-introLink-group052">
-            <text>Added support for json templates in the generator.</text>
-            <text>Use Imagine image processing library instead of Thumbnails module for creating preview images on demand.</text>
-            <text>First version of user manual as reference (very simple version without interaction capabilities).</text>
-            <text>Comprehensive update of modeling language and generator for support of Doctrine 2.1 in the data layer. This includes many new features, like for example the separation of unidirectional and bidirectional associations or the ability to have ordered and indexed relationships. In the generator business entity and model record layers have been merged to one entity layer. This reduces much code and improves understandability as well as the overall application structure. Also we added a new validator framework as well as other functions to keep as much extensions as possible.</text>
-            <text>It is now possible to unset optional date values during editing an existing entity.</text>
-            <text>Added blacklist for dangerous file formats which are always blocked on upload for security.</text>
-            <text>Updated to Eclipse 3.7 (Indigo).</text>
-            <text>Fixed wrong property naming for feature license links on about page.</text>
-            <text>Categories in the properties view for better overview of available properties.</text>
-            <text>Description for all properties (visible in the status line at the bottom of the window).</text>
-            <text>Activated multiline editor for generic documentation field.</text>
-            <text>Support for other output formats (rss and atom feeds, csv list, xml markup).</text>
-            <text>Support for language fields. These can be used like country or htmlcolour fields by activating the corresponding string field properties.</text>
-            <text>Fixed wrong usage of Gettext in some form handler error messages.</text>
-            <text>Repaired error on recurring update of relations.</text>
-            <text>Bugfix for initialisation of boolean module variables.</text>
-            <text>Whitelist with different redirect codes for flexible redirects in edit form handlers. Usable with redirectTo parameter in the edit links.</text>
-            <text>Invisible array fields storing meta data information for upload fields.</text>
-            <text>Validator classes for business entities providing common helper methods and possibility for custom checks.</text>
-            <text>Ajax-based checks for direct feedback during editing content in unique fields.</text>
-            <text>Flexible short url support based on a powerful routing, dynamic replacements and different configurations of sluggable behavior.</text>
-            <text>Changed default value for license field from GPL to LGPL.</text>
-            <text>Thumbnail images are now deleted together with their original images.</text>
-            <text>Possibility to delete upload files without uploading a new file.</text>
-            <text>Added html5 geolocation support for determination of default coordinates when using Geograhical behavior.</text>
-            <text>Updated module layout to conform to default structure (main folders src and tests).</text>
-            <text>Added colour picker support for string fields with htmlcolor set to true.</text>
-            <text>Added tree hierarchy management for entities with nested sets.</text>
-            <text>Manual editing of slugs (permalinks) if sluggableCanUpdate is set to true.</text>
-            <text>Documentation cartridge has been removed as it will be contained in reporting.</text>
-            <text>Generation does now automatically export all diagrams in various image formats.</text>
-            <text>The reports "documentation" and "modelInfos" are now multilingual.</text>
-            <text>Support for all common core event listeners.</text>
-            <text>Adapted newest core hook system changes.</text>
-            <text>Changes for better support of i18n behavour.</text>
-        </group>
-        <group style-id="content-group" id="deguitemodulestudio-introLink-group051">
-            <text>Editors: performance of live validation has been improved by closing a memory leak.</text>
-            <text>Many bugfixes and corrections, especially for handling relations with Doctrine.</text>
-            <text>Factories for business entities and collections: for each application a factory class is generated now, with which instantiation of new business objects is reduced to one line of code. This factory receives also the context from which the object has been asked for. For example this can be an action, a form handler or also a content type. Therewith it is possible to use different business classes depending on the context in specialisations of this factory class.</text>
-            <text>Improved handling of user fields: if one has user fields in an entity, editing these fields is now done with an auto complete function in the forms.</text>
-            <text>Handling upload fields with different possible settings in the model: you can now model different settings for upload fields, for example the allowed file extensions, the name of the subfolder storing the files or the scheme for naming uploaded files. The generator creates a complete upload handling from that, for images including support for the Thumbnail Module.</text>
-            <text>Managing relations: the handling of relations has been overhauled completely, particularly in the edit forms. When editing an entity it is possible to choose, reference and manage (inline editing) other objects with auto complete fields. Each relation has a new property called "edit type" on modeling level. With that one can define on which side of the relation which actions should be possible.</text>
-            <text>Improved ajax support: beside the Zikula.ImageViewer also the Zikula.UI library is used. When displaying and editing objects referenced objects are edited or embedded with it.</text>
-            <text>Direct validation: when editing entities also client-side validation with validation.js is supported for some field types.</text>
-            <text>Description of elements: each model element has a new field for functional documentation. In the main generator this information is only used for the application itself (module description), entities (description text at the top of list views) and their fields (Zikula.UI tooltips for labels in edit forms) at the moment.</text>
         </group>
     </extensionContent>
     <extensionContent id="whatsnew-bottom-right" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
