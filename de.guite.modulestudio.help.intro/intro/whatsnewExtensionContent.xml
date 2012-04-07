@@ -27,6 +27,7 @@
             <text>Fixed list field handling in form handlers as well as in the output modifier.</text>
             <text>Fixed values for precision and scale of coordinate fields.</text>
             <text>Variables reserved in Zikula are now checked not only for field names, but also for entity names.</text>
+            <text>Whitespaces are allowed now for list field entries.</text>
             <text>Fixed query for retrieving related objects during editing.</text>
             <text>Fixed validation of string fields with regular expressions.</text>
             <text>Removed wrong application of client-side validation to input buttons.</text>
