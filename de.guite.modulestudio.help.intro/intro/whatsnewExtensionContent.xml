@@ -5,6 +5,7 @@
             <text>Entities with Geographical extension show a map in display and edit templates now.</text>
             <text>KML export functionality for entities with Geographical extension.</text>
             <text>Float and decimal fields now have a currency flag property.</text>
+            <text>There are two properties for cascade settings now, one for each relation side.</text>
             <text>Fixed storage of attributes, outsourced attribute field names into own method for easier customisation.</text>
             <text>Fixed installation of list vars by using array serialisation only for multiple lists.</text>
             <text>Allow value of 0 for list fields.</text>
