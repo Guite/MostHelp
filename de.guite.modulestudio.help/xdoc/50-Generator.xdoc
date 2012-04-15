@@ -83,7 +83,6 @@ ol[
     item[Perform validation.]
     item[Transformation to add primary and foreign key fields.]
     item[Call generator inner workflow for each selected cartridge.]
-    item[Call code beautifier (if zclassic cartridge is selected).]
 ]
 
 section:GeneratorReference[Generator reference]
