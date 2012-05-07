@@ -667,6 +667,7 @@ ul[
     item[e[length] - The length of this field. Default value is 255.]
     item[e[namingScheme] - Defines how uploaded files ref:GenRefUploadNamingScheme[are named].]
     item[e[subFolderName] - Name of sub folder for storing uploaded files. If this is empty the field name will be used as folder name.]
+    item[e[allowedFileSize] - Maximum file size in bytes, default is 0 for no limit.]
 ]
 
 In ref:GenRefEditAction[edit] pages the generator will use upload input elements. If a field is mandatory
