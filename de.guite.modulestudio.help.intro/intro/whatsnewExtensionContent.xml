@@ -8,6 +8,7 @@
             <text>There are two properties for cascade settings now, one for each relation side.</text>
             <text>Using Zikula.UI.Panels in display and edit pages if they become huge.</text>
             <text>Actions in view and display pages are now presented with context menus (similar like in tree management pages).</text>
+            <text>Added a quick navigation form for view pages allowing for filtering, searching and sorting the list.</text>
             <text>Fixed storage of attributes, outsourced attribute field names into own method for easier customisation.</text>
             <text>Fixed installation of list vars by using array serialisation only for multiple lists.</text>
             <text>Allow value of 0 for list fields.</text>
@@ -37,6 +38,7 @@
             <text>Fixed validation of string fields with regular expressions.</text>
             <text>Removed wrong application of client-side validation to input buttons.</text>
             <text>Also for form plugins there are base classes generated now, for easier extensibility and customisability.</text>
+            <text>Performance optimisations for the shorturl support.</text>
             <text>Many minor bugfixes und refactorings in the generator (e.g. request object usage).</text>
             <text>Removed custom beautifier component as it caused more problems than benefits.</text>
             <text>Updated to Eclipse 3.7.2 (Indigo SR2).</text>
