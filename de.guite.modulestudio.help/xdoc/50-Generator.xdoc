@@ -281,7 +281,7 @@ ul[
     on categories implemented yet.]
     item[e[changeTrackingPolicy] - How change detection is being done (see ref:GenRefEntityChangeTrackingPolicy[below]).
     The default value is e[DEFERRED_IMPLICIT].]
-    item[e[geographical] - A boolean specifying whether the geographical behaviour is used or not. If
+    item[e[geographical] - A boolean specifying whether the geographical extension is used or not. If
     set to e[true] the generator will create two additional fields named e[latitude] and e[longitude].
     Also it will consider them in all important application areas. During the creation of a new entity
     with geographical support a nice geolocation feature is used to ask the user for his current location.
@@ -315,7 +315,7 @@ ul[
     e[true].]
     item[e[tree] - Whether and which tree strategy is applied. More information about what the generator creates for trees can
     be found in the the section about ref:GenRefEntityTreeType[entity tree types].]
-    item[e[standardFields] - A boolean specifying whether the standard fields behaviour is used or not.
+    item[e[standardFields] - A boolean specifying whether the standard fields extension is used or not.
     If set to e[true] the entity will get four additional fields for storing the id of the user who created
     the item, the id of the user who did the last update, as well as the creation and update dates. This
     information will be included on ref:GenRefDisplayAction[display] and ref:GenRefEditAction[edit] actions.]
@@ -930,7 +930,7 @@ Represents different events for triggering the Timestampable extension.
 Can be one of the following options:
 
 ul[
-    item[NONE - No Timestampable behaviour.]
+    item[NONE - No Timestampable extension.]
     item[UPDATE - On update.]
     item[CREATE - On create.]
     item[CHANGE - On property change.]
