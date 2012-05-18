@@ -4,6 +4,7 @@
         <group style-id="content-group" id="deguitemodulestudio-introLink-group055">
             <text>Entities with Geographical extension show a map in display and edit templates now.</text>
             <text>KML export functionality for entities with Geographical extension.</text>
+            <text>When editing entities with Geographical extension a map for selecting coordinates is provided.</text>
             <text>Float and decimal fields now have a currency flag property.</text>
             <text>There are two properties for cascade settings now, one for each relation side.</text>
             <text>Using Zikula.UI.Panels in display and edit pages if they become huge.</text>
