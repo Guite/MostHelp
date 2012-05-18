@@ -1431,9 +1431,7 @@ The following controller types are available:
 ul[
     item[Admin controller - for admin areas.]
     item[User controller - for user areas.]
-    item[Account controller - for account sections.]
     item[Ajax controller - for ajax functions.]
-    item[Search controller - for a search-related controller and search api.]
     item[Custom controller - for custom areas, like e[edit].]
 ]
 
@@ -1446,7 +1444,7 @@ ul[
 ]
 
 The generator creates controller classes with methods for each actions. Action handlers are not considered
-yet. Also special functionalities for account and search controllers are not implemented yet.
+yet.
 
 If you have added some ref:GenRefVariables[variables] the admin controller will contain a e[config] method
 for managing the modvar settings.

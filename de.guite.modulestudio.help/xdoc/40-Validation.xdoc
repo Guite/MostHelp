@@ -227,7 +227,7 @@ table[
     ]
     tr[
         td[Application with controller container with controllers]
-        td[There must not exist more than one (admin | user | account | ajax | search) controller.]
+        td[There must not exist more than one (admin | user | ajax) controller.]
         td[Predefined controllers are unique per application (i.e. there is only one admin area).]
     ]
     tr[
@@ -1380,8 +1380,8 @@ table[
     tr[
         td[Controller with actions]
         td[This controller may not contain a (view | display | edit | delete) action. Please remove it.]
-        td[Appears for special controllers, like account, ajax and search. Those are reserved for special
-        purposes and not intended to be called by the user as normal controllers.]
+        td[Appears for special controllers, like ajax. Those are reserved for special purposes and not
+        intended to be called by the user as normal controllers.]
     ]
 ]
 
