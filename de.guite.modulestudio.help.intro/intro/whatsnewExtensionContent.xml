@@ -7,6 +7,7 @@
             <text>When editing entities with Geographical extension a map for selecting coordinates is provided.</text>
             <text>Float and decimal fields now have a currency flag property.</text>
             <text>There are two properties for cascade settings now, one for each relation side.</text>
+            <text>Integration for search and the your account panel.</text>
             <text>Using Zikula.UI.Panels in display and edit pages if they become huge.</text>
             <text>Actions in view and display pages are now presented with context menus (similar like in tree management pages).</text>
             <text>Added a quick navigation form for view pages allowing for filtering, searching and sorting the list.</text>
@@ -42,6 +43,7 @@
             <text>Removed wrong application of client-side validation to input buttons.</text>
             <text>Also for form plugins there are base classes generated now, for easier extensibility and customisability.</text>
             <text>Performance optimisations for the shorturl support.</text>
+            <text>Usage of prepared statements in repository classes.</text>
             <text>Many minor bugfixes und refactorings in the generator (e.g. request object usage).</text>
             <text>Removed custom beautifier component as it caused more problems than benefits.</text>
             <text>Updated to Eclipse 3.7.2 (Indigo SR2).</text>
