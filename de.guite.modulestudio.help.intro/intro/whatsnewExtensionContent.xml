@@ -15,6 +15,8 @@
             <text>Use text data type for text fields again.</text>
             <text>Fixed validation of upload file extensions; this check is now performed on the client-side, too.</text>
             <text>Upload fields can optionally have also a maximal size.</text>
+            <text>Default implementation for user delete event listener.</text>
+            <text>Improved permission check instances.</text>
             <text>Fixed problems with creating root nodes in nested sets if length of title or description fields are too small.</text>
             <text>Fixed definition and handling of many-to-many relations.</text>
             <text>AutoComplete bugfixes for many-to-many and one-to-many relations.</text>
