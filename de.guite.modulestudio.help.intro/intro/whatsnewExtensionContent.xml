@@ -11,6 +11,9 @@
             <text>Using Zikula.UI.Panels in display and edit pages if they become huge.</text>
             <text>Actions in view and display pages are now presented with context menus (similar like in tree management pages).</text>
             <text>Added a quick navigation form for view pages allowing for filtering, searching and sorting the list.</text>
+            <text>A new content type allows displaying one certain object.</text>
+            <text>Optional category filters for generic block and both content types.</text>
+            <text>Basic Scribite integration, at the moment for Xinha and TinyMCE.</text>
             <text>Fixed storage of attributes, outsourced attribute field names into own method for easier customisation.</text>
             <text>Fixed installation of list vars by using array serialisation only for multiple lists.</text>
             <text>Allow value of 0 for list fields.</text>
