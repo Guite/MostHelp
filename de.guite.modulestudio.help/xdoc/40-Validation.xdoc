@@ -347,7 +347,7 @@ table[
     ]
     tr[
         td[Entity with composite primary keys]
-        td[Composite entities can only have identifier strategies NONE and ASSIGNED.]
+        td[Composite entities can only have identifier strategy NONE.]
         td[Automatic identifier generation is not possible for composite primary keys.]
     ]
     tr[
