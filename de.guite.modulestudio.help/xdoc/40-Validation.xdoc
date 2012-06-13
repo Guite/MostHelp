@@ -97,6 +97,11 @@ table[
         td[]
     ]
     tr[
+        td[Application]
+        td[The application must have an email address.]
+        td[]
+    ]
+    tr[
         td[Application with email set]
         td[The value for the application email field must be a valid email address.]
         td[]
