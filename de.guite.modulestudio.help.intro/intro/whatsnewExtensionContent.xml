@@ -50,6 +50,9 @@
             <text>Many minor bugfixes und refactorings in the generator (e.g. request object usage).</text>
             <text>Removed custom beautifier component as it caused more problems than benefits.</text>
             <text>Updated to Eclipse 3.7.2 (Indigo SR2).</text>
+            <text>Reimplemented generator templates in new language, better performance.</text>
+            <text>Introduced textual syntax, also defines the new model file format.</text>
+            <text>Reimplemented validation constraints, errors and warnings now also with German translation.</text>
         </group>
   	</extensionContent>
     <extensionContent id="whatsnew-top-right" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
