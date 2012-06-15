@@ -1355,7 +1355,7 @@ table[
     tr[
         td[Controller]
         td[Every controller must have a name.]
-        td[Controller name must be longer than at least three chars. Should be more than five chars.]
+        td[Controller name must have a length of at least three chars. Should be at least four chars.]
     ]
     tr[
         td[Custom controller]
@@ -1406,8 +1406,8 @@ table[
     tr[
         td[Custom action]
         td[The action must have a name.]
-        td[Action name must not be e[New]. Must have a length of at least four chars, whereby at least
-        five chars are recommended.]
+        td[Action name must not be e[New] or e[Hooks]. Must have a length of at least four
+        chars, whereby at least six chars are recommended.]
     ]
     tr[
         td[Custom action]
