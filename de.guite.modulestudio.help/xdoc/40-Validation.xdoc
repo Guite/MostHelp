@@ -172,6 +172,41 @@ table[
     ]
 ]
 
+section2[Referred application]
+
+table[
+    tr[
+        td[Context]
+        td[Check]
+        td[Remarks]
+    ]
+    tr[
+        td[Referred application]
+        td[The imported application must have a name.]
+        td[Use the real name of the module being imported.]
+    ]
+    tr[
+        td[Referred application]
+        td[Please specify the minimum version for the dependency. The minimum version must conform to the pattern x.y.z.]
+        td[]
+    ]
+    tr[
+        td[Referred application]
+        td[Please specify the maximum version for the dependency. The maximum version must conform to the pattern x.y.z.]
+        td[]
+    ]
+    tr[
+        td[Referred application]
+        td[The minimum version must not be greater than the maximum version.]
+        td[]
+    ]
+    tr[
+        td[Referred application]
+        td[You need to specify the URI of the imported application's model file.]
+        td[]
+    ]
+]
+
 section2[Model container]
 
 table[

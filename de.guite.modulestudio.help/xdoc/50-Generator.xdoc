@@ -175,8 +175,8 @@ to e[WEB] to be on the safe side for future.
 
 section4:GenRefReferredApplication[Referred application]
 
-Subclass of Application representing referred applications (e.g. other extensions which are incorporated
-by api calls). At the moment this is not used yet.
+Represents an application whose model file is being imported (e.g. to reference other entities
+or other extensions which are incorporated by api calls).
 
 section4:GenRefModelContainer[Model container]
 
