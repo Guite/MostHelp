@@ -13,7 +13,7 @@ section:UserInterfaceBasicElements[Basic usage]
 
 Please see link[http://modulestudio.de/en/tutorial/basic-usage.html][this tutorial].
 
-section:UserInterfaceSingleEditors[Single editors]
+section:UserInterfaceGraphicalEditors[Graphical editors]
 
 section2:UserInterfaceMainEditor[Main editor]
 
@@ -41,6 +41,11 @@ section2:UserInterfaceWorkflowLayer[Workflow editor]
 
 The workflow editor has not been implemented yet. This section is therefore just a dummy for future.
 
+section:UserInterfaceTextualEditors[Textual editors]
+
+Beginning with ModuleStudio 0.5.5 there is also a textual syntax notation available. Not visible
+at once, it will be integrated into the UI step by step.
+
 section:UserInterfaceUsefulHints[Useful hints]
 
 Here are some tutorial showing special abilities for certain use cases:
@@ -56,7 +61,7 @@ ul[
     windows]]
 ]
 
-section2:UserInterfaceShortcuts[Keyboard shortcuts]
+section2:UserInterfaceShortcutsInGraphicalEditors[Keyboard shortcuts in graphical editors]
 
 There are some very handy shortcuts hidden in ModuleStudio. For example it can be worth
 to experiment with the Ctrl (Alt on Mac) and/or Shift keys when moving or resizing an object.
@@ -67,6 +72,93 @@ editor shortcuts].
 If one has selected a palette tool and creates an object in the diagram it is usually
 required to select the tool again in order to create another object. If one presses
 the Ctrl (Alt on Mac) key one can create multiple elements of the same type in one step.
+
+section2:UserInterfaceShortcutsInTextualEditors[Keyboard shortcuts in textual editors]
+
+The following list shows some basic commands which might be helpful when using the textual editors.
+
+table[
+    tr[
+        td[Shortcut]
+        td[Action description]
+    ]
+    tr[
+        td[Alt-Up / Alt-Down]
+        td[Move current line or selection one line up / down.]
+    ]
+    tr[
+        td[Alt-Left / Alt-Right]
+        td[Go back / forward in the history of editors.]
+    ]
+    tr[
+        td[Alt-Shift-Up / Alt-Shift-Down]
+        td[Expand selection to containing element.]
+    ]
+    tr[
+        td[Alt-Shift-R]
+        td[Rename current element as well as all other occurences.]
+    ]
+    tr[
+        td[F3 or Ctrl-MouseClick]
+        td[Follow reference under cursor.]
+    ]
+    tr[
+        td[Ctrl-Up / Ctrl-Down]
+        td[Scroll one line up / down.]
+    ]
+    tr[
+        td[Ctrl-PgUp / Ctrl-PgDown]
+        td[Activate previous / next editor tab.]
+    ]
+    tr[
+        td[Ctrl-0]
+        td[Pop up outline for easy navigation and filtering.]
+    ]
+    tr[
+        td[Ctrl-1]
+        td[Quick fix of errors.]
+    ]
+    tr[
+        td[Ctrl-/]
+        td[Toggle comment for line or selection.]
+    ]
+    tr[
+        td[Ctrl-Space]
+        td[Start content assist suggesting possible values.]
+    ]
+    tr[
+        td[Ctrl-D]
+        td[Delete current line.]
+    ]
+    tr[
+        td[Ctrl-L]
+        td[Go to a certain line.]
+    ]
+    tr[
+        td[Ctrl-M]
+        td[Maximize current editor window.]
+    ]
+    tr[
+        td[Ctrl-W]
+        td[Close current editor tab.]
+    ]
+    tr[
+        td[Ctrl-Q]
+        td[Go to last edit location.]
+    ]
+    tr[
+        td[Ctrl-Shift-F]
+        td[Start the source code formatter.]
+    ]
+    tr[
+        td[Ctrl-Shift-G]
+        td[Find references to current element.]
+    ]
+    tr[
+        td[Ctrl-Shift-F3]
+        td[Locate a certain element.]
+    ]
+]
 
 section:UserInterfaceNotes[Additional notes]
 
