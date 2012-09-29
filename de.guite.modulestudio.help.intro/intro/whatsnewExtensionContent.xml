@@ -51,7 +51,7 @@
             <text>Usage of prepared statements in repository classes.</text>
             <text>Many minor bugfixes und refactorings in the generator (e.g. request object usage).</text>
             <text>Removed custom beautifier component as it caused more problems than benefits.</text>
-            <text>Updated to Eclipse 4.2 (Juno).</text>
+            <text>Updated to Eclipse 4.2.1 (Juno SR1).</text>
             <text>Reimplemented generator templates in new language, better performance.</text>
             <text>Introduced textual syntax, also defines the new model file format.</text>
             <text>Reimplemented validation constraints, errors and warnings now also with German translation.</text>
