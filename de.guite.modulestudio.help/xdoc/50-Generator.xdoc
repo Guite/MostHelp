@@ -842,6 +842,8 @@ ul[
     item[SEQUENCE - Uses a database sequence.]
     item[TABLE - Uses a single-row database table and a hi/lo algorithm.]
     item[IDENTITY - Obtains IDs from special identity columns (auto_increment).]
+    item[UUID - Generates universally unique identifiers (beginning with Doctrine 2.3).]
+    item[CUSTOM - Custom strategy (beginning with Doctrine 2.3).]
 ]
 
 The generator transforms these values to the corresponding implementation as is. There are no differences
