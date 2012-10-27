@@ -178,6 +178,29 @@ section4:GenRefReferredApplication[Referred application]
 Represents an application whose model file is being imported (e.g. to reference other entities
 or other extensions which are incorporated by api calls).
 
+An application reference has the following fields:
+
+ul[
+    item[e[minimumVersion] - The minimum version this reference applies for.]
+    item[e[maximumVersion] - The maximum version this reference applies for.]
+    item[e[importURI] - URI to imported model file.]
+    item[e[dependencyType] - The type of dependency which should be used for the referred application. See ref:GenRefApplicationDependencyType[below].]
+]
+
+section4:GenRefApplicationDependencyType[Application dependency type]
+
+Specifies the kind of dependency to a certain application.
+
+Can be one of the following options:
+
+ul[
+    item[e[REQUIREMENT] - The module is required, for example to join related entities.]
+    item[e[RECOMMENDATION] - The module is recommended, for example to provide enhanced integration functionality.]
+    item[e[CONFLICT] - The module is in conflict with the modeled one, for example due to overlapping functionality.]
+]
+
+The generator uses this value in the corresponding module dependency created in the version class.
+
 section4:GenRefModelContainer[Model container]
 
 Container class for carrying elements in the model layer.
