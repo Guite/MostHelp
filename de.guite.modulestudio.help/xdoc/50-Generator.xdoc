@@ -299,9 +299,9 @@ ul[
     item[e[categorisable] - A boolean specifying whether this entity should have categories or not. If
     set to e[true] the generator creates an additional entity for managing the categories. During ref:GenRefEditAction[edit]
     actions it is possible to select a desired category. This category will also be shown again on ref:GenRefDisplayAction[display]
-    pages and in quick navigation forms of ref:GenRefViewAction[view] pages. There is no included support yet for
-    having multiple category registries, the generated implementation does only use e[Main] as registry (see ticket #213).
-    Also there is no built-in filtering or permission scheme based on categories implemented yet.]
+    pages and in quick navigation forms of ref:GenRefViewAction[view] pages. Generated applications support
+    filtering by categories as well as multiple category registries / properties / trees, however the implementation uses only e[Main]
+    per default. There is no built-in permission scheme based on categories implemented yet.]
     item[e[categorisableMultiSelection] - A boolean specifying whether multiple categories can be selected or not.]
     item[e[changeTrackingPolicy] - How change detection is being done (see ref:GenRefEntityChangeTrackingPolicy[below]).
     The default value is e[DEFERRED_IMPLICIT].]

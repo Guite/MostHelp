@@ -15,6 +15,7 @@
             <text>Optional category filters for generic block and both content types.</text>
             <text>Possibility for entering custom templates in list block and list content type.</text>
             <text>A new categorisable option allows for defining whether multiple categories can be selected for the corresponding entity or not.</text>
+            <text>For categories multiple registries/trees/properties are now considered everywhere.</text>
             <text>Basic Scribite integration, at the moment for Xinha and TinyMCE.</text>
             <text>Fixed storage of attributes, outsourced attribute field names into own method for easier customisation.</text>
             <text>Fixed installation of list vars by using array serialisation only for multiple lists.</text>
