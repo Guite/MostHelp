@@ -553,6 +553,21 @@ table[
         td[Mandatory fields may not be nullable, too.]
         td[Occurs if you try to activate both e[mandatory] and e[nullable] properties for a field.]
     ]
+    tr[
+        td[Entity field]
+        td[The default value is too long for the specified field length.]
+        td[]
+    ]
+    tr[
+        td[Entity field]
+        td[The minimum value is too long for the specified field length.]
+        td[]
+    ]
+    tr[
+        td[Entity field]
+        td[The maximum value is too long for the specified field length.]
+        td[]
+    ]
 ]
 
 section3:ReservedDBKeywords[Reserved database keywords]
