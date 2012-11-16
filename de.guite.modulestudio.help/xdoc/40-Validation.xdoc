@@ -31,15 +31,15 @@ be done if problems occur.
 
 section2:ValidationTrigger[Triggering validation]
 
-In common use cases it is not required to do anything manually. ModuleStudio does
-automatically perform a e[live validation] so you get immediate feedback after having
-done some model amendments.
+ModuleStudio validates a model every time you save it in the main editor. This shows
+what remains to be done in order to generate an application out of it.
 
-For more complex model this can be come inconvenient with regards to performance as
-the live validation has to check many rules every few seconds. In these cases one
-can simply deactivate the live validation by stopping the according jobs in the
-process view (see link[http://modulestudio.de/en/tutorial/controlling-validation-manually.html][this
-tutorial]).
+In addition you can always start the validator manually using the main menu
+which might be advantageous to get immediate feedback after having
+done some amendments in the sub editors.
+
+Earlier versions of ModuleStudio used to perform a scheduled validation. This has been
+removed to save performance.
 
 section2:ValidationConsequences[Validation consequences]
 
