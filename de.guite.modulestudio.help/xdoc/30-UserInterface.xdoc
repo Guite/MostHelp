@@ -43,7 +43,7 @@ The workflow editor has not been implemented yet. This section is therefore just
 
 section:UserInterfaceTextualEditors[Textual editors]
 
-Beginning with ModuleStudio 0.5.5 there is also a textual syntax notation available. Not visible
+Beginning with ModuleStudio 0.6.0 there is also a textual syntax notation available. Not visible
 at once, it will be integrated into the UI step by step.
 
 section:UserInterfaceUsefulHints[Useful hints]
