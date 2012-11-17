@@ -31,8 +31,12 @@ be done if problems occur.
 
 section2:ValidationTrigger[Triggering validation]
 
-ModuleStudio validates a model every time you save it in the main editor. This shows
-what remains to be done in order to generate an application out of it.
+As validation shows what remains to be done in order to generate an application out
+of a given model, it is essential to provide convenient means for checking validation
+constraints.
+
+ModuleStudio validates a model every time you save it in the main editor. Validation is
+also executed after an existing model has been opened.
 
 In addition you can always start the validator manually using the main menu
 which might be advantageous to get immediate feedback after having

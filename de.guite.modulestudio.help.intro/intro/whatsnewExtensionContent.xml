@@ -60,7 +60,7 @@
             <text>Reimplemented generator templates in new language, better performance.</text>
             <text>Introduced textual syntax, also defines the new model file format.</text>
             <text>Reimplemented validation constraints, errors and warnings now also with German translation.</text>
-            <text>Validation is no longer performed automatically every few seconds, but on each model save in the main editor, when starting generation and when calling validation manually using the main menu.</text>
+            <text>Validation is no longer performed automatically every few seconds, but on each model save in the main editor, after opening existing models, when starting generation and when calling validation manually using the main menu.</text>
         </group>
   	</extensionContent>
     <extensionContent id="whatsnew-top-right" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
