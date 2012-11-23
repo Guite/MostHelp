@@ -645,9 +645,6 @@ searching users by their name. For the output in ref:GenRefViewAction[view] and 
 templates the user name is shown and linked to the corresponding user profile in case a profile module
 has been set in the Settings module administration.
 
-(Note: The implementation of the auto completion should be replaced by a central forms plugin, see link[https://github.com/Guite/MostGenerator/issues/86][this
-ticket] for more information.)
-
 section4:GenRefEmailField[Email field]
 
 Represents a field type for storing email addresses.
@@ -1037,7 +1034,7 @@ It includes the following properties in addition to the common ref:GenRefRelatio
 ul[
     item[e[cascade] - The ref:GenRefCascadeType[cascade type] used on application level from source view.]
     item[e[cascadeReverse] - The ref:GenRefCascadeType[cascade type] used on application level from target view (only for bidirectional relationships).]
-    item[e[editType] - The ref:GenRefRelationEditType[edit type] for this association, only applicable if e[useAutoCompletion] is set to e[true].]
+    item[e[editType] - The ref:GenRefRelationEditType[edit type] for this association, only applicable if e[useAutoCompletion] is not set to e[NONE].]
     item[e[fetchType] - The ref:GenRefRelationFetchType[fetch type] for this association.]
     item[e[nullable] - A boolean specifying whether the field for this relationship may be null or not.
     The default value is e[true].]
@@ -1045,8 +1042,9 @@ ul[
     or e[SETNULL]).]
     item[e[onDelete] - String for optional delete cascade options on database level (for example e[RESTRICT]
     or e[SETNULL]).]
-    item[e[useAutoCompletion] - If set to e[true] the generator will create an auto completion field instead
-    of a normal dropdown select field.]
+    item[e[useAutoCompletion] - If set to any value except e[NONE] the generator will create an auto completion
+    field instead of a normal dropdown select field for the corresponding side(s) of the relationship. For
+    more information see the ref:GenRefRelationAutoCompletionUsage[available options].]
     item[e[sourceAlias] - The alias for the source entity, required to have multiple associations between
     the same entities. The name should reflect the cardinality on the source side (singular or plural
     forms) depending on the relationship type. As with all names camel case is preferred, for example
@@ -1156,6 +1154,25 @@ ul[
 
 The cascade type is implemented as defined in the association's annotation within the corresponding entity
 classes. At the moment there are no other code parts depending on that.
+
+section4:GenRefRelationAutoCompletionUsage[Auto completion usage]
+
+Defines whether and which sides of a relationship will be handled by an auto completion field instead
+of a dropdown field during editing. Note that inline creation and editing of related items (see ref:GenRefRelationEditType[edit types])
+is only possible when using the auto completion approach.
+
+Can be one of the following options:
+
+ul[
+    item[NONE - Use no auto completion.]
+    item[ONLY_SOURCE_SIDE - Use auto completion when selecting entities of the source side (editing of the target side).]
+    item[ONLY_TARGET_SIDE - Use auto completion when selecting entities of the target side (editing of the source side).]
+    item[BOTH_SIDES - Use auto completion on both sides.]
+]
+
+Actually these settings are part of the ref:GeneratorViewLayer[view layer] and actually they are going
+to be moved somewhen in future. But this is a case where we decided that we don't want to wait until
+the view layer is ready to be used (as priorities require to do other things first).
 
 section4:GenRefRelationFetchType[Relation fetch type]
 
