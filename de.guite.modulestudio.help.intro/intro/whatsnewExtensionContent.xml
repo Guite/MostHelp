@@ -10,6 +10,12 @@
             <text>Handling of relations has been reimplemented with form plugins.</text>
             <text>Relationship handling is now done with dropdown lists by default. Using auto completion instead is still possible. Inline creation and editing of related items is only possible when using the auto completion approach.</text>
             <text>Integration for search and the your account panel.</text>
+            <text>Basic workflow support. For each entity one of three predefined workflows can be selected and further customised by means of several options. More information can be found in the user manual.</text>
+            <text>Support for pending content listener, moderation block and moderation panel.</text>
+            <text>Mass handling of objects on admin view pages.</text>
+            <text>Support for meta data for the Tag module.</text>
+            <text>Datetime and date fields can now be declared as start or end.</text>
+            <text>Automatic archiving if archive and end date are available.</text>
             <text>Using Zikula.UI.Panels in display and edit pages if they become huge.</text>
             <text>Actions in view and display pages are now presented with context menus (similar like in tree management pages).</text>
             <text>Added a quick navigation form for view pages allowing for filtering, searching and sorting the list.</text>

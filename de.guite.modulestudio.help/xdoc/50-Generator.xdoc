@@ -307,10 +307,13 @@ ul[
     The default value is e[DEFERRED_IMPLICIT].]
     item[e[geographical] - A boolean specifying whether the geographical extension is used or not. If
     set to e[true] the generator will create two additional fields named e[latitude] and e[longitude].
-    Also it will consider them in all important application areas. During the creation of a new entity
-    with geographical support a nice geolocation feature is used to ask the user for his current location.
-    There is no integration of Google Maps or something else yet in the output, this will be done as
-    part of link[https://github.com/Guite/MostGenerator/issues/34][#34].]
+    Also it will consider them in all important application areas and provide an export for the kml format.
+    During the creation of a new entity with geographical support a nice geolocation feature is used to ask
+    the user for his current location. Also there is an included integration of the Mapstraction class allowing
+    you to use different map providers in your application.]
+    item[e[hasArchive] - Whether the workflow should include an archived state with automatic archiving. Requires a ref:GenRefDatetimeField[datetime] or ref:GenRefDateField[date] field
+    which has been designated as end date. See ref:GenRefEntityWorkflowType[workflow types] for more information. The default value is e[false].]
+    item[e[hasTray] - Whether the workflow should include a suspended state. See ref:GenRefEntityWorkflowType[workflow types] for more information. The default value is e[false].]
     item[e[identifierStrategy] - Whether and which ref:GenRefEntityIdentifierStrategy[identifier strategy] is applied.
     The default value is e[NONE].]
     item[e[leading] - A boolean specifying whether this is the primary (and default) entity or not.]
@@ -328,6 +331,9 @@ ul[
     fields.]
     item[e[nameMultiple] - Plural form of the name. The generator uses this for collections, list views
     and other areas where multiple entities are used.]
+    item[e[ownerPermission] - Whether users should be able to manage and edit their own data. Defines also
+    whether the workflow should include a deferred state. See ref:GenRefEntityWorkflowType[workflow types] for
+    more information. The default value is e[false].]
     item[e[readOnly] - A boolean specifying whether this entity is read only or not. If set to e[true] editing will not be possible.]
     item[e[slugLength] - Length of slug field. Defaults to 255. An entity is sluggable as soon as at
     least one of its fields set e[sluggable position] to a value greater than 0.]
@@ -337,12 +343,18 @@ ul[
     item[e[slugUnique] - A boolean specifying if the slug is unique or not. Default value is e[true].]
     item[e[slugUpdatable] - A boolean specifying if the slug can be changed or not. Default value is
     e[true].]
+    item[e[softDeleteable] - Whether deleted items should only be marked as deleted instead of deleting them.
+    Defines also whether the entity workflow provides means for trashing and recovering items or for
+    deleting them. See ref:GenRefEntityWorkflowType[workflow types] for more information. The default value is e[false].
+    Note that the soft deleteable implementation is not done yet as this requires the 1.4.0 core of Zikula.]
     item[e[tree] - Whether and which tree strategy is applied. More information about what the generator creates for trees can
     be found in the the section about ref:GenRefEntityTreeType[entity tree types].]
     item[e[standardFields] - A boolean specifying whether the standard fields extension is used or not.
     If set to e[true] the entity will get four additional fields for storing the id of the user who created
     the item, the id of the user who did the last update, as well as the creation and update dates. This
     information will be included on ref:GenRefDisplayAction[display] and ref:GenRefEditAction[edit] actions.]
+    item[e[workflow] - The workflow which is applied to this entity. See ref:GenRefEntityWorkflowType[workflow
+    types] for more information. The default value is e[NONE].]
 ]
 
 a[GenRefEntityClassStructure]
@@ -799,7 +811,7 @@ ul[
     item[e[past] - A boolean specifying whether the value must be in the past or not.]
     item[e[timestampable] - Which ref:GenRefEntityTimestampableType[timestampable type] is used.]
     item[e[timestampableChangeTriggerField] - Optional name of field to use as change trigger (if type
-    is e[CHANGE].]
+    is e[CHANGE]. Can also be workflowState or the name of a relation (property.field).]
     item[e[timestampableChangeTriggerValue] - Optional value of field to use as change trigger (if type
     is e[CHANGE].]
 ]
@@ -817,6 +829,10 @@ A datetime field has the following properties in addition to the common ref:GenR
 date field] settings:
 
 ul[
+    item[e[startDate] - A boolean specifying whether this field should be treated as a start date. If
+    set to e[true] this field is included into determining public visibility of the corresponding objects.]
+    item[e[endDate] - A boolean specifying whether this field should be treated as an end date. If
+    set to e[true] this field is included into determining public visibility of the corresponding objects.]
     item[e[version] - A boolean specifying whether this field should act as a version. If set to e[true]
     the owning entity will need to use ref:GenRefEntityLockType[optimistic locking]. Please read more
     at the ref:GenRefIntegerFieldVersion[integer field] section. Also please note that it is preferred
@@ -832,8 +848,15 @@ section4:GenRefDateField[Date field]
 
 Represents a field type for storing date values with the format e[YYYY-MM-DD].
 
-A date field has no fields or references in addition to the common ref:GenRefAbstractDateField[abstract
-date field] settings.
+A date field has the following properties in addition to the common ref:GenRefAbstractDateField[abstract
+date field] settings:
+
+ul[
+    item[e[startDate] - A boolean specifying whether this field should be treated as a start date. If
+    set to e[true] this field is included into determining public visibility of the corresponding objects.]
+    item[e[endDate] - A boolean specifying whether this field should be treated as an end date. If
+    set to e[true] this field is included into determining public visibility of the corresponding objects.]
+]
 
 The generator will treat date values as date input elements with the e[includeTime] attribute set
 to false in ref:GenRefEditAction[edit] pages. For the output in ref:GenRefViewAction[view] and ref:GenRefDisplayAction[display]
@@ -962,6 +985,55 @@ ul[
 The generator transforms these values to the corresponding implementation as is. There are no differences
 made between the different timestampable types. So beside the actual entity class there won't be any
 code parts affected based on which timestampable type you use.
+
+section4:GenRefEntityWorkflowType[Entity workflow type]
+
+Represents different workflows for entities.
+
+Can be one of the following options:
+
+ul[
+    item[NONE - No approval.]
+    item[STANDARD - Single approval.]
+    item[ENTERPRISE - Double approval.]
+]
+
+In total there are nine different workflow states which are explained below. Note that you can arrange
+many states by corresponding properties in the model.
+ol[
+    item[Initial - pseudo-state for content which is just created and not persisted yet.]
+    item[Deferred - content has not been submitted yet or has been waiting, but was rejected. Only available
+    if the entity has set the e[ownerPermission] property to e[true]. Allows users to manage their contributions.
+    Otherwise rejected content would be deleted.]
+    item[Waiting - content has been submitted and waits for approval. Only available for e[STANDARD] and
+    e[ENTERPRISE]. Fetched for pending content integration and moderation panel.]
+    item[Accepted - content has been submitted and accepted, but still waits for approval. Only available
+    for e[ENTERPRISE]. Fetched for pending content integration and moderation panel.]
+    item[Approved - content has been approved and is available online.]
+    item[Suspended - content has been approved, but is temporarily offline. Only available if the entity
+    has set the e[hasTray] property to e[true].]
+    item[Archived - content has reached the end and became archived. Only available if the entity has set
+    the e[hasArchive] property to e[true]. Requires a ref:GenRefDatetimeField[datetime] or ref:GenRefDateField[date] field being designated as end date.]
+    item[Trashed - content has been marked as deleted, but is still persisted in the database. Only
+    available if the entity has set the e[softDeleteable] property to e[true]. Note that the soft deleteable
+    implementation is not done yet as this requires the 1.4.0 core of Zikula.]
+    item[Deleted - pseudo-state for content which has been deleted from the database.]
+]
+
+The following image shows an overview of all possible workflow states and actions.
+
+img[images/workflows.png][Workflow overview][blockimg][border:1px solid black]
+
+The current state for a certain object is stored in the workflow itself. Furthermore ModuleStudio creates
+an additional field named e[workflowState] to each entity before starting the generation. This allows
+for easier filtering and other useful applications without having to load the workflow in all cases.
+In fact ModuleStudio adds it as a ref:GenRefListField[list field] which contains a ref:GenRefListFieldItem[list
+field item] for each state. 
+
+Note that it is easily possible to model ref:GenRefAbstractDateField[date or datetime fields] which set their value
+automatically depending on a certain workflow state. Just set their timestampable type to e[CHANGE] and set e[workflowState]
+as change trigger field. Also set the change trigger value to the name of the desired state. So you could
+for example create an approval date by using e[approved] for the trigger value property.
 
 section4:GenRefEntityIndex[Entity index]
 
@@ -1533,7 +1605,7 @@ available) fetch a simple template file.
 section4:GenRefViewAction[View action]
 
 The view implementation offers a generic list view of multiple items which can be sorted and filtered.
-Also there are alternative template formats created for atom, csv, json, rss and xml support.
+Also there are alternative template formats created for atom, csv, json, rss, xml and maybe kml support.
 Just add e[&userssext=1] to the url or, even easier with shorturls, change e[persons.html] to e[persons.rss].
 
 section4:GenRefDisplayAction[Display action]
@@ -1929,12 +2001,11 @@ As there is no view editor available yet this section is empty for now.
 
 section2:GeneratorWorkflowLayer[Workflow layer]
 
-The workflow layer is not implemented yet. At the moment there is only a mockup created by the generator
-which is also not completed yet though.
-For more information regarding this see link[https://github.com/Guite/MostGenerator/issues/32][issue
-#32].
+The workflow layer is not very configurable yet. At the moment there are three predefined workflows available
+which can be defined in the model for each ref:GenRefEntity[entity]. For more information see ref:GenRefEntityWorkflowType[entity
+workflow types].
 
-It is planned to create a dedicated layer for modeling only possible workflow states and actions.
+In future it is planned to create a dedicated layer for modeling only possible workflow states and actions.
 
 section:GeneratorNotes[Additional notes]
 
