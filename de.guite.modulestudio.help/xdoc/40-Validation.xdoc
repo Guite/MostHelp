@@ -395,6 +395,11 @@ table[
         td[The leading field is used in list views, auto completion as well as default sorting criteria
         (unless the entity is using the Sortable extension).]
     ]
+    tr[
+        td[Entity with archive]
+        td[Every entity with an archive (e[hasArchive] set to e[true]) must contain one datetime or date field designated as end date.]
+        td[For implementation of an automatic archiving functionality the system must know when an object has reached the end of it's lifecycle.]
+    ]
 ]
 
 section3[Inheritance-related entity settings]
@@ -450,6 +455,11 @@ table[
         td[Entity]
         td[The length of all entity fields must not be higher than 21845.]
         td[The limit is 65535 bytes, while UTF-8 requires three bytes for each char.]
+    ]
+    tr[
+        td[Entity]
+        td[Entities with owner permissions need standard fields activated.]
+        td[The standard fields extension is required to determine the owner (createdUser) of an object.]
     ]
 ]
 
@@ -544,6 +554,16 @@ table[
         td[Entity field]
         td[Field name is a reserved identifier (_c, _a, _l).]
         td[These are reserved vars in the zOO framework.]
+    ]
+    tr[
+        td[Entity field]
+        td[Field name is a reserved identifier (_controller, _method, _locale).]
+        td[These are reserved vars in the Symfony framework.]
+    ]
+    tr[
+        td[Entity field]
+        td[Field name is a reserved identifier (workflowState).]
+        td[This list field is added automatically by a model-to-model transformation before the actual generation happens.]
     ]
     tr[
         td[Entity field]
@@ -704,6 +724,18 @@ table[
         td[Entity field]
         td[Only one field per entity may store the version.]
         td[Can appear for integer and datetime fields if you enabled the e[version] property for more
+        than one field in the same entity.]
+    ]
+    tr[
+        td[Entity field]
+        td[Only one field per entity may represent a start date.]
+        td[Can appear for datetime and date fields if you enabled the e[startDate] property for more
+        than one field in the same entity.]
+    ]
+    tr[
+        td[Entity field]
+        td[Only one field per entity may represent an end date.]
+        td[Can appear for datetime and date fields if you enabled the e[endDate] property for more
         than one field in the same entity.]
     ]
     tr[
@@ -922,14 +954,19 @@ table[
     tr[
         td[All date fields]
         td[A value can not be in the past and in the future at the same time.]
-        td[You can only activate either e[past] or e[future] validators.]
+        td[You can only activate either e[past] or e[future] validators for one field.]
+    ]
+    tr[
+        td[Datetime and date fields]
+        td[A value can not represent both start and end date at the same time.]
+        td[You can only activate either e[startDate] or e[endDate] flags for one field.]
     ]
     tr[
         td[All date fields]
-        td[The timestampable change trigger field must point to the name of a field or a relation (property.field).]
+        td[The timestampable change trigger field must point to workflowState, the name of a field or a relation (property.field).]
         td[If the e[timestampable] property for a field has been set to e[CHANGE] then this error can
         appear to remind you to set also the required attribute e[timestampableChangeTriggerField]. Either
-        you did not set anything there or the value does neither correspond to the name of an entity field
+        you did not set anything there or the value does neither correspond to workflowState nor the name of an entity field
         nor an incoming relation.]
     ]
     tr[
