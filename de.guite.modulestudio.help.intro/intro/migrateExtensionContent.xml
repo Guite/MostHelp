@@ -2,7 +2,8 @@
 <introContent>
     <extensionContent id="migrate-top-left" style="css/style.css" name="Migrate Extension" path="migrate/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group">
-              <text>To open a model from an older version please remove all account controllers and search controllers.</text>
+              <text>To open a model from an older version please remove all account controllers and search controllers first.</text>
+              <text>Afterwards the existing model can be converted by using the menu entry "File > Migrate old model from 0.5.x".</text>
               <text></text>
               <text>If you want create a model for an existing legacy module you can follow the following procedure.</text>
               <text>First get the file pntablesToXML.php from https://github.com/zikula/core/tree/master/tools - then use this script to migrate your old pntables.php file to an xml file.</text>
