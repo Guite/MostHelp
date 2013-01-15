@@ -29,11 +29,6 @@ This report shows a calculation of (unadjusted) function points (link[http://en.
 These are a measurement for the amount of complexity in a software system. It can be used as an input
 value for other methods like COCOMO II (link[http://en.wikipedia.org/wiki/COCOMO][wikipedia]).
 
-section:OtherCartridgesZoo[zOO]
-
-The e[zOO] cartridge aims on creating code for a future equally-named framework. Therefore it is not
-of any interest yet.
-
 section:OtherCartridgesNotes[Additional notes]
 
 None yet.

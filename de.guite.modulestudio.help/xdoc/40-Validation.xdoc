@@ -552,11 +552,6 @@ table[
     ]
     tr[
         td[Entity field]
-        td[Field name is a reserved identifier (_c, _a, _l).]
-        td[These are reserved vars in the zOO framework.]
-    ]
-    tr[
-        td[Entity field]
         td[Field name is a reserved identifier (_controller, _method, _locale).]
         td[These are reserved vars in the Symfony framework.]
     ]

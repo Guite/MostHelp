@@ -73,11 +73,6 @@ section2:ComponentsReporting[Reporting]
 The e[reporting] cartridge creates some documents from a given model. Please continue ref:OtherCartridgesReporting[here
 for details].
 
-section2:ComponentsZoo[zOO]
-
-The e[zOO] cartridge aims on creating code for a future equally-named framework. Please continue ref:OtherCartridgesZoo[here
-for details].
-
 section:ComponentsNotes[Additional notes]
 
 None yet.
