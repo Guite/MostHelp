@@ -142,8 +142,8 @@ ul[
     be used or not. The default value is e[false] which lets the generator create a normal installer without
     any required user input. If you set it to true it will additionally generate some init templates
     as well as a corresponding controller for the interactive installer.]
-    item[e[modelPath] - Physical file path to the application model. This is not used at all by the generator,
-    but only required by ModuleStudio to let the generator workflow find your model.]
+    item[e[modelPath] - Physical file path to the application model. This is obsolete and will be removed
+    in a later version. Please keep it empty.]
     item[e[prefix] - A prefix for all database tables of this application. Will be used in entity classes.]
 ]
 
