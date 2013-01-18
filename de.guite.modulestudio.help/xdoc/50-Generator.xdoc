@@ -141,6 +141,7 @@ An application has some more fields for specifying specific aspects:
 
 ul[
     item[e[applicationType] - The kind of application described by the model. See ref:GenRefApplicationType[below].]
+    item[e[targetCoreVersion] - The targeted Zikula core version. See ref:GenRefCoreVersion[below].]
     item[e[interactiveInstallation] - A boolean specifying whether an interactive installation should
     be used or not. The default value is e[false] which lets the generator create a normal installer without
     any required user input. If you set it to true it will additionally generate some init templates
@@ -175,6 +176,17 @@ ul[
 
 At the moment this value is completely ignored by the generator. You should nevertheless keep it set
 to e[WEB] to be on the safe side for future.
+
+section4:GenRefCoreVersion[Core version]
+
+Zikula version for which the application should be generated.
+
+Can be one of the following options:
+
+ul[
+    item[e[ZK136] - Aims on Zikula 1.3.6 and later. This is the default value.]
+    item[e[ZK135] - For Zikula 1.3.5 and earlier. This is for backwards compatibility.]
+]
 
 section4:GenRefReferredApplication[Referred application]
 

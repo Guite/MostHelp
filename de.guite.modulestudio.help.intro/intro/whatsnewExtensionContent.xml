@@ -3,6 +3,7 @@
     <extensionContent id="whatsnew-top-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group060">
             <text>A new property stores the vendor of an application. Usually this is the name of a company or institution.</text>
+            <text>Another new property allows you to define the desired target core version. The default is 1.3.6 which includes the new forward compatibility layer. Another current possible option is 1.3.5 for backwards compatibility.</text>
             <text>Entities with Geographical extension show a map in display and edit templates now.</text>
             <text>KML export functionality for entities with Geographical extension.</text>
             <text>When editing entities with Geographical extension a map for selecting coordinates is provided.</text>
