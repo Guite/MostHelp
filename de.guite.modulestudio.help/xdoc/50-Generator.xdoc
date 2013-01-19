@@ -360,8 +360,7 @@ ul[
     e[true].]
     item[e[softDeleteable] - Whether deleted items should only be marked as deleted instead of deleting them.
     Defines also whether the entity workflow provides means for trashing and recovering items or for
-    deleting them. See ref:GenRefEntityWorkflowType[workflow types] for more information. The default value is e[false].
-    Note that the soft deleteable implementation is not done yet as this requires the 1.4.0 core of Zikula.]
+    deleting them. See ref:GenRefEntityWorkflowType[workflow types] for more information. The default value is e[false].]
     item[e[tree] - Whether and which tree strategy is applied. More information about what the generator creates for trees can
     be found in the the section about ref:GenRefEntityTreeType[entity tree types].]
     item[e[standardFields] - A boolean specifying whether the standard fields extension is used or not.
