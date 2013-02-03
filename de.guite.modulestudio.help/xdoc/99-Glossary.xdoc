@@ -13,7 +13,7 @@ table[
     ]
     tr[
         td[AC-MDSD]
-        td[Architecture-Centric MDSD: a specialisation of MDSD, often used for the domain „software architecture“. Covers a domain beginning from the solution space by utilising reference implementations.]
+        td[Architecture-Centric MDSD: a specialisation of MDSD, often used for the domain "software architecture". Covers a domain beginning from the solution space by utilising reference implementations.]
     ]
     tr[
         td[Agile Software Development]
@@ -41,7 +41,7 @@ table[
     ]
     tr[
         td[BNF]
-        td[Backus–Naur Form]
+        td[Backus-Naur Form]
     ]
     tr[
         td[Business use case]

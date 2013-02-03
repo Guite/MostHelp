@@ -31,4 +31,5 @@ section2:ProblemWorkflowNotFound[Unable to find workflow file]
 
 If you get this error you have generated an application for Zikula 1.3.5 which contains a small bug that is
 fixed in 1.3.6.
-Please apply link[https://github.com/zikula/core/commit/f7e3379e7060859aab334be6707fe6e0ab61baf8][this fix] in order to fix the error.
+Please apply the fix shown in link[https://github.com/zikula/core/commit/f7e3379e7060859aab334be6707fe6e0ab61baf8][https://github.com/zikula/core/commit/f7e3379e7060859aab334be6707fe6e0ab61baf8]
+in order to fix the error.
