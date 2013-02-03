@@ -11,6 +11,13 @@ section2:ProblemChangingProperties[I can't change some properties in the editor]
 Due to a bug it can happen that multiple properties of the same model element can not be changed properly.
 To work around this just change one property, do something different and then change the other one.
 
+section:TroubleshootingGeneral[General hints]
+
+section2:ProblemPathWithSpace[Pathes with space chars]
+
+Eclipse has problems with pathes containing space chars. Therefore avoid spaces to ensure things work
+correctly.
+
 section:TroubleshootingMigration[Migration problems]
 
 section2:ProblemConvertingModel[Migrating my existing model causes an error]
