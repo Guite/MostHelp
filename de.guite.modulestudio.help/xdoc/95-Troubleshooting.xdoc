@@ -18,6 +18,14 @@ section2:ProblemChangingProperties[I can't change some properties in the editor]
 Due to a bug it can happen that multiple properties of the same model element can not be changed properly.
 To work around this just change one property, do something different and then change the other one.
 
+section2:ProblemReopeningModel[I can't open my model again.]
+
+When reopening a model does not work, but just an empty editor tab is shown, something in the workspace
+data became stale or corrupt. To fix this please delete the folder named e[MostWorkspace] in your user directory.
+
+See also link[https://github.com/Guite/MostGenerator/issues/254][ticket 254] for some information about
+that problem.
+
 section:TroubleshootingMigration[Migration problems]
 
 section2:ProblemConvertingModel[Migrating my existing model causes an error]
