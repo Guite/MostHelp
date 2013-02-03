@@ -4,19 +4,19 @@ section:TroubleshootingIntroduction[Introduction]
 
 This sections collects information snippets which may be helpful when running into problems.
 
-section:TroubleshootingTooling[Tooling problems]
-
-section2:ProblemChangingProperties[I can't change some properties in the editor]
-
-Due to a bug it can happen that multiple properties of the same model element can not be changed properly.
-To work around this just change one property, do something different and then change the other one.
-
 section:TroubleshootingGeneral[General hints]
 
 section2:ProblemPathWithSpace[Pathes with space chars]
 
 Eclipse has problems with pathes containing space chars. Therefore avoid spaces to ensure things work
 correctly.
+
+section:TroubleshootingTooling[Tooling problems]
+
+section2:ProblemChangingProperties[I can't change some properties in the editor]
+
+Due to a bug it can happen that multiple properties of the same model element can not be changed properly.
+To work around this just change one property, do something different and then change the other one.
 
 section:TroubleshootingMigration[Migration problems]
 
