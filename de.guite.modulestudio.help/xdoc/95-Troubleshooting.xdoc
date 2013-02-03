@@ -26,6 +26,22 @@ data became stale or corrupt. To fix this please delete the folder named e[MostW
 See also link[https://github.com/Guite/MostGenerator/issues/254][ticket 254] for some information about
 that problem.
 
+section2:ProblemSavingModel[I can't save my model.]
+
+If you get an error message when trying to save your model this means that it is not possible to serialise
+the object graph you have currently opened in the memory. The probable reason for this is that there
+exists a reference to an element without a name. Therefore the serialiser sees no way to persist this
+reference.
+
+For example if you have two entities and a relationship between them then all these three
+elements need a name. Because if an entity has no name then the relationship can not store it's source
+or target reference. If the relationship itself has no name then the entities can not store it in their
+list of incoming or outgoing relationships.
+
+To fix this just ensure that all existing elements have a name. In a later version the ModuleStudio tooling
+is going to get more support for setting sensitive default values to overcome this issue, but this feature
+addition has no high priority at the moment.
+
 section:TroubleshootingMigration[Migration problems]
 
 section2:ProblemConvertingModel[Migrating my existing model causes an error]
