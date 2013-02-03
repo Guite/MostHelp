@@ -293,7 +293,7 @@ certain model elements more precisely.
 section2:GeneratorModelLayer[Model layer]
 
 The model layer in ModuleStudio has been designed for a precise description of entities and associations.
-To understand all the elements and properties please read the link[http://www.doctrine-project.org/projects/orm/2.1/docs/en][Doctrine
+To understand all the elements and properties please read the link[http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/index.html][Doctrine
 2 documentation] before.
 
 section3:GeneratorModelElements[Language elements]
