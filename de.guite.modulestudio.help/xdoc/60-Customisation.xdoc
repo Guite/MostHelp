@@ -40,9 +40,15 @@ Perform logical enhancements in the generated implementation classes. These exte
 classes containing the actual generator implementation code. So almost all concrete classes are empty
 waiting for your custom extension.
 
-The file e[lib/YourModule/Util/Controller.php] can be used to enable/disable specific controller actions
-(like view, display, ...) for particular entity types within custom conditions. See the parent class
-for the base implementation.
+The e[ControllerUtil] class can be used to enable/disable specific controller actions (like view, display,
+...) and additional functionality (like blocks, mailz api, content type, etc.) for particular entity types within custom conditions.
+
+When using edit forms you can easily customise the redirect behaviour by appending a e[returnTo] parameter
+to the edit url. For example let's imagine you modeled a customer entity having a bidirectional relationship to many addresses.
+In this case the default behaviour of the e[edit address] functionality redirects back to the detail view
+of the created/updated entity if it exists in the model. If there is no display action it redirects to
+the list view if existing else it jumps to the index page. Using the e[returnTo] parameter you can assign
+certain pages like e[display], e[view] and even related items like e[customerDisplay].
 
 section2:CustomisationVersioning[Use versioning]
 
@@ -52,5 +58,5 @@ and is a good idea anyway.
 section:CustomisationNotes[Additional notes]
 
 Please see also link[http://modulestudio.de/en/tutorial/structure-and-customisation-of-generated-applications.html][this
-tutorial]. Some parts are a little outdated due to the migration from Doctrine 1.3 to 2.1, but this shouldn't
+tutorial]. Some parts are a little outdated due to the migration from Doctrine 1.3 to Doctrine 2, but this shouldn't
 be a problem for the understandability of the overall messages shown there.
