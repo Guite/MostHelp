@@ -471,7 +471,8 @@ ul[
     from all fields in ascending position. See the slug properties on ref:GenRefEntity[entity level]
     for slug-related configuration options.]
     item[e[sortableGroup] - A boolean specifying whether this field acts as grouping criteria for the
-    sortable extension. The default value is e[false].]
+    sortable extension. The default value is e[false]. Only one sortable group is allowed for a certain
+    entity.]
     item[e[translatable] - A boolean specifying whether this field is translatable or not. The default
     value is e[false]. If at least one field in an entity is translatable the generator creates an additional
     class for managing the translation entities. Overall support for translations in the application
