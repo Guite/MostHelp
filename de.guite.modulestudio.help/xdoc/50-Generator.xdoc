@@ -443,8 +443,8 @@ section4:GenRefDerivedField[Derived field]
 Represents an entity field in the data layer which is mapped to a database column. A derived field comes
 straight from the data source.
 
-A calculated field has the following properties in addition to the common ref:GenRefEntityField[entity
-field] settings: 
+A derived field has the following properties in addition to the common ref:GenRefEntityField[entity field]
+settings: 
 
 ul[
     item[e[defaultValue] - The default value of the field. This default value is used when creating new
