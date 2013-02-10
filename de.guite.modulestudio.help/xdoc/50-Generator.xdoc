@@ -376,7 +376,25 @@ Normally all created classes are generated twice. Thereby an empty concrete clas
 base class containing the whole generator code. The motivation behind this separation is that your own
 code keeps free from generated artifacts.
 
-Example:
+Example for Zikula 1.3.6 prepared for 1.4.0:
+
+code[PHP][
+    namespace MyModule\Entity\Validator\Base;
+
+    class Person extends \MyModule\Validator
+    {
+        // generator code
+    }
+
+    namespace MyModule\Entity\Validator;
+
+    class Person extends Base\Person
+    {
+        // manual code
+    }
+]
+
+Example for Zikula 1.3.5:
 
 code[PHP][
     class MyModule_Entity_Validator_Base_Person
@@ -472,7 +490,7 @@ ul[
     for slug-related configuration options.]
     item[e[sortableGroup] - A boolean specifying whether this field acts as grouping criteria for the
     sortable extension. The default value is e[false]. Only one sortable group is allowed for a certain
-    entity. SortableGroup is not fully implemented yet, do not use if you not understand the function]
+    entity. SortableGroup is not fully implemented yet, do not use if you not understand the function.]
     item[e[translatable] - A boolean specifying whether this field is translatable or not. The default
     value is e[false]. If at least one field in an entity is translatable the generator creates an additional
     class for managing the translation entities. Overall support for translations in the application
@@ -1329,7 +1347,32 @@ from corresponding abstract base classes. As soon as an entity does inherit from
 be no base class created for it. Instead the concrete implementation class will inherit from the concrete
 class of the parent entity.
 
-Example:
+Example for Zikula 1.3.6 prepared for 1.4.0:
+
+code[PHP][
+    namespace MyModule\Entity\Validator\Base;
+
+    class Person extends \MyModule\Validator
+    {
+        // generator code
+    }
+
+    namespace MyModule\Entity\Validator;
+
+    class Person extends Base\Person
+    {
+        // manual code
+    }
+
+    namespace MyModule\Entity\Validator;
+
+    class Customer extends Person
+    {
+        // manual code
+    }
+]
+
+Example for Zikula 1.3.5:
 
 code[PHP][
     class MyModule_Entity_Validator_Base_Person
