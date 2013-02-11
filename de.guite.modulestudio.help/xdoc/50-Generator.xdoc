@@ -145,7 +145,8 @@ ul[
     item[e[interactiveInstallation] - A boolean specifying whether an interactive installation should
     be used or not. The default value is e[false] which lets the generator create a normal installer without
     any required user input. If you set it to true it will additionally generate some init templates
-    as well as a corresponding controller for the interactive installer.]
+    as well as a corresponding controller for the interactive installer. e[Important note:] support for
+    interactive installers is currently disabled as this topic is broken and being overhauled in the Zikula core.]
     item[e[modelPath] - Physical file path to the application model. This is obsolete and will be removed
     in a later version. Please keep it empty.]
     item[e[prefix] - A prefix for all database tables of this application. Will be used in entity classes.]
