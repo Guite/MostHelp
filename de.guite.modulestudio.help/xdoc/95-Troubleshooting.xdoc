@@ -86,5 +86,8 @@ code[PHP][
     }
 ]
 
+Note you must call this for all fetched entities, not for new ones (as the call is still included in
+the constructor).
+
 This solution approach is a bit ugly, because we require you (the mod dev) calling this explicitly from the using code.
 If you forget it in a certain method workflows are not initialised properly. Of course this be improved again as soon as Doctrine 2 offers the new event which happened really *post* fetch.
