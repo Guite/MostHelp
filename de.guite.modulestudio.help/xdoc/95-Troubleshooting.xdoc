@@ -57,3 +57,34 @@ If you get this error you have generated an application for Zikula 1.3.5 which c
 fixed in 1.3.6.
 Please apply the fix shown in link[https://github.com/zikula/core/commit/f7e3379e7060859aab334be6707fe6e0ab61baf8][https://github.com/zikula/core/commit/f7e3379e7060859aab334be6707fe6e0ab61baf8]
 in order to fix the error.
+
+section2:ProblemWorkflowFetching[The workflows are not fetched properly]
+
+Due to a problem Zikula 1.3.6 the workflow data can not be fetched automatically for an entity yet.
+Because if the postLoad listener in the entity class (method performPostLoadCallback) calls the workflow
+the Zikula workflow util class does another selection for this. This leads to both selections getting
+into a competition about the internal object hydrator of Doctrine. The workflow selection "steals" it
+from the main selection. So after the first item, when it wants to fetch the second one, it is not possible anymore.
+In 1.3.5 this was not a problem because workflows were called using DBUtil bridged by Doctrine 1.
+
+A clean solution would not use any workflow util class, but join the workflow entity directly. But this affects too many parts to do it quickly.
+Also to make it really beautiful we would need own workflow tables for each entity (like done with categories for example) in order to keep things together.
+
+Before the initWorkflow() method was called at two places: the entity constructor (for newly-created entities)
+and the postLoad listener (for fetched entities). Note Doctrine 2 is itself working on a new event which is triggered after all entities have been fetched.
+
+The current workaround is having the initWorkflow() call moved outside the postLoad listener. But now
+we have to call it elsewhere. Therefore we need something in the controller actions like the following for bypassing the problem:
+
+code[PHP][
+    // single entity
+    $myEntity->initWorkflow();
+
+    // collection of entities
+    foreach ($entities as $k => $entity) {
+        $entity->initWorkflow();
+    }
+]
+
+This solution approach is a bit ugly, because we require you (the mod dev) calling this explicitly from the using code.
+If you forget it in a certain method workflows are not initialised properly. Of course this be improved again as soon as Doctrine 2 offers the new event which happened really *post* fetch.
