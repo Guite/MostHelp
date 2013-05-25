@@ -812,6 +812,7 @@ ul[
     item[e[default] - A boolean specifying whether this entry is selected by default or not. The default
     value is false.]
     item[e[name] - Name of the item.]
+    item[e[image] - Optional name of an extrasmall image in the Zikula core, for example e[xedit].]
 ]
 
 See the ref:GenRefListField[list field] section for a description of what the generator does with those
