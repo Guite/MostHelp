@@ -13,10 +13,10 @@ correctly.
 
 section:TroubleshootingTooling[Tooling problems]
 
-section2:ProblemChangingProperties[I can't change some properties in the editor]
+section2:ProblemUnsettingProperties[Boolean properties can't be unset]
 
-Due to a bug it can happen that multiple properties of the same model element can not be changed properly.
-To work around this just change one property, do something different and then change the other one.
+Due to a bug it can happen that unsetting a boolean flag will not be persisted in the model file.
+To work around this please remove the flag using a text editor.
 
 section2:ProblemReopeningModel[I can't open my model again.]
 
