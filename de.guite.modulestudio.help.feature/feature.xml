@@ -21,14 +21,13 @@
 
    <requires>
       <import plugin="org.eclipse.help" version="3.6.0" match="greaterOrEqual"/>
-      <import plugin="org.apache.lucene" version="2.9.1" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ui.intro" version="3.4.200" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ui.intro.universal" version="3.2.600" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.osgi" version="3.8.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.core.runtime" version="3.8.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ui.cheatsheets" version="3.4.200" match="greaterOrEqual"/>
-      <import feature="org.eclipse.help" version="1.4.1.v20120726-051048-8R7xFOUFLWUl7MoSKV_RBXl27"/>
-      <import plugin="org.eclipse.ui" version="3.104.0" match="greaterOrEqual"/>
+      <import plugin="org.apache.lucene" version="3.5.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.runtime" version="3.9.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui" version="3.105.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.help" version="2.0.0.v20130605-2000"/>
    </requires>
 
    <plugin
@@ -43,14 +42,6 @@
          download-size="0"
          install-size="0"
          version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.equinox.servletbridge.extensionbundle"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
