@@ -28,10 +28,23 @@ documentation is e[modules/YourModule/docs/customisation.txt].
 
 section2:CustomisationOverriding[Use overriding]
 
-All cosmetic enhancements can be done by template overriding in Zikula. Placing templates in e[/config/templates/YourMod/...]
-for example is a good idea for development.
+All cosmetic enhancements can be done by template overriding in Zikula. For example you can place custom
+templates in e[/config/templates/YourMod/...] during development. e[Note] that if legacy mode is turned off,
+template overriding will not work automatically. In the past Zikula performed a file system scan several
+directories for each template which was very convenient, but also bad for performance. Now you have to
+describe overrides in the file e[template_overrides.yml] explicitely instead.
 
-If you need display-oriented additional logic, simply create a view plugin encapsulating your efforts
+So when custom templates are placed in the e[/config/templates/YourMod/...] folder this is fine for development.
+It is even recommended for the module developer to keep things separated during development (and in Git, see below)
+so that he can always distinguish (and compare) between generated and customised templates,
+since this makes things easier if the module is regenerated again in future.
+
+When using a module in production things are a bit different. A site owner may want to further customise
+some templates, so the e[/config/] directory should not be used by the module itself out of the box.
+This is not really a technical problem, but just a question of how the deployment process should be.
+You can for example move the overridden templates into the module before a release.
+
+If you need additional display-oriented logic, simply create a view plugin encapsulating your efforts
 in a file which is not affected by the generator at all.
 
 section2:CustomisationManualCode[Code additions]
