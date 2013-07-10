@@ -11,8 +11,8 @@ build
 #build --thorough
 
 # run tests and code coverage (buckminster emma --help)
-emma --properties "refProduct/bundles/de.guite.modulestudio.build/buckminster.properties" --launch "de.guite.modulestudio.help.tests/AllTests.launch" --terseXML --flatXML --output "${WORKSPACE}output/test_results/junit/alltests.xml" --xml "${WORKSPACE}output/test_results/coverage/alltests.xml" --stderr --stdout
-#emma --properties "refProduct/bundles/de.guite.modulestudio.build/buckminster.properties" --launch "de.guite.modulestudio.help.tests/OtherTests.launch" --terseXML --flatXML --output "${WORKSPACE}output/test_results/junit/othertests.xml" --xml "${WORKSPACE}output/test_results/coverage/othertests.xml" --stderr --stdout
+emma --properties "refProduct/bundles/de.guite.modulestudio.build/buckminster.properties" --launch "de.guite.modulestudio.help.tests/AllTests.launch" --terseXML --flatXML --output "${WORKSPACE}output/test_results/junit/alltests.xml" --exec "${WORKSPACE}output/test_results/coverage/alltests.exec" --stderr --stdout
+#emma --properties "refProduct/bundles/de.guite.modulestudio.build/buckminster.properties" --launch "de.guite.modulestudio.help.tests/OtherTests.launch" --terseXML --flatXML --output "${WORKSPACE}output/test_results/junit/othertests.xml" --exec "${WORKSPACE}output/test_results/coverage/othertests.exec" --stderr --stdout
 
 # build feature p2 repository
 perform --properties "refProduct/bundles/de.guite.modulestudio.build/buckminster.properties" "de.guite.modulestudio.help.build#site.p2"
