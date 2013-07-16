@@ -699,13 +699,6 @@ table[
     ]
     tr[
         td[Entity field]
-        td[The sluggable extension is not allowed for this field type.]
-        td[Not all field types can act as a sluggable position. These include all string and text field
-        types (including string, text, email, url, list, upload) as well as all integer field types
-        (including integer, user).]
-    ]
-    tr[
-        td[Entity field]
         td[Only one field per entity may store the sortable position.]
         td[Can occur if one tries to use multiple integer or user fields as position for the sortable extension.]
     ]
