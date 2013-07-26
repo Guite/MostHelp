@@ -1,6 +1,5 @@
 package de.guite.modulestudio.help.tests.manual;
 
-import org.hamcrest.StringDescription;
 import org.jnario.lib.Assert;
 import org.jnario.lib.Should;
 import org.jnario.runner.ExampleGroupRunner;
@@ -26,7 +25,7 @@ public class BasicApplicationClassTestsSpec {
     int _minus = (2 - 1);
     boolean _should_be = Should.<Integer>should_be(Integer.valueOf(_minus), Integer.valueOf(5));
     Assert.assertFalse("\nExpected (2-1) should not be 5 but"
-     + "\n     2-1 is " + new StringDescription().appendValue(Integer.valueOf(_minus)).toString() + "\n", _should_be);
+     + "\n     2-1 is " + new org.hamcrest.StringDescription().appendValue(Integer.valueOf(_minus)).toString() + "\n", _should_be);
     
   }
 }
