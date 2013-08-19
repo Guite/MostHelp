@@ -230,7 +230,7 @@ ul[
     Zikula storage. Additional containers are processed as external data sources.]
     item[e[entities] - Allows referencing one or more ref:GenRefEntity[entities].]
     item[e[numExampleRows] - The amount of example rows to create for entities in this model layer. Default
-    value is 5. Note that if you activate the e[categorisable] property for an entity the generated installer
+    value is 0. Note that if you activate the e[categorisable] property for an entity the generated installer
     relies on that you did not remove the default categories of Zikula. If you deleted them please set
     the amount of example rows to 0 to avoid problems.]
     item[e[relations] - Allows referencing one or more ref:GenRefRelationship[relationships].]
