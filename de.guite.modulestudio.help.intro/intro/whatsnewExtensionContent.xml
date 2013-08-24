@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <introContent>
     <extensionContent id="whatsnew-top-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
+        <group style-id="content-group" id="deguitemodulestudio-introLink-group061">
+            <text>Only string field types can be used as permalink parts (sluggable position) now.</text>
+            <text>The default value for the amount of example rows to be generated for a certain model container has been changed to 0.</text>
+            <text>One unrequired and confusing main menu entry (File > Open File...) has been hidden.</text>
+            <text>Upload folders are now created on demand if they do not exist yet (required if a module is used without having installed it, like for example when using Multisites site templates).</text>
+            <text>Added an option to skip permission checks when using internal calls for view and display actions.</text>
+            <text>Added an option for bypassing validation (required for example when archiving objects automatically).</text>
+            <text>The generator creates also a plugin for the Newsletter module (beside the Mailz plugin which has been there before already).</text>
+            <text>Lists with related objects in quick navigation forms are sorted now by default.</text>
+            <text>Added support for new event handlers in 1.3.6 to recognise a module being activated or deactivated.</text>
+            <text>Lots of generator bugfixes (for details see closed tickets in the MostGenerator project on Github).</text>
+            <text>Updated to Eclipse 4.3.0 (Kepler).</text>
+        </group>
         <group style-id="content-group" id="deguitemodulestudio-introLink-group060">
             <text>A new property stores the vendor of an application. Usually this is the name of a company or institution.</text>
             <text>Another new property allows you to define the desired target core version. The default is 1.3.6 which includes the new forward compatibility layer. Another current possible option is 1.3.5 for backwards compatibility.</text>
