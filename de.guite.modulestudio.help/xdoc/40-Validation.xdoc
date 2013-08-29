@@ -1475,7 +1475,7 @@ table[
     ]
     tr[
         td[Controller with actions]
-        td[This controller may not contain a (view | delete) action. Please remove it.]
+        td[This controller may not contain a delete action. Please remove it.]
         td[Appears for special controllers, like ajax. Those are reserved for special purposes and not
         intended to be called by the user as normal controllers.]
     ]
