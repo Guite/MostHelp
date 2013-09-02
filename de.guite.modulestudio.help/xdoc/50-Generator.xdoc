@@ -393,7 +393,9 @@ code[PHP][
 
     namespace MyModule\Entity\Validator;
 
-    class Person extends Base\Person
+    use Base\Person as BasePerson;
+
+    class Person extends BasePerson
     {
         // manual code
     }
