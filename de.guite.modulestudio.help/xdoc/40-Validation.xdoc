@@ -336,6 +336,11 @@ table[
         td[This case is reserved as it could make sense to use corresponding namespaces in generation
         for encapsulating some common code parts.]
     ]
+    tr[
+        td[Model container]
+        td[It is recommended to add two integer variables named e[pageSize] and e[showOnlyOwnEntries] for controlling the view action's behaviour.]
+        td[Occurs if a model's controllers contain a view action, but no according variables are found in the (any) model layer.]
+    ]
 ]
 
 section2:ValidationEntity[Entity]
