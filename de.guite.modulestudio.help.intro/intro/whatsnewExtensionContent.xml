@@ -14,6 +14,7 @@
             <text>Names of database tables include the vendor as prefix in 1.3.6.</text>
             <text>Also view actions are now allowed for ajax controllers.</text>
             <text>The frontend for 1.3.6 extensions has been converted to Bootstrap.</text>
+            <text>Fixed wrong length calculation during table size validation.</text>
             <text>Lots of generator bugfixes (for details see closed tickets in the MostGenerator project on Github).</text>
             <text>Updated to Eclipse 4.3.0 (Kepler).</text>
         </group>
