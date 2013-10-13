@@ -6,7 +6,7 @@
             <text>The default value for the amount of example rows to be generated for a certain model container has been changed to 0.</text>
             <text>One unrequired and confusing main menu entry (File > Open File...) has been hidden.</text>
             <text>Upload folders are now created on demand if they do not exist yet (required if a module is used without having installed it, like for example when using Multisites site templates).</text>
-            <text>Added an option to skip permission checks when using internal calls for view and display actions.</text>
+            <text>Added a language property for controlling sorting also for the incoming source side of many-to-many relationships.</text>
             <text>Added an option for bypassing validation (required for example when archiving objects automatically).</text>
             <text>The generator creates also a plugin for the Newsletter module (beside the Mailz plugin which has been there before already).</text>
             <text>Lists with related objects in quick navigation forms are sorted now by default.</text>

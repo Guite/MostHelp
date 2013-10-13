@@ -1210,7 +1210,7 @@ settings:
 ul[
     item[e[indexBy] - Set to target field name (must be unique) to specify the index by criteria for the
     relation. Please note that this has not be tested very well yet.]
-    item[e[orderBy] - Set to target field name to specify the sorting criteria for the relation.]
+    item[e[orderBy] - Set to target field name to specify the sorting criteria for the outgoing relation.]
     item[e[orphanRemoval] - Default value is e[false]. If set to e[true] orphans get removed automatically.]
 ]
 
@@ -1237,7 +1237,8 @@ settings:
 ul[
     item[e[indexBy] - Set to target field name (must be unique) to specify the index by criteria for the
     relation. Please note that this has not be tested very well yet.]
-    item[e[orderBy] - Set to target field name to specify the sorting criteria for the relation.]
+    item[e[orderBy] - Set to target field name to specify the sorting criteria for the outgoing relation.]
+    item[e[orderByReverse] - Set to source field name to specify the sorting criteria for the incoming relation.]
     item[e[refClass] - Specifies the reference class created for the linking table (for example e[personAddress]).
     The generator creates additional classes for this reference-managing entity.]
 ]
