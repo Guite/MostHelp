@@ -325,6 +325,12 @@ ul[
     item[e[categorisableMultiSelection] - A boolean specifying whether multiple categories can be selected or not.]
     item[e[changeTrackingPolicy] - How change detection is being done (see ref:GenRefEntityChangeTrackingPolicy[below]).
     The default value is e[DEFERRED_IMPLICIT].]
+    item[e[displayPattern] - Pattern for displaying instances of this entity. In earlier ModuleStudio
+    versions one had to mark one entity field as e[leading]. However, this was not flexible enough in
+    practice. With the display pattern you can specify arbitrary expressions which are used as textual
+    representation for instances of this entity. For most cases you may want so declare just one field,
+    which is done like e[#title#]. A more complex example would be e[#lastName#, #firstName# (#age# years)].
+    Of course all fields must exist in the entity with exactly the names used within the display pattern.]
     item[e[geographical] - A boolean specifying whether the geographical extension is used or not. If
     set to e[true] the generator will create two additional fields named e[latitude] and e[longitude].
     Also it will consider them in all important application areas and provide an export for the kml format.
@@ -475,9 +481,8 @@ ul[
     item[e[defaultValue] - The default value of the field. This default value is used when creating new
     entities with the ref:GenRefEditAction[edit action].]
     item[e[leading] - A boolean specifying whether this is the primary (and default) field in this entity.
-    Default value is e[false]. Every entity must contain one leading field which is used for headings,
-    dropdown values and default sorting. Usually this is something like e[name] or e[title] - if a textual
-    field is part of the entity at all.]
+    Default value is e[false]. This setting is obsolete. Use the e[displayPattern] property of the containing
+    ref:GenRefEntity[entity] instead.]
     item[e[mandatory] - A boolean specifying whether this field is mandatory or not. The default value
     is e[true].]
     item[e[nullable] - A boolean specifying whether the field may be null or not. The default value is

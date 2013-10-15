@@ -136,6 +136,11 @@ table[
     ]
     tr[
         td[Application]
+        td[The model path property is obsolete and must be cleared.]
+        td[This is obsolete and will be removed in a later version. Please keep it empty.]
+    ]
+    tr[
+        td[Application]
         td[The application must contain at least one model container.]
         td[At the moment ModuleStudio wants a model with at least one entity. If you are modeling an
         extension without any data storage, just create some dummy elements.]
@@ -396,9 +401,23 @@ table[
     ]
     tr[
         td[Entity with fields]
-        td[Every entity must contain one field defined as leading (leading = true).]
-        td[The leading field is used in list views, auto completion as well as default sorting criteria
-        (unless the entity is using the Sortable extension).]
+        td[Please remove the leading field flags as this property is going to be removed in future.]
+        td[Occurs when a display pattern is defined but also a field is marked as leading.]
+    ]
+    tr[
+        td[Entity with fields]
+        td[Using display pattern in the entity is preferred against marking leading fields. Also every entity may include only one field defined as leading.]
+        td[Occurs when no display pattern is defined but multiple fields are marked as leading.]
+    ]
+    tr[
+        td[Entity with fields]
+        td[The entity needs a display pattern.]
+        td[Occurs when no display pattern is defined and also no field is marked as leading.]
+    ]
+    tr[
+        td[Entity with fields]
+        td[Using display pattern in the entity is preferred against marking leading fields.]
+        td[Occurs when no display pattern is defined but a field is marked as leading.]
     ]
     tr[
         td[Entity with archive]
