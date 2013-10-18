@@ -180,6 +180,31 @@ table[
         td[Names of view containers must be unique.]
         td[Unique identification and separation of view layers.]
     ]
+    tr[
+        td[Application]
+        td[The application may contain only one settings container.]
+        td[]
+    ]
+]
+
+section2[Settings container]
+
+table[
+    tr[
+        td[Context]
+        td[Check]
+        td[Remarks]
+    ]
+    tr[
+        td[Settings container]
+        td[Settings container must be assigned to an application.]
+        td[Should not occur in practice, this is just for completeness.]
+    ]
+    tr[
+        td[Settings container]
+        td[Scribite plugins require external controller and finder component.]
+        td[]
+    ]
 ]
 
 section2[Referred application]
