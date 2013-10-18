@@ -130,9 +130,10 @@ table[
     ]
     tr[
         td[Application]
-        td[The application must have a version. The application version must conform to the pattern x.y.z.]
-        td[Another requirement introduced in Zikula 1.3. Valid values are 1.0.0, 1.2.2, but not 1.1 or
-        2.1.0beta.]
+        td[The application must have a version. The application version must conform to the pattern 
+        x.y.z.]
+        td[Another requirement introduced in Zikula 1.3. Valid values are 1.0.0, 1.2.2, but not 1.1 
+        or 2.1.0beta.]
     ]
     tr[
         td[Application]
@@ -196,12 +197,14 @@ table[
     ]
     tr[
         td[Referred application]
-        td[Please specify the minimum version for the dependency. The minimum version must conform to the pattern x.y.z.]
+        td[Please specify the minimum version for the dependency. The minimum version must conform to 
+        the pattern x.y.z.]
         td[]
     ]
     tr[
         td[Referred application]
-        td[Please specify the maximum version for the dependency. The maximum version must conform to the pattern x.y.z.]
+        td[Please specify the maximum version for the dependency. The maximum version must conform to 
+        the pattern x.y.z.]
         td[]
     ]
     tr[
@@ -329,8 +332,8 @@ table[
     ]
     tr[
         td[Model container with entities]
-        td[The amount of entities is getting quite high. Maybe it makes sense to split up the model into
-        two single applications.]
+        td[The amount of entities is getting quite high. Maybe it makes sense to split up the model 
+        into two single applications.]
         td[This warning appears if you have more than 14 entities. Remember Zikula is a modular system.
         You can design whole families of extensions with ModuleStudio, so please try keeping complexity
         low and apply separation of concerns.]
@@ -343,8 +346,10 @@ table[
     ]
     tr[
         td[Model container]
-        td[It is recommended to add two integer variables named e[pageSize] and e[showOnlyOwnEntries] for controlling the view action's behaviour.]
-        td[Occurs if a model's controllers contain a view action, but no according variables are found in the (any) model layer.]
+        td[It is recommended to add two integer variables named e[pageSize] and e[showOnlyOwnEntries] 
+        for controlling the view action's behaviour.]
+        td[Occurs if a model's controllers contain a view action, but no according variables are found 
+        in the (any) model layer.]
     ]
 ]
 
@@ -367,7 +372,8 @@ table[
     tr[
         td[Entity]
         td[Every entity must have a (name | name for multiple instances).]
-        td[Entity (multiple) name must have a length of at least two chars. Should have at least four chars.]
+        td[Entity (multiple) name must have a length of at least two chars. Should have at least four 
+        chars.]
     ]
     tr[
         td[Entity]
@@ -389,8 +395,10 @@ table[
     ]
     tr[
         td[Entity with fields]
-        td[Remove ID fields... you do not need them ;-) unless maybe you want to create composite primary keys.]
-        td[This warning appears if a field is named like e[id] or e[personid] or e[person_id] for an entity named
+        td[Remove ID fields... you do not need them ;-) unless maybe you want to create composite primary 
+        keys.]
+        td[This warning appears if a field is named like e[id] or e[personid] or e[person_id] for an 
+        entity named
         e[person]. In these cases ModuleStudio adds primary keys to this table automatically before
         the generation.]
     ]
@@ -406,7 +414,8 @@ table[
     ]
     tr[
         td[Entity with fields]
-        td[Using display pattern in the entity is preferred against marking leading fields. Also every entity may include only one field defined as leading.]
+        td[Using display pattern in the entity is preferred against marking leading fields. Also every 
+        entity may include only one field defined as leading.]
         td[Occurs when no display pattern is defined but multiple fields are marked as leading.]
     ]
     tr[
@@ -421,8 +430,10 @@ table[
     ]
     tr[
         td[Entity with archive]
-        td[Every entity with an archive (e[hasArchive] set to e[true]) must contain one datetime or date field designated as end date.]
-        td[For implementation of an automatic archiving functionality the system must know when an object has reached the end of it's lifecycle.]
+        td[Every entity with an archive (e[hasArchive] set to e[true]) must contain one datetime or 
+        date field designated as end date.]
+        td[For implementation of an automatic archiving functionality the system must know when an object 
+        has reached the end of it's lifecycle.]
     ]
 ]
 
@@ -508,39 +519,45 @@ table[
     ]
     tr[
         td[Entity defined as loggable]
-        td[There must not exist an entity named FooLogEntry as this is reserved by the corresponding extension.]
-        td[For an entity named e[person] ModuleStudio does not only generate corresponding e[Person] classes,
-        but also an entity named e[PersonLogEntry] for managing the version log entry entities.]
+        td[There must not exist an entity named FooLogEntry as this is reserved by the corresponding 
+        extension.]
+        td[For an entity named e[person] ModuleStudio does not only generate corresponding e[Person] 
+        classes, but also an entity named e[PersonLogEntry] for managing the version log entry entities.]
     ]
     tr[
         td[Entity with translatable field]
-        td[There must not exist an entity named FooTranslation as this is reserved by the corresponding extension.]
-        td[For an entity named e[person] ModuleStudio does not only generate corresponding e[Person] classes,
-        but also an entity named e[PersonTranslatable] for managing translation entities.]
+        td[There must not exist an entity named FooTranslation as this is reserved by the corresponding 
+        extension.]
+        td[For an entity named e[person] ModuleStudio does not only generate corresponding e[Person] 
+        classes, but also an entity named e[PersonTranslatable] for managing translation entities.]
     ]
     tr[
         td[Entity defined with closure tree]
-        td[There must not exist an entity named FooClosure as this is reserved by the corresponding extension.]
-        td[For an entity named e[person] ModuleStudio does not only generate corresponding e[Person] classes,
-        but also an entity named e[PersonClosure] for managing the closure entities.]
+        td[There must not exist an entity named FooClosure as this is reserved by the corresponding 
+        extension.]
+        td[For an entity named e[person] ModuleStudio does not only generate corresponding e[Person] 
+        classes, but also an entity named e[PersonClosure] for managing the closure entities.]
     ]
     tr[
         td[Entity defined as attributable]
-        td[There must not exist an entity named FooAttribute as this is reserved by the corresponding extension.]
-        td[For an entity named e[person] ModuleStudio does not only generate corresponding e[Person] classes,
-        but also an entity named e[PersonAttribute] for managing the attribute entities.]
+        td[There must not exist an entity named FooAttribute as this is reserved by the corresponding 
+        extension.]
+        td[For an entity named e[person] ModuleStudio does not only generate corresponding e[Person] 
+        classes, but also an entity named e[PersonAttribute] for managing the attribute entities.]
     ]
     tr[
         td[Entity defined as categorisable]
-        td[There must not exist an entity named FooCategory as this is reserved by the corresponding extension.]
-        td[For an entity named e[person] ModuleStudio does not only generate corresponding e[Person] classes,
-        but also an entity named e[PersonCategory] for managing the category entities.]
+        td[There must not exist an entity named FooCategory as this is reserved by the corresponding 
+        extension.]
+        td[For an entity named e[person] ModuleStudio does not only generate corresponding e[Person] 
+        classes, but also an entity named e[PersonCategory] for managing the category entities.]
     ]
     tr[
         td[Entity with meta data]
-        td[There must not exist an entity named FooMetaData as this is reserved by the corresponding extension.]
-        td[For an entity named e[person] ModuleStudio does not only generate corresponding e[Person] classes,
-        but also an entity named e[PersonMetaData] for managing the meta data entities.]
+        td[There must not exist an entity named FooMetaData as this is reserved by the corresponding 
+        extension.]
+        td[For an entity named e[person] ModuleStudio does not only generate corresponding e[Person] 
+        classes, but also an entity named e[PersonMetaData] for managing the meta data entities.]
     ]
 ]
 
@@ -582,13 +599,14 @@ table[
     tr[
         td[Entity field]
         td[Field name is a reserved identifier (workflowState).]
-        td[This list field is added automatically by a model-to-model transformation before the actual generation happens.]
+        td[This list field is added automatically by a model-to-model transformation before the actual 
+        generation happens.]
     ]
     tr[
         td[Entity field]
         td[Field name is a reserved database keyword.]
-        td[ModuleStudio prevents the usage of keywords which are reserved in some database systems. Background
-        is that there are no column prefixes anymore. For a list of all keywords see ref:ReservedDBKeywords[the
+        td[ModuleStudio prevents the usage of keywords which are reserved in some database systems. 
+        Background is that there are no column prefixes anymore. For a list of all keywords see ref:ReservedDBKeywords[the
         following section].]
     ]
     tr[
@@ -613,7 +631,8 @@ table[
     ]
     tr[
         td[Entity field]
-        td[Fields using text or blob data types must not be unique (applies for text, array and object fields).]
+        td[Fields using text or blob data types must not be unique (applies for text, array and object 
+        fields).]
         td[]
     ]
 ]
@@ -717,14 +736,15 @@ table[
     tr[
         td[Entity field]
         td[The sluggable position values must be unique per entity.]
-        td[If fields are included into a slug by setting a value greater than 0, this value must be unique
-        per entity. The position defines in which order the field values are considered as permalink
+        td[If fields are included into a slug by setting a value greater than 0, this value must be 
+        unique per entity. The position defines in which order the field values are considered as permalink
         parts.]
     ]
     tr[
         td[Entity field]
         td[Only one field per entity may store the sortable position.]
-        td[Can occur if one tries to use multiple integer or user fields as position for the sortable extension.]
+        td[Can occur if one tries to use multiple integer or user fields as position for the sortable 
+        extension.]
     ]
     tr[
         td[Entity field]
@@ -775,8 +795,9 @@ table[
     ]
     tr[
         td[Entity field]
-        td[Entities with geographical extension have additional fields names (longitude, latitude). Thus
-        your (fields may not contain these names | reference may not contain these (source | target) aliases).]
+        td[Entities with geographical extension have additional fields names (longitude, latitude). 
+        Thus your (fields may not contain these names | reference may not contain these (source | target) 
+        aliases).]
         td[If an entity has activated the e[geographical] extension ModuleStudio creates these fields
         automatically in addition to the other fields in the model (as well as some usage of geolocation
         when creating new entities).]
@@ -819,7 +840,8 @@ table[
     ]
     tr[
         td[Entity field]
-        td[Entities with Zikula standard fields extension have an additional additional fields (createdDate, createdUserId, updatedDate, updatedUserId). Thus
+        td[Entities with Zikula standard fields extension have an additional additional fields (createdDate, 
+        createdUserId, updatedDate, updatedUserId). Thus
         your (fields may not contain these names | reference may not contain these (source | target) aliases).]
         td[If an entity has activated the e[standard fields] extension ModuleStudio creates some additional
         fields to store these for a certain entity.]
@@ -851,19 +873,22 @@ table[
     ]
     tr[
         td[Integer field]
-        td[Entities with an aggregate field should use a locking strategy (optimistic or pessimistic read).]
-        td[If an integer field acts as aggregate field the corresponding entity must use one locking strategy
-        of e[OPTIMISTIC], e[PAGELOCK_OPTIMISTIC], e[PESSIMISTIC_READ], e[PAGELOCK_PESSIMISTIC_READ],
+        td[Entities with an aggregate field should use a locking strategy (optimistic or pessimistic 
+        read).]
+        td[If an integer field acts as aggregate field the corresponding entity must use one locking 
+        strategy of e[OPTIMISTIC], e[PAGELOCK_OPTIMISTIC], e[PESSIMISTIC_READ], e[PAGELOCK_PESSIMISTIC_READ],
         depending on whether you want support the Zikula PageLock functionality in addition or not.]
     ]
     tr[
         td[Integer field]
-        td[Aggregate fields work only in combination with an outgoing and bidirectional one-to-many relationship with persist cascade.]
+        td[Aggregate fields work only in combination with an outgoing and bidirectional one-to-many 
+        relationship with persist cascade.]
         td[]
     ]
     tr[
         td[Integer field]
-        td[Naming of aggregateFor attribute values must follow the syntax targetAlias#targetFieldName (for example views#amount).]
+        td[Naming of aggregateFor attribute values must follow the syntax targetAlias#targetFieldName 
+        (for example views#amount).]
         td[If an integer field acts as aggregate field the property e[aggregate for] must define the
         target alias of corresponding outgoing and bidirectional one-to-many relationship with persist
         cascade. After a e[# char] as delimiter the name of the target field (to be aggregated) follows.]
@@ -980,15 +1005,17 @@ table[
     ]
     tr[
         td[All date fields]
-        td[The timestampable change trigger field must point to workflowState, the name of a field or a relation (property.field).]
+        td[The timestampable change trigger field must point to workflowState, the name of a field or 
+        a relation (property.field).]
         td[If the e[timestampable] property for a field has been set to e[CHANGE] then this error can
-        appear to remind you to set also the required attribute e[timestampableChangeTriggerField]. Either
-        you did not set anything there or the value does neither correspond to workflowState nor the name of an entity field
-        nor an incoming relation.]
+        appear to remind you to set also the required attribute e[timestampableChangeTriggerField]. 
+        Either you did not set anything there or the value does neither correspond to workflowState 
+        nor the name of an entity field nor an incoming relation.]
     ]
     tr[
         td[a[ValidationIntegerForVersion]Datetime field]
-        td[It would be preferable to use an integer column as version field, as datetimes could potentially lead to conflicts for high traffic sites depending on the timestamp resulution in the database.]
+        td[It would be preferable to use an integer column as version field, as datetimes could potentially 
+        lead to conflicts for high traffic sites depending on the timestamp resulution in the database.]
         td[If you use datetime fields with e[version] set to true this warning will appear. As the Doctrine
         2 manual points out integers are more robust against race conditions in high traffic environments
         where timestamp comparisons are limited due to how precise the used database does it. Therefore
@@ -1018,12 +1045,15 @@ section3[Other fields]
 table[
     tr[
         td[Upload field]
-        td[The allowedExtensions attribute must contain a comma separated list of the file types to be allowed during the upload (example: gif, jpeg, jpg, png). Note that the separator is ', ' including the space char.]
+        td[The allowedExtensions attribute must contain a comma separated list of the file types to 
+        be allowed during the upload (example: gif, jpeg, jpg, png). Note that the separator is ', ' 
+        including the space char.]
         td[]
     ]
     tr[
         td[Upload field]
-        td[There must not exist a field named fooMeta because this is reserved for an automatic field storing meta data for this upload.]
+        td[There must not exist a field named fooMeta because this is reserved for an automatic field 
+        storing meta data for this upload.]
         td[]
     ]
     tr[
@@ -1033,7 +1063,8 @@ table[
     ]
     tr[
         td[List field]
-        td[The list is not set to multiple and may therefore only contain one item with default property set to true.]
+        td[The list is not set to multiple and may therefore only contain one item with default property 
+        set to true.]
         td[]
     ]
     tr[
@@ -1092,8 +1123,8 @@ table[
     ]
     tr[
         td[Join relationship]
-        td[The (sourceField | targetField) attribute must contain either 'id' for automatic primary key
-        or a comma separated list of (source | target) fields to be referenced. Note that the separator
+        td[The (sourceField | targetField) attribute must contain either 'id' for automatic primary 
+        key or a comma separated list of (source | target) fields to be referenced. Note that the separator
         is ', ' including the space char.]
         td[]
     ]
@@ -1199,13 +1230,6 @@ table[
         td[IndexBy fields must be unique.]
         td[The target entity field used for e[indexBy] must have e[unique] validator enabled.]
     ]
-    tr[
-        td[One to many relationship]
-        td[The orderBy attribute points to an invalid field of the target entity.]
-        td[Checks whether the target entity contains a field equally named like the e[orderBy] property.
-        Currently disabled because also expressions like e[status ASC, createdDate DESC] are allowed. Will
-        probably be removed in a future version.]
-    ]
 ]
 
 section3[Many to many relationship]
@@ -1228,17 +1252,10 @@ table[
     ]
     tr[
         td[Many to many relationship]
-        td[The orderBy attribute points to an invalid field of the target entity.]
-        td[Checks whether the target entity contains a field equally named like the e[orderBy] property.
-        Currently disabled because also expressions like e[status ASC, createdDate DESC] are allowed. Will
-        probably be removed in a future version.]
-    ]
-    tr[
-        td[Many to many relationship]
         td[A many-to-many relation must have the refClass attribute defined.]
         td[The e[reference class] defines the name of the entity managing the many to many relationship.
-        If for example many e[persons] have many e[addresses], you could choose e[personAddress] as reference
-        class.]
+        If for example many e[persons] have many e[addresses], you could choose e[personAddress] as 
+        reference class.]
     ]
     tr[
         td[Many to many relationship]
@@ -1270,12 +1287,13 @@ table[
         td[Inheritance relationship]
         td[The discriminatorColumn attribute must not be empty for inheritance relations.]
         td[Per default this attribute has the value e[discr] so this shouldn't happen as long as you
-        don't delete this value. ModuleStudio uses this value to tell Doctrine 2 where to store the type
-        of stored entities.]
+        don't delete this value. ModuleStudio uses this value to tell Doctrine 2 where to store the 
+        type of stored entities.]
     ]
     tr[
         td[Inheritance relationship]
-        td[Please rename the e[discriminatorColumn] field as it is reserved for the discriminator column, or change corresponding attribute.]
+        td[Please rename the e[discriminatorColumn] field as it is reserved for the discriminator column, 
+        or change corresponding attribute.]
         td[Happens if the target entity includes a field with the same name as specified in the e[discriminator
         setting].]
     ]
@@ -1446,8 +1464,8 @@ table[
     ]
     tr[
         td[Controller container]
-        td[Please create an ajax controller including an arbitrary action, like main, because it is required
-        for processing your model properly.]
+        td[Please create an ajax controller including an arbitrary action, like main, because it is 
+        required for processing your model properly.]
         td[This happens if your model layer contains relationships or an entity with either user fields
         or tree extension. As the generator creates additonal ajax methods in these cases it requires
         an ajax controller for keeping this information also in the model for documentation.]
@@ -1489,7 +1507,8 @@ table[
     ]
     tr[
         td[Controller with actions]
-        td[There must not exist more than one (main | view | display | edit | delete) action in one controller.]
+        td[There must not exist more than one (main | view | display | edit | delete) action in one 
+        controller.]
         td[]
     ]
     tr[

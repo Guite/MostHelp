@@ -13,7 +13,8 @@ table[
     ]
     tr[
         td[AC-MDSD]
-        td[Architecture-Centric MDSD: a specialisation of MDSD, often used for the domain "software architecture". Covers a domain beginning from the solution space by utilising reference implementations.]
+        td[Architecture-Centric MDSD: a specialisation of MDSD, often used for the domain "software 
+        architecture". Covers a domain beginning from the solution space by utilising reference implementations.]
     ]
     tr[
         td[Agile Software Development]
@@ -37,7 +38,8 @@ table[
     ]
     tr[
         td[Aspect-Oriented Software Development]
-        td[Development paradigm increasing maintainability of complex system by separated treatment of cross-cutting concerns with aspects.]
+        td[Development paradigm increasing maintainability of complex system by separated treatment of 
+        cross-cutting concerns with aspects.]
     ]
     tr[
         td[BNF]
@@ -49,11 +51,13 @@ table[
     ]
     tr[
         td[Cartridge]
-        td[Modularised generator component which executes a specific task and can be flexibly combined with other components.]
+        td[Modularised generator component which executes a specific task and can be flexibly combined 
+        with other components.]
     ]
     tr[
         td[Cascaded MDSD]
-        td[Enhancement of AC-MDSD for separation of different generators into modular cartridges. In this context a cascading defines a sequential combination of several cartridges.]
+        td[Enhancement of AC-MDSD for separation of different generators into modular cartridges. In 
+        this context a cascading defines a sequential combination of several cartridges.]
     ]
     tr[
         td[CCC]
@@ -69,15 +73,18 @@ table[
     ]
     tr[
         td[Concrete syntax]
-        td[Textual, structural, graphical or hybrid notations of a domain-specific language. Serves for describing applications in the form of models by the user.]
+        td[Textual, structural, graphical or hybrid notations of a domain-specific language. Serves 
+        for describing applications in the form of models by the user.]
     ]
     tr[
         td[Constraint]
-        td[Rule-like definition in context of a meta class. Serves for validation of models which are based on the corresponding meta model.]
+        td[Rule-like definition in context of a meta class. Serves for validation of models which are 
+        based on the corresponding meta model.]
     ]
     tr[
         td[Cross-Cutting Concern]
-        td[A function representing a separatable aspect whose implementation affects multiple program parts. A typical example is the logging of errors.]
+        td[A function representing a separatable aspect whose implementation affects multiple program 
+        parts. A typical example is the logging of errors.]
     ]
     tr[
         td[CSS]
@@ -98,23 +105,28 @@ table[
     ]
     tr[
         td[Doctrine]
-        td[An ORM layer for PHP, represents the interface between objects in an application and the relational data storage behind it.]
+        td[An ORM layer for PHP, represents the interface between objects in an application and the 
+        relational data storage behind it.]
     ]
     tr[
         td[Domain]
-        td[A limited area of knowledge or interest, represents a problem space from the real world in most cases.]
+        td[A limited area of knowledge or interest, represents a problem space from the real world in 
+        most cases.]
     ]
     tr[
         td[Domain analysis]
-        td[Process within the meta modeling, cares for finding commonalities and differences between different members of a software system family.]
+        td[Process within the meta modeling, cares for finding commonalities and differences between 
+        different members of a software system family.]
     ]
     tr[
         td[Domain architecture]
-        td[From the area of product line engineering, marks the sum of a domain-specific language and the platform on which the applications realised with it are executed.]
+        td[From the area of product line engineering, marks the sum of a domain-specific language and 
+        the platform on which the applications realised with it are executed.]
     ]
     tr[
         td[Domain Specific Language]
-        td[A language offering precise means for expression for a domain. Contains an abstract syntax as well as concrete notations and transformations for further processing of created models.]
+        td[A language offering precise means for expression for a domain. Contains an abstract syntax 
+        as well as concrete notations and transformations for further processing of created models.]
     ]
     tr[
         td[DSL]
@@ -126,7 +138,8 @@ table[
     ]
     tr[
         td[Ecore]
-        td[Meta meta model implemented in the Eclipse Modeling Framework, compatible to the Meta Object Facility.]
+        td[Meta meta model implemented in the Eclipse Modeling Framework, compatible to the Meta Object 
+        Facility.]
     ]
     tr[
         td[EJB]
@@ -142,7 +155,8 @@ table[
     ]
     tr[
         td[Framework]
-        td[Collection of libraries and functions providing a well-defined frame for implementations of a programming language.]
+        td[Collection of libraries and functions providing a well-defined frame for implementations 
+        of a programming language.]
     ]
     tr[
         td[Function point analysis]
@@ -159,7 +173,8 @@ table[
     ]
     tr[
         td[Generative software architecture]
-        td[Specialisation of a domain architecture for encapsulating technical implementation details in the context of architecture-centric MDSD.]
+        td[Specialisation of a domain architecture for encapsulating technical implementation details 
+        in the context of architecture-centric MDSD.]
     ]
     tr[
         td[GEF]
@@ -175,11 +190,13 @@ table[
     ]
     tr[
         td[Graphical Editing Framework]
-        td[Eclipse-based framework for the realisation of concrete notations in the form of graphical editors.]
+        td[Eclipse-based framework for the realisation of concrete notations in the form of graphical 
+        editors.]
     ]
     tr[
         td[Graphical Modeling Framework]
-        td[Generative bridge between the Eclipse Modeling Framework and the Graphical Editing Framework. Creates graphical editors based on Ecore-based meta models.]
+        td[Generative bridge between the Eclipse Modeling Framework and the Graphical Editing Framework. 
+        Creates graphical editors based on Ecore-based meta models.]
     ]
     tr[
         td[GUI]
@@ -252,11 +269,13 @@ table[
     ]
     tr[
         td[Meta model]
-        td[Abstract syntax of a domain-specific language. Is created based on a meta meta model in the meta modeling process.]
+        td[Abstract syntax of a domain-specific language. Is created based on a meta meta model in the 
+        meta modeling process.]
     ]
     tr[
         td[Meta modeling]
-        td[Abstract definition of the core concepts of a domain in the form of meta models. Based on findouts in the domain analysis.]
+        td[Abstract definition of the core concepts of a domain in the form of meta models. Based on 
+        findouts in the domain analysis.]
     ]
     tr[
         td[Meta Object Facility]
@@ -264,19 +283,23 @@ table[
     ]
     tr[
         td[Model]
-        td[A simplifying presentation of structures, functionalities and progress forms. Represents an application in the model-driven software development which is described in an abstract form.]
+        td[A simplifying presentation of structures, functionalities and progress forms. Represents 
+        an application in the model-driven software development which is described in an abstract form.]
     ]
     tr[
         td[Model-Based]
-        td[In model-based systems models are the „base“ for an application. They serve for documentation and basis for generating a program skeleton.]
+        td[In model-based systems models are the „base“ for an application. They serve for documentation 
+        and basis for generating a program skeleton.]
     ]
     tr[
         td[Model-Driven]
-        td[Model-driven systems use domain-specific languages in order to be able to create software completely from models.]
+        td[Model-driven systems use domain-specific languages in order to be able to create software 
+        completely from models.]
     ]
     tr[
         td[Model-Driven Architecture]
-        td[Standard for the realisation of software systems with a separation of technology independent and dependent parts, defined by the Object Management Group.]
+        td[Standard for the realisation of software systems with a separation of technology independent 
+        and dependent parts, defined by the Object Management Group.]
     ]
     tr[
         td[Model-Driven Software Development]
@@ -284,7 +307,8 @@ table[
     ]
     tr[
         td[Module]
-        td[The module \[moˈduːle\] is a building block, in general a part of a bigger system. In informatics it stands for a unit which is assembled by multiple elements and can be exchanged at any time.]
+        td[The module \[moˈduːle\] is a building block, in general a part of a bigger system. In informatics 
+        it stands for a unit which is assembled by multiple elements and can be exchanged at any time.]
     ]
     tr[
         td[MOF]
@@ -313,7 +337,7 @@ table[
     ]
     tr[
         td[Object Management Group]
-        td[Consortium developing different standards for improving interoperability, beside others MDA, UML, Object Constraint Language and Query / View / Transition.]
+        td[Consortium developing different standards for improving interoperability, beside others  MDA, UML, Object Constraint Language and Query / View / Transition.]
     ]
     tr[
         td[OCL]
@@ -357,7 +381,8 @@ table[
     ]
     tr[
         td[Product Line Engineering]
-        td[A principle comparing software development with industrial production processes and aiming on according automations.]
+        td[A principle comparing software development with industrial production processes and aiming 
+        on according automations.]
     ]
     tr[
         td[PSM]
@@ -365,7 +390,7 @@ table[
     ]
     tr[
         td[Query / View / Transition]
-        td[Standardised language adapted by the Object Meta Group for model-to-model transformations]
+        td[Standardised language adapted by the Object Meta Group for model-to-model transformations.]
     ]
     tr[
         td[QVT]
@@ -381,7 +406,8 @@ table[
     ]
     tr[
         td[Reference implementation]
-        td[Existing application of a software system family. Used in AC-MDSD for deriving the core concepts of a domain from the solution space.]
+        td[Existing application of a software system family. Used in AC-MDSD for deriving a domain's core concepts
+        from the solution space.]
     ]
     tr[
         td[Rich Ajax Platform]
@@ -389,7 +415,8 @@ table[
     ]
     tr[
         td[Rich Client Platform]
-        td[Generic application framework based on Eclipse. Allows the implementation of portable Java applications.]
+        td[Generic application framework based on Eclipse. Allows the implementation of portable Java 
+        applications.]
     ]
 ]
 
@@ -414,7 +441,8 @@ table[
     ]
     tr[
         td[Software system family]
-        td[Collection of several applications whose schematic code parts are based on the same architectural principles.]
+        td[Collection of several applications whose schematic code parts are based on the same architectural 
+        principles.]
     ]
     tr[
         td[SPL]
@@ -422,7 +450,8 @@ table[
     ]
     tr[
         td[Sub domain]
-        td[Functional or technical partition of a domain which deals with the representation of specific aspects of a software system.]
+        td[Functional or technical partition of a domain which deals with the representation of specific 
+        aspects of a software system.]
     ]
     tr[
         td[SVN]
@@ -446,7 +475,8 @@ table[
     ]
     tr[
         td[Unified Modeling Language]
-        td[Standardised language adapted by the Object Management Group for describing software systems with models. The UML works model-based.]
+        td[Standardised language adapted by the Object Management Group for describing software systems 
+        with models. The UML works model-based.]
     ]
     tr[
         td[URI]

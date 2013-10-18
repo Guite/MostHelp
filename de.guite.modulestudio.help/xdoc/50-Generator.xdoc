@@ -141,7 +141,8 @@ An application has some more fields for specifying specific aspects:
 
 ul[
     item[e[applicationType] - The kind of application described by the model. See ref:GenRefApplicationType[below].]
-    item[e[targetCoreVersion] - The targeted Zikula core version. See ref:GenRefCoreVersion[below].]
+    item[e[targetCoreVersion] - The targeted Zikula core version. See ref:GenRefCoreVersion[below]. Note this setting is obsolete
+    on application level. Please use the ref:GenRefSettingsContainer[settings container] property instead.]
     item[e[interactiveInstallation] - A boolean specifying whether an interactive installation should
     be used or not. The default value is e[false] which lets the generator create a normal installer without
     any required user input. If you set it to true it will additionally generate some init templates
@@ -156,6 +157,8 @@ An application may furthermore have the following references:
 
 ul[
     item[e[controllers] - Allows referencing one or more ref:GenRefControllerContainer[controller layers].]
+    item[e[generatorSettings] - Allows specifying desired generator features and behaviour. More details
+    in the ref:GenRefSettingsContainer[settings container] section.]
     item[e[models] - Allows referencing one or more ref:GenRefModelContainer[model layers].]
     item[e[referredApplications] - Allows referencing other applications. See ref:GenRefReferredApplication[below].]
     item[e[views] - Allows referencing one or more ref:GenRefViewContainer[view layers].]
@@ -189,6 +192,63 @@ ul[
     item[e[ZK135] - For Zikula 1.3.5 and earlier. This is for backwards compatibility.]
 ]
 
+section4:GenRefSettingsContainer[Settings container]
+
+Each application may contain one settings container for customising generator settings. You can control 
+which features should be generated and take influence on some behavioural aspects of the generator.
+
+A settings container has the following fields:
+
+ul[
+    item[e[targetCoreVersion] - The targeted Zikula core version. See ref:GenRefCoreVersion[above].]
+    item[e[generateAccountApi] - A boolean specifying whether account panel integration should be generated 
+    or not.]
+    item[e[generateSearchApi] - A boolean specifying whether search integration should be generated or 
+    not. Requires at least one string or text field in any entity.]
+    item[e[generateMailzApi] - A boolean specifying whether Mailz support should be generated or not.]
+    item[e[generateListBlock] - A boolean specifying whether a generic list block should be generated 
+    or not.]
+    item[e[generateModerationBlock] - A boolean specifying whether a moderation block should be generated 
+    or not. Requires at least one entity with a workflow including approval.]
+    item[e[generateListContentType] - A boolean specifying whether a content type for collection lists 
+    should be generated or not.]
+    item[e[generateDetailContentType] - A boolean specifying whether a content type for single objects 
+    should be generated or not. Requires user controller containing a display action.]
+    item[e[generateNewsletterPlugin] - A boolean specifying whether a Newsletter plugin should be generated 
+    or not.]
+    item[e[generateModerationPanel] - A boolean specifying whether a moderation panel should be generated 
+    or not. Requires at least one entity with a workflow including approval.]
+    item[e[generatePendingContentSupport] - A boolean specifying whether support for pending content 
+    should be generated or not. Requires at least one entity with a workflow including approval.]
+    item[e[generateExternalControllerAndFinder] - A boolean specifying whether a controller for external 
+    calls providing a generic finder component should be generated or not.]
+    item[e[generateScribitePlugins] - A boolean specifying whether support for several Scribite editors 
+    should be generated or not. Requires external controller with finder component.]
+    item[e[generateTagSupport] - A boolean specifying whether tag support should be generated or not. 
+    Requires user or admin controller containing a display action.]
+    item[e[generateRssTemplates] - A boolean specifying whether rss view templates should be generated 
+    or not.]
+    item[e[generateAtomTemplates] - A boolean specifying whether atom view templates should be generated 
+    or not.]
+    item[e[generateCsvTemplates] - A boolean specifying whether csv view templates should be generated 
+    or not.]
+    item[e[generateXmlTemplates] - A boolean specifying whether xml display and view templates should 
+    be generated or not.]
+    item[e[generateJsonTemplates] - A boolean specifying whether json templates should be generated 
+    or not.]
+    item[e[generateKmlTemplates] - A boolean specifying whether kml templates should be generated or 
+    not. Requires geographical flag on corresponding entities.]
+    item[e[generateOnlyBaseClasses] - A boolean specifying whether only base classes should be generated. 
+    May be useful for doing simple upgrades without structural changes.]
+    item[e[skipFiles] - Comma-separated blacklist with each entry representing a file which should not 
+    be generated.]
+    item[e[timestampAllGeneratedFiles] - A boolean specifying whether the generated by message should 
+    contain a timestamp in all files or only in the Version class.]
+    item[e[generatePoweredByBacklinksIntoFooterTemplates] - A boolean specifying whether generated footer 
+    templates should contain backlinks to the ModuleStudio homepage.]
+    item[e[generateTests] - A boolean specifying whether test cases should be generated or not.]
+]
+
 section4:GenRefReferredApplication[Referred application]
 
 Represents an application whose model file is being imported (e.g. to reference other entities
@@ -200,7 +260,8 @@ ul[
     item[e[minimumVersion] - The minimum version this reference applies for.]
     item[e[maximumVersion] - The maximum version this reference applies for.]
     item[e[importURI] - URI to imported model file.]
-    item[e[dependencyType] - The type of dependency which should be used for the referred application. See ref:GenRefApplicationDependencyType[below].]
+    item[e[dependencyType] - The type of dependency which should be used for the referred application. 
+    See ref:GenRefApplicationDependencyType[below].]
 ]
 
 section4:GenRefApplicationDependencyType[Application dependency type]
@@ -211,8 +272,10 @@ Can be one of the following options:
 
 ul[
     item[e[REQUIREMENT] - The module is required, for example to join related entities.]
-    item[e[RECOMMENDATION] - The module is recommended, for example to provide enhanced integration functionality.]
-    item[e[CONFLICT] - The module is in conflict with the modeled one, for example due to overlapping functionality.]
+    item[e[RECOMMENDATION] - The module is recommended, for example to provide enhanced integration 
+    functionality.]
+    item[e[CONFLICT] - The module is in conflict with the modeled one, for example due to overlapping 
+    functionality.]
 ]
 
 The generator uses this value in the corresponding module dependency created in the version class.
@@ -229,10 +292,10 @@ ul[
     default value is e[true] which can only be assigned to one data source which is treated like an internal
     Zikula storage. Additional containers are processed as external data sources.]
     item[e[entities] - Allows referencing one or more ref:GenRefEntity[entities].]
-    item[e[numExampleRows] - The amount of example rows to create for entities in this model layer. Default
-    value is 0. Note that if you activate the e[categorisable] property for an entity the generated installer
-    relies on that you did not remove the default categories of Zikula. If you deleted them please set
-    the amount of example rows to 0 to avoid problems.]
+    item[e[numExampleRows] - The amount of example rows to create for entities in this model layer. 
+    Default value is 0. Note that if you activate the e[categorisable] property for an entity the generated 
+    installer relies on that you did not remove the default categories of Zikula. If you deleted them 
+    please set the amount of example rows to 0 to avoid problems.]
     item[e[relations] - Allows referencing one or more ref:GenRefRelationship[relationships].]
     item[e[variables] - Allows referencing one or more ref:GenRefVariables[variables].]
 ]
@@ -337,10 +400,14 @@ ul[
     During the creation of a new entity with geographical support a nice geolocation feature is used to ask
     the user for his current location. Also there is an included integration of the Mapstraction class allowing
     you to use different map providers in your application.]
-    item[e[hasArchive] - Whether the workflow should include an archived state with automatic archiving. Requires a ref:GenRefDatetimeField[datetime] or ref:GenRefDateField[date] field
-    which has been designated as end date. See ref:GenRefEntityWorkflowType[workflow types] for more information. The default value is e[false].]
-    item[e[hasTray] - Whether the workflow should include a suspended state. See ref:GenRefEntityWorkflowType[workflow types] for more information. The default value is e[false].]
-    item[e[identifierStrategy] - Whether and which ref:GenRefEntityIdentifierStrategy[identifier strategy] is applied.
+    item[e[hasArchive] - Whether the workflow should include an archived state with automatic archiving. 
+    Requires a ref:GenRefDatetimeField[datetime] or ref:GenRefDateField[date] field which has been designated 
+    as end date. See ref:GenRefEntityWorkflowType[workflow types] for more information. The default 
+    value is e[false].]
+    item[e[hasTray] - Whether the workflow should include a suspended state. See ref:GenRefEntityWorkflowType[workflow 
+    types] for more information. The default value is e[false].]
+    item[e[identifierStrategy] - Whether and which ref:GenRefEntityIdentifierStrategy[identifier strategy] 
+    is applied.
     The default value is e[NONE].]
     item[e[leading] - A boolean specifying whether this is the primary (and default) entity or not.]
     item[e[lockType] - Whether and which ref:GenRefEntityLockType[locking strategy] is applied.]
@@ -358,9 +425,10 @@ ul[
     item[e[nameMultiple] - Plural form of the name. The generator uses this for collections, list views
     and other areas where multiple entities are used.]
     item[e[ownerPermission] - Whether users should be able to manage and edit their own data. Defines also
-    whether the workflow should include a deferred state. See ref:GenRefEntityWorkflowType[workflow types] for
-    more information. The default value is e[false].]
-    item[e[readOnly] - A boolean specifying whether this entity is read only or not. If set to e[true] editing will not be possible.]
+    whether the workflow should include a deferred state. See ref:GenRefEntityWorkflowType[workflow types] 
+    for more information. The default value is e[false].]
+    item[e[readOnly] - A boolean specifying whether this entity is read only or not. If set to e[true] 
+    editing will not be possible.]
     item[e[slugLength] - Length of slug field. Defaults to 255. An entity is sluggable as soon as at
     least one of its fields set e[sluggable position] to a value greater than 0.]
     item[e[slugSeparator] - Separator which will separate words in slug. Default value is e[-] like in
@@ -372,8 +440,8 @@ ul[
     item[e[softDeleteable] - Whether deleted items should only be marked as deleted instead of deleting them.
     Defines also whether the entity workflow provides means for trashing and recovering items or for
     deleting them. See ref:GenRefEntityWorkflowType[workflow types] for more information. The default value is e[false].]
-    item[e[tree] - Whether and which tree strategy is applied. More information about what the generator creates for trees can
-    be found in the the section about ref:GenRefEntityTreeType[entity tree types].]
+    item[e[tree] - Whether and which tree strategy is applied. More information about what the generator 
+    creates for trees can be found in the the section about ref:GenRefEntityTreeType[entity tree types].]
     item[e[standardFields] - A boolean specifying whether the standard fields extension is used or not.
     If set to e[true] the entity will get four additional fields for storing the id of the user who created
     the item, the id of the user who did the last update, as well as the creation and update dates. This
@@ -740,11 +808,12 @@ An upload field has the following properties in addition to the common ref:GenRe
 string field] settings:
 
 ul[
-    item[e[allowedExtensions] - List of file extensions to be accepted during the upload, separated by a comma with a space char.
-    Default value is e[gif, jpeg, jpg, png].]
+    item[e[allowedExtensions] - List of file extensions to be accepted during the upload, separated 
+    by a comma with a space char. Default value is e[gif, jpeg, jpg, png].]
     item[e[length] - The length of this field. Default value is 255.]
     item[e[namingScheme] - Defines how uploaded files ref:GenRefUploadNamingScheme[are named].]
-    item[e[subFolderName] - Name of sub folder for storing uploaded files. If this is empty the field name will be used as folder name.]
+    item[e[subFolderName] - Name of sub folder for storing uploaded files. If this is empty the field 
+    name will be used as folder name.]
     item[e[allowedFileSize] - Maximum file size in bytes, default is 0 for no limit.]
 ]
 
@@ -762,9 +831,9 @@ the help of the Imagine library which is included in Zikula 1.3. There is a view
 works together with the mentioned util class and understands many parameters to use arbitrary images
 in the templates.
 
-For every upload field e[foo] there will be another ref:GenRefArrayField[array field] created which is named
-e[fooMeta]. This field stores some meta information about the uploaded files for convenience, like the file
-size, the image format (portrait, landscape, square) and the image dimensions.
+For every upload field e[foo] there will be another ref:GenRefArrayField[array field] created which is 
+named e[fooMeta]. This field stores some meta information about the uploaded files for convenience, like 
+the file size, the image format (portrait, landscape, square) and the image dimensions.
 
 section4:GenRefUploadNamingScheme[Upload naming scheme]
 
@@ -773,7 +842,8 @@ Represents different schemes for naming uploaded files.
 Can be one of the following options:
 
 ul[
-    item[e[ORIGINALWITHCOUNTER] - Keep the original file name. Add a counter if required to avoid duplicated file names.]
+    item[e[ORIGINALWITHCOUNTER] - Keep the original file name. Add a counter if required to avoid duplicated 
+    file names.]
     item[e[RANDOMCHECKSUM] - Use a random checksum. This results in quite cryptic filenames.]
     item[e[FIELDNAMEWITHCOUNTER] - Use the field name as a prefix together with a counter. For example
     e[image1], e[image2], and so on.]
@@ -803,11 +873,12 @@ ul[
     item[e[items] - Allows referencing one or more ref:GenRefListFieldItem[items].]
 ]
 
-The generator creates an additional class for handling the available list items centrally. Based on this
-information ref:GenRefEditAction[edit] pages provide either a dropdown list (for single or multiple values
-depending on the e[multiple] property) or a checkbox list (if e[multiple] and e[useChecks] are both set
-to e[true]). For the output in ref:GenRefViewAction[view] and ref:GenRefDisplayAction[display] templates
-there is a modifier generated which cares for showing the names instead of the raw option values.
+The generator creates an additional class for handling the available list items centrally. Based on 
+this information ref:GenRefEditAction[edit] pages provide either a dropdown list (for single or multiple 
+values depending on the e[multiple] property) or a checkbox list (if e[multiple] and e[useChecks] are 
+both set to e[true]). For the output in ref:GenRefViewAction[view] and ref:GenRefDisplayAction[display] 
+templates there is a modifier generated which cares for showing the names instead of the raw option 
+values.
 
 section4:GenRefListFieldItem[List field item]
 
@@ -948,7 +1019,8 @@ Can be one of the following options:
 
 ul[
     item[e[DEFERRED_IMPLICIT] - Compare properties during commit. Convenient, but not good for performance.]
-    item[e[DEFERRED_EXPLICIT] - Scan only entities marked for change detection. Better performance, but no dirty checking.]
+    item[e[DEFERRED_EXPLICIT] - Scan only entities marked for change detection. Better performance, 
+    but no dirty checking.]
     item[e[NOTIFY] - Assume that entities inform listeners about their changes.]
 ]
 
@@ -1060,7 +1132,8 @@ ol[
     item[Suspended - content has been approved, but is temporarily offline. Only available if the entity
     has set the e[hasTray] property to e[true].]
     item[Archived - content has reached the end and became archived. Only available if the entity has set
-    the e[hasArchive] property to e[true]. Requires a ref:GenRefDatetimeField[datetime] or ref:GenRefDateField[date] field being designated as end date.]
+    the e[hasArchive] property to e[true]. Requires a ref:GenRefDatetimeField[datetime] or ref:GenRefDateField[date] 
+    field being designated as end date.]
     item[Trashed - content has been marked as deleted, but is still persisted in the database. Only
     available if the entity has set the e[softDeleteable] property to e[true]. Note that the soft deleteable
     implementation is not done yet as this requires the 1.4.0 core of Zikula.]
@@ -1077,10 +1150,11 @@ for easier filtering and other useful applications without having to load the wo
 In fact ModuleStudio adds it as a ref:GenRefListField[list field] which contains a ref:GenRefListFieldItem[list
 field item] for each state. 
 
-Note that it is easily possible to model ref:GenRefAbstractDateField[date or datetime fields] which set their value
-automatically depending on a certain workflow state. Just set their timestampable type to e[CHANGE] and set e[workflowState]
-as change trigger field. Also set the change trigger value to the name of the desired state. So you could
-for example create an approval date by using e[approved] for the trigger value property.
+Note that it is easily possible to model ref:GenRefAbstractDateField[date or datetime fields] which 
+set their value automatically depending on a certain workflow state. Just set their timestampable type 
+to e[CHANGE] and set e[workflowState] as change trigger field. Also set the change trigger value to 
+the name of the desired state. So you could for example create an approval date by using e[approved] 
+for the trigger value property.
 
 section4:GenRefEntityIndex[Entity index]
 
@@ -1152,8 +1226,10 @@ It includes the following properties in addition to the common ref:GenRefRelatio
 
 ul[
     item[e[cascade] - The ref:GenRefCascadeType[cascade type] used on application level from source view.]
-    item[e[cascadeReverse] - The ref:GenRefCascadeType[cascade type] used on application level from target view (only for bidirectional relationships).]
-    item[e[editType] - The ref:GenRefRelationEditType[edit type] for this association, only applicable if e[useAutoCompletion] is not set to e[NONE].]
+    item[e[cascadeReverse] - The ref:GenRefCascadeType[cascade type] used on application level from 
+    target view (only for bidirectional relationships).]
+    item[e[editType] - The ref:GenRefRelationEditType[edit type] for this association, only applicable 
+    if e[useAutoCompletion] is not set to e[NONE].]
     item[e[fetchType] - The ref:GenRefRelationFetchType[fetch type] for this association.]
     item[e[nullable] - A boolean specifying whether the field for this relationship may be null or not.
     The default value is e[true].]
@@ -1161,9 +1237,9 @@ ul[
     or e[SETNULL]).]
     item[e[onDelete] - String for optional delete cascade options on database level (for example e[RESTRICT]
     or e[SETNULL]).]
-    item[e[useAutoCompletion] - If set to any value except e[NONE] the generator will create an auto completion
-    field instead of a normal dropdown select field for the corresponding side(s) of the relationship. For
-    more information see the ref:GenRefRelationAutoCompletionUsage[available options].]
+    item[e[useAutoCompletion] - If set to any value except e[NONE] the generator will create an auto 
+    completion field instead of a normal dropdown select field for the corresponding side(s) of the 
+    relationship. For more information see the ref:GenRefRelationAutoCompletionUsage[available options].]
     item[e[sourceAlias] - The alias for the source entity, required to have multiple associations between
     the same entities. The name should reflect the cardinality on the source side (singular or plural
     forms) depending on the relationship type. As with all names camel case is preferred, for example
@@ -1285,8 +1361,10 @@ Can be one of the following options:
 
 ul[
     item[NONE - Use no auto completion.]
-    item[ONLY_SOURCE_SIDE - Use auto completion when selecting entities of the source side (editing of the target side).]
-    item[ONLY_TARGET_SIDE - Use auto completion when selecting entities of the target side (editing of the source side).]
+    item[ONLY_SOURCE_SIDE - Use auto completion when selecting entities of the source side (editing 
+    of the target side).]
+    item[ONLY_TARGET_SIDE - Use auto completion when selecting entities of the target side (editing 
+    of the source side).]
     item[BOTH_SIDES - Use auto completion on both sides.]
 ]
 
@@ -1317,12 +1395,18 @@ Represents different edit types for join relationships.
 Can be one of the following options:
 
 ul[
-    item[ACTIVE_NONE_PASSIVE_CHOOSE - Editing the parent does nothing. Editing the child includes choosing the parent.]
-    item[ACTIVE_NONE_PASSIVE_EDIT - Editing the parent does nothing. Editing the child includes choosing, adding and editing the parent.]
-    item[ACTIVE_CHOOSE_PASSIVE_NONE - Only for many-to-many: Editing the parent includes choosing the children. Editing the child does nothing.]
-    item[ACTIVE_EDIT_PASSIVE_CHOOSE - Editing the parent includes choosing, adding and editing the children. Editing the child includes choosing the parent.]
-    item[ACTIVE_EDIT_PASSIVE_EDIT - Editing the parent includes choosing, adding and editing the children. Editing the child includes choosing, adding and editing the parent.]
-    item[ACTIVE_EDIT_PASSIVE_NONE - Only for many-to-many: Editing the parent includes choosing, adding and editing the children. Editing the child does nothing.]
+    item[ACTIVE_NONE_PASSIVE_CHOOSE - Editing the parent does nothing. Editing the child includes choosing 
+    the parent.]
+    item[ACTIVE_NONE_PASSIVE_EDIT - Editing the parent does nothing. Editing the child includes choosing, 
+    adding and editing the parent.]
+    item[ACTIVE_CHOOSE_PASSIVE_NONE - Only for many-to-many: Editing the parent includes choosing the 
+    children. Editing the child does nothing.]
+    item[ACTIVE_EDIT_PASSIVE_CHOOSE - Editing the parent includes choosing, adding and editing the children. 
+    Editing the child includes choosing the parent.]
+    item[ACTIVE_EDIT_PASSIVE_EDIT - Editing the parent includes choosing, adding and editing the children. 
+    Editing the child includes choosing, adding and editing the parent.]
+    item[ACTIVE_EDIT_PASSIVE_NONE - Only for many-to-many: Editing the parent includes choosing, adding 
+    and editing the children. Editing the child does nothing.]
 ]
 
 Actually these settings are part of the ref:GeneratorViewLayer[view layer] and actually they are going
@@ -1336,8 +1420,8 @@ for a relationship the corresponding edit template (choose or edit) is included 
 ul[
     item[NONE means that there is no possibility to take influence on the association.]
     item[CHOOSE means that it is possible to select a related entity with the help of auto completion.]
-    item[EDIT means the same as CHOOSE plus that it is also possible to created and edit related entities during
-    editing the main entity.]
+    item[EDIT means the same as CHOOSE plus that it is also possible to created and edit related entities 
+    during editing the main entity.]
 ]
 
 section4:GenRefInheritanceRelationship[Inheritance relationship]
@@ -1709,7 +1793,8 @@ processing and validating some input fields.
 The following handler types are available:
 
 ul[
-    item[List handler - reacts on interactions with a ref:GenRefViewAction[view action] (e.g. for filtering and sorting).]
+    item[List handler - reacts on interactions with a ref:GenRefViewAction[view action] (e.g. for filtering 
+    and sorting).]
     item[Detail handler - reacts on interactions with a ref:GenRefDisplayAction[display action].]
     item[Edit handler - reacts on interactions with an ref:GenRefEditAction[edit action].]
     item[Custom handler - reacts on interactions with a ref:GenRefCustomAction[custom action].]
@@ -2074,9 +2159,9 @@ As there is no view editor available yet this section is empty for now.
 
 section2:GeneratorWorkflowLayer[Workflow layer]
 
-The workflow layer is not very configurable yet. At the moment there are three predefined workflows available
-which can be defined in the model for each ref:GenRefEntity[entity]. For more information see ref:GenRefEntityWorkflowType[entity
-workflow types].
+The workflow layer is not very configurable yet. At the moment there are three predefined workflows 
+available which can be defined in the model for each ref:GenRefEntity[entity]. For more information 
+see ref:GenRefEntityWorkflowType[entity workflow types].
 
 In future it is planned to create a dedicated layer for modeling only possible workflow states and actions.
 

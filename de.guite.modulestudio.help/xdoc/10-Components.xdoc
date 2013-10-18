@@ -7,8 +7,8 @@ This page gives you an overview of the main parts of ModuleStudio and how they w
 section:ComponentsModelingLanguage[Modeling Language]
 
 The inner core of MOST is a domain-specific language (DSL) for Zikula extensions. This language allows
-a formalised description of applications which is a fundamental requirement to process models automatically with
-the help of transformations.
+a formalised description of applications which is a fundamental requirement to process models automatically 
+with the help of transformations.
 
 For convenience ModuleStudio uses general terms for modeling MVC applications. As you will see later
 an application model has different submodels for describing corresponding architectural layers (model,

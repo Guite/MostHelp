@@ -17,12 +17,16 @@ Read more at this page: link[http://modulestudio.de/en/product/what-is-modulestu
 section:IntroductionBenefits[Benefits]
 
 ul[
-    item[e[Development time/costs:] avoid wasting weeks for schematical and architectural motivated code parts!]
-    item[e[Maintainability:] your software is a model - easily changeable and cheaply maintainable! No more efforts for getting your modules up to date for new versions!]
+    item[e[Development time/costs:] avoid wasting weeks for schematical and architecturally motivated 
+    code parts!]
+    item[e[Maintainability:] your software is a model - easily changeable and cheaply maintainable! 
+    No more efforts for getting your modules up to date for new versions!]
     item[e[Code quality:] take profit from best practices and established patterns!]
-    item[e[Architectural compliance:] take most usage from powerful core frameworks and interfaces! No more unsecure and legacy extensions!]
+    item[e[Architectural compliance:] take most usage from powerful core frameworks and interfaces! 
+    No more unsecure and legacy extensions!]
     item[e[Reusability:] share and modify your models! Do not make the same work twice!]
-    item[e[Understandibility:] avoid having to learn programming rules and framework details! Develop with general terms independant from technical stuff!]
+    item[e[Understandibility:] avoid having to learn programming rules and framework details! Develop 
+    with general terms independant from technical stuff!]
 ]
 
 More information can be found in these articles:

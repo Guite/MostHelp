@@ -34,10 +34,10 @@ template overriding will not work automatically. In the past Zikula performed a 
 directories for each template which was very convenient, but also bad for performance. Now you have to
 describe overrides in the file e[template_overrides.yml] explicitely instead.
 
-So when custom templates are placed in the e[/config/templates/YourMod/...] folder this is fine for development.
-It is even recommended for the module developer to keep things separated during development (and in Git, see below)
-so that he can always distinguish (and compare) between generated and customised templates,
-since this makes things easier if the module is regenerated again in future.
+So when custom templates are placed in the e[/config/templates/YourMod/...] folder this is fine for 
+development. It is even recommended for the module developer to keep things separated during development 
+(and in Git, see below) so that he can always distinguish (and compare) between generated and customised 
+templates, since this makes things easier if the module is regenerated again in future.
 
 When using a module in production things are a bit different. A site owner may want to further customise
 some templates, so the e[/config/] directory should not be used by the module itself out of the box.
@@ -54,14 +54,15 @@ classes containing the actual generator implementation code. So almost all concr
 waiting for your custom extension.
 
 The e[ControllerUtil] class can be used to enable/disable specific controller actions (like view, display,
-...) and additional functionality (like blocks, mailz api, content type, etc.) for particular entity types within custom conditions.
+...) and additional functionality (like blocks, mailz api, content type, etc.) for particular entity 
+types within custom conditions.
 
 When using edit forms you can easily customise the redirect behaviour by appending a e[returnTo] parameter
-to the edit url. For example let's imagine you modeled a customer entity having a bidirectional relationship to many addresses.
-In this case the default behaviour of the e[edit address] functionality redirects back to the detail view
-of the created/updated entity if it exists in the model. If there is no display action it redirects to
-the list view if existing else it jumps to the index page. Using the e[returnTo] parameter you can assign
-certain pages like e[display], e[view] and even related items like e[customerDisplay].
+to the edit url. For example let's imagine you modeled a customer entity having a bidirectional relationship 
+to many addresses. In this case the default behaviour of the e[edit address] functionality redirects back 
+to the detail view of the created/updated entity if it exists in the model. If there is no display action 
+it redirects to the list view if existing else it jumps to the index page. Using the e[returnTo] parameter 
+you can assign certain pages like e[display], e[view] and even related items like e[customerDisplay].
 
 section2:CustomisationVersioning[Use versioning]
 

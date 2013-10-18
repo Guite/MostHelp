@@ -21,7 +21,8 @@ To work around this please remove the flag using a text editor.
 section2:ProblemReopeningModel[I can't open my model again.]
 
 When reopening a model does not work, but just an empty editor tab is shown, something in the workspace
-data became stale or corrupt. To fix this please delete the folder named e[MostWorkspace] in your user directory.
+data became stale or corrupt. To fix this please delete the folder named e[MostWorkspace] in your user 
+directory.
 
 See also link[https://github.com/Guite/MostGenerator/issues/254][ticket 254] for some information about
 that problem.
@@ -46,8 +47,8 @@ section:TroubleshootingMigration[Migration problems]
 
 section2:ProblemConvertingModel[Migrating my existing model causes an error]
 
-Before converting your existing model make sure that you have removed any account controller and search controller
-elements in MOST 0.5.4.
+Before converting your existing model make sure that you have removed any account controller and search 
+controller elements in MOST 0.5.4.
 
 section:TroubleshootingGeneration[Generation problems]
 
@@ -60,9 +61,9 @@ in order to fix the error.
 
 section2:OrphanRemovalWithManyToManyRelations[Orphan removal with many-to-many relations]
 
-If you are generating for 1.3.5 please do not enable the e[orphanRemoval] property for many-to-many relationships.
-This feature is supported only in newer versions of Doctrine 2, therefore you need to use 1.3.6 if you
-want to use it.
+If you are generating for 1.3.5 please do not enable the e[orphanRemoval] property for many-to-many 
+relationships. This feature is supported only in newer versions of Doctrine 2, therefore you need to 
+use 1.3.6 if you want to use it.
 
 section2:ProblemWorkflowFetching[The workflows are not fetched properly]
 
@@ -70,17 +71,20 @@ Due to a problem Zikula 1.3.6 the workflow data can not be fetched automatically
 Because if the postLoad listener in the entity class (method performPostLoadCallback) calls the workflow
 the Zikula workflow util class does another selection for this. This leads to both selections getting
 into a competition about the internal object hydrator of Doctrine. The workflow selection "steals" it
-from the main selection. So after the first item, when it wants to fetch the second one, it is not possible anymore.
-In 1.3.5 this was not a problem because workflows were called using DBUtil bridged by Doctrine 1.
+from the main selection. So after the first item, when it wants to fetch the second one, it is not possible 
+anymore. In 1.3.5 this was not a problem because workflows were called using DBUtil bridged by Doctrine 1.
 
-A clean solution would not use any workflow util class, but join the workflow entity directly. But this affects too many parts to do it quickly.
-Also to make it really beautiful we would need own workflow tables for each entity (like done with categories for example) in order to keep things together.
+A clean solution would not use any workflow util class, but join the workflow entity directly. But this 
+affects too many parts to do it quickly. Also to make it really beautiful we would need own workflow 
+tables for each entity (like done with categories for example) in order to keep things together.
 
-Before the initWorkflow() method was called at two places: the entity constructor (for newly-created entities)
-and the postLoad listener (for fetched entities). Note Doctrine 2 is itself working on a new event which is triggered after all entities have been fetched.
+Before the initWorkflow() method was called at two places: the entity constructor (for newly-created 
+entities) and the postLoad listener (for fetched entities). Note Doctrine 2 is itself working on a new 
+event which is triggered after all entities have been fetched.
 
 The current workaround is having the initWorkflow() call moved outside the postLoad listener. But now
-we have to call it elsewhere. Therefore we need something in the controller actions like the following for bypassing the problem:
+we have to call it elsewhere. Therefore we need something in the controller actions like the following 
+for bypassing the problem:
 
 code[PHP][
     // single entity
@@ -95,5 +99,6 @@ code[PHP][
 Note you must call this for all fetched entities, not for new ones (as the call is still included in
 the constructor).
 
-This solution approach is a bit ugly, because we require you (the mod dev) calling this explicitly from the using code.
-If you forget it in a certain method workflows are not initialised properly. Of course this be improved again as soon as Doctrine 2 offers the new event which happened really *post* fetch.
+This solution approach is a bit ugly, because we require you (the mod dev) calling this explicitly from 
+the using code. If you forget it in a certain method workflows are not initialised properly. Of course 
+this be improved again as soon as Doctrine 2 offers the new event which happened really *post* fetch.
