@@ -79,8 +79,8 @@ affects too many parts to do it quickly. Also to make it really beautiful we wou
 tables for each entity (like done with categories for example) in order to keep things together.
 
 Before the initWorkflow() method was called at two places: the entity constructor (for newly-created 
-entities) and the postLoad listener (for fetched entities). Note Doctrine 2 is itself working on a new 
-event which is triggered after all entities have been fetched.
+entities) and the postLoad listener (for fetched entities). Note the Doctrine 2 development is working 
+on a new event which is triggered after all entities have been fetched.
 
 The current workaround is having the initWorkflow() call moved outside the postLoad listener. But now
 we have to call it elsewhere. Therefore we need something in the controller actions like the following 
@@ -101,4 +101,5 @@ the constructor).
 
 This solution approach is a bit ugly, because we require you (the mod dev) calling this explicitly from 
 the using code. If you forget it in a certain method workflows are not initialised properly. Of course 
-this be improved again as soon as Doctrine 2 offers the new event which happened really *post* fetch.
+this will be improved again as soon as Doctrine 2 offers the new event which happens really *post* 
+fetch.
