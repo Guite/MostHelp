@@ -163,3 +163,9 @@ table[
 section:UserInterfaceNotes[Additional notes]
 
 None yet.
+
+section:UserInterfaceTextualGrammar[Textual Grammar]
+
+Here is a railroad chart showing the textual grammar elements:
+
+img[images/mostdsl_grammar.png][Textual grammar][blockimg][border:1px solid black]
