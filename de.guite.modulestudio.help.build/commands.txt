@@ -3,12 +3,16 @@
 # materialise stuff by cquery/rmap
 resolve --properties "refProduct/de.guite.modulestudio.build/buckminster.properties" "scm/de.guite.modulestudio.help.build/most.cquery"
 
+clean
+
+# execute Xdoc workflows
+launch --stderr --stdout -l "de.guite.modulestudio.help/GenerateHelpArtifacts.mwe2.launch"
+launch --stderr --stdout -l "de.guite.modulestudio.help/GenerateManualPdf.mwe2.launch"
+
 # gather metrics on source code level
 perform --properties "refProduct/de.guite.modulestudio.build/buckminster.properties" "de.guite.modulestudio.help.build#metrics.prebuild"
 
-# build workspace
-build
-#build --thorough
+build --clean
 
 # run tests and code coverage (buckminster emma --help)
 emma --properties "refProduct/de.guite.modulestudio.build/buckminster.properties" --launch "de.guite.modulestudio.help.tests/AllTests.launch" --terseXML --flatXML --output "${WORKSPACE}output/test_results/junit/alltests.xml" --exec "${WORKSPACE}output/test_results/coverage/alltests.exec" --stderr --stdout

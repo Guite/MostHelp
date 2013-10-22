@@ -1,6 +1,9 @@
-module workflow.GenerateDocs
+module de.guite.modulestudio.help.workflow.GenerateDocs
 
 import org.eclipse.emf.mwe.utils.*
+
+var modelPath = 'xdoc'
+var targetDir = 'pdfmanual'
 
 /**
  * Workflow for generation of pdf documentation.
@@ -8,8 +11,8 @@ import org.eclipse.emf.mwe.utils.*
 Workflow {
 
     component = @workflow.XDocGenerator {
-        modelPath = "xdoc"
-        targetDir = "pdfmanual"
+        modelPath = modelPath
+        targetDir = targetDir
         // must conform to document title
         document = "ModuleStudio User's Guide v0.6.1"
         // installation of pdflatex including all required components in *buntu involves:
