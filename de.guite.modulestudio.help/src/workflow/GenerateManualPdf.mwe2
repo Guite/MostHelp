@@ -1,4 +1,4 @@
-module de.guite.modulestudio.help.workflow.GenerateDocs
+module de.guite.modulestudio.help.workflow.GenerateManualPdf
 
 import org.eclipse.emf.mwe.utils.*
 

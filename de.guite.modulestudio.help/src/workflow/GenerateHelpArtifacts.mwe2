@@ -1,4 +1,4 @@
-module de.guite.modulestudio.help.workflow.GenerateEclipseHelp
+module de.guite.modulestudio.help.workflow.GenerateHelpArtifacts
 
 import org.eclipse.emf.mwe.utils.*
 
