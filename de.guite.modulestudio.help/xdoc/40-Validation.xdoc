@@ -779,11 +779,6 @@ table[
     ]
     tr[
         td[Entity field]
-        td[Only one field per entity may store the sortable group.]
-        td[Optional grouping of sorting is only possible with one field as criteria.]
-    ]
-    tr[
-        td[Entity field]
         td[Only one field per entity may store the version.]
         td[Can appear for integer and datetime fields if you enabled the e[version] property for more
         than one field in the same entity.]
