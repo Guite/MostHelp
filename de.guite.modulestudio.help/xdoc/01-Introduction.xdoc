@@ -20,13 +20,14 @@ ul[
     item[e[Development time/costs:] avoid wasting weeks for schematical and architecturally motivated 
     code parts!]
     item[e[Maintainability:] your software is a model - easily changeable and cheaply maintainable! 
-    No more efforts for getting your modules up to date for new versions!]
+    No more efforts for getting your modules up to date for new versions, just regenerate and merge the code!]
     item[e[Code quality:] take profit from best practices and established patterns!]
     item[e[Architectural compliance:] take most usage from powerful core frameworks and interfaces! 
-    No more unsecure and legacy extensions!]
+    Generated applications follow all APIs and guidelines automatically. This is a big step for avoiding unsecure
+    and legacy extensions when the framework itself evolves!]
     item[e[Reusability:] share and modify your models! Do not make the same work twice!]
     item[e[Understandibility:] avoid having to learn programming rules and framework details! Develop 
-    with general terms independant from technical stuff!]
+    with general terms independent from technical stuff!]
 ]
 
 More information can be found in these articles:
