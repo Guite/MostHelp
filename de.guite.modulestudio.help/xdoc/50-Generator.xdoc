@@ -1375,7 +1375,7 @@ the view layer is ready to be used (as priorities require to do other things fir
 
 Example for inline editing:
 
-img[example_inline_editing.png][Inline editing][blockimg][border:1px solid black]
+img[images/example_inline_editing.png][Inline editing][blockimg][border:1px solid black]
 
 section4:GenRefRelationFetchType[Relation fetch type]
 

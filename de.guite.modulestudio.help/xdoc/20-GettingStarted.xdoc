@@ -61,11 +61,11 @@ ol[
 
 Example import results:
 
-img[import_admin.png][Admin module][blockimg][border:1px solid black]
+img[images/import_admin.png][Admin module][blockimg][border:1px solid black]
 
-img[import_news.png][News module][blockimg][border:1px solid black]
+img[images/import_news.png][News module][blockimg][border:1px solid black]
 
-img[import_content.png][Content module][blockimg][border:1px solid black]
+img[images/import_content.png][Content module][blockimg][border:1px solid black]
 
 section:GettingStartedNotes[Additional notes]
 
