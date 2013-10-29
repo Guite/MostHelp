@@ -1068,6 +1068,7 @@ like for example:
 ul[
     item[An additional template for managing the tree in a hierarchy view.]
     item[An additional view plugin for including the Zikula tree javascript.]
+    item[An additional template included in display pages for showing different types of relatives.]
     item[Some ajax functions used by the hierarchy view.]
     item[For closure: separate classes for the closure entities.]
 ]
