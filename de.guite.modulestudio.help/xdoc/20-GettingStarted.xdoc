@@ -12,8 +12,14 @@ that you are ready to start the ModuleStudio executable.
 
 section:GettingStartedFirstTour[First tour]
 
+First thing you may want to do after starting the ModuleStudio application is creating a new model. Therefore
+start the e[new application wizard] using the "File" main menu. It allows you to enter some basic information,
+like vendor and application name, in a simple form. After that it creates a new model and preinserts
+some common basic container elements so that you can directly proceed with describing your application
+in detail.
+
 Please see link[http://modulestudio.de/en/tutorial/the-first-zikula-application-in-10-minutes.html][this
-tutorial].
+tutorial] for getting the overall idea.
 
 section:GettingStartedDevelopmentProcess[Development process]
 
