@@ -27,7 +27,7 @@ ul[
     and legacy extensions when the framework itself evolves!]
     item[e[Reusability:] share and modify your models! Do not make the same work twice!]
     item[e[Understandibility:] avoid having to learn programming rules and framework details! Develop 
-    with general terms independent from technical stuff!]
+    with general MVC (Model View Controller) terminology independent from technical stuff!]
 ]
 
 More information can be found in these articles:
