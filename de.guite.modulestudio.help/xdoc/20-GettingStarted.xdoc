@@ -36,6 +36,37 @@ ol[
 	item[Test intermediate results]
 ]
 
+section:MigratingOldModels[Migrating old models]
+
+To open a model from an older version please remove all account controllers and search controllers first.
+
+Afterwards the existing model can be converted by using the menu entry "File > Migrate old model from 0.5.x".
+
+section:MigratingOldModules[Migrating old modules]
+
+If you want create a model for an existing legacy module you can follow the following procedure.
+
+ol[
+    item[First get the file e[pntablesToXML.php] from link[https://github.com/zikula/core/tree/master/tools][GitHub].]
+    item[Use this script to migrate your old e[pntables.php] file to an xml file.]
+    item[Inside ModuleStudio use the menu entry "File > Import xml table definition" which will open 
+    a file selection dialog. Choose the xml file you just created. As a result you will get a new application 
+    model in the e[MOST_output/yourmod.mostapp] file.]
+    item[Now use "File > Initialize diagram file" to open this application model and create a new diagram 
+    file for it.]
+    item[In the data editor remove unrequired elements, like table prefixes and default identifier fields,
+    that are primary and foreign keys.]
+    item[Follow validation messages to get remaining stuff sorted properly.]
+]
+
+Example import results:
+
+img[import_admin.png][Admin module][blockimg][border:1px solid black]
+
+img[import_news.png][News module][blockimg][border:1px solid black]
+
+img[import_content.png][Content module][blockimg][border:1px solid black]
+
 section:GettingStartedNotes[Additional notes]
 
 None yet.
