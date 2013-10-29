@@ -1372,6 +1372,10 @@ Actually these settings are part of the ref:GeneratorViewLayer[view layer] and a
 to be moved somewhen in future. But this is a case where we decided that we don't want to wait until
 the view layer is ready to be used (as priorities require to do other things first).
 
+Example for inline editing:
+
+img[example_inline_editing.png][Inline editing][blockimg][border:1px solid black]
+
 section4:GenRefRelationFetchType[Relation fetch type]
 
 Represents different fetch types for join relationships.
