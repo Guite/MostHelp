@@ -5,14 +5,10 @@
        		<link label="ModuleStudio homepage" url="http://modulestudio.de" id="deguitemodulestudio-introLink" style-id="content-link">
           		<text>This is the homepage of ModuleStudio where you can find further resources and information. There is also a support forum available.</text>
        		</link>
-            <link label="Showcase site" url="http://demo.modulestudio.de" id="deguitemodulestudio-introLink" style-id="content-link">
-                <text>This is the demo page of ModuleStudio where you can download sample models to play with.</text>
+            <link label="WebGen site" url="http://webgen.modulestudio.de" id="deguitemodulestudio-introLink" style-id="content-link">
+                <text>The web generator regenerates your applications using the latest Git revision of the generator.</text>
             </link>
         </group>
-        <group style-id="content-group" id="webresources-community-most" label="MOST community threads">
-            <contentProvider id="url=http://modulestudio.de/backforum.php?lang=en##welcome_items=10##no_news_url=http://modulestudio.de/en/Forum/##no_news_text=MOST community forum feed" pluginId="org.eclipse.ui.intro" class="org.eclipse.ui.intro.contentproviders.EclipseRSSViewer">
-            </contentProvider>
-      	</group>
   	</extensionContent>
     <extensionContent id="webresources-top-right" style="css/style.css" name="Webresources Extension" path="webresources/@">
         <group style-id="content-group" id="webresources-community-zikula" label="Zikula community threads">
@@ -28,15 +24,13 @@
             <link label="Tester group" url="http://groups.google.de/group/most-dev" id="deguitemodulestudio-introLink" style-id="content-link">
                 <text>Google group for communication between developers, testers and translators.</text> 
             </link>
-            <link label="Guite" url="http://guite.de" id="deguitemodulestudio-introLink" style-id="content-link">
-                <text>This is the homepage of Guite (Guckelsberger Information Technology), your professional partner for qualitative software systems.</text>
-            </link>
         </group>
     </extensionContent>
     <extensionContent id="webresources-bottom-right" style="css/style.css" name="Webresources Extension" path="webresources/@">
         <group style-id="content-group" id="webresources-extdb-zikula" label="Zikula extension database">
-            <contentProvider id="url=http://feeds.zikula.org/community/extdb.xml?module=Extensions&amp;func=view&amp;ot=component&amp;tpl=rss&amp;raw=1##welcome_items=5##no_news_url=http://community.zikula.org/index.php?module=Extensions##no_news_text=Zikula Extension Database" pluginId="org.eclipse.ui.intro" class="org.eclipse.ui.intro.contentproviders.EclipseRSSViewer">
-            </contentProvider>
+            <link label="Guite" url="http://guite.de" id="deguitemodulestudio-introLink" style-id="content-link">
+                <text>This is the homepage of Guite (Guckelsberger Information Technology), your professional partner for qualitative software systems.</text>
+            </link>
         </group>
     </extensionContent>
 </introContent>
