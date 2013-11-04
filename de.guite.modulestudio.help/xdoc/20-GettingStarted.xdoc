@@ -6,9 +6,11 @@ For now we refer only to existing tutorials as they describe things still quite 
 
 section:GettingStartedInstallation[Installation]
 
-%% Please see link[http://modulestudio.de/en/tutorial/installation-on-various-platforms.html][this tutorial].
 Simply download the archive for your operating system and extract it inside your home directory. After
 that you are ready to start the ModuleStudio executable.
+
+Note ModuleStudio requires Java in at least version 6. If no JRE (Java Runtime Environment) is found on your system path,
+a dialog appears and you are suggested to download and install the JRE before starting ModuleStudio.
 
 section:GettingStartedFirstTour[First tour]
 
