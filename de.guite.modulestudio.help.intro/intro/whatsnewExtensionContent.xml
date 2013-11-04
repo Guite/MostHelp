@@ -3,6 +3,7 @@
     <extensionContent id="whatsnew-top-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group061">
             <text>Introduced a new model element containing generator settings. Therewith you can control which features should be generated and take influence on some behavioural aspects of the generator.</text>
+            <text>Added new target core version "pre14" for the new Symfony-based module structure. This replaces the 1.3.6 version which behaves now exactly like 1.3.5.</text>
             <text>Brief entity display can now be freely controlled by a display pattern in the model. The leading flag has been marked as obsolete in the same step.</text>
             <text>Added a language property for controlling sorting also for the incoming source side of many-to-many relationships.</text>
             <text>Only string field types can be used as permalink parts (sluggable position) now.</text>
