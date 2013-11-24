@@ -85,8 +85,7 @@ table[
     tr[
         td[Application]
         td[The application must have a name.]
-        td[Application name must have a length of at least five chars. However recommended are at least
-        seven chars.]
+        td[Application name must have a length of at least five chars.]
     ]
     tr[
         td[Application]
