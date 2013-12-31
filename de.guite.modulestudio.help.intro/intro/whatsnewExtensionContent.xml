@@ -13,13 +13,15 @@
             <text>Added an option for bypassing entity validation (required for example when archiving objects automatically).</text>
             <text>The generator creates also a plugin for the Newsletter module (beside the Mailz plugin which has been there before already).</text>
             <text>Lists with related objects in quick navigation forms are sorted now by default.</text>
-            <text>Added support for new event handlers in 1.3.6 to recognise a module being activated or deactivated.</text>
-            <text>Names of database tables include the vendor as prefix in 1.3.6.</text>
+            <text>Added support for new event handlers in 1.3.7 to recognise a module being activated or deactivated.</text>
+            <text>In 1.3.7 event handlers are not managed in the database anymore, but by means of dependency injection.</text>
+            <text>Names of database tables include the vendor as prefix in 1.3.7.</text>
             <text>Also view actions are now allowed for ajax controllers.</text>
-            <text>The frontend for 1.3.6 extensions has been converted to Bootstrap.</text>
+            <text>The frontend for 1.3.7 extensions has been converted to Bootstrap.</text>
             <text>Fixed wrong length calculation during table size validation.</text>
+            <text>Added missing validation for ensuring one-to-one relations targeting a soft-deleteable entity have a remove cascade.</text>
             <text>Lots of generator bugfixes (for details see closed tickets in the MostGenerator project on Github).</text>
-            <text>Updated to Eclipse 4.3.0 (Kepler).</text>
+            <text>Updated to Eclipse 4.3.1 (Kepler).</text>
         </group>
         <group style-id="content-group" id="deguitemodulestudio-introLink-group060">
             <text>A new property stores the vendor of an application. Usually this is the name of a company or institution.</text>

@@ -1194,6 +1194,11 @@ table[
         td[The edit type ACTIVE_EDIT_PASSIVE_NONE is only valid for many to many relationships.]
         td[]
     ]
+    tr[
+        td[One to one relationship]
+        td[Entities with soft-deleteable need a remove cascade for any incoming one-to-one relationships.]
+        td[See link[https://github.com/l3pp4rd/DoctrineExtensions/issues/936][this issue] for more information.]
+    ]
 ]
 
 section3[Many to one relationship]
