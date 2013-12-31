@@ -20,6 +20,7 @@
             <text>The frontend for 1.3.7 extensions has been converted to Bootstrap.</text>
             <text>Fixed wrong length calculation during table size validation.</text>
             <text>Added missing validation for ensuring one-to-one relations targeting a soft-deleteable entity have a remove cascade.</text>
+            <text>Added missing validation for sortable group needing also a sortable position.</text>
             <text>Lots of generator bugfixes (for details see closed tickets in the MostGenerator project on Github).</text>
             <text>Updated to Eclipse 4.3.1 (Kepler).</text>
         </group>

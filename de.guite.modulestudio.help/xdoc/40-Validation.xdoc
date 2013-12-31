@@ -778,6 +778,11 @@ table[
     ]
     tr[
         td[Entity field]
+        td[You need another field as sortable position to make the sortable group work.]
+        td[Can occur for a field marked as sortable group.]
+    ]
+    tr[
+        td[Entity field]
         td[Only one field per entity may store the version.]
         td[Can appear for integer and datetime fields if you enabled the e[version] property for more
         than one field in the same entity.]
