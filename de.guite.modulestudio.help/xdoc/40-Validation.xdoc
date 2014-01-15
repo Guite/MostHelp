@@ -450,7 +450,13 @@ table[
     tr[
         td[Entity with fields]
         td[Using display pattern in the entity is preferred against marking leading fields.]
-        td[Occurs when no display pattern is defined but a field is marked as leading.]
+        td[This warning occurs when no display pattern is defined but a field is marked as leading.]
+    ]
+    tr[
+        td[Entity with fields]
+        td[The display pattern does not contain any field references. Please check whether this is on
+        purpose or not.]
+        td[This warning occurs if a display pattern does not contain any field references.]
     ]
     tr[
         td[Entity with archive]
