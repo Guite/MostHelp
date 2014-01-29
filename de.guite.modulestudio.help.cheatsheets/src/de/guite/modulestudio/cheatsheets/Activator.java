@@ -32,6 +32,10 @@ public class Activator extends AbstractUIPlugin {
      * )
      */
     @Override
+    @SuppressWarnings("PMD.SignatureDeclareThrowsException")
+    // @SuppressWarnings("PMD.SignatureDeclareThrowsException") We have to use
+    // this signature because this is an override of an Eclipse framework's
+    // method.
     public void start(BundleContext context) throws Exception {
         super.start(context);
         plugin = this;
@@ -44,6 +48,13 @@ public class Activator extends AbstractUIPlugin {
      * )
      */
     @Override
+    @SuppressWarnings({ "PMD.SignatureDeclareThrowsException",
+            "PMD.NullAssignment" })
+    // @SuppressWarnings("PMD.SignatureDeclareThrowsException") We have to use
+    // this signature because this is an override of an Eclipse framework's
+    // method.
+    // @SuppressWarnings("PMD.NullAssignment")
+    // No choice to right it in another way : this is an Eclipse pattern.
     public void stop(BundleContext context) throws Exception {
         plugin = null;
         super.stop(context);
