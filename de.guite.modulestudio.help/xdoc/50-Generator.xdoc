@@ -203,51 +203,53 @@ A settings container has the following fields:
 ul[
     item[e[targetCoreVersion] - The targeted Zikula core version. See ref:GenRefCoreVersion[above].]
     item[e[generateAccountApi] - A boolean specifying whether account panel integration should be generated 
-    or not.]
+    or not. Default value is e[true].]
     item[e[generateSearchApi] - A boolean specifying whether search integration should be generated or 
-    not. Requires at least one string or text field in any entity.]
-    item[e[generateMailzApi] - A boolean specifying whether Mailz support should be generated or not.]
+    not. Requires at least one string or text field in any entity. Default value is e[true].]
+    item[e[generateMailzApi] - A boolean specifying whether Mailz support should be generated or not. Default value is e[true].]
     item[e[generateListBlock] - A boolean specifying whether a generic list block should be generated 
-    or not.]
+    or not. Default value is e[true].]
     item[e[generateModerationBlock] - A boolean specifying whether a moderation block should be generated 
-    or not. Requires at least one entity with a workflow including approval.]
+    or not. Requires at least one entity with a workflow including approval. Default value is e[true].]
     item[e[generateListContentType] - A boolean specifying whether a content type for collection lists 
-    should be generated or not.]
+    should be generated or not. Default value is e[true].]
     item[e[generateDetailContentType] - A boolean specifying whether a content type for single objects 
-    should be generated or not. Requires user controller containing a display action.]
+    should be generated or not. Requires user controller containing a display action. Default value is e[true].]
     item[e[generateNewsletterPlugin] - A boolean specifying whether a Newsletter plugin should be generated 
-    or not.]
+    or not. Default value is e[true].]
     item[e[generateModerationPanel] - A boolean specifying whether a moderation panel should be generated 
-    or not. Requires at least one entity with a workflow including approval.]
+    or not. Requires at least one entity with a workflow including approval. Default value is e[true].]
     item[e[generatePendingContentSupport] - A boolean specifying whether support for pending content 
-    should be generated or not. Requires at least one entity with a workflow including approval.]
+    should be generated or not. Requires at least one entity with a workflow including approval. Default value is e[true].]
     item[e[generateExternalControllerAndFinder] - A boolean specifying whether a controller for external 
-    calls providing a generic finder component should be generated or not.]
+    calls providing a generic finder component should be generated or not. Default value is e[true].]
     item[e[generateScribitePlugins] - A boolean specifying whether support for several Scribite editors 
-    should be generated or not. Requires external controller with finder component.]
+    should be generated or not. Requires external controller with finder component. Default value is e[true].]
     item[e[generateTagSupport] - A boolean specifying whether tag support should be generated or not. 
-    Requires user or admin controller containing a display action.]
+    Requires user or admin controller containing a display action. Default value is e[true].]
     item[e[generateRssTemplates] - A boolean specifying whether rss view templates should be generated 
-    or not.]
+    or not. Default value is e[true].]
     item[e[generateAtomTemplates] - A boolean specifying whether atom view templates should be generated 
-    or not.]
+    or not. Default value is e[true].]
     item[e[generateCsvTemplates] - A boolean specifying whether csv view templates should be generated 
-    or not.]
+    or not. Default value is e[true].]
     item[e[generateXmlTemplates] - A boolean specifying whether xml display and view templates should 
-    be generated or not.]
+    be generated or not. Default value is e[true].]
     item[e[generateJsonTemplates] - A boolean specifying whether json templates should be generated 
-    or not.]
+    or not. Default value is e[true].]
     item[e[generateKmlTemplates] - A boolean specifying whether kml templates should be generated or 
-    not. Requires geographical flag on corresponding entities.]
+    not. Requires geographical flag on corresponding entities. Default value is e[true].]
     item[e[generateOnlyBaseClasses] - A boolean specifying whether only base classes should be generated. 
-    May be useful for doing simple upgrades without structural changes.]
+    May be useful for doing simple upgrades without structural changes. Default value is e[false].]
     item[e[skipFiles] - Comma-separated blacklist with each entry representing a file which should not 
-    be generated.]
+    be generated. Default value is an empty string.]
     item[e[timestampAllGeneratedFiles] - A boolean specifying whether the generated by message should 
-    contain a timestamp in all files or only in the Version class.]
+    contain a timestamp in all files or only in the Version class. Default value is e[false].]
     item[e[generatePoweredByBacklinksIntoFooterTemplates] - A boolean specifying whether generated footer 
-    templates should contain backlinks to the ModuleStudio homepage.]
-    item[e[generateTests] - A boolean specifying whether test cases should be generated or not.]
+    templates should contain backlinks to the ModuleStudio homepage. Default value is e[true].]
+    item[e[generateTests] - A boolean specifying whether test cases should be generated or not. Default value is e[true].]
+    item[e[writeModelToDocs] - A boolean specifying whether the model files are written into the module's
+    docs folder or into a separate folder outside the module. Default value is e[false].]
 ]
 
 section4:GenRefReferredApplication[Referred application]
