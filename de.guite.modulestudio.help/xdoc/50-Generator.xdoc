@@ -188,9 +188,9 @@ Zikula version for which the application should be generated.
 Can be one of the following options:
 
 ul[
-    item[e[ZKPRE14] - Aims on Zikula 1.3.7 and later. This is the default value.]
-    item[e[ZK136] - Aims on Zikula 1.3.6 and earlier. This is for backwards compatibility.]
-    item[e[ZK135] - For Zikula 1.3.5 and earlier. This is for backwards compatibility.]
+    item[e[ZKPRE14] - Aims on Zikula 1.4.0 and later. This is the default value and useful when developing for future.]
+    item[e[ZK136] - For Zikula 1.3.7 and earlier. This is for backwards compatibility and useful when maintaining extensions in production.]
+    item[e[ZK135] - For Zikula 1.3.7 and earlier. This is for backwards compatibility and useful when maintaining extensions in production.]
 ]
 
 section4:GenRefSettingsContainer[Settings container]
@@ -458,7 +458,7 @@ Normally all created classes are generated twice. Thereby an empty concrete clas
 base class containing the whole generator code. The motivation behind this separation is that your own
 code keeps free from generated artifacts.
 
-Example for Zikula 1.3.7 prepared for 1.4.0:
+Example for Zikula 1.4.0:
 
 code[PHP][
     namespace MyModule\Entity\Validator\Base;
@@ -478,7 +478,7 @@ code[PHP][
     }
 ]
 
-Example for Zikula 1.3.6 and below:
+Example for Zikula 1.3.7 and below:
 
 code[PHP][
     class MyModule_Entity_Validator_Base_Person
@@ -1453,7 +1453,7 @@ from corresponding abstract base classes. As soon as an entity does inherit from
 be no base class created for it. Instead the concrete implementation class will inherit from the concrete
 class of the parent entity.
 
-Example for Zikula 1.3.7 prepared for 1.4.0:
+Example for Zikula 1.4.0:
 
 code[PHP][
     namespace MyModule\Entity\Validator\Base;
@@ -1478,7 +1478,7 @@ code[PHP][
     }
 ]
 
-Example for Zikula 1.3.6 and below:
+Example for Zikula 1.3.7 and below:
 
 code[PHP][
     class MyModule_Entity_Validator_Base_Person

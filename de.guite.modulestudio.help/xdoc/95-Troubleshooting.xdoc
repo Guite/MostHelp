@@ -72,25 +72,25 @@ section:TroubleshootingGeneration[Generation problems]
 
 section2:ProblemWorkflowNotFound[Unable to find workflow file]
 
-If you get this error you have generated an application for Zikula 1.3.5/1.3.6 which contains a small bug that is
+If you get this error you have generated an application for Zikula 1.3.x which contains a small bug that is
 fixed in 1.3.7.
 Please apply the fix shown in link[https://github.com/zikula/core/commit/f7e3379e7060859aab334be6707fe6e0ab61baf8][https://github.com/zikula/core/commit/f7e3379e7060859aab334be6707fe6e0ab61baf8]
 in order to fix the error.
 
 section2:OrphanRemovalWithManyToManyRelations[Orphan removal with many-to-many relations]
 
-If you are generating for 1.3.5/1.3.6 please do not enable the e[orphanRemoval] property for many-to-many 
+If you are generating for 1.3.x please do not enable the e[orphanRemoval] property for many-to-many 
 relationships. This feature is supported only in newer versions of Doctrine 2, therefore you need to 
-use 1.3.7 if you want to use it.
+use 1.4.0 if you want to use it.
 
 section2:ProblemWorkflowFetching[The workflows are not fetched properly]
 
-Due to a problem Zikula 1.3.7 the workflow data can not be fetched automatically for an entity yet.
+Due to a problem in Zikula 1.4.0 the workflow data can not be fetched automatically for an entity yet.
 Because if the postLoad listener in the entity class (method performPostLoadCallback) calls the workflow
 the Zikula workflow util class does another selection for this. This leads to both selections getting
 into a competition about the internal object hydrator of Doctrine. The workflow selection "steals" it
 from the main selection. So after the first item, when it wants to fetch the second one, it is not possible 
-anymore. In 1.3.5/1.3.6 this was not a problem because workflows were called using DBUtil bridged by Doctrine 1.
+anymore. In 1.3.x this was not a problem because workflows were called using DBUtil bridged by Doctrine 1.
 
 A clean solution would not use any workflow util class, but join the workflow entity directly. But this 
 affects too many parts to do it quickly. Also to make it really beautiful we would need own workflow 
@@ -124,6 +124,6 @@ fetch.
 
 section2:PatchForCategorySelector[Patch for category selector]
 
-Due to a bug in the category selector in Zikula 1.3.5 and 1.3.6 you will run into problems when trying
+Due to a bug in the category selector in Zikula 1.3.5 and 1.3.6 (solved in 1.3.7) you will run into problems when trying
 to save an entity with categories. To solve this just merge the fix shown in link[https://github.com/zikula/core/pull/1561/files][https://github.com/zikula/core/pull/1561/files]
 and you are done.
