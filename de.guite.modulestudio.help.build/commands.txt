@@ -1,7 +1,9 @@
 # Commands for building a p2 site with these feature bundles
 
+setpref targetPlatformPath=${WORKSPACE}../../MOST-1_Prepare-1_Target_Platform/lastSuccessful/archive/targetPlatform
+
 # materialise stuff by cquery/rmap
-resolve --properties "refProduct/de.guite.modulestudio.build/buckminster.properties" -D targetPlatformPath=${WORKSPACE}../../MOST-1_Prepare-1_Target_Platform/lastSuccessful/archive/targetPlatform "scm/de.guite.modulestudio.help.build/most.cquery"
+resolve --properties "refProduct/de.guite.modulestudio.build/buckminster.properties" "scm/de.guite.modulestudio.help.build/most.cquery"
 
 clean
 
