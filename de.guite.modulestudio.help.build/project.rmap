@@ -16,7 +16,7 @@
     <searchPath name="most.product">
         <provider readerType="local" componentTypes="eclipse.feature,osgi.bundle,buckminster" mutable="false">
             <uri format="{0}/refProduct/{1}">
-                <bc:propertyRef key="workspace.root" />
+                <bc:propertyRef key="projects.location" />
                 <bc:propertyRef key="buckminster.component" />
             </uri>
         </provider>
