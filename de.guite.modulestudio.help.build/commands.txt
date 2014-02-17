@@ -6,9 +6,6 @@ setpref targetPlatformPath=${WORKSPACE}../../MOST-1_Prepare-1_Target_Platform/la
 # materialise stuff by cquery/rmap
 resolve --properties "refProduct/de.guite.modulestudio.build/buckminster.properties" "scm/de.guite.modulestudio.help.build/most.cquery"
 
-# clean the workspace
-clean
-
 # execute Xdoc workflows
 launch --stderr --stdout -l "de.guite.modulestudio.help/GenerateHelpArtifacts.mwe2.launch"
 launch --stderr --stdout -l "de.guite.modulestudio.help/GenerateManualPdf.mwe2.launch"
