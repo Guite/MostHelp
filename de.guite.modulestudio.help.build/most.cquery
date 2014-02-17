@@ -4,4 +4,10 @@
     <cq:advisorNode namePattern="^de\.guite\.modulestudio\.help(\..*)?$" componentType="osgi.bundle" useTargetPlatform="false">
         <cq:documentation xmlns="http://www.w3.org/1999/xhtml">Force bundle to be fetched from the workspace</cq:documentation>
     </cq:advisorNode>
+    <cq:advisorNode namePattern="^de\.guite\.modulestudio\.help(\..*)?$" componentType="eclipse.feature" useTargetPlatform="false">
+        <cq:documentation xmlns="http://www.w3.org/1999/xhtml">Force bundle to be fetched from the workspace</cq:documentation>
+    </cq:advisorNode>
+    <cq:advisorNode namePattern="^de\.guite\.modulestudio\.help(\..*)?$" componentType="buckminster" useTargetPlatform="false">
+        <cq:documentation xmlns="http://www.w3.org/1999/xhtml">Force bundle to be fetched from the workspace</cq:documentation>
+    </cq:advisorNode>
 </cq:componentQuery>
