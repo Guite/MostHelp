@@ -4,7 +4,7 @@
 
     <property key="projects.location" value="${workspace.root}" />
 
-    <searchPath name="local-sources">
+    <searchPath name="local.sources">
         <provider readerType="local" componentTypes="eclipse.feature,osgi.bundle,buckminster" mutable="false">
             <property key="buckminster.mutable" value="false" />
             <uri format="{0}/scm/{1}">
@@ -13,6 +13,15 @@
             </uri>
         </provider>
     </searchPath>
+    <searchPath name="most.product">
+        <provider readerType="local" componentTypes="eclipse.feature,osgi.bundle,buckminster" mutable="false">
+            <uri format="{0}/refProduct/{1}">
+                <bc:propertyRef key="workspace.root" />
+                <bc:propertyRef key="buckminster.component" />
+            </uri>
+        </provider>
+    </searchPath>
 
-    <locator searchPathRef="local-sources" pattern="^de\.guite\.modulestudio\.help(\..*)?" />
+    <locator searchPathRef="local.sources" pattern="^de\.guite\.modulestudio\.help(\..*)?" />
+    <locator searchPathRef="most.product" pattern="^de\.guite\.modulestudio\.branding" />
 </rmap>
