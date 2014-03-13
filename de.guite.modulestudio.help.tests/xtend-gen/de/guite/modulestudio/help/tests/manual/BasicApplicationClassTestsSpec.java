@@ -22,9 +22,8 @@ public class BasicApplicationClassTestsSpec {
   @Named("Just a dummy test")
   @Order(1)
   public void _justADummyTest() throws Exception {
-    boolean _should_be = Should.<Integer>should_be(Integer.valueOf((2 - 1)), Integer.valueOf(5));
     Assert.assertFalse("\nExpected (2-1) should not be 5 but"
-     + "\n     2-1 is " + new org.hamcrest.StringDescription().appendValue(Integer.valueOf((2 - 1))).toString() + "\n", _should_be);
+     + "\n     2-1 is " + new org.hamcrest.StringDescription().appendValue(Integer.valueOf((2 - 1))).toString() + "\n", Should.<Integer>should_be(Integer.valueOf((2 - 1)), Integer.valueOf(5)));
     
   }
 }

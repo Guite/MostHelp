@@ -22,7 +22,7 @@
             <text>Added missing validation for ensuring one-to-one relations targeting a soft-deleteable entity have a remove cascade.</text>
             <text>Added missing validation for sortable group needing also a sortable position.</text>
             <text>Lots of generator bugfixes (for details see closed tickets in the MostGenerator project on Github).</text>
-            <text>Updated to Eclipse 4.3.1 (Kepler).</text>
+            <text>Updated to Eclipse 4.3.2 (Kepler SR2).</text>
         </group>
         <group style-id="content-group" id="deguitemodulestudio-introLink-group060">
             <text>A new property stores the vendor of an application. Usually this is the name of a company or institution.</text>
