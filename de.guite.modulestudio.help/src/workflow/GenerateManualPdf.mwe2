@@ -14,7 +14,7 @@ Workflow {
         modelPath = modelPath
         targetDir = targetDir
         // must conform to document title
-        document = "ModuleStudio User's Guide v0.6.1"
+        document = "ModuleStudio User's Guide v0.6.2"
         // installation of pdflatex including all required components in *buntu involves:
         //     wajig install texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-lang-german texlive-lang-french
         pdfLatex = "/usr/bin/pdflatex"
