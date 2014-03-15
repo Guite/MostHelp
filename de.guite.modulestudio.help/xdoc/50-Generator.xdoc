@@ -239,6 +239,8 @@ ul[
     or not. Default value is e[true].]
     item[e[generateKmlTemplates] - A boolean specifying whether kml templates should be generated or 
     not. Requires geographical flag on corresponding entities. Default value is e[true].]
+    item[e[generateIcsTemplates] - A boolean specifying whether ics (iCalendar) templates should be generated or 
+    not. Requires start date and end date fields on corresponding entities. Default value is e[true].]
     item[e[generateOnlyBaseClasses] - A boolean specifying whether only base classes should be generated. 
     May be useful for doing simple upgrades without structural changes. Default value is e[false].]
     item[e[skipFiles] - Comma-separated blacklist with each entry representing a file which should not 
