@@ -555,6 +555,9 @@ A derived field has the following properties in addition to the common ref:GenRe
 settings: 
 
 ul[
+    item[e[dbName] - Name of the database column represented by this field. The default value is an
+    empty string which means that the field name is used for the column, too. This property is primarily
+    interesting for avoiding changes in the database schema when migrating legacy apps.]
     item[e[defaultValue] - The default value of the field. This default value is used when creating new
     entities with the ref:GenRefEditAction[edit action].]
     item[e[leading] - A boolean specifying whether this is the primary (and default) field in this entity.

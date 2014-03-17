@@ -667,6 +667,9 @@ table[
     ]
 ]
 
+Note all rules for name validation are applied not only to name, but also to the dbName property, too,
+if it is set for a certain field.
+
 section3:ReservedDBKeywords[Reserved database keywords]
 
 The following list has been merged and includes therefore all keywords of all supported DBMS.
