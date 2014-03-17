@@ -2,6 +2,7 @@
 <introContent>
     <extensionContent id="whatsnew-top-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group062">
+            <text>Array fields can be configured as array, simple array and json array for 1.4.0 (#488).</text>
             <text>Added new generator setting for marking generating files with special file names (*.generated.*) (#497).</text>
             <text>Added ics (iCalendar) templates for entities with start and end dates (#509).</text>
             <text>Migrated search integration to new helper class in 1.4.0 (#503).</text>

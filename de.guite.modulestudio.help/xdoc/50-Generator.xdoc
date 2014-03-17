@@ -909,8 +909,12 @@ section4:GenRefArrayField[Array field]
 
 Represents a field type for storing arrays.
 
-An array field has no fields or references in addition to the common ref:GenRefEntityField[entity
-field] settings.
+An array field has the following properties in addition to the common ref:GenRefEntityField[entity field]
+settings:
+
+ul[
+    item[e[arrayType] - Which ref:GenRefArrayType[array type] is used.]
+]
 
 The generator will exclude arrays in ref:GenRefEditAction[edit] pages as well as for the output in ref:GenRefViewAction[view]
 and ref:GenRefDisplayAction[display] templates.
@@ -1097,6 +1101,22 @@ ul[
 The generator transforms these values to the corresponding implementation as is. There are no differences
 made between the different slug styles. So beside the actual entity class there won't be any code parts
 affected based on which slug style you use.
+
+section4:GenRefArrayType[Array type]
+
+Represents different types of arrays used by Doctrine 2.
+
+Can be one of the following options:
+
+ul[
+    item[ARRAY - A normal array.]
+    item[SIMPLE_ARRAY - A simple array represented by a comma-separated text field.]
+    item[JSON_ARRAY - A JSON array.]
+]
+
+The generator transforms these values to the corresponding implementation as is. There are no differences
+made between the different array field types. So beside the actual entity class there won't be any
+code parts affected based on which array type you use.
 
 section4:GenRefEntityTimestampableType[Entity timestampable type]
 
