@@ -2,6 +2,8 @@
 <introContent>
     <extensionContent id="whatsnew-top-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group062">
+            <text>In 1.4.0 the Symfony validator component is used instead of self-written validation methods.</text>
+            <text>Added new options in the model editor allowing specifying additional validation constraints available in Symfony.</text>
             <text>In 1.4.0 status messages are not with LogUtil realised anymore, but using Symfony FlashBags (#512).</text>
             <text>Client-side geocoding now uses a callback function to make customisation easier inside edit templates (#507).</text>
             <text>A new dbName property for entity fields allows different naming for field and database column (#489).</text>

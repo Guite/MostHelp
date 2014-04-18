@@ -723,7 +723,10 @@ ul[
     item[e[minLength] - Minimal length. If set to a value other than 0 then a validator will enforce this
     constraint on client and server side.]
     item[e[nospace] - A boolean specifying whether space chars are forbidden or not.]
-    item[e[regexp] - Regular expression to validate against.]
+    item[e[regexp] - Regular expression to validate against. Possible example values are e[/^\w+/] and
+    e[/\d/].]
+    item[e[regexpOpposite] - A boolean specifying the logical way of checking e[regexp]. If set to e[true]
+    then validation will pass only if the given string does not match the pattern.]
 ]
 
 If one of these properties is set to e[true] a corresponding validator will check this constraint on
@@ -741,21 +744,94 @@ ul[
     to e[true] a country selector is used in ref:GenRefEditAction[edit] pages. For the output in ref:GenRefViewAction[view]
     and ref:GenRefDisplayAction[display] templates an output modifier is used to display the full country
     name instead of the unreadable country code.]
+    item[e[creditCard] - A boolean specify whether this field represents a credit card number or not.
+    Only applicable for the 1.4 target core version.]
+    item[e[currency] - A boolean specify whether this field represents a 3-letter ISO 4217 currency name
+    or not. Possible example values are e[USD] or e[EUR]. Only applicable for the 1.4 target core version.
+    In forms it will be rendered as a text input, until Symfony Forms (which is offering a dedicated
+    field type) is used for the 1.4 target.]
     item[e[htmlcolour] - A boolean specifying whether this field represents a html color code (like #003399)
     or not. If set to e[true] a colour picker is used in ref:GenRefEditAction[edit] pages for convenient
     selection of colour codes.]
-    item[e[language] - A boolean specifying whether this field represents a language code or not. If
-    set to e[true] a language selector is used in ref:GenRefEditAction[edit] pages. For the output in ref:GenRefViewAction[view]
-    and ref:GenRefDisplayAction[display] templates the e[getlanguagename] modifier is used to display
-    the full name instead of the unreadable language code.]
-    item[e[length] - The length of this field. Default value is 10000.]
+    item[e[iban] - A boolean specify whether this field represents a bank account number in IBAN (International
+    Bank Account Number) format. Only applicable for the 1.4 target core version.]
+    item[e[isbn] - Allows to define whether this field represents a number in ISBN (International Standard
+    Book Number). You can choose corresponding ref:GenRefStringIsbnStyle[validation options].
+    covered ref:GenRefIpAddressScope[ip address scope]. Only applicable for the 1.4 target core version.]
+    item[e[issn] - Allows to define whether this field represents a number in ISSN (International Standard
+    Serial Number). You can choose corresponding ref:GenRefStringIssnStyle[validation options].
+    covered ref:GenRefIpAddressScope[ip address scope]. Only applicable for the 1.4 target core version.]
+    item[e[ipAddress] - Allows to define whether this field represents an IP address. You can choose the
+    covered ref:GenRefIpAddressScope[ip address scope]. Only applicable for the 1.4 target core version.]
+    item[e[language] - A boolean specifying whether this field represents an Unicode language identifier
+    or not. Possible example values are e[fr] or e[zh-Hant]. If set to e[true] a language selector is
+    used in ref:GenRefEditAction[edit] pages. For the output in ref:GenRefViewAction[view] and ref:GenRefDisplayAction[display]
+    templates the e[getlanguagename] modifier is used to display the full name instead of the unreadable
+    language code.]
+    item[e[length] - The length of this field. Default value is 255.]
+    item[e[locale] - A boolean specify whether this field represents a locale or not. Possible example
+    values are e[fr] or e[fr_FR]. In forms it will be rendered as a language selector, until Symfony
+    Forms (which is offering different field types) is used for the 1.4 target.]
     item[e[password] - A boolean specifying whether this field represents a password or not. If set to
-    e[true] a password input element will be used instead of a normal one in ref:GenRefEditAction[edit] pages.]
+    e[true] a password input element will be used instead of a normal one in ref:GenRefEditAction[edit]
+    pages.]
 ]
 
 In ref:GenRefEditAction[edit] pages the generator will use singleline input elements for string fields
 - except you defined something else (like language or password). Other validations are added together
 and applied as well.
+
+section4:GenRefStringIsbnStyle[ISBN style]
+
+Represents different ISBN formats to be validated for a ref:GenRefStringField[string field].
+
+Can be one of the following options:
+
+ul[
+    item[e[NONE] - Default value. Means that the corresponding ref:GenRefStringField[string field] should
+    not represent an ISBN.]
+    item[e[ISBN10] - ISBN-10 code.]
+    item[e[ISBN13] - ISBN-13 code.]
+    item[e[ALL] - Both ISBN-10 and ISBN-13 codes.]
+] 
+
+section4:GenRefStringIssnStyle[ISSN style]
+
+Represents different ISSN formats to be validated for a ref:GenRefStringField[string field].
+
+Can be one of the following options:
+
+ul[
+    item[e[NONE] - Default value. Means that the corresponding ref:GenRefStringField[string field] should
+    not represent an ISSN.]
+    item[e[NORMAL] - Normal ISSN validation, allows lower case x at the end and non hyphenated ISSN values.]
+    item[e[CASE_SENSITIVE] - Requires an upper case X at the end.]
+    item[e[REQUIRE_HYPHEN] - Requires a hyphenated ISSN value.]
+    item[e[STRICT] - Combines CASE_SENSITIVE and REQUIRE_HYPHEN.]
+] 
+
+section4:GenRefIpAddressScope[Ip address scope]
+
+Represents different ways how to validate a given IP address.
+
+Can be one of the following options:
+
+ul[
+    item[e[NONE] - Default value. Means that the corresponding ref:GenRefStringField[string field] should
+    not represent an IP address.]
+    item[e[IP4] - Validates for IPv4 addresses in all ranges.]
+    item[e[IP6] - Validates for IPv6 addresses in all ranges.]
+    item[e[ALL] - Validates all IP formats in all ranges.]
+    item[e[IP4_NO_PRIV] - Validates for IPv4 addresses without private ranges.]
+    item[e[IP6_NO_PRIV] - Validates for IPv6 addresses without private ranges.]
+    item[e[ALL_NO_PRIV] - Validates all IP formats without private ranges.]
+    item[e[IP4_NO_RES] - Validates for IPv4 addresses without reserved ranges.]
+    item[e[IP6_NO_RES] - Validates for IPv6 addresses without reserved ranges.]
+    item[e[ALL_NO_RES] - Validates all IP formats without reserved ranges.]
+    item[e[IP4_PUBLIC] - Validates for IPv4 addresses using only public ranges (without private and reserved ranges).]
+    item[e[IP6_PUBLIC] - Validates for IPv6 addresses using only public ranges (without private and reserved ranges).]
+    item[e[ALL_PUBLIC] - Validates all IP formats using only public ranges (without private and reserved ranges).]
+]
 
 section4:GenRefTextField[Text field]
 
@@ -765,7 +841,7 @@ A text field has the following properties in addition to the common ref:GenRefAb
 string field] settings:
 
 ul[
-    item[e[length] - The length of this field. Default value is 10000.]
+    item[e[length] - The length of this field. Default value is 2000.]
 ]
 
 In ref:GenRefEditAction[edit] pages the generator will use multiline input elements (textarea).
@@ -790,6 +866,10 @@ An email field has the following properties in addition to the common ref:GenRef
 string field] settings:
 
 ul[
+    item[e[checkMX] - A boolean specify whether the MX record's validity of the given email's host is
+    checked or not. Only supported for the 1.4.x target core version.]
+    item[e[checkHost] - A boolean specify whether the MX or A or AAAA record's validity of given email's
+    host is checked or not. Only supported for the 1.4.x target core version.]
     item[e[length] - The length of this field. Default value is 255.]
 ]
 
@@ -822,11 +902,11 @@ string field] settings:
 ul[
     item[e[allowedExtensions] - List of file extensions to be accepted during the upload, separated 
     by a comma with a space char. Default value is e[gif, jpeg, jpg, png].]
+    item[e[allowedFileSize] - Maximum file size in bytes, default is 0 for no limit.]
     item[e[length] - The length of this field. Default value is 255.]
     item[e[namingScheme] - Defines how uploaded files ref:GenRefUploadNamingScheme[are named].]
     item[e[subFolderName] - Name of sub folder for storing uploaded files. If this is empty the field 
     name will be used as folder name.]
-    item[e[allowedFileSize] - Maximum file size in bytes, default is 0 for no limit.]
 ]
 
 In ref:GenRefEditAction[edit] pages the generator will use upload input elements. If a field is mandatory
@@ -875,6 +955,10 @@ ul[
     item[e[length] - The length of this field. Default value is 255.]
     item[e[multiple] - A boolean specifying whether multiple items can be selected concurrently or not.
     The default value is e[false].]
+    item[e[min] - Minimum amount of values enforced to be selected (only if e[multiple] is set to e[true]).
+    The default value is e[0].]
+    item[e[max] - Maximum amount of values enforced to be selected (only if e[multiple] is set to e[true]).
+    The default value is e[0].]
     item[e[useChecks] - A boolean to enable a checkbox list (only if e[multiple] is set to e[true]). The
     default value is e[false].]
 ]
@@ -917,6 +1001,10 @@ settings:
 
 ul[
     item[e[arrayType] - Which ref:GenRefArrayType[array type] is used.]
+    item[e[min] - Minimum amount of items enforced to be present. The default value is e[0] which means
+    that no certain amount is enforced. Must be used together with e[max].]
+    item[e[max] - Maximum amount of items enforced to be present. The default value is e[0] which means
+    that no certain amount is enforced. Must be used together with e[min].]
 ]
 
 The generator will exclude arrays in ref:GenRefEditAction[edit] pages as well as for the output in ref:GenRefViewAction[view]
@@ -1326,6 +1414,10 @@ ul[
     relation. Please note that this has not be tested very well yet.]
     item[e[orderBy] - Set to target field name to specify the sorting criteria for the outgoing relation.]
     item[e[orphanRemoval] - Default value is e[false]. If set to e[true] orphans get removed automatically.]
+    item[e[minTarget] - Minimum amount of items enforced to be present on the target side. The default
+    value is e[0] which means that no certain amount is enforced. Must be used together with e[maxTarget].]
+    item[e[maxTarget] - Maximum amount of items enforced to be present on the target side. The default
+    value is e[0] which means that no certain amount is enforced. Must be used together with e[minTarget].]
 ]
 
 section4:GenRefManyToOneRelationship[Many to one relationship]
@@ -1355,6 +1447,14 @@ ul[
     item[e[orderByReverse] - Set to source field name to specify the sorting criteria for the incoming relation.]
     item[e[refClass] - Specifies the reference class created for the linking table (for example e[personAddress]).
     The generator creates additional classes for this reference-managing entity.]
+    item[e[minSource] - Minimum amount of items enforced to be present on the source side. The default
+    value is e[0] which means that no certain amount is enforced. Must be used together with e[maxSource].]
+    item[e[maxSource] - Maximum amount of items enforced to be present on the source side. The default
+    value is e[0] which means that no certain amount is enforced. Must be used together with e[minSource].]
+    item[e[minTarget] - Minimum amount of items enforced to be present on the target side. The default
+    value is e[0] which means that no certain amount is enforced. Must be used together with e[maxTarget].]
+    item[e[maxTarget] - Maximum amount of items enforced to be present on the target side. The default
+    value is e[0] which means that no certain amount is enforced. Must be used together with e[minTarget].]
 ]
 
 section4:GenRefCascadeType[Cascade type]

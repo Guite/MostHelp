@@ -112,7 +112,7 @@ table[
     tr[
         td[Application with url set]
         td[The value for the application url field must be a valid url.]
-        td[Allowed protocols are http, ftp and https.]
+        td[Protocols allowed per default are http and https.]
     ]
     tr[
         td[Application]
@@ -973,13 +973,28 @@ table[
     ]
     tr[
         td[String field]
+        td[String length for credit card numbers must be at least 20 chars.]
+        td[Occurs if you activate the e[creditCard] property for a field with a length smaller than 20.]
+    ]
+    tr[
+        td[String field]
         td[String length for country codes must be at least 2 chars.]
         td[Occurs if you activate the e[country] property for a field with a length smaller than 2.]
     ]
     tr[
         td[String field]
-        td[String length for languages must be at least 5 chars.]
-        td[Occurs if you activate the e[language] property for a field with a length smaller than 5.]
+        td[String length for currency codes must be at least 3 chars.]
+        td[Occurs if you activate the e[currency] property for a field with a length smaller than 3.]
+    ]
+    tr[
+        td[String field]
+        td[String length for languages must be at least 7 chars.]
+        td[Occurs if you activate the e[language] property for a field with a length smaller than 7.]
+    ]
+    tr[
+        td[String field]
+        td[String length for locales must be at least 5 chars.]
+        td[Occurs if you activate the e[locale] property for a field with a length smaller than 5.]
     ]
     tr[
         td[String field]
@@ -989,12 +1004,26 @@ table[
     ]
     tr[
         td[String field]
-        td[A string can only be one of country, language, htmlcolour and password.]
+        td[String length for ip addresses must be at least 15 chars.]
+        td[Occurs if you set the e[ipAddress] property to a value covering IPv4 addresses for a field
+        with a length smaller than 15.]
+    ]
+    tr[
+        td[String field]
+        td[String length for ip addresses must be at least 39 chars.]
+        td[Occurs if you set the e[ipAddress] property to a value covering IPv6 addresses for a field
+        with a length smaller than 39.]
+    ]
+    tr[
+        td[String field]
+        td[A string can only be one of country, creditCard, currency, language, locale, htmlcolour, iban,
+        isbn, issn, ip address and password.]
         td[]
     ]
     tr[
         td[String field]
-        td[String fields for countries, languages and colour must also activate the nospace validator.]
+        td[String fields for countries, currencies, languages, locales, ip addresses and colours must
+        also activate the nospace validator.]
         td[The e[nospace] property ensures that spaces are not allowed as part of the input value. The
         generator could use it without having set this to true, but as the setting is there anyway the
         proper solution is to enforce the user activating it for consistency.]
@@ -1096,15 +1125,52 @@ table[
     ]
     tr[
         td[List field]
+        td[The list must contain at least two items.]
+        td[Occurs if you enable e[multiple] without having defined multiple list items.]
+    ]
+    tr[
+        td[List field]
         td[The list is not set to multiple and may therefore only contain one item with default property 
         set to true.]
         td[]
     ]
     tr[
         td[List field]
+        td[Only lists with multiple selections can define an enforced minimum (maximum) amount of selected
+        values.]
+        td[Occurs if you set e[min] (e[max]) to a value not equal to e[0], without having set e[multiple]
+        to e[true].]
+    ]
+    tr[
+        td[List field]
+        td[The amount of list items must not be smaller than the minimum (maximum) amount of enforced
+        values.]
+        td[Occurs if you set e[min] (e[max]) to a value which is greater than the actual number of existing
+        list items.]
+    ]
+    tr[
+        td[List field]
+        td[The maximum amount of enforced values must not be smaller than the minimum amount of enforced
+        values.]
+        td[Occurs if you set e[max] to a smaller value than e[min].]
+    ]
+    tr[
+        td[List field]
         td[Only lists with multiple selections can consist of checkboxes.]
         td[Occurs if you set e[useChecks] to e[true], but not e[multiple]. Checkbox lists with only one
-        selection allowed are postponed to a future version.]
+        selection allowed are postponed to a future version, since you can use a boolean field for this,
+        too.]
+    ]
+    tr[
+        td[Array field]
+        td[Enforcing a certain amount of items requires setting both e[min] and e[max] properties.]
+        td[Occurs if you set either e[min] or e[max] to a value greater than e[0], but not both.]
+    ]
+    tr[
+        td[Array field]
+        td[The maximum amount of enforced items must not be smaller than the minimum amount of enforced
+        items.]
+        td[Occurs if you set e[max] to a smaller value than e[min].]
     ]
 ]
 
