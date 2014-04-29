@@ -2,6 +2,7 @@
 <introContent>
     <extensionContent id="whatsnew-top-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group062">
+            <text>If no filters are set the current page of paginated views is remembered from session (#548).</text>
             <text>Applications for 1.4.0 support Monolog logger as well as Symfony components Filesystem and Finder (#546).</text>
             <text>Changed generated event subscribers for 1.4.0. Removed support for obsolete events, added support for Symfony kernel events (#544).</text>
             <text>Applications for Zikula 1.4.0 use Symfony's dependency injection container now (#535).</text>
