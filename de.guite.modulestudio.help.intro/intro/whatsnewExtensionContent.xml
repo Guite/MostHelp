@@ -2,6 +2,7 @@
 <introContent>
     <extensionContent id="whatsnew-top-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group062">
+            <text>Structure of entity classes has been refactored for 1.4.0 to allow easier overriding from outside of the module using service parameters (#565).</text>
             <text>Display and delete actions use the ParamConverter annotation for object selection in 1.4.0 (#563).</text>
             <text>If no filters are set the current page of paginated views is remembered from session (#548).</text>
             <text>Applications for 1.4.0 support Monolog logger as well as Symfony components Filesystem and Finder (#546).</text>
