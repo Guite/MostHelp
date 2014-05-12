@@ -2,6 +2,7 @@
 <introContent>
     <extensionContent id="whatsnew-top-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group062">
+            <text>Applications for Zikula 1.4.0 dispatch custom Symfony2 events, see generated FooEvents class (#568).</text>
             <text>Added basic support for cache annotations for 1.4.0 apps (#567).</text>
             <text>Structure of entity classes has been refactored for 1.4.0 to allow easier overriding from outside of the module using service parameters (#565).</text>
             <text>Display and delete actions use the ParamConverter annotation for object selection in 1.4.0 (#563).</text>
