@@ -2,6 +2,7 @@
 <introContent>
     <extensionContent id="whatsnew-top-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group062">
+            <text>All frontend functions have been converted from Prototype to jQuery and Bootstrap for Zikula 1.4.0 (#238).</text>
             <text>A new generator setting allows defining a model as system module (#596).</text>
             <text>Applications for Zikula 1.4.0 dispatch custom Symfony2 events, see generated FooEvents class (#568).</text>
             <text>Added basic support for cache annotations for 1.4.0 apps (#567).</text>
