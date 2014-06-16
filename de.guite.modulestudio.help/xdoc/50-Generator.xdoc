@@ -459,6 +459,12 @@ ul[
     information will be included on ref:GenRefDisplayAction[display] and ref:GenRefEditAction[edit] actions.]
     item[e[workflow] - The workflow which is applied to this entity. See ref:GenRefEntityWorkflowType[workflow
     types] for more information. The default value is e[NONE].]
+    item[e[onAccountDeletionCreator] - Controls how an app should change the creator when users are deleted.
+    Only relevant if e[standardFields] is enabled. Default value is e[ADMIN]. The available options are
+    listed ref:GenRefAccountDeletionHandler[here].]
+    item[e[onAccountDeletionLastEditor] - Controls how an app should change the last editor when users
+    are deleted. Only relevant if e[standardFields] is enabled. Default value is e[ADMIN]. The available
+    options are listed ref:GenRefAccountDeletionHandler[here].]
 ]
 
 a[GenRefEntityClassStructure]
@@ -852,8 +858,13 @@ section4:GenRefUserField[User field]
 
 Extension of ref:GenRefAbstractIntegerField[abstract integer field] for storing user ids.
 
-An user field has no fields or references in addition to the common ref:GenRefAbstractIntegerField[abstract
-integer field] settings.
+An user field has the following properties in addition to the common ref:GenRefAbstractIntegerField[abstract
+integer field] settings:
+
+ul[
+    item[e[onAccountDeletion] - Controls how an app should change the field when users are deleted. Default
+    value is e[GUEST]. The available options are listed ref:GenRefAccountDeletionHandler[here].]
+]
 
 In ref:GenRefEditAction[edit] pages the generator will implement an auto completion element allowing
 searching users by their name. For the output in ref:GenRefViewAction[view] and ref:GenRefDisplayAction[display]
@@ -1278,6 +1289,19 @@ set their value automatically depending on a certain workflow state. Just set th
 to e[CHANGE] and set e[workflowState] as change trigger field. Also set the change trigger value to 
 the name of the desired state. So you could for example create an approval date by using e[approved] 
 for the trigger value property.
+
+section4:GenRefAccountDeletionHandler[Account deletion handler]
+
+Represents the kind of reaction to perform if users are deleted, but still referenced in some data of
+the generated application.
+
+Can be one of the following options:
+
+ul[
+    item[ADMIN - Sets the corresponding user id to 2 (admin user).]
+    item[GUEST - Sets the corresponding user id to 1 (guest).]
+    item[DELETE - Deletes the entity.]
+]
 
 section4:GenRefEntityIndex[Entity index]
 

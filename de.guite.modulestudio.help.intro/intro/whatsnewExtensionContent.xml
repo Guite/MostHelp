@@ -2,6 +2,7 @@
 <introContent>
     <extensionContent id="whatsnew-top-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group062">
+            <text>Added new DSL property (onAccountDeletion) to entities and user fields to allow control over how an app should react when users are deleted (#284).</text>
             <text>The following obsolete properties have been removed from the DSL: Application#modelPath, Application#targetCoreVersion, DerivedField#leading.</text>
             <text>All frontend functions have been converted from Prototype to jQuery and Bootstrap for Zikula 1.4.0 (#238).</text>
             <text>A new generator setting allows defining a model as system module (#596).</text>
