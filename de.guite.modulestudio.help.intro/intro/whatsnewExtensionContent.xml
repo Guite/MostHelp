@@ -25,6 +25,7 @@
             <text>Added new generator setting for marking generating files with special file names (*.generated.*) (#497).</text>
             <text>Added ics (iCalendar) templates for entities with start and end dates (#509).</text>
             <text>Migrated search integration to new helper class in 1.4.0 (#503).</text>
+            <text>Updated to Eclipse 4.4 (Juno).</text>
         </group>
         <group style-id="content-group" id="deguitemodulestudio-introLink-group061">
             <text>Introduced a new model element containing generator settings. Therewith you can control which features should be generated and take influence on some behavioural aspects of the generator.</text>
