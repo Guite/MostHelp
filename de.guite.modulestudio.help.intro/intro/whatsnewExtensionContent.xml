@@ -14,7 +14,7 @@
             <text>Applications for 1.4.0 support Monolog logger as well as Symfony components Filesystem and Finder (#546).</text>
             <text>Changed generated event subscribers for 1.4.0. Removed support for obsolete events, added support for Symfony kernel events (#544).</text>
             <text>Applications for Zikula 1.4.0 use Symfony's dependency injection container now (#535).</text>
-            <text>The routing in 1.4.0 modules has been converted to Symfony using annotations. This replaces the url route classes and encodeurl/decodeurl methods generated before (#465).</text>
+            <text>The routing in 1.4.0 modules has been converted to Symfony using annotations. This replaces the url route classes and encodeurl/decodeurl methods generated before (#465, #604).</text>
             <text>Controller structure has been reorganised: now there exists one controller for each entity. This has been done for preparing migration to Symfony routing, but also makes controller methods more precise and easier to customise by overriding (#465).</text>
             <text>In 1.4.0 the Symfony validator component is used with annotations instead of self-written validation methods (#516).</text>
             <text>Added new options in the model editor allowing specifying additional validation constraints available in Symfony (#516).</text>
