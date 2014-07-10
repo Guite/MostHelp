@@ -851,10 +851,15 @@ table[
         relation to store the meta data for a certain entity.]
     ]
     tr[
+        td[Entity]
+        td[Entities with enhanced workflows needs standard fields for creator identification.]
+        td[]
+    ]
+    tr[
         td[Entity field]
         td[Entities with Zikula standard fields extension have an additional additional fields (createdDate, 
-        createdUserId, updatedDate, updatedUserId). Thus
-        your (fields may not contain these names | reference may not contain these (source | target) aliases).]
+        createdUserId, updatedDate, updatedUserId). Thus your (fields may not contain these names | reference
+        may not contain these (source | target) aliases).]
         td[If an entity has activated the e[standard fields] extension ModuleStudio creates some additional
         fields to store these for a certain entity.]
     ]

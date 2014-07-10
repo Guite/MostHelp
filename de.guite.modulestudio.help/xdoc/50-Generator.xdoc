@@ -1290,6 +1290,13 @@ to e[CHANGE] and set e[workflowState] as change trigger field. Also set the chan
 the name of the desired state. So you could for example create an approval date by using e[approved] 
 for the trigger value property.
 
+For all entities having another workflow than e[NONE] there are configuration options in the generated
+configuration page for selecting user groups for moderation. If these settings are not applied, the default
+group for administrators is used as fallback. With the help of this information, email notifications
+are sent between creator and moderators on state changes. For moderators there is a textarea field provided
+in the form for specifying additional remarks, like a reason for deny (particularly useful for e[reject]
+and e[demote] actions).
+
 section4:GenRefAccountDeletionHandler[Account deletion handler]
 
 Represents the kind of reaction to perform if users are deleted, but still referenced in some data of
