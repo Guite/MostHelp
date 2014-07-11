@@ -1000,14 +1000,19 @@ table[
     ]
     tr[
         td[String field]
+        td[String length for uuids must be at least 36 chars.]
+        td[Occurs if you activate the e[uuid] property for a field with a length smaller than 36.]
+    ]
+    tr[
+        td[String field]
         td[A string can only be one of country, creditCard, currency, language, locale, htmlcolour, iban,
-        isbn, issn, ip address and password.]
+        isbn, issn, ip address, password and uuid.]
         td[]
     ]
     tr[
         td[String field]
-        td[String fields for countries, currencies, languages, locales, ip addresses and colours must
-        also activate the nospace validator.]
+        td[String fields for countries, currencies, languages, locales, ip addresses, colours and uuids
+        must also activate the nospace validator.]
         td[The e[nospace] property ensures that spaces are not allowed as part of the input value. The
         generator could use it without having set this to true, but as the setting is there anyway the
         proper solution is to enforce the user activating it for consistency.]

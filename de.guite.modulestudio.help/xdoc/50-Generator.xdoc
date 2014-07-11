@@ -783,6 +783,8 @@ ul[
     item[e[password] - A boolean specifying whether this field represents a password or not. If set to
     e[true] a password input element will be used instead of a normal one in ref:GenRefEditAction[edit]
     pages.]
+    item[e[uuid] - A boolean specifying whether this field represents an UUID (Universally Unique Identifier)
+    or not.]
 ]
 
 In ref:GenRefEditAction[edit] pages the generator will use singleline input elements for string fields
