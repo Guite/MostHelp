@@ -73,7 +73,7 @@ section:TroubleshootingGeneration[Generation problems]
 section2:ProblemWorkflowNotFound[Unable to find workflow file]
 
 If you get this error you have generated an application for Zikula 1.3.x which contains a small bug that is
-fixed in 1.3.7.
+fixed in 1.3.7 and 1.3.8.
 Please apply the fix shown in link[https://github.com/zikula/core/commit/f7e3379e7060859aab334be6707fe6e0ab61baf8][https://github.com/zikula/core/commit/f7e3379e7060859aab334be6707fe6e0ab61baf8]
 in order to fix the error.
 
@@ -124,6 +124,7 @@ fetch.
 
 section2:PatchForCategorySelector[Patch for category selector]
 
-Due to a bug in the category selector in Zikula 1.3.5 and 1.3.6 (solved in 1.3.7) you will run into problems when trying
-to save an entity with categories. To solve this just merge the fix shown in link[https://github.com/zikula/core/pull/1561/files][https://github.com/zikula/core/pull/1561/files]
+Due to a bug in the category selector in Zikula 1.3.5 and 1.3.6 (solved in 1.3.7 and 1.3.8) you will
+run into problems when trying to save an entity with categories. To solve this just merge the fix shown
+in link[https://github.com/zikula/core/pull/1561/files][https://github.com/zikula/core/pull/1561/files]
 and you are done.
