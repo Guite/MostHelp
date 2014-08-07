@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <introContent>
     <extensionContent id="whatsnew-top-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
+        <group style-id="content-group" id="deguitemodulestudio-introLink-group070">
+        </group>
         <group style-id="content-group" id="deguitemodulestudio-introLink-group062">
             <text>User avatars are displayed at appropriate places (#607).</text>
             <text>Entities with another workflow than NONE allow selecting user groups for moderation in the generated configuration page. Email notifications are sent between creator and moderators on state changes (#570).</text>
@@ -52,6 +54,14 @@
             <text>Lots of generator bugfixes (for details see closed tickets in the MostGenerator project on Github).</text>
             <text>Updated to Eclipse 4.3.2 (Kepler SR2).</text>
         </group>
+  	</extensionContent>
+    <extensionContent id="whatsnew-top-right" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
+        <group style-id="content-group" id="news-web" label="MOST News">
+            <contentProvider id="url=http://modulestudio.de/en/news.rss##welcome_items=20##no_news_url=http://modulestudio.de/en/news/##no_news_text=MOST news articles feed" pluginId="org.eclipse.ui.intro" class="org.eclipse.ui.intro.contentproviders.EclipseRSSViewer">
+            </contentProvider>
+        </group>
+    </extensionContent>
+    <extensionContent id="whatsnew-bottom-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group060">
             <text>A new property stores the vendor of an application. Usually this is the name of a company or institution.</text>
             <text>Another new property allows you to define the desired target core version. The default is 1.3.6 which includes the new forward compatibility layer. Another current possible option is 1.3.5 for backwards compatibility.</text>
@@ -123,14 +133,6 @@
             <text>Reimplemented validation constraints, errors and warnings now also with German translation.</text>
             <text>Validation is no longer performed automatically every few seconds, but on each model save in the main editor, after opening existing models, when starting generation and when calling validation manually using the main menu.</text>
         </group>
-  	</extensionContent>
-    <extensionContent id="whatsnew-top-right" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
-        <group style-id="content-group" id="news-web" label="MOST News">
-            <contentProvider id="url=http://modulestudio.de/en/news.rss##welcome_items=20##no_news_url=http://modulestudio.de/en/news/##no_news_text=MOST news articles feed" pluginId="org.eclipse.ui.intro" class="org.eclipse.ui.intro.contentproviders.EclipseRSSViewer">
-            </contentProvider>
-        </group>
-    </extensionContent>
-    <extensionContent id="whatsnew-bottom-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group054">
             <text>Added import of xml table definitions for migrating existing modules. See the Migrate page for more information.</text>
             <text>Further improvements for new model creation wizard.</text>
