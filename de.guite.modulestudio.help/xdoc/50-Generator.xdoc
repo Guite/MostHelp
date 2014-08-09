@@ -324,10 +324,8 @@ A controller container may have the following references:
 ul[
     item[e[application] - Reference to the owning element.]
     item[e[controllers] - Allows referencing one or more ref:GenRefController[controllers].]
-    item[e[handlers] - Allows referencing one or more ref:GenRefActionHandler[action handlers].]
     item[e[modelContext] - Allows referencing one or more ref:GenRefModelContainer[model containers].]
     item[e[processViews] - Allows referencing a ref:GenRefViewContainer[view container].]
-    item[e[transitions] - Allows referencing one or more ref:GenRefTransition[transitions].]
 ]
 
 As all the container elements also the controller container is primarily a composite element containing
@@ -1826,7 +1824,6 @@ A controller may have the following references:
 ul[
     item[e[actions] - Allows referencing one or more ref:GenRefAction[actions].]
     item[e[container] - Reference to the owning element.]
-    item[e[handlers] - Allows referencing one or more ref:GenRefActionHandler[action handlers].]
 ]
 
 The generator creates controller classes with methods for each actions. Action handlers are not considered
@@ -1855,9 +1852,6 @@ An action may have the following references:
 
 ul[
     item[e[controller] - Reference to the owning element.]
-    item[e[handler] - Allows referencing an ref:GenRefActionHandler[action handler].]
-    item[e[incoming] - Allows referencing one or more ref:GenRefTransition[transitions].]
-    item[e[outgoing] - Allows referencing one or more ref:GenRefTransition[transitions].]
 ]
 
 The generator creates sensitive default implementations for all action types except custom actions which
@@ -1898,88 +1892,6 @@ section4:GenRefCustomAction[Custom action]
 
 A custom action is only created as a mockup which contains the permission check as well as some other
 stuff which is always required, like returning the output from a template fetched by the view.
-
-section4:GenRefActionHandler[Action handler]
-
-Action handlers encapsulate the reaction on user interactions. The most common instance is a form handler
-processing and validating some input fields.
-
-The following handler types are available:
-
-ul[
-    item[List handler - reacts on interactions with a ref:GenRefViewAction[view action] (e.g. for filtering 
-    and sorting).]
-    item[Detail handler - reacts on interactions with a ref:GenRefDisplayAction[display action].]
-    item[Edit handler - reacts on interactions with an ref:GenRefEditAction[edit action].]
-    item[Custom handler - reacts on interactions with a ref:GenRefCustomAction[custom action].]
-]
-
-A handler may have the following references:
-
-ul[
-    item[e[events] - Allows referencing one or more ref:GenRefActionEvent[events].]
-    item[e[action] - Reference to the owning element.]
-    item[e[container] - Reference to the owning element.]
-    item[e[controller] - Allows referencing a ref:GenRefController[controller].]
-]
-
-Not used yet by the generator at all.
-
-section4:GenRefActionEvent[Action event]
-
-An action event represents something which can happen within the scope of an action handler. For example
-this could be the press of a button.
-
-The following event types are available:
-
-ul[
-    item[Start / initial event.]
-    item[Normal event.]
-    item[End / final event.]
-]
-
-An event may have the following references:
-
-ul[
-    item[e[handler] - Reference to the owning element.]
-]
-
-Not used yet by the generator at all.
-
-section4:GenRefTransition[Transition]
-
-Transitions define how the user may move between the available use cases defined by the ref:GenRefAction[controller
-actions.]
-
-The following transition types are available:
-
-ul[
-    item[Redirect - automatic.]
-    item[User transition - manual.]
-]
-
-It includes the following properties:
-
-ul[
-    item[e[condition] - A conditional expression which must be or become true to activate the transition.]
-]
-
-A transition may have the following references:
-
-ul[
-    item[e[container] - Reference to the owning element.]
-    item[e[source] - Reference to source action.]
-    item[e[sourceEvent] - Reference to the source action's event causing this transition.]
-    item[e[target] - Reference to target action.]
-]
-
-Not used yet by the generator at all.
-
-section3:GeneratorControllerCombinations[Combinations and edge cases]
-
-At the moment the controller editor is almost limited to the creation of controller and action elements.
-As stated above action handlers and action events are not really used yet. Therefore there the variation
-in this layer is not that huge yet, so there are no special aspects to explain here.
 
 
 section2:GeneratorViewLayer[View layer]

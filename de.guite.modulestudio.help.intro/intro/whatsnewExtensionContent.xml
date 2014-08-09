@@ -2,6 +2,7 @@
 <introContent>
     <extensionContent id="whatsnew-top-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group070">
+            <text>Removed action handlers, action events and transitions from controller layer.</text>
             <text>Removed dsl properties for view layer, event listeners and transform objects.</text>
         </group>
         <group style-id="content-group" id="deguitemodulestudio-introLink-group062">
