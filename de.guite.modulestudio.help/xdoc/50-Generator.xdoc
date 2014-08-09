@@ -343,12 +343,9 @@ A view container may have the following references:
 ul[
     item[e[application] - Reference to the owning element.]
     item[e[controller] - Allows referencing a ref:GenRefControllerContainer[controller container].]
-    item[e[layoutOrders] - Allows referencing one or more ref:GenRefLayoutOrder[layout orders].]
-    item[e[views] - Allows referencing one or more ref:GenRefView[views].]
 ]
 
-As there is no view editor available yet this element is not relevant for the generator yet. Instead
-it only creates default templates for each existing ref:GenRefAction[controller action] and ref:GenRefEntity[entity],
+The generator creates default templates for each existing ref:GenRefAction[controller action] and ref:GenRefEntity[entity],
 as well as some common templates which are included or required for some extensions.
 
 section3:GeneratorApplicationCombinations[Combinations and edge cases]
@@ -523,7 +520,6 @@ ul[
     item[e[fields] - Allows referencing one or more ref:GenRefEntityField[entity fields].]
     item[e[incoming] - Allows referencing one or more incoming ref:GenRefRelationship[relationships].]
     item[e[indexes] - Allows referencing one or more ref:GenRefEntityIndex[indexes].]
-    item[e[listeners] - Allows referencing one or more ref:GenRefEntityEventListener[event listeners].]
     item[e[outgoing] - Allows referencing one or more outgoing ref:GenRefRelationship[relationships].]
 ]
 
@@ -1536,10 +1532,6 @@ ul[
     item[BOTH_SIDES - Use auto completion on both sides.]
 ]
 
-Actually these settings are part of the ref:GeneratorViewLayer[view layer] and actually they are going
-to be moved somewhen in future. But this is a case where we decided that we don't want to wait until
-the view layer is ready to be used (as priorities require to do other things first).
-
 Example for inline editing:
 
 img[images/example_inline_editing.png][Inline editing][blockimg][border:1px solid black]
@@ -1580,10 +1572,6 @@ ul[
     item[ACTIVE_EDIT_PASSIVE_NONE - Only for many-to-many: Editing the parent includes choosing, adding 
     and editing the children. Editing the child does nothing.]
 ]
-
-Actually these settings are part of the ref:GeneratorViewLayer[view layer] and actually they are going
-to be moved somewhen in future. But this is a case where we decided that we don't want to wait until
-the view layer is ready to be used (as priorities require to do other things first).
 
 For each entity the generator creates some templates to be included in the edit templates of related
 entities (for example a display list and another one for edit). Depending on which edit type is defined
@@ -1808,52 +1796,6 @@ ul[
 The generator will create an option element for the corresponding select element. At the moment this
 has not been done yet though, so list vars are currently handled in the same way like text vars.
 
-section4:GenRefEntityEventListener[Entity event listener]
-
-Base class for model elements representing entity event listeners.
-
-List of supported events:
-
-ul[
-    item[PrePersist / PostPersist]
-    item[PreUpdate / PostUpdate]
-    item[PreRemove / PostRemove]
-    item[PostLoad]
-]
-
-An event listener may have the following references:
-
-ul[
-    item[e[operations] - Allows referencing one or more ref:GenRefTransformObject[transform objects].]
-]
-
-Event listeners are not part of the model editor yet and are therefore ignored by the generator at
-the moment. Instead the generator creates simply all listener methods for all entities.
-
-section4:GenRefTransformObject[Transform object]
-
-Base class for transformation objects encapsulating algorithm puzzle pieces.
-
-Examples:
-
-ul[
-    item[Arithmetic operations]
-    item[Datetime operations]
-    item[Financial operations]
-    item[Logical operations]
-    item[String operations, e.g. replacements]
-    item[System calls]
-]
-
-A transform object may have the following references:
-
-ul[
-    item[e[container] - Reference to the owning element.]
-]
-
-Transform objects are not part of the model editor yet and are therefore ignored by the generator at
-the moment.
-
 section3:GeneratorModelCombinations[Combinations and edge cases]
 
 This section is going to collect certain combinations of elements in practical scenarios. The intention
@@ -2042,108 +1984,10 @@ in this layer is not that huge yet, so there are no special aspects to explain h
 
 section2:GeneratorViewLayer[View layer]
 
-As there is no view editor available yet all the following elements are not relevant for the generator
-yet. Instead it only creates default templates foreach existing ref:GenRefAction[controller action] and
+The generator creates default templates foreach existing ref:GenRefAction[controller action] and
 ref:GenRefEntity[entity], as well as some common templates which are included or required for some extensions.
 
-section3:GeneratorViewElements[Language elements]
-
-section4:GenRefView[View]
-
-The base view class. Each view instance would correspond to a template in the generated Zikula application.
-
-The following view types are available:
-
-ul[
-    item[List view.]
-    item[Detail view.]
-    item[Edit view.]
-    item[Custom view.]
-]
-
-A view may have the following references:
-
-ul[
-    item[e[viewContainer] - Reference to the owning element.]
-    item[e[viewRoot] - Reference to root panel.]
-]
-
-section4:GenRefPresentationTable[Tables]
-
-The following table types are available:
-
-ul[
-    item[Layout table (is a ref:GenRefCompositeContainer[composite container]).]
-    item[Data table (is a ref:GenRefSubContainer[sub container]).]
-]
-
-section4:GenRefContainer[Container]
-
-Represents a very generic container.
-
-A container may have the following references:
-
-ul[
-    item[e[cancelActvators] - Allows referencing one or more ref:GenRefCancelActivator[cancel activators].]
-    item[e[submitActivators] - Allows referencing one or more ref:GenRefSubmitActivator[submit activators].]
-]
-
-section4:GenRefRootPanel[Root panel]
-
-Top-level container for a certain view.
-
-A root panel may have the following references in addition to the generic container fields:
-
-ul[
-    item[e[containers] - Allows referencing one or more ref:GenRefCompositeContainer[composite containers].]
-    item[e[presenter] - Reference to the owning element.]
-]
-
-section4:GenRefCompositeContainer[Composite container]
-
-A composite container which may include other sub containers.
-
-A composite container may have the following references in addition to the generic container fields:
-
-ul[
-    item[e[childContainer] - Allows referencing one or more ref:GenRefSubContainer[sub containers].]
-    item[e[rootPanel] - Reference to the owning element.]
-]
-
-section4:GenRefTabbedPane[Tabbed pane]
-
-A composite container which groups its sub containers with tabs.
-
-section4:GenRefSubContainer[Sub container]
-
-A sub container which may not include other sub containers.
-
-A sub container may have the following references in addition to the generic container fields:
-
-ul[
-    item[e[fields] - Allows referencing one or more ref:GenRefField[fields].]
-    item[e[parentContainer] - Reference to the owning element.]
-]
-
-section4:GenRefPanel[Panel]
-
-Inherits from both ref:GenRefCompositeContainer[composite container] and ref:GenRefSubContainer[sub container].
-
-section4:GenRefSearchPanel[Search panel]
-
-A dedicated panel for search functions.
-
-A search panel may have the following references in addition to the sub container fields:
-
-ul[
-    item[e[searchButton] - Allows referencing a ref:GenRefSubmitButton[submit button].]
-]
-
-section4:GenRefForm[Form]
-
-Extension of ref:GenRefSubContainer[sub container] for form elements.
-
-section4:GenRefField[Field]
+section3:GenRefField[Field]
 
 Represents a field with information.
 
@@ -2151,183 +1995,11 @@ It includes the following properties:
 
 ul[
     item[e[cssClass] - Optional specification of arbitrary css classes.]
-    item[e[defaultValue] - The default value (which may be different from that in the data layer).]
-]
-
-A field may have the following references:
-
-ul[
-    item[e[fieldContainer] - Reference to the owning element.]
-]
-
-section4:GenRefDisplayField[Display field]
-
-Shows the value of a certain field from the data layer.
-
-section4:GenRefInputField[Input field]
-
-Shows an input for a certain field from the data layer.
-
-It includes the following properties in addition to the common ref:GenRefField[field] settings:
-
-ul[
     item[e[hasInitialFocus] - Whether this input should receive the initial focus or not.]
-    item[e[id] - Defines the markup element id.]
     item[e[isReadOnly] - Whether this input is read only or not. e[Must be revalidated later to see if
     this is really required.]]
-    item[e[isMandatory] - Whether this input is mandatory or not (might be different as specified in
-    the data layer).]
     item[e[isVisible] - Whether this input is visible or not.]
 ]
-
-section4:GenRefDesignField[Design field]
-
-Shows some additional information which is not data-driven.
-
-It includes the following properties in addition to the common ref:GenRefField[field] settings:
-
-ul[
-    item[e[tagName] - Defines which markup tag should be used (for example e[p] or e[h4].]
-]
-
-section4:GenRefFormLabel[Form label]
-
-ref:GenRefDesignField[Design field] extension for form labels.
-
-It includes the following properties in addition to the ref:GenRefDesignField[design field] settings:
-
-ul[
-    item[e[for] - Allows referencing an ref:GenRefInputField[input field].]
-]
-
-section4:GenRefButton[Button]
-
-Abstract representation for buttons.
-
-A button may have the following references:
-
-ul[
-    item[e[label] - String for the label text.]
-]
-
-section4:GenRefLink[Link]
-
-Abstract representation for hyperlinks.
-
-section4:GenRefActivator[Activator]
-
-An activator is something which submits a form or start another way of interaction.
-
-section4:GenRefSubmitButton[Submit button]
-
-Inherits from both ref:GenRefSubmitActivator[submit activator] and ref:GenRefButton[button].
-
-A submit button may have the following references:
-
-ul[
-    item[e[searchContext] - Allows referencing a ref:GenRefSearchPanel[search panel].]
-]
-
-The submit button type defines which kind of cancel button should be used:
-
-ul[
-    item[OK]
-    item[YES]
-    item[CONTINUE]
-    item[NEXT]
-]
-
-section4:GenRefCancelButton[Cancel button]
-
-Inherits from both ref:GenRefCancelActivator[cancel activator] and ref:GenRefButton[button].
-
-The cancel button type defines which kind of cancel button should be used:
-
-ul[
-    item[CANCEL]
-    item[NO]
-    item[PREVIOUS]
-]
-
-section4:GenRefSubmitActivator[Submit activator]
-
-A submit activator may have the following references:
-
-ul[
-    item[e[submitContext] - Allows referencing a ref:GenRefContainer[container].]
-]
-
-section4:GenRefCancelActivator[Cancel activator]
-
-A cancel activator may have the following references:
-
-ul[
-    item[e[cancelContext] - Allows referencing a ref:GenRefContainer[container].]
-]
-
-section4:GenRefSubmitLink[Submit link]
-
-Inherits from both ref:GenRefSubmitActivator[submit activator] and ref:GenRefLink[link].
-
-section4:GenRefBackLink[Back link]
-
-Inherits from both ref:GenRefCancelActivator[cancel activator] and ref:GenRefLink[link].
-
-section4:GenRefLayoutOrder[Layout order]
-
-With layout orders you can add relations to panels to define whether they should float beside each other
-or not.
-
-It includes the following properties:
-
-ul[
-    item[e[length] - The length value.]
-    item[e[lengthtype] - The length type (see below). Default is PIXELS.]
-    item[e[type] - The type of layout order (see below). Default is HORIZ_LEFT.]
-]
-
-A layout order may have the following references:
-
-ul[
-    item[e[source] - Reference to source sub container.]
-    item[e[target] - Reference to target sub container.]
-    item[e[viewContext] - Reference to the owning element.]
-]
-
-section4:GenRefLayoutOrderType[Layout order type]
-
-Defines how the panels are connected to each other visually.
-
-Can be one of the following options:
-
-ul[
-    item[HORIZ_LEFT]
-    item[HORIZ_RIGHT]
-    item[VERTICAL]
-]
-
-section4:GenRefLayoutOrderLengthType[Layout order length type]
-
-Specifies the unit which is used for the length definition.
-
-Can be one of the following options:
-
-ul[
-    item[PIXELS]
-    item[PERCENT]
-    item[EM]
-    item[EX]
-    item[CENTIMETER]
-    item[MILLIMETER]
-    item[INCH]
-    item[POINTS]
-    item[PICAS]
-]
-
-section3:GeneratorViewCombinations[Combinations and edge cases]
-
-As there is no view editor available yet this section is empty for now.
-
 
 section2:GeneratorWorkflowLayer[Workflow layer]
 

@@ -33,10 +33,6 @@ Please see link[http://modulestudio.de/en/tutorial/modeling-the-controllers.html
 
 img[images/controller_model.png][Controller model][blockimg][border:1px solid black]
 
-section2:UserInterfaceViewLayer[View editor]
-
-The view editor has not been implemented yet. This section is therefore just a dummy for future.
-
 section2:UserInterfaceWorkflowLayer[Workflow editor]
 
 The workflow editor has not been implemented yet. This section is therefore just a dummy for future.
