@@ -557,7 +557,7 @@ A derived field has the following properties in addition to the common ref:GenRe
 settings: 
 
 ul[
-    item[e[cssClass] - Optional specification of arbitrary css classes.]
+    item[e[cssClass] - Optional specification of arbitrary css classes, used for edit pages.]
     item[e[dbName] - Name of the database column represented by this field. The default value is an
     empty string which means that the field name is used for the column, too. This property is primarily
     interesting for avoiding changes in the database schema when migrating legacy apps.]
@@ -593,7 +593,7 @@ ul[
     item[e[unique] - A boolean specifying whether this field is unique or not. The default value is e[false].
     If set to e[true] then an additional validator cares for enforcing the unique constraint on client
     and server level.]
-    item[e[visible] - Whether this input is visible in edit forms or not.]
+    item[e[visible] - Whether this field is visible in edit forms or not.]
 ]
 
 All fields are implemented as entity class member vars. The following sections will look at the different
