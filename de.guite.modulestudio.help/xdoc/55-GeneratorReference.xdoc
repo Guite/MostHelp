@@ -116,6 +116,10 @@ ul[
     item[e[targetCoreVersion] - The targeted Zikula core version. See ref:GenRefCoreVersion[above].]
     item[e[isSystemModule] - A boolean specifying whether the model describes a system module or not.
     Default value is e[false].]
+    item[e[amountOfExampleRows] - The amount of example rows to create for entities in this application. 
+    Default value is 0. Note that if you activate the e[categorisable] property for an entity the generated 
+    installer relies on that you did not remove the default categories of Zikula. If you deleted them 
+    please set the amount of example rows to 0 to avoid problems.]
     item[e[generateAccountApi] - A boolean specifying whether account panel integration should be generated 
     or not. Default value is e[true].]
     item[e[generateSearchApi] - A boolean specifying whether search integration should be generated or 
@@ -212,10 +216,6 @@ A model container may have the following references:
 ul[
     item[e[application] - Reference to the owning element.]
     item[e[entities] - Allows referencing one or more ref:GenRefEntity[entities].]
-    item[e[numExampleRows] - The amount of example rows to create for entities in this model layer. 
-    Default value is 0. Note that if you activate the e[categorisable] property for an entity the generated 
-    installer relies on that you did not remove the default categories of Zikula. If you deleted them 
-    please set the amount of example rows to 0 to avoid problems.]
     item[e[relations] - Allows referencing one or more ref:GenRefRelationship[relationships].]
     item[e[variables] - Allows referencing one or more ref:GenRefVariables[variables].]
 ]
