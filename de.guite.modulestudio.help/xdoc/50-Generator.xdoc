@@ -84,7 +84,3 @@ ol[
     item[Transformation to add primary and foreign key fields.]
     item[Call generator inner workflow for each selected cartridge.]
 ]
-
-section:GeneratorReference[Generator reference]
-
-The reference chapter can be found ref:GeneratorReference[here].
