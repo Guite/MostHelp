@@ -87,25 +87,6 @@ ul[
     item[Transitions]
 ]
 
-section2:IntroductionViewLayer[View layer]
-
-Each view layer defines a logical group of view templates for the application. This involves the
-following key concepts:
-ul[
-    item[Views]
-    item[Root panels, composite panels, sub panels]
-    item[Forms and tables]
-    item[Activators]
-    item[Layout orders]
-]
-
-At the moment there is no editor ready for customising the view layer. The generator will create default
-template sets which can be customised with overriding mechanisms offered by Zikula.
-
 section2:IntroductionWorkflowLayer[Workflow layer]
 
 The workflow layer is not implemented yet. This section is just a dummy for future.
-
-section:IntroductionNotes[Additional notes]
-
-None yet.

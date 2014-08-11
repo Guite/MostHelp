@@ -166,16 +166,6 @@ table[
     ]
     tr[
         td[Application]
-        td[The application must contain at least one view container.]
-        td[At the moment ModuleStudio requires at least one view.]
-    ]
-    tr[
-        td[Application with view containers]
-        td[Names of view containers must be unique.]
-        td[Unique identification and separation of view layers.]
-    ]
-    tr[
-        td[Application]
         td[The application may contain only one settings container.]
         td[]
     ]
@@ -290,13 +280,6 @@ table[
         which controller functions may process data from which sources.]
     ]
     tr[
-        td[Controller container]
-        td[Every controller container must reference at least one view container.]
-        td[You have to create relationships between controller and view containers. This specifices which
-        controller functions may use which view templates for their output. This rule is currently not
-        active as the view editor is not ready yet.]
-    ]
-    tr[
         td[Application with controller container with controllers]
         td[There must not exist more than one (admin | user | ajax) controller.]
         td[Predefined controllers are unique per application (i.e. there is only one admin area).]
@@ -305,27 +288,6 @@ table[
         td[Application with controller container with controllers]
         td[Names of custom controllers must be unique.]
         td[For example there may not be two controllers which are both named e[edit].]
-    ]
-]
-
-section2[View container]
-
-table[
-    tr[
-        td[Context]
-        td[Check]
-        td[Remarks]
-    ]
-    tr[
-        td[View container]
-        td[The view container must have a name.]
-        td[The view name must have a length of at least three chars. Recommended are at least four
-        chars.]
-    ]
-    tr[
-        td[View container]
-        td[View container must be assigned to an application.]
-        td[Should not occur in practice, this is just for completeness.]
     ]
 ]
 

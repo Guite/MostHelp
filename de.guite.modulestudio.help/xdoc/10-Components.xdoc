@@ -47,7 +47,7 @@ At the moment there is no textual editor included in ModuleStudio. This is going
 
 section2:ComponentsStructural[Structural]
 
-Structural views, for example trees, are another possible viewpoint for describing a model.
+Structural views, for example trees or tables, are another possible viewpoint for describing a model.
 
 At the moment there is no structural editor included in ModuleStudio. This may change
 in future though.
@@ -72,7 +72,3 @@ section2:ComponentsReporting[Reporting]
 
 The e[reporting] cartridge creates some documents from a given model. Please continue ref:OtherCartridgesReporting[here
 for details].
-
-section:ComponentsNotes[Additional notes]
-
-None yet.

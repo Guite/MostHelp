@@ -28,7 +28,3 @@ section2:OtherCartridgesReportingFunctionPoints[Function points]
 This report shows a calculation of (unadjusted) function points (link[http://en.wikipedia.org/wiki/Function_point][wikipedia]).
 These are a measurement for the amount of complexity in a software system. It can be used as an input
 value for other methods like COCOMO II (link[http://en.wikipedia.org/wiki/COCOMO][wikipedia]).
-
-section:OtherCartridgesNotes[Additional notes]
-
-None yet.
