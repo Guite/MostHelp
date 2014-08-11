@@ -245,7 +245,7 @@
 			</p>
 			<p>
 			<ul>
-			  <li><em>controllers</em> - Allows referencing one or more <a href="55-GeneratorReference.php#GenRefControllerContainer.php" title="Go to &quot;Controller container&quot;">controller layers</a>.</li>
+			  <li><em>controllers</em> - Allows referencing one or more <a href="55-GeneratorReference.php#GenRefController.php" title="Go to &quot;Controller&quot;">controllers</a>.</li>
 			  <li><em>generatorSettings</em> - Allows specifying desired generator features and behaviour. More details
 			      in the <a href="55-GeneratorReference.php#GenRefSettingsContainer.php" title="Go to &quot;Settings container&quot;">settings container</a> section.</li>
 			  <li><em>models</em> - Allows referencing one or more <a href="55-GeneratorReference.php#GenRefModelContainer.php" title="Go to &quot;Model container&quot;">model layers</a>.</li>
@@ -431,25 +431,6 @@
 			For each entity as well as for many to many relationships according classes are generated. More details
 			are explained in the <a href="55-GeneratorReference.php#GeneratorModelLayer.php" title="Go to &quot;Model layer&quot;">model layer section</a>. However external data sources are
 			not treated correctly (see <a href="https://github.com/Guite/MostGenerator/issues/5" >#5</a> for more information).
-			</p>
-			<a name="GenRefControllerContainer" ></a>
-			<h3>Controller container</h3>
-			<p>
-			Container class for carrying elements in the controller layer.
-			</p>
-			<p>
-			A controller container may have the following references:
-			</p>
-			<p>
-			<ul>
-			  <li><em>application</em> - Reference to the owning element.</li>
-			  <li><em>controllers</em> - Allows referencing one or more <a href="55-GeneratorReference.php#GenRefController.php" title="Go to &quot;Controller&quot;">controllers</a>.</li>
-			</ul>
-			</p>
-			<p>
-			As all the container elements also the controller container is primarily a composite element containing
-			a sublayer. The generator creates according controller classes, but does not separate different controller
-			containers on code level.
 			</p>
 			<a name="GeneratorApplicationCombinations" ></a>
 			<h2>Combinations and edge cases</h2>
@@ -2248,12 +2229,11 @@
 			<p>
 			<ul>
 			  <li><em>actions</em> - Allows referencing one or more <a href="55-GeneratorReference.php#GenRefAction.php" title="Go to &quot;Action&quot;">actions</a>.</li>
-			  <li><em>container</em> - Reference to the owning element.</li>
+			  <li><em>application</em> - Reference to the owning element.</li>
 			</ul>
 			</p>
 			<p>
-			The generator creates controller classes with methods for each actions. Action handlers are not considered
-			yet.
+			The generator creates controller classes with methods for each actions.
 			</p>
 			<p>
 			If you have added some <a href="55-GeneratorReference.php#GenRefVariables.php" title="Go to &quot;Variables&quot;">variables</a> the admin controller will contain a <em>config</em> method

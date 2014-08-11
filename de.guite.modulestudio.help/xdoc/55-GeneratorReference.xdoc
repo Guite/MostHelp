@@ -69,7 +69,7 @@ ul[
 An application may furthermore have the following references:
 
 ul[
-    item[e[controllers] - Allows referencing one or more ref:GenRefControllerContainer[controller layers].]
+    item[e[controllers] - Allows referencing one or more ref:GenRefController[controllers].]
     item[e[generatorSettings] - Allows specifying desired generator features and behaviour. More details
     in the ref:GenRefSettingsContainer[settings container] section.]
     item[e[models] - Allows referencing one or more ref:GenRefModelContainer[model layers].]
@@ -223,21 +223,6 @@ ul[
 For each entity as well as for many to many relationships according classes are generated. More details
 are explained in the ref:GeneratorModelLayer[model layer section]. However external data sources are
 not treated correctly (see link[https://github.com/Guite/MostGenerator/issues/5][#5] for more information).
-
-section3:GenRefControllerContainer[Controller container]
-
-Container class for carrying elements in the controller layer.
-
-A controller container may have the following references:
-
-ul[
-    item[e[application] - Reference to the owning element.]
-    item[e[controllers] - Allows referencing one or more ref:GenRefController[controllers].]
-]
-
-As all the container elements also the controller container is primarily a composite element containing
-a sublayer. The generator creates according controller classes, but does not separate different controller
-containers on code level.
 
 section2:GeneratorApplicationCombinations[Combinations and edge cases]
 
@@ -1718,11 +1703,10 @@ A controller may have the following references:
 
 ul[
     item[e[actions] - Allows referencing one or more ref:GenRefAction[actions].]
-    item[e[container] - Reference to the owning element.]
+    item[e[application] - Reference to the owning element.]
 ]
 
-The generator creates controller classes with methods for each actions. Action handlers are not considered
-yet.
+The generator creates controller classes with methods for each actions.
 
 If you have added some ref:GenRefVariables[variables] the admin controller will contain a e[config] method
 for managing the modvar settings.

@@ -147,14 +147,9 @@ table[
     ]
     tr[
         td[Application]
-        td[The application must contain at least one controller container.]
+        td[The application must contain at least one controller.]
         td[ModuleStudio requires at least one controller, because otherwise the module wouldn't do anything.
         If you are modeling an extension without any controllers, just create some dummy elements.]
-    ]
-    tr[
-        td[Application with controller containers]
-        td[Names of controller containers must be unique.]
-        td[Unique identification and separation of controllers.]
     ]
     tr[
         td[Application]
@@ -243,37 +238,6 @@ table[
         td[Application with model container with entities]
         td[Exactly one entity must be declared as leading (leading=true).]
         td[More information ref:ValidationEntity[in the Entity section].]
-    ]
-]
-
-section2[Controller container]
-
-table[
-    tr[
-        td[Context]
-        td[Check]
-        td[Remarks]
-    ]
-    tr[
-        td[Controller container]
-        td[The controller container must have a name.]
-        td[The container name must have a length of at least three chars. Recommended are at least four
-        chars.]
-    ]
-    tr[
-        td[Controller container]
-        td[Controller container must be assigned to an application.]
-        td[Should not occur in practice, this is just for completeness.]
-    ]
-    tr[
-        td[Application with controller container with controllers]
-        td[There must not exist more than one (admin | user | ajax) controller.]
-        td[Predefined controllers are unique per application (i.e. there is only one admin area).]
-    ]
-    tr[
-        td[Application with controller container with controllers]
-        td[Names of custom controllers must be unique.]
-        td[For example there may not be two controllers which are both named e[edit].]
     ]
 ]
 
@@ -1512,8 +1476,18 @@ table[
         td[Remarks]
     ]
     tr[
+        td[Application with controllers]
+        td[There must not exist more than one (admin | user | ajax) controller.]
+        td[Predefined controllers are unique per application (i.e. there is only one admin area).]
+    ]
+    tr[
+        td[Application with controllers]
+        td[Names of custom controllers must be unique.]
+        td[For example there may not be two controllers which are both named e[edit].]
+    ]
+    tr[
         td[Controller]
-        td[The controller must be assigned to a controller container.]
+        td[The controller must be assigned to an application.]
         td[Should not occur in practice, this is just for completeness.]
     ]
     tr[
