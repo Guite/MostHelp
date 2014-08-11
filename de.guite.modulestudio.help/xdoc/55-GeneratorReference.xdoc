@@ -211,9 +211,6 @@ A model container may have the following references:
 
 ul[
     item[e[application] - Reference to the owning element.]
-    item[e[defaultDataSource] - Whether this container represents the default data source or not. The
-    default value is e[true] which can only be assigned to one data source which is treated like an internal
-    Zikula storage. Additional containers are processed as external data sources.]
     item[e[entities] - Allows referencing one or more ref:GenRefEntity[entities].]
     item[e[numExampleRows] - The amount of example rows to create for entities in this model layer. 
     Default value is 0. Note that if you activate the e[categorisable] property for an entity the generated 
@@ -236,7 +233,6 @@ A controller container may have the following references:
 ul[
     item[e[application] - Reference to the owning element.]
     item[e[controllers] - Allows referencing one or more ref:GenRefController[controllers].]
-    item[e[modelContext] - Allows referencing one or more ref:GenRefModelContainer[model containers].]
 ]
 
 As all the container elements also the controller container is primarily a composite element containing

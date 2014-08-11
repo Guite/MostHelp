@@ -3,7 +3,7 @@
     <extensionContent id="migrate-top-left" style="css/style.css" name="Migrate Extension" path="migrate/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group">
             <text>To open a model from 0.6.x delete the .mostdiagram file and open your .mostapp file in a text editor.</text>
-            <text>Scroll to the bottom, remove the "viewLayer" section as well as the "processViews" line inside all "controllerContainer" elements.</text>
+            <text>Scroll to the bottom, remove the "viewLayer" section as well as the "modelContext" and "processViews" lines inside all "controllerContainer" elements. Also remove all "defaultDataSource" lines if existing.</text>
             <text>After you saved the file use "File -> Initialize diagram file" inside ModuleStudio.</text>
             <text>Choose your .mostapp file in the wizard and click "next", then "finish".</text>
             <text></text>

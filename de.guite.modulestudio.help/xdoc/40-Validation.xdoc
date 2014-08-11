@@ -146,14 +146,6 @@ table[
         td[Unique identification and separation of data sources.]
     ]
     tr[
-        td[Application with model containers]
-        td[There should be at least one model container refering to the system's internal data source.
-        There must be only one model container refering to the system's internal data source.]
-        td[Each model container has a property marking it as default data source or not. Only one container
-        can set this to true which will then be handled as normal by Zikula. Additional model containers
-        are seen as external data sources instead.]
-    ]
-    tr[
         td[Application]
         td[The application must contain at least one controller container.]
         td[ModuleStudio requires at least one controller, because otherwise the module wouldn't do anything.
@@ -272,12 +264,6 @@ table[
         td[Controller container]
         td[Controller container must be assigned to an application.]
         td[Should not occur in practice, this is just for completeness.]
-    ]
-    tr[
-        td[Controller container]
-        td[Every controller container must rely on at least one model container.]
-        td[You have to create relationships between controller and model containers. This specifices
-        which controller functions may process data from which sources.]
     ]
     tr[
         td[Application with controller container with controllers]
