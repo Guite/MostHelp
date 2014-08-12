@@ -172,7 +172,6 @@
 			<div class="toc">
 			  <ul>
 			    <li><a href="55-GeneratorReference.php#GeneratorApplicationElements.php" >Language elements</a></li>
-			    <li><a href="55-GeneratorReference.php#GeneratorApplicationCombinations.php" >Combinations and edge cases</a></li>
 			  </ul>
 			</div>
 			<a name="GeneratorApplicationElements" ></a>
@@ -227,16 +226,11 @@
 			</p>
 			<p>
 			<ul>
-			  <li><em>applicationType</em> - The kind of application described by the model. See <a href="55-GeneratorReference.php#GenRefApplicationType.php" title="Go to &quot;Application type&quot;">below</a>.</li>
-			  <li><em>targetCoreVersion</em> - The targeted Zikula core version. See <a href="55-GeneratorReference.php#GenRefCoreVersion.php" title="Go to &quot;Core version&quot;">below</a>. Note this setting is obsolete
-			      on application level. Please use the <a href="55-GeneratorReference.php#GenRefSettingsContainer.php" title="Go to &quot;Settings container&quot;">settings container</a> property instead.</li>
 			  <li><em>interactiveInstallation</em> - A boolean specifying whether an interactive installation should
 			      be used or not. The default value is <em>false</em> which lets the generator create a normal installer without
 			      any required user input. If you set it to true it will additionally generate some init templates
 			      as well as a corresponding controller for the interactive installer. <em>Important note:</em> support for
 			      interactive installers is currently disabled as this topic is broken and being overhauled in the Zikula core.</li>
-			  <li><em>modelPath</em> - Physical file path to the application model. This is obsolete and will be removed
-			      in a later version. Please keep it empty.</li>
 			  <li><em>prefix</em> - A prefix for all database tables of this application. Will be used in entity classes.</li>
 			</ul>
 			</p>
@@ -246,10 +240,12 @@
 			<p>
 			<ul>
 			  <li><em>controllers</em> - Allows referencing one or more <a href="55-GeneratorReference.php#GenRefController.php" title="Go to &quot;Controller&quot;">controllers</a>.</li>
+			  <li><em>entities</em> - Allows referencing one or more <a href="55-GeneratorReference.php#GenRefEntity.php" title="Go to &quot;Entity&quot;">entities</a>.</li>
 			  <li><em>generatorSettings</em> - Allows specifying desired generator features and behaviour. More details
 			      in the <a href="55-GeneratorReference.php#GenRefSettingsContainer.php" title="Go to &quot;Settings container&quot;">settings container</a> section.</li>
-			  <li><em>models</em> - Allows referencing one or more <a href="55-GeneratorReference.php#GenRefModelContainer.php" title="Go to &quot;Model container&quot;">model layers</a>.</li>
 			  <li><em>referredApplications</em> - Allows referencing other applications. See <a href="55-GeneratorReference.php#GenRefReferredApplication.php" title="Go to &quot;Referred application&quot;">below</a>.</li>
+			  <li><em>relations</em> - Allows referencing one or more <a href="55-GeneratorReference.php#GenRefRelationship.php" title="Go to &quot;Relationship&quot;">relationships</a>.</li>
+			  <li><em>variables</em> - Allows referencing one or more <a href="55-GeneratorReference.php#GenRefVariables.php" title="Go to &quot;Variables&quot;">variables</a>.</li>
 			</ul>
 			</p>
 			<p>
@@ -410,45 +406,6 @@
 			</p>
 			<p>
 			The generator uses this value in the corresponding module dependency created in the version class.
-			</p>
-			<a name="GenRefModelContainer" ></a>
-			<h3>Model container</h3>
-			<p>
-			Container class for carrying elements in the model layer.
-			</p>
-			<p>
-			A model container may have the following references:
-			</p>
-			<p>
-			<ul>
-			  <li><em>application</em> - Reference to the owning element.</li>
-			  <li><em>entities</em> - Allows referencing one or more <a href="55-GeneratorReference.php#GenRefEntity.php" title="Go to &quot;Entity&quot;">entities</a>.</li>
-			  <li><em>relations</em> - Allows referencing one or more <a href="55-GeneratorReference.php#GenRefRelationship.php" title="Go to &quot;Relationship&quot;">relationships</a>.</li>
-			  <li><em>variables</em> - Allows referencing one or more <a href="55-GeneratorReference.php#GenRefVariables.php" title="Go to &quot;Variables&quot;">variables</a>.</li>
-			</ul>
-			</p>
-			<p>
-			For each entity as well as for many to many relationships according classes are generated. More details
-			are explained in the <a href="55-GeneratorReference.php#GeneratorModelLayer.php" title="Go to &quot;Model layer&quot;">model layer section</a>. However external data sources are
-			not treated correctly (see <a href="https://github.com/Guite/MostGenerator/issues/5" >#5</a> for more information).
-			</p>
-			<a name="GeneratorApplicationCombinations" ></a>
-			<h2>Combinations and edge cases</h2>
-			<p>
-			Multiple containers may not be considered properly in all implementation areas yet. There are some expressions
-			which must be rechecked in order to limit some generation parts to certain container element instances only.
-			So it can happen for example that several data layer artifacts from additional data sources are treated
-			like if they were part of the primary internal one.
-			</p>
-			<p>
-			Therefore it can also be that the relations between your containers are not reflected as you would expect
-			it. To some degree this can also be a result of missing dependencies, like for example missing editor
-			capabilities to design the view areas.
-			</p>
-			<p>
-			So for the moment multiple containers are often treated like if they were one big merged container. With
-			time this will change though, as more and more expressions become more explicite including or rejecting
-			certain model elements more precisely.
 			</p>
 		<a name="GeneratorModelLayer" ></a>
 		<span style="float:left; border-top: 1px dotted #d4d4dd; margin-left: 0; margin-top: 5px;
@@ -629,7 +586,7 @@
 			</p>
 			<p>
 			<ul>
-			  <li><em>container</em> - Reference to the owning element.</li>
+			  <li><em>application</em> - Reference to the owning element.</li>
 			  <li><em>fields</em> - Allows referencing one or more <a href="55-GeneratorReference.php#GenRefEntityField.php" title="Go to &quot;Entity field&quot;">entity fields</a>.</li>
 			  <li><em>incoming</em> - Allows referencing one or more incoming <a href="55-GeneratorReference.php#GenRefRelationship.php" title="Go to &quot;Relationship&quot;">relationships</a>.</li>
 			  <li><em>indexes</em> - Allows referencing one or more <a href="55-GeneratorReference.php#GenRefEntityIndex.php" title="Go to &quot;Entity index&quot;">indexes</a>.</li>
@@ -1659,7 +1616,7 @@
 			</p>
 			<p>
 			<ul>
-			  <li><em>container</em> - Reference to the owning element.</li>
+			  <li><em>application</em> - Reference to the owning element.</li>
 			  <li><em>source</em> - Allows referencing a <a href="55-GeneratorReference.php#GenRefEntity.php" title="Go to &quot;Entity&quot;">target entity</a>.</li>
 			  <li><em>target</em> - Allows referencing a <a href="55-GeneratorReference.php#GenRefEntity.php" title="Go to &quot;Entity&quot;">source entity</a>.</li>
 			</ul>
@@ -2044,7 +2001,7 @@
 			</p>
 			<p>
 			<ul>
-			  <li><em>container</em> - Reference to the owning element.</li>
+			  <li><em>application</em> - Reference to the owning element.</li>
 			  <li><em>vars</em> - Allows referencing one or more <a href="55-GeneratorReference.php#GenRefVariables.php" title="Go to &quot;Variables&quot;">variables</a>.</li>
 			</ul>
 			</p>

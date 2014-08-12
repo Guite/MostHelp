@@ -53,16 +53,11 @@ These basic fields are mainly used by the generator to create a meaningful file 
 An application has some more fields for specifying specific aspects:
 
 ul[
-    item[e[applicationType] - The kind of application described by the model. See ref:GenRefApplicationType[below].]
-    item[e[targetCoreVersion] - The targeted Zikula core version. See ref:GenRefCoreVersion[below]. Note this setting is obsolete
-    on application level. Please use the ref:GenRefSettingsContainer[settings container] property instead.]
     item[e[interactiveInstallation] - A boolean specifying whether an interactive installation should
     be used or not. The default value is e[false] which lets the generator create a normal installer without
     any required user input. If you set it to true it will additionally generate some init templates
     as well as a corresponding controller for the interactive installer. e[Important note:] support for
     interactive installers is currently disabled as this topic is broken and being overhauled in the Zikula core.]
-    item[e[modelPath] - Physical file path to the application model. This is obsolete and will be removed
-    in a later version. Please keep it empty.]
     item[e[prefix] - A prefix for all database tables of this application. Will be used in entity classes.]
 ]
 
@@ -70,10 +65,12 @@ An application may furthermore have the following references:
 
 ul[
     item[e[controllers] - Allows referencing one or more ref:GenRefController[controllers].]
+    item[e[entities] - Allows referencing one or more ref:GenRefEntity[entities].]
     item[e[generatorSettings] - Allows specifying desired generator features and behaviour. More details
     in the ref:GenRefSettingsContainer[settings container] section.]
-    item[e[models] - Allows referencing one or more ref:GenRefModelContainer[model layers].]
     item[e[referredApplications] - Allows referencing other applications. See ref:GenRefReferredApplication[below].]
+    item[e[relations] - Allows referencing one or more ref:GenRefRelationship[relationships].]
+    item[e[variables] - Allows referencing one or more ref:GenRefVariables[variables].]
 ]
 
 img[images/application_properties.png][Application properties][blockimg][border:1px solid black]
@@ -206,39 +203,6 @@ ul[
 ]
 
 The generator uses this value in the corresponding module dependency created in the version class.
-
-section3:GenRefModelContainer[Model container]
-
-Container class for carrying elements in the model layer.
-
-A model container may have the following references:
-
-ul[
-    item[e[application] - Reference to the owning element.]
-    item[e[entities] - Allows referencing one or more ref:GenRefEntity[entities].]
-    item[e[relations] - Allows referencing one or more ref:GenRefRelationship[relationships].]
-    item[e[variables] - Allows referencing one or more ref:GenRefVariables[variables].]
-]
-
-For each entity as well as for many to many relationships according classes are generated. More details
-are explained in the ref:GeneratorModelLayer[model layer section]. However external data sources are
-not treated correctly (see link[https://github.com/Guite/MostGenerator/issues/5][#5] for more information).
-
-section2:GeneratorApplicationCombinations[Combinations and edge cases]
-
-Multiple containers may not be considered properly in all implementation areas yet. There are some expressions
-which must be rechecked in order to limit some generation parts to certain container element instances only.
-So it can happen for example that several data layer artifacts from additional data sources are treated
-like if they were part of the primary internal one.
-
-Therefore it can also be that the relations between your containers are not reflected as you would expect
-it. To some degree this can also be a result of missing dependencies, like for example missing editor
-capabilities to design the view areas.
-
-So for the moment multiple containers are often treated like if they were one big merged container. With
-time this will change though, as more and more expressions become more explicite including or rejecting
-certain model elements more precisely.
-
 
 section:GeneratorModelLayer[Model layer]
 
@@ -392,7 +356,7 @@ that you are doing the same changes again and again please submit them as patche
 An entity may have the following references:
 
 ul[
-    item[e[container] - Reference to the owning element.]
+    item[e[application] - Reference to the owning element.]
     item[e[fields] - Allows referencing one or more ref:GenRefEntityField[entity fields].]
     item[e[incoming] - Allows referencing one or more incoming ref:GenRefRelationship[relationships].]
     item[e[indexes] - Allows referencing one or more ref:GenRefEntityIndex[indexes].]
@@ -1243,7 +1207,7 @@ ul[
 A relationship may have the following references:
 
 ul[
-    item[e[container] - Reference to the owning element.]
+    item[e[application] - Reference to the owning element.]
     item[e[source] - Allows referencing a ref:GenRefEntity[target entity].]
     item[e[target] - Allows referencing a ref:GenRefEntity[source entity].]
 ]
@@ -1563,7 +1527,7 @@ ul[
 A var container may have the following references:
 
 ul[
-    item[e[container] - Reference to the owning element.]
+    item[e[application] - Reference to the owning element.]
     item[e[vars] - Allows referencing one or more ref:GenRefVariables[variables].]
 ]
 

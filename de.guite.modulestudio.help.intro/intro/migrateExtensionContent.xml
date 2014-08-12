@@ -3,6 +3,8 @@
     <extensionContent id="migrate-top-left" style="css/style.css" name="Migrate Extension" path="migrate/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group">
             <text>To open a model from 0.6.x delete the .mostdiagram file and open your .mostapp file in a text editor.</text>
+            <text>Remove the application property "applicationType" if existing.</text>
+            <text>Remove all "modelLayer" and "modelContainer" elements so that the application contains "entities", "variables" and "relations" directly.</text>
             <text>Scroll to the bottom, remove the "viewLayer" section as well as all "defaultDataSource" lines.</text>
             <text>Remove all "controllerLayer" and "controllerContainer" elements so that the application contains "controllers" directly.</text>
             <text>Remove all occurances of the "numExampleRows" property (is now a generator setting named "amountOfExampleRows").</text>

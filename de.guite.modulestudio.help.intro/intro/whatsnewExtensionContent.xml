@@ -2,6 +2,8 @@
 <introContent>
     <extensionContent id="whatsnew-top-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group070">
+            <text>Application property applicationType has been removed.</text>
+            <text>Moved data layer elements into main editor.</text>
             <text>Moved property for amount of example rows into generator settings.</text>
             <text>Moved remaining elements from controller layer into main editor.</text>
             <text>Two new properties allow controlling field visibility and css classes.</text>
