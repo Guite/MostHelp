@@ -2,9 +2,9 @@
 <compositeCheatsheet name="ModuleStudio Cheat Sheet">
    <taskGroup kind="sequence" name="Build software the easy way" skip="false">
       <intro>
-         <description>
+         &lt;description&gt;
             This cheat sheet is a tutorial showing how to create applications with ModuleStudio.
-         </description>
+         &lt;/description&gt;
       </intro>
       <onCompletion>
          Now you have built a complete application by the simple use of model elements. <b>Great, isn&apos;t it?</b>
@@ -16,7 +16,8 @@
          <onCompletion>
             Now that you have a project you can start moving around.
          </onCompletion>
-         <param name="path" value="2_startproject.xml"></param>
+         <param name="path" value="2_startproject.xml">
+         </param>
       </task>
       <task kind="cheatsheet" name="Explore the environment" skip="true">
          <intro>
@@ -25,7 +26,8 @@
          <onCompletion>
             Now that you know the basic elements of ModuleStudio you are ready for building models.
          </onCompletion>
-         <param name="path" value="3_environment.xml"></param>
+         <param name="path" value="3_environment.xml">
+         </param>
       </task>
       <taskGroup kind="sequence" name="Describe application layers models" skip="false">
          <intro>
@@ -41,16 +43,18 @@
             <onCompletion>
                It was shown what must be considered during modeling the application layer.
             </onCompletion>
-            <param name="path" value="4_editorstart.xml"></param>
+            <param name="path" value="4_editorstart.xml">
+            </param>
          </task>
          <task kind="cheatsheet" name="Modeling data layers" skip="false">
             <intro>
                This cheat sheet helps you to create a new model layer within your application.
             </intro>
             <onCompletion>
-               Now the application's data structure has been defined.
+               Now the application&apos;s data structure has been defined.
             </onCompletion>
-            <param name="path" value="5_editormodel.xml"></param>
+            <param name="path" value="5_editormodel.xml">
+            </param>
          </task>
          <task kind="cheatsheet" name="Modeling controller layers" skip="false">
             <intro>
@@ -59,16 +63,8 @@
             <onCompletion>
                Now the controller details have been specified.
             </onCompletion>
-            <param name="path" value="6_editorcontroller.xml"></param>
-         </task>
-         <task kind="cheatsheet" name="Modeling view layers" skip="true">
-            <intro>
-               This cheat sheet helps you to create a new view layer within your application.
-            </intro>
-            <onCompletion>
-               Now the output layer has been described.
-            </onCompletion>
-            <param name="path" value="7_editorview.xml"></param>
+            <param name="path" value="6_editorcontroller.xml">
+            </param>
          </task>
          <task kind="cheatsheet" name="Modeling workflows" skip="true">
             <intro>
@@ -77,7 +73,8 @@
             <onCompletion>
                Now the application model contains individual workflows.
             </onCompletion>
-            <param name="path" value="8_editorworkflow.xml"></param>
+            <param name="path" value="8_editorworkflow.xml">
+            </param>
          </task>
       </taskGroup>
       <task kind="cheatsheet" name="Generating an application" skip="false">
@@ -87,7 +84,8 @@
          <onCompletion>
             This lession has presented validation and shown how to generate code from your model.
          </onCompletion>
-         <param name="path" value="9_generator.xml"></param>
+         <param name="path" value="9_generator.xml">
+         </param>
       </task>
    </taskGroup>
 </compositeCheatsheet>
