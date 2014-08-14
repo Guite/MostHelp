@@ -240,7 +240,7 @@
 			<p>
 			<ul>
 			  <li><em>controllers</em> - Allows referencing one or more <a href="55-GeneratorReference.php#GenRefController.php" title="Go to &quot;Controller&quot;">controllers</a>.</li>
-			  <li><em>entities</em> - Allows referencing one or more <a href="55-GeneratorReference.php#GenRefEntity.php" title="Go to &quot;Entity&quot;">entities</a>.</li>
+			  <li><em>entities</em> - Allows referencing one or more <a href="55-GeneratorReference.php#GenRefDataObject.php" title="Go to &quot;Data object&quot;">data objects</a>.</li>
 			  <li><em>generatorSettings</em> - Allows specifying desired generator features and behaviour. More details
 			      in the <a href="55-GeneratorReference.php#GenRefSettingsContainer.php" title="Go to &quot;Settings container&quot;">settings container</a> section.</li>
 			  <li><em>referredApplications</em> - Allows referencing other applications. See <a href="55-GeneratorReference.php#GenRefReferredApplication.php" title="Go to &quot;Referred application&quot;">below</a>.</li>
@@ -426,16 +426,43 @@
 			</p>
 			<a name="GeneratorModelElements" ></a>
 			<h2>Language elements</h2>
+			<a name="GenRefDataObject" ></a>
+			<h3>Data object</h3>
+			<p>
+			This abstract class collects properties which are shared by <a href="55-GeneratorReference.php#GenRefMappedSuperClass.php" title="Go to &quot;Mapped superclass&quot;">mapped superclasses</a>
+			and <a href="55-GeneratorReference.php#GenRefEntity.php" title="Go to &quot;Entity&quot;">entities</a>.
+			</p>
+			<p>
+			A data object has no properties, but may have the following references:
+			</p>
+			<p>
+			<ul>
+			  <li><em>application</em> - Reference to the owning element.</li>
+			  <li><em>fields</em> - Allows referencing one or more <a href="55-GeneratorReference.php#GenRefEntityField.php" title="Go to &quot;Entity field&quot;">entity fields</a>.</li>
+			  <li><em>incoming</em> - Allows referencing one or more incoming <a href="55-GeneratorReference.php#GenRefRelationship.php" title="Go to &quot;Relationship&quot;">relationships</a>.</li>
+			  <li><em>outgoing</em> - Allows referencing one or more outgoing <a href="55-GeneratorReference.php#GenRefRelationship.php" title="Go to &quot;Relationship&quot;">relationships</a>.</li>
+			</ul>
+			</p>
+			<a name="GenRefMappedSuperClass" ></a>
+			<h3>Mapped superclass</h3>
+			<p>
+			Represents a mapped superclass like described <a href="http://doctrine-orm.readthedocs.org/en/latest/reference/inheritance-mapping.html" >here</a>.
+			</p>
+			<p>
+			A mapped super class has no properties or references in addition to the common <a href="55-GeneratorReference.php#GenRefDataObject.php" title="Go to &quot;Data object&quot;">data object</a>
+			settings.
+			</p>
 			<a name="GenRefEntity" ></a>
 			<h3>Entity</h3>
 			<p>
 			Represents an entity in the data layer which is mapped to a database table.
 			</p>
 			<p>
-			It includes the following properties:
+			It has the following properties:
 			</p>
 			<p>
 			<ul>
+			  <li><em>actions</em> - Allows referencing one or more <a href="55-GeneratorReference.php#GenRefAction.php" title="Go to &quot;Action&quot;">actions</a>.</li>
 			  <li><em>attributable</em> - A boolean specifying whether this entity should have attributes or not. If
 			      set to <em>true</em> the generator creates an additional entity for managing the attributes. During <a href="55-GeneratorReference.php#GenRefEditAction.php" title="Go to &quot;Edit action&quot;">edit</a>
 			      actions it is possible to input values for three predefined attributes. These will also be shown again on
@@ -489,6 +516,12 @@
 			      fields.</li>
 			  <li><em>nameMultiple</em> - Plural form of the name. The generator uses this for collections, list views
 			      and other areas where multiple entities are used.</li>
+			  <li><em>onAccountDeletionCreator</em> - Controls how an app should change the creator when users are deleted.
+			      Only relevant if <em>standardFields</em> is enabled. Default value is <em>ADMIN</em>. The available options are
+			      listed <a href="55-GeneratorReference.php#GenRefAccountDeletionHandler.php" title="Go to &quot;Account deletion handler&quot;">here</a>.</li>
+			  <li><em>onAccountDeletionLastEditor</em> - Controls how an app should change the last editor when users
+			      are deleted. Only relevant if <em>standardFields</em> is enabled. Default value is <em>ADMIN</em>. The available
+			      options are listed <a href="55-GeneratorReference.php#GenRefAccountDeletionHandler.php" title="Go to &quot;Account deletion handler&quot;">here</a>.</li>
 			  <li><em>ownerPermission</em> - Whether users should be able to manage and edit their own data. Defines also
 			      whether the workflow should include a deferred state. See <a href="55-GeneratorReference.php#GenRefEntityWorkflowType.php" title="Go to &quot;Entity workflow type&quot;">workflow types</a> 
 			      for more information. The default value is <em>false</em>.</li>
@@ -513,12 +546,6 @@
 			      information will be included on <a href="55-GeneratorReference.php#GenRefDisplayAction.php" title="Go to &quot;Display action&quot;">display</a> and <a href="55-GeneratorReference.php#GenRefEditAction.php" title="Go to &quot;Edit action&quot;">edit</a> actions.</li>
 			  <li><em>workflow</em> - The workflow which is applied to this entity. See <a href="55-GeneratorReference.php#GenRefEntityWorkflowType.php" title="Go to &quot;Entity workflow type&quot;">workflow
 			      types</a> for more information. The default value is <em>NONE</em>.</li>
-			  <li><em>onAccountDeletionCreator</em> - Controls how an app should change the creator when users are deleted.
-			      Only relevant if <em>standardFields</em> is enabled. Default value is <em>ADMIN</em>. The available options are
-			      listed <a href="55-GeneratorReference.php#GenRefAccountDeletionHandler.php" title="Go to &quot;Account deletion handler&quot;">here</a>.</li>
-			  <li><em>onAccountDeletionLastEditor</em> - Controls how an app should change the last editor when users
-			      are deleted. Only relevant if <em>standardFields</em> is enabled. Default value is <em>ADMIN</em>. The available
-			      options are listed <a href="55-GeneratorReference.php#GenRefAccountDeletionHandler.php" title="Go to &quot;Account deletion handler&quot;">here</a>.</li>
 			</ul>
 			</p>
 			<p>
@@ -574,23 +601,15 @@
 			One exception for this scheme is <a href="55-GeneratorReference.php#GenRefEntityInheritanceStructure.php" >inheritance</a>.
 			</p>
 			<p>
-			Please note that arbitrary <em>filtering is not possible at the moment</em> until FilterUtil has been <a href="https://github.com/zikula/core/issues/118" >upgraded
-			to support Doctrine 2</a>.
-			</p>
-			<p>
 			Whenever you want to change the default implementation you can add corresponding extensions. If you recognise
 			that you are doing the same changes again and again please submit them as patches for the generator.
 			</p>
 			<p>
-			An entity may have the following references:
+			An entity has the following references in addition to the common <a href="55-GeneratorReference.php#GenRefDataObject.php" title="Go to &quot;Data object&quot;">data object</a> settings:
 			</p>
 			<p>
 			<ul>
-			  <li><em>application</em> - Reference to the owning element.</li>
-			  <li><em>fields</em> - Allows referencing one or more <a href="55-GeneratorReference.php#GenRefEntityField.php" title="Go to &quot;Entity field&quot;">entity fields</a>.</li>
-			  <li><em>incoming</em> - Allows referencing one or more incoming <a href="55-GeneratorReference.php#GenRefRelationship.php" title="Go to &quot;Relationship&quot;">relationships</a>.</li>
 			  <li><em>indexes</em> - Allows referencing one or more <a href="55-GeneratorReference.php#GenRefEntityIndex.php" title="Go to &quot;Entity index&quot;">indexes</a>.</li>
-			  <li><em>outgoing</em> - Allows referencing one or more outgoing <a href="55-GeneratorReference.php#GenRefRelationship.php" title="Go to &quot;Relationship&quot;">relationships</a>.</li>
 			</ul>
 			</p>
 			<p>
@@ -624,7 +643,7 @@
 			</p>
 			<p>
 			<ul>
-			  <li><em>entity</em> - Reference to the owning element.</li>
+			  <li><em>entity</em> - Reference to the owning <a href="55-GeneratorReference.php#GenRefDataObject.php" title="Go to &quot;Data object&quot;">data object</a>.</li>
 			</ul>
 			</p>
 			<a name="GenRefDerivedField" ></a>
@@ -1560,7 +1579,7 @@
 			</p>
 			<p>
 			<ul>
-			  <li><em>entity</em> - Reference to the owning element.</li>
+			  <li><em>entity</em> - Reference to the owning <a href="55-GeneratorReference.php#GenRefEntity.php" title="Go to &quot;Entity&quot;">entity</a>.</li>
 			  <li><em>items</em> - Allows referencing one or more <a href="55-GeneratorReference.php#GenRefEntityIndexItem.php" title="Go to &quot;Entity index item&quot;">index items</a>.</li>
 			</ul>
 			</p>
@@ -1617,8 +1636,8 @@
 			<p>
 			<ul>
 			  <li><em>application</em> - Reference to the owning element.</li>
-			  <li><em>source</em> - Allows referencing a <a href="55-GeneratorReference.php#GenRefEntity.php" title="Go to &quot;Entity&quot;">target entity</a>.</li>
-			  <li><em>target</em> - Allows referencing a <a href="55-GeneratorReference.php#GenRefEntity.php" title="Go to &quot;Entity&quot;">source entity</a>.</li>
+			  <li><em>source</em> - Allows referencing a <a href="55-GeneratorReference.php#GenRefDataObject.php" title="Go to &quot;Data object&quot;">target data object</a>.</li>
+			  <li><em>target</em> - Allows referencing a <a href="55-GeneratorReference.php#GenRefDataObject.php" title="Go to &quot;Data object&quot;">source data object</a>.</li>
 			</ul>
 			</p>
 			<a name="GenRefJoinRelationship" ></a>
@@ -2167,7 +2186,8 @@
 			<h3>Controller</h3>
 			<p>
 			A controller represents an area with functions which are called <a href="55-GeneratorReference.php#GenRefAction.php" title="Go to &quot;Action&quot;">actions</a>. In Zikula
-			a controller is identified with the <em>type</em> parameter.
+			a controller is identified with the <em>type</em> parameter. Note that <a href="55-GeneratorReference.php#GenRefEntity.php" title="Go to &quot;Entity&quot;">entities</a> act similarly
+			as they contain actions, too.
 			</p>
 			<p>
 			The following controller types are available:
@@ -2200,14 +2220,15 @@
 			<h3>Action</h3>
 			<p>
 			An action represents a controller function which can be called by the user. In Zikula an action is identified
-			with the <em>func</em> parameter.
+			with the <em>func</em> parameter. An action can either be contained in a controller element or in an entity
+			which corresponds to an entity-related controller.
 			</p>
 			<p>
 			The following action types are available:
 			</p>
 			<p>
 			<ul>
-			  <li>Main action - default function.</li>
+			  <li>Index action - default function.</li>
 			  <li>View action - processes a collection of entities.</li>
 			  <li>Display action - shows a certain entity in detail.</li>
 			  <li>Edit action - an action for editing an entity.</li>
@@ -2220,7 +2241,8 @@
 			</p>
 			<p>
 			<ul>
-			  <li><em>controller</em> - Reference to the owning element.</li>
+			  <li><em>controller</em> - Reference to the owning <a href="55-GeneratorReference.php#GenRefController.php" title="Go to &quot;Controller&quot;">controller</a>.</li>
+			  <li><em>entity</em> - Reference to the owning <a href="55-GeneratorReference.php#GenRefEntity.php" title="Go to &quot;Entity&quot;">entity controller</a>.</li>
 			</ul>
 			</p>
 			<p>
@@ -2231,13 +2253,13 @@
 			It is possible to create special versions for all templates by adding a suffix which will be assigned
 			by the <em>tpl</em> parameter. For example you can call <em>display_myversion.tpl</em> by adding <em>&amp;tpl=myversion</em>
 			to the url. Note this additional override capability is mainly intended for all actions which have a
-			template for each entity and has therefore not been considered for main and custom actions yet.
+			template for each entity and has therefore not been considered for index and custom actions yet.
 			</p>
-			<a name="GenRefMainAction" ></a>
-			<h3>Main action</h3>
+			<a name="GenRefIndexAction" ></a>
+			<h3>Index action</h3>
 			<p>
-			A main action implementation does either do a simple redirect to the view function or (if no view is
-			available) fetch a simple template file.
+			An index action implementation does either do a simple redirect to the view function or (if no view action
+			is available) fetch a simple template file.
 			</p>
 			<a name="GenRefViewAction" ></a>
 			<h3>View action</h3>

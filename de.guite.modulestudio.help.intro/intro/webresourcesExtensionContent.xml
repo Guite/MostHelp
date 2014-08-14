@@ -12,7 +12,7 @@
   	</extensionContent>
     <extensionContent id="webresources-top-right" style="css/style.css" name="Webresources Extension" path="webresources/@">
         <group style-id="content-group" id="webresources-community-zikula" label="Zikula community threads">
-            <contentProvider id="url=http://feeds.zikula.org/community/backforum.xml##welcome_items=30##no_news_url=http://community.zikula.org/##no_news_text=Welcome to the Zikula Community" pluginId="org.eclipse.ui.intro" class="org.eclipse.ui.intro.contentproviders.EclipseRSSViewer">
+            <contentProvider id="url=http://feeds.zikula.org/community/backforum.xml##welcome_items=30##no_news_url=http://zikula.org/##no_news_text=Welcome to the Zikula Community" pluginId="org.eclipse.ui.intro" class="org.eclipse.ui.intro.contentproviders.EclipseRSSViewer">
             </contentProvider>
         </group>
     </extensionContent>

@@ -4,10 +4,13 @@
         <group style-id="content-group" id="deguitemodulestudio-introLink-group">
             <text>To open a model from 0.6.x delete the .mostdiagram file and open your .mostapp file in a text editor.</text>
             <text>Remove the application property "applicationType" if existing.</text>
-            <text>Remove all "modelLayer" and "modelContainer" elements so that the application contains "entities", "variables" and "relations" directly.</text>
-            <text>Scroll to the bottom, remove the "viewLayer" section as well as all "defaultDataSource" lines.</text>
-            <text>Remove all "controllerLayer" and "controllerContainer" elements so that the application contains "controllers" directly.</text>
             <text>Remove all occurances of the "numExampleRows" property (is now a generator setting named "amountOfExampleRows").</text>
+            <text>Remove all "defaultDataSource" lines.</text>
+            <text>Remove all "modelLayer" and "modelContainer" elements so that the application contains "entities", "variables" and "relations" directly.</text>
+            <text>Replace "entity ... mappedSuperClass" by "mappedSuperClass ...".</text>
+            <text>Scroll to the bottom and remove the "viewLayer" section.</text>
+            <text>Remove all "controllerLayer" and "controllerContainer" elements so that the application contains "controllers" directly.</text>
+            <text>View/display/edit/delete actions are not allowed in admin/user/custom controllers anymore. Instead entities must contain actions, too.</text>
             <text>After you saved the file use "File -> Initialize diagram file" inside ModuleStudio 0.7.0.</text>
             <text>Choose your .mostapp file in the wizard and click "next", then "finish".</text>
             <text></text>

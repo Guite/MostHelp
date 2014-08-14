@@ -136,14 +136,9 @@ table[
     ]
     tr[
         td[Application]
-        td[The application must contain at least one model container.]
+        td[The application must contain at least one entity.]
         td[At the moment ModuleStudio wants a model with at least one entity. If you are modeling an
         extension without any data storage, just create some dummy elements.]
-    ]
-    tr[
-        td[Application with model containers]
-        td[Names of model containers must be unique.]
-        td[Unique identification and separation of data sources.]
     ]
     tr[
         td[Application]
@@ -215,7 +210,9 @@ table[
     ]
 ]
 
-section2[Model container]
+section:ValidationModelLayer[Model layer]
+
+section2[Data object]
 
 table[
     tr[
@@ -224,63 +221,49 @@ table[
         td[Remarks]
     ]
     tr[
-        td[Model container]
-        td[The model container must have a name.]
-        td[The container name must have a length of at least three chars. Recommended are at least four
-        chars.]
-    ]
-    tr[
-        td[Model container]
-        td[Model container must be assigned to an application.]
+        td[Data object]
+        td[The data object must be assigned to an application.]
         td[Should not occur in practice, this is just for completeness.]
     ]
     tr[
-        td[Application with model container with entities]
-        td[Exactly one entity must be declared as leading (leading=true).]
-        td[More information ref:ValidationEntity[in the Entity section].]
-    ]
-]
-
-section:ValidationModelLayer[Model layer]
-
-section2[Model container]
-
-table[
-    tr[
-        td[Context]
-        td[Check]
-        td[Remarks]
+        td[Data object]
+        td[Every data object must contain at least one field or inherit fields from a parent object.]
+        td[Ensures that either there are some fields in this entity or an outgoing inheritance relationship.]
     ]
     tr[
-        td[Model container]
-        td[The model container must contain at least one entity.]
-        td[]
+        td[Data object with fields]
+        td[You may not mark a field as primary, this is done automatically - unless maybe you want to
+        create composite primary keys.]
+        td[This warning appears because ModuleStudio adds primary keys automatically and uses the Doctrine
+        2 default settings if nothing else is explitely specified in the model. Beside special use cases
+        like custom join conditions or composite primary keys you won't need to set primary keys manually.]
     ]
     tr[
-        td[Model container with entities]
-        td[Entity names must be unique.]
-        td[For example there may not be two entities which are both named e[person].]
+        td[Data object with fields]
+        td[Remove ID fields... you do not need them ;-) unless maybe you want to create composite primary 
+        keys.]
+        td[This warning appears if a field is named like e[id] or e[personid] or e[person_id] for a 
+        data object named e[person]. In these cases ModuleStudio adds primary keys to this table automatically
+        before generation happens.]
     ]
     tr[
-        td[Model container with entities]
-        td[The amount of entities is getting quite high. Maybe it makes sense to split up the model 
+        td[Application with data objects]
+        td[Data object names must be unique.]
+        td[For example there must not exist two entities which are both named e[person].]
+    ]
+    tr[
+        td[Application with entities]
+        td[The amount of data objects is getting quite high. Maybe it makes sense to split up the model 
         into two single applications.]
-        td[This warning appears if you have more than 14 entities. Remember Zikula is a modular system.
+        td[This warning appears if you have more than 14 data objects. Remember Zikula is a modular system.
         You can design whole families of extensions with ModuleStudio, so please try keeping complexity
         low and apply separation of concerns.]
     ]
     tr[
-        td[Application with model container with entities]
-        td[An entity must not have the same name as the application.]
+        td[Application with data objects]
+        td[A data object must not have the same name as the application.]
         td[This case is reserved as it could make sense to use corresponding namespaces in generation
         for encapsulating some common code parts.]
-    ]
-    tr[
-        td[Model container]
-        td[It is recommended to add two integer variables named e[pageSize] and e[showOnlyOwnEntries] 
-        for controlling the view action's behaviour.]
-        td[Occurs if a model's controllers contain a view action, but no according variables are found 
-        in the (any) model layer.]
     ]
 ]
 
@@ -296,9 +279,9 @@ table[
         td[Remarks]
     ]
     tr[
-        td[Entity]
-        td[The entity must be assigned to a model container.]
-        td[Should not occur in practice, this is just for completeness.]
+        td[Application with with entities]
+        td[Exactly one entity must be declared as leading (leading=true).]
+        td[]
     ]
     tr[
         td[Entity]
@@ -310,28 +293,6 @@ table[
         td[Entity]
         td[Entity (multiple) name must not contain underscores.]
         td[Underscores are not allowed as they are used for class autoloading.]
-    ]
-    tr[
-        td[Entity]
-        td[Every table must contain at least one field or inherit fields from a parent table.]
-        td[Ensures that either there are some fields in this entity or an outgoing inheritance relationship.]
-    ]
-    tr[
-        td[Entity with fields]
-        td[You may not mark a field as primary, this is done automatically - unless maybe you want to
-        create composite primary keys.]
-        td[This warning appears because ModuleStudio adds primary keys automatically and uses the Doctrine
-        2 default settings if nothing else is explitely specified in the model. Beside special use cases
-        like custom join conditions or composite primary keys you won't need to set primary keys manually.]
-    ]
-    tr[
-        td[Entity with fields]
-        td[Remove ID fields... you do not need them ;-) unless maybe you want to create composite primary 
-        keys.]
-        td[This warning appears if a field is named like e[id] or e[personid] or e[person_id] for an 
-        entity named
-        e[person]. In these cases ModuleStudio adds primary keys to this table automatically before
-        the generation.]
     ]
     tr[
         td[Entity with composite primary keys]
@@ -392,17 +353,17 @@ table[
         td[]
     ]
     tr[
-        td[Entity defined as mapped super class]
+        td[Mapped super class]
         td[All associations outgoing from mapped super classes must be unidirectional.]
         td[]
     ]
     tr[
-        td[Entity defined as mapped super class]
+        td[Mapped super class]
         td[One-to-many relations are not possible for mapped super classes.]
         td[]
     ]
     tr[
-        td[Entity defined as mapped super class]
+        td[Mapped super class]
         td[Many-to-many relations are only possible for mapped super classes if it is used only in one
         entity at the same time.]
         td[]
@@ -494,7 +455,7 @@ table[
     ]
     tr[
         td[Entity field]
-        td[Field must be assigned to an entity.]
+        td[Field must be assigned to a data object.]
         td[Should not occur in practice, this is just for completeness.]
     ]
     tr[
@@ -1086,12 +1047,12 @@ table[
     ]
     tr[
         td[Relationship]
-        td[Relation must be assigned to a model container.]
+        td[Relation must be assigned to an application.]
         td[Should not occur in practice, this is just for completeness.]
     ]
     tr[
         td[Relationship]
-        td[Every relation must have a (source | target) entity.]
+        td[Every relation must have a (source | target) data object.]
         td[Should not occur in practice, this is just for completeness.]
     ]
 ]
@@ -1303,7 +1264,7 @@ table[
         setting].]
     ]
     tr[
-        td[Model container with inheritance relationships]
+        td[Application with inheritance relationships]
         td[Inheritance cycles are not allowed.]
         td[Recursive check to detect cycles within inheritance hierarchies.]
     ]
@@ -1319,7 +1280,7 @@ table[
     ]
     tr[
         td[Entity index]
-        td[Index must be assigned to an entity.]
+        td[Index must be assigned to a data object.]
         td[Should not occur in practice, this is just for completeness.]
     ]
     tr[
@@ -1369,17 +1330,23 @@ table[
         td[Remarks]
     ]
     tr[
+        td[Application]
+        td[It is recommended to add two integer variables named e[pageSize] and e[showOnlyOwnEntries] 
+        for controlling the view action's behaviour.]
+        td[Occurs if a model contains a view action, but no according variables are found.]
+    ]
+    tr[
         td[Variable container]
         td[Every var container must have a name.]
         td[]
     ]
     tr[
-        td[Model container with variable containers]
+        td[Application with variable containers]
         td[Var container names must be unique.]
         td[]
     ]
     tr[
-        td[Model container with variable containers]
+        td[Application with variable containers]
         td[Var container sort positions must be unique.]
         td[]
     ]
@@ -1390,7 +1357,7 @@ table[
     ]
     tr[
         td[Variable container]
-        td[Var container must be assigned to a model container.]
+        td[Var container must be assigned to an application.]
         td[Should not occur in practice, this is just for completeness.]
     ]
     tr[
@@ -1433,40 +1400,6 @@ table[
 
 section:ValidationControllerLayer[Controller layer]
 
-section2[Controller container]
-
-table[
-    tr[
-        td[Context]
-        td[Check]
-        td[Remarks]
-    ]
-    tr[
-        td[Controller container]
-        td[The controller container must contain at least one controller.]
-        td[]
-    ]
-    tr[
-        td[Controller container with controllers]
-        td[You must have an admin controller for hook subscriber functionality.]
-        td[Since Zikula 1.3 it is highly recommended to have an admin area as there is an additional
-        page for defining hook assignments for different areas.]
-    ]
-    tr[
-        td[Controller container with controllers]
-        td[Controller names must be unique.]
-        td[For example there may not be two controllers which are both named e[admin].]
-    ]
-    tr[
-        td[Controller container]
-        td[Please create an ajax controller including an arbitrary action, like main, because it is 
-        required for processing your model properly.]
-        td[This happens if your model layer contains relationships or an entity with either user fields
-        or tree extension. As the generator creates additonal ajax methods in these cases it requires
-        an ajax controller for keeping this information also in the model for documentation.]
-    ]
-]
-
 section2[Controller]
 
 table[
@@ -1474,6 +1407,25 @@ table[
         td[Context]
         td[Check]
         td[Remarks]
+    ]
+    tr[
+        td[Application with controllers]
+        td[You must have an admin controller for hook subscriber functionality.]
+        td[Since Zikula 1.3 it is highly recommended to have an admin area as there is an additional
+        page for defining hook assignments for different areas.]
+    ]
+    tr[
+        td[Application with controllers]
+        td[Controller names must be unique.]
+        td[For example there may not be two controllers which are both named e[admin].]
+    ]
+    tr[
+        td[Application]
+        td[Please create an ajax controller including an arbitrary action, like index, because it is 
+        required for processing your model properly.]
+        td[This happens if your model contains relationships or an entity with either user fields
+        or tree extension. As the generator creates additonal ajax methods in these cases it requires
+        an ajax controller for keeping this information also in the model for documentation.]
     ]
     tr[
         td[Application with controllers]
@@ -1506,26 +1458,36 @@ table[
         td[These are reserved names and may therefore not be used for custom controllers.]
     ]
     tr[
-        td[Controller]
+        td[Controller / Entity]
         td[Every controller must contain at least one action.]
         td[]
     ]
     tr[
         td[Controller with actions]
-        td[There must not exist more than one (main | view | display | edit | delete) action in one 
+        td[There must not exist any (view | display | edit | delete) action in a (admin | user | custom)
         controller.]
+        td[They are allowed for entities and ajax controllers though.]
+    ]
+    tr[
+        td[Controller / Entity with actions]
+        td[There must not exist more than one index action in one controller.]
         td[]
     ]
     tr[
-        td[Controller with actions]
+        td[Entity controller with actions]
+        td[There must not exist more than one (index | view | display | edit | delete) action in one 
+        entity.]
+        td[]
+    ]
+    tr[
+        td[Controller / Entity with actions]
         td[Names of custom states in one controller must be unique.]
         td[]
     ]
     tr[
-        td[Controller with actions]
+        td[Ajax controller with actions]
         td[This controller may not contain a delete action. Please remove it.]
-        td[Appears for special controllers, like ajax. Those are reserved for special purposes and not
-        intended to be called by the user as normal controllers.]
+        td[The delete action is not implemented (yet) for ajax controllers.]
     ]
 ]
 
@@ -1539,7 +1501,7 @@ table[
     ]
     tr[
         td[Action]
-        td[The action must be assigned to a controller.]
+        td[The action must be assigned to a controller or to an entity.]
         td[Should not occur in practice, this is just for completeness.]
     ]
     tr[
@@ -1550,7 +1512,7 @@ table[
     ]
     tr[
         td[Custom action]
-        td[Action name must not be Main, View, Display, Edit or Delete.]
+        td[Action name must not be Index, View, Display, Edit or Delete.]
         td[These are reserved names and may therefore not be used for custom actions.]
     ]
 ]

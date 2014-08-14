@@ -2,6 +2,8 @@
 <introContent>
     <extensionContent id="whatsnew-top-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group070">
+            <text>Entities contain controller actions now, like any other controller elements. Therewith you can control for each entity which use cases apply.</text>
+            <text>Replaced entity property mappedSuperClass by a dedicated language element.</text>
             <text>Application property applicationType has been removed.</text>
             <text>Moved data layer elements into main editor.</text>
             <text>Moved property for amount of example rows into generator settings.</text>
