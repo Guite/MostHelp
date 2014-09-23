@@ -2,6 +2,7 @@
 <introContent>
     <extensionContent id="whatsnew-top-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group070">
+            <text>A new generator setting allows control over whether the ModuleStudio version should be part of the top docblock for all generated files or only for the Version class (#627).</text>
             <text>For the generated templates YAML example files with example overrides are pregenerated for easy copy n paste (#460).</text>
             <text>Entities contain controller actions now, like any other controller elements. Therewith you can control for each entity which use cases apply.</text>
             <text>Replaced entity property mappedSuperClass by a dedicated language element.</text>
