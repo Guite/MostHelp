@@ -13,6 +13,7 @@
             <text>Two new properties allow controlling field visibility and css classes.</text>
             <text>Removed action handlers, action events and transitions from controller layer.</text>
             <text>Removed dsl properties for view layer, event listeners and transform objects.</text>
+            <text>Updated to Eclipse 4.4.1 (Luna SR1).</text>
         </group>
         <group style-id="content-group" id="deguitemodulestudio-introLink-group062">
             <text>User avatars are displayed at appropriate places (#607).</text>
