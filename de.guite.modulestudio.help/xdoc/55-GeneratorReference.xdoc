@@ -98,8 +98,8 @@ Can be one of the following options:
 
 ul[
     item[e[ZKPRE14] - Aims on Zikula 1.4.0 and later. This is the default value and useful when developing for future.]
-    item[e[ZK136] - For Zikula 1.3.8 and earlier. This is for backwards compatibility and useful when maintaining extensions in production.]
-    item[e[ZK135] - For Zikula 1.3.8 and earlier. This is for backwards compatibility and useful when maintaining extensions in production.]
+    item[e[ZK136] - For Zikula 1.3.9 and earlier. This is for backwards compatibility and useful when maintaining extensions in production.]
+    item[e[ZK135] - For Zikula 1.3.9 and earlier. This is for backwards compatibility and useful when maintaining extensions in production.]
 ]
 
 section3:GenRefSettingsContainer[Settings container]
@@ -355,7 +355,7 @@ code[PHP][
     }
 ]
 
-Example for Zikula 1.3.8 and below:
+Example for Zikula 1.3.9 and below:
 
 code[PHP][
     class MyModule_Entity_Validator_Base_Person
@@ -1491,7 +1491,7 @@ code[PHP][
     }
 ]
 
-Example for Zikula 1.3.8 and below:
+Example for Zikula 1.3.9 and below:
 
 code[PHP][
     class MyModule_Entity_Validator_Base_Person
