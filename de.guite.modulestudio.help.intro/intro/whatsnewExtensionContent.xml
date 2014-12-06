@@ -2,8 +2,12 @@
 <introContent>
     <extensionContent id="whatsnew-top-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group070">
+            <text>Das in Zikula 1.4 neu hinzugekommene postInstall-Event wird unterstützt.</text>
+            <text>Der primäre Name der Variablen für Suchbegriffe wurde auf "q" geändert zwecks besserer Integration mit Analytics-Software.</text>
             <text>A new generator setting allows control over whether the ModuleStudio version should be part of the top docblock for all generated files or only for the Version class (#627).</text>
             <text>For the generated templates YAML example files with example overrides are pregenerated for easy copy n paste (#460).</text>
+            <text>In 1.4 applications RouteUrl and UrlInterface are now used instead of the ModUrl class.</text>
+            <text>The maxLength property of text fields are now reflected in the generated form field properly.</text>
             <text>Entities contain controller actions now, like any other controller elements. Therewith you can control for each entity which use cases apply.</text>
             <text>Replaced entity property mappedSuperClass by a dedicated language element.</text>
             <text>Application property applicationType has been removed.</text>
@@ -14,6 +18,7 @@
             <text>Removed action handlers, action events and transitions from controller layer.</text>
             <text>Removed dsl properties for view layer, event listeners and transform objects.</text>
             <text>Updated to Eclipse 4.4.1 (Luna SR1).</text>
+            <text>Many minor bugfixes in the generator.</text>
         </group>
         <group style-id="content-group" id="deguitemodulestudio-introLink-group062">
             <text>User avatars are displayed at appropriate places (#607).</text>
