@@ -3,3 +3,5 @@ bin
 /website
 /contents
 /images
+*.java._trace
+*.xtendbin
