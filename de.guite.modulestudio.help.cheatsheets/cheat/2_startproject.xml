@@ -9,7 +9,7 @@
       <description>
          Start up the wizard in the main menu at <b>File &gt; New... &gt; Application Diagram...</b>. You can also use the following link.
       </description>
-      <command serialization="org.eclipse.ui.newWizard(newWizardId=de.guite.modulestudio.gmf.main.part.ModulestudioCreationWizardID)" confirm="false">
+      <command serialization="org.eclipse.ui.newWizard(newWizardId=de.guite.modulestudio.app.part.ModulestudioCreationWizardID)" confirm="false">
       </command>
    </item>
    <item title="Define model file name" dialog="true" skip="true">

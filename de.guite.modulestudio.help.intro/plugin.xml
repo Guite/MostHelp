@@ -6,7 +6,7 @@
       <!-- bind the universal intro implementation to our product id --> 
       <introProductBinding
             introId="org.eclipse.ui.intro.universal"
-            productId="de.guite.modulestudio.branding.most">
+            productId="de.guite.modulestudio.branding.mostproduct">
       </introProductBinding>
 <!--
       <intro
