@@ -22,8 +22,8 @@
             Start the generator in the main menu by <b>File &gt; Generate application</b>. Or use the following link.
          </description>
          <action
-             class="de.guite.modulestudio.gmf.main.application.DiagramEditActionBarAdvisor.GenerateAction"
-             pluginId="de.guite.modulestudio.gmf.main" confirm="true">
+             class="de.guite.modulestudio.ui.actions.GenerateAction"
+             pluginId="de.guite.modulestudio.ui" confirm="true">
          </action>
       </subItem>
    </item>
