@@ -12,7 +12,7 @@
 				id="org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction">
 			</action>
 		</actionSet>
-	</extension> 
+	</extension>
 	<!-- enable cheat sheets -->
     <extension
           point="org.eclipse.ui.cheatsheets.cheatSheetContent">
