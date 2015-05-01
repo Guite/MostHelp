@@ -5,18 +5,40 @@
     <extension point="org.eclipse.help.toc">
        <toc file="contents/toc.xml" primary="true" />
     </extension>
+
     <!-- enable help index -->
     <extension point="org.eclipse.help.index">
        <index file="index.xml" />
     </extension>
+
     <!-- enable search functionality -->
 <!--
     <extension point="org.eclipse.help.base.luceneSearchParticipants">
         <binding participantId="org.eclipse.help.base.xhtml" />
     </extension>
 -->
-    <!-- enable dynamic xhtml services -->
+
+    <!-- enable dynamic xhtml services OBSOLETE - ->
     <extension point="org.eclipse.help.contentProducer">
         <binding producerId="org.eclipse.help.dynamic" />
     </extension>
+    -->
+
+   <!-- UI contributions -->
+   <extension point="org.eclipse.ui.menus">
+      <!-- add keyword index to help menu -->
+      <menuContribution locationURI="menu:help?after=helpSearch">
+         <command commandId="org.eclipse.help.ui.indexcommand"
+             mnemonic="%help.index.mnemonic"
+             style="push"/>
+      </menuContribution>
+   </extension>
+
+   <!-- Key bindings -->
+   <extension point="org.eclipse.ui.bindings">
+      <!-- bind F1 key to help -->
+      <key sequence="F1"
+         commandId="org.eclipse.ui.help.displayHelp"
+         schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+   </extension>
 </plugin>
