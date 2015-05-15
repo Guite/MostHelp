@@ -53,6 +53,9 @@ These basic fields are mainly used by the generator to create a meaningful file 
 An application has some more fields for specifying specific aspects:
 
 ul[
+    item[e[capabilities] - A comma-separated list of capability names the application offers. Note the
+    generator uses these just for specifying them in the generated module's version class. There is no
+    further support for the capabilities you want to provide yet.]
     item[e[interactiveInstallation] - A boolean specifying whether an interactive installation should
     be used or not. The default value is e[false] which lets the generator create a normal installer without
     any required user input. If you set it to true it will additionally generate some init templates

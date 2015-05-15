@@ -2,6 +2,7 @@
 <introContent>
     <extensionContent id="whatsnew-top-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group070">
+            <text>Applications can now define capabilities they provide.</text>
             <text>New implementation for the main program, overhauled UI contributions.</text>
             <text>New powerful editors (for details see documentation).</text>
             <text>Basic preferences for avoiding repeated work.</text>
