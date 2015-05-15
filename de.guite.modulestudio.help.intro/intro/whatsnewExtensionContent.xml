@@ -2,9 +2,13 @@
 <introContent>
     <extensionContent id="whatsnew-top-left" style="css/style.css" name="Whats New Extension" path="whatsnew/@">
         <group style-id="content-group" id="deguitemodulestudio-introLink-group070">
-            <text>Der Generator stellt nun Beschreibungen für Feldnamen mit Ziffern lesbarer dar.</text>
-            <text>Das in Zikula 1.4 neu hinzugekommene postInstall-Event wird unterstützt.</text>
-            <text>Der primäre Name der Variablen für Suchbegriffe wurde auf "q" geändert zwecks besserer Integration mit Analytics-Software.</text>
+            <text>New implementation for the main program, overhauled UI contributions.</text>
+            <text>New powerful editors (for details see documentation).</text>
+            <text>Basic preferences for avoiding repeated work.</text>
+            <text>The DSL uses a new formatter for the model format.</text>
+            <text>The Generator displays descriptions for field names containing numbers more readable.</text>
+            <text>The postInstall event newly introduced in Zikula 1.4 is supported.</text>
+            <text>The primary variable name for search terms has been changed to "q" for improved integration with analytics software.</text>
             <text>A new generator setting allows control over whether the ModuleStudio version should be part of the top docblock for all generated files or only for the Version class (#627).</text>
             <text>For the generated templates YAML example files with example overrides are pregenerated for easy copy n paste (#460).</text>
             <text>In 1.4 applications RouteUrl and UrlInterface are now used instead of the ModUrl class.</text>
@@ -18,7 +22,7 @@
             <text>Two new properties allow controlling field visibility and css classes.</text>
             <text>Removed action handlers, action events and transitions from controller layer.</text>
             <text>Removed dsl properties for view layer, event listeners and transform objects.</text>
-            <text>Updated to Eclipse 4.4.1 (Luna SR1).</text>
+            <text>Updated to Eclipse 4.4.2 (Luna SR2).</text>
             <text>Many minor bugfixes in the generator.</text>
         </group>
         <group style-id="content-group" id="deguitemodulestudio-introLink-group062">
