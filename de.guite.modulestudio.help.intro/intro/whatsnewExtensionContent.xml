@@ -7,6 +7,7 @@
             <text>New powerful editors (for details see documentation).</text>
             <text>Basic preferences for avoiding repeated work.</text>
             <text>The DSL uses a new formatter for the model format.</text>
+            <text>The relation attributes orderBy and orderByReverse are checked for valid fields.</text>
             <text>The Generator displays descriptions for field names containing numbers more readable.</text>
             <text>The postInstall event newly introduced in Zikula 1.4 is supported.</text>
             <text>The primary variable name for search terms has been changed to "q" for improved integration with analytics software.</text>

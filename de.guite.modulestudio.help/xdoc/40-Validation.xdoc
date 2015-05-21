@@ -1188,6 +1188,11 @@ table[
     ]
     tr[
         td[One to many relationship]
+        td[The orderBy attribute points to an invalid field of the target entity.]
+        td[Checks whether the target entity contains a field equally named like the e[orderBy] property.]
+    ]
+    tr[
+        td[One to many relationship]
         td[The indexBy attribute points to an invalid field of the target entity.]
         td[Checks whether the target entity contains a field equally named like the e[indexBy] property.]
     ]
@@ -1195,6 +1200,19 @@ table[
         td[One to many relationship]
         td[IndexBy fields must be unique.]
         td[The target entity field used for e[indexBy] must have e[unique] validator enabled.]
+    ]
+    tr[
+        td[One to many relationship]
+        td[Enforcing a certain amount of items on the target side requires setting both e[minTarget] and
+        e[maxTarget] properties.]
+        td[Occurs if you set either e[minTarget] or e[maxTarget] to a value greater than e[0], but not
+        both.]
+    ]
+    tr[
+        td[One to many relationship]
+        td[The maximum amount of enforced items on the target side must not be smaller than the minimum
+        amount of enforced items.]
+        td[Occurs if you set e[maxTarget] to a smaller value than e[minTarget].]
     ]
 ]
 
@@ -1205,6 +1223,12 @@ table[
         td[Context]
         td[Check]
         td[Remarks]
+    ]
+    tr[
+        td[Many to many relationship]
+        td[The orderBy attribute points to an invalid field of the (source | target) entity.]
+        td[Checks whether the (source | target) entity contains a field equally named like the e[orderBy
+        | orderByReverse] property.]
     ]
     tr[
         td[Many to many relationship]
@@ -1233,6 +1257,32 @@ table[
         td[The refClass attribute must not be equal to any entity name.]
         td[The generator creates additional entity classes so unique naming is ensured to prevent naming
         collisions.]
+    ]
+    tr[
+        td[Many to many relationship]
+        td[Enforcing a certain amount of items on the source side requires setting both e[minSource] and
+        e[maxSource] properties.]
+        td[Occurs if you set either e[minSource] or e[maxSource] to a value greater than e[0], but not
+        both.]
+    ]
+    tr[
+        td[Many to many relationship]
+        td[The maximum amount of enforced items on the source side must not be smaller than the minimum
+        amount of enforced items.]
+        td[Occurs if you set e[maxSource] to a smaller value than e[minSource].]
+    ]
+    tr[
+        td[Many to many relationship]
+        td[Enforcing a certain amount of items on the target side requires setting both e[minTarget] and
+        e[maxTarget] properties.]
+        td[Occurs if you set either e[minTarget] or e[maxTarget] to a value greater than e[0], but not
+        both.]
+    ]
+    tr[
+        td[Many to many relationship]
+        td[The maximum amount of enforced items on the target side must not be smaller than the minimum
+        amount of enforced items.]
+        td[Occurs if you set e[maxTarget] to a smaller value than e[minTarget].]
     ]
 ]
 
