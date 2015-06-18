@@ -965,10 +965,9 @@ Represents a field type for storing time values with the format e[H:i:s].
 A time field has no fields or references in addition to the common ref:GenRefAbstractDateField[abstract
 date field] settings.
 
-The generator will treat time values as text input elements with a maximum length in ref:GenRefEditAction[edit]
-pages as long as there is link[https://github.com/Guite/MostGenerator/issues/87][no time field plugin] implemented).
-For the output in ref:GenRefViewAction[view] and ref:GenRefDisplayAction[display] templates the e[datetime]
-modifier is used to format the time according to the current locale.
+The generator creates a dedicated time form plugin for ref:GenRefEditAction[edit] pages. For the output
+in ref:GenRefViewAction[view] and ref:GenRefDisplayAction[display] templates the e[datetime] modifier
+is used to format the time according to the current locale.
 
 section3:GenRefEntityIdentifierStrategy[Entity identifier strategy]
 

@@ -8,7 +8,8 @@
             <text>Basic preferences for avoiding repeated work.</text>
             <text>The DSL uses a new formatter for the model format.</text>
             <text>The relation attributes orderBy and orderByReverse are checked for valid fields.</text>
-            <text>The Generator displays descriptions for field names containing numbers more readable.</text>
+            <text>The generator displays descriptions for field names containing numbers more readable.</text>
+            <text>Editing time fields is not supported by a dedicated form plugin. Also for date fields there is a new selector.</text>
             <text>The postInstall event newly introduced in Zikula 1.4 is supported.</text>
             <text>The primary variable name for search terms has been changed to "q" for improved integration with analytics software.</text>
             <text>A new generator setting allows control over whether the ModuleStudio version should be part of the top docblock for all generated files or only for the Version class (#627).</text>
