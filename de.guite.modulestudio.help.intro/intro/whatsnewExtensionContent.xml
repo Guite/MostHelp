@@ -8,6 +8,7 @@
             <text>Basic preferences allow central setting of commonly required data (like vendor, author, etc.) for avoiding repeated work.</text>
             <text>The DSL uses a new formatter for the model format.</text>
             <text>The relation attributes orderBy and orderByReverse are checked for valid fields.</text>
+            <text>Constraints for min and max items can be used independently from each other for array fields and multi-values relations (like it is possible for multiple list fields, too).</text>
             <text>The generator displays descriptions for field names containing numbers more readable.</text>
             <text>1.4 applications use webshims polyfill for forms to provide better support for HTML5 validation in old browsers (#673).</text>
             <text>Editing time fields is now supported by a dedicated form plugin. Also for date fields there is a new selector (#87).</text>

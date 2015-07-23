@@ -876,10 +876,9 @@ settings:
 
 ul[
     item[e[arrayType] - Which ref:GenRefArrayType[array type] is used.]
-    item[e[min] - Minimum amount of items enforced to be present. The default value is e[0] which means
-    that no certain amount is enforced. Must be used together with e[max].]
+    item[e[min] - Minimum amount of items enforced to be present. The default value is e[0].]
     item[e[max] - Maximum amount of items enforced to be present. The default value is e[0] which means
-    that no certain amount is enforced. Must be used together with e[min].]
+    that no certain amount is enforced.]
 ]
 
 The generator will exclude arrays in ref:GenRefEditAction[edit] pages as well as for the output in ref:GenRefViewAction[view]
@@ -1309,9 +1308,9 @@ ul[
     item[e[orderBy] - Set to target field name to specify the sorting criteria for the outgoing relation.]
     item[e[orphanRemoval] - Default value is e[false]. If set to e[true] orphans get removed automatically.]
     item[e[minTarget] - Minimum amount of items enforced to be present on the target side. The default
-    value is e[0] which means that no certain amount is enforced. Must be used together with e[maxTarget].]
+    value is e[0].]
     item[e[maxTarget] - Maximum amount of items enforced to be present on the target side. The default
-    value is e[0] which means that no certain amount is enforced. Must be used together with e[minTarget].]
+    value is e[0] which means that no certain amount is enforced.]
 ]
 
 section3:GenRefManyToOneRelationship[Many to one relationship]
@@ -1342,13 +1341,13 @@ ul[
     item[e[refClass] - Specifies the reference class created for the linking table (for example e[personAddress]).
     The generator creates additional classes for this reference-managing entity.]
     item[e[minSource] - Minimum amount of items enforced to be present on the source side. The default
-    value is e[0] which means that no certain amount is enforced. Must be used together with e[maxSource].]
+    value is e[0].]
     item[e[maxSource] - Maximum amount of items enforced to be present on the source side. The default
-    value is e[0] which means that no certain amount is enforced. Must be used together with e[minSource].]
+    value is e[0] which means that no certain amount is enforced.]
     item[e[minTarget] - Minimum amount of items enforced to be present on the target side. The default
-    value is e[0] which means that no certain amount is enforced. Must be used together with e[maxTarget].]
+    value is e[0].]
     item[e[maxTarget] - Maximum amount of items enforced to be present on the target side. The default
-    value is e[0] which means that no certain amount is enforced. Must be used together with e[minTarget].]
+    value is e[0] which means that no certain amount is enforced.]
 ]
 
 section3:GenRefCascadeType[Cascade type]
