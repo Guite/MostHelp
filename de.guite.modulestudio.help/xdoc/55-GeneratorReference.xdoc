@@ -78,21 +78,6 @@ ul[
 
 img[images/application_properties.png][Application properties][blockimg][border:1px solid black]
 
-section3:GenRefApplicationType[Application type]
-
-The kind of application described by the model.
-
-Can be one of the following options:
-
-ul[
-    item[e[WEB] - Web applications. This is the default value.]
-    item[e[NATIVE] - Native applications.]
-    item[e[EMBEDDED] - Embedded applications.]
-]
-
-At the moment this value is completely ignored by the generator. You should nevertheless keep it set
-to e[WEB] to be on the safe side for future.
-
 section3:GenRefCoreVersion[Core version]
 
 Zikula version for which the application should be generated.
