@@ -29,7 +29,7 @@
             <text>Two new properties allow controlling field visibility and css classes.</text>
             <text>Removed action handlers, action events and transitions from controller layer.</text>
             <text>Removed dsl properties for view layer, event listeners and transform objects.</text>
-            <text>Updated to Eclipse 4.5.0 (Mars).</text>
+            <text>Updated to Eclipse 4.5.1 (Mars SR 1).</text>
             <text>Many minor bugfixes in the generator.</text>
         </group>
         <group style-id="content-group" id="deguitemodulestudio-introLink-group062">
