@@ -345,7 +345,7 @@ code[PHP][
     }
 ]
 
-Example for Zikula 1.3.9 and below:
+Example for Zikula 1.3.10 and below:
 
 code[PHP][
     class MyModule_Entity_Validator_Base_Person
@@ -1479,7 +1479,7 @@ code[PHP][
     }
 ]
 
-Example for Zikula 1.3.9 and below:
+Example for Zikula 1.3.10 and below:
 
 code[PHP][
     class MyModule_Entity_Validator_Base_Person
