@@ -325,7 +325,7 @@ Normally all created classes are generated twice. Thereby an empty concrete clas
 base class containing the whole generator code. The motivation behind this separation is that your own
 code keeps free from generated artifacts.
 
-Example for Zikula 1.4.0:
+Example for Zikula 1.4.x:
 
 code[PHP][
     namespace MyModule\Entity\Validator\Base;
@@ -1117,7 +1117,7 @@ ol[
     field being designated as end date.]
     item[Trashed - content has been marked as deleted, but is still persisted in the database. Only
     available if the entity has set the e[softDeleteable] property to e[true]. Note that the soft deleteable
-    implementation is not done yet as this requires the 1.4.0 core of Zikula.]
+    implementation is not done yet as this requires the 1.4.x core of Zikula.]
     item[Deleted - pseudo-state for content which has been deleted from the database.]
 ]
 
@@ -1454,7 +1454,7 @@ from corresponding abstract base classes. As soon as an entity does inherit from
 be no base class created for it. Instead the concrete implementation class will inherit from the concrete
 class of the parent entity.
 
-Example for Zikula 1.4.0:
+Example for Zikula 1.4.x:
 
 code[PHP][
     namespace MyModule\Entity\Validator\Base;
