@@ -29,6 +29,7 @@
       <!-- add keyword index to help menu -->
       <menuContribution locationURI="menu:help?after=helpSearch">
          <command commandId="org.eclipse.help.ui.indexcommand"
+             icon="icons/light/24/games-config-tiles.svg"
              mnemonic="%help.index.mnemonic"
              style="push"/>
       </menuContribution>
