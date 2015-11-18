@@ -299,6 +299,9 @@ ul[
     for more information. The default value is e[false].]
     item[e[readOnly] - A boolean specifying whether this entity is read only or not. If set to e[true] 
     editing will not be possible.]
+    item[e[skipHookSubscribers] - Whether hook subscriber support should be skipped for this entity. The default
+    value is e[false]. If you set this option to e[true] no support for display and filter hooks is generated
+    for the corresponding entity.]
     item[e[slugLength] - Length of slug field. Defaults to 255. An entity is sluggable as soon as at
     least one of its fields set e[sluggable position] to a value greater than 0.]
     item[e[slugSeparator] - Separator which will separate words in slug. Default value is e[-] like in

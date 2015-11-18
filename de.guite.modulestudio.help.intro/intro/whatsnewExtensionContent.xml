@@ -9,6 +9,7 @@
             <text>New powerful editors (for details see documentation).</text>
             <text>Basic preferences allow central setting of commonly required data (like vendor, author, etc.) for avoiding repeated work.</text>
             <text>The DSL uses a new formatter for the model format.</text>
+            <text>With the skipHookSubscribers property you can take influence on whether an entity should support display and filter hooks or not. In some cases it can make sense to disable that for improving performance.</text>
             <text>The relation attributes orderBy and orderByReverse are checked for valid fields.</text>
             <text>Constraints for min and max items can be used independently from each other for array fields and multi-values relations (like it is possible for multiple list fields, too).</text>
             <text>The generator displays descriptions for field names containing numbers more readable.</text>
