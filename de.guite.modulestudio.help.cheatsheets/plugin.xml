@@ -9,7 +9,7 @@
 			<action label="%cheatsheet.CHEAT_SHEETS_MENU"
 				class="org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction"
 				menubarPath="help/group.tutorials"
-				icon="icons/light/24/edit-guides.svg"
+				icon="icons/light/24/edit-guides.png"
 				id="org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction">
 			</action>
 		</actionSet>
