@@ -9,12 +9,13 @@
             <text>New powerful editors (for details see documentation).</text>
             <text>Basic preferences allow central setting of commonly required data (like vendor, author, etc.) for avoiding repeated work.</text>
             <text>The DSL uses a new formatter for the model format.</text>
-            <text>With the skipHookSubscribers property you can take influence on whether an entity should support display and filter hooks or not. In some cases it can make sense to disable that for improving performance.</text>
+            <text>With the skipHookSubscribers property you can take influence on whether an entity should support display and filter hooks or not. In some cases it can make sense to disable that for improving performance (#702).</text>
             <text>The relation attributes orderBy and orderByReverse are checked for valid fields.</text>
             <text>Constraints for min and max items can be used independently from each other for array fields and multi-values relations (like it is possible for multiple list fields, too).</text>
             <text>The generator displays descriptions for field names containing numbers more readable.</text>
             <text>1.4 applications use webshims polyfill for forms to provide better support for HTML5 validation in old browsers (#673).</text>
             <text>Editing time fields is now supported by a dedicated form plugin. Also for date fields there is a new selector (#87).</text>
+            <text>In 1.4 applications annotations are used to distinguish between admin and user areas in entity controllers (#633).</text>
             <text>The postInstall event newly introduced in Zikula 1.4 is supported.</text>
             <text>The primary variable name for search terms has been changed to "q" for improved integration with analytics software.</text>
             <text>A new generator setting allows control over whether the ModuleStudio version should be part of the top docblock for all generated files or only for the Version class (#627).</text>
