@@ -24,17 +24,6 @@
     </extension>
     -->
 
-   <!-- UI contributions -->
-   <extension point="org.eclipse.ui.menus">
-      <!-- add keyword index to help menu -->
-      <menuContribution locationURI="menu:help?after=helpSearch">
-         <command commandId="org.eclipse.help.ui.indexcommand"
-             id="de.guite.modulestudio.ui.commands.keywordIndex"
-             mnemonic="%help.index.mnemonic"
-             style="push"/>
-      </menuContribution>
-   </extension>
-
    <!-- Key bindings -->
    <extension point="org.eclipse.ui.bindings">
       <!-- bind F1 key to help -->
