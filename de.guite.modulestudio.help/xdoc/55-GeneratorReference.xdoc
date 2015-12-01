@@ -214,8 +214,6 @@ A data object has no properties, but may have the following references:
 ul[
     item[e[application] - Reference to the owning element.]
     item[e[fields] - Allows referencing one or more ref:GenRefEntityField[entity fields].]
-    item[e[incoming] - Allows referencing one or more incoming ref:GenRefRelationship[relationships].]
-    item[e[outgoing] - Allows referencing one or more outgoing ref:GenRefRelationship[relationships].]
 ]
 
 

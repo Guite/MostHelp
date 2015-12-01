@@ -338,21 +338,6 @@ table[
         td[]
     ]
     tr[
-        td[Entity]
-        td[All inheritance connections within a class hierarchy must have the same inheritance strategy.]
-        td[]
-    ]
-    tr[
-        td[Entity]
-        td[All inheritance connections within a class hierarchy must have the same discriminator column.]
-        td[]
-    ]
-    tr[
-        td[Entity]
-        td[An entity can not inherit from multiple entities.]
-        td[]
-    ]
-    tr[
         td[Mapped super class]
         td[All associations outgoing from mapped super classes must be unidirectional.]
         td[]
@@ -1317,6 +1302,21 @@ table[
         td[Application with inheritance relationships]
         td[Inheritance cycles are not allowed.]
         td[Recursive check to detect cycles within inheritance hierarchies.]
+    ]
+    tr[
+        td[Inheritance relationship]
+        td[All inheritance connections within a class hierarchy must have the same inheritance strategy.]
+        td[]
+    ]
+    tr[
+        td[Inheritance relationship]
+        td[All inheritance connections within a class hierarchy must have the same discriminator column.]
+        td[]
+    ]
+    tr[
+        td[Inheritance relationship]
+        td[An entity can not inherit from multiple entities.]
+        td[]
     ]
 ]
 
