@@ -1223,6 +1223,10 @@
 			      is <em>CHANGE</em>. Can also be workflowState or the name of a relation (property.field).</li>
 			  <li><em>timestampableChangeTriggerValue</em> - Optional value of field to use as change trigger (if type
 			      is <em>CHANGE</em>.</li>
+			  <li><em>validatorAddition</em> - Additional validation constraint without the <em>Asset</em> annotation. Example
+			      values are <em>LessThanOrEqual(&quot;+15 minutes&quot;)</em> or <em>LessThan(&quot;-18 years UTC&quot;)</em> or <em>Range(min = &quot;first
+			      day of January&quot;, max = &quot;first day of January next year&quot;)</em>. For more details information see <a href="http://symfony.com/blog/new-in-symfony-2-6-date-support-for-validator-constraints" >this
+			      blog post</a>. Used for Zikula 1.4+ only.</li>
 			</ul>
 			</p>
 			<p>

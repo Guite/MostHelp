@@ -897,6 +897,10 @@ ul[
     is e[CHANGE]. Can also be workflowState or the name of a relation (property.field).]
     item[e[timestampableChangeTriggerValue] - Optional value of field to use as change trigger (if type
     is e[CHANGE].]
+    item[e[validatorAddition] - Additional validation constraint without the e[Asset] annotation. Example
+    values are e[LessThanOrEqual("+15 minutes")] or e[LessThan("-18 years UTC")] or e[Range(min = "first
+    day of January", max = "first day of January next year")]. For more details information see link[http://symfony.com/blog/new-in-symfony-2-6-date-support-for-validator-constraints][this
+    blog post]. Used for Zikula 1.4+ only.]
 ]
 
 The e[past] and e[future] properties are implemented as client-side and server-side validators. 
