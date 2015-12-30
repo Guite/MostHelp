@@ -595,16 +595,16 @@ ul[
     to e[true] a country selector is used in ref:GenRefEditAction[edit] pages. For the output in ref:GenRefViewAction[view]
     and ref:GenRefDisplayAction[display] templates an output modifier is used to display the full country
     name instead of the unreadable country code.]
-    item[e[creditCard] - A boolean specify whether this field represents a credit card number or not.
+    item[e[creditCard] - A boolean to specify whether this field represents a credit card number or not.
     Only applicable for the 1.4 target core version.]
-    item[e[currency] - A boolean specify whether this field represents a 3-letter ISO 4217 currency name
+    item[e[currency] - A boolean to specify whether this field represents a 3-letter ISO 4217 currency name
     or not. Possible example values are e[USD] or e[EUR]. Only applicable for the 1.4 target core version.
     In forms it will be rendered as a text input, until Symfony Forms (which is offering a dedicated
     field type) is used for the 1.4 target.]
     item[e[htmlcolour] - A boolean specifying whether this field represents a html color code (like #003399)
     or not. If set to e[true] a colour picker is used in ref:GenRefEditAction[edit] pages for convenient
     selection of colour codes.]
-    item[e[iban] - A boolean specify whether this field represents a bank account number in IBAN (International
+    item[e[iban] - A boolean to specify whether this field represents a bank account number in IBAN (International
     Bank Account Number) format. Only applicable for the 1.4 target core version.]
     item[e[isbn] - Allows to define whether this field represents a number in ISBN (International Standard
     Book Number). You can choose corresponding ref:GenRefStringIsbnStyle[validation options].
@@ -620,7 +620,7 @@ ul[
     templates the e[getlanguagename] modifier is used to display the full name instead of the unreadable
     language code.]
     item[e[length] - The length of this field. Default value is 255.]
-    item[e[locale] - A boolean specify whether this field represents a locale or not. Possible example
+    item[e[locale] - A boolean to specify whether this field represents a locale or not. Possible example
     values are e[fr] or e[fr_FR]. In forms it will be rendered as a language selector, until Symfony
     Forms (which is offering different field types) is used for the 1.4 target.]
     item[e[password] - A boolean specifying whether this field represents a password or not. If set to
@@ -724,9 +724,9 @@ An email field has the following properties in addition to the common ref:GenRef
 string field] settings:
 
 ul[
-    item[e[checkMX] - A boolean specify whether the MX record's validity of the given email's host is
+    item[e[checkMX] - A boolean to specify whether the MX record's validity of the given email's host is
     checked or not. Only supported for the 1.4.x target core version.]
-    item[e[checkHost] - A boolean specify whether the MX or A or AAAA record's validity of given email's
+    item[e[checkHost] - A boolean to specify whether the MX or A or AAAA record's validity of given email's
     host is checked or not. Only supported for the 1.4.x target core version.]
     item[e[length] - The length of this field. Default value is 255.]
 ]
@@ -743,6 +743,8 @@ An url field has the following properties in addition to the common ref:GenRefAb
 string field] settings:
 
 ul[
+    item[e[checkDNS] - A boolean to specify whether to check if the associated host exists or not. Only
+    supported for the 1.4.x target core version.]
     item[e[length] - The length of this field. Default value is 255.]
 ]
 

@@ -864,16 +864,16 @@
 			      to <em>true</em> a country selector is used in <a href="55-GeneratorReference.php#GenRefEditAction.php" title="Go to &quot;Edit action&quot;">edit</a> pages. For the output in <a href="55-GeneratorReference.php#GenRefViewAction.php" title="Go to &quot;View action&quot;">view</a>
 			      and <a href="55-GeneratorReference.php#GenRefDisplayAction.php" title="Go to &quot;Display action&quot;">display</a> templates an output modifier is used to display the full country
 			      name instead of the unreadable country code.</li>
-			  <li><em>creditCard</em> - A boolean specify whether this field represents a credit card number or not.
+			  <li><em>creditCard</em> - A boolean to specify whether this field represents a credit card number or not.
 			      Only applicable for the 1.4 target core version.</li>
-			  <li><em>currency</em> - A boolean specify whether this field represents a 3-letter ISO 4217 currency name
+			  <li><em>currency</em> - A boolean to specify whether this field represents a 3-letter ISO 4217 currency name
 			      or not. Possible example values are <em>USD</em> or <em>EUR</em>. Only applicable for the 1.4 target core version.
 			      In forms it will be rendered as a text input, until Symfony Forms (which is offering a dedicated
 			      field type) is used for the 1.4 target.</li>
 			  <li><em>htmlcolour</em> - A boolean specifying whether this field represents a html color code (like #003399)
 			      or not. If set to <em>true</em> a colour picker is used in <a href="55-GeneratorReference.php#GenRefEditAction.php" title="Go to &quot;Edit action&quot;">edit</a> pages for convenient
 			      selection of colour codes.</li>
-			  <li><em>iban</em> - A boolean specify whether this field represents a bank account number in IBAN (International
+			  <li><em>iban</em> - A boolean to specify whether this field represents a bank account number in IBAN (International
 			      Bank Account Number) format. Only applicable for the 1.4 target core version.</li>
 			  <li><em>isbn</em> - Allows to define whether this field represents a number in ISBN (International Standard
 			      Book Number). You can choose corresponding <a href="55-GeneratorReference.php#GenRefStringIsbnStyle.php" title="Go to &quot;ISBN style&quot;">validation options</a>.
@@ -889,7 +889,7 @@
 			      templates the <em>getlanguagename</em> modifier is used to display the full name instead of the unreadable
 			      language code.</li>
 			  <li><em>length</em> - The length of this field. Default value is 255.</li>
-			  <li><em>locale</em> - A boolean specify whether this field represents a locale or not. Possible example
+			  <li><em>locale</em> - A boolean to specify whether this field represents a locale or not. Possible example
 			      values are <em>fr</em> or <em>fr_FR</em>. In forms it will be rendered as a language selector, until Symfony
 			      Forms (which is offering different field types) is used for the 1.4 target.</li>
 			  <li><em>password</em> - A boolean specifying whether this field represents a password or not. If set to
@@ -1014,9 +1014,9 @@
 			</p>
 			<p>
 			<ul>
-			  <li><em>checkMX</em> - A boolean specify whether the MX record's validity of the given email's host is
+			  <li><em>checkMX</em> - A boolean to specify whether the MX record's validity of the given email's host is
 			      checked or not. Only supported for the 1.4.x target core version.</li>
-			  <li><em>checkHost</em> - A boolean specify whether the MX or A or AAAA record's validity of given email's
+			  <li><em>checkHost</em> - A boolean to specify whether the MX or A or AAAA record's validity of given email's
 			      host is checked or not. Only supported for the 1.4.x target core version.</li>
 			  <li><em>length</em> - The length of this field. Default value is 255.</li>
 			</ul>
@@ -1037,6 +1037,8 @@
 			</p>
 			<p>
 			<ul>
+			  <li><em>checkDNS</em> - A boolean to specify whether to check if the associated host exists or not. Only
+			      supported for the 1.4.x target core version.</li>
 			  <li><em>length</em> - The length of this field. Default value is 255.</li>
 			</ul>
 			</p>

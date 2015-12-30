@@ -12,6 +12,7 @@
             <text>The DSL uses a new formatter for the model format.</text>
             <text>With the skipHookSubscribers property you can take influence on whether an entity should support display and filter hooks or not. In some cases it can make sense to disable that for improving performance (#702).</text>
             <text>Added string property for additional date validators (#640).</text>
+            <text>Url fields have a new checkDNS property to check whether the associated host exists (#674).</text>
             <text>The relation attributes orderBy and orderByReverse are checked for valid fields.</text>
             <text>Constraints for min and max items can be used independently from each other for array fields and multi-values relations (like it is possible for multiple list fields, too).</text>
             <text>The generator displays descriptions for field names containing numbers more readable.</text>
