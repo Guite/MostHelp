@@ -18,6 +18,7 @@
             <text>The generator displays descriptions for field names containing numbers more readable.</text>
             <text>1.4 applications use webshims polyfill for forms to provide better support for HTML5 validation in old browsers (#673).</text>
             <text>Editing time fields is now supported by a dedicated form plugin. Also for date fields there is a new selector (#87).</text>
+            <text>Text variables have a new multiline property to separate single-lined text fields and text areas (#722).</text>
             <text>In 1.4 applications annotations are used to distinguish between admin and user areas in entity controllers (#633).</text>
             <text>The postInstall event newly introduced in Zikula 1.4 is supported.</text>
             <text>The primary variable name for search terms has been changed to "q" for improved integration with analytics software.</text>
