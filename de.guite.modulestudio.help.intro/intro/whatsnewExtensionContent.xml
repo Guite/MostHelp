@@ -4,17 +4,17 @@
         <group style-id="content-group" id="deguitemodulestudio-introLink-group070">
             <text>The ModuleStudio UI is now more slim and limits itself to the relevant control elements.</text>
             <text>There are two different designs available: light and dark.</text>
-            <text>There are new editors: ein primärer graphischer Diagrammeditor und zwei tabellarische Editoren für Entitäten und Variablen.</text>
+            <text>There are new editors: a primary graphical diagram editor and two tabular editors for entities and variables.</text>
             <text>All editors are automatically synchronised with each other, so that changes are immediately reflected everywhere.</text>
             <text>The graphical editor has no sub editors anymore, but works with different layers which can be displayed and hidden.</text>
             <text>Available views: dashboard (quick links), error log, model outline, properties, current problems.</text>
             <text>Double-clicking an error or warning in the problem view selects the affected element in the diagram.</text>
             <text>A dedicated preference page allows storing ModuleStudio-specific basic settings.</text>
-            <text>The wizard for creating new models uses the basic settings and therewith saves repeated input of recurring data.</text>
-            <text>During opening a model it is automatically validated.</text>
-            <text>During saving a model it is automatically validated and the model file is consistently and readable formatted.</text>
+            <text>The wizard for creating new models uses the basic settings avoiding repeated input of recurring data.</text>
+            <text>When opening a model it is automatically validated.</text>
+            <text>When saving a model it is automatically validated and the model file is formatted for readability.</text>
             <text>Using the context menu of a problem in the problem view you can call and execute quick fixes.</text>
-            <text>During creating relationships the source and target descriptions are automatically preset to the fitting singular and plural names of corresponding entities.</text>
+            <text>When creating relationships the source and target descriptions are automatically preset to the appropriate singular or plural names of corresponding entities.</text>
             <text>Applications can now define capabilities they provide (#667).</text>
             <text>Twig is used instead of Smarty for 1.4 (#571).</text>
             <text>With 1.4 the LinkContainer service is used now instead of user-/admin apis for header links.</text>
