@@ -155,7 +155,8 @@ ul[
     contain the ModuleStudio version in all files or only in the Version class. Default value is e[true].]
     item[e[generatePoweredByBacklinksIntoFooterTemplates] - A boolean specifying whether generated footer 
     templates should contain backlinks to the ModuleStudio homepage. Default value is e[true].]
-    item[e[generateTests] - A boolean specifying whether test cases should be generated or not. Default value is e[true].]
+    item[e[generateTests] - A boolean specifying whether test cases should be generated or not. Default
+    value is e[true]. At the moment only some stubs are created though (see generator issue #6) on GitHub.]
     item[e[writeModelToDocs] - A boolean specifying whether the model files are written into the module's
     docs folder or into a separate folder outside the module. Default value is e[false].]
 ]
