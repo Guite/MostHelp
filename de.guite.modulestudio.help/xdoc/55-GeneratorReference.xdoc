@@ -819,8 +819,8 @@ ul[
     The default value is e[0].]
     item[e[max] - Maximum amount of values enforced to be selected (only if e[multiple] is set to e[true]).
     The default value is e[0].]
-    item[e[useChecks] - A boolean to enable a checkbox list (only if e[multiple] is set to e[true]). The
-    default value is e[false].]
+    item[e[useChecks] - A boolean to enable radio buttons (for single-valued lists) or checkboxes (for
+    multi-valued lists) instead of a select field. The default value is e[false].]
 ]
 
 A list field may have the following references:
