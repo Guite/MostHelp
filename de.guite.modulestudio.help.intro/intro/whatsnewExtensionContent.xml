@@ -17,6 +17,9 @@
             <text>When creating relationships the source and target descriptions are automatically preset to the appropriate singular or plural names of corresponding entities.</text>
             <text>Applications can now define capabilities they provide (#667).</text>
             <text>Twig is used instead of Smarty for 1.4 (#571).</text>
+            <text>String fields can be marked as timezone (analogous to currency, country, language, locale, colour, ip address, iban number, etc.).</text>
+            <text>Integer, decimal and float fields can be marked as procentual.</text>
+            <text>Integer fields with minimum and maximum can be marked as range.</text>
             <text>With 1.4 the LinkContainer service is used now instead of user-/admin apis for header links.</text>
             <text>1.4 applications utilise capabilities for exposing categories usage.</text>
             <text>New implementation for the main program, overhauled UI contributions.</text>

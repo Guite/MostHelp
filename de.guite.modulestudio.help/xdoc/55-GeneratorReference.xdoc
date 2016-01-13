@@ -507,6 +507,9 @@ ul[
     constraint on client and server side.]
     item[e[minValue] - Minimal value. If set to a value other than 0 then a validator will enforce this
     constraint on client and server side.]
+    item[e[percentual] - A boolean specifying whether this field represents a percentual value or not.]
+    item[e[range] - A boolean specifying whether this field represents a range or not. In edit forms
+    a range field is represented as a slider.]
     item[a[GenRefIntegerFieldVersion]e[version] - A boolean specifying whether this field should act as a version. If set to e[true]
     the owning entity will need to use ref:GenRefEntityLockType[optimistic locking]. There is no user
     interface for version management generated yet.]
@@ -533,6 +536,7 @@ ul[
     constraint on client and server side.]
     item[e[minValue] - Minimal value. If set to a value other than 0 then a validator will enforce this
     constraint on client and server side.]
+    item[e[percentual] - A boolean specifying whether this field represents a percentual value or not.]
     item[e[scale] - The amount of digits after the dot. Default value is 2.]
 ]
 
@@ -557,6 +561,7 @@ ul[
     constraint on client and server side.]
     item[e[minValue] - Minimal value. If set to a value other than 0 then a validator will enforce this
     constraint on client and server side.]
+    item[e[percentual] - A boolean specifying whether this field represents a percentual value or not.]
 ]
 
 In ref:GenRefEditAction[edit] pages the generator will use float input elements as well as validation
@@ -600,8 +605,7 @@ ul[
     Only applicable for the 1.4 target core version.]
     item[e[currency] - A boolean to specify whether this field represents a 3-letter ISO 4217 currency name
     or not. Possible example values are e[USD] or e[EUR]. Only applicable for the 1.4 target core version.
-    In forms it will be rendered as a text input, until Symfony Forms (which is offering a dedicated
-    field type) is used for the 1.4 target.]
+    In forms it will be rendered as a country selector.]
     item[e[htmlcolour] - A boolean specifying whether this field represents a html color code (like #003399)
     or not. If set to e[true] a colour picker is used in ref:GenRefEditAction[edit] pages for convenient
     selection of colour codes.]
@@ -627,6 +631,8 @@ ul[
     item[e[password] - A boolean specifying whether this field represents a password or not. If set to
     e[true] a password input element will be used instead of a normal one in ref:GenRefEditAction[edit]
     pages.]
+    item[e[timezone] - A boolean specifying whether this field represents a time zone or not. Only applicable
+    for the 1.4 target core version. In forms it will be rendered as a time zone selector.]
     item[e[uuid] - A boolean specifying whether this field represents an UUID (Universally Unique Identifier)
     or not.]
 ]

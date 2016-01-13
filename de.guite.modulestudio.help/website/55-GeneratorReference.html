@@ -760,6 +760,9 @@
 			      constraint on client and server side.</li>
 			  <li><em>minValue</em> - Minimal value. If set to a value other than 0 then a validator will enforce this
 			      constraint on client and server side.</li>
+			  <li><em>percentual</em> - A boolean specifying whether this field represents a percentual value or not.</li>
+			  <li><em>range</em> - A boolean specifying whether this field represents a range or not. In edit forms
+			      a range field is represented as a slider.</li>
 			  <li><em>version</em> - A boolean specifying whether this field should act as a version. If set to <em>true</em>
 			      the owning entity will need to use <a href="55-GeneratorReference.php#GenRefEntityLockType.php" title="Go to &quot;Entity lock type&quot;">optimistic locking</a>. There is no user
 			      interface for version management generated yet.</li>
@@ -790,6 +793,7 @@
 			      constraint on client and server side.</li>
 			  <li><em>minValue</em> - Minimal value. If set to a value other than 0 then a validator will enforce this
 			      constraint on client and server side.</li>
+			  <li><em>percentual</em> - A boolean specifying whether this field represents a percentual value or not.</li>
 			  <li><em>scale</em> - The amount of digits after the dot. Default value is 2.</li>
 			</ul>
 			</p>
@@ -818,6 +822,7 @@
 			      constraint on client and server side.</li>
 			  <li><em>minValue</em> - Minimal value. If set to a value other than 0 then a validator will enforce this
 			      constraint on client and server side.</li>
+			  <li><em>percentual</em> - A boolean specifying whether this field represents a percentual value or not.</li>
 			</ul>
 			</p>
 			<p>
@@ -869,8 +874,7 @@
 			      Only applicable for the 1.4 target core version.</li>
 			  <li><em>currency</em> - A boolean to specify whether this field represents a 3-letter ISO 4217 currency name
 			      or not. Possible example values are <em>USD</em> or <em>EUR</em>. Only applicable for the 1.4 target core version.
-			      In forms it will be rendered as a text input, until Symfony Forms (which is offering a dedicated
-			      field type) is used for the 1.4 target.</li>
+			      In forms it will be rendered as a country selector.</li>
 			  <li><em>htmlcolour</em> - A boolean specifying whether this field represents a html color code (like #003399)
 			      or not. If set to <em>true</em> a colour picker is used in <a href="55-GeneratorReference.php#GenRefEditAction.php" title="Go to &quot;Edit action&quot;">edit</a> pages for convenient
 			      selection of colour codes.</li>
@@ -896,6 +900,8 @@
 			  <li><em>password</em> - A boolean specifying whether this field represents a password or not. If set to
 			      <em>true</em> a password input element will be used instead of a normal one in <a href="55-GeneratorReference.php#GenRefEditAction.php" title="Go to &quot;Edit action&quot;">edit</a>
 			      pages.</li>
+			  <li><em>timezone</em> - A boolean specifying whether this field represents a time zone or not. Only applicable
+			      for the 1.4 target core version. In forms it will be rendered as a time zone selector.</li>
 			  <li><em>uuid</em> - A boolean specifying whether this field represents an UUID (Universally Unique Identifier)
 			      or not.</li>
 			</ul>
