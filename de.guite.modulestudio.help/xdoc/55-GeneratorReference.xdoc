@@ -626,8 +626,7 @@ ul[
     language code.]
     item[e[length] - The length of this field. Default value is 255.]
     item[e[locale] - A boolean to specify whether this field represents a locale or not. Possible example
-    values are e[fr] or e[fr_FR]. In forms it will be rendered as a language selector, until Symfony
-    Forms (which is offering different field types) is used for the 1.4 target.]
+    values are e[fr] or e[fr_FR]. In forms it will be rendered as a locale selector.]
     item[e[password] - A boolean specifying whether this field represents a password or not. If set to
     e[true] a password input element will be used instead of a normal one in ref:GenRefEditAction[edit]
     pages.]
