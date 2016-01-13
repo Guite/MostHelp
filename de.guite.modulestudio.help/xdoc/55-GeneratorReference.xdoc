@@ -613,10 +613,10 @@ ul[
     Bank Account Number) format. Only applicable for the 1.4 target core version.]
     item[e[isbn] - Allows to define whether this field represents a number in ISBN (International Standard
     Book Number). You can choose corresponding ref:GenRefStringIsbnStyle[validation options].
-    covered ref:GenRefIpAddressScope[ip address scope]. Only applicable for the 1.4 target core version.]
+    Only applicable for the 1.4 target core version.]
     item[e[issn] - Allows to define whether this field represents a number in ISSN (International Standard
     Serial Number). You can choose corresponding ref:GenRefStringIssnStyle[validation options].
-    covered ref:GenRefIpAddressScope[ip address scope]. Only applicable for the 1.4 target core version.]
+    Only applicable for the 1.4 target core version.]
     item[e[ipAddress] - Allows to define whether this field represents an IP address. You can choose the
     covered ref:GenRefIpAddressScope[ip address scope]. Only applicable for the 1.4 target core version.]
     item[e[language] - A boolean specifying whether this field represents an Unicode language identifier
