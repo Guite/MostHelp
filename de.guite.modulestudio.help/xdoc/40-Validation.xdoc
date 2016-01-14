@@ -747,7 +747,7 @@ table[
     ]
     tr[
         td[Integer field]
-        td[An integer field must not act as percentual and range at the same time.]
+        td[An integer field must not act as percentage and range at the same time.]
         td[]
     ]
     tr[
@@ -789,7 +789,7 @@ table[
     ]
     tr[
         td[Decimal field]
-        td[A decimal field must not act as percentual and currency at the same time.]
+        td[A decimal field must not act as percentage and currency at the same time.]
         td[]
     ]
     tr[
@@ -804,7 +804,7 @@ table[
     ]
     tr[
         td[Float field]
-        td[A float field must not act as percentual and currency at the same time.]
+        td[A float field must not act as percentage and currency at the same time.]
         td[]
     ]
 ]

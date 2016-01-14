@@ -507,7 +507,7 @@ ul[
     constraint on client and server side.]
     item[e[minValue] - Minimal value. If set to a value other than 0 then a validator will enforce this
     constraint on client and server side.]
-    item[e[percentual] - A boolean specifying whether this field represents a percentual value or not.]
+    item[e[percentage] - A boolean specifying whether this field represents a percentage value or not.]
     item[e[range] - A boolean specifying whether this field represents a range or not. In edit forms
     a range field is represented as a slider.]
     item[a[GenRefIntegerFieldVersion]e[version] - A boolean specifying whether this field should act as a version. If set to e[true]
@@ -536,7 +536,7 @@ ul[
     constraint on client and server side.]
     item[e[minValue] - Minimal value. If set to a value other than 0 then a validator will enforce this
     constraint on client and server side.]
-    item[e[percentual] - A boolean specifying whether this field represents a percentual value or not.]
+    item[e[percentage] - A boolean specifying whether this field represents a percentage value or not.]
     item[e[scale] - The amount of digits after the dot. Default value is 2.]
 ]
 
@@ -561,7 +561,7 @@ ul[
     constraint on client and server side.]
     item[e[minValue] - Minimal value. If set to a value other than 0 then a validator will enforce this
     constraint on client and server side.]
-    item[e[percentual] - A boolean specifying whether this field represents a percentual value or not.]
+    item[e[percentage] - A boolean specifying whether this field represents a percentage value or not.]
 ]
 
 In ref:GenRefEditAction[edit] pages the generator will use float input elements as well as validation
