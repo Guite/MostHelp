@@ -271,7 +271,6 @@ section2:ValidationEntity[Entity]
 
 section3[General entity settings]
 
-
 table[
     tr[
         td[Context]
@@ -748,6 +747,11 @@ table[
     ]
     tr[
         td[Integer field]
+        td[An integer field must not act as percentual and range at the same time.]
+        td[]
+    ]
+    tr[
+        td[Integer field]
         td[Entities with an aggregate field should use a locking strategy (optimistic or pessimistic 
         read).]
         td[If an integer field acts as aggregate field the corresponding entity must use one locking 
@@ -784,6 +788,11 @@ table[
         td[]
     ]
     tr[
+        td[Decimal field]
+        td[A decimal field must not act as percentual and currency at the same time.]
+        td[]
+    ]
+    tr[
         td[Float field]
         td[The default value for a float field must be a floating point number.]
         td[]
@@ -791,6 +800,11 @@ table[
     tr[
         td[Float field]
         td[Minimum value must not be larger than maximum value.]
+        td[]
+    ]
+    tr[
+        td[Float field]
+        td[A float field must not act as percentual and currency at the same time.]
         td[]
     ]
 ]
@@ -830,6 +844,11 @@ table[
     ]
     tr[
         td[String field]
+        td[String length for iban numbers must be at least 34 chars.]
+        td[Occurs if you activate the e[iban] property for a field with a length smaller than 34.]
+    ]
+    tr[
+        td[String field]
         td[String length for languages must be at least 7 chars.]
         td[Occurs if you activate the e[language] property for a field with a length smaller than 7.]
     ]
@@ -858,13 +877,18 @@ table[
     ]
     tr[
         td[String field]
+        td[String length for time zones must be at least 30 chars.]
+        td[Occurs if you activate the e[timezone] property for a field with a length smaller than 30.]
+    ]
+    tr[
+        td[String field]
         td[String length for uuids must be at least 36 chars.]
         td[Occurs if you activate the e[uuid] property for a field with a length smaller than 36.]
     ]
     tr[
         td[String field]
         td[A string can only be one of country, creditCard, currency, language, locale, htmlcolour, iban,
-        isbn, issn, ip address, password and uuid.]
+        isbn, issn, ip address, password, timezone and uuid.]
         td[]
     ]
     tr[
