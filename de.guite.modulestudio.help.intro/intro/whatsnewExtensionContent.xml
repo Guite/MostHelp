@@ -14,6 +14,7 @@
             <text>When opening a model it is automatically validated.</text>
             <text>When saving a model it is automatically validated and the model file is formatted for readability.</text>
             <text>Using the context menu of a problem in the problem view you can call and execute quick fixes.</text>
+            <text>Special and only rarely required properties are hidden by default and can be displayed and hidden using a button (expert settings).</text>
             <text>When creating relationships the source and target descriptions are automatically preset to the appropriate singular or plural names of corresponding entities.</text>
             <text>Applications can now define capabilities they provide (#667).</text>
             <text>Twig is used instead of Smarty for 1.4 (#571).</text>
