@@ -18,6 +18,7 @@
             <text>When creating relationships the source and target descriptions are automatically preset to the appropriate singular or plural names of corresponding entities.</text>
             <text>Applications can now define capabilities they provide (#667).</text>
             <text>Twig is used instead of Smarty for 1.4 (#571).</text>
+            <text>In 1.4 Symfony forms are used instead of the old forms framework (#416).</text>
             <text>String fields can be marked as timezone (analogous to currency, country, language, locale, colour, ip address, iban number, etc.).</text>
             <text>Integer, decimal and float fields can be marked as percentage.</text>
             <text>Integer fields with minimum and maximum can be marked as range.</text>
