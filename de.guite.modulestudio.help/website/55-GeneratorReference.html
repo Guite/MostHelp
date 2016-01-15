@@ -1127,6 +1127,8 @@
 			</p>
 			<p>
 			<ul>
+			  <li><em>expanded</em> - A boolean to enable radio buttons (for single-valued lists) or checkboxes (for
+			      multi-valued lists) instead of a select field. The default value is <em>false</em>.</li>
 			  <li><em>length</em> - The length of this field. Default value is 255.</li>
 			  <li><em>multiple</em> - A boolean specifying whether multiple items can be selected concurrently or not.
 			      The default value is <em>false</em>.</li>
@@ -1134,8 +1136,6 @@
 			      The default value is <em>0</em>.</li>
 			  <li><em>max</em> - Maximum amount of values enforced to be selected (only if <em>multiple</em> is set to <em>true</em>).
 			      The default value is <em>0</em>.</li>
-			  <li><em>useChecks</em> - A boolean to enable radio buttons (for single-valued lists) or checkboxes (for
-			      multi-valued lists) instead of a select field. The default value is <em>false</em>.</li>
 			</ul>
 			</p>
 			<p>
@@ -1649,6 +1649,10 @@
 			      target view (only for bidirectional relationships).</li>
 			  <li><em>editType</em> - The <a href="55-GeneratorReference.php#GenRefRelationEditType.php" title="Go to &quot;Relation edit type&quot;">edit type</a> for this association, only applicable 
 			      if <em>useAutoCompletion</em> is not set to <em>NONE</em>.</li>
+			  <li><em>expandedSource</em> - A boolean to enable radio buttons (for single-valued relations) or checkboxes
+			      (for multi-valued relations) instead of a select field. The default value is <em>false</em>.</li>
+			  <li><em>expandedTarget</em> - A boolean to enable radio buttons (for single-valued relations) or checkboxes
+			      (for multi-valued relations) instead of a select field. The default value is <em>false</em>.</li>
 			  <li><em>fetchType</em> - The <a href="55-GeneratorReference.php#GenRefRelationFetchType.php" title="Go to &quot;Relation fetch type&quot;">fetch type</a> for this association.</li>
 			  <li><em>nullable</em> - A boolean specifying whether the field for this relationship may be null or not.
 			      The default value is <em>true</em>.</li>

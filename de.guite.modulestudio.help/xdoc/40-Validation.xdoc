@@ -1026,13 +1026,6 @@ table[
         td[Occurs if you set e[max] to a smaller value than e[min].]
     ]
     tr[
-        td[List field]
-        td[Only lists with multiple selections can consist of checkboxes.]
-        td[Occurs if you set e[useChecks] to e[true], but not e[multiple]. Checkbox lists with only one
-        selection allowed are postponed to a future version, since you can use a boolean field for this,
-        too.]
-    ]
-    tr[
         td[Array field]
         td[Enforcing a certain amount of items requires setting both e[min] and e[max] properties.]
         td[Occurs if you set either e[min] or e[max] to a value greater than e[0], but not both.]

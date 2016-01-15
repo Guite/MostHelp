@@ -818,6 +818,8 @@ A list field has the following properties in addition to the common ref:GenRefAb
 string field] settings:
 
 ul[
+    item[e[expanded] - A boolean to enable radio buttons (for single-valued lists) or checkboxes (for
+    multi-valued lists) instead of a select field. The default value is e[false].]
     item[e[length] - The length of this field. Default value is 255.]
     item[e[multiple] - A boolean specifying whether multiple items can be selected concurrently or not.
     The default value is e[false].]
@@ -825,8 +827,6 @@ ul[
     The default value is e[0].]
     item[e[max] - Maximum amount of values enforced to be selected (only if e[multiple] is set to e[true]).
     The default value is e[0].]
-    item[e[useChecks] - A boolean to enable radio buttons (for single-valued lists) or checkboxes (for
-    multi-valued lists) instead of a select field. The default value is e[false].]
 ]
 
 A list field may have the following references:
@@ -1239,6 +1239,10 @@ ul[
     target view (only for bidirectional relationships).]
     item[e[editType] - The ref:GenRefRelationEditType[edit type] for this association, only applicable 
     if e[useAutoCompletion] is not set to e[NONE].]
+    item[e[expandedSource] - A boolean to enable radio buttons (for single-valued relations) or checkboxes
+    (for multi-valued relations) instead of a select field. The default value is e[false].]
+    item[e[expandedTarget] - A boolean to enable radio buttons (for single-valued relations) or checkboxes
+    (for multi-valued relations) instead of a select field. The default value is e[false].]
     item[e[fetchType] - The ref:GenRefRelationFetchType[fetch type] for this association.]
     item[e[nullable] - A boolean specifying whether the field for this relationship may be null or not.
     The default value is e[true].]
