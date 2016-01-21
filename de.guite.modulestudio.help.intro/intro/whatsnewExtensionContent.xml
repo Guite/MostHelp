@@ -11,6 +11,7 @@
             <text>Double-clicking an error or warning in the problem view selects the affected element in the diagram.</text>
             <text>A dedicated preference page allows storing ModuleStudio-specific basic settings.</text>
             <text>The wizard for creating new models uses the basic settings avoiding repeated input of recurring data.</text>
+            <text>Existing models can be easily imported. Old models from version 0.6.2 are automatically migrated.</text>
             <text>When opening a model it is automatically validated.</text>
             <text>When saving a model it is automatically validated and the model file is formatted for readability.</text>
             <text>Using the context menu of a problem in the problem view you can call and execute quick fixes.</text>
