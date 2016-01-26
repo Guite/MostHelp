@@ -9,6 +9,8 @@
             <text>The graphical editor has no sub editors anymore, but works with different layers which can be displayed and hidden.</text>
             <text>Available views: dashboard (quick links), error log, model outline, properties, current problems.</text>
             <text>Double-clicking an error or warning in the problem view selects the affected element in the diagram.</text>
+            <text>Fields and variables can be resorted using the context menu (top, up, down, bottom).</text>
+            <text>Double-clicking a list field or list variable opens a dialog window for managing their entries.</text>
             <text>A dedicated preference page allows storing ModuleStudio-specific basic settings.</text>
             <text>The wizard for creating new models uses the basic settings avoiding repeated input of recurring data.</text>
             <text>Existing models can be easily imported. Old models from version 0.6.2 are automatically migrated.</text>
