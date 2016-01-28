@@ -841,7 +841,7 @@ ul[
 
 The generator creates an additional class for handling the available list items centrally. Based on 
 this information ref:GenRefEditAction[edit] pages provide either a dropdown list (for single or multiple 
-values depending on the e[multiple] property) or a checkbox list (if e[multiple] and e[useChecks] are 
+values depending on the e[multiple] property) or a checkbox list (if e[multiple] and e[expanded] are 
 both set to e[true]). For the output in ref:GenRefViewAction[view] and ref:GenRefDisplayAction[display] 
 templates there is a modifier generated which cares for showing the names instead of the raw option 
 values.
