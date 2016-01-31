@@ -1,0 +1,408 @@
+chapter:Changelog[Changelog]
+
+section:ChangelogModuleStudio070[ModuleStudio 0.7.0]
+
+section2:ChangelogModuleStudio070ProductChanges[Product changes]
+
+ul[
+    item[New implementation for the main program, overhauled UI contributions. Hence, the ModuleStudio
+    UI is now more slim and limits itself to the relevant control elements.]
+    item[There are two different designs available: light and dark.]
+    item[There are new powerful editors: a primary graphical diagram editor and two tabular editors for
+    entities and variables.]
+    item[All editors are automatically synchronised with each other, so that changes are immediately
+    reflected everywhere.]
+    item[The graphical editor has no sub editors anymore, but works with different layers which can be
+    displayed and hidden.]
+    item[Available views: dashboard (quick links), error log, model outline, properties, current problems.]
+    item[Double-clicking an error or warning in the problem view selects the affected element in the
+    diagram.]
+    item[Fields and variables can be resorted using the context menu (top, up, down, bottom).]
+    item[Double-clicking a list field or list variable opens a dialog window for managing their entries.]
+    item[A dedicated preference page allows storing ModuleStudio-specific basic settings. Some of these
+    basic preferences allow central setting of commonly required data (like vendor, author, etc.) for
+    avoiding repeated work.]
+    item[The wizard for creating new models uses the basic settings avoiding repeated input of recurring
+    data.]
+    item[Existing models can be easily imported. Old models from version 0.6.2 are automatically migrated.]
+    item[When opening a model it is automatically validated.]
+    item[When saving a model it is automatically validated and the model file is formatted for readability.]
+    item[Using the context menu of a problem in the problem view you can call and execute quick fixes.]
+    item[Special and only rarely required properties are hidden by default and can be displayed and hidden
+    using a button (expert settings).]
+    item[When creating relationships the source and target descriptions are automatically preset to the
+    appropriate singular or plural names of corresponding entities.]
+    item[Updated to Eclipse 4.5.1 (Mars SR 1).]
+    item[ModuleStudio brings the required Java 8 environment along and can therewith also be used on
+    systems without Java or with obsolete Java versions.]
+]
+
+section2:ChangelogModuleStudio070DslChanges[DSL / Modeling language changes]
+
+ul[
+    item[Applications can now define capabilities they provide (#667).]
+    item[String fields can be marked as timezone (analogous to currency, country, language, locale, colour,
+    ip address, iban number, etc.).]
+    item[Integer, decimal and float fields can be marked as percentage.]
+    item[Integer fields with minimum and maximum can be marked as range.]
+    item[The DSL uses a new formatter for the model format.]
+    item[With the skipHookSubscribers property you can take influence on whether an entity should support
+    display and filter hooks or not. In some cases it can make sense to disable that for improving performance
+    (#702).]
+    item[Added string property for additional date validators (#640).]
+    item[Url fields have a new checkDNS property to check whether the associated host exists (#674).]
+    item[The relation attributes orderBy and orderByReverse are checked for valid fields.]
+    item[Constraints for min and max items can be used independently from each other for array fields
+    and multi-values relations (like it is possible for multiple list fields, too).]
+    item[Text variables have a new e[multiline] property to separate single-lined text fields and text
+    areas (#722).]
+    item[A new generator setting allows control over whether the ModuleStudio version should be part
+    of the top docblock for all generated files or only for the Version class (#627).]
+    item[Entities contain controller actions now, like any other controller elements. Therewith you can
+    control for each entity which use cases apply.]
+    item[Replaced entity property mappedSuperClass by a dedicated language element.]
+    item[Application property applicationType has been removed.]
+    item[Moved data layer elements into main editor.]
+    item[Moved property for amount of example rows into generator settings.]
+    item[Moved remaining elements from controller layer into main editor.]
+    item[Two new properties allow controlling field visibility and css classes.]
+    item[Removed action handlers, action events and transitions from controller layer.]
+    item[Removed dsl properties for view layer, event listeners and transform objects.]
+    item[Added e[expandedSource] and e[expandedTarget] properties to relatinships for controlling their
+    editing display type in Symfony Forms terminology. The e[useChecks] property of list fields has been
+    renamed to e[expanded] accordingly.]
+]
+
+section2:ChangelogModuleStudio070GeneratorChanges[Generator changes]
+
+ul[
+    item[Twig is used instead of Smarty for 1.4 (#571).]
+    item[In 1.4 Symfony forms are used instead of the old forms framework (#416).]
+    item[With 1.4 the LinkContainer service is used now instead of user-/admin apis for header links.]
+    item[1.4 applications utilise capabilities for exposing categories usage.]
+    item[The generator displays descriptions for field names containing numbers more readable.]
+    item[1.4 applications use webshims polyfill for forms to provide better support for HTML5 validation
+    in old browsers (#673).]
+    item[Editing time fields is now supported by a dedicated form plugin. Also for date fields there
+    is a new selector (#87).]
+    item[In 1.4 applications annotations are used to distinguish between admin and user areas in entity
+    controllers (#633).]
+    item[The postInstall event newly introduced in Zikula 1.4 is supported.]
+    item[The primary variable name for search terms has been changed to "q" for improved integration
+    with analytics software.]
+    item[For the generated templates YAML example files with example overrides are pregenerated for easy
+    copy n paste (#460).]
+    item[In 1.4 applications RouteUrl and UrlInterface are now used instead of the ModUrl class.]
+    item[The maxLength property of text fields are now reflected in the generated form field properly.]
+    item[Many minor bugfixes.]
+    item[For more details see link[https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.0][closed tickets]
+    on Github).]
+]
+
+section:ChangelogModuleStudio062[ModuleStudio 0.6.2 (Aug 7, 2014)]
+
+section2:ChangelogModuleStudio062ProductChanges[Product changes]
+
+ul[
+    item[Updated to Eclipse 4.4 (Luna).]
+]
+
+section2:ChangelogModuleStudio062DslChanges[DSL / Modeling language changes]
+
+ul[
+    item[A new generator setting allows defining a model as system module (#596).]
+    item[Added new options in the model editor allowing specifying additional validation constraints
+    available in Symfony 2.4.x and 2.5.0 (#516, #606).]
+    item[Added new DSL property (onAccountDeletion) to entities and user fields to allow control over
+    how an app should react when users are deleted (#284).]
+    item[A new e[dbName] property for entity fields allows different naming for field and database column
+    (#489).]
+    item[Array fields can be configured as array, simple array and json array for 1.4.0 (#488).]
+    item[Added new generator setting for marking generating files with special file names (e[*.generated.*]) (#497).]
+    item[The following obsolete properties have been removed from the DSL: Application#modelPath, Application#targetCoreVersion,
+    DerivedField#leading.]
+]
+
+section2:ChangelogModuleStudio062GeneratorChanges[Generator changes]
+
+ul[
+    item[All frontend functions have been converted from Prototype to jQuery and Bootstrap for Zikula
+    1.4.0 (#238).]
+    item[Applications for Zikula 1.4.0 dispatch custom Symfony2 events, see generated FooEvents class
+    (#568).]
+    item[Added basic support for cache annotations for 1.4.0 apps (#567).]
+    item[Structure of entity classes has been refactored for 1.4.0 to allow easier overriding from outside
+    of the module using service parameters (#565).]
+    item[Display and delete actions use the ParamConverter annotation for object selection in 1.4.0 (#563).]
+    item[If no filters are set the current page of paginated views is remembered from session (#548).]
+    item[Applications for 1.4.0 support Monolog logger as well as Symfony components Filesystem and Finder
+    (#546).]
+    item[Changed generated event subscribers for 1.4.0. Removed support for obsolete events, added support
+    for Symfony kernel events (#544).]
+    item[Applications for Zikula 1.4.0 use Symfony's dependency injection container now (#535).]
+    item[The routing in 1.4.0 modules has been converted to Symfony using annotations. This replaces
+    the url route classes and encodeurl/decodeurl methods generated before (#465, #604).]
+    item[Controller structure has been reorganised: now there exists one controller for each entity.
+    This has been done for preparing migration to Symfony routing, but also makes controller methods
+    more precise and easier to customise by overriding (#465).]
+    item[In 1.4.0 the Symfony validator component is used with annotations instead of self-written validation
+    methods (#516).]
+    item[Added ics (iCalendar) templates for entities with start and end dates (#509).]
+    item[Migrated search integration to new helper class in 1.4.0 (#503).]
+    item[User avatars are displayed at appropriate places (#607).]
+    item[Entities with another workflow than NONE allow selecting user groups for moderation in the generated
+    configuration page. Email notifications are sent between creator and moderators on state changes (#570).]
+    item[In 1.4.0 status messages are not with LogUtil realised anymore, but using Symfony FlashBags (#512).]
+    item[Client-side geocoding now uses a callback function to make customisation easier inside edit
+    templates (#507).]
+    item[Lots of generator updates and bugfixes (for details on most changes see link[https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.6.2][closed tickets]
+    on Github).]
+]
+
+section:ChangelogModuleStudio061[ModuleStudio 0.6.1 (Mar 13, 2014)]
+
+section2:ChangelogModuleStudio061ProductChanges[Product changes]
+
+ul[
+    item[This release is the first which has been built completely by our CI server. The build infrastructure
+    has matured and allows for reproducable builds with measuring quality metrics and testing. There
+    are also some new platforms added to the list of supported versions. But most important it has become
+    much easier to create and publish new releases now.]
+    item[The MacOS versions behave like native MacOS apps.]
+    item[One unrequired and confusing main menu entry (File > Open File...) has been hidden.]
+    item[Updated to Eclipse 4.3.2 (Kepler SR2).]
+]
+
+section2:ChangelogModuleStudio061DslChanges[DSL / Modeling language changes]
+
+ul[
+    item[Introduced a new model element containing generator settings. Therewith you can control which
+    features should be generated and take influence on some behavioural aspects of the generator (read
+    more about this ref:GenRefSettingsContainer[here]).]
+    item[Added new target core version e[pre14] for the new Symfony-based module structure. This replaces
+    the 1.3.6 version which behaves now exactly like 1.3.5.]
+    item[Brief entity display can now be freely controlled by a display pattern in the model (read more
+    about this ref:GenRefEntity[here]).]
+    item[Added a language property for controlling sorting also for the incoming source side of many-to-many
+    relationships, from the target side view.]
+    item[Only string field types can be used as permalink parts (sluggable position) now.]
+    item[The default value for the amount of example rows to be generated for a certain model container has been changed to 0.]
+    item[Also view actions are now allowed for ajax controllers.]
+    item[Fixed wrong length calculation during table size validation.]
+    item[Added missing validation for ensuring one-to-one relations targeting a soft-deleteable entity have a remove cascade.]
+    item[Added missing validation for sortable group needing also a sortable position.]
+]
+
+section2:ChangelogModuleStudio061GeneratorChanges[Generator changes]
+
+ul[
+    item[Upload folders are now created on demand if they do not exist yet (required if a module is used
+    without having installed it, like for example when using Multisites site templates).]
+    item[Added an option for bypassing entity validation (required for example when archiving objects
+    automatically).]
+    item[The generator creates also a plugin for the Newsletter module (beside the Mailz plugin which
+    has been supported before already).]
+    item[Lists with related objects in quick navigation forms are sorted now by default.]
+    item[Added support for new event handlers in 1.4.0 to recognise a module being activated or deactivated.]
+    item[In 1.4.0 event handlers are not managed in the database anymore, but by means of dependency
+    injection.]
+    item[Names of database tables include the vendor as prefix in 1.4.0.]
+    item[The frontend for 1.4.0 applications has been converted to Bootstrap.]
+    item[Lots of generator updates and bugfixes (for details on most changes see link[https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.6.1][closed tickets]
+    on Github).]
+]
+
+section:ChangelogModuleStudio060[ModuleStudio 0.6.0 (Mar 8, 2013)]
+
+section2:ChangelogModuleStudio060ProductChanges[Product changes]
+
+ul[
+    item[A textual syntax defines a new and more readable model file format. Also there is a migration
+    function for converting your existing models to this new notation automatically.]
+    item[Reimplemented generator templates in new language. The generator has a much better performance
+    now.]
+    item[Errors and warnings can be translated into other languages now (German is supported already).]
+    item[Validation is no longer performed automatically every few seconds, but on certain events (each
+    model save in the main editor, after opening existing models, when starting generation) and when
+    calling validation manually using the main menu.]
+    item[Updated to Eclipse 4.2.2 (Juno SR2) and corresponding versions of third-party components. Mac
+    OS X builds support only cocoa now, there are no launchers available for carbon anymore.]
+    item[The example models from the MostExamples repository are now shipped in a folder named examples
+    within MOST.]
+    item[Removed custom beautifier component as it caused more problems than benefits.]
+    item[Reimplemented validation constraints, errors and warnings now also with German translation.]
+]
+
+section2:ChangelogModuleStudio060DslChanges[DSL / Modeling language changes]
+
+ul[
+    item[A new property stores the vendor of an application. Usually this is the name of a company or
+    institution. This is a preparation for future versions of Zikula as it is intended to name extensions
+    combining vendor and name of a Module. Then it becomes possible to install for example multiple News
+    modules by different vendors concurrently.]
+    item[Another new property allows you to define the desired target core version. The default is 1.3.6
+    which includes the new forward compatibility layer for Zikula 1.4.0. Another current possible option
+    is 1.3.5 for backwards compatibility and more stability.]
+    item[Basic workflow support. For each entity one of three predefined workflows can be selected and
+    further customised by means of several options. Totally you can describe a huge number of different
+    workflows. More information can be found in the user manual.]
+    item[Introduced support for different types of application dependencies (requirement, recommendation,
+    conflict).]
+    item[Float and decimal fields now have a currency flag property.]
+    item[There are two properties for relationship cascade settings now, one for each relation side.]
+    item[Whitespaces and 0 values are now allowed for list field entries.]
+    item[Upload fields can optionally have also a maximal size.]
+    item[The function for orphan removal is now also available for many-to-many relationships (beside
+    one-to-one and one-to-many).]
+    item[A new categorisable option allows for defining whether multiple categories can be selected for
+    the corresponding entity or not.]
+    item[Datetime and date fields can now be declared as start or end.]
+    item[Variables reserved in Zikula are now checked not only for field names, but also for entity names.]
+    item[Fixed validation of string fields with regular expressions.]
+]
+
+section2:ChangelogModuleStudio060GeneratorChanges[Generator changes]
+
+ul[
+    item[Implementation and usage of the DSL changes described above, for example a lot of workflows-
+    related stuff.]
+    item[Entities with Geographical extension show a map in display and edit pages now (based on mapstraction
+    which is included as a system plugin in the core, so it is easily possible to use different map vendors).]
+    item[KML export functionality for entities with Geographical extension.]
+    item[When editing entities with Geographical extension a map for selecting coordinates is provided.]
+    item[Handling of relations has been reimplemented with form plugins.]
+    item[Relationship handling is now done with dropdown lists by default. Using auto completion instead
+    is still possible. Inline creation and editing of related items is only possible when using the auto
+    completion approach.]
+    item[Integration for search API and your account panel.]
+    item[Support for pending content listener, moderation block and moderation panel.]
+    item[Mass handling of objects on admin view pages.]
+    item[Support for meta data for the Tag module.]
+    item[Automatic archiving if archive and end date are available.]
+    item[Using Zikula.UI.Panels in display and edit pages if they become huge.]
+    item[Actions in view and display pages are now presented with context menus (similar like in tree
+    management pages).]
+    item[Added a quick navigation form for view pages allowing for filtering, searching and sorting the
+    list.]
+    item[A new content type allows displaying one certain single object.]
+    item[Optional category filters for generic block and both content types.]
+    item[Possibility for entering custom templates in list block and list content type.]
+    item[For categories multiple registries/trees/properties are now considered everywhere.]
+    item[Basic Scribite integration, at the moment there are plugins generated for Xinha, TinyMCE and
+    CKEditor.]
+    item[Fixed validation of upload file extensions; this check is now performed on the client-side, too.]
+    item[Default implementation for user delete event listener.]
+    item[Display and edit actions have been implemented also for ajax controllers.]
+    item[Improved permission check instances so that permissions are considered also for single entries now.]
+    item[Entities with tree extension (nested set, closure) show relatives on display pages (parents,
+    children, siblings, etc.).]
+    item[Fixed problems with creating root nodes in nested sets if length of title or description fields are too small.]
+    item[Use text data type for text fields again.]
+    item[Fixed definition and handling of many-to-many relations.]
+    item[AutoComplete bugfixes for many-to-many and one-to-many relations.]
+    item[Further fixes for relation handling during edit.]
+    item[Removed obsolete generation of entity classes for m:n reference tables.]
+    item[Bugfix for deleting entities with optional upload fields.]
+    item[Significant performance optimisations for the shorturl support.]
+    item[Fixed storage of attributes, outsourced attribute field names into own method for easier customisation.]
+    item[Fixed installation of list vars by using array serialisation only for multiple lists.]
+    item[Fixed wrong case keyword for status message determination in edit forms.]
+    item[Various bugfixes related with version fields and optimistic locking in the form handlers and validators.]
+    item[Added missing tooltip declaration in config templates.]
+    item[Fixed id field list retrieval in delete action.]
+    item[Fixed repeated object creation.]
+    item[Fixed modifier for displaying list field entries.]
+    item[Fixed logical error in validation method isStringNotContaining.]
+    item[Fixed usage of Gettext in JavaScript.]
+    item[Fixed obsolete condition for display hooks output in edit templates.]
+    item[Fixed list field handling in form handlers as well as in the output modifier.]
+    item[Fixed values for precision and scale of coordinate fields.]
+    item[Fixed query for retrieving related objects during editing.]
+    item[Removed wrong application of client-side validation to input buttons.]
+    item[Also for form plugins there are base classes generated now, for easier extensibility and customisability.]
+    item[Usage of prepared statements in repository classes.]
+    item[Many minor bugfixes und refactorings (e.g. request object usage).]
+    item[For all details see link[https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.6.0][closed tickets]
+    on Github).]
+]
+
+section:ChangelogModuleStudio054[ModuleStudio 0.5.4 (Nov 29, 2011)]
+
+ul[
+    item[A new selection api simplifies data selection in controller layers.]
+    item[Entity actions are now centrally collected for easier extendability and reusability.]
+    item[Bugfixes for user fields in combination with tree root nodes and edit forms.]
+    item[Validation hooks in form handlers have been armed now (errors cause abortion).]
+    item[Form handler refactoring outsourcing common code parts into generic parent class.]
+    item[Added generation of templates for custom controller actions.]
+    item[Using getOneOrNullResult method for single entity selections.]
+    item[Improved formatting of action icons in list views.]
+    item[Moved form handler base class location.]
+    item[Added standard fields to list of allowed sorting criteria.]
+    item[Parameter in image creation util class to be able to crop thumbnails individually, too.]
+    item[Bugfixes for error handling and post processing in form handlers.]
+    item[Make sort links in view templates consider the parameter for showing all items instead of paginated
+    list properly.]
+    item[Improved language detection in bootstrap file when using translatable fields.]
+    item[Object actions in admin view templates contain now a preview icon if a user display action exists
+    in the controller model.]
+    item[Fixed errors in Content type, generic block and Mailz plugin.]
+    item[Added forgotten string field validation calls.]
+    item[Fixed JavaScript problems for inline editing of related objects linked by many-to-many relationships.]
+    item[Fixed missing generation of view modifier for displaying country names.]
+    item[Updated Imagine pathes for thumbnail generation due to vendor changes.]
+    item[For more details see link[https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.5.4][closed tickets]
+    on Github).]
+]
+
+section:ChangelogModuleStudio053[ModuleStudio 0.5.3 (Oct 10, 2011)]
+
+ul[
+    item[A new selection api simplifies data selection in controller layers.]
+    item[Entity actions are now centrally collected for easier extendability and reusability.]
+    item[Bugfixes for user fields in combination with tree root nodes and edit forms.]
+    item[Validation hooks in form handlers have been armed now (errors cause abortion).]
+    item[Form handler refactoring outsourcing common code parts into generic parent class.]
+    item[Added generation of templates for custom controller actions.]
+    item[Using getOneOrNullResult method for single entity selections.]
+    item[Improved formatting of action icons in list views.]
+    item[Moved form handler base class location.]
+    item[Added standard fields to list of allowed sorting criteria.]
+    item[Parameter in image creation util class to be able to crop thumbnails individually, too.]
+    item[Bugfixes for error handling and post processing in form handlers.]
+    item[Make sort links in view templates consider the parameter for showing all items instead of paginated
+    list properly.]
+    item[Improved language detection in bootstrap file when using translatable fields.]
+    item[Object actions in admin view templates contain now a preview icon if a user display action exists
+    in the controller model.]
+    item[Fixed errors in Content type, generic block and Mailz plugin.]
+    item[Added forgotten string field validation calls.]
+    item[Fixed JavaScript problems for inline editing of related objects linked by many-to-many relationships.]
+    item[Fixed missing generation of view modifier for displaying country names.]
+    item[Updated Imagine pathes for thumbnail generation due to vendor changes.]
+    item[For more details see link[https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.5.3][closed tickets]
+    on Github).]
+]
+
+section:ChangelogModuleStudio052[ModuleStudio 0.5.2 (Sep 8, 2011)]
+
+ul[
+    item[For most details see link[https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.5.2][closed tickets]
+    on Github).]
+]
+
+section:ChangelogModuleStudio051[ModuleStudio 0.5.1 (Sep 20, 2010)]
+
+Too old to be still documented here.
+
+section:ChangelogModuleStudio050[ModuleStudio 0.5.0 (Aug 21, 2010)]
+
+Too old to be still documented here.
+
+section:ChangelogModuleStudio049[ModuleStudio 0.4.9 (Apr 29, 2008)]
+
+Too old to be still documented here.
+
+section:ChangelogModuleStudio043[ModuleStudio 0.4.3 (Dec 21, 2007)]
+
+Too old to be still documented here.

@@ -2,7 +2,10 @@ chapter:Introduction[Introduction]
 
 section:IntroductionAboutMost[About ModuleStudio]
 
-ModuleStudio is a development environment with which one can quickly, simply and efficiently describe
+ModuleStudio (MOST) is a generative architecture for the Zikula Application Framework. Based on principles
+of Model-Driven Software Development (MDSD) the creation of modules is being abstracted to a new level.
+
+Thus, ModuleStudio is a development environment with which one can quickly, simply and efficiently describe
 and generate web applications. Software developers can create complex Zikula extensions in a few steps
 and meet individual project requirements with them.
 
@@ -14,19 +17,21 @@ also benefit from this process via graphical modeling and code generation.
 
 Read more at this page: link[http://modulestudio.de/en/product/what-is-modulestudio.html][What is ModuleStudio]
 
+e[Replace coding by modeling and simplify your development!]
+
 section:IntroductionBenefits[Benefits]
 
 ul[
     item[e[Development time/costs:] avoid wasting weeks for schematical and architecturally motivated 
-    code parts!]
+    code parts (so-called boilerplate code)!]
     item[e[Maintainability:] your software is a model - easily changeable and cheaply maintainable! 
     No more efforts for getting your modules up to date for new versions, just regenerate and merge the code!]
     item[e[Code quality:] take profit from best practices and established patterns!]
     item[e[Architectural compliance:] take most usage from powerful core frameworks and interfaces! 
-    Generated applications follow all APIs and guidelines automatically. This is a big step for avoiding unsecure
-    and legacy extensions when the framework itself evolves!]
+    Generated applications follow all APIs and guidelines automatically. This is a big step for avoiding
+    unsecure and legacy extensions when the framework itself evolves!]
     item[e[Reusability:] share and modify your models! Do not make the same work twice!]
-    item[e[Understandibility:] avoid having to learn programming rules and framework details! Develop 
+    item[e[Understandibility:] avoid having to cope with programming rules and framework details! Develop 
     with general MVC (Model View Controller) terminology independent from technical stuff!]
 ]
 
@@ -47,9 +52,6 @@ ul[
     item[online help on our website]
     item[pdf print version]
 ]
-
-In future versions we are going to add interaction capabilities to incorporate active help into ModuleStudio
-itself while you are working. For now the focus was to get the manual actually written ;-)
 
 section:IntroductionModelLayers[Model layers]
 
