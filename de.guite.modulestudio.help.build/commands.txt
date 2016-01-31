@@ -29,4 +29,5 @@ perform --properties "refProduct/de.guite.modulestudio.build/buckminster.propert
 perform "de.guite.modulestudio.help.build#finish.repository"
 
 # generate API documentation
-perform --properties "refProduct/de.guite.modulestudio.build/buckminster.properties" "de.guite.modulestudio.help.build#create.documentation"
+# disabled, since this seems not required anymore
+#perform --properties "refProduct/de.guite.modulestudio.build/buckminster.properties" "de.guite.modulestudio.help.build#create.documentation"
