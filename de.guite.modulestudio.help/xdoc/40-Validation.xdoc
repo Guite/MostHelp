@@ -1087,7 +1087,17 @@ table[
     ]
     tr[
         td[Join relationship]
+        td[Relationship source aliases must not be named like a field of the target entity.]
+        td[]
+    ]
+    tr[
+        td[Join relationship]
         td[Relationship target aliases must be unique for all outgoing relations of an entity.]
+        td[]
+    ]
+    tr[
+        td[Join relationship]
+        td[Relationship target aliases must not be named like a field of the source entity.]
         td[]
     ]
     tr[
