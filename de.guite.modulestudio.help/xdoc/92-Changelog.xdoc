@@ -98,7 +98,7 @@ ul[
     item[The maxLength property of text fields are now reflected in the generated form field properly.]
     item[Many minor bugfixes.]
     item[For more details see link[https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.0][closed tickets]
-    on Github).]
+    on Github.]
 ]
 
 section:ChangelogModuleStudio062[ModuleStudio 0.6.2 (Aug 7, 2014)]
@@ -325,7 +325,7 @@ ul[
     item[Usage of prepared statements in repository classes.]
     item[Many minor bugfixes und refactorings (e.g. request object usage).]
     item[For all details see link[https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.6.0][closed tickets]
-    on Github).]
+    on Github.]
 ]
 
 section:ChangelogModuleStudio054[ModuleStudio 0.5.4 (Nov 29, 2011)]
@@ -354,7 +354,7 @@ ul[
     item[Fixed missing generation of view modifier for displaying country names.]
     item[Updated Imagine pathes for thumbnail generation due to vendor changes.]
     item[For more details see link[https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.5.4][closed tickets]
-    on Github).]
+    on Github.]
 ]
 
 section:ChangelogModuleStudio053[ModuleStudio 0.5.3 (Oct 10, 2011)]
@@ -383,14 +383,14 @@ ul[
     item[Fixed missing generation of view modifier for displaying country names.]
     item[Updated Imagine pathes for thumbnail generation due to vendor changes.]
     item[For more details see link[https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.5.3][closed tickets]
-    on Github).]
+    on Github.]
 ]
 
 section:ChangelogModuleStudio052[ModuleStudio 0.5.2 (Sep 8, 2011)]
 
 ul[
     item[For most details see link[https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.5.2][closed tickets]
-    on Github).]
+    on Github.]
 ]
 
 section:ChangelogModuleStudio051[ModuleStudio 0.5.1 (Sep 20, 2010)]
