@@ -30,6 +30,7 @@ ul[
     item[Using the context menu of a problem in the problem view you can call and execute quick fixes.]
     item[Special and only rarely required properties are hidden by default and can be displayed and hidden
     using a button (expert settings).]
+    item[Relationships visualise whether they are unidirectional or bidirectional.]
     item[When creating relationships the source and target descriptions are automatically preset to the
     appropriate singular or plural names of corresponding entities.]
     item[ModuleStudio automatically searches for updates on startup. You can control in preferences whether
