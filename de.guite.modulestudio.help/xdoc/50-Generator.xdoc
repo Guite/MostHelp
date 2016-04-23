@@ -66,11 +66,6 @@ First you have to select which generator cartridges you want to execute.
 
 img[images/generator_cartridges.png][Cartridge selection][blockimg][border:1px solid black]
 
-After that you have to select which reports you want to create (only if you did not unselect the e[reporting]
-cartridge before).
-
-img[images/generator_reports.png][Report selection][blockimg][border:1px solid black]
-
 section:GeneratorWorkflow[The workflow]
 
 The rough steps of the generator workflow are as follows:
