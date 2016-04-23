@@ -76,9 +76,9 @@ section:GeneratorWorkflow[The workflow]
 The rough steps of the generator workflow are as follows:
 
 ol[
-    item[Ask for input parameters (for example desired output folder, cartridges and reports).]
+    item[Ask for input parameters (for example desired output folder and cartridges).]
     item[Empty output directory.]
-    item[Export dumps of editor diagrams (if reporting cartridge is selected).]
+    item[Export dumps of editor diagrams.]
     item[Read input model.]
     item[Perform validation.]
     item[Transformation to add primary and foreign key fields.]
