@@ -35,7 +35,7 @@ ul[
     appropriate singular or plural names of corresponding entities.]
     item[ModuleStudio automatically searches for updates on startup. You can control in preferences whether
     only stable releases are included or also continuously incoming updates are considered, too.]
-    item[Updated to Eclipse 4.5.2 (Mars SR 2).]
+    item[Updated to Eclipse 4.6.0 (Neon).]
     item[ModuleStudio brings the required Java 8 environment along and can therewith also be used on
     systems without Java or with obsolete Java versions.]
 ]
