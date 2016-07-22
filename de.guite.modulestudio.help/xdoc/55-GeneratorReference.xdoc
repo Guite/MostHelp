@@ -490,7 +490,9 @@ field] settings:
 
 ul[
     item[e[length] - The length of this field. This controls whether the Doctrine mapping type will be
-    e[integer], e[bigint] or e[smallint]. Default value is 11.]
+    e[integer] (6-10), e[bigint] (> 10) or e[smallint] (1-5). Default value is 11. e[Important:] if you
+    use the field as a foreign key you will need to specify e[10] to enforce an integer, otherwise the
+    constraint can't be set properly!]
     item[e[sortablePosition] - A boolean specifying whether this field stores the position for the sortable
     extension or not. If set to e[true] this field will be used as default sorting criteria. There is
     no built-in reordering possibility, for example with drag n drop, implemented yet (see link[https://github.com/Guite/MostGenerator/issues/29][#29]

@@ -758,7 +758,9 @@
 			<p>
 			<ul>
 			  <li><em>length</em> - The length of this field. This controls whether the Doctrine mapping type will be
-			      <em>integer</em>, <em>bigint</em> or <em>smallint</em>. Default value is 11.</li>
+			      <em>integer</em> (6-10), <em>bigint</em> (&gt; 10) or <em>smallint</em> (1-5). Default value is 11. <em>Important:</em> if you
+			      use the field as a foreign key you will need to specify <em>10</em> to enforce an integer, otherwise the
+			      constraint can't be set properly!</li>
 			  <li><em>sortablePosition</em> - A boolean specifying whether this field stores the position for the sortable
 			      extension or not. If set to <em>true</em> this field will be used as default sorting criteria. There is
 			      no built-in reordering possibility, for example with drag n drop, implemented yet (see <a href="https://github.com/Guite/MostGenerator/issues/29" >#29</a>
