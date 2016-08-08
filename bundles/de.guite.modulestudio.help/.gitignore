@@ -1,0 +1,8 @@
+bin
+/pdfmanual
+/website
+/contents
+/images
+*.java._trace
+*.xtendbin
+target/

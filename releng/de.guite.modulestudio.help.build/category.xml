@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/de.guite.modulestudio.help.feature_1.0.0.qualifier.jar" id="de.guite.modulestudio.help.feature" version="1.0.0.qualifier">
+      <category name="de.guite.modulestudio.help.category"/>
+   </feature>
+   <category-def name="de.guite.modulestudio.help.category" label="%CategoryHelpLabel">
+      <description>
+         %CategoryHelpDesc
+      </description>
+   </category-def>
+</site>
