@@ -6,15 +6,14 @@ node {
     def repoUrl = repoBase + projectName + '/'
     def downstreamJobs = 'MOST-1_Prepare-9_Locales'
 
-    try {
-        stage 'Init'
-        def builder
-        def postProcessor
-        fileLoader.withGit("${repoBase}MostProduct.git", 'master', 'c568f590-e3fe-4732-9e5c-68ebc55b849e') {
-            builder = fileLoader.load('vars/builder')
-            postProcessor = fileLoader.load('vars/postbuild')
-        }
+    def builder, postProcessor
+    stage 'Init'
+    fileLoader.withGit("${repoBase}MostProduct.git", 'master', 'c568f590-e3fe-4732-9e5c-68ebc55b849e') {
+        builder = fileLoader.load('vars/builder')
+        postProcessor = fileLoader.load('vars/postbuild')
+    }
 
+    try {
         stage 'Checkout'
         builder.init(projectName, repoUrl, linkProductRepo)
 
