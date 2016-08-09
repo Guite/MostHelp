@@ -8,6 +8,7 @@ node {
     // Set properties
     properties [
         pipelineTriggers([]),
+        buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '10')),
         disableConcurrentBuilds(),
         [$class: 'GithubProjectProperty', displayName: projectName, projectUrlStr: repoUrl]
     ]
