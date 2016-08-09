@@ -9,7 +9,7 @@ node {
     try {
         stage 'Init'
         def builder, postProcessor
-        fileLoader.withGit("${repoBase}MostProduct.git", 'master', '5e434fec-1104-4017-a6a1-f25720b81f68') {
+        fileLoader.withGit("${repoBase}MostProduct.git", 'master', 'c568f590-e3fe-4732-9e5c-68ebc55b849e') {
             builder = fileLoader.load('vars/builder')
             postProcessor = fileLoader.load('vars/postBuild')
         }
