@@ -13,6 +13,9 @@ node {
         postProcessor = fileLoader.load('vars/postBuild');
     }
 
+    echo 'Builder: ' + (builder != null ? '1' : '0')
+    echo 'PostProcessor: ' + (postProcessor != null ? '2' : '0')
+
     try {
         stage 'Checkout'
         builder.init(projectName, repoUrl, linkProductRepo)
@@ -28,6 +31,8 @@ node {
 
         throw exception
     } finally {
-        postProcessor.finalise()
+        if (postProcessor != null) {
+            postProcessor.finalise()
+        }
     }
 }
