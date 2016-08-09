@@ -8,10 +8,10 @@ node {
 
     try {
         stage 'Init'
-        def builder, postProcessor
+        def builder, postprocessor
         fileLoader.withGit("${repoBase}MostProduct.git", 'master', 'c568f590-e3fe-4732-9e5c-68ebc55b849e') {
             builder = fileLoader.load('vars/builder');
-            postProcessor = fileLoader.load('vars/postBuild');
+            postprocessor = fileLoader.load('vars/postbuild');
         }
 
         stage 'Checkout'
@@ -21,13 +21,13 @@ node {
         builder.startMaven()
 
         stage 'Post-build'
-        postProcessor.finish(repoUrl, downstreamJobs);
+        postprocessor.finish(repoUrl, downstreamJobs);
 
     } catch (exception) {
         builder.handleError(repoUrl)
 
         throw exception
     } finally {
-        postProcessor.finalise()
+        postprocessor.finalise()
     }
 }
