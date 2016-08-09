@@ -1,25 +1,33 @@
 
 node {
     def linkProductRepo = true
+    def repoBase = 'https://github.com/Guite/'
     def projectName = 'MostHelp'
-    def repoUrl = "https://github.com/Guite/${projectName}/"
+    def repoUrl = repoBase + projectName + '/'
     def downstreamJobs = 'MOST-1_Prepare-9_Locales'
 
     try {
+        stage 'Init'
+        def builder, postProcessor
+        fileLoader.withGit("${repoBase}MostProduct.git", 'master', '5e434fec-1104-4017-a6a1-f25720b81f68') {
+            builder = fileLoader.load('vars/builder')
+            postProcessor = fileLoader.load('vars/postBuild')
+        }
+
         stage 'Checkout'
-        start(projectName, repoUrl, linkProductRepo)
+        builder.init(projectName, repoUrl, linkProductRepo)
 
         stage 'Build'
-        startMaven()
+        builder.startMaven()
 
         stage 'Post-build'
-        postBuildProcessing(repoUrl, downstreamJobs);
+        postProcessor.finish(repoUrl, downstreamJobs);
 
     } catch (exception) {
-        handleError(repoUrl)
+        builder.handleError(repoUrl)
 
         throw exception
     } finally {
-        finalise()
+        postProcessor.finalise()
     }
 }
