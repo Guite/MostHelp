@@ -5,7 +5,7 @@ node {
     def repoBase = 'https://github.com/Guite/'
     def projectName = 'MostHelp'
     def repoUrl = repoBase + projectName + '/'
-    def downstreamJobs = 'MOST-1_Prepare-9_Locales'
+    def downstreamJobs = ['MOST-1_Prepare-9_Locales']
 
     def builder, postProcessor
     stage 'Init'
