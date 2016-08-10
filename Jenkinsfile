@@ -22,7 +22,7 @@ node {
         builder.handleError(repoUrl, exception)
         throw exception
     } finally {
-        if (postProcessor != null) {
+        if (null != postProcessor) {
             postProcessor.finalise()
         }
     }
