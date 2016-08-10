@@ -6,7 +6,7 @@ node {
     def projectName = 'MostHelp'
     def repoUrl = repoBase + projectName + '/'
     def downstreamJobs = ['MOST-1_Prepare-9_Locales']
-    def artifacts = '**.build/target/**/*.jar'
+    def artifacts = '**/releng/**/target/**/*.jar'
 
     def builder, postProcessor
     stage 'Init'
