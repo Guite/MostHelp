@@ -13,6 +13,10 @@
         <relativePath>../MostProduct/releng/de.guite.modulestudio.configuration/pom.xml</relativePath>
     </parent>
 
+    <properties>
+        <skip.javadoc>true</skip.javadoc>
+    </properties>
+
     <modules>
         <module>../MostProduct/releng/de.guite.modulestudio.target</module>
         <module>bundles</module>
