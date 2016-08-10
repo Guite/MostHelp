@@ -25,7 +25,7 @@ node {
         postProcessor.finish(repoUrl, downstreamJobs);
 
     } catch (exception) {
-        builder.handleError(repoUrl)
+        builder.handleError(repoUrl, exception)
 
         throw exception
     } finally {
