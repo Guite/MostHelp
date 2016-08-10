@@ -15,18 +15,11 @@ node {
     }
 
     try {
-        stage 'Checkout'
         builder.init(projectName, repoUrl, linkProductRepo)
 
-        stage 'Build'
-        builder.startMaven()
-
-        stage 'Post-build'
         postProcessor.finish(repoUrl, downstreamJobs);
-
     } catch (exception) {
         builder.handleError(repoUrl, exception)
-
         throw exception
     } finally {
         if (postProcessor != null) {
