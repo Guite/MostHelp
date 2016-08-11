@@ -24,7 +24,7 @@
         <module>releng</module>
     </modules>
 
-    <issueManagement>    
+    <issueManagement>
         <system>GitHub</system>
         <url>https://github.com/Guite/MostHelp/issues</url>
     </issueManagement>
