@@ -5,7 +5,7 @@ node {
     def repoBase = 'https://github.com/Guite/'
     def projectName = 'MostHelp'
     def repoUrl = repoBase + projectName + '/'
-    def downstreamJobs = ['MOST-1_Prepare-9_Locales']
+    def downstreamJobs = ['MOST-5 Deploy-Help', 'MOST-1_Prepare-9_Locales']
     def artifacts = '**/releng/**/target/repository/**'
 
     def builder, postProcessor
