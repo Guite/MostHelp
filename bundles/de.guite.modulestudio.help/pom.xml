@@ -65,6 +65,7 @@
                             <goal>run-workflow</goal>
                         </goals>
                         <configuration>
+                            <force>true</force>
                             <workflowEngine>mwe2</workflowEngine>
                             <workflowDescriptor>src/workflow/GenerateHelpArtifacts.mwe2</workflowDescriptor>
                         </configuration>
