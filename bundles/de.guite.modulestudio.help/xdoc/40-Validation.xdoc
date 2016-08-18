@@ -258,6 +258,22 @@ table[
         td[For example there must not exist two entities which are both named e[person].]
     ]
     tr[
+        td[Data object]
+        td[Every entity must have a (name | name for multiple instances).]
+        td[Entity (multiple) name must have a length of at least two chars. Should have at least four 
+        chars.]
+    ]
+    tr[
+        td[Data object]
+        td[Entity (multiple) name must not contain underscores.]
+        td[Underscores are not allowed as they are used for class autoloading.]
+    ]
+    tr[
+        td[Data object]
+        td[Data object name must not be e[config].]
+        td[The generator creates a e[config] controller for handling configuration pages.]
+    ]
+    tr[
         td[Application with entities]
         td[The amount of data objects is getting quite high. Maybe it makes sense to split up the model 
         into two single applications.]
@@ -287,17 +303,6 @@ table[
         td[Application with with entities]
         td[Exactly one entity must be declared as leading (leading=true).]
         td[]
-    ]
-    tr[
-        td[Entity]
-        td[Every entity must have a (name | name for multiple instances).]
-        td[Entity (multiple) name must have a length of at least two chars. Should have at least four 
-        chars.]
-    ]
-    tr[
-        td[Entity]
-        td[Entity (multiple) name must not contain underscores.]
-        td[Underscores are not allowed as they are used for class autoloading.]
     ]
     tr[
         td[Entity with composite primary keys]
