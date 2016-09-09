@@ -31,6 +31,7 @@ ul[
     item[Special and only rarely required properties are hidden by default and can be displayed and hidden
     using a button (expert settings).]
     item[Added menu item for toggling full screen display.]
+    item[Added auto save functionality.]
     item[Relationships visualise whether they are unidirectional or bidirectional.]
     item[When creating relationships the source and target descriptions are automatically preset to the
     appropriate singular or plural names of corresponding entities.]
