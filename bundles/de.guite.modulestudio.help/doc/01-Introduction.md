@@ -1,0 +1,68 @@
+# Introduction
+
+## About ModuleStudio
+
+ModuleStudio (MOST) is a generative architecture for the Zikula Application Framework. Based on principles of Model-Driven Software Development (MDSD) the creation of modules is being abstracted to a new level.
+
+Thus, ModuleStudio is a development environment with which one can quickly, simply and efficiently describe and generate web applications. Software developers can create complex Zikula extensions in a few steps and meet individual project requirements with them.
+
+ModuleStudio rapidly simplifies the creation, maintenance and customisation of applications for Zikula. It speeds up this process and ensures quality of those applications at the same time. Applications can be designed or customised in a graphical editor and then the code is generated. In this way, the process is automated speeding up development time and quality many hundred fold. Maintenance and customisation also benefit from this process via graphical modeling and code generation. 
+
+Read more at this page: [What is ModuleStudio](http://modulestudio.de/en/product/what-is-modulestudio.html).
+
+*Replace coding by modeling and simplify your development!*
+
+## Benefits
+
+* **Development time/costs:** avoid wasting weeks for schematical and architecturally motivated code parts (so-called boilerplate code)!
+* **Maintainability:** your software is a model - easily changeable and cheaply maintainable! No more efforts for getting your modules up to date for new versions, just regenerate and merge the code!
+* **Code quality:** take profit from best practices and established patterns!
+* **Architectural compliance:** take most usage from powerful core frameworks and interfaces! Generated applications follow all APIs and guidelines automatically. This is a big step for avoiding unsecure and legacy extensions when the framework itself evolves!
+* **Reusability:** share and modify your models! Do not make the same work twice!
+* **Understandibility:** avoid having to cope with programming rules and framework details! Develop with general MVC (Model View Controller) terminology independent from technical stuff!
+
+More information can be found in these articles:
+
+* [Advantages of ModuleStudio](http://modulestudio.de/en/product/advantages-of-modulestudio.html)
+* [How MDSD reduces costs for long-term maintenance of comprehensive software system families](http://modulestudio.de/en/tutorial/how-mdsd-reduces-costs-for-long-term-maintenance-of-comprehensive-software-system-families.html)
+* [From scaffolding and UML to MDSD and DSL](http://modulestudio.de/en/tutorial/from-scaffolding-and-uml-to-mdsd-and-dsl.html)
+
+## About this manual
+
+This user manual is going to provide all required information to work with ModuleStudio. Furthermore it serves as a reference for all details of the generator. This document should be available in several formats:
+
+* help within ModuleStudio
+* online help on our website
+* pdf print version
+
+## Model layers
+
+A ModuleStudio model is divided into several submodels in order to separate concerns. This section shows the different layers and their role for the overall application. It is just a brief overview which does not explain single fields or settings in detail. This will be done in later chapters instead.
+
+### Application layer
+
+The application layer is the overall container where all sublayers are linked together. In addition it contains a bunch of application-wide properties with which general aspects are defined, like for example the name and the author of an application.
+
+### Data layer
+
+Each data layer defines a logical group of data structures for the application. This involves the following key concepts:
+
+* Entities
+* Entity fields
+* Join and inheritance relationships
+* Behavioural and functional extensions
+* Variables
+
+### Controller layer
+
+Each controller layer defines a logical group of use cases for the application. This involves the following key concepts:
+
+* Controllers
+* Controller actions
+* Action handlers
+* Action events
+* Transitions
+
+### Workflow layer
+
+The workflow layer is not implemented yet (planned for version 0.8). This section is just a dummy for future.

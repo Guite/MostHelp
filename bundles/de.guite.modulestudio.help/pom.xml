@@ -12,6 +12,13 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
+    <properties>
+        <help.documentTitle>ModuleStudio User's Guide</help.documentTitle>
+        <help.version>0.7.0</help.version>
+        <help.author>Axel Guckelsberger</help.author>
+        <help.copyright>(c) 2007-2016  ${help.author}</help.copyright>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
@@ -33,6 +40,8 @@
                             <excludes>
                                 <exclude>**/.gitignore</exclude>
                                 <exclude>**/*.css</exclude>
+                                <exclude>**/logo_help.*</exclude>
+                                <exclude>**/include_footer.html</exclude>
                             </excludes>
                         </fileset>
                         <fileset>
@@ -54,33 +63,28 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.fornax.toolsupport</groupId>
-                <artifactId>fornax-oaw-m2-plugin</artifactId>
-                <version>${fornax-oaw-m2-plugin.version}</version>
+                <!-- Documentation: http://maven.apache.org/plugins/maven-antrun-plugin/ -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>${maven-antrun-plugin.version}</version>
                 <executions>
                     <execution>
-                        <id>generate-help-artifacts</id>
+                        <id>generate-docs</id>
                         <phase>generate-sources</phase>
-                        <goals>
-                            <goal>run-workflow</goal>
-                        </goals>
                         <configuration>
-                            <force>true</force>
-                            <workflowEngine>mwe2</workflowEngine>
-                            <workflowDescriptor>src/workflow/GenerateHelpArtifacts.mwe2</workflowDescriptor>
+                            <target>
+                            	<property name="manual.title" value="${help.documentTitle}" />
+                            	<property name="manual.author" value="${help.author}" />
+                            	<property name="manual.version" value="${help.version}" />
+                            	<property name="manual.copyright" value="${help.copyright}" />
+                                <!-- pass maven classpath to ant -->
+                                <property name="compile_classpath" refid="maven.compile.classpath" />
+                                <ant target="generate-all-docs" inheritRefs="true" antfile="build-help.xml" />
+                            </target>
                         </configuration>
-                    </execution>
-                    <execution>
-                        <id>generate-pdf-manual</id>
-                        <phase>generate-sources</phase>
                         <goals>
-                            <goal>run-workflow</goal>
+                            <goal>run</goal>
                         </goals>
-                        <configuration>
-                            <force>true</force>
-                            <workflowEngine>mwe2</workflowEngine>
-                            <workflowDescriptor>src/workflow/GeneratePdf.mwe2</workflowDescriptor>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
@@ -99,7 +103,7 @@
                             <outputDirectory>${basedir}/contents/images</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>xdoc/images</directory>
+                                    <directory>doc/images</directory>
                                     <filtering>false</filtering>
                                 </resource>
                             </resources>
@@ -115,7 +119,7 @@
                             <outputDirectory>${basedir}/website/images</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>xdoc/images</directory>
+                                    <directory>doc/images</directory>
                                     <filtering>false</filtering>
                                 </resource>
                             </resources>
@@ -125,4 +129,11 @@
             </plugin>
         </plugins>
     </build>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.xmlgraphics</groupId>
+            <artifactId>fop</artifactId>
+	        <version>${apache-fop.version}</version>
+        </dependency>
+    </dependencies>
 </project>

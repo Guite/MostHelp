@@ -2,12 +2,10 @@
 <?NLS TYPE="org.eclipse.help.index"?>
 <index>
     <entry keyword="Validation">
-        <topic title="Validation"
-                  href="contents/40-Validation.html" />
+        <topic title="Validation" href="contents/Validation.html" />
     </entry>
     <entry keyword="Generator">
-        <topic title="Generator"
-                  href="contents/50-Generator.html" />
+        <topic title="Generator" href="contents/Generator.html" />
     </entry>
 <!-- 
     - multiple topic elements within an entry are possible

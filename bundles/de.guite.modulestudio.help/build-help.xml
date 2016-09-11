@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project name="de.guite.modulestudio.help" basedir="." default="generate-all-docs">
+<!--
+    Copyright (c) 2016 Axel Guckelsberger
+
+    Parts of this build were taken from Mitra2, Copyright (c) 2012 Jens von Pilgrim and others
+
+    Original file: https://github.com/jpilgrim/mitra2/blob/master/plugins/de.jevopi.mitra2.doc/build-help.xml
+
+    Documentation of ant tasks: http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.mylyn.wikitext.help.ui%2Fhelp%2FMarkup-Generation.html
+-->
+    <description>Generate ModuleStudio help content</description>
+    <!--
+        <echo message="compile classpath: ${compile_classpath}"/>
+    -->
+
+    <path id="wikitext.classpath">
+        <pathelement path="${compile_classpath}"/>
+    </path>
+    <taskdef classpathref="wikitext.classpath" resource="org/eclipse/mylyn/wikitext/core/ant/tasks.properties" />
+    <taskdef classpathref="wikitext.classpath" name="fop" classname="org.apache.fop.tools.anttasks.Fop"/>
+
+    <property name="source.dir" value="${basedir}/doc" />
+    <target name="generate-all-docs" depends="generate-help,generate-html,generate-pdf" description="Generates all types of documentation" />
+
+    <target name="generate-help" description="Generate Eclipse help from Markdown source">
+        <!-- merge source files to produce only one single toc file -->
+        <concat destfile="${source.dir}/ModuleStudio.md" append="false" fixlastline="yes">
+            <fileset dir="${source.dir}" includes="**/*.md" excludes="ModuleStudio.md" />
+        </concat>
+
+        <property name="help.dir" value="${basedir}/contents" />
+        <wikitext-to-eclipse-help
+            markupLanguage="Markdown"
+            validate="true"
+            failOnValidationError="true"
+            failOnValidationWarning="true"
+            overwrite="true"
+            sourceEncoding="UTF-8"
+            title="${manual.title} v${manual.version}"
+            multipleOutputFiles="true"
+            formatOutput="true"
+            navigationImages="true"
+            helpPrefix="contents"
+            defaultAbsoluteLinkTarget="_blank"
+            copyrightNotice="${manual.copyright}">
+            <fileset dir="${source.dir}" includes="**/ModuleStudio.md"/>
+            <!-- fileset dir="${source.dir}" includes="**/*.md"/ -->
+            <stylesheet url="${help.dir}/code.css"/>
+            <stylesheet url="${help.dir}/custom/styles.css"/>
+        </wikitext-to-eclipse-help>
+
+        <!-- move files into correct directory -->
+        <move todir="${help.dir}">
+            <fileset dir="${source.dir}">
+                <include name="*.xml"/>
+                <include name="*.html"/>
+            </fileset>
+        </move>
+
+        <!-- fix internal links -->
+        <replaceregexp match="&#34;(\d+)-" replace="&#34;" flags="g">
+            <fileset dir="${help.dir}" includes="**/*.html"/>
+        </replaceregexp>
+        <replace dir="${help.dir}" includes="**/*.html" token=".md" value=".html" />
+        <replace dir="${help.dir}" includes="**/*.html" token="GettingStarted.html" value="Getting-started.html" />
+        <replace dir="${help.dir}" includes="**/*.html" token="GeneratorReference.html" value="Generator-reference.html" />
+        <replace dir="${help.dir}" includes="**/*.html" token="Customisation.html" value="Customisation-and-maintenance.html" />
+
+        <!-- copy additional images -->
+        <copy todir="${help.dir}/images">
+            <fileset dir="${basedir}/icons">
+                <include name="*.gif"/>
+            </fileset>
+        </copy>
+
+        <delete file="${source.dir}/ModuleStudio.md" />
+    </target>
+
+    <target name="generate-html" description="Generate HTML docs from Markdown source">
+        <property name="website.dir" value="${basedir}/website" />
+        <wikitext-to-html
+            markupLanguage="Markdown"
+            validate="true"
+            failOnValidationError="true"
+            failOnValidationWarning="true"
+            overwrite="true"
+            sourceEncoding="UTF-8"
+            title="${manual.title} v${manual.version}"
+            multipleOutputFiles="true"
+            formatOutput="true"
+            navigationImages="true"
+            defaultAbsoluteLinkTarget="_blank"
+            copyrightNotice="${manual.copyright}">
+            <fileset dir="${source.dir}" includes="**/*.md"/>
+            <stylesheet url="${help.dir}/code.css"/>
+        </wikitext-to-html>
+
+        <!-- move files into correct directory -->
+        <move todir="${website.dir}">
+            <fileset dir="${source.dir}">
+                <include name="*.html"/>
+            </fileset>
+        </move>
+
+        <!-- fix internal links -->
+        <replace dir="${website.dir}" includes="**/*.html" token=".md" value=".html" />
+    </target>
+
+    <target name="generate-pdf" description="Generate PDF manual from Markdown source">
+        <!-- merge source files to produce only one single pdf file -->
+        <concat destfile="${source.dir}/ModuleStudio.md" append="false" fixlastline="yes">
+            <fileset dir="${source.dir}" includes="**/*.md" excludes="ModuleStudio.md" />
+        </concat>
+
+        <!-- fix internal links -->
+        <replaceregexp flags="g">
+            <regexp pattern="(\d+)-(\w+).md#(\w+)"/>
+            <substitution expression="#\3"/>
+            <fileset dir="${source.dir}" includes="ModuleStudio.md"/>
+        </replaceregexp>
+
+        <property name="pdf.dir" value="${basedir}/pdfmanual" />
+        <wikitext-to-xslfo
+            markupLanguage="Markdown"
+            validate="true"
+            failOnValidationError="true"
+            failOnValidationWarning="true"
+            sourceEncoding="UTF-8"
+            targetdir="${pdf.dir}"
+            title="${manual.title}"
+            subTitle="Get the MOST out of Zikula"
+            fontSize="10.0"
+            showExternalLinks="true"
+            underlineLinks="true"
+            pageBreakOnHeading1="true"
+            panelText="true"
+            version="Version ${manual.version}"
+            author="${manual.author}"
+            copyright="${manual.copyright}"
+            pageNumbering="true"
+            pageMargin="1.5"
+            pageHeight="29.7"
+            pageWidth="21.0"
+            generateBookmarks="true">
+            <fileset dir="${source.dir}" includes="**/ModuleStudio.md"/>
+        </wikitext-to-xslfo>
+
+        <!-- Documentation: https://xmlgraphics.apache.org/fop/trunk/anttask.html -->
+        <fop format="application/pdf" outdir="${pdf.dir}" force="true" messagelevel="info">
+            <fileset dir="${pdf.dir}" includes="**/*.fo"/>
+        </fop>
+
+        <delete file="${source.dir}/ModuleStudio.md" />
+        <delete>
+            <fileset dir="${pdf.dir}" includes="**/*.fo"/>
+        </delete>
+    </target>
+</project>

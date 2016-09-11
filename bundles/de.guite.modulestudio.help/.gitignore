@@ -1,8 +1,10 @@
 bin
 /pdfmanual
 /website
-/contents
-/images
+/contents/*.html
+/contents/*.xml
+/contents/images/
+/helpimages
 *.java._trace
 *.xtendbin
 target/

@@ -3,7 +3,7 @@
 <plugin>
     <!-- enable help -->
     <extension point="org.eclipse.help.toc">
-       <toc file="contents/toc.xml" primary="true" />
+       <toc file="contents/ModuleStudio-toc.xml" primary="true" />
     </extension>
 
     <!-- enable help index -->
