@@ -93,7 +93,6 @@
             defaultAbsoluteLinkTarget="_blank"
             copyrightNotice="${manual.copyright}">
             <fileset dir="${source.dir}" includes="**/*.md"/>
-            <stylesheet url="${help.dir}/code.css"/>
         </wikitext-to-html>
 
         <!-- move files into correct directory -->
