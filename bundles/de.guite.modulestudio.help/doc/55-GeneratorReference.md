@@ -59,8 +59,8 @@ Specifies the Zikula version for which the application should be generated.
 Can be one of the following options:
 
 * `ZK20` - Targets Zikula 2.0.0 and later. This is not supported yet and will currently be treated like `ZK14`.
-* `ZK14` - Targets Zikula 1.4.3 and later. This is the default value and useful when developing for future. Generated applications support the forward compatibility layer using 2.0.0 technology.
-* `ZKPRE14` - Targets Zikula 1.4.3 and later; legacy alias for `ZK14`.
+* `ZK14` - Targets Zikula 1.4.4 and later. This is the default value and useful when developing for future. Generated applications support the forward compatibility layer using 2.0.0 technology.
+* `ZKPRE14` - Targets Zikula 1.4.4 and later; legacy alias for `ZK14`.
 * `ZK136` - Targets Zikula 1.3.10 and earlier. This is for backwards compatibility and useful when maintaining extensions in production. Although using this raises a deprecated warning you can still work with this until a future version.
 * `ZK135` - Targets Zikula 1.3.10 and earlier; legacy alias for `ZK136`.
 
