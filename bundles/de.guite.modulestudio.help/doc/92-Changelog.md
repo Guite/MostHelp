@@ -66,11 +66,12 @@
 * Editing time fields is now supported by a dedicated form plugin. Also for date fields there is a new selector (#87).
 * In 1.4 applications annotations are used to distinguish between admin and user areas in entity controllers (#633).
 * The `postInstall` event newly introduced in Zikula 1.4 is supported.
+* Custom admin image and Scribite editor plugin images are dynamically generated (#458).
 * The primary variable name for search terms has been changed to `q` for improved integration with analytics software.
 * For the generated templates YAML example files with example overrides are pregenerated for easy copy n paste (#460).
 * In 1.4 applications `RouteUrl` and `UrlInterface` are now used instead of the `ModUrl` class.
 * The `maxLength` property of text fields are now reflected in the generated form field properly.
-* Generation of MultiHook needles has been added (together with a new generator setting for that).
+* Generation of MultiHook needles has been added (together with a new generator setting for that) (#13).
 * Many minor bugfixes.
 * For more details see [closed tickets on Github](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.0).
 
