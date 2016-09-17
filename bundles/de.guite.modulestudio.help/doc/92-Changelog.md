@@ -22,6 +22,7 @@
 * Special and only rarely required properties are hidden by default and can be displayed and hidden using a button (expert settings).
 * Added menu item for toggling full screen display.
 * Added auto save functionality.
+* Added new property view (experimental) in addition to the traditional one.
 * Relationships visualise whether they are unidirectional or bidirectional.
 * When creating relationships the source and target descriptions are automatically preset to the appropriate singular or plural names of corresponding entities.
 * Documentation is now based on Markdown.
@@ -69,6 +70,7 @@
 * For the generated templates YAML example files with example overrides are pregenerated for easy copy n paste (#460).
 * In 1.4 applications `RouteUrl` and `UrlInterface` are now used instead of the `ModUrl` class.
 * The `maxLength` property of text fields are now reflected in the generated form field properly.
+* Generation of MultiHook needles has been added (together with a new generator setting for that).
 * Many minor bugfixes.
 * For more details see [closed tickets on Github](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.0).
 

@@ -86,6 +86,7 @@ A settings container has the following fields:
 * **generateExternalControllerAndFinder** - A boolean specifying whether a controller for external calls providing a generic finder component should be generated or not. Default value is `true`.
 * **generateScribitePlugins** - A boolean specifying whether support for several Scribite editors should be generated or not. Requires external controller with finder component. Default value is `true`.
 * **generateTagSupport** - A boolean specifying whether tag support should be generated or not. Requires user or admin controller containing a display action. Default value is `true`.
+* **generateMultiHookNeedles** - A boolean specifying whether MultiHook needles should be generated or not. Default value is `true`.
 * **generateRssTemplates** - A boolean specifying whether rss view templates should be generated or not. Default value is `true`.
 * **generateAtomTemplates** - A boolean specifying whether atom view templates should be generated or not. Default value is `true`.
 * **generateCsvTemplates** - A boolean specifying whether csv view templates should be generated or not. Default value is `true`.
