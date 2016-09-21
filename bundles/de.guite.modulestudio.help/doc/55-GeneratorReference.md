@@ -472,10 +472,28 @@ Represents a field type for storing upload files.
 An upload field has the following properties in addition to the common [abstract string field](#abstract-string-field) settings:
 
 * **allowedExtensions** - List of file extensions to be accepted during the upload, separated by a comma with a space char. Default value is `gif, jpeg, jpg, png`.
-* **allowedFileSize** - Maximum file size in bytes. Default is `0` for no limit.
+* **allowedFileSize** - Maximum file size in bytes. Default is `0` for no limit. *This setting is deprecated in favour of `maxSize`. 
 * **length** - The length of this field. Default value is `255`.
+* **maxSize** - A string for a maximum file size. Default is an empty string for no limit. Examples: `4096` (bytes), `200k` (kilobytes), `2M` (megabytes), `32Ki` (kikibytes), `8Mi` (mebibytes). Read more about that [here](https://symfony.com/doc/current/reference/constraints/File.html#maxsize).
+* **mimeTypes** - A string containing a comma separated list of allowed mime types. Default is `image/*`. Example: `application/pdf, application/x-pdf`. Only applicable for the 1.4 target core version.
+* **multiple** - A boolean specifying whether this field allows multiple files or not. Default value is `false`. Only applicable for the 1.4 target core version. Note the UI has not been completely adapted for this yet (see [#123](https://github.com/Guite/MostGenerator/issues/123)).
 * **namingScheme** - Defines how uploaded files [are named](#upload-naming-scheme). Default value is `ORIGINALWITHCOUNTER`.
 * **subFolderName** - Name of sub folder for storing uploaded files. If this is empty (default) the field name will be used as folder name.
+
+Image-specific settings (use **only** if you did not change `allowedExtensions`):
+
+* **minWidth** - An integer for a minimum width. Default is `0` for no constraint. If set, the width of the image file must be greater than or equal to this value in pixels.
+* **maxWidth** - An integer for a maximum width. Default is `0` for no constraint. If set, the width of the image file must be less than or equal to this value in pixels.
+* **minHeight** - An integer for a minimum height. Default is `0` for no constraint. If set, the height of the image file must be greater than or equal to this value in pixels.
+* **maxHeight** - An integer for a maximum height. Default is `0` for no constraint. If set, the height of the image file must be less than or equal to this value in pixels.
+* **minRatio** - A float for a minimum aspect ratio (width / height). Default is `0.00` for no constraint. If set, the aspect ratio of the image file must be greater than or equal to this value.
+* **maxRatio** - A float for a maximum aspect ratio (width / height). Default is `0.00` for no constraint. If set, the aspect ratio of the image file must be less than or equal to this value.
+* **allowSquare** - A boolean specifying whether square dimension is allowed or not. Default value is `true`. If this option is `false`, the image cannot be a square. If you want to force a square image, then set `allowLandscape` and `allowPortrait` both to `false`.
+* **allowLandscape** - A boolean specifying whether landscape dimension is allowed or not. Default value is `true`. If this option is `false`, the image cannot be landscape oriented. 
+* **allowPortrait** - A boolean specifying whether portrait dimension is allowed or not. Default value is `true`. If this option is `false`, the image cannot be portrait oriented.
+* **detectCorrupted** - A boolean specifying whether image contents are validated or not. Default value is `false`. If this option is `true`, the image contents are validated to ensure that the image is not corrupted. This validation is done with PHP's [imagecreatefromstring](http://php.net/manual/en/function.imagecreatefromstring.php) function, which requires the [PHP GD extension](http://php.net/manual/en/book.image.php) to be enabled. **Note:** as this property has been introduced in Symfony 3.1, it is not used in the generator yet. It is going to be activated for the 2.0 target in future (see [#799](https://github.com/Guite/MostGenerator/issues/799)).
+
+All image settings are only applicable for the 1.4 target core version.
 
 In [edit pages](#edit-action) the generator will use upload input elements. If a field is mandatory the upload will be required when creating a new entity, but not when editing an existing one. If a field is optional (not mandatory) then it will be possible to delete existing uploads on editing.
 

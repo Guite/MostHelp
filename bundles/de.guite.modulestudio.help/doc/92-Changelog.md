@@ -45,6 +45,10 @@
 * Text variables have a new `multiline` property to separate single-lined text fields and text areas (#722).
 * A new generator setting allows control over whether the ModuleStudio version should be part of the top docblock for all generated files or only for the Version class (#627).
 * Entities contain controller actions now, like any other controller elements. Therewith you can control for each entity which use cases apply.
+* The `allowedFileSize` property of upload fields has been deprecated. Please use `maxSize` instead (#541).
+* Upload fields can now specify allowed `maxSize` and `mimeTypes` (#541).
+* Upload fields can now be set to `multiple` to allow multiple files at once (#541, #123). 
+* Upload fields for images can now specify many image-specific constraints in addition (`minWidth`, `maxWidth`, `minHeight`, `maxHeight`, `minRatio`, `maxRatio`, `allowSquare`, `allowLandscape`, `allowPortrait`, `detectCorrupted`) (#541).
 * Replaced entity property `mappedSuperClass` by a dedicated language element.
 * Application property `applicationType` has been removed.
 * Moved data layer elements into main editor.

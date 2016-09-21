@@ -241,7 +241,13 @@ This section includes rules which apply only for datetime, date and time fields.
 #### Upload fields
 
 * The `allowed extensions` attribute must contain a comma separated list of the file types to be allowed during the upload (example: `gif, jpeg, jpg, png`). Note that the separator is `', '` including the space char.
+* The `allowedFileSize` attribute must not have a value lower than 0.
+* The `allowedFileSize` attribute is deprecated and will be removed in a future version. Please use `maxSize` instead.
 * There must not exist a field named `fooMeta` because this is reserved for an automatic field storing meta data for this upload.
+* Minimum image width must not be larger than maximum image width.
+* Minimum image height must not be larger than maximum image height.
+* Minimum image aspect ratio must not be larger than maximum image aspect ratio.
+* Either square or landscape or portrait images must be allowed.
 
 #### List fields
 
