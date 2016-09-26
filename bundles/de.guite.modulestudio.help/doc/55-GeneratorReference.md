@@ -199,32 +199,30 @@ Normally all created classes are generated twice. Thereby an empty concrete clas
 
 Example for Zikula 1.4.x:
 
-    namespace MyModule\Entity\Validator\Base;
+    namespace MyModule\Entity\Base;
 
-    class Person extends \MyModule\Validator
+    abstract class AbstractPersonEntity
     {
         // generator code
     }
 
-    namespace MyModule\Entity\Validator;
+    namespace MyModule\Entity;
 
-    use MyModule\Entity\Validator\Base\Person as BasePerson;
+    use MyModule\Entity\Base\AbstractPersonEntity;
 
-    class Person extends BasePerson
+    class PersonEntity extends AbstractPersonEntity
     {
         // manual code
     }
 
 Example for Zikula 1.3.x:
 
-        class MyModule_Entity_Validator_Base_Person
-            extends MyModule_Validator
+        abstract class MyModule_Entity_Base_AbstractPerson
         {
             // generator code
         }
 
-        class MyModule_Entity_Validator_Person
-            extends MyModule_Entity_Validator_Base_Person
+        class MyModule_Entity_Person extends MyModule_Entity_Base_AbstractPerson
         {
             // manual code
         }
@@ -962,43 +960,40 @@ As explained in the [entity section](#entity-class-structure) all generated conc
 
 Example for Zikula 1.4.x:
 
-    namespace MyModule\Entity\Validator\Base;
+    namespace MyModule\Entity\Base;
 
-    class Person extends \MyModule\Validator
+    abstract class AbstractPersonEntity
     {
         // generator code
     }
 
-    namespace MyModule\Entity\Validator;
+    namespace MyModule\Entity;
 
-    class Person extends Base\Person
+    class PersonEntity extends Base\AbstractPersonEntity
     {
         // manual code
     }
 
-    namespace MyModule\Entity\Validator;
+    namespace MyModule\Entity;
 
-    class Customer extends Person
+    class CustomerEntity extends PersonEntity
     {
         // manual code
     }
 
 Example for Zikula 1.3.x:
 
-    class MyModule_Entity_Validator_Base_Person
-        extends MyModule_Validator
+    abstract class MyModule_Entity_Base_AbstractPerson
     {
         // generator code
     }
 
-    class MyModule_Entity_Validator_Person
-        extends MyModule_Entity_Validator_Base_Person
+    class MyModule_Entity_Person extends MyModule_Entity_Base_AbstractPerson
     {
         // manual code
     }
 
-    class MyModule_Entity_Validator_Customer
-        extends MyModule_Entity_Validator_Person
+    class MyModule_Entity_Customer extends MyModule_Entity_Person
     {
         // manual code
     }

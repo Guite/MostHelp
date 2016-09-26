@@ -15,7 +15,7 @@ A very simple example will make this clear very quickly:
      * @ORM\Entity ...
      * some more annotations
      */
-    class MyModule_Entity_Person extends Zikula_EntityAccess
+    class Person
     {
         /**
          * imagine some long comments about this field here
