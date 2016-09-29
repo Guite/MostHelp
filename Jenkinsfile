@@ -1,5 +1,8 @@
 #!groovy
 
+import java.nio.file.Files
+import java.nio.file.Paths
+
 node {
     def linkProductRepo = true
     def repoBase = 'https://github.com/Guite/'
@@ -17,6 +20,8 @@ node {
 
     try {
         builder.init(projectName, repoUrl, linkProductRepo)
+
+        Files.copy(Paths.get('scm/bundles/de.guite.modulestudio.help/website'), Paths.get('/var/lib/jenkins/jobs/MOST-5 Deploy-Help/workspace/help'))
 
         postProcessor.finish(repoUrl, artifacts, downstreamJobs);
     } catch (exception) {
