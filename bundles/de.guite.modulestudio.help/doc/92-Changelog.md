@@ -76,6 +76,7 @@
 * In 1.4 applications `RouteUrl` and `UrlInterface` are now used instead of the `ModUrl` class.
 * The `maxLength` property of text fields are now reflected in the generated form field properly.
 * Generation of MultiHook needles has been added (together with a new generator setting for that) (#13).
+* For upload fields with images additional settings are generated allowing to enable automatic shrinking of too large images down to configurable maximum dimensions (#800).
 * Many minor bugfixes.
 * For more details see [closed tickets on Github](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.0).
 

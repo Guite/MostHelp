@@ -500,6 +500,8 @@ it is shown instead of a text link (on edit pages too by the way).
 
 If an application has any upload fields the generator creates an additional helper class containing methods for image processing. The generated application uses it to create and store thumbnails on demand with the help of the Imagine library which is included in the Zikula core. There is a view modifier available which works together with the mentioned helper class and understands many parameters to use arbitrary images in the templates.
 
+For upload fields with images there are additional settings generated at the configuration page. These allow enabling automatic shrinking of too large images down to configurable maximum dimensions.
+
 For every upload field `foo` there will be another [array field](#array-field) created which is named `fooMeta`. This field stores some meta information about the uploaded files for convenience, like the file size, the image format (`portrait`, `landscape`, `square`) and the image dimensions.
 
 #### Upload naming scheme
