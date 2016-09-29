@@ -1,15 +1,12 @@
 #!groovy
 
-import java.nio.file.Files
-import java.nio.file.Paths
-
 node {
     def linkProductRepo = true
     def repoBase = 'https://github.com/Guite/'
     def projectName = 'MostHelp'
     def repoUrl = repoBase + projectName + '/'
     def downstreamJobs = ['MOST-5 Deploy-Help', 'MOST-1_Prepare-9_Locales']
-    def artifacts = '**/releng/**/target/repository/**'
+    def artifacts = '**/releng/**/target/repository/**,**/bundles/de.guite.modulestudio.help/website/**'
 
     def builder, postProcessor
     stage 'Init'
@@ -20,8 +17,6 @@ node {
 
     try {
         builder.init(projectName, repoUrl, linkProductRepo)
-
-        Files.copy(Paths.get('scm/bundles/de.guite.modulestudio.help/website'), Paths.get('/var/lib/jenkins/jobs/MOST-5 Deploy-Help/workspace/help'))
 
         postProcessor.finish(repoUrl, artifacts, downstreamJobs);
     } catch (exception) {
