@@ -10,6 +10,12 @@ Simply download the archive for your operating system and extract it inside your
 
 Note ModuleStudio 0.6.2 requires Java in at least version 7. If no JRE (Java Runtime Environment) is found on your system path, a dialog appears and you are suggested to download and install the JRE before starting ModuleStudio.
 
+### Additional notes for Windows 8 and later
+
+If you enabled the SmartScreen protection starting ModuleStudio will open a blocking window showing the following error message: `Windows SmartScreen prevented an unrecognized program from starting. Running this program might put your PC at risk`.
+
+This does not mean that ModuleStudio includes any kind of malware. Instead this message is only caused by the fact that the executable file is not digitally signed using a certificate yet. To start ModuleStudio nevertheless you should be able to use the right mouse button and choose `allow`. If this is not available click on the `More info` link and on the `Run anyway` button afterwards.
+
 ### Additional notes for MacOSX
 
 If ModuleStudio does not start but fails with an error please check the created error log file. In case it contains lines like `!MESSAGE Missing required capability Require-Capability: osgi.ee; filter="(&(osgi.ee=JavaSE)(version=1.7))` then the system is not using Java (Standard Edition) 7. To verify this open a console and type: `java -version`. If Java 7 is used in your system by default the output should show something starting with 1.7.x.
