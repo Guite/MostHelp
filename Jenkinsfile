@@ -6,7 +6,7 @@ node {
     def projectName = 'MostHelp'
     def repoUrl = repoBase + projectName + '/'
     def downstreamJobs = ['MOST-5 Deploy-Help', 'MOST-1_Prepare-9_Locales']
-    def artifacts = '**/releng/**/target/repository/**,**/bundles/de.guite.modulestudio.help/website/**'
+    def artifacts = '**/releng/**/target/repository/**,**/bundles/de.guite.modulestudio.help/website/**,**/bundles/de.guite.modulestudio.help/pdfmanual/*.pdf'
 
     def builder, postProcessor
     stage('Init') {
