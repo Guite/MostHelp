@@ -35,5 +35,5 @@ This chapter collects links to several manuals and further documentation you wil
 
 ### Zikula
 
-* https://github.com/zikula/core/tree/1.4/src/docs/Core-2.0
-* https://github.com/zikula/core/issues/2503
+* [Core 2.0 Docs](https://github.com/zikula/core/tree/1.4/src/docs/Core-2.0)
+* [Issue about different docs locations](https://github.com/zikula/core/issues/2503)
