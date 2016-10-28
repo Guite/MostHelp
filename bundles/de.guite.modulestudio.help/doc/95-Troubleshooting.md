@@ -4,39 +4,7 @@
 
 This sections collects information snippets which may be helpful when running into problems.
 
-## General hints
-
-### Pathes with space chars
-
-Eclipse has problems with pathes containing space chars. Therefore avoid spaces to ensure things work correctly.
-
 ## Tooling problems
-
-### Boolean properties can't be unset
-
-Due to a bug it can happen that unsetting a boolean flag will not be persisted in the model file. To work around this please remove the flag using a text editor.
-
-### I can't open my model again
-
-When reopening a model does not work, but just an empty editor tab is shown, something in the workspace data became stale or corrupt. To fix this please delete the folder named `MostWorkspace` in your user 
-directory.
-
-See also [ticket 254](https://github.com/Guite/MostGenerator/issues/254) for some information about that problem.
-
-### The diagram looks broken
-
-If model and diagram do not fit together anymore (which can happen when the model language evolved) you see something like the following.
-
-![Broken diagram](images/screen_brokendiagram.jpg "Broken diagram")
-
-This is no big problem though as you can create a new diagram for your application model with ease:
-
-1. Close the model
-2. Delete the `.mostdiagram` file
-3. Select *File -> Initialize diagram file* in the main menu
-4. Choose the `.mostapp` file
-5. Click on the *Next* button
-6. Click on the *Finish* button
 
 ### I can't save my model
 
@@ -44,20 +12,9 @@ If you get an error message when trying to save your model this means that it is
 
 For example if you have two entities and a relationship between them then all both entities need a name. Otherwise the relationship can not store it's source or target references.
 
-To fix this just ensure that all existing elements have a name. In a later version the ModuleStudio tooling is going to get more support for setting sensitive default values to overcome this issue, but this feature addition has no high priority at the moment.
-
-## Migration problems
-
-### Migrating my existing model causes an error
-
-Before converting your existing model make sure that you have removed any account controller and search controller elements in MOST 0.5.4.
+To fix this just ensure that all existing elements have a name. Since ModuleStudio version 0.7.0 this is actively supported by setting sensitive default values when adding new elements.
 
 ## Generation problems
-
-### Unable to find workflow file
-
-If you get this error you have generated an application for Zikula 1.3.x which contains a small bug that is fixed in 1.3.7 and above.
-Please apply the fix shown in [https://github.com/zikula/core/commit/f7e3379e7060859aab334be6707fe6e0ab61baf8](https://github.com/zikula/core/commit/f7e3379e7060859aab334be6707fe6e0ab61baf8) in order to fix the error.
 
 ### Orphan removal with many-to-many relations
 
@@ -85,6 +42,15 @@ Note you must call this for all fetched entities, not for new ones (as the call 
 
 This solution approach is a bit ugly, because we require you (the mod dev) calling this explicitly from the using code. If you forget it in a certain method workflows are not initialised properly. Of course this will be improved again as soon as Doctrine 2 offers the new event which happens really *post* fetch.
 
-### Patch for category selector
+There is also a new [workflow component](http://symfony.com/blog/new-in-symfony-3-2-workflow-component) offered since Symfony 3.2. We are probably going to incorporate this into Zikula (see [core ticket #2423](https://github.com/zikula/core/issues/2423)) which might solve this issue, too.
+
+### Earlier Zikula 1.3.x versions
+
+#### Unable to find workflow file
+
+If you get this error you have generated an application for Zikula 1.3.x which contains a small bug that is fixed in 1.3.7 and above.
+Please apply the fix shown in [https://github.com/zikula/core/commit/f7e3379e7060859aab334be6707fe6e0ab61baf8](https://github.com/zikula/core/commit/f7e3379e7060859aab334be6707fe6e0ab61baf8) in order to fix the error.
+
+#### Patch for category selector
 
 Due to a bug in the category selector in Zikula 1.3.5 and 1.3.6 (solved in 1.3.7 and above) you will run into problems when trying to save an entity with categories. To solve this just merge the fix shown in [https://github.com/zikula/core/pull/1561/files](https://github.com/zikula/core/pull/1561/files) and you are done.
