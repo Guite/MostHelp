@@ -39,6 +39,8 @@ The workflow layer is not implemented yet (planned for version 0.8). This sectio
 Beginning with ModuleStudio 0.6.0 there is also a textual syntax notation available. Not visible
 at once, it will be integrated into the UI step by step.
 
+*Expert tip:* you can use the textual editor already if you like: open the *Open resource* dialog using **Ctrl + Shift + R**, type `*.mostapp` into the filter field and click on the *Open* button.
+
 ## Useful hints
 
 Here are some tutorial showing special abilities for certain use cases:
@@ -52,6 +54,10 @@ Here are some tutorial showing special abilities for certain use cases:
 ### General keyboard shortcuts
 
 * **F1** - Opens the help system.
+* **Ctrl + E** - Display a filterable list of open editors.
+* **Ctrl + Shift + E** - Display the *Switch to Editor* dialog.
+* **Ctrl + F6** - Display a list of open editors.  
+* **Ctrl + PgUp / Ctrl + PgDown** - Navigate to previous / next editor tab.
 
 ### Keyboard shortcuts in graphical editors
 
@@ -65,25 +71,34 @@ If one has selected a palette tool and creates an object in the diagram it is us
 
 The following list shows some basic commands which might be helpful when using the textual editors.
 
-* **Alt-Up / Alt-Down** - Move current line or selection one line up / down.
-* **Alt-Left / Alt-Right** - Go back / forward in the history of editors.
-* **Alt-Shift-Up / Alt-Shift-Down** - Expand selection to containing element.
-* **Alt-Shift-R** - Rename current element as well as all other occurences.
-* **F3 or Ctrl-MouseClick** - Follow reference under cursor.
-* **Ctrl-Up / Ctrl-Down** - Scroll one line up / down.
-* **Ctrl-PgUp / Ctrl-PgDown** - Activate previous / next editor tab.
-* **Ctrl-0** - Pop up outline for easy navigation and filtering.
-* **Ctrl-1** - Quick fix of errors.
-* **Ctrl-/** - Toggle comment for line or selection.
-* **Ctrl-Space** - Start content assist suggesting possible values.
-* **Ctrl-D** - Delete current line.
-* **Ctrl-L** - Go to a certain line.
-* **Ctrl-M** - Maximize current editor window.
-* **Ctrl-W** - Close current editor tab.
-* **Ctrl-Q** - Go to last edit location.
-* **Ctrl-Shift-F** - Start the source code formatter.
-* **Ctrl-Shift-G** - Find references to current element.
-* **Ctrl-Shift-F3** - Locate a certain element.
+* **Alt + Up** and **Alt + Down** - Move current line or selection one line up / down.
+* **Alt + Left** and **Alt + Right** - Go back / forward in the history of editors.
+* **Alt + Shift + Up** and **Alt + Shift + Down** - Expand selection to containing element.
+* **Alt + Shift + R** - Rename current element as well as all other occurences.
+* **F3 or Ctrl + MouseClick** - Follow reference under cursor.
+* **Ctrl + Up** and **Ctrl + Down** - Scroll one line up / down.
+* **Ctrl + 0** - Pop up outline for easy navigation and filtering.
+* **Ctrl + 1** - Quick fix of errors.
+* **Ctrl + Shift + C** - Single line comment/uncomment.
+* **Ctrl + Shift + /** and **Ctrl + Shift + \** - Block comment/uncomment.
+* **Ctrl + /** - Toggle comment for line or selection.
+* **Ctrl + Space** - Start content assist suggesting possible values.
+* **Ctrl + D** - Delete current line.
+* **Ctrl + L** - Go to a certain line.
+* **Ctrl + M** - Maximize current editor window.
+* **Ctrl + W** - Close current editor tab.
+* **Ctrl + Q** - Go to last edit location.
+* **Ctrl + Shift + F** - Start the source code formatter.
+* **Ctrl + Shift + G** - Find references to current element.
+* **Ctrl + Shift + F3** - Locate a certain element.
+* **Ctrl + ,** and **Ctrl + .** - Navigate between markers in the current editor.
+* **Alt + ←** and **Alt + →** - Go to previous or next edit positions from the editor history list.
+* **Ctrl + O** - Quick outline (select editors only).
+* **Ctrl + J** - Incremental find. Note: Just press **Ctrl + J** and start typing the search text. Eclipse finds and highlights the next match as you type. Use **Up** or **Down** Arrow keys to jump to the next or previous match.
+* **Ctrl + L** - Go to line from editor.
+* **Ctrl + Q** - Go to last edit location.
+* **Ctrl + Shift + P** - Navigate to matching bracket/brace.
+
 
 ## Textual Grammar
 
