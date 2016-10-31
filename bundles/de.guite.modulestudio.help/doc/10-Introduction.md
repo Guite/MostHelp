@@ -2,11 +2,9 @@
 
 ## About ModuleStudio
 
-ModuleStudio (MOST) is a generative architecture for the Zikula Application Framework. Based on principles of Model-Driven Software Development (MDSD) the creation of modules is being abstracted to a new level.
+ModuleStudio (MOST) is a development environment for quick, simple and efficient creation of extensions for the Zikula Application Framework. Based on principles of Model-Driven Software Development (MDSD) it allows to describe web applications with a slim and long-living model. Software developers can create complex Zikula extensions in a few steps and meet individual project requirements with them.
 
-Thus, ModuleStudio is a development environment with which one can quickly, simply and efficiently describe and generate web applications. Software developers can create complex Zikula extensions in a few steps and meet individual project requirements with them.
-
-ModuleStudio rapidly simplifies the creation, maintenance and customisation of applications for Zikula. It speeds up this process and ensures quality of those applications at the same time. Applications can be designed or customised in a graphical editor and repeatedly generate their source code. In this way, the process is automated speeding up development time and quality many hundred fold. Maintenance and customisation also benefit from this process via graphical modeling and code generation. 
+ModuleStudio rapidly simplifies the creation, maintenance and customisation of applications for Zikula. It speeds up this process and ensures quality of those applications at the same time. Developers can design or customise application models in a graphical editor and repeatedly generate source code. In this way, the process is automated speeding up development time and quality many hundred fold. Maintenance and customisation also benefit from this process via graphical modeling and code generation. 
 
 Read more at this page: [What is ModuleStudio](http://modulestudio.de/en/product/what-is-modulestudio.html).
 

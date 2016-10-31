@@ -4,77 +4,36 @@ This chapter explains the first steps required for starting creating application
 
 For now we refer only to existing tutorials as they describe things still quite well.
 
-## Installation
+## Create your first application in 10 minutes
 
-Simply download the archive for your operating system and extract it inside your home directory. You can also choose any other directory, but your user needs to have write access to it. Otherwise the automatic update functionality will not work correctly. As it seems Eclipse has problems with pathes containing space chars, avoid spaces in the directory path to ensure things work correctly.
+This chapter shows how easy it is to define and generate Zikula applications with ModuleStudio. It shows the overall idea in a quick tour, using an example model. So let's do a module together!
 
-Afterwards you are ready to start the ModuleStudio executable.
+1. Create a new model project using the *New app* icon in the dashboard view or the *File > New application* main menu entry. This opens a wizard dialog.
+2. Enter a project name like *FirstExample* and click on the *Next* button.
 
-ModuleStudio 0.7.0 and later requires Java 8, but includes it already. So it should start also if you have an older version or no Java installed at all.
+![Create a new model project](images/tour_newproject.png "Create a new model project")
 
-### Additional notes for Windows
+3. Enter some basic information for your application, like vendor and application name as well as some details about you. The last field is a prefix for the database tables of your application which helps avoiding name collisions if you use several Zikula modules together. Afterwards click on the *Finish* button.
 
-Because Windows has a limit of 260 characters for pathes, do not choose a too nested directory, but ideally a simple path like `C:\ModuleStudio\`.
+![Enter basic application settings](images/tour_application_settings.png "Enter basic application settings")
 
-If you use Windows 8 or later and enabled the SmartScreen protection starting ModuleStudio will open a blocking window showing the following error message: `Windows SmartScreen prevented an unrecognized program from starting. Running this program might put your PC at risk`.
+4. Now ModuleStudio creates a new project and therein a new model. This model will already contain some common basic container elements for illustration so that you can directly proceed with changing them in order to describe your application in detail.
 
-This does not mean that ModuleStudio includes any kind of malware. Instead this message is only caused by the fact that the executable file is not digitally signed using a certificate yet. To start ModuleStudio nevertheless you should be able to use the right mouse button and choose `allow`. If this is not available click on the `More info` link and on the `Run anyway` button afterwards.
+![The initial model](images/tour_initial_model.png "The initial model")
 
-### Additional notes for Linux and MacOSX
+5. To start the generator we use the *File > Generate application* main menu entry. Choose an empty target folder (create a new one if needed) and confirm the dialogs. After a short wait, the Zikula application is ready.
 
-Make sure to include the -p flag if you extract the `.tar.gz` to keep the correct permissions (for example: `tar -xpzvf ModuleStudio-linux.gtk.x86_64.tar.gz`).
-
-## First tour
-
-### Creating a new model
-
-First thing you may want to do after starting the ModuleStudio application is creating a new model. Therefore start the e[new application wizard] using the dashboard view or the *File* main menu. It allows you to enter some basic information, like vendor and application name, in a simple form. After that it creates a new project and therein a new model. This model will already contain some common basic container elements for illustration so that you can directly proceed with changing them in order to describe your application in detail.
-
-Please see [this tutorial](http://modulestudio.de/en/tutorial/the-first-zikula-application-in-10-minutes.html) for getting the overall idea.
-*TODO replace this link by a similar tutorial -> Let’s do a module together*
-
-There is also a dedicated chapter in this manual collecting [additional web resources](97-Resources.md).
-
-### Open existing models
-
-Projects which have been created before can simply be opened again by selecting them in a list presented in a dialog. 
-
-#### Importing model files
-
-To import an existing model use the corresponding menu or dashboard action. The model will be migrated to the current DSL version and imported into a new project automatically. The name of this project is determined from the file name. So if you want to duplicate a model you need to rename the file before importing it. Otherwise you will see an error message because the project does already exist.
-
-#### Migrating old modules
-
-If you want create a new model for an existing legacy module using DBUtil you can follow the following procedure.
-
-1. First get the file *pntablesToXML.php* from [GitHub](https://github.com/zikula/core/blob/1.4.3/tools/pntablesToXML.php).
-2. Use this script to convert your old `pntables.php` file into an xml file.
-3. Inside ModuleStudio use the menu entry *File > Open model > Import xml table definition* which will open a file selection dialog. Choose the xml file you just created. As a result you will get a new application model in the `MOST_output/yourmod.mostapp` file.
-4. Now import this model using the corresponding menu or dashboard action.
-5. In the data editor remove unneeded elements, like table prefixes and default identifier fields, that are primary and foreign keys.
-6. Follow validation messages to get remaining stuff sorted properly.
-
-Example import results:
-
-![Admin module](images/import_admin.png "Admin module")
-
-![News module](images/import_news.png "News module")
-
-![Content module](images/import_content.png "Content module")
-
-#### Samples
-
-There are some sample models contained in the `examples` folder inside ModuleStudio.
-
-You can also download them from [the examples project](https://github.com/Guite/MostExamples) on GitHub.
+![Generated artifacts](images/tour_generation_results.png "Generated artifacts")
 
 ## Further helpful pointers for starting
 
 Here are some remarks for getting into ModuleStudio smoothly.
 
-* Each application is being represented by a model. Each project consists of two files: a domain model (`*.mostapp`) and a representation (`*.representation`). The first one is the important thing containing all information relevant for further processing like model-to-model and model-to-code transformations. The representation information is only cosmetical and not neccessary. So if you want to exchange models, only the domain model is needed which can be imported into a new project again anytime.
+* Every application is described and represented by a model. Each project consists of two files: a domain model (`*.mostapp`) and a representation (`*.representation`). The first one is the important one containing all information relevant for further processing like model-to-model and model-to-code transformations. The representation information is only cosmetical and not neccessary. So if you want to exchange models, only the domain model is needed which can be imported into a new project again anytime.
 * Not all settings are directly embedded within the editor. To be able to set all fields refer to the *properties view* at the bottom right. There you can find an element named *domain* relating to a particular element with focus.
 * At first start with simple goals. Think about an application needing only three to five database tables (entity objects in the model editor). Keeping your application-specific logic simple helps to understand the architectural concepts of ModuleStudio.
+* There are some sample models contained in the `examples` folder inside ModuleStudio. You can also download them from [the examples project](https://github.com/Guite/MostExamples) on GitHub.
+* There is also a dedicated chapter in this manual collecting [additional web resources](97-Resources.md).
 
 ### Detail optimisation - Spelling entities and fields in the model
 
