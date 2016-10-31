@@ -89,10 +89,22 @@ A settings container has the following fields:
 * **generateTagSupport** - A boolean specifying whether tag support should be generated or not. Requires user or admin controller containing a display action. Default value is `true`.
 * **generateMultiHookNeedles** - A boolean specifying whether MultiHook needles should be generated or not. Default value is `true`.
 * **generateRssTemplates** - A boolean specifying whether rss view templates should be generated or not. Default value is `true`.
+
+![Example for rss feed](images/generator_output_feed_rss.png "Example for rss feed")
+
 * **generateAtomTemplates** - A boolean specifying whether atom view templates should be generated or not. Default value is `true`.
+
+![Example for atom feed](images/generator_output_feed_atom.png "Example for atom feed")
+
 * **generateCsvTemplates** - A boolean specifying whether csv view templates should be generated or not. Default value is `true`.
 * **generateXmlTemplates** - A boolean specifying whether xml display and view templates should be generated or not. Default value is `true`.
+
+![Example for xml output](images/generator_output_xml.png "Example for xml output")
+
 * **generateJsonTemplates** - A boolean specifying whether json templates should be generated or not. Default value is `true`.
+
+![Example for json output](images/generator_output_json.png "Example for json output")
+
 * **generateKmlTemplates** - A boolean specifying whether kml templates should be generated or not. Requires geographical flag on corresponding entities. Default value is `true`.
 * **generateIcsTemplates** - A boolean specifying whether ics (iCalendar) templates should be generated or not. Requires start date and end date fields on corresponding entities. Default value is `true`.
 * **generateOnlyBaseClasses** - A boolean specifying whether only base classes should be generated. May be useful for doing simple upgrades without structural changes. Default value is `false`.
@@ -160,7 +172,10 @@ It has the following properties:
 * **categorisableMultiSelection** - A boolean specifying whether multiple categories can be selected or not.
 * **changeTrackingPolicy** - How change detection is being done (see [below](#entity-change-tracking-policy)). The default value is `DEFERRED_IMPLICIT`.
 * **displayPattern** - Pattern for displaying instances of this entity. In earlier ModuleStudio versions one had to mark one entity field as `leading`. However, this was not flexible enough in practice. With the display pattern you can specify arbitrary expressions which are used as textual representation for instances of this entity. For most cases you may want so declare just one field, which is done like `#title#`. A more complex example would be `#lastName#, #firstName# (#age# years)`. Of course all fields must exist in the entity with exactly the names used within the display pattern.
-* **geographical** - A boolean specifying whether the geographical extension is used or not. If set to `true` the generator will create two additional fields named `latitude` and `longitude`. Also it will consider them in all important application areas and provide an export for the *kml* format. During the creation of a new entity with geographical support a nice geolocation feature is used to ask the user for his current location. Also there is an included integration of the Mapstraction class allowing you to use different map providers in your application.
+* **geographical** - A boolean specifying whether the geographical extension is used or not. If set to `true` the generator will create two additional fields named `latitude` and `longitude`. Also it will consider them in all important application areas and provide an export for the *kml* format (if `generateKmlTemplates` setting has not been set to `false`). During the creation of a new entity with geographical support a nice geolocation feature is used to ask the user for his current location. Also there is an included integration of the Mapstraction class allowing you to use different map providers in your application.
+
+![Geolocation feature](images/generator_geographical_geolocation.png "Geolocation feature")
+
 * **hasArchive** - Whether the workflow should include an archived state with automatic archiving. Requires a [datetime](#datetime-field) or [date](#date-field) field which has been designated as end date. See [workflow types](#entity-workflow-type) for more information. The default value is `false`.
 * **hasTray** - Whether the workflow should include a suspended state. See [workflow types](#entity-workflow-type) for more information. The default value is `false`.
 * **identifierStrategy** - Whether and which [identifier strategy](#entity-identifier-strategy) is applied. The default value is `AUTO`.
@@ -168,6 +183,9 @@ It has the following properties:
 * **lockType** - Whether and which [locking strategy](#entity-lock-type) is applied. The default value is `PAGELOCK`.
 * **loggable** - A boolean specifying whether the loggable behavior is used or not. The generator will create an additional entity for managing the log entries if set to `true`. There is no user interface for the version management yet (see [#30](https://github.com/Guite/MostGenerator/issues/30) for more information).
 * **metaData** - A boolean specifying whether this entity should have support for meta data. If set to `true` the generator creates additional inclusion templates for displaying and changing corresponding fields.
+
+![Example for category selector and meta data](images/generator_categorisable_metadata.png "Example for category selector and meta data")
+
 * **nameMultiple** - Plural form of the name. The generator uses this for collections, list views and other areas where multiple entities are used.
 * **onAccountDeletionCreator** - Controls how an app should change the creator when users are deleted. Only relevant if `standardFields` is enabled. Default value is `ADMIN`. The available options are listed [here](#account-deletion-handler).
 * **onAccountDeletionLastEditor** - Controls how an app should change the last editor when users are deleted. Only relevant if `standardFields` is enabled. Default value is `ADMIN`. The available options are listed [here](#account-deletion-handler).
@@ -181,6 +199,9 @@ It has the following properties:
 * **slugUpdatable** - A boolean specifying if the slug can be changed or not. Default value is `true`.
 * **softDeleteable** - Whether deleted items should only be marked as deleted instead of deleting them. Defines also whether the entity workflow provides means for trashing and recovering items or for deleting them. See [workflow types](#entity-workflow-type) for more information. The default value is `false`. Only applicable for the 1.4 target core version.
 * **tree** - Whether and which tree strategy is applied. Default value is `NONE`. More information about what the generator creates for trees can be found in the the section about [tree types](#entity-tree-type).
+
+![Tree functionality with context menu and drag n drop](images/generator_tree.png "Tree functionality with context menu and drag n drop")
+
 * **standardFields** - A boolean specifying whether the standard fields extension is used or not. If set to `true` the entity will get four additional fields for storing the id of the user who created the item, the id of the user who did the last update, as well as the creation and update dates. This information will be included on [display](#display-action) and [edit](#edit-action) actions.
 * **workflow** - The workflow which is applied to this entity. The default value is `NONE`. See [workflow types](#entity-workflow-type) for more information.
 
@@ -261,6 +282,9 @@ A derived field has the following properties in addition to the common [entity f
 * **sluggablePosition** - Position of this field in the created slugs. A value of `0` (default) means that this field is not part of the slug at all. If at least one field in an entity has a sluggable position greater than `0` then this entity is considered as sluggable. In this case a permalink is built automatically from all fields in ascending position. See the slug properties on [entity](#entity) level for slug-related configuration options.
 * **sortableGroup** - A boolean specifying whether this field acts as grouping criteria for the sortable extension. The default value is `false`. SortableGroup is not fully implemented yet, do not use if you not understand the function.
 * **translatable** - A boolean specifying whether this field is translatable or not. The default value is `false`. If at least one field in an entity is translatable the generator creates an additional class for managing the translation entities. Overall support for translations in the application should get you started.
+
+![Edit form with translatable fields](images/generator_translatable.png "Edit form with translatable fields")
+
 * **unique** - A boolean specifying whether this field is unique or not. The default value is `false`. If set to `true` then an additional validator cares for enforcing the unique constraint on client and server side.
 * **visible** - Whether this field is visible in edit forms or not. Default value is `true`.
 
@@ -365,6 +389,9 @@ A string field has the following properties in addition to the common [abstract 
 * **creditCard** - A boolean to specify whether this field represents a credit card number or not. Default value is `false`. Only applicable for the 1.4 target core version.
 * **currency** - A boolean to specify whether this field represents a 3-letter ISO 4217 currency name or not. Possible example values are `USD` or `EUR`. Default value is `false`. Only applicable for the 1.4 target core version. In [edit forms](#edit-action) it will be rendered as a country selector.
 * **htmlcolour** - A boolean specifying whether this field represents a html color code (like `#003399`) or not. Default value is `false`. If set to `true` a colour picker is used in [edit pages](#edit-action) for convenient selection of colour codes.
+
+![Example for colour and language selectors](images/generator_colour_language.png "Example for colour and language selectors")
+
 * **iban** - A boolean to specify whether this field represents a bank account number in IBAN (International Bank Account Number) format. Default value is `false`. Only applicable for the 1.4 target core version.
 * **isbn** - Allows to define whether this field represents a number in ISBN (International Standard Book Number). Default value is `NONE`. You can choose from different [validation options](#isbn-style). Only applicable for the 1.4 target core version.
 * **issn** - Allows to define whether this field represents a number in ISSN (International Standard Serial Number). Default value is `NONE`. You can choose from different [validation options](#issn-style). Only applicable for the 1.4 target core version.
@@ -1021,6 +1048,8 @@ Container class for carrying module variables.
 It includes the following properties:
 
 * **sortOrder** - The sorting position for when using multiple variable sections.
+
+![Configuration form with multiple sections](images/generator_config_tabbedpanel.png "Configuration form with multiple sections")
 
 A var container may have the following references:
 
