@@ -51,7 +51,7 @@ If you want create a new model for an existing legacy module using DBUtil you ca
 2. Use this script to convert your old `pntables.php` file into an xml file.
 3. Inside ModuleStudio use the menu entry *File > Open model > Import xml table definition* which will open a file selection dialog. Choose the xml file you just created. As a result you will get a new application model in the `MOST_output/yourmod.mostapp` file.
 4. Now import this model using the corresponding menu or dashboard action.
-5. In the data editor remove unrequired elements, like table prefixes and default identifier fields, that are primary and foreign keys.
+5. In the data editor remove unneeded elements, like table prefixes and default identifier fields, that are primary and foreign keys.
 6. Follow validation messages to get remaining stuff sorted properly.
 
 Example import results:
