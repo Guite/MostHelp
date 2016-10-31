@@ -67,8 +67,6 @@ A module is basically very similarly structured as a Symfony bundle. Under the h
 
 This section gives you an overview of the main parts of ModuleStudio and how they work together.
 
-*TODO: maybe add overview diagram showing how things are related to each other.*
-
 ### DSL
 
 The inner core of MOST is a domain-specific language (DSL) for Zikula extensions. This language allows a formalised description of applications which is a fundamental requirement to process models automatically with the help of transformations. The DSL consists of the following parts:
@@ -88,3 +86,9 @@ The user interface consists of different types of editors which may include even
 ### Generator
 
 The generator creates source code for a Zikula extension from a given application model. You can read more about this in the [generator chapter](50-Generator.md#generator). Also important is another chapter about [customisation and maintenance](60-Customisation.md) of generated applications.
+
+### Overview
+
+This chart shows how the main components of ModuleStudio are working together.
+
+![Component overview](images/component_overview.png "Component overview")
