@@ -95,6 +95,11 @@
             <fileset dir="${source.dir}" includes="**/*.md"/>
         </wikitext-to-html>
 
+    	<!-- delete old files -->
+        <delete>
+            <fileset dir="${website.dir}" includes="**/*.html"/>
+        </delete>
+
         <!-- move files into correct directory -->
         <move todir="${website.dir}">
             <fileset dir="${source.dir}">
