@@ -6,7 +6,7 @@ This section gives a few hints for changing arbitrary things in your generated a
 
 ## Long-term maintenance
 
-To prevent losing the [benefits of ModuleStudio](01-Introduction.md#benefits) in future you have to follow a few simple basic rules in your development process.
+To prevent losing the [benefits of ModuleStudio](10-Introduction.md#benefits) in future you have to follow a few simple basic rules in your development process.
 
 ### Keep consistent
 

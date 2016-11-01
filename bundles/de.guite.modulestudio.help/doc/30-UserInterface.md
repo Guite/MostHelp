@@ -1,14 +1,18 @@
 # User interface
 
-## Introduction
-
-This section shows how to use ModuleStudio. Starting with a general demonstration of the user interface it goes step by step through all single editors required for creating a complete model.
-
-At the moment this page consists only of a few links to corresponding tutorials. It will be enhanced at a later stage after the actual modeling language has matured enough to spend work on completing the user interface.
+This section shows how to use ModuleStudio. Starting with a general demonstration of the user interface it goes step by step through all UI functions and explains their purpose.
 
 ## Basic usage
 
 Please see [this tutorial](http://modulestudio.de/en/tutorial/basic-usage.html).
+
+### Editors
+
+*TBD*
+
+### Views
+
+*TBD*
 
 ## Graphical editors
 

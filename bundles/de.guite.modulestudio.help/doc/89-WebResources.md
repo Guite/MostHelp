@@ -1,4 +1,4 @@
-# Resources
+# Web resources
 
 This chapter collects links to several manuals and further documentation you will find useful when customising generated applications.
 

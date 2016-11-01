@@ -1,8 +1,6 @@
 # Generator reference
 
-This reference goes through all available model elements as well as their properties, describing what the generator does with this information and which things are still missing in the created implementation.
-
-You will notice that there are also some elements included which are not showing up in ModuleStudio itself yet. This is for showing up the picture we have in mind when designing the modeling language as a whole. In most cases where the generator is not flexible yet this is caused by limitations in the current editors.
+This reference goes through all available model elements as well as their properties, describing what the generator does with this information and which things are still missing in the created implementation. Also it shows which artifacts are created from which model elements.
 
 Most screenshots in this section are taken from the example application called *RecipeManager*.
 

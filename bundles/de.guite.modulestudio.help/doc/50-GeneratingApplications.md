@@ -1,8 +1,6 @@
-# Generator
+# Generating applications
 
-## Introduction
-
-The main use case for ModuleStudio application models is the creation of Zikula extensions. This section describes how the generator works and which artifacts are created from which model elements.
+The main use case for ModuleStudio application models is the creation of Zikula extensions. This section describes how the generator works.
 
 ## Basic idea
 
@@ -43,23 +41,18 @@ Thought a little further the generator helps reaching a constantly high code qua
 
 ## How it works
 
-There is a tutorial showing how calling the generator within ModuleStudio looks like: [Using the generator](http://modulestudio.de/en/tutorial/using-the-generator.html). The only requirement is that you have opened your application model and there are no [validation errors](40-Validation.md#validation) left.
+Calling the generator within ModuleStudio is very easy. The only requirement is that you have an opened project and your application model does not contain any [validation errors](40-Validation.md#validation).
 
-### Input dialogs
-
-First you have to select which generator cartridges you want to execute.
-
-![Cartridge selection](images/generator_cartridges.png "Cartridge selection")
+If there are no validation errors, choose the menu entry *File > Generate application* to call the generator. If the model contains unsaved changes or errors, error messages appear accordingly. If there are still warnings a dialog asks if these should be ignored. Once past any errors or warnings, you need to choose an output directory. Since the generator deletes everything in the specified directory, ensure to create a new empty folder. If you would choose a folder that was not empty, a dialog with a corresponding warning appears to allow you to confirm the selection. Afterwards click on OK to start the process. A progress dialog shows what the generator is currently creating. Finally a message notification shows that the generation is complete.
 
 ## The workflow
 
 The rough steps of the generator workflow are as follows:
 
-1. Ask for input parameters (for example desired output folder and cartridges).
+1. Ask for input parameters (in particular the desired output folder).
 2. Empty output directory.
 3. Export dumps of editor diagrams.
 4. Read input model.
 5. Perform validation.
-6. Transformation to add primary and foreign key fields.
-7. Call generator inner workflow for each selected cartridge.
-
+6. Execute a model-to-model transformation. This adds primary and foreign key fields as well as other derived elements.
+7. Call the actual generator workflow.

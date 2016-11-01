@@ -33,7 +33,7 @@ Here are some remarks for getting into ModuleStudio smoothly.
 * Not all settings are directly embedded within the editor. To be able to set all fields refer to the *properties view* at the bottom right. There you can find an element named *domain* relating to a particular element with focus.
 * At first start with simple goals. Think about an application needing only three to five database tables (entity objects in the model editor). Keeping your application-specific logic simple helps to understand the architectural concepts of ModuleStudio.
 * There are some sample models contained in the `examples` folder inside ModuleStudio. You can also download them from [the examples project](https://github.com/Guite/MostExamples) on GitHub.
-* There is also a dedicated chapter in this manual collecting [additional web resources](97-Resources.md).
+* There is also a dedicated chapter in this manual collecting [additional web resources](89-WebResources.md).
 
 ### Detail optimisation - Spelling entities and fields in the model
 
