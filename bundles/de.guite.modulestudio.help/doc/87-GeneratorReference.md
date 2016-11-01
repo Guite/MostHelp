@@ -4,6 +4,20 @@ This reference goes through all available model elements as well as their proper
 
 Most screenshots in this section are taken from the example application called *RecipeManager*.
 
+## Describing behavioural aspects
+
+As Zikula uses Symfony and the Doctrine ORM layer, the data layer in ModuleStudio allows to precisely express the different concepts and available functions. For example you can use a huge amount of validation constraints and special field types.
+
+From each entity in the data layer there are entity classes and repository classes created. Therewith the contained fields as well as their properties are accordingly reflected. For many data types and basic properties, like *unique*, *readonly* or *notnull* this happens with a one to one adaption. Several things are shortened for convenience in ModuleStudio though. Furthermore there are some additional data types, like for example for users, email addresses, urls and file uploads. An email field is treated by the generator as a string field in Doctrine which has the email validator activated.
+
+Validators are generally not explicitly written in MOST, but simply defined using properties. So there are for example attributes like *nospace*, *country*, *ipaddress*, *htmlcolor* and many more for string fields. Date and time fields have according properties for *past* and *future*.
+
+The different types of relations in Doctrine are all offered, too. For inheritance relationships the strategy can be selected (single table, joined). All other connection types store a name for the two entities on both sides (source alias and target alias) as well as the referenced fields (source field and target field). Because the primary id fields of entities are not part of the model, but automatically added before the generation, the string `id` is allowed and also set per default. By changing these fields it is possible to describe also relations referencing other fields. Beside this it is possible to have multiple relationships between the same entities and also self relations, as long as their alias settings are unique. Finally you can also define how the cascading behaviour should look like, again supporting all options offered by Doctrine.
+
+The ModuleStudio DSL also supports several behavioural extensions for Doctrine, like for example trees, translatable fields, slugs and loggable entities. There are also some Zikula-specific additions by the way, like the behaviours Attributable, Categorisable, MetaData and StandardFields.
+
+Event listeners or subscribers are not explicitly described in the models, but some base implementations are already generated though which can be implemented in the empty subclasses if needed.
+
 ## Application layer
 
 ### Language elements
