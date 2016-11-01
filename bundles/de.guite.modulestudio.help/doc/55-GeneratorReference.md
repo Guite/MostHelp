@@ -385,6 +385,7 @@ Represents a field type for storing string values.
 
 A string field has the following properties in addition to the common [abstract string field](#abstract-string-field) settings:
 
+* **bic** - A boolean specifying whether this field represents a BIC (business identifier code) or not. Default value is `false`. Only applicable for the 1.4 target core version.
 * **country** - A boolean specifying whether this field represents a country code or not. Default value is `false`. If set to `true` a country selector is used in [edit pages](#edit-action). For the output in [view](#view-action) and [display](#display-action) templates an output modifier is used to display the full country name instead of the unreadable country code.
 * **creditCard** - A boolean to specify whether this field represents a credit card number or not. Default value is `false`. Only applicable for the 1.4 target core version.
 * **currency** - A boolean to specify whether this field represents a 3-letter ISO 4217 currency name or not. Possible example values are `USD` or `EUR`. Default value is `false`. Only applicable for the 1.4 target core version. In [edit forms](#edit-action) it will be rendered as a country selector.
