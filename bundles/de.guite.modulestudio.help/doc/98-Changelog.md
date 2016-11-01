@@ -130,9 +130,9 @@
 
 ### DSL / Modeling language changes
 
-* Introduced a new model element containing generator settings. Therewith you can control which features should be generated and take influence on some behavioural aspects of the generator (read more about this [here](55-GeneratorReference.md#settings-container)).
+* Introduced a new model element containing generator settings. Therewith you can control which features should be generated and take influence on some behavioural aspects of the generator (read more about this [here](87-GeneratorReference.md#settings-container)).
 * Added new target core version `pre14` for the new Symfony-based module structure. This replaces the 1.3.6 version which behaves now exactly like 1.3.5.
-* Brief entity display can now be freely controlled by a display pattern in the model (read more about [here](55-GeneratorReference.md#entity)).
+* Brief entity display can now be freely controlled by a display pattern in the model (read more about [here](87-GeneratorReference.md#entity)).
 * Added a language property for controlling sorting also for the incoming source side of many-to-many relationships, from the target side view.
 * Only string field types can be used as permalink parts (sluggable position) now.
 * The default value for the amount of example rows to be generated for a certain model container has been changed to `0`.

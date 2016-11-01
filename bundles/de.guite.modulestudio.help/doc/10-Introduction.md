@@ -55,7 +55,7 @@ This section gives you an overview of the main parts of ModuleStudio and how the
 The inner core of MOST is a domain-specific language (DSL) for Zikula extensions. This language allows a formalised description of applications which is a fundamental requirement to process models automatically with the help of transformations. The DSL consists of the following parts:
 
 * **Meta model:** defines the essential concepts of the ModuleStudio language, that is which model elements may exist and how they are allowed to work with each other. This allows reusing the basic domain concepts at several places, like validation, editors, generators and so on. The meta model is not visible for the user, but used by other components in the background.
-* **Constraints:** there are [many validation rules](40-Validation.md#validation) to enrich the modeling language with more precise knowledge. These constraints ensure that the generator can only be started for valid models. For many common problems there are quick fixes offered proposing possible solutions to solve a certain error.
+* **Constraints:** there are [many validation rules](50-Validation.md#validation) to enrich the modeling language with more precise knowledge. These constraints ensure that the generator can only be started for valid models. For many common problems there are quick fixes offered proposing possible solutions to solve a certain error.
 
 ### Editors
 
@@ -68,7 +68,7 @@ The user interface consists of different types of editors which may include even
 
 ### Generator
 
-The generator creates source code for a Zikula extension from a given application model. You can read more about this in the [generator chapter](50-Generator.md#generator). Also important is another chapter about [customisation and maintenance](60-Customisation.md) of generated applications.
+The generator creates source code for a Zikula extension from a given application model. You can read more about this in the [generator chapter](60-GeneratingApplications.md#generator). Also important is another chapter about [customisation and maintenance](70-CustomisationAndMaintenance.md) of generated applications.
 
 ### Overview
 
