@@ -34,7 +34,7 @@
 ### DSL / Modeling language changes
 
 * Applications can now define `capabilities` they provide (#667).
-* String fields can be marked as `timezone` (analogous to `currency`, `country`, `language`, `locale`, `colour`, `ip address`, `iban number`, etc.).
+* String fields can be marked as `bic` or `timezone` (analogous to `currency`, `country`, `language`, `locale`, `colour`, `ip address`, `iban number`, etc.).
 * Integer, decimal and float fields can be marked as `percentage`.
 * Integer fields with minimum and maximum can be marked as `range`.
 * The DSL uses a new formatter for the model format.
