@@ -618,7 +618,7 @@ A datetime field has the following properties in addition to the common [abstrac
 
 * **startDate** - A boolean specifying whether this field should be treated as a start date. Default value is `false`. If set to `true` this field is included into determining public visibility of the corresponding objects.
 * **endDate** - A boolean specifying whether this field should be treated as an end date. Default value is `false`. If set to `true` this field is included into determining public visibility of the corresponding objects.
-* **version** - A boolean specifying whether this field should act as a version. Default value is `false`. If set to `true` the owning entity will need to use [optimistic locking](#entity-lock-type). Please read more at the [integer field](#integer-field) section. Also please note that it is preferred to use integer fields instead of datetime fields for version storage (read more in the [validation chapter](40-Validation.md#date-and-time-fields)).
+* **version** - A boolean specifying whether this field should act as a version. Default value is `false`. If set to `true` the owning entity will need to use [optimistic locking](#entity-lock-type). Please read more at the [integer field](#integer-field) section. Also please note that it is preferred to use integer fields instead of datetime fields for version storage (read more in the [validation reference](85-ValidationReference.md#date-and-time-fields)).
 
 The generator will treat datetime values as date input elements in [edit pages](#edit-action). For the output in [view](#view-action) and [display](#display-action) templates a modifier is used to format the datetime according to the current locale.
 
@@ -776,6 +776,26 @@ Note that it is easily possible to model [date or datetime fields](#abstract-dat
 
 For all entities having another workflow than `NONE` there are configuration options in the generated configuration page for selecting user groups for moderation. If these settings are not applied, the default group for administrators is used as fallback. With the help of this information, email notifications are sent between creator and moderators on state changes. For moderators there is a textarea field provided in the form for specifying additional remarks, like a reason for deny (particularly useful for `reject` and `demote` / `disapprove` actions).
 
+##### Troubleshooting if workflows are not fetched properly
+
+Due to a problem in Zikula 1.4.x the workflow data can not be fetched automatically for an entity yet. Because if the `postLoad` listener in the `EntityLifecycleListener` class would call the workflow the Zikula `WorkflowUtil` class would perform another selection for this. This leads to both selections getting into a competition about the internal object hydrator of Doctrine. The workflow selection "steals" it from the main selection. So after the first item, when it wants to fetch the second one, it is not possible anymore. In Zikula 1.3.x this was not a problem because workflows were called using DBUtil bridged by Doctrine 1.
+
+Before the `initWorkflow()` entity method was called at two places: the entity constructor (for newly-created entities) and the `postLoad` listener (for fetched entities). The current workaround is having the `initWorkflow()` call moved outside the `postLoad` listener. But now we have to call it elsewhere. Therefore we need something in the controller actions like the following for bypassing the problem:
+
+    // single entity
+    $myEntity->initWorkflow();
+
+    // collection of entities
+    foreach ($entities as $k => $entity) {
+        $entity->initWorkflow();
+    }
+
+Note you must call this for all fetched entities, not for new ones (as the call is still included in the constructor).
+
+This solution approach is a bit ugly, because we require you (the module developer) calling this explicitly from the using code. If you forget it in a certain method workflows are not initialised properly.
+
+Outlook: a clean solution would not use any workflow utility class, but join the workflow entity directly. Also to make it really beautiful we would need own workflow tables for each entity (like done with categories for example) in order to keep things together. Note the Doctrine 2 development is working on a new event which is triggered after all entities have been fetched (a real *post* fetch). There is also a new [workflow component](http://symfony.com/blog/new-in-symfony-3-2-workflow-component) offered since Symfony 3.2. We are probably going to incorporate this into Zikula (see [core ticket #2423](https://github.com/zikula/core/issues/2423)) which might solve this issue, too.
+
 #### Account deletion handler
 
 Represents the kind of reaction to perform if users are deleted, but still referenced in some data of the generated application.
@@ -896,11 +916,16 @@ It includes the following properties in addition to the common [join relationshi
 * **indexBy** - Set to target field name (must be unique) to specify the index by criteria for the relation. Please note that this has not be tested very well yet.
 * **orderBy** - Set to target field name to specify the sorting criteria for the outgoing relation.
 * **orderByReverse** - Set to source field name to specify the sorting criteria for the incoming relation.
+* **orphanRemoval** - Default value is `false`. If set to `true` orphans get removed automatically.
 * **refClass** - Specifies the reference class created for the linking table (for example `personAddress`). The generator creates additional classes for this reference-managing entity.
 * **minSource** - Minimum amount of items enforced to be present on the source side. The default value is `0`.
 * **maxSource** - Maximum amount of items enforced to be present on the source side. The default value is `0` which means that no certain amount is enforced.
 * **minTarget** - Minimum amount of items enforced to be present on the target side. The default value is `0`.
 * **maxTarget** - Maximum amount of items enforced to be present on the target side. The default value is `0` which means that no certain amount is enforced.
+
+##### Orphan removal with many-to-many relations
+
+If you are generating for Zikula 1.3.x please do not enable the *orphanRemoval* property for many-to-many relationships. This feature is supported only in newer versions of Doctrine 2, therefore you need to use the 1.4 target if you want to use it.
 
 #### Cascade type
 

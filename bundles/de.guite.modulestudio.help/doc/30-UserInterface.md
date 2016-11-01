@@ -14,30 +14,95 @@ Please see [this tutorial](http://modulestudio.de/en/tutorial/basic-usage.html).
 
 *TBD*
 
-## Graphical editors
+## Graphical editor
 
-### Main editor
+### Application settings
 
 Please see [this tutorial](http://modulestudio.de/en/tutorial/basic-settings-in-main-editor.html).
 
-### Model editor
+*TBD*
+
+### Entity and field layer
 
 Please see [this tutorial](http://modulestudio.de/en/tutorial/describing-the-model.html).
 
-### Controller editor
+*TBD*
+
+### Controller layer
 
 Please see [this tutorial](http://modulestudio.de/en/tutorial/modeling-the-controllers.html).
 
-### Workflow editor
+*TBD*
 
-The workflow layer is not implemented yet (planned for version 0.8). This section is just a dummy for future.
+### Index layer
 
-## Textual editors
+*TBD*
 
-Beginning with ModuleStudio 0.6.0 there is also a textual syntax notation available. Not visible
-at once, it will be integrated into the UI step by step.
+### Variables layer
 
-*Expert tip:* you can use the textual editor already if you like: open the *Open resource* dialog using **Ctrl + Shift + R**, type `*.mostapp` into the filter field and click on the *Open* button.
+*TBD*
+
+### Settings layer
+
+*TBD*
+
+### Workflow layer
+
+The workflow layer is not implemented yet (planned for version 0.8). This section is just a dummy for future. You can still configure a bunch of different workflows for your entities (see [generator reference](87-GeneratorReference.md#entity-workflow-type)).
+
+## Views
+
+### Dashboard view
+
+*TBD*
+
+### Problems view
+
+*TBD*
+
+### Error log view
+
+*TBD*
+
+### Properties view
+
+*TBD*
+
+#### Quick fixes for problems
+
+*TBD*
+
+### Outline view
+
+*TBD*
+
+### Help view
+
+*TBD*
+
+## Main menu
+
+*TBD*
+
+### Troubleshooting if you can not save the model
+
+If you get an error message when trying to save your model this means that it is not possible to serialise the object graph you have currently opened in the memory. The probable reason for this is that there exists a reference to an element without a name. Therefore the serialiser sees no way to persist this reference.
+
+For example if you have two entities and a relationship between them then all both entities need a name. Otherwise the relationship can not store it's source or target references.
+
+To fix this just ensure that all existing elements have a name. Since ModuleStudio version 0.7.0 this is actively supported by setting sensitive default values when adding new elements.
+
+## Themes
+
+*TBD*
+
+## Preferences
+
+*TBD*
+
+## Help system
+
+*TBD*
 
 ## Useful hints
 
@@ -48,9 +113,29 @@ Here are some tutorial showing special abilities for certain use cases:
 * [Moving fields with drag n drop](http://modulestudio.de/en/tutorial/moving-fields-with-drag-n-drop.html)
 * [Creating multiple elements quickly](http://modulestudio.de/en/tutorial/creating-multiple-elements-quickly.html)
 * [Working with multiple windows](http://modulestudio.de/en/tutorial/working-with-multiple-windows.html)
-* [List of keyboard shortcuts](96-KeyboardShortcuts.md]
+* [List of keyboard shortcuts](82-KeyboardShortcuts.md]
 
-## Textual Grammar
+## Enhanced UI components
+
+### Table editors
+
+*TBD*
+
+### Entity table editor
+
+*TBD*
+
+### Variables table editor
+
+*TBD*
+
+### Textual editor
+
+Beginning with ModuleStudio 0.6.0 there is also a textual syntax notation available. Not visible at once, it will be integrated into the UI step by step. ModuleStudio is going to move towards hybrid modeling, combining different kinds of editors in the same UI. One concrete use case is an embedded textual editor inside the graphical editor allowing to specify details on entity level.
+
+*Expert tip:* you can use the textual editor already if you like: open the *Open resource* dialog using **Ctrl + Shift + R**, type `*.mostapp` into the filter field and click on the *Open* button.
+
+#### Textual grammar
 
 Here is a railroad chart showing the textual grammar elements:
 
