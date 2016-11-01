@@ -1,7 +1,5 @@
 # Troubleshooting
 
-## Introduction
-
 This sections collects information snippets which may be helpful when running into problems.
 
 ## Tooling problems

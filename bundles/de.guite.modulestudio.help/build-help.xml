@@ -64,8 +64,14 @@
         </replaceregexp>
         <replace dir="${help.dir}" includes="**/*.html" token=".md" value=".html" />
         <replace dir="${help.dir}" includes="**/*.html" token="GettingStarted.html" value="Getting-started.html" />
+        <replace dir="${help.dir}" includes="**/*.html" token="UserInterface.html" value="User-interface.html" />
+        <replace dir="${help.dir}" includes="**/*.html" token="GeneratingApplications.html" value="Generating-applications.html" />
+        <replace dir="${help.dir}" includes="**/*.html" token="CustomisationAndMaintenance.html" value="Customisation-and-maintenance.html" />
+        <replace dir="${help.dir}" includes="**/*.html" token="KeyboardShortcuts.html" value="Keyboard-shortcuts.html" />
+        <replace dir="${help.dir}" includes="**/*.html" token="ValidationReference.html" value="Validation-reference.html" />
         <replace dir="${help.dir}" includes="**/*.html" token="GeneratorReference.html" value="Generator-reference.html" />
-        <replace dir="${help.dir}" includes="**/*.html" token="Customisation.html" value="Customisation-and-maintenance.html" />
+        <replace dir="${help.dir}" includes="**/*.html" token="WebResources.html" value="Web-resources.html" />
+        <replace dir="${help.dir}" includes="**/*.html" token="HowToContribute.html" value="How-to-contribute.html" />
 
         <!-- copy additional images -->
         <copy todir="${help.dir}/images">

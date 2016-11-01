@@ -10,21 +10,6 @@ Read more at this page: [What is ModuleStudio](http://modulestudio.de/en/product
 
 *Replace coding by modeling and simplify your development!*
 
-## How does it work ?
-
-Developing and maintaining model-driven applications works well in combination with an iterative-incremental development process. In this approach you start with a small model which will then be enhanced in several steps whereby some short tests verify that the direction is correct.
-
-Each development cycle in ModuleStudio consists of the following steps:
-
-1. Create or change the model.
-2. Let ModuleStudio validate it and fix problems.
-3. Generate (or regenerate) the application source code.
-4. Merge changes
-5. Test intermediate results
-6. Customise the application.
-
-Note ModuleStudio offers several *generator settings* to simplify the merging process. More about that later.
-
 ## Benefits
 
 * **Development time/costs:** avoid wasting weeks for schematical and architecturally motivated code parts (so-called boilerplate code)!
