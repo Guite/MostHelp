@@ -1,6 +1,6 @@
 # User interface
 
-This section shows how to use ModuleStudio. Starting with a general demonstration of the user interface it goes step by step through all UI functions and explains their purpose. Note there is also a dedicated chapter showing a [list of keyboard shortcuts](82-KeyboardShortcuts.md] which are helpful not only, but especially for advanced users.
+This section shows how to use ModuleStudio. Starting with a general demonstration of the user interface it goes step by step through all UI functions and explains their purpose. Note there is also a dedicated chapter showing a [list of keyboard shortcuts](82-KeyboardShortcuts.md) which are helpful not only, but especially for advanced users.
 
 ## Basic usage
 
@@ -11,10 +11,6 @@ Besides the main menu, the environment can be split into two areas. On the left 
 On the right side is an arrangement of different *views*. For example there is an outline view with a miniature display of the editor window, a properties view used to edit properties of model elements.
 
 ![Editor with palette, several views](images/ui_basic.png "Editor with palette, several views")
-
-Most parts of the user interface can be customised, like one may expect from an Eclipse-based application. Views can be moved and replaced, e.g. you could have them at the left side, on the bottom or in the same tab bar as the editors. Also you can, for example, customise the palette (see [below](#palette). It is even possible to use multiple editors in parallel by arranging them next to each other.
-
-![Table editor and textual editor side by side](images/ui_multiple_editors.png "Table editor and textual editor side by side")
 
 ## Diagram editor
 
@@ -27,8 +23,6 @@ Another important function is *Arrange*. We can, for example, select all element
 *TBD*
 
 ### Palette
-
-* [Customise palette](http://modulestudio.de/en/tutorial/customise-palette.html)
 
 *TBD*
 
@@ -193,3 +187,19 @@ The textual editor offers several advanced features, like for example syntax hig
 Here is a railroad chart showing the textual grammar elements:
 
 ![Textual grammar](images/mostdsl_grammar.png "Textual grammar")
+
+## Customisation
+
+### Rearrange the UI
+
+Most parts of the user interface can be customised, like one may expect from an Eclipse-based application. Views can be moved and replaced, e.g. you could have them at the left side, on the bottom or in the same tab bar as the editors. It is even possible to use multiple editors in parallel by arranging them next to each other.
+
+![Table editor and textual editor side by side](images/ui_multiple_editors.png "Table editor and textual editor side by side")
+
+*TBD*
+
+### Customise palette
+ 
+* [Customise palette](http://modulestudio.de/en/tutorial/customise-palette.html)
+
+*TBD*
