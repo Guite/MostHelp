@@ -13,6 +13,7 @@
 * **Ctrl + Y** - Redo last action. On Linux use **Ctrl + Shift + Z**. On Mac use **Shift + Cmd + Z**.
 * **Ctrl + S** - Save.
 * **Ctrl + Shift + S** - Save all.
+* **Ctrl + O** - Show quick outline. On Mac use **Cmd + O**.
 
 ## Keyboard shortcuts in diagram editors
 
@@ -25,7 +26,6 @@
 * **Alt + Up** - Navigate out of a container.
 * **/** - Navigate clockwise among the existing edges.
 * **\** - Navigate counter-clockwise among the existing edges.
-* **Ctrl + O** - Show quick outline. On Mac use **Cmd + O**.
 
 ### Selection
 
@@ -79,6 +79,7 @@
 ## Keyboard shortcuts in table and tree editors
 
 * **F2** - Direct edit of selected element.
+* **F5** - Refresh. Force an update of the displayed data according to the latest version of the semantic model.
 * **+** - Expand direct children.
 * **-** or **/** - Collapse.
 * ** * ** - Expand all children.
@@ -108,7 +109,6 @@ The following list shows some basic commands which might be helpful when using t
 * **Ctrl + Shift + G** - Find references to current element.
 * **Ctrl + Shift + F3** - Locate a certain element.
 * **Ctrl + ,** and **Ctrl + .** - Navigate between markers in the current editor.
-* **Ctrl + O** - Quick outline (select editors only). On Mac use **Cmd + O**.
 * **Ctrl + J** - Incremental find. Note: Just press **Ctrl + J** and start typing the search text. Eclipse finds and highlights the next match as you type. Use **Up** or **Down** Arrow keys to jump to the next or previous match.
 * **Ctrl + L** - Go to line from editor.
 * **Ctrl + Q** - Go to last edit location.

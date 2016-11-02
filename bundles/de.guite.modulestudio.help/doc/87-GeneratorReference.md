@@ -100,25 +100,25 @@ A settings container has the following fields:
 * **generateScribitePlugins** - A boolean specifying whether support for several Scribite editors should be generated or not. Requires external controller with finder component. Default value is `true`.
 * **generateTagSupport** - A boolean specifying whether tag support should be generated or not. Requires user or admin controller containing a display action. Default value is `true`.
 * **generateMultiHookNeedles** - A boolean specifying whether MultiHook needles should be generated or not. Default value is `true`.
-* **generateRssTemplates** - A boolean specifying whether rss view templates should be generated or not. Default value is `true`.
+* **generateRssTemplates** - A boolean specifying whether RSS view templates should be generated or not. Default value is `true`.
 
-![Example for rss feed](images/generator_output_feed_rss.png "Example for rss feed")
+![Example for RSS feed](images/generator_output_feed_rss.png "Example for RSS feed")
 
-* **generateAtomTemplates** - A boolean specifying whether atom view templates should be generated or not. Default value is `true`.
+* **generateAtomTemplates** - A boolean specifying whether Atom view templates should be generated or not. Default value is `true`.
 
-![Example for atom feed](images/generator_output_feed_atom.png "Example for atom feed")
+![Example for Atom feed](images/generator_output_feed_atom.png "Example for Atom feed")
 
-* **generateCsvTemplates** - A boolean specifying whether csv view templates should be generated or not. Default value is `true`.
-* **generateXmlTemplates** - A boolean specifying whether xml display and view templates should be generated or not. Default value is `true`.
+* **generateCsvTemplates** - A boolean specifying whether CSV view templates should be generated or not. Default value is `true`.
+* **generateXmlTemplates** - A boolean specifying whether XML display and view templates should be generated or not. Default value is `true`.
 
-![Example for xml output](images/generator_output_xml.png "Example for xml output")
+![Example for XML output](images/generator_output_xml.png "Example for XML output")
 
-* **generateJsonTemplates** - A boolean specifying whether json templates should be generated or not. Default value is `true`.
+* **generateJsonTemplates** - A boolean specifying whether JSON templates should be generated or not. Default value is `true`.
 
-![Example for json output](images/generator_output_json.png "Example for json output")
+![Example for JSON output](images/generator_output_json.png "Example for JSON output")
 
-* **generateKmlTemplates** - A boolean specifying whether kml templates should be generated or not. Requires geographical flag on corresponding entities. Default value is `true`.
-* **generateIcsTemplates** - A boolean specifying whether ics (iCalendar) templates should be generated or not. Requires start date and end date fields on corresponding entities. Default value is `true`.
+* **generateKmlTemplates** - A boolean specifying whether KML templates should be generated or not. Requires geographical flag on corresponding entities. Default value is `true`.
+* **generateIcsTemplates** - A boolean specifying whether ICS (iCalendar) templates should be generated or not. Requires start date and end date fields on corresponding entities. Default value is `true`.
 * **generateOnlyBaseClasses** - A boolean specifying whether only base classes should be generated. May be useful for doing simple upgrades without structural changes. Default value is `false`.
 * **skipFiles** - Comma-separated blacklist with each entry representing a file which should not be generated. Default value is an empty string.
 * **markFiles** - Comma-separated list with file pathes which should be marked by special file names. Instead of the original name each file is generated using the pattern `filename.generated.extension`. This setting can be useful for doing bigger merges comparing the generated version with a customised one. Default value is an empty string.

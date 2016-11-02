@@ -31,7 +31,7 @@ This user manual is going to provide all required information to work with Modul
 
 * help within ModuleStudio
 * online help on our website
-* pdf print version
+* PDF print version
 
 ## What is Zikula ?
 
