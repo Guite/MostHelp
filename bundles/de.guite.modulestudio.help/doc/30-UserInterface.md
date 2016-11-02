@@ -24,7 +24,7 @@ Another important function is *Arrange*. We can, for example, select all element
 
 ### Palette
 
-*TBD*
+*TBD groups, basic tools at the top, pinning, etc.*
 
 ### Layers
 
@@ -200,6 +200,12 @@ Most parts of the user interface can be customised, like one may expect from an 
 
 ### Customise palette
  
-* [Customise palette](http://modulestudio.de/en/tutorial/customise-palette.html)
+The palette in ModuleStudio can be customised in several ways. First of all it can be repositioned by moving it with drag n drop by dragging its heading. So if you prefer having it on the right side feel free to move it. In addition, the width of the palette can be changed. A little bit less obvious is the ability to hide the palette completely; the small arrow on the palette heading serves for that.
+
+Let's look at the palette content. It is important having an overview of the tools in the palette, especially for smaller screen resolutions. The elements are divided into groups, though, which can be opened and closed using mouse clicks. Single groups can also be fixed with a pin so that they are not automatically closed when other groups are opened.
+
+The appearance of the elements can be adjusted to individual tastes. Clicking the right mouse button on the palette provides the option *Use Large Icons* and a sub-menu called *Layout*. One should experiment with the different settings to get a feeling for the different possibilities. The choice to use small or large icons is stored for each layout type.
+
+![Different kinds of palette layouts](images/ui_custom_palette.png "Different kinds of palette layouts")
 
 *TBD*
