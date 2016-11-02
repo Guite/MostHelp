@@ -65,6 +65,9 @@
         <replace dir="${help.dir}" includes="**/*.html" token=".md" value=".html" />
         <replace dir="${help.dir}" includes="**/*.html" token="GettingStarted.html" value="Getting-started.html" />
         <replace dir="${help.dir}" includes="**/*.html" token="UserInterface.html" value="User-interface.html" />
+        <replace dir="${help.dir}" includes="**/*.html" token="DiagramEditor.html" value="Diagram-editor.html" />
+        <replace dir="${help.dir}" includes="**/*.html" token="TableEditors.html" value="Table-editors.html" />
+        <replace dir="${help.dir}" includes="**/*.html" token="TextualEditor.html" value="Textual-editor.html" />
         <replace dir="${help.dir}" includes="**/*.html" token="GeneratingApplications.html" value="Generating-applications.html" />
         <replace dir="${help.dir}" includes="**/*.html" token="CustomisationAndMaintenance.html" value="Customisation-and-maintenance.html" />
         <replace dir="${help.dir}" includes="**/*.html" token="KeyboardShortcuts.html" value="Keyboard-shortcuts.html" />
