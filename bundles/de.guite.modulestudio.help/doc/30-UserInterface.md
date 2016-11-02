@@ -6,7 +6,7 @@ This section shows how to use ModuleStudio. Starting with a general demonstratio
 
 An application project in ModuleStudio consists of two files: one `*.mostapp` file with the actual application model, and one representations file containing data for how the model is displayed in the different editors. The `mostapp` file is the primarily important one for storing and exchanging applications. It can imported into a new ModuleStudio project at any time, so you do not need to keep the representation file with it.
 
-Besides the main menu, the environment can be split into two areas. On the left side there are the *dashboard* view and the *editor* windows. Editors contain the actual notation for changing the model. For the diagram editor this consists of a canvas as well as a *palette* with the available tools. This is where the actual modeling happens. The diagram editor's palette separates the available model elements into several groups, like *Relationships*, *Fields* or *Actions*. It is possible to have multiple elements at the same time in one model for each of these types. The visible groups and tools in the palette depends on which *layers* you have enabled in the diagram. More about these layers will be explained later.
+Besides the main menu, the environment can be split into two areas. On the left side there are the *dashboard* view and the *editor* windows. Editors contain the actual notation for changing the model. For the diagram editor this consists of a canvas as well as a *palette* with the available tools. This is where the actual modelling happens. The diagram editor's palette separates the available model elements into several groups, like *Relationships*, *Fields* or *Actions*. It is possible to have multiple elements at the same time in one model for each of these types. The visible groups and tools in the palette depends on which *layers* you have enabled in the diagram. More about these layers will be explained later.
 
 On the right side is an arrangement of different *views*. For example there is an outline view with a miniature display of the editor window, a properties view used to edit properties of model elements.
 
@@ -14,7 +14,7 @@ On the right side is an arrangement of different *views*. For example there is a
 
 ## Diagram editor
 
-The diagram editor offers different convenience functions to manage the model view and to aid in the modeling process. For example there is an infinitely variable zoom function which can be controlled by several ways. There are icons for this in the palette, a dropdown list at the top right in the toolbar as well as an entry in the Diagram item on the main menu. The zoom function can also be accessed by using the `Ctrl` key in combination with the mouse wheel - as is used in many browsers, which makes it an intuitive option.
+The diagram editor offers different convenience functions to manage the model view and to aid in the modelling process. For example there is an infinitely variable zoom function which can be controlled by several ways. There are icons for this in the palette, a dropdown list at the top right in the toolbar as well as an entry in the Diagram item on the main menu. The zoom function can also be accessed by using the `Ctrl` key in combination with the mouse wheel - as is used in many browsers, which makes it an intuitive option.
 
 Another important function is *Arrange*. We can, for example, select all elements and use this function to automatically arrange them. Also practical is the export of diagrams as an image file, which supports a number of image formats.
 
@@ -52,7 +52,7 @@ Entities and relationships define the data layer for an application. This repres
 
 When a new entity is created, the editor needs to know three things: the name for the entity in singular, and in plural, and a field specifying whether the entity is leading. In every application there must be one entity marked as leading. This is used as the default object type.
 
-The modeling of entities is the most important step in defining the data layer, but this process is incomplete without defining the relationships between them. To add a relationship choose the connection type in the palette and activate the tool with a mouse click. Next click on the source entity and (without releasing the mouse button) drag the mouse to the target entity, where the button is released. The editor cleverly determines the names for both sides of the relationship from the singular or plural names of the connected entities. If you want to create a self-relationship, a simple click on the corresponding entity is enough.
+The modelling of entities is the most important step in defining the data layer, but this process is incomplete without defining the relationships between them. To add a relationship choose the connection type in the palette and activate the tool with a mouse click. Next click on the source entity and (without releasing the mouse button) drag the mouse to the target entity, where the button is released. The editor cleverly determines the names for both sides of the relationship from the singular or plural names of the connected entities. If you want to create a self-relationship, a simple click on the corresponding entity is enough.
 
 *TBD*
 
@@ -174,7 +174,7 @@ To fix this just ensure that all existing elements have a name. Since ModuleStud
 
 ### Textual editor
 
-Beginning with ModuleStudio 0.6.0 there is also a textual syntax notation available. Not visible at once, it will be integrated into the UI step by step. ModuleStudio is going to move towards hybrid modeling, combining different kinds of editors in the same UI. One concrete use case is an embedded textual editor inside the graphical editor allowing to specify details on entity level.
+Beginning with ModuleStudio 0.6.0 there is also a textual syntax notation available. Not visible at once, it will be integrated into the UI step by step. ModuleStudio is going to move towards hybrid modelling, combining different kinds of editors in the same UI. One concrete use case is an embedded textual editor inside the graphical editor allowing to specify details on entity level.
 
 *Expert tip:* you can use the textual editor already if you like: open the *Open resource* dialog using **Ctrl + Shift + R**, type `*.mostapp` into the filter field and click on the *Open* button.
 

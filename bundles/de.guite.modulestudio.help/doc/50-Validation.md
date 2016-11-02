@@ -4,7 +4,7 @@ This chapter explains the intention behind validation in ModuleStudio.
 
 ## Introduction
 
-Validation is an essential part of a modeling language. By checking the current model against several *constraints* it ensures that certain scenarios can not happen in order to avoid problems based on invalid states of model elements.
+Validation is an essential part of a modelling language. By checking the current model against several *constraints* it ensures that certain scenarios can not happen in order to avoid problems based on invalid states of model elements.
 
 With the help of validation in ModuleStudio all subsequent components can process the given application model without having to revalidate common concerns.
 

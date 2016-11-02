@@ -29,7 +29,7 @@ This chapter shows how easy it is to define and generate Zikula applications wit
 
 Here are some remarks for getting into ModuleStudio smoothly.
 
-* Every application is described and represented by a model. Each project consists of two files: a domain model (`*.mostapp`) and a representation (`*.representation`). The first one is the important one containing all information relevant for further processing like model-to-model and model-to-code transformations. The representation information is only cosmetical and not neccessary. So if you want to exchange models, only the domain model is needed which can be imported into a new project again anytime.
+* Every application is described and represented by a model. Each project consists of two files: a domain model (`*.mostapp`) and a representation (`*.representation`). The first one is the important one containing all information relevant for further processing like model-to-model and model-to-code transformations. The representation information is only cosmetical and not necessary. So if you want to exchange models, only the domain model is needed which can be imported into a new project again any time.
 * Not all settings are directly embedded within the editor. To be able to set all fields refer to the *properties view* at the bottom right. There you can find an element named *domain* relating to a particular element with focus.
 * At first start with simple goals. Think about an application needing only three to five database tables (entity objects in the model editor). Keeping your application-specific logic simple helps to understand the architectural concepts of ModuleStudio.
 * There are some sample models contained in the `examples` folder inside ModuleStudio. You can also download them from [the examples project](https://github.com/Guite/MostExamples) on GitHub.
@@ -41,7 +41,7 @@ In model-driven development functional requirements are typically worded in a ve
 
 This makes for that even small changes in a model can result in bigger differences in the generated source code. One example for such distinctions which are inconsiderable on the first glance touches the spelling of model elements. This section points up the meaning of whether you write an entity name one way or another.
 
-At first the validation of ModuleStudio reacts with an error if one starts designations with a capital. The reason for this is that modeling should keep as simple as possible (in this case without unnecessarily having to use the shift key). If needed the generator can convert `special` into `Special` by itself.
+At first the validation of ModuleStudio reacts with an error if one starts designations with a capital. The reason for this is that modelling should keep as simple as possible (in this case without unnecessarily having to use the shift key). If needed the generator can convert `special` into `Special` by itself.
 
 Below we assume an example model containing an entity for products. This entity should get a new field for possible additional shipping costs.
 

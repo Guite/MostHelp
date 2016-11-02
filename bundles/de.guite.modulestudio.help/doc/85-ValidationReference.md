@@ -19,8 +19,8 @@ The biggest part is a reference section listing all validation rules in detail a
 * The application must have a prefix for it's database tables. This prefix is required to prevent naming collisions between several modules. Otherwise it would be a problem if multiple extensions use common table names like *user* or *category*. The prefix must have a length of more than two chars, whereby a at least four is recommended.
 * The prefix must be a valid identifier (e.g. no whitespace or special characters). Essentially the same as the global rule for names above. You should use lowercase here, but it will be generated in lowercase in all cases.
 * The application must have a version. The application version must conform to the pattern `x.y.z`. Another requirement introduced in Zikula 1.3. Valid values are *1.0.0*, *1.2.2*, but not *1.1* or *2.1.0beta*.
-* The application must contain at least one entity. At the moment ModuleStudio wants a model with at least one entity. If you are modeling an extension without any data storage, just create some dummy elements.
-* The application must contain at least one controller. ModuleStudio requires at least one controller, because otherwise the module wouldn't do anything. If you are modeling an extension without any controllers, just create some dummy elements.
+* The application must contain at least one entity. At the moment ModuleStudio wants a model with at least one entity. If you are modelling an extension without any data storage, just create some dummy elements.
+* The application must contain at least one controller. ModuleStudio requires at least one controller, because otherwise the module wouldn't do anything. If you are modelling an extension without any controllers, just create some dummy elements.
 * The application may contain only one settings container.
 
 ### Settings container

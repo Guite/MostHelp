@@ -25,6 +25,8 @@ Each development cycle in ModuleStudio consists of the following steps:
 5. Test intermediate results
 6. Customise the application.
 
+![Iterative-incremental development process](images/incremental_process.png "Iterative-incremental development process")
+
 Note ModuleStudio offers several *generator settings* to simplify the merging process. More about that below.
 
 ### Use versioning

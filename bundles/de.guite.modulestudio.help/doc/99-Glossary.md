@@ -27,11 +27,11 @@
 
 * **Doctrine** - An ORM layer for PHP, represents the interface between objects in an application and the relational data storage behind it.
 * **Domain** - A limited area of knowledge or interest, represents a problem space from the real world in most cases.
-* **Domain analysis** - Process within the meta modeling, cares for finding commonalities and differences between different members of a software system family.
+* **Domain analysis** - Process within the meta modelling, cares for finding commonalities and differences between different members of a software system family.
 * **Domain architecture** - From the area of product line engineering, marks the sum of a domain-specific language and the platform on which the applications realised with it are executed.
 * **Domain Specific Language** - A language offering precise means for expression for a domain. Contains an abstract syntax as well as concrete notations and transformations for further processing of created models.
 * **DSL** - Domain Specific Language
-* **Eclipse Modeling Framework** - Flexible and powerful framework for Ecore-based meta modeling.
+* **Eclipse Modeling Framework** - Flexible and powerful framework for Ecore-based meta modelling.
 * **Ecore** - Meta meta model implemented in the Eclipse Modeling Framework, compatible to the Meta Object Facility.
 * **EJB** - Enterprise Java Beans
 * **EMF** - Eclipse Modeling Framework
@@ -65,8 +65,8 @@
 * **MDSD** - See Model-Driven Software Development
 * **Meta class** - Instance of a meta model element in the form of a generated class.
 * **Meta meta model** - Defines possible elements and relations for meta models.
-* **Meta model** - Abstract syntax of a domain-specific language. Is created based on a meta meta model in the meta modeling process.
-* **Meta modeling** - Abstract definition of the core concepts of a domain in the form of meta models. Based on findouts in the domain analysis.
+* **Meta model** - Abstract syntax of a domain-specific language. Is created based on a meta meta model in the meta modelling process.
+* **Meta modelling** - Abstract definition of the core concepts of a domain in the form of meta models. Based on findouts in the domain analysis.
 * **Meta Object Facility** - Standard for meta meta models, adopted by the Object Management Group.
 * **Model** - A simplifying presentation of structures, functionalities and progress forms. Represents an application in the model-driven software development which is described in an abstract form.
 * **Model-Based** - In model-based systems models are the „base“ for an application. They serve for documentation and basis for generating a program skeleton.

@@ -31,7 +31,7 @@
 * Updated to Eclipse 4.6.0 (Neon).
 * ModuleStudio brings the required Java 8 environment along and can therewith also be used on systems without Java or with obsolete Java versions.
 
-### DSL / Modeling language changes
+### DSL / Modelling language changes
 
 * Applications can now define `capabilities` they provide (#667).
 * String fields can be marked as `bic` or `timezone` (analogous to `currency`, `country`, `language`, `locale`, `colour`, `ip address`, `iban number`, etc.).
@@ -87,7 +87,7 @@
 
 * Updated to Eclipse 4.4 (Luna).
 
-### DSL / Modeling language changes
+### DSL / Modelling language changes
 
 * A new generator setting allows defining a model as system module (#596).
 * Added new options in the model editor allowing specifying additional validation constraints available in Symfony 2.4.x and 2.5.0 (#516, #606).
@@ -128,7 +128,7 @@
 * One unrequired and confusing main menu entry (`File > Open File...`) has been hidden.
 * Updated to Eclipse 4.3.2 (Kepler SR2).
 
-### DSL / Modeling language changes
+### DSL / Modelling language changes
 
 * Introduced a new model element containing generator settings. Therewith you can control which features should be generated and take influence on some behavioural aspects of the generator (read more about this [here](87-GeneratorReference.md#settings-container)).
 * Added new target core version `pre14` for the new Symfony-based module structure. This replaces the 1.3.6 version which behaves now exactly like 1.3.5.
@@ -166,7 +166,7 @@
 * Removed custom beautifier component as it caused more problems than benefits.
 * Reimplemented validation constraints, errors and warnings now also with German translation.
 
-### DSL / Modeling language changes
+### DSL / Modelling language changes
 
 * A new property stores the `vendor` of an application. Usually this is the name of a company or institution. This is a preparation for future versions of Zikula as it is intended to name extensions combining vendor and name of a Module. Then it becomes possible to install for example multiple News modules by different vendors concurrently.
 * Another new property allows you to define the desired target core version. The default is 1.3.6 which includes the new forward compatibility layer for Zikula 1.4.0. Another current possible option is 1.3.5 for backwards compatibility and more stability.

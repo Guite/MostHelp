@@ -1162,4 +1162,4 @@ A custom action is only created as a mockup which contains the permission check 
 
 The workflow layer is not very configurable yet. At the moment there are three predefined workflows available which can be defined in the model for each [entity](#entity). For more information see [entity workflow types](#entity-workflow-type).
 
-In future (probably for version 0.8) it is planned to create a dedicated layer for modeling only possible workflow states and actions.
+In future (probably for version 0.8) it is planned to create a dedicated layer for modelling only possible workflow states and actions.
