@@ -54,7 +54,24 @@ To fix this just ensure that all existing elements have a name. Since ModuleStud
 
 ### Window menu
 
-*TBD*
+* ![Editor](images/menu_window_editor.png) Editor - Displays a sub menu for options with regards to the current editor.
+* ![Toggle Split Editor (Horizontal)](images/menu_window_editor_split_horizontal.png) Toggle Split Editor (Horizontal) - Enables/disables horizontal split of the editor window.
+* ![Toggle Split Editor (Vertical)](images/menu_window_editor_split_vertical.png) Toggle Split Editor (Vertical) - Enables/disables vertical split of the editor window.
+* ![Clone](images/menu_window_editor_clone.png) Clone - Clones the editor window (adds another one).
+* ![Appearance](images/menu_window_appearance.png) Appearance - Displays a sub menu for options with regards to the application's appearance.
+* ![Toggle Full Screen](images/menu_window_appearance_toggle_full_screen.png) Toggle Full Screen - Enables/disables a full screen mode.
+* ![Editors](images/menu_window_editors.png) Editors - Displays a sub menu for opening the different editors.
+* ![Open diagram](images/menu_window_editors_diagram.png) Open diagram - Opens the [diagram editor](32-DiagramEditor.md).
+* ![Open variables table](images/menu_window_editors_table.png) Open variables table - Opens the [table editor](35-TableEditors.md) for variables.
+* ![Open entities table](images/menu_window_editors_table.png) Open entities table - Opens the [table editor](35-TableEditors.md) for entities.
+* ![Views](images/menu_window_views.png) Views - Displays a sub menu for opening the different views. Helpful if you closed one and need it back.
+* ![Open dashboard](images/menu_window_views_dashboard.png) Open dashboard - Opens the [dashboard view](33-Views.md#dashboard-view).
+* ![Open error log](images/menu_window_views_error_log.png) Open error log - Opens the [error log view](33-Views.md#error-log-view).
+* ![Open outline](images/menu_window_views_outline.png) Open outline - Opens the [outline view](33-Views.md#outline-view).
+* ![Open properties](images/menu_window_views_properties.png) Open properties - Opens the [properties view](33-Views.md#properties-view).
+* ![Open problems](images/menu_window_views_problems.png) Open problems - Opens the [problems view](33-Views.md#problems-view).
+* ![Switch theme](images/menu_window_switch_theme.png) Switch theme - Changes the current [theme](#themes).
+* ![Preferences](images/menu_window_preferences.png) Preferences - Opens the [preferences](#preferences) dialog.
 
 ### Help menu
 
@@ -73,15 +90,58 @@ To fix this just ensure that all existing elements have a name. Since ModuleStud
 
 ### Themes
 
-*TBD*
+ModuleStudio offers two different themes: *light* and *dark*. You can change the current theme by either the *Window > Switch theme* main menu entry or using [preferences](#preferences).
+
+While all images in this manual use the light theme, the following image features the *dark* theme to show you the contrast.
+
+![Dark theme](images/ui_dark_theme.png "Dark theme")
+
+![Dark theme dashboard](images/ui_dark_theme_dashboard.png "Dark theme dashboard")
+
+Note that the display may not be correct immediately after switching the theme. So it could be required to exit ModuleStudio and restart it in order to have the new theme setup correctly. Also the dark theme is not fine-tuned yet, it still needs some attention to make it more beautiful. For example some text elements and icons need changed colours to improve readability.
 
 ### Preferences
 
-*TBD*
+In the preferences section you can adjust several base settings of ModuleStudio. This section explains what these settings do.
+
+#### AutoSave
+
+Here you can enable automatic save for the editors. You can specify an interval in seconds. This is especially interesting as a save operation triggers [validation](50-Validation.md#triggering-validation), too. So if you for example save the model every 30 seconds you can just work and the [problems view](33-Views.md#problems-view) keeps you updated about possible errors automatically.
+
+#### Help
+
+The help section allows you to change some context settings about how help information is displayed. For example you can specify that the [manual](#help-system) should always be opened in an external web browser instead of the included one.
+
+#### ModuleStudio
+
+* *Default theme*: choose whether you like to have the light or dark [theme](#themes) per default.
+* *Vendor, Author, Email address, Url*: you can input your default values at this place. The wizard for [creating a new model project](20-GettingStarted.md#create-your-first-application-in-10-minutes) will reuse these values, so you do not have to enter them repeatedly.
+* *Ignore model warnings during generation*: enable this option to avoid that a message box appears if your model contains warnings.
+* *Override existing files*: if you enable this option the generator will not abort if files exist in the selected output directory. *Use with caution!*
+* *Use staging updates*: if that option is activated the auto update function will include unstable releases. Each time you start ModuleStudio it looks for whether updates are available. Per default it searches only for stable releases. With the staging channel you get also updates from every single build which earlier brings you new features, but also includes the risk of breaking things.
+
+#### MostDsl
+
+The *MostDsl* tab is related to the [textual editor](36-TextualEditor.md). It needs some cleanup, because many settings are actually not required. This section explains only those which are most relevant.
+
+* *Syntax Coloring*: here you can change styles for the syntax highlighting. For example you could have keywords in red instead of purple. Or you could have strings in bold style.
+* *Templates*: here are the [template proposals](36-TextualEditor.md#template-proposals) defined. You can change them and add new ones if you like.
+
+#### Sirius
+
+This tab is primarily about the [diagram editor](32-DiagramEditor.md). It needs some cleanup, because many settings are actually not required. This section explains only those which are most relevant.
+
+* *Automatic Refresh*: depending on this option, the contents of opened editors may or may not be automatically updated when the underlying semantic model changes. In manual refresh mode (when *Automatic refresh* is unchecked), you can explicitly request a refresh of the whole editor by either pressing **F5** or clicking on *Refresh* in the context menu (right click).
+* *Sirius Diagram*: allows you to disable certain features of the diagram editor. For example you could hide the status line or deactivate animated zoom.
+* *Rulers And Grid*: you can enable showing a ruler for new diagrams. If you do not like the grid or the *snap to grid* behaviour feel free to disable it.
 
 ### Help system
 
-*TBD*
+While you can browse the entire help using the [help view](33-Views.md) only, you can also open the help system in a dedicated window using the *Help > Manual* main menu entry. The help system shows the manual using an internal web browser (you can also use an external instead by changing the [preferences](#preferences) accordingly).
+
+![The help system](images/ui_help_system.png "The help system")
+
+It is worth exploring the functionality offered by this included help. You can not only search for desired topics, there is also a keyword index. Also you can create and manage custom bookmarks for finding interesting sections again with ease.
 
 ## Customisation
 

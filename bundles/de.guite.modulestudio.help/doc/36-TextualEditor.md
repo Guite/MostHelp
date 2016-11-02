@@ -28,6 +28,8 @@ After inserting such a template you can easily go through all placeholders using
 
 ![Placeholders in templates](images/textual_template_proposal_placeholders.png "Placeholders in templates")
 
+Note you can change existing template proposals and add new ones in the [preferences](30-UserInterface.md#mostdsl).
+
 ## Quick fixes
 
 Of course error markers are also shown in the textual editor. Furthermore it also provides the quick fixes you already know from the [problems view](33-Views.md#problems-view). If quick fixes are available for a problem you see a small yellow bulb next to the error marker. Simply click on it and choose the desired quick fix. In the following example a string field is marked as `language`, but has a too small length for this.
