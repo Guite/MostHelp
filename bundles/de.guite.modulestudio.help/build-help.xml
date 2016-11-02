@@ -70,6 +70,7 @@
         <replace dir="${help.dir}" includes="**/*.html" token="KeyboardShortcuts.html" value="Keyboard-shortcuts.html" />
         <replace dir="${help.dir}" includes="**/*.html" token="ValidationReference.html" value="Validation-reference.html" />
         <replace dir="${help.dir}" includes="**/*.html" token="GeneratorReference.html" value="Generator-reference.html" />
+        <replace dir="${help.dir}" includes="**/*.html" token="TheGrammar.html" value="The-grammar.html" />
         <replace dir="${help.dir}" includes="**/*.html" token="WebResources.html" value="Web-resources.html" />
         <replace dir="${help.dir}" includes="**/*.html" token="HowToContribute.html" value="How-to-contribute.html" />
 

@@ -116,3 +116,4 @@ The following list shows some basic commands which might be helpful when using t
 * **Ctrl + X** - Cut selected text into clipboard. On Mac use **Cmd + X**.
 * **Ctrl + C** - Copy selected text into clipboard. On Mac use **Cmd + C**.
 * **Ctrl + V** - Paste text from clipboard. On Mac use **Cmd + V**.
+

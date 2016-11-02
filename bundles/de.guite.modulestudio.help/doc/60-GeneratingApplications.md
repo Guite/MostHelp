@@ -56,3 +56,4 @@ The rough steps of the generator workflow are as follows:
 5. Perform validation.
 6. Execute a model-to-model transformation. This adds primary and foreign key fields as well as other derived elements.
 7. Call the actual generator workflow.
+

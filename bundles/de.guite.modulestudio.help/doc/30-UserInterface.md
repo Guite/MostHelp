@@ -16,7 +16,7 @@ On the right side is an arrangement of different *views*. For example there is a
 
 The diagram editor offers different convenience functions to manage the model view and to aid in the modelling process. For example there is an infinitely variable zoom function which can be controlled by several ways. There are icons for this in the palette, a dropdown list at the top right in the toolbar as well as an entry in the Diagram item on the main menu. The zoom function can also be accessed by using the `Ctrl` key in combination with the mouse wheel - as is used in many browsers, which makes it an intuitive option.
 
-Another important function is *Arrange*. We can, for example, select all elements and use this function to automatically arrange them. Also practical is the export of diagrams as an image file, which supports a number of image formats.
+Another important function is *Arrange*. You can, for example, select all elements and use this function to automatically arrange them. Also practical is the export of diagrams as an image file, which supports a number of image formats.
 
 ### Tabbar
 
@@ -178,25 +178,37 @@ Beginning with ModuleStudio 0.6.0 there is also a textual syntax notation availa
 
 *Expert tip:* you can use the textual editor already if you like: open the *Open resource* dialog using **Ctrl + Shift + R**, type `*.mostapp` into the filter field and click on the *Open* button.
 
-The textual editor offers several advanced features, like for example syntax highlighting, code templates, auto completion, quick fixes and much more. It even allows you to create relationships between entities of different applications which is not possible using the diagram editor yet.
+The following screenshot shows a model opened in the textual editor:
 
-*TBD: features, screenshots and examples*
+![Example of textual editor](images/textual_example.png "Example of textual editor")
 
-#### Textual grammar
+As you can see the editor offers syntax highlighting and folding. The minus symbols on the left side allow collapsing parts which are current not relevant for you. If you hover a collapsed block it's content is shown in a tooltip.
 
-Here is a railroad chart showing the textual grammar elements:
+The next important feature is auto completion (content assist) which can be triggered by pressing **Ctrl + Space**. Depending on the current cursor position it suggests different possible keywords or names to insert.
 
-![Textual grammar](images/mostdsl_grammar.png "Textual grammar")
+![Auto completion at different positions](images/textual_content_assist.png "Auto completion at different positions")
+
+Of course error markers are also shown in the textual editor. Furthermore it also provides the quick fixes you already know from the [problems view](#problems-view). If quick fixes are available for a problem you see a small yellow bulb next to the error marker. Simply click on it and choose the desired quick fix. In the following example a string field is marked as `language`, but has a too small length for this.
+
+![Quick fixes in textual editor](images/textual_quickfix.png "Quick fixes in textual editor")
+
+*Expert tip:* the textual editor even allows you to create relationships between entities of different applications which is not possible using the diagram editor yet. For this add a `referedApplications` element specifying the other model you want to reference. Caution: use this only if you definitely know the consequences of creating Doctrine joins across different bundles. If you are unsure consider other ways of letting both modules work together instead.
 
 ## Customisation
 
 ### Rearrange the UI
 
-Most parts of the user interface can be customised, like one may expect from an Eclipse-based application. Views can be moved and replaced, e.g. you could have them at the left side, on the bottom or in the same tab bar as the editors. It is even possible to use multiple editors in parallel by arranging them next to each other.
+Most parts of the user interface can be customised, like one may expect from an Eclipse-based application. Views can be moved and replaced, e.g. you could have them at the left side, on the bottom or in the same tab bar as the editors.
+
+![Views can be arbitrarily arranged](images/ui_view_arrangement.png "Views can be arbitrarily arranged")
+
+It is even possible to use multiple editors in parallel by arranging them next to each other.
 
 ![Table editor and textual editor side by side](images/ui_multiple_editors.png "Table editor and textual editor side by side")
 
-*TBD*
+Experiment with these options and use them to meet your personal workflow.
+
+One additional hint about editor synchronisation: If you changed a model, you need to save it to let ModuleStudio reflect the changes in other opened editors.
 
 ### Customise palette
  
@@ -204,8 +216,8 @@ The palette in ModuleStudio can be customised in several ways. First of all it c
 
 Let's look at the palette content. It is important having an overview of the tools in the palette, especially for smaller screen resolutions. The elements are divided into groups, though, which can be opened and closed using mouse clicks. Single groups can also be fixed with a pin so that they are not automatically closed when other groups are opened.
 
-The appearance of the elements can be adjusted to individual tastes. Clicking the right mouse button on the palette provides the option *Use Large Icons* and a sub-menu called *Layout*. One should experiment with the different settings to get a feeling for the different possibilities. The choice to use small or large icons is stored for each layout type.
+The appearance of the elements can be adjusted to individual tastes. Clicking the right mouse button on the palette provides the option *Use Large Icons* and a sub-menu called *Layout*.
 
 ![Different kinds of palette layouts](images/ui_custom_palette.png "Different kinds of palette layouts")
 
-*TBD*
+One should experiment with the different settings to get a feeling for the different possibilities. The choice to use small or large icons is stored for each layout type.
