@@ -1,5 +1,7 @@
 # Views
 
+This chapter explains the available views and shows their functions in detail.
+
 ## Dashboard view
 
 *TBD*
