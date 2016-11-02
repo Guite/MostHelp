@@ -39,7 +39,9 @@ Using a version control system, like git or svn, gives you another additional le
 
 Normally all created classes are generated twice. Thereby an empty concrete class inherits from an abstract base class containing the whole generator code. The motivation behind this separation is keeping your own code free and separated from generated artifacts.
 
-Example for Zikula 1.4.x:
+![Class structure](images/class_structure.png "Class structure")
+
+Example:
 
     namespace MyModule\Entity\Base;
 
@@ -57,18 +59,6 @@ Example for Zikula 1.4.x:
         // manual code
     }
 
-Example for Zikula 1.3.x:
-
-    abstract class MyModule_Entity_Base_AbstractPerson
-    {
-        // generator code
-    }
-
-    class MyModule_Entity_Person extends MyModule_Entity_Base_AbstractPerson
-    {
-        // manual code
-    }
-
 Whenever you want to change the default implementation you can add corresponding extensions. If you recognise that you are doing the same changes again and again please [submit them as patches](95-HowToContribute.md) for the generator.
 
 ### Structure with inheritance hierarchies
@@ -77,7 +67,9 @@ One exception for this scheme is inheritance. If you add inheritance relationshi
 
 As explained above all generated concrete classes inherit from corresponding abstract base classes. As soon as an entity does inherit from another one, there will be no base class created for it. Instead the concrete implementation class will inherit from the concrete class of the parent entity.
 
-Example for Zikula 1.4.x:
+![Class structure for entity inheritance](images/class_structure_inheritance.png "Class structure for entity inheritance")
+
+Example:
 
     namespace MyModule\Entity\Base;
 
@@ -96,23 +88,6 @@ Example for Zikula 1.4.x:
     namespace MyModule\Entity;
 
     class CustomerEntity extends PersonEntity
-    {
-        // manual code
-    }
-
-Example for Zikula 1.3.x:
-
-    abstract class MyModule_Entity_Base_AbstractPerson
-    {
-        // generator code
-    }
-
-    class MyModule_Entity_Person extends MyModule_Entity_Base_AbstractPerson
-    {
-        // manual code
-    }
-
-    class MyModule_Entity_Customer extends MyModule_Entity_Person
     {
         // manual code
     }
