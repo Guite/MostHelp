@@ -188,9 +188,23 @@ The next important feature is auto completion (content assist) which can be trig
 
 ![Auto completion at different positions](images/textual_content_assist.png "Auto completion at different positions")
 
+At some points you will also see template proposals. These allow inserting a whole code block, for example for relationships:
+
+![Template proposals](images/textual_template_proposal.png "Template proposals")
+
+After inserting such a template you can easily go through all placeholders using the `Tab` key.
+
+![Placeholders in templates](images/textual_template_proposal_placeholders.png "Placeholders in templates")
+
 Of course error markers are also shown in the textual editor. Furthermore it also provides the quick fixes you already know from the [problems view](#problems-view). If quick fixes are available for a problem you see a small yellow bulb next to the error marker. Simply click on it and choose the desired quick fix. In the following example a string field is marked as `language`, but has a too small length for this.
 
 ![Quick fixes in textual editor](images/textual_quickfix.png "Quick fixes in textual editor")
+
+The [outline view](#outline-view) does also work with the textual editor. But there is also a *quick outline* you can open using `Ctrl + O`.
+
+![Quick outline view](images/textual_quick_outline.png "Quick outline view")
+
+The input field at the top allows for easy filtering. By double-clicking on an entry the editor jumps to it's declaration.
 
 *Expert tip:* the textual editor even allows you to create relationships between entities of different applications which is not possible using the diagram editor yet. For this add a `referedApplications` element specifying the other model you want to reference. Caution: use this only if you definitely know the consequences of creating Doctrine joins across different bundles. If you are unsure consider other ways of letting both modules work together instead.
 
