@@ -31,6 +31,92 @@ Note ModuleStudio offers several *generator settings* to simplify the merging pr
 
 Using a version control system, like git or svn, gives you another additional level of rollback safety and is a good idea anyway. It also simplifies process for performing tests and doing an automatical deployment (e.g. to a test server). If you are interesting in automating such things, look at CI systems like [Jenkins](https://jenkins.io) or [Travis](https://travis-ci.org/) (there are many more).
 
+## How to modify generated classes
+
+### Generated class structure
+
+Normally all created classes are generated twice. Thereby an empty concrete class inherits from an abstract base class containing the whole generator code. The motivation behind this separation is keeping your own code free and separated from generated artifacts.
+
+Example for Zikula 1.4.x:
+
+    namespace MyModule\Entity\Base;
+
+    abstract class AbstractPersonEntity
+    {
+        // generator code
+    }
+
+    namespace MyModule\Entity;
+
+    use MyModule\Entity\Base\AbstractPersonEntity;
+
+    class PersonEntity extends AbstractPersonEntity
+    {
+        // manual code
+    }
+
+Example for Zikula 1.3.x:
+
+    abstract class MyModule_Entity_Base_AbstractPerson
+    {
+        // generator code
+    }
+
+    class MyModule_Entity_Person extends MyModule_Entity_Base_AbstractPerson
+    {
+        // manual code
+    }
+
+Whenever you want to change the default implementation you can add corresponding extensions. If you recognise that you are doing the same changes again and again please [submit them as patches](95-HowToContribute.md) for the generator.
+
+### Structure with inheritance hierarchies
+
+One exception for this scheme is inheritance. If you add inheritance relationships to a model, the generator considers this inheritance for all classes which are created for each single entity. This naturally includes the entity classes itself, but also additional classes like repositories, validators or additional entities for extensions like attributes, categories, log entries, translations and more.
+
+As explained above all generated concrete classes inherit from corresponding abstract base classes. As soon as an entity does inherit from another one, there will be no base class created for it. Instead the concrete implementation class will inherit from the concrete class of the parent entity.
+
+Example for Zikula 1.4.x:
+
+    namespace MyModule\Entity\Base;
+
+    abstract class AbstractPersonEntity
+    {
+        // generator code
+    }
+
+    namespace MyModule\Entity;
+
+    class PersonEntity extends Base\AbstractPersonEntity
+    {
+        // manual code
+    }
+
+    namespace MyModule\Entity;
+
+    class CustomerEntity extends PersonEntity
+    {
+        // manual code
+    }
+
+Example for Zikula 1.3.x:
+
+    abstract class MyModule_Entity_Base_AbstractPerson
+    {
+        // generator code
+    }
+
+    class MyModule_Entity_Person extends MyModule_Entity_Base_AbstractPerson
+    {
+        // manual code
+    }
+
+    class MyModule_Entity_Customer extends MyModule_Entity_Person
+    {
+        // manual code
+    }
+
+While this implementation approach is quite elegant it is not completed yet in all areas unfortunately. At least during installation everything should be fine. When working with the application you will notice that inherited fields are handled well, but additional fields from the parent classes are not considered yet everywhere. See [#46](https://github.com/Guite/MostGenerator/issues/46) for more information.
+
 ## How to handle custom code
 
 ### Document your changes

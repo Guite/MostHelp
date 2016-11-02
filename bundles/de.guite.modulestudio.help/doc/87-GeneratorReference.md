@@ -227,44 +227,6 @@ One additional note about slugs and permalinks: the generated short url handlers
 * Entities with unique slugs use the slug for display urls, for example `mymodule/person/william-smith.html`.
 * Entities with non-unique slugs combine both methods, for example `mymodule/person/william-smith.5.html`.
 
-##### Entity class structure
-
-Normally all created classes are generated twice. Thereby an empty concrete class inherits from an abstract base class containing the whole generator code. The motivation behind this separation is that your own code keeps free and separated from generated artifacts.
-
-Example for Zikula 1.4.x:
-
-    namespace MyModule\Entity\Base;
-
-    abstract class AbstractPersonEntity
-    {
-        // generator code
-    }
-
-    namespace MyModule\Entity;
-
-    use MyModule\Entity\Base\AbstractPersonEntity;
-
-    class PersonEntity extends AbstractPersonEntity
-    {
-        // manual code
-    }
-
-Example for Zikula 1.3.x:
-
-        abstract class MyModule_Entity_Base_AbstractPerson
-        {
-            // generator code
-        }
-
-        class MyModule_Entity_Person extends MyModule_Entity_Base_AbstractPerson
-        {
-            // manual code
-        }
-
-One exception for this scheme is [inheritance](#entity-inheritance-structure).
-
-Whenever you want to change the default implementation you can add corresponding extensions. If you recognise that you are doing the same changes again and again please submit them as patches for the generator.
-
 #### Entity field
 
 Represents an entity field in the data layer.
@@ -1019,54 +981,6 @@ It includes the following properties in addition to the common ref:GenRefRelatio
 
 * **discriminatorColumn** - Name of the field used for storing the entity type.
 * **strategy** - The inheritance strategy used for data storage. The default value is `SINGLE_TABLE`.
-
-##### Entity inheritance structure
-
-The generator considers inheritance for all classes which are created for each entity. This includes naturally the entity classes itself, but also additional classes like repositories, validators or additional entities for extensions like attributes, categories, log entries, translations and more.
-
-As explained in the [entity section](#entity-class-structure) all generated concrete classes inherit from corresponding abstract base classes. As soon as an entity does inherit from another one, there will be no base class created for it. Instead the concrete implementation class will inherit from the concrete class of the parent entity.
-
-Example for Zikula 1.4.x:
-
-    namespace MyModule\Entity\Base;
-
-    abstract class AbstractPersonEntity
-    {
-        // generator code
-    }
-
-    namespace MyModule\Entity;
-
-    class PersonEntity extends Base\AbstractPersonEntity
-    {
-        // manual code
-    }
-
-    namespace MyModule\Entity;
-
-    class CustomerEntity extends PersonEntity
-    {
-        // manual code
-    }
-
-Example for Zikula 1.3.x:
-
-    abstract class MyModule_Entity_Base_AbstractPerson
-    {
-        // generator code
-    }
-
-    class MyModule_Entity_Person extends MyModule_Entity_Base_AbstractPerson
-    {
-        // manual code
-    }
-
-    class MyModule_Entity_Customer extends MyModule_Entity_Person
-    {
-        // manual code
-    }
-
-While this implementation approach is quite elegant it is not completed yet in all areas unfortunately. At least during installation everything should be fine. When working with the application you will notice that inherited fields are handled well, but additional fields from the parent classes are not considered yet everywhere. See [#46](https://github.com/Guite/MostGenerator/issues/46) for more information.
 
 #### Inheritance strategy type
 
