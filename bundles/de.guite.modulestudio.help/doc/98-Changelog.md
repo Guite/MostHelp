@@ -27,7 +27,7 @@
 * When creating relationships the source and target descriptions are automatically preset to the appropriate singular or plural names of corresponding entities.
 * Documentation is now based on Markdown.
 * ModuleStudio automatically searches for updates on startup. You can control in preferences whether only stable releases are included or also continuously incoming updates are considered, too.
-* Help search also includes results from zikula.org and zikula.de sites. 
+* Help search also includes results from zikula.org and zikula.de sites as well as documentation of Symfony, Doctrine and Twig. 
 * Updated to Eclipse 4.6.1 (Neon.1).
 * ModuleStudio brings the required Java 8 environment along and can therewith also be used on systems without Java or with obsolete Java versions.
 

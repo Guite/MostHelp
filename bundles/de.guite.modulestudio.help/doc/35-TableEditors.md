@@ -48,7 +48,7 @@ It is possible to change the width of a column by placing the cursor between two
 
 ## Sorting by column
 
-To sort the lines of a table by the values in a specific column, select one of the cells of the desired column, and in the context menu (right click), select the *Sort by* entry. You can also click directly on the column's header.
+To sort the lines of a table by the values in a specific column, select one of the cells of the desired column, and in the context menu (right click), select the *Sort by* entry. You can also click directly on the table column's header.
 
 ![Sort by a column](images/ui_table_sort_by_column.png "Sort by a column")
 

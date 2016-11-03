@@ -19,7 +19,7 @@ The error log view, which is named *Messages*, collects any log entries.
 
 ![Error log view](images/ui_views_errorlog.png "Error log view")
 
-By default the log entries are sorted by their date in descending order. You can resort them by clicking on the column headers. If you click on them again the sorting direction will be changed from ascending to descending.
+By default the log entries are sorted by their date in descending order. You can resort them by clicking on the table column headers. If you click on them again the sorting direction will be changed from ascending to descending.
 
 It is possible to change the width of a column by placing the cursor between two column headers and moving the separator.
 
@@ -98,16 +98,78 @@ As it may be dangerous to edit raw properties directly, the *Semantic* tab is go
 
 ## Problems view
 
-*TBD*
+The problem view shows errors and warnings detected by the [validation](50-Validation.md#validation) functionality in a table.
+
+![Problems view](images/ui_views_problems.png "Problems view")
+
+You can sort the problems by clicking on the table column headers. If you click on them again the sorting direction will be changed from ascending to descending.
+
+It is possible to change the width of a column by placing the cursor between two column headers and moving the separator.
+
+### Problem entry options
+
+The context menu of a single problem entry offers a bunch of actions.
+
+* ![Go to](images/ui_views_problems_goto.png) Go to - Navigates to the model element having the error in the [diagram editor](32-DiagramEditor.md#diagram-editor). If the diagram editor is not open, it will be opened automatically.
+* ![Copy](images/ui_views_problems_copy.png) Copy - Copies the [problem details](#problem-details-dialog) into the clipboard.
+* ![Delete](images/ui_views_problems_delete.png) Delete - Deletes the problem entry from the view. This can also be done using the `Del` key. After validation has been executed next time, the problem will be added to the view again if it still existing.
+* ![Select all](images/ui_views_problems_select_all.png) Select All - Selects all entries.
+* ![Quick Fix](images/ui_views_problems_quickfix.png) Quick Fix - Opens a dialog for proposed [quick fixes](#quick-fixes-for-problems).
+* ![Properties](images/ui_views_problems_properties.png) Properties - Opens a dialog showing the [problem details](#problem-details-dialog).
+
+Double-clicking on a problem entry causes the same as *Go to*.
+
+### Problem details dialog
+
+The dialog for a problem shows several details about it.
+
+![Problem details dialog](images/ui_views_problems_properties_dialog.png "Problem details dialog")
 
 ### Quick fixes for problems
 
-*TBD*
+If any quick fixes are available for a certain problem you can choose one of them in the quick fix dialog:
+
+![Quick fix dialog](images/ui_views_problems_quickfix_dialog.png "Quick fix dialog")
+
+After you selected a proposed fix and clicked on the *Finish* button, the corresponding action will be performed on the model and validation will be executed again. Afterwards the changes should be reflected in the diagram and the problem should be gone.
 
 ## Help view
 
-*TBD*
+With the help view you can use the [help system](30-UserInterface.md#help-system) inside ModuleStudio instead of having it in a separate window. The view can be opened using the *Help > Search* main menu entry.
 
-### Searching on Zikula support sites
+![Help view](images/ui_views_help.png "Help view")
 
-*TBD*
+Most functions from the help system are also available within the help view, like tabel of contents, keyword index and bookmarks.
+
+It is possible to decrease or increase the font size used in the help view. For this use the small arrow at the toolbar to show a menu.
+
+![Help view options menu](images/ui_views_help_options.png "Help view options menu")
+
+Note if you search for a keyword, this keyword is highlighted in the results.
+
+![Highlighted search results](images/ui_views_help_search_results.png "Highlighted search results")
+
+### Searching on web sites
+
+The help view allows you to extend a search to different websites, like the English and German Zikula support sites and documentation for Symfony, Doctrine and Twig.
+
+![Search options in help view](images/ui_views_help_search_options.png "Search options in help view")
+
+### Advanced search options
+
+Clicking on the *Advanced Settings* link opens a dialog which lets you further customise the search function.
+
+For the local help (that is, the manual) you can restrict which topics (chapters) should be included into a search process.
+
+![Advanced search options for local help](images/ui_views_help_search_options_local.png "Advanced search options for local help")
+
+You can also disable web search engines or rename them. 
+
+![Advanced search options for web search engines](images/ui_views_help_search_options_web.png "Advanced search options for web search engines")
+
+Finally you could even create additional search engines using the *New...* button.
+
+![Creating additional search engines](images/ui_views_help_search_options_additions.png "Creating additional search engines")
+
+So you could have several *Local Help* entries, each referencing different topics of the manual. Or you could add a web search pointing to some website offering further information you find useful. You only need the search results URL and replace the keyword by `{expression}`. You can even use a web search engine if a site does not provide a search function. For example for the Twig documentation the URL template used is `https://www.google.com/?q={expression}+site:twig.sensiolabs.org`.
+

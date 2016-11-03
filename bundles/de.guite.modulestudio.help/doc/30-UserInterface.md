@@ -53,8 +53,8 @@ The file menu collects actions regarding working with model element amendments.
 * ![Copy](images/menu_edit_copy.png) Copy - Copies selected element(s) into the clipboard.
 * ![Paste](images/menu_edit_paste.png) Paste - Paste element(s) from the clipboard.
 * ![Delete](images/menu_edit_delete.png) Delete - Deletes selected element(s) from the model.
-* ![Select All](images/menu_edit_select_all.png) Select All - Selects all elements.
-* ![Deselect All](images/menu_edit_deselect_all.png) Deselect All - Deselects all elements.
+* ![Select all](images/menu_edit_select_all.png) Select All - Selects all elements.
+* ![Deselect all](images/menu_edit_deselect_all.png) Deselect All - Deselects all elements.
 
 ### Window menu
 
@@ -145,7 +145,9 @@ This tab is primarily about the [diagram editor](32-DiagramEditor.md#diagram-edi
 
 ### Help system
 
-While you can browse the entire help using the [help view](33-Views.md#help-view) only, you can also open the help system in a dedicated window using the *Help > Manual* main menu entry. The help system shows the manual using an internal web browser (you can also use an external instead by changing the [preferences](#preferences) accordingly).
+While you can browse the entire help using the [help view](33-Views.md#help-view) only, you can also open the help system in a dedicated window using the *Help > Manual* main menu entry. This is particularly useful if you have a small screen and need the available space for the editor.
+
+The help system shows the manual using an internal web browser (you can also use an external instead by changing the [preferences](#preferences) accordingly).
 
 ![The help system](images/ui_help_system.png "The help system")
 
