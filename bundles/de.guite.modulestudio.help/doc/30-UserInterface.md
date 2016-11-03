@@ -1,6 +1,6 @@
 # User interface
 
-This section shows how to use ModuleStudio. Starting with a general demonstration of the user interface it goes step by step through all UI functions and explains their purpose. Note there is also a dedicated chapter showing a [list of keyboard shortcuts](82-KeyboardShortcuts.md) which are helpful not only, but especially for advanced users.
+This section shows how to use ModuleStudio. Starting with a general demonstration of the user interface it goes step by step through all UI functions and explains their purpose. Note there is also a dedicated chapter showing a [list of keyboard shortcuts](82-KeyboardShortcuts.md#keyboard-shortcuts) which are helpful not only, but especially for advanced users.
 
 ## Basic usage
 
@@ -19,8 +19,8 @@ On the right side is an arrangement of different *views*. For example there is a
 * ![New application](images/menu_file_new.png) New application - Starts the wizard for [creating a new model project](20-GettingStarted.md#create-your-first-application-in-10-minutes).
 * ![Open model](images/menu_file_open.png) Open model - Displays a sub menu for different ways to open existing models.
 * ![Open project](images/menu_file_open_project.png) Open project - Displays a dialog for selecting an existing project to open.
-* ![Import model file](images/menu_file_open_import.png) Import model - Displays a dialog for selecting an existing `.mostapp` file to be imported into a new project. Models from earlier versions are [automatically migrated](40-Migration.md#import-model-files).
-* ![Import xml table definition](images/menu_file_open_importxml.png) Import xml table definition - Allows to import a XML file containing legacy table definitions into a new project. More details are explained in [the migration chapter](40-Migration.md#import-old-modules).
+* ![Import model file](images/menu_file_open_import.png) Import model - Displays a dialog for selecting an existing `.mostapp` file to be imported into a new project. Models from earlier versions are [automatically migrated](40-Migration.md#importing-model-files).
+* ![Import xml table definition](images/menu_file_open_importxml.png) Import xml table definition - Allows to import a XML file containing legacy table definitions into a new project. More details are explained in [the migration chapter](40-Migration.md#migrating-old-modules).
 * ![Validate diagram](images/menu_file_validate.png) Validate diagram - Manual trigger for [validation](50-Validation.md#triggering-validation).
 * ![Generate application](images/menu_file_generate.png) Generate application - Starts the [generation process](60-GeneratingApplications.md#how-it-works).
 * ![Delete project](images/menu_file_delete_project.png) Delete project - Deletes the current project. This action can not be reverted.
@@ -61,9 +61,9 @@ To fix this just ensure that all existing elements have a name. Since ModuleStud
 * ![Appearance](images/menu_window_appearance.png) Appearance - Displays a sub menu for options with regards to the application's appearance.
 * ![Toggle Full Screen](images/menu_window_appearance_toggle_full_screen.png) Toggle Full Screen - Enables/disables a full screen mode.
 * ![Editors](images/menu_window_editors.png) Editors - Displays a sub menu for opening the different editors.
-* ![Open diagram](images/menu_window_editors_diagram.png) Open diagram - Opens the [diagram editor](32-DiagramEditor.md).
-* ![Open variables table](images/menu_window_editors_table.png) Open variables table - Opens the [table editor](35-TableEditors.md) for variables.
-* ![Open entities table](images/menu_window_editors_table.png) Open entities table - Opens the [table editor](35-TableEditors.md) for entities.
+* ![Open diagram](images/menu_window_editors_diagram.png) Open diagram - Opens the [diagram editor](32-DiagramEditor.md#diagram-editor).
+* ![Open variables table](images/menu_window_editors_table.png) Open variables table - Opens the [table editor](35-TableEditors.md#table-editors) for variables.
+* ![Open entities table](images/menu_window_editors_table.png) Open entities table - Opens the [table editor](35-TableEditors.md#table-editors) for entities.
 * ![Views](images/menu_window_views.png) Views - Displays a sub menu for opening the different views. Helpful if you closed one and need it back.
 * ![Open dashboard](images/menu_window_views_dashboard.png) Open dashboard - Opens the [dashboard view](33-Views.md#dashboard-view).
 * ![Open error log](images/menu_window_views_error_log.png) Open error log - Opens the [error log view](33-Views.md#error-log-view).
@@ -81,10 +81,10 @@ To fix this just ensure that all existing elements have a name. Since ModuleStud
 
 ## Main UI components
 
-* [Diagram editor](32-DiagramEditor.md)
-* [Views](33-Views.md)
-* [Table editors](35-TableEditors.md)
-* [Textual editor](36-TextualEditor.md)
+* [Diagram editor](32-DiagramEditor.md#diagram-editor)
+* [Views](33-Views.md#views)
+* [Table editors](35-TableEditors.md#table-editors)
+* [Textual editor](36-TextualEditor.md#textual-editor)
 
 ## Other UI components
 
@@ -122,14 +122,14 @@ The help section allows you to change some context settings about how help infor
 
 #### MostDsl
 
-The *MostDsl* tab is related to the [textual editor](36-TextualEditor.md). It needs some cleanup, because many settings are actually not required. This section explains only those which are most relevant.
+The *MostDsl* tab is related to the [textual editor](36-TextualEditor.md#textual-editor). It needs some cleanup, because many settings are actually not required. This section explains only those which are most relevant.
 
 * *Syntax Coloring*: here you can change styles for the syntax highlighting. For example you could have keywords in red instead of purple. Or you could have strings in bold style.
 * *Templates*: here are the [template proposals](36-TextualEditor.md#template-proposals) defined. You can change them and add new ones if you like.
 
 #### Sirius
 
-This tab is primarily about the [diagram editor](32-DiagramEditor.md). It needs some cleanup, because many settings are actually not required. This section explains only those which are most relevant.
+This tab is primarily about the [diagram editor](32-DiagramEditor.md#diagram-editor). It needs some cleanup, because many settings are actually not required. This section explains only those which are most relevant.
 
 * *Automatic Refresh*: depending on this option, the contents of opened editors may or may not be automatically updated when the underlying semantic model changes. In manual refresh mode (when *Automatic refresh* is unchecked), you can explicitly request a refresh of the whole editor by either pressing **F5** or clicking on *Refresh* in the context menu (right click).
 * *Sirius Diagram*: allows you to disable certain features of the diagram editor. For example you could hide the status line or deactivate animated zoom.
@@ -137,7 +137,7 @@ This tab is primarily about the [diagram editor](32-DiagramEditor.md). It needs 
 
 ### Help system
 
-While you can browse the entire help using the [help view](33-Views.md) only, you can also open the help system in a dedicated window using the *Help > Manual* main menu entry. The help system shows the manual using an internal web browser (you can also use an external instead by changing the [preferences](#preferences) accordingly).
+While you can browse the entire help using the [help view](33-Views.md#help-view) only, you can also open the help system in a dedicated window using the *Help > Manual* main menu entry. The help system shows the manual using an internal web browser (you can also use an external instead by changing the [preferences](#preferences) accordingly).
 
 ![The help system](images/ui_help_system.png "The help system")
 

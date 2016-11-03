@@ -68,7 +68,7 @@ The user interface consists of different types of editors which may include even
 
 ### Generator
 
-The generator creates source code for a Zikula extension from a given application model. You can read more about this in the [generator chapter](60-GeneratingApplications.md#generator). Also important is another chapter about [customisation and maintenance](70-CustomisationAndMaintenance.md) of generated applications.
+The generator creates source code for a Zikula extension from a given application model. You can read more about this in the [generator chapter](60-GeneratingApplications.md#generating-applications). Also important is another chapter about [customisation and maintenance](70-CustomisationAndMaintenance.md#customisation-and-maintenance) of generated applications.
 
 ### Overview chart
 

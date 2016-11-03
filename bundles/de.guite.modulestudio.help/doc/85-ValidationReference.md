@@ -1,6 +1,6 @@
 # Validation Reference
 
-The biggest part is a reference section listing all validation rules in detail and explains the motivation behind them. You can use this reference to search for certain error messages if you want to know more about the background. If you are unsure about the terminology used in a description please refer to the [generator reference](87-GeneratorReference.md) in this documentation.
+The biggest part is a reference section listing all validation rules in detail and explains the motivation behind them. You can use this reference to search for certain error messages if you want to know more about the background. If you are unsure about the terminology used in a description please refer to the [generator reference](87-GeneratorReference.md#generator-reference) in this documentation.
 
 ## Application layer
 

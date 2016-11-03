@@ -29,3 +29,7 @@ This chapter explains the available views and shows their functions in detail.
 ## Help view
 
 *TBD*
+
+### Searching on Zikula support sites
+
+*TBD*

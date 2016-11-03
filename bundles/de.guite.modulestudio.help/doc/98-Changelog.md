@@ -28,7 +28,7 @@
 * Documentation is now based on Markdown.
 * ModuleStudio automatically searches for updates on startup. You can control in preferences whether only stable releases are included or also continuously incoming updates are considered, too.
 * Help search also includes results from zikula.org and zikula.de sites. 
-* Updated to Eclipse 4.6.0 (Neon).
+* Updated to Eclipse 4.6.1 (Neon.1).
 * ModuleStudio brings the required Java 8 environment along and can therewith also be used on systems without Java or with obsolete Java versions.
 
 ### DSL / Modelling language changes

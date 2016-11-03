@@ -59,7 +59,7 @@ Example:
         // manual code
     }
 
-Whenever you want to change the default implementation you can add corresponding extensions. If you recognise that you are doing the same changes again and again please [submit them as patches](95-HowToContribute.md) for the generator.
+Whenever you want to change the default implementation you can add corresponding extensions. If you recognise that you are doing the same changes again and again please [submit them as patches](95-HowToContribute.md#how-to-contribute) for the generator.
 
 ### Structure with inheritance hierarchies
 
@@ -116,7 +116,7 @@ Before committing the new version you can show the differences using `git diff`.
 
 ### Understand the module structure
 
-If you do not know yet how a Zikula module is structured look at the [SpecModule](https://github.com/zikula/SpecModule) which acts as an example module demonstrating the main parts and what they are used for. Remember a Zikula module is a special kind of Symfony bundle, so you might check out [further web resources](89-WebResources.md) to learn more about it.
+If you do not know yet how a Zikula module is structured look at the [SpecModule](https://github.com/zikula/SpecModule) which acts as an example module demonstrating the main parts and what they are used for. Remember a Zikula module is a special kind of Symfony bundle, so you might check out [further web resources](89-WebResources.md#web-resources) to learn more about it.
 
 ### Use overriding
 
