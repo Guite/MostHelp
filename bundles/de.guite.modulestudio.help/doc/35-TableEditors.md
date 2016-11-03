@@ -16,7 +16,7 @@ Note that while tables do not show all possible options which can be set for ele
 
 ## Refreshing tables
 
-Depending on the value of the *Automatic refresh* Sirius preference (accessible through *Window > Preferences > Sirius*), the contents of opened tables may or may not be automatically updated when the underlying semantic model changes. In manual refresh mode (when *Automatic refresh* is unchecked), you can explicitly request a refresh of the whole table by either pressing **F5** or clicking on *Refresh table* in the context menu (right click). ![Refresh table in context menu](images/ui_table_refresh.png "Refresh table in context menu")
+Depending on the value of the *Automatic refresh* Sirius preference (accessible through *Window > Preferences > Sirius*), the contents of opened tables may or may not be automatically updated when the underlying semantic model changes. In manual refresh mode (when *Automatic refresh* is unchecked), you can explicitly request a refresh of the whole table by either pressing **F5** or clicking on *Refresh table* in the context menu (right click). ![Refresh table in context menu](images/ui_table_refresh.png)
 
 ## Adding and removing lines and columns
 

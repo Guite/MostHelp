@@ -80,7 +80,21 @@ The star, `*`, is a joker character, allowing you to search with more complicate
 
 ## Properties view
 
-*TBD*
+The properties view allows you to change the properties of model elements. At the moment it contains two tabs named *Main* and *Semantic*.
+
+The *Main* tab is the primary one and offers a form-based interface. Properties are grouped into sections which can be collapsed. Different property types are represented by different types of input fields, like text fields, checkboxes, radio buttons or dropdown lists.
+
+![Form-based properties](images/ui_views_properties_main.png "Form-based properties")
+
+Next to each field there is a question mark which shows a description on hover.
+
+The second tab, *Semantic*, shows the raw properties of the semantic elements in a tabular interface.
+
+![Table-based properties](images/ui_views_properties_semantic.png "Table-based properties")
+
+By default the *Semantic* tab shows not all properties, but only the basic ones. To see also the advanced properties, enable the *Show Advanced Properties* icon ![Show Advanced Properties](images/ui_views_properties_advanced.png) in the view's toolbar.
+
+As it may be dangerous to edit raw properties directly, the *Semantic* tab is going to be removed in a later version, but is currently also shown as a fallback.
 
 ## Problems view
 
