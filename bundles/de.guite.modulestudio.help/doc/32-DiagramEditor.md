@@ -1,16 +1,248 @@
 # Diagram editor
 
-The diagram editor offers different convenience functions to manage the model view and to aid in the modelling process. For example there is an infinitely variable zoom function which can be controlled by several ways. There are icons for this in the palette, a dropdown list at the top right in the toolbar as well as an entry in the Diagram item on the main menu. The zoom function can also be accessed by using the `Ctrl` key in combination with the mouse wheel - as is used in many browsers, which makes it an intuitive option.
+The diagram editor represents a model in a graphical way and offers several convenience functions to aid in the modelling process.
 
-Another important function is *Arrange*. You can, for example, select all elements and use this function to automatically arrange them. Also practical is the export of diagrams as an image file, which supports a number of image formats.
+A diagram editor is divided in three areas:
 
-## Tabbar
+1. the main graphical area, which shows the elements and supports direct interaction with them;
+2. the *palette* (per default at the left side), which gives access to additional tools (for example creation tools to add new elements to the diagram);
+3. the *tabbar* at the top of the graphical area, which provides additional, more global operations.
+
+![Diagram editor parts](images/ui_diagram_parts.png "Diagram editor parts")
+
+In addition to these areas which are immediately visible inside the diagram editor, it is also possible to interact with the diagram and its elements through the [properties view](33-Views.md#properties-view) and through contextual menus available on the graphical elements themselves and on the diagram's background. The [outline view](33-Views.md#outline-view) shows a graphical overview of the diagram which can be used to navigate inside it if the whole diagram is not visible in the main area.
+
+This chapter is structured in two parts. The [first part](#diagram-features-overview) gives an overview of all the main features, and is organised from a functional perspective. For example it contains a section which explains the different ways available to control which elements are hidden or not on a diagram, with links to the corresponding parts of the reference section. The [second part](#diagram-reference) is a reference and describes all the features available by looking at each of the main areas of the diagram editor (the palette, the tab-bar etc.).
+
+## Diagram features overview
+
+### Pop-up bars
+
+The user interface objects appearing in pop-up bars are buttons in a bubble-like shape. The buttons are generally used to create elements in the context of the diagram element below the mouse location.
+
+![Pop-up bar for quick element creation](images/ui_dialog_popup_bar.png "Pop-up bar for quick element creation")
+
+In the above picture, the mouse pointer was left motionless over a variables container. The pop-up bar appeared and offered a list of variable elements to create within this container.
+
+The tools which appear are the same as the ones available on the palette, but it can be more convenient sometimes to use the pop-up bar instead of going back to the palette to select the tool.
+
+### Print support
+
+Using the *File > Page Setup...* you can adjust the parameter used when printing a diagram.
+
+![Page setup dialog for printing](images/ui_print_page_setup.png "Page setup dialog for printing")
+
+If you activate the *Use workspace settings* option at the top of the dialog the second tab *Configure workspace settings* becomes active. Click on it to open the [printing preferences](30-UserInterface.md#printing-preferences) in a separate window.
+
+When you want to print a diagram you can preview it before starting the actual process using the *File > Print Preview* action.
+
+![Print preview window](images/ui_print_preview.png "Print preview window")
+
+The final print dialog looks like this (the *Advanced Options* window can be reached using the *Properties...* button next to the printer selection):
+
+![Print dialog](images/ui_print_dialog.png "Print dialog")
+
+### Moving the diagram
+
+When the diagram is larger than the editor area, you can move it in all directions by pressing the middle-button and dragging the mouse (keeping the button pressed).
+
+### Zooming the diagram
+
+There is a variable zoom function which can be controlled by several ways. There are icons for this in the [palette](#palette) (see [palette standard tools](#palette-standard-tools)) and a drop-down list at the top right in the [tab-bar](#tab-bar). The zoom function can also be accessed by using the combination of the keyboard key **Ctrl** and the mouse wheel - as is used in many browsers, which makes it an intuitive option. In this case, the zoom is done on the mouse location instead of the center of the editor. 
+
+### Resizing elements
+
+It is possible to resize shapes by dragging them until they are the size that you want.
+
+There are specific shortcuts to change the resize behaviour:
+
+* **Ctrl** (or **Alt** for Mac users): Centered resize (expands the shape on both opposite sides).
+* **Shift**: Resize that keeps the ratio.
+* **Alt** (or **Ctrl** for Mac users): Resize without snap (temporarily disables the snap during the resize if it is activated).
+* **F3**: Resize with children location relative to the parent. If the shape is resized to the left, upwards, or both, the children (contained nodes) are moved with the same offset than the resize.
+* **F4**: Resize with snap to all shapes (if the [snap to shapes preference](30-UserInterface.md#rulers-and-grid) is activated).
+
+### Moving elements
+
+There are specific shortcuts to change the move behavior:
+
+* **Shift**: Constrained move (only vertical or horizontal move is authorised at once).
+* **Alt** (or **Ctrl** for Mac users): Ignore snap while dragging (temporarily disables the snap during the move if it is activated).
+* **F3**: Move the edge source and target if pressed during the edge move. See the [move edge group](#move-edge-group) subsection below for more details.
+* **F4**: Move with snap to all shapes (if the [snap to shapes preference](30-UserInterface.md#rulers-and-grid) is activated).
+
+### Manage edges
+
+#### Snap back edge labels
+
+All visible edge labels can be snapped back to their default position by using the action *Snap back label(s)*. This action is available within the edge contextual menu under the format section *Format > Snap back label(s)*:
+
+![Snap back edge labels](images/ui_diagram_edge_snap_back.png "Snap back edge labels")
+
+This action is also available individually for each visible label of an edge. To use it, you have to use the action *Snap Back* under the label's contextual menu *Format > Snap Back*:
+
+![Snap back single edge label](images/ui_diagram_edge_label_snap_back.png "Snap back single edge label")
+
+The result of this action is visible here:
+
+![Snapped back edge label](images/ui_diagram_edge_label_snap_back_result.png "Snapped back edge label")
+
+#### Move bend-points
+
+It is possible to snap the bend-points to all shapes by pressing **F4** shortcut key during the move. This feature is only available if the [snap to shapes preference](30-UserInterface.md#rulers-and-grid) is activated. As for *snap to grid*, and unlike to snap for node, there is no visual feedback (gray grid line) drawn during the move.
+
+#### Remove bend-points
+
+You can define some bend-points (or inflection points) on an edge. It is possible to remove all these bend-points to retrieve the original straight edge. The action is available within the edge context menu (*Remove bend-points*) or by using the shortcut **Ctrl + Shift + -**. This action is only available on edges with a *straight* routing style.
+
+#### Straighten an edge
+
+There are four actions to straighten an edge, i.e. to transform an edge to an horizontal, or vertical, straight edge (with only one starting point and one ending point).
+
+These actions are available on edge contextual menu *Layout > Straighten*:
+
+![Straighten edge options](images/ui_diagram_edge_straighten.png "Straighten edge options")
+
+After choosing *To top* the edge looks like this:
+
+![Straighten edge to top](images/ui_diagram_edge_straighten_top.png "Straighten edge to top")
+
+After choosing *To bottom* the edge looks like this:
+
+![Straighten edge to bottom](images/ui_diagram_edge_straighten_bottom.png "Straighten edge to bottom")
+
+The options *To left* and *To right* work in the same way for vertically aligned edges.
+
+The action can be disabled (grayed menu) in some conditions:
+
+* The action is not possible because it does not respect the source or target node boundaries.
+* The source and the target of the edge are not on the same "axis" (left and right sides, or, top and bottom sides).
+* A straighten action will be disabled if the edge centering constraint will be violated. For oblique edges, the action is disabled if at least one side is centered. For rectilinear edges, the action is disabled if the moved side is centered.
+* The source or the target of the edge is another edge.
+* The source and the target is the same element.
+
+The action is available (menu is displayed) if the selection contains only edges (note and text attachments are not considered as edges).
+
+#### Display attachment link between edge and its labels
+
+It is possible to display an attachment link between an edge and its labels when edge or label is selected. This is not the default behaviour but it can be activated by [a preference](30-UserInterface.md#connections).
+
+If an edge is selected, one attachment is displayed for all associated labels. If a label is selected, only the attachment between the edge and this label is displayed.
+
+![Edge label attachment link](images/ui_diagram_edge_label_attachment_link.png "Edge label attachment link")
+
+### Changing elements layout
+
+#### Arrange elements
+
+Another important function is *Arrange*. You can, for example, select all elements and use this function to automatically arrange them.
 
 *TBD*
 
-## Palette
+#### Align elements
+
+*TBD*
+
+#### Distribute elements
+
+*TBD*
+
+#### Order elements
+
+*TBD*
+
+### Reset diagram or container origin
+
+*TBD*
+
+### Hiding elements
+
+*TBD*
+
+### Validating the model
+
+*TBD*
+
+### Filters
+
+*TBD*
+
+### Exporting images
+
+*TBD*
+
+### Batch images export
+
+You can export diagrams as an image file, which supports a number of image formats.
+
+*TBD*
+
+### Port shifting - Port drag and drop
+
+*TBD*
+
+### Copy/paste of format
+
+*TBD*
+
+### Diagram element pinning
+
+*TBD*
+
+### Layouting mode: arrange your diagrams without modifying semantic models
+
+*TBD*
+
+### Synchronized/Unsynchronized diagram
+
+*TBD*
+
+### Using Regular Expressions to find diagram elements
+
+*TBD*
+
+### Quick outline
+
+*TBD*
+
+### Style customisations
+
+*TBD*
+
+## Diagram reference
+
+*TBD*
+
+### Graphical area
+
+*TBD*
+
+### Palette
 
 *TBD groups, basic tools at the top, pinning, etc.*
+
+### Tab-bar
+
+*TBD*
+
+### Properties view
+
+*TBD*
+
+### Outline
+
+*TBD*
+
+
+
+
+
+
+
+
+
+
+
 
 ## Layers
 
@@ -81,14 +313,6 @@ Variables are generated as basic settings in the application. You can create one
 ### Workflow layer
 
 The workflow layer is not implemented yet (planned for version 0.8). This section is just a dummy for future. You can still configure a bunch of different workflows for your entities (see [generator reference](87-GeneratorReference.md#entity-workflow-type)).
-
-## Context menus
-
-*TBD*
-
-## Direct editing
-
-*TBD*
 
 ## Customisation
 

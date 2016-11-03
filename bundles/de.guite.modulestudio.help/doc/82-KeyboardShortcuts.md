@@ -46,10 +46,10 @@
 * **Ctrl + L** - Hide label. On Mac use **Cmd + L**.
 * **Ctrl + Shift + L** - Show label. On Mac use **Cmd + Shift + L**.
 * **Arrows** - Move shape.
-* **.** - Cycle on element handles. Cycle on Position Handle / 8 Side and Corner Size Handles / Position Handle. Clockwise rotation.
-* **.** - Cycle through edge points. Cycle through the endpoints, bendpoints, and midpoints of a connection. Clockwise rotation.
+* **.** - Cycle on element handles. Cycle on position handle / 8 side and corner size handles / position handle. Clockwise rotation.
+* **.** - Cycle through edge points. Cycle through the end-points, bend-points, and mid-points of a connection. Clockwise rotation.
 * **Ctrl + Shift + -** - Manage edge. Remove all the bend-points to retrieve an original straight edge. On Mac use **Cmd + Shift + -**.
-* **. + Mouse** - Move a component. Cycle once to the Move handle using the period key (**.**), use navigation keys to move, press **Enter** to accept new location or press **Escape** to cancel the move.
+* **. + Mouse** - Move a component. Cycle once to the move handle using the period key (**.**), use navigation keys to move, press **Enter** to accept new location or press **Escape** to cancel the move.
 * **Shift + Mouse** - Constrain the move by snapping the shape to the grid.
 * **Alt + Mouse** - Move without snap. This allows to ignore the snap while dragging a shape. On Mac use **Ctrl + Mouse**.
 * **. + Resize** - Resize a component. Cycle to desired resize handle using the period key (**.**), use navigation keys to resize, press **Enter** to accept new size or press **Escape** to cancel the resize.

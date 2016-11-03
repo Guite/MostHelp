@@ -27,7 +27,7 @@ The biggest part is a reference section listing all validation rules in detail a
 
 * The core version target is deprecated and going to be removed soon. This warning appears if you change the target core version to 1.3.x to `ZK135` or `ZK136`. Those are going to be removed in a later version.
 * Settings container must be assigned to an application. Should not occur in practice, this is just for completeness.
-* Scribite plugins require external controller and finder component. If you enable `generateScribitePlugins` you also need `generateExternalControllerAndFinder`.
+* Scribite plug-ins require external controller and finder component. If you enable `generateScribitePlugins` you also need `generateExternalControllerAndFinder`.
 
 ### Referred application
 

@@ -68,10 +68,10 @@
 * 1.4 applications utilise capabilities for exposing categories usage.
 * The generator displays descriptions for field names containing numbers more readable.
 * 1.4 applications use webshims polyfill for forms to provide better support for HTML5 validation in old browsers (#673).
-* Editing time fields is now supported by a dedicated form plugin. Also for date fields there is a new selector (#87).
+* Editing time fields is now supported by a dedicated form plug-in. Also for date fields there is a new selector (#87).
 * In 1.4 applications annotations are used to distinguish between admin and user areas in entity controllers (#633).
 * The `postInstall` event newly introduced in Zikula 1.4 is supported.
-* Custom admin image and Scribite editor plugin images are dynamically generated (#458).
+* Custom admin image and Scribite editor plug-in images are dynamically generated (#458).
 * The primary variable name for search terms has been changed to `q` for improved integration with analytics software.
 * For the generated templates YAML example files with example overrides are pregenerated for easy copy n paste (#460).
 * In 1.4 applications `RouteUrl` and `UrlInterface` are now used instead of the `ModUrl` class.
@@ -79,7 +79,7 @@
 * Generation of MultiHook needles has been added (together with a new generator setting for that) (#13).
 * For upload fields with images additional settings are generated allowing to enable automatic shrinking of too large images down to configurable maximum dimensions (#800).
 * Many minor bugfixes.
-* For more details see [closed tickets on Github](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.0).
+* For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.0).
 
 ## ModuleStudio 0.6.2 (Aug 7, 2014)
 
@@ -145,7 +145,7 @@
 
 * Upload folders are now created on demand if they do not exist yet (required if a module is used without having installed it, like for example when using Multisites site templates).
 * Added an option for bypassing entity validation (required for example when archiving objects automatically).
-* The generator creates also a plugin for the Newsletter module (beside the Mailz plugin which has been supported before already).
+* The generator creates also a plug-in for the Newsletter module (beside the Mailz plug-in which has been supported before already).
 * Lists with related objects in quick navigation forms are sorted now by default.
 * Added support for new event handlers in 1.4.0 to recognise a module being activated or deactivated.
 * In 1.4.0 event handlers are not managed in the database anymore, but by means of dependency injection.
@@ -185,11 +185,11 @@
 ### Generator changes
 
 * Implementation and usage of the DSL changes described above, for example a lot of workflows-related stuff.
-* Entities with Geographical extension show a map in display and edit pages now (based on mapstraction which is included as a system plugin in the core, so it is easily possible to use different map vendors).
+* Entities with Geographical extension show a map in display and edit pages now (based on mapstraction which is included as a system plug-in in the core, so it is easily possible to use different map vendors).
 * KML export functionality for entities with Geographical extension.
 * When editing entities with Geographical extension a map for selecting coordinates is provided.
-* Handling of relations has been reimplemented with form plugins.
-* Relationship handling is now done with dropdown lists by default. Using auto completion instead is still possible. Inline creation and editing of related items is only possible when using the auto completion approach.
+* Handling of relations has been reimplemented with form plug-ins.
+* Relationship handling is now done with drop-down lists by default. Using auto completion instead is still possible. Inline creation and editing of related items is only possible when using the auto completion approach.
 * Integration for search API and your account panel.
 * Support for pending content listener, moderation block and moderation panel.
 * Mass handling of objects on admin view pages.
@@ -202,7 +202,7 @@
 * Optional category filters for generic block and both content types.
 * Possibility for entering custom templates in list block and list content type.
 * For categories multiple registries/trees/properties are now considered everywhere.
-* Basic Scribite integration, at the moment there are plugins generated for Xinha, TinyMCE and CKEditor.
+* Basic Scribite integration, at the moment there are plug-ins generated for Xinha, TinyMCE and CKEditor.
 * Fixed validation of upload file extensions; this check is now performed on the client-side, too.
 * Default implementation for user delete event listener.
 * Display and edit actions have been implemented also for ajax controllers.
@@ -231,10 +231,10 @@
 * Fixed values for precision and scale of coordinate fields.
 * Fixed query for retrieving related objects during editing.
 * Removed wrong application of client-side validation to input buttons.
-* Also for form plugins there are base classes generated now, for easier extensibility and customisability.
+* Also for form plug-ins there are base classes generated now, for easier extensibility and customisation.
 * Usage of prepared statements in repository classes.
 * Many minor bugfixes und refactorings (e.g. request object usage).
-* For all details see [closed tickets on Github](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.6.0).
+* For all details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.6.0).
 
 ## ModuleStudio 0.5.4 (Nov 29, 2011)
 
@@ -253,12 +253,12 @@
 * Make sort links in view templates consider the parameter for showing all items instead of paginated list properly.
 * Improved language detection in bootstrap file when using translatable fields.
 * Object actions in admin view templates contain now a preview icon if a user display action exists in the controller model.
-* Fixed errors in Content type, generic block and Mailz plugin.
+* Fixed errors in Content type, generic block and Mailz plug-in.
 * Added forgotten string field validation calls.
 * Fixed JavaScript problems for inline editing of related objects linked by many-to-many relationships.
 * Fixed missing generation of view modifier for displaying country names.
 * Updated Imagine pathes for thumbnail generation due to vendor changes.
-* For more details see [closed tickets on Github](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.5.4).
+* For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.5.4).
 
 ## ModuleStudio 0.5.3 (Oct 10, 2011)
 
@@ -277,16 +277,16 @@
 * Make sort links in view templates consider the parameter for showing all items instead of paginated list properly.
 * Improved language detection in bootstrap file when using translatable fields.
 * Object actions in admin view templates contain now a preview icon if a user display action exists in the controller model.
-* Fixed errors in Content type, generic block and Mailz plugin.
+* Fixed errors in Content type, generic block and Mailz plug-in.
 * Added forgotten string field validation calls.
 * Fixed JavaScript problems for inline editing of related objects linked by many-to-many relationships.
 * Fixed missing generation of view modifier for displaying country names.
 * Updated Imagine pathes for thumbnail generation due to vendor changes.
-* For more details see [closed tickets on Github](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.5.3).
+* For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.5.3).
 
 ## ModuleStudio 0.5.2 (Sep 8, 2011)
 
-* For most details see [closed tickets on Github](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.5.2).
+* For most details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.5.2).
 
 ## ModuleStudio 0.5.1 (Sep 20, 2010)
 

@@ -126,7 +126,7 @@ So when custom templates are placed outside the module this is fine for developm
 
 When using a module in production things are a bit different. A site owner may want to further customise some templates, so the system-wide resources directory should not be used by the module itself out of the box. This is not really a technical problem, but just a question of how the deployment process should be. You can for example move the overridden templates into the module before a release.
 
-If you need additional display-oriented logic, simply create a Twig extension (Smarty view plugin in Zikula 1.3.x) encapsulating your efforts in a file which is not affected by the generator at all.
+If you need additional display-oriented logic, simply create a Twig extension (Smarty view plug-in in Zikula 1.3.x) encapsulating your efforts in a file which is not affected by the generator at all.
 
 ### Code additions
 

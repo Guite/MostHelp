@@ -93,7 +93,7 @@ A settings container has the following fields:
 * **generateModerationBlock** - A boolean specifying whether a moderation block should be generated or not. Requires at least one entity with a workflow including approval. Default value is `true`.
 * **generateListContentType** - A boolean specifying whether a content type for collection lists should be generated or not. Default value is `true`.
 * **generateDetailContentType** - A boolean specifying whether a content type for single objects should be generated or not. Requires user controller containing a display action. Default value is `true`.
-* **generateNewsletterPlugin** - A boolean specifying whether a Newsletter plugin should be generated or not. Default value is `true`.
+* **generateNewsletterPlugin** - A boolean specifying whether a Newsletter plug-in should be generated or not. Default value is `true`.
 * **generateModerationPanel** - A boolean specifying whether a moderation panel should be generated or not. Requires at least one entity with a workflow including approval. Default value is `true`.
 * **generatePendingContentSupport** - A boolean specifying whether support for pending content should be generated or not. Requires at least one entity with a workflow including approval. Default value is `true`.
 * **generateExternalControllerAndFinder** - A boolean specifying whether a controller for external calls providing a generic finder component should be generated or not. Default value is `true`.
@@ -151,9 +151,9 @@ Can be one of the following options:
 
 The generator uses this value in the corresponding module dependency created in the version class.
 
-## Model layer
+## Data layer
 
-The model layer in ModuleStudio has been designed for a precise description of entities and associations. To understand all the elements and properties please read the [Doctrine 2 documentation](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/index.html) before.
+The data layer in ModuleStudio has been designed for a precise description of entities and associations. To understand all the elements and properties please read the [Doctrine 2 documentation](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/index.html) before.
 
 ### Language elements
 
@@ -535,7 +535,7 @@ A list field may have the following references:
 
 * **items** - Allows referencing one or more [items](#list-field-item).
 
-The generator creates an additional class for handling the available list items centrally. Based on this information [edit pages](#edit-action) provide either a dropdown list (for single or multiple values depending on the `multiple` property), radio buttons (if `multiple` is set to `false` and `expanded` is set to `true`) or a checkbox list (if `multiple` and `expanded` are both set to `true`). For the output in [view](#view-action) and [display](#display-action) templates there is a modifier generated which cares for showing the names instead of the raw option values.
+The generator creates an additional class for handling the available list items centrally. Based on this information [edit pages](#edit-action) provide either a drop-down list (for single or multiple values depending on the `multiple` property), radio buttons (if `multiple` is set to `false` and `expanded` is set to `true`) or a checkbox list (if `multiple` and `expanded` are both set to `true`). For the output in [view](#view-action) and [display](#display-action) templates there is a modifier generated which cares for showing the names instead of the raw option values.
 
 #### List field item
 
@@ -678,7 +678,7 @@ Can be one of the following options:
 If an entity has a tree type other than `NONE` then the generator creates several additional artifacts, like for example:
 
 * An additional template for managing the tree in a hierarchy view.
-* An additional view plugin for including the Zikula tree javascript.
+* An additional view plug-in for including the Zikula tree JavaScript.
 * An additional template included in display pages for showing different types of relatives.
 * Some ajax functions used by the hierarchy view.
 * For closure: separate classes for the closure entities.
@@ -843,7 +843,7 @@ It includes the following properties in addition to the common [relationship](#r
 * **nullable** - A boolean specifying whether the field for this relationship may be null or not. The Default value is `true`.
 * **onDelete** - String for optional update cascade options on database level (for example `RESTRICT` or `SETNULL`).
 * **onDelete** - String for optional delete cascade options on database level (for example `RESTRICT` or `SETNULL`).
-* **useAutoCompletion** - If set to any value except `NONE` the generator will create an auto completion field instead of a normal dropdown select field for the corresponding side(s) of the relationship. For more information see the [available options](#auto-completion-usage).
+* **useAutoCompletion** - If set to any value except `NONE` the generator will create an auto completion field instead of a normal drop-down select field for the corresponding side(s) of the relationship. For more information see the [available options](#auto-completion-usage).
 * **sourceAlias** - The alias for the source entity, required to have multiple associations between the same entities. The name should reflect the cardinality on the source side (singular or plural forms) depending on the relationship type. As with all names mixed case is preferred, for example `personAddresses`.
 * **sourceField** - Name of the source entity fields used for the join. The default value is `id` which means that the source entity is joined by it's primary key. It is possible to change that value for custom join conditions. Furthermore it is possible to use multiple field names separated by a comma with a space char in order to join entities with composite keys.
 * **targetAlias** - The alias for the target entity, required to have multiple associations between the same entities. The name should reflect the cardinality on the target side (singular or plural forms) depending on the relationship type. As with all names mixed case is preferred, for example `personAddresses`.
@@ -929,7 +929,7 @@ The cascade type is implemented as defined in the association's annotation withi
 
 #### Auto completion usage
 
-Defines whether and which sides of a relationship will be handled by an auto completion field instead of a dropdown field during editing. Note that inline creation and editing of related items (see [edit types](#relation-edit-type)) is only possible when using the auto completion approach.
+Defines whether and which sides of a relationship will be handled by an auto completion field instead of a drop-down field during editing. Note that inline creation and editing of related items (see [edit types](#relation-edit-type)) is only possible when using the auto completion approach.
 
 Can be one of the following options:
 

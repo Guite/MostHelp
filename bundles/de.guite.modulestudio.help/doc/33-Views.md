@@ -82,7 +82,7 @@ The star, `*`, is a joker character, allowing you to search with more complicate
 
 The properties view allows you to change the properties of model elements. At the moment it contains two tabs named *Main* and *Semantic*.
 
-The *Main* tab is the primary one and offers a form-based interface. Properties are grouped into sections which can be collapsed. Different property types are represented by different types of input fields, like text fields, checkboxes, radio buttons or dropdown lists.
+The *Main* tab is the primary one and offers a form-based interface. Properties are grouped into sections which can be collapsed. Different property types are represented by different types of input fields, like text fields, checkboxes, radio buttons or drop-down lists.
 
 ![Form-based properties](images/ui_views_properties_main.png "Form-based properties")
 
