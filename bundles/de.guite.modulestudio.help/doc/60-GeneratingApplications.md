@@ -45,7 +45,7 @@ Calling the generator within ModuleStudio is very easy. The only requirement is 
 
 If there are no validation errors, choose the menu entry *File > Generate application* to call the generator. If the model contains unsaved changes or errors, error messages appear accordingly. If there are still warnings a dialog asks if these should be ignored. Once past any errors or warnings, you need to choose an output directory. Since the generator deletes everything in the specified directory, ensure to create a new empty folder. If you would choose a folder that was not empty, a dialog with a corresponding warning appears to allow you to confirm the selection. Afterwards click on OK to start the process. A progress dialog shows what the generator is currently creating. Finally a message notification shows that the generation is complete.
 
-## The workflow
+## The generation workflow
 
 The rough steps of the generator workflow are as follows:
 

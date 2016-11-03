@@ -16,7 +16,7 @@ Note that while tables do not show all possible options which can be set for ele
 
 ## Refreshing tables
 
-Depending on the value of the *Automatic refresh* Sirius preference (accessible through *Window > Preferences > Sirius*), the contents of opened tables may or may not be automatically updated when the underlying semantic model changes. In manual refresh mode (when *Automatic refresh* is unchecked), you can explicitly request a refresh of the whole table by either pressing **F5** or clicking on *Refresh table* in the context menu (right click). ![Refresh table in context menu](images/ui_table_refresh.png)
+Depending on the value of the *Automatic refresh* preference (accessible through *Window > Preferences > Sirius*), the contents of opened tables may or may not be automatically updated when the underlying semantic model changes. In manual refresh mode (when *Automatic refresh* is unchecked), you can explicitly request a refresh of the whole table by either pressing **F5** or clicking on *Refresh table* in the context menu (right click). ![Refresh table in context menu](images/ui_table_refresh.png)
 
 ## Adding and removing lines and columns
 
@@ -91,13 +91,13 @@ Under all systems, to finish the edition of a multi-line text, you need to use *
 
 ## Quick outline
 
-The [outline view](33-Views.md#outline-view) does not work with the table editors. But there is also a *quick outline* you can open using `Ctrl + O`.
+The [outline view](33-Views.md#outline-view) does not work with the table editors. But there is also a *quick outline* you can open using **Ctrl + O**.
 
 ![Quick outline view](images/ui_tables_quick_outline.png "Quick outline view")
 
 The input field at the top allows for easy filtering. This allows you to rapidly search text in the displayed name or the contained string attributes of your table elements.
 
-The star, `*`, is a joker character, allowing you to search with more complicated patterns. Regarding this, an element is found if there is a word in its name or one of its attributes that match with the text in the filter, so if you want to search within words too, add `*` at the start of your pattern. Also, you can navigate along the matching elements with `↑` and `↓`, and go to the selected element in your editor with `Enter` or by double-clicking on it.
+The star, `*`, is a joker character, allowing you to search with more complicated patterns. Regarding this, an element is found if there is a word in its name or one of its attributes that match with the text in the filter, so if you want to search within words too, add `*` at the start of your pattern. Also, you can navigate along the matching elements with `↑` and `↓`, and go to the selected element in your editor with **Enter** or by double-clicking on it.
 
 ## Print table data
 

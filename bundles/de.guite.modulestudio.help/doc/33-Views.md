@@ -78,6 +78,8 @@ The input field at the top allows for easy filtering. This allows you to rapidly
 
 The star, `*`, is a joker character, allowing you to search with more complicated patterns. Regarding this, an element is found if there is a word in its name or one of its attributes that match with the text in the filter, so if you want to search within words too, add `*` at the start of your pattern. Also, you can navigate along the matching elements with `↑` and `↓`, causing the diagram moving to the selected element immediately.
 
+When using the diagram editor it is also possible to use the outline view for hiding and revealing elements and/or their labels. More information can be found [here](32-DiagramEditor.md#hiding-and-showing-elements-and-labels).
+
 ## Properties view
 
 The properties view allows you to change the properties of model elements. At the moment it contains two tabs named *Main* and *Semantic*.

@@ -1,30 +1,133 @@
 # Diagram editor
 
-The diagram editor represents a model in a graphical way and offers several convenience functions to aid in the modelling process.
+The diagram editor represents a model in a graphical way and offers several convenience functions to aid in the modelling process. This chapter gives an overview of all the main features and is organised from a functional perspective.
 
 A diagram editor is divided in three areas:
 
 1. the main graphical area, which shows the elements and supports direct interaction with them;
-2. the *palette* (per default at the left side), which gives access to additional tools (for example creation tools to add new elements to the diagram);
+2. the *palette* which gives access to additional tools (for example creation tools to add new elements to the diagram);
 3. the *tabbar* at the top of the graphical area, which provides additional, more global operations.
 
 ![Diagram editor parts](images/ui_diagram_parts.png "Diagram editor parts")
 
 In addition to these areas which are immediately visible inside the diagram editor, it is also possible to interact with the diagram and its elements through the [properties view](33-Views.md#properties-view) and through contextual menus available on the graphical elements themselves and on the diagram's background. The [outline view](33-Views.md#outline-view) shows a graphical overview of the diagram which can be used to navigate inside it if the whole diagram is not visible in the main area.
 
-This chapter is structured in two parts. The [first part](#diagram-features-overview) gives an overview of all the main features, and is organised from a functional perspective. For example it contains a section which explains the different ways available to control which elements are hidden or not on a diagram, with links to the corresponding parts of the reference section. The [second part](#diagram-reference) is a reference and describes all the features available by looking at each of the main areas of the diagram editor (the palette, the tab-bar etc.).
+## Palette
+
+The diagram editor has a palette of tools, which by default is docked on the left hand side of the main graphical area. The top row of the palette contains some general, while the rest contains tools specific to each [layer](#layers).
+
+### Managing the palette
+
+By default, the palette appears with a pre-defined size on the left hand side of the diagram.
+
+*Resizing*. You can resize it to take more or less horizontal space by dragging the vertical separator between the palette and the diagram with your mouse.
+
+*Folding*. You can also fold the palette to hide it almost completely by clicking on the triangular icon in the corner of the palette header. When folded, you can restore it by clicking again on the same triangular icon.
+
+![Palette folding](images/ui_diagram_palette_folding.png "Palette folding")
+
+You can also keep it folded except when needed: when it is folded, a single click in the vertical folded area will reveal the palette temporarily so that you can select a tool. It will automatically hide again if you select a tool or click elsewhere.
+
+![Palette folded usage](images/ui_diagram_palette_folded_usage.png "Palette folded usage")
+
+*Moving*. If you prefer, you can move the palette to the right side of the diagram editor by dragging the palette's header with the mouse, or right-clicking on the header and choosing *Dock On > Left* or *Dock On > Right*. 
+
+![Palette docking](images/ui_diagram_palette_docking.png "Palette docking")
+
+### Palette standard tools
+
+A few general tools are available in the top row of the palette, just below the header.
+
+![Palette standard tools](images/ui_diagram_palette_standard_tools.png "Palette standard tools")
+
+*Selection*. The selection tool is the default one initially selected when you open a diagram. To select an element on a diagram while this tool is active, simply click on it. To select several elements at the same time, you can either draw a rectangle on the diagram, or click on each element individually while keeping the **Ctrl** key pressed. When selecting elements which are already selected using this method, by clicking on them or drawing a rectangle around them, they are removed from the selection. You can combine both methods (de/selection by single click or by zone) to build complex selection incrementally by always keeping the **Ctrl** key pressed.
+The selection of several elements by drawing a rectangle on the diagram has two modes:
+
+* Selection from left to right: all the elements completely contained in the rectangle will get selected
+* Selection from right to left: all the elements that intersect the rectangle will get selected
+
+Selected elements have an outline and anchors drawn on their border. Note that when a selection contains multiple elements, exactly one of them has black selection anchors; the rest have white anchors. The element with the black anchors is called the primary selection, and some tools treat it differently than the others (for example alignment tools).
+
+*Zoom*. Next in the palette come two buttons to control the zoom level of the main diagram area. When the *Zoom in* (resp. *Zoom out*) button is active, clicking anywhere on the diagram will increment (resp. decrement) the zoom level by 25%. The current zoom level is visible in the tabbar when no diagram element is selected (see the [section on zooming](#zooming-the-diagram) for more ways to control the zoom level).
+
+*Notes and note attachments*. The diagram editor supports the creation of notes and text elements, which can be attached to diagram elements. These elements are purely graphical annotations, and have no effect on the semantic model. The three tools used to create them are available in a combo-box in the palette's top row. By default, the *Note* tool (represented by a yellow sticky note) is selected. If you click on the small arrow next to the sticky note, a menu appears where you can select which of the three tools to enable: *Note*, *Text* or *Note attachment*.
+
+*Notes* and *Text* elements are created in a similar way: either a single click somewhere on the diagram (which creates an element with a default size), or a click-drag to create the element with a custom initial size. Once created, you can edit the text inside the note or text zone using the standard "direct edit" behaviour (**F2**, a slow double click, or by directly starting to enter alpha-numeric text). The only difference between notes and text zones is the visual presentation; notes have a yellow background (by default) and a border which represents a sticky note with a folded top-right corner.
+
+*Note attachments* can be created to link either notes or text zones to diagram elements (including other notes and text attachments). To create an attachment, activate the tool and then click once on the source element and once on the target element. You can also click and drag from the source to the target elements.
+
+### Palette contents
+
+Below the palette's header, which contains the general tools described above, you will find all the specific modelling tools. Note that depending on which [layers](#layers) are currently enabled, some tools may or may not be visible.
+
+*Tool Drawers*. Tools in the palette are organised in expandable drawers to group them by category. To expand a drawer and show its content, simply click once in the drawer's header. Click again to fold it back and hide its tools. When you expand a drawer, some others may be folded automatically if there is not enough space to show all of them. To prevent this, you can "pin" a drawer opened by clicking on the "pin" icon in the drawer's title area when it is expanded. This will force it to be kept opened, and its tools available, at all times.
+
+![Palette tools and drawers](images/ui_diagram_palette_tools_drawers.png "Palette tools and drawers")
+
+*Tool groups*. Most entries in the palette correspond to a single tool, but some of them represent tool groups. Tool groups are identified by a small right-facing arrow on the left of the tool's icon. They behave like combo-boxes: click on the arrow to expand the group and reveal all the tools available in this group. Click on the tool you want to activate to make it the default and close the group. You can then use the selected tool as any other, but you have to re-open the pop-up menu if you want to enable a different one. When the group is expanded, you can click on the "pin" icon to the right to of the top-most tool to force the group to stay expanded, so that you can easily have access to all the tools.
+
+![Palette tool group](images/ui_diagram_palette_tools_group.png "Palette tool group")
+
+The appearance of the palette tools can be adjusted to individual tastes. Clicking the right mouse button on the palette provides the option *Use Large Icons* and a sub-menu called *Layout*.
+
+![Different kinds of palette layouts](images/ui_diagram_palette_customisation.png "Different kinds of palette layouts")
+
+One should experiment with the different settings to get a feeling for the different possibilities. The choice to use small or large icons is stored for each layout type.
+
+### Using the tools from the palette
+
+There are different interaction modes possible for the tools available in the palette. The basic pattern is to select the tool in the palette with a simple left-click on in it the palette, and then apply it once on the diagram.
+
+Normally, when you have used a tool once, it does not stay selected; if you want to reuse it a second time, you have to re-select it in the palette. If you want to apply the same tool several times in a row, simply hold the **Ctrl** key pressed while using it; it will stay "armed" until you release the **Ctrl** key or select another tool.
+
+To deselect a tool without executing it, simply press the **Esc** key, or select another one (for example the default *Selection* tool).
+
+When a tool is selected and you move the mouse on the diagram, you will notice that the mouse cursor's shape changes depending on where it is, to indicate whether or not the selected tool can be applied at this particular location. For example some elements can only be created at the top-level of the diagram (in the diagram's background itself), and not inside other elements. For such a tool, if you put the cursor on top of another diagram element, the mouse cursor will change to indicate the action is not allowed. Note that the exact shape of the mouse cursor depends on the operating system.
+
+*Direct Action Tools*. Direct action tools are the simplest and most common one. They require a single click somewhere on the diagram (as long as it is allowed). The most common direct action tools are element creation tools.
+
+*Edge Creation Tools*. Edge creation tools are a little more complex, in that they require the specification of both the source and target element of the new edge. Once the tool is selected, there are two possible usage modes:
+
+1. First do a single click on the source element, then move the mouse to the target element (which may be the same) and click a second time to finish the edge creation.
+2. Alternatively, you can click on the source element, keep the mouse button pressed, move the mouse to the target element and release it there. Both methods are equivalent.
+
+*Tools With Selection Dialog*. Some complex tools require additional information to perform their jobs. In particular, tools with selection dialogs will open a dialog box when you use them on a diagram element to ask for more information. The details will vary from tool to tool, but to complete the interaction simply select the requested information and finish the dialog/wizard.
+
+*Other Tools*. While not used yet, it may be possible that tools have more complex interaction patterns. These will usually be custom tools very specific to a particular use case which would be explicitly described in this manual.
+
+## Refreshing the diagram
+
+The *Refresh* operation will force an update of the diagram's content according to the latest version of the underlying semantic model. The default operational mode is to automatically refresh the diagram's content whenever any relevant change is detected in the semantic model (e.g. caused by another editor). This can be disabled using the *Automatic refresh* preference (accessible through *Window > Preferences > Sirius*). When in manual refresh mode (i.e. *Automatic refresh* is unchecked), you must manually use the *Refresh* operation whenever you want the diagram to take into account changes in the model. Even in automatic refresh mode, it may be sometimes necessary to invoke an explicit, manual refresh using this operation if ModuleStudio got confused.
+
+You can invoke the refresh either by the tab-bar ![Refresh](images/ui_diagram_tabbar_refresh.png) or with the **F5** keyboard shortcut or using the canvas' context menu.
+
+![Refresh in context menu](images/ui_diagram_refresh_menu.png "Refresh in context menu")
 
 ## Diagram features overview
+
+### Filters
+
+Filters are a possibility to restrict the visible diagram elements. Applying a filter on a diagram will hide the graphical elements which match the filter's criterion. To apply a filter, open the *Filters* menu in the tab-bar to select which filters should be enabled or disabled.
+
+![Filters menu](images/ui_diagram_filters_menu.png "Filters menu")
+
+Note that the current filters are just examples. We require **your feedback** to decide if this function and, if yes, which filters are reasonable and should be added in future.
+
+The last filter, *Hide specific entities*, opens a selection wizard which allows you to specify which entities should be hidden.
+
+![Filter selection wizard](images/ui_diagram_filters_selection.png "Filter selection wizard")
+
+At the moment this has basically the same effect than hiding the elements like shown [above](#hiding-elements). But of course the filter could be combined with further selection criteria.
 
 ### Pop-up bars
 
 The user interface objects appearing in pop-up bars are buttons in a bubble-like shape. The buttons are generally used to create elements in the context of the diagram element below the mouse location.
 
-![Pop-up bar for quick element creation](images/ui_dialog_popup_bar.png "Pop-up bar for quick element creation")
+![Pop-up bar for quick element creation](images/ui_diagram_popup_bar.png "Pop-up bar for quick element creation")
 
 In the above picture, the mouse pointer was left motionless over a variables container. The pop-up bar appeared and offered a list of variable elements to create within this container.
 
-The tools which appear are the same as the ones available on the palette, but it can be more convenient sometimes to use the pop-up bar instead of going back to the palette to select the tool.
+The tools which appear are the same as the ones available on the palette, but it can be more convenient sometimes to use the pop-up bar instead of going back to the palette to select the tool. Like in the palette, too, the tools are limited by enabled/disabled [layers](#layers).
 
 ### Print support
 
@@ -48,7 +151,13 @@ When the diagram is larger than the editor area, you can move it in all directio
 
 ### Zooming the diagram
 
-There is a variable zoom function which can be controlled by several ways. There are icons for this in the [palette](#palette) (see [palette standard tools](#palette-standard-tools)) and a drop-down list at the top right in the [tab-bar](#tab-bar). The zoom function can also be accessed by using the combination of the keyboard key **Ctrl** and the mouse wheel - as is used in many browsers, which makes it an intuitive option. In this case, the zoom is done on the mouse location instead of the center of the editor. 
+There is a variable zoom function which can be controlled by several ways. There are icons for this in the [palette](#palette) (see [palette standard tools](#palette-standard-tools)) and some options at the top right in the tab-bar.
+
+![Zooming options in tab-bar](images/ui_diagram_tabbar_zooming.png "Zooming options in tab-bar")
+
+The *Zoom in* and *Zoom out* buttons behave similarly to their equivalents in the palette. The combo-box shows the current zoom level and allows you to choose among some pre-defined levels. You can also manually enter a specific zoom level (e.g. "42") and hit **Enter** to apply it.
+
+The zoom function can also be accessed by using the combination of the keyboard key **Ctrl** and the mouse wheel - as is used in many browsers, which makes it an intuitive option. In this case, the zoom is done on the mouse location instead of the center of the editor. 
 
 ### Resizing elements
 
@@ -62,14 +171,45 @@ There are specific shortcuts to change the resize behaviour:
 * **F3**: Resize with children location relative to the parent. If the shape is resized to the left, upwards, or both, the children (contained nodes) are moved with the same offset than the resize.
 * **F4**: Resize with snap to all shapes (if the [snap to shapes preference](30-UserInterface.md#rulers-and-grid) is activated).
 
+Furthermore there are two special functions with regards to resizing.
+
+*Make Same Size*. When multiple elements are selected, clicking on this tool will resize all of them to have the same size (both width and height). The element used for reference to decide the size to apply is the last selected. This action is available in both the tab-bar and the context menu.
+
+![Make same size](images/ui_diagram_make_same_size.png "Make same size")
+
+The results looks like this:
+
+![Two elements having the same size](images/ui_diagram_make_same_size_result.png "Two elements having the same size")
+
+*Auto Size*. This button marks the selected elements as auto-sized. Auto-sized elements will adjust their width an height dynamically according to their contents.
+
+![Auto Size](images/ui_diagram_auto_size.png "Auto Size")
+
 ### Moving elements
 
-There are specific shortcuts to change the move behavior:
+There are specific shortcuts to change the move behaviour:
 
 * **Shift**: Constrained move (only vertical or horizontal move is authorised at once).
 * **Alt** (or **Ctrl** for Mac users): Ignore snap while dragging (temporarily disables the snap during the move if it is activated).
-* **F3**: Move the edge source and target if pressed during the edge move. See the [move edge group](#move-edge-group) subsection below for more details.
+* **F3**: Move the edge source and target if pressed during the edge move.
 * **F4**: Move with snap to all shapes (if the [snap to shapes preference](30-UserInterface.md#rulers-and-grid) is activated).
+
+### Editing and deleting elements
+
+To change elements primarily the [properties view](33-Views.md#properties-view) is used. There is also a direct edit feature which allows you to change the most important properties of an element right at it. You can start direct editing for a selected element by either pressing **F2**, doing a slow double click, or by directly starting to enter alpha-numeric text. Depending on the element type direct edit may include several properties at once.
+
+![Direct edit for an upload field](images/ui_diagram_direct_edit_upload.png "Direct edit for an upload field")
+
+To delete one or more selected elements you can either:
+
+* just press the **Del** key;
+* use the delete icon in the tab-bar;
+
+![Delete elements using tab-bar](images/ui_diagram_delete_tabbar.png "Delete elements using tab-bar")
+
+* or the context menu.
+
+![Delete elements using context menu](images/ui_diagram_delete_context.png "Delete elements using context menu")
 
 ### Manage edges
 
@@ -135,105 +275,233 @@ If an edge is selected, one attachment is displayed for all associated labels. I
 
 #### Arrange elements
 
-Another important function is *Arrange*. You can, for example, select all elements and use this function to automatically arrange them.
+If no element is selected you can automatically arrange all elements using the tab-bar. The same action is also available in the context menu of the diagram canvas.
 
-*TBD*
+![Arrange all in tab-bar and context menu](images/ui_diagram_arrange_all.png "Arrange all in tab-bar and context menu")
+
+As soon as elements are selected you can also arrange only these using the context menu, too.
+
+![Arrange selection](images/ui_diagram_arrange_selection.png "Arrange selection")
 
 #### Align elements
 
-*TBD*
+When you have selected some elements you can take influence on their alignment.
+
+![Align elements in tab-bar and context menu](images/ui_diagram_align.png "Align elements in tab-bar and context menu")
+
+The following screenshot has right-aligned two containers.
+
+![Example for aligned elements](images/ui_diagram_aligned.png "Example for aligned elements")
+
+Additionally the diagram will show gray helper lines to support correct alignment when moving elements:
+
+![Alignment helper line](images/ui_diagram_alignment_helper.png "Alignment helper line")
 
 #### Distribute elements
 
-*TBD*
+There are also actions available which allow to distribute shapes:
+
+![Distribute elements in tab-bar](images/ui_diagram_distribute.png "Distribute elements in tab-bar")
+
+The same action is also available in the context menu (*Format > Distribute*).
+
+* *Distribute centers horizontally*: Distributes the selected shapes so that the gap between horizontal centers of each selected shapes will be the same.
+
+![Distribute centers horizontally](images/ui_diagram_distribute_centers_horizontally.png "Distribute centers horizontally")
+
+* *Distribute gaps horizontally*: Distributes the selected shapes so that the gap between the left side and the right side of each consecutive shapes will be the same.
+
+![Distribute gaps horizontally](images/ui_diagram_distribute_gaps_horizontally.png "Distribute gaps horizontally")
+
+* *Distribute centers vertically*: Distributes the selected shapes so that the gap between vertical centers of each selected shapes will be the same.
+* *Distribute gaps vertically*: Distributes the selected shapes so that the gap between the bottom side and the top side of each consecutive shapes will be the same.
+
+Only the top level shapes of the selection are retained for these actions: if inner shapes or edges are selected, they are ignored.
+
+These actions are enabled only if the selected shapes have the same direct parent. At least three shapes should be selected to enable distribute actions.
+
+##### First and last shapes
+
+For all distribute actions, the first and the last shapes do not move. The first and last shapes do not depend on the selection order. They depend on the location of each selected shapes and the chosen action.
+
+For horizontal distribution with uniform gaps:
+
+* the first shape is the leftmost one (with the minimum x location). If several shapes have the same x location, the highest one is the first.
+* the last shape is the rightmost one (with the right side with the maximum x coordinate). If several shapes are aligned to the right, the lowest one is the last.
+
+For horizontal centered distribution:
+
+* the first shape is the leftmost one (with its center at the minimum x coordinate). If several shapes are aligned on center, the one with the highest center is the first.
+* the last shape is the rightmost one (with its center at the maximum x coordinate). If several shapes are aligned by center, the one with the lowest center is the last.
+
+For vertical distribution with uniform gaps:
+
+* the first shape is the highest one (with the minimum y location). If several shapes have the same y location, the leftmost one is the first.
+* the last shape is the lowest one (with the bottom side with the maximum y coordinate). If several shapes are aligned to the bottom, the rightmost one is the last.
+
+For vertical centered distribution:
+
+* the first shape is the highest one (with its center at the minimum y coordinate). If several shapes are aligned on middle, the leftmost one is the first.
+* the last shape is the lowest one (with the bottom side with the maximum y coordinate). If several shapes are aligned by middle, the rightmost one is the last.
 
 #### Order elements
 
-*TBD*
+When you have selected some elements you can take influence on their z-order.
+
+![Reorder elements in tab-bar and context menu](images/ui_diagram_order.png "Reorder elements in tab-bar and context menu")
+
+These actions can be useful if you have several elements overlapping each other and want to control which one is above the others.
 
 ### Reset diagram or container origin
 
-*TBD*
+This action is available within the diagram or containers contextual menu ("Reset Origin"). ![Reset origin](images/ui_diagram_reset_origin.png) It aims to move all diagram (or container) elements so that the diagram (or container) retrieves its origin while keeping the element layout. This action can be launched on several containers at same time.
 
-### Hiding elements
+Specific cases:
 
-*TBD*
+* Elements hidden by the user are not considered to compute the shift size but are shifted as the other shapes. That means if an hidden element is located at the top-left corner, the diagram coordinates will turn negative if the user reveals it after having executed the "Reset Origin" action.
+* Edges hidden because of a masked source or target are taken in account to compute the diagram bounds.
 
-### Validating the model
+### Hiding and showing elements and labels
 
-*TBD*
+#### Hiding elements
 
-### Filters
+Every graphical element on a diagram except compartments can be hidden explicitly. To do that, select the element(s) you want to hide. Then, choose *Hide Element* from the tab-bar. The graphical element is now hidden from view.
 
-*TBD*
+![Hide element](images/ui_diagram_hide_element.png "Hide element")
+
+It is also possible to hide an element from the [outline view](33-Views.md#outline-view). Choose outline mode to see the semantic model in a tree viewer. You can now right click on an element and choose *Hide element*.
+
+![Hide element from outline](images/ui_diagram_hide_element_outline.png "Hide element from outline")
+
+#### Revealing hidden elements
+
+On the outline view, in outline mode, you can see every model element. The elements that are hidden have their names displayed in italic style and their icon is decorated with a yellow dot in the top left corner. To reveal one of this element, simply right click on it and choose *Show element*.
+
+![Show element from outline](images/ui_diagram_show_element_outline.png "Show element from outline")
+
+Another possibility is a *Show/Hide* button the tab-bar provides when there is no selected element on the diagram.
+
+![Show/Hide button](images/ui_diagram_show_hide_button.png "Show/Hide button")
+
+This button opens a dialog to manage the shown and hidden elements on the diagram with a tree view, using various selection buttons (Check all, Uncheck all, Expand All and Collapse all) and various filters (All element, only checked elements and only unchecked elements).
+
+![Show/Hide dialog](images/ui_diagram_show_hide_dialog.png "Show/Hide dialog")
+
+Some elements might be grayed in this tree (e.g. compartments), their selection will have no effect. Their grayed status indicates that they can not be hidden from the wizard but their children might support it.
+
+You can also use [regular expressions](#using-regular-expressions-to-find-diagram-elements) to easily retrieve the elements you want to hide/reveal.
+
+#### Hiding labels
+
+It is also possible to hide the label of graphical elements. The approach is the same as for other elements, except that there are a specific button named *Hide label*.
+
+![Hide label](images/ui_diagram_hide_label.png "Hide label")
+
+It is also possible to hide or reveal a label from the outline view, in outline mode. The elements whose label is hidden have their names displayed in italic style and their icon is decorated with a *L* in the bottom right corner. To reveal a label, simply right click on it and choose *Show label*.
+
+![Show label from outline](images/ui_diagram_show_label_outline.png "Show label from outline")
+
+When there is no selected element on the diagram, the *Show/Hide* tab-bar button/dialog allows to manage the labels too.
+
+![Labels in Show/Hide dialog](images/ui_diagram_show_hide_dialog_labels.png "Labels in Show/Hide dialog")
+
+Additional notes about different diagram elements:
+
+* Labels of containers, lists and compartments may be hidden by default. You can choose to display them using the outline or Show/Hide tree view.
+* It is also possible to hide the edge labels. The approach is the same than the nodes labels.
+
+![Hidden edge label](images/ui_diagram_show_hidden_edge_label.png "Hidden edge label")
+
+#### Hiding icons of labels on shapes or connectors
+
+When working on big diagrams, you may want to hide the icons of the labels on all shapes or connectors, in order to improve the readability of your representations. To do so, open the preferences (*Window > Preferences*) and select the [Appearance](30-UserInterface.md#appearance) category. The options *"Hide label icons on shapes"* and *"Hide label icons on connectors"* will allow you to do so.
+
+By default, no shapes neither connectors are hidden. If you check both options, next time you will open your diagram, all label icons of shapes and connectors will be hidden.
+
+### Opening other editors
+
+You can open the [table editors](35-TableEditors.md#table-editors) directly from the diagram using the canvas' context menu.
+
+![Open table editors](images/ui_diagram_open_tables.png "Open table editors")
 
 ### Exporting images
 
-*TBD*
+You can export a diagram to an image file. To do that right-click on the diagram and choose the menu *Export diagram as image* ![Image export in context menu](images/ui_diagram_image_export_menu.png) or use the image icon in the tab-bar.
 
-### Batch images export
+![Image export in tab-bar](images/ui_diagram_image_export_tabbar.png "Image export in tab-bar")
 
-You can export diagrams as an image file, which supports a number of image formats.
+On the first export of diagram as image the name is set by default with the representation name. After there is an history to select the last export (note the small arrow next to the file input field). You can choose the directory in which to create the file using the *Browse* button. After selecting the file path, you can choose the image format.
 
-*TBD*
+![Image export dialog](images/ui_diagram_image_export_dialog.png "Image export dialog")
 
-### Port shifting - Port drag and drop
+If you do not specify the file extension, the extension is determined from the selected image format. If you enter a path with an unsupported extension the file path is created with the wrong extension with selected extension in image format append to.
 
-*TBD*
+Notes:
 
-### Copy/paste of format
+* Due to some technical limitations, not all export format support all the features of diagrams. The JPG format is the one which currently produces the best result in terms of fidelity to what you see in the diagram editor.
+* This function is only visible for convenience, since the generator [exports the diagram anyway](60-GeneratingApplications#the-generation-workflow).
 
-*TBD*
+### Using regular expressions to find diagram elements
 
-### Diagram element pinning
+#### Expression rules
 
-*TBD*
+Several dialogs of the diagram editor (like the *Show/Hide* dialog) allow you to filter diagram elements using regular expressions.
 
-### Layouting mode: arrange your diagrams without modifying semantic models
+Those regular expressions support only the * * * and *?* wild-cards.
 
-*TBD*
+1. All diagram elements whose name is **beginning** with the given regular expression is conform to this regular expression;
+2. Case is not relevant (i.e. *a* and *A* are strictly equivalent);
+3. A *?* wild-card can be used to replace exactly one character in the search
+4. A * * * wild-card can be used to replace exactly zero or more characters in the search.
 
-### Synchronized/Unsynchronized diagram
+#### Expression examples
 
-*TBD*
+Consider that you have a diagram containing the following diagram elements:
 
-### Using Regular Expressions to find diagram elements
+* myEntity1 (Entity)
+* MyEntity2 (Entity)
+* myField1 (Entity field)
+* myField2 (Entity field)
+* isaBot (Entity field)
+* isaBoot (Entity field)
+* isaBT (Entity field)
 
-*TBD*
+Elements matching the regular expression "m" are all elements that starts with the letter *m* (any case):
+
+* myEntity1
+* MyEntity2
+* myField1
+* myField2
+
+Notice that you will obtain the same result with "my".
+
+Elements matching the regular expression "isab?t" are the following elements:
+
+* isaBot
+
+As *?* stands for **exactly** one character, *isaBoot* and *isaBt* aren't matching this regular expression.
+
+Elements matching the regular expression "*1" are all elements that contain the *1* character:
+
+* myEntity1
+* myField1
+
+Elements matching the regular expression "my*a*2" are the following elements:
+
+* myEntity2
+* myField2
+
+Here you can notice that for *myField2* the first * represents no character.
 
 ### Quick outline
 
-*TBD*
+Beside the [outline view](33-Views.md#outline-view) there is also a *quick outline* you can open using **Ctrl + O**.
 
-### Style customisations
+![Quick outline view](images/ui_diagram_quick_outline.png "Quick outline view")
 
-*TBD*
+The input field at the top allows for easy filtering. This allows you to rapidly search text in the displayed name or the contained string attributes of your model elements.
 
-## Diagram reference
-
-*TBD*
-
-### Graphical area
-
-*TBD*
-
-### Palette
-
-*TBD groups, basic tools at the top, pinning, etc.*
-
-### Tab-bar
-
-*TBD*
-
-### Properties view
-
-*TBD*
-
-### Outline
-
-*TBD*
-
-
+The star, `*`, is a joker character, allowing you to search with more complicated patterns. Regarding this, an element is found if there is a word in its name or one of its attributes that match with the text in the filter, so if you want to search within words too, add `*` at the start of your pattern. Also, you can navigate along the matching elements with `↑` and `↓`, and go to the selected element in your editor with **Enter** or by double-clicking on it.
 
 
 
@@ -314,16 +582,7 @@ Variables are generated as basic settings in the application. You can create one
 
 The workflow layer is not implemented yet (planned for version 0.8). This section is just a dummy for future. You can still configure a bunch of different workflows for your entities (see [generator reference](87-GeneratorReference.md#entity-workflow-type)).
 
-## Customisation
+## List handling
 
-### Customise palette
- 
-The palette in ModuleStudio can be customised in several ways. First of all it can be repositioned by moving it with drag n drop by dragging its heading. So if you prefer having it on the right side feel free to move it. In addition, the width of the palette can be changed. A little bit less obvious is the ability to hide the palette completely; the small arrow on the palette heading serves for that.
+*TBD*
 
-Let's look at the palette content. It is important having an overview of the tools in the palette, especially for smaller screen resolutions. The elements are divided into groups, though, which can be opened and closed using mouse clicks. Single groups can also be fixed with a pin so that they are not automatically closed when other groups are opened.
-
-The appearance of the elements can be adjusted to individual tastes. Clicking the right mouse button on the palette provides the option *Use Large Icons* and a sub-menu called *Layout*.
-
-![Different kinds of palette layouts](images/ui_custom_palette.png "Different kinds of palette layouts")
-
-One should experiment with the different settings to get a feeling for the different possibilities. The choice to use small or large icons is stored for each layout type.

@@ -30,6 +30,7 @@
 ### Selection
 
 * **Shift + Arrows** - Select in sequence. Hold down **Shift**, use navigation keys to select additional components.
+* **Shift + Mouse** - Select additionally. Hold down **Shift**, click on the elements to select.
 * **Ctrl + Arrow + Space** - Select multiple. Hold down **Ctrl**, use navigation keys to navigate to additional components, press **Space** to select additional components.
 * **Ctrl + Space** - Deselect the selected shape/edge by showing the shape/edge in an outline.
 * **Esc** - Select diagram. Deselects all other previous selections.
