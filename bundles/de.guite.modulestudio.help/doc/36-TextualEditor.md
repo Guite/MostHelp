@@ -42,7 +42,7 @@ The [outline view](33-Views.md#outline-view) does also work with the textual edi
 
 ![Quick outline view](images/textual_quick_outline.png "Quick outline view")
 
-The input field at the top allows for easy filtering. This allows you to rapidly search text in the displayed name or the contained String attributes of your table elements elements.
+The input field at the top allows for easy filtering. This allows you to rapidly search text in the displayed name or the contained string attributes of your model elements.
 
 The star, `*`, is a joker character, allowing you to search with more complicated patterns. Regarding this, an element is found if there is a word in its name or one of its attributes that match with the text in the filter, so if you want to search within words too, add `*` at the start of your pattern. Also, you can navigate along the matching elements with `↑` and `↓`, and go to the selected element in your editor with `Enter` or by double-clicking on it.
 

@@ -8,13 +8,15 @@ An application project in ModuleStudio consists of two files: one `*.mostapp` fi
 
 Besides the main menu, the environment can be split into two areas. On the left side there are the *dashboard* view and the *editor* windows. Editors contain the actual notation for changing the model. For the diagram editor this consists of a canvas as well as a *palette* with the available tools. This is where the actual modelling happens. The diagram editor's palette separates the available model elements into several groups, like *Relationships*, *Fields* or *Actions*. It is possible to have multiple elements at the same time in one model for each of these types. The visible groups and tools in the palette depends on which *layers* you have enabled in the diagram. More about these layers will be explained later.
 
-On the right side is an arrangement of different *views*. For example there is an outline view with a miniature display of the editor window, a properties view used to edit properties of model elements.
+On the right side is an arrangement of different *views*. For example there is an [outline view](33-Views#outline-view) with a miniature display of the editor window and a [properties view](33-Views#properties-view) used to edit properties of model elements.
 
 ![Editor with palette and several views](images/ui_basic.png "Editor with palette and several views")
 
 ## Main menu
 
 ### File menu
+
+The file menu contains actions about handling model files and projects.
 
 * ![New application](images/menu_file_new.png) New application - Starts the wizard for [creating a new model project](20-GettingStarted.md#create-your-first-application-in-10-minutes).
 * ![Open model](images/menu_file_open.png) Open model - Displays a sub menu for different ways to open existing models.
@@ -43,6 +45,8 @@ To fix this just ensure that all existing elements have a name. Since ModuleStud
 
 ### Edit menu
 
+The file menu collects actions regarding working with model element amendments.
+
 * ![Undo](images/menu_edit_undo.png) Undo - Reverts the last action.
 * ![Redo](images/menu_edit_redo.png) Redo - Repeats the last action which has been reverted before.
 * ![Cut](images/menu_edit_cut.png) Cut - Moves selected element(s) into the clipboard.
@@ -53,6 +57,8 @@ To fix this just ensure that all existing elements have a name. Since ModuleStud
 * ![Deselect All](images/menu_edit_deselect_all.png) Deselect All - Deselects all elements.
 
 ### Window menu
+
+In the window menu you can find actions about managing editors, views and preferences.
 
 * ![Editor](images/menu_window_editor.png) Editor - Displays a sub menu for options with regards to the current editor.
 * ![Toggle Split Editor (Horizontal)](images/menu_window_editor_split_horizontal.png) Toggle Split Editor (Horizontal) - Enables/disables horizontal split of the editor window.
@@ -74,6 +80,8 @@ To fix this just ensure that all existing elements have a name. Since ModuleStud
 * ![Preferences](images/menu_window_preferences.png) Preferences - Opens the [preferences](#preferences) dialog.
 
 ### Help menu
+
+The help menu contains actions related to user assistance.
 
 * ![Manual](images/menu_help_manual.png) Manual - Opens the [help system](#help-system).
 * ![Search](images/menu_help_search.png) Search - Shows the [help view](33-Views.md#help-view) and opens the search function in it.
@@ -150,6 +158,10 @@ It is worth exploring the functionality offered by this included help. You can n
 Most parts of the user interface can be customised, like one may expect from an Eclipse-based application. Views can be moved and replaced, e.g. you could have them at the left side, on the bottom or in the same tab bar as the editors.
 
 ![Views can be arbitrarily arranged](images/ui_view_arrangement.png "Views can be arbitrarily arranged")
+
+Also you can minimise and maximise views by using the small icons at their top right corner. If a view is minimised their icons appear in a sidebar at the right of the application window. If you click on such an icon the view appears in a modal until the focus is lost again.
+
+![Modal view opened from sidebar](images/ui_view_sidebar.png "Modal view opened from sidebar")
 
 It is even possible to use multiple editors in parallel by arranging them next to each other.
 
