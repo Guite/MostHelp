@@ -91,6 +91,8 @@ When a tool is selected and you move the mouse on the diagram, you will notice t
 1. First do a single click on the source element, then move the mouse to the target element (which may be the same) and click a second time to finish the edge creation.
 2. Alternatively, you can click on the source element, keep the mouse button pressed, move the mouse to the target element and release it there. Both methods are equivalent.
 
+If you want to create a self-relationship (where source and target elements are identical), a simple click on the corresponding element is enough.
+
 *Tools With Selection Dialog*. Some complex tools require additional information to perform their jobs. In particular, tools with selection dialogs will open a dialog box when you use them on a diagram element to ask for more information. The details will vary from tool to tool, but to complete the interaction simply select the requested information and finish the dialog/wizard.
 
 *Other Tools*. While not used yet, it may be possible that tools have more complex interaction patterns. These will usually be custom tools very specific to a particular use case which would be explicitly described in this manual.
@@ -103,9 +105,87 @@ You can invoke the refresh either by the tab-bar ![Refresh](images/ui_diagram_ta
 
 ![Refresh in context menu](images/ui_diagram_refresh_menu.png "Refresh in context menu")
 
-## Diagram features overview
+## Layers
 
-### Filters
+The various kinds of elements which can appear on a diagram, and the tools which are available to manipulate them, are organised in Layers. The diagram has a default layer which is always enabled, but also has additional layers which are optional. You can enable or disable the optional layers at will, to hide or reveal new kinds of elements. So layers allow to hide or show different concerns of the model which helps to keep focus on what is relevant for the moment.
+
+The set of layers currently enabled can be controlled using the drop-down menu in the tab-bar. Mandatory layers can not be disabled and are not displayed in this menu. Simply click on the button to reveal the menu, and check or un-check the optional layers you want to have enabled or disabled.
+
+![Layers menu](images/ui_diagram_layers_menu.png "Layers menu")
+
+For example if you are currently not working on entity indexes, you can hide them by disabling the index layer. When disabling a layer both corresponding diagram elements and palette entries are hidden.
+
+### Default layer
+
+The default layer is always enabled. Beside the application itself it contains entities, relationships and generator settings.
+
+#### Application properties
+
+The diagram canvas corresponds to the application described by the model. Some basic settings should be defined here which are available in the [properties view](33-Views.md#properties-view).
+
+![Basic application properties](images/ui_diagram_application_properties.png "Basic application properties")
+
+The most important fields should be already set because the new application wizard gathered the required information. This includes the application name, the database table prefix, the project home page (url) as well as the name and the email address of the developer.
+
+You can see a detailed description for all properties in the [generator reference](87-GeneratorReference.md#application).
+
+#### Entities and relationships
+
+Entities and relationships define the data layer for an application. This represents the managed database tables as well as how the objects behave within the working application.
+
+![Entities and relationship without additional layers](images/ui_diagram_layers_none.png "Entities and relationship without additional layers")
+
+When a new entity is created, the editor needs to know three things: the name for the entity in singular, and in plural, and a field specifying whether the entity is leading. In every application there must be one entity marked as *leading*. This is used as the default object type.
+
+The modelling of entities is the most important step in defining the data layer, but this process is incomplete without defining the relationships between them which are represented by edges in the diagram. To add a relationship [use the palette](#using-the-tools-from-the-palette) like described above. The diagram editor cleverly determines the names for both sides of the relationship from the singular or plural names of the connected entities.
+
+#### Generator settings
+
+A settings container element allows you to take influence on the generator's behaviour. The details are described in the [generator reference](87-GeneratorReference.md#settings-container).
+
+### Fields layer
+
+Inside a new entity you create several fields for persisting different properties of this entity.
+
+![Entities with fields](images/ui_diagram_layers_fields.png "Entities with fields")
+
+These fields are easily created with the [pop-up bar](#pop-up-bars) that appears when the mouse hovers over the fields container within the entity. This is significantly faster than moving the mouse to the palette and back all the time. There are several different field types available. Most of them represent [Doctrine mapping types](http://docs.doctrine-project.org/en/latest/reference/basic-mapping.html#doctrine-mapping-types), but there are also some additional ones which are Zikula-specific (e.g. a user fields) or just for convenience (like upload fields).
+
+### Index layer
+
+An index tells the database to optimise a table for searches by specific fields. Every index gets a name and has a certain type (normal or unique). The index can contain different entries which must be named exactly like an existing field from the same entity.
+
+![Entities with fields and indexes](images/ui_diagram_layers_fields_indexes.png "Entities with fields and indexes")
+
+### Controller layer
+
+Controllers define the interaction between the user and an application - what the user sees, and what he can do. We define, therefore, which user functions should exist at this place in the model.
+
+If you enable the controller layer you see two additional palette groups, that are *controllers* and *actions*. The controllers represent different areas of an application. Every controller contains one or more actions representing functions by the user.
+
+Let's look at the controller elements first. With admin and user controllers we can create the administrative and user-oriented areas of the Zikula application. These two are also the most commonly required areas, but others are possible. The ajax controller represents a special controller type containing ajax functionality. (Strictly seen admin, user and ajax controllers are legacy concepts, because Symfony allows any functions in every controller. In a future version controllers this will be considered also in the DSL (see [this issue](https://github.com/Guite/MostGenerator/issues/715)). With the individual controllers arbitrary additional controller elements with their own names can be added.
+
+![Controller with actions](images/ui_diagram_layers_controller.png "Controller with actions")
+
+Note that each entity implicitly acts as a controller, too. So if you created a `person` entity, this represents also a person controller. For this reason both controllers and entities contain actions.
+
+![Entities with actions](images/ui_diagram_layers_actions.png "Entities with actions")
+
+The available action elements are self-explanatory. It should be mentioned, however, that *delete* is only there for backwards compatibility. Every form generated from an *edit* action contains a delete button already (given the user has the required permissions). From older modules, one might be used to having the delete confirmation question on a separate page. Also here, there is an element for additional entries (custom action) that one can use to model method stubs for additional actions in the controller classes.
+
+### Variables layer
+
+Variables are generated as basic settings in the application. You can create one or more container elements for variables on the canvas.
+
+![Variable containers](images/ui_diagram_layers_variables.png "Variable containers")
+
+These containers can hold the definition of several variables. Variables can be created for boolean values, integers, text fields, file paths and lists.
+
+### Workflow layer
+
+The workflow layer is not implemented yet (planned for version 0.8). It will probably be similar to the BPMN2 standard (business process modeling notation). This section is just a dummy for future. You can still configure a bunch of different workflows for your entities (see [generator reference](87-GeneratorReference.md#entity-workflow-type)).
+
+## Filters
 
 Filters are a possibility to restrict the visible diagram elements. Applying a filter on a diagram will hide the graphical elements which match the filter's criterion. To apply a filter, open the *Filters* menu in the tab-bar to select which filters should be enabled or disabled.
 
@@ -119,7 +199,7 @@ The last filter, *Hide specific entities*, opens a selection wizard which allows
 
 At the moment this has basically the same effect than hiding the elements like shown [above](#hiding-elements). But of course the filter could be combined with further selection criteria.
 
-### Pop-up bars
+## Pop-up bars
 
 The user interface objects appearing in pop-up bars are buttons in a bubble-like shape. The buttons are generally used to create elements in the context of the diagram element below the mouse location.
 
@@ -129,25 +209,11 @@ In the above picture, the mouse pointer was left motionless over a variables con
 
 The tools which appear are the same as the ones available on the palette, but it can be more convenient sometimes to use the pop-up bar instead of going back to the palette to select the tool. Like in the palette, too, the tools are limited by enabled/disabled [layers](#layers).
 
-### Print support
-
-Using the *File > Page Setup...* you can adjust the parameter used when printing a diagram.
-
-![Page setup dialog for printing](images/ui_print_page_setup.png "Page setup dialog for printing")
-
-If you activate the *Use workspace settings* option at the top of the dialog the second tab *Configure workspace settings* becomes active. Click on it to open the [printing preferences](30-UserInterface.md#printing-preferences) in a separate window.
-
-When you want to print a diagram you can preview it before starting the actual process using the *File > Print Preview* action.
-
-![Print preview window](images/ui_print_preview.png "Print preview window")
-
-The final print dialog looks like this (the *Advanced Options* window can be reached using the *Properties...* button next to the printer selection):
-
-![Print dialog](images/ui_print_dialog.png "Print dialog")
+## Diagram navigation
 
 ### Moving the diagram
 
-When the diagram is larger than the editor area, you can move it in all directions by pressing the middle-button and dragging the mouse (keeping the button pressed).
+When the diagram is larger than the editor area, you can move it in all directions by pressing the middle-button and dragging the mouse (keeping the button pressed). You can also use the [outline view](33-Views.md#outline-view) for navigating in large diagrams.
 
 ### Zooming the diagram
 
@@ -158,6 +224,14 @@ There is a variable zoom function which can be controlled by several ways. There
 The *Zoom in* and *Zoom out* buttons behave similarly to their equivalents in the palette. The combo-box shows the current zoom level and allows you to choose among some pre-defined levels. You can also manually enter a specific zoom level (e.g. "42") and hit **Enter** to apply it.
 
 The zoom function can also be accessed by using the combination of the keyboard key **Ctrl** and the mouse wheel - as is used in many browsers, which makes it an intuitive option. In this case, the zoom is done on the mouse location instead of the center of the editor. 
+
+### Opening other editors
+
+You can open the [table editors](35-TableEditors.md#table-editors) directly from the diagram using the canvas' context menu.
+
+![Open table editors](images/ui_diagram_open_tables.png "Open table editors")
+
+## Working with diagram elements
 
 ### Resizing elements
 
@@ -211,9 +285,27 @@ To delete one or more selected elements you can either:
 
 ![Delete elements using context menu](images/ui_diagram_delete_context.png "Delete elements using context menu")
 
-### Manage edges
+### Reposition fields and variables
 
-#### Snap back edge labels
+Quite often you want to change the position of a field or a variable within its container. You can do this using the context menu.
+
+![Change field position](images/ui_diagram_reposition_field.png "Change field position")
+
+![Change variable position](images/ui_diagram_reposition_variable.png "Change variable position")
+
+Of course this seems a bit cumbersome. Note earlier versions of ModuleStudio allowed to do this using drag n drop. It was even possible to move one or multiple fields from one entity into another one. This is currently not possible, but going to be re-implemented very soon.
+
+### Manage list entries
+
+There are two elements, list fields and list variables, which contain a number if list items. To work with these, just do a double-click on the field/variable element. This opens a dialog for editing the list items.
+
+![Editing list items](images/ui_diagram_list_items_dialog.png "Editing list items")
+
+You can add new items to the table and remove existing ones with the equally named buttons. To change the values simply click on the corresponding table cell. You can also reorder the existing entries using the *Up* and *Down* buttons.
+
+## Manage edges
+
+### Snap back edge labels
 
 All visible edge labels can be snapped back to their default position by using the action *Snap back label(s)*. This action is available within the edge contextual menu under the format section *Format > Snap back label(s)*:
 
@@ -227,15 +319,15 @@ The result of this action is visible here:
 
 ![Snapped back edge label](images/ui_diagram_edge_label_snap_back_result.png "Snapped back edge label")
 
-#### Move bend-points
+### Move bend-points
 
 It is possible to snap the bend-points to all shapes by pressing **F4** shortcut key during the move. This feature is only available if the [snap to shapes preference](30-UserInterface.md#rulers-and-grid) is activated. As for *snap to grid*, and unlike to snap for node, there is no visual feedback (gray grid line) drawn during the move.
 
-#### Remove bend-points
+### Remove bend-points
 
 You can define some bend-points (or inflection points) on an edge. It is possible to remove all these bend-points to retrieve the original straight edge. The action is available within the edge context menu (*Remove bend-points*) or by using the shortcut **Ctrl + Shift + -**. This action is only available on edges with a *straight* routing style.
 
-#### Straighten an edge
+### Straighten an edge
 
 There are four actions to straighten an edge, i.e. to transform an edge to an horizontal, or vertical, straight edge (with only one starting point and one ending point).
 
@@ -263,7 +355,7 @@ The action can be disabled (grayed menu) in some conditions:
 
 The action is available (menu is displayed) if the selection contains only edges (note and text attachments are not considered as edges).
 
-#### Display attachment link between edge and its labels
+### Display attachment link between edge and its labels
 
 It is possible to display an attachment link between an edge and its labels when edge or label is selected. This is not the default behaviour but it can be activated by [a preference](30-UserInterface.md#connections).
 
@@ -271,9 +363,9 @@ If an edge is selected, one attachment is displayed for all associated labels. I
 
 ![Edge label attachment link](images/ui_diagram_edge_label_attachment_link.png "Edge label attachment link")
 
-### Changing elements layout
+## Changing elements layout
 
-#### Arrange elements
+### Arrange elements
 
 If no element is selected you can automatically arrange all elements using the tab-bar. The same action is also available in the context menu of the diagram canvas.
 
@@ -283,7 +375,7 @@ As soon as elements are selected you can also arrange only these using the conte
 
 ![Arrange selection](images/ui_diagram_arrange_selection.png "Arrange selection")
 
-#### Align elements
+### Align elements
 
 When you have selected some elements you can take influence on their alignment.
 
@@ -297,7 +389,7 @@ Additionally the diagram will show gray helper lines to support correct alignmen
 
 ![Alignment helper line](images/ui_diagram_alignment_helper.png "Alignment helper line")
 
-#### Distribute elements
+### Distribute elements
 
 There are also actions available which allow to distribute shapes:
 
@@ -320,7 +412,7 @@ Only the top level shapes of the selection are retained for these actions: if in
 
 These actions are enabled only if the selected shapes have the same direct parent. At least three shapes should be selected to enable distribute actions.
 
-##### First and last shapes
+#### First and last shapes
 
 For all distribute actions, the first and the last shapes do not move. The first and last shapes do not depend on the selection order. They depend on the location of each selected shapes and the chosen action.
 
@@ -344,7 +436,7 @@ For vertical centered distribution:
 * the first shape is the highest one (with its center at the minimum y coordinate). If several shapes are aligned on middle, the leftmost one is the first.
 * the last shape is the lowest one (with the bottom side with the maximum y coordinate). If several shapes are aligned by middle, the rightmost one is the last.
 
-#### Order elements
+### Order elements
 
 When you have selected some elements you can take influence on their z-order.
 
@@ -352,18 +444,9 @@ When you have selected some elements you can take influence on their z-order.
 
 These actions can be useful if you have several elements overlapping each other and want to control which one is above the others.
 
-### Reset diagram or container origin
+## Hiding and showing elements and labels
 
-This action is available within the diagram or containers contextual menu ("Reset Origin"). ![Reset origin](images/ui_diagram_reset_origin.png) It aims to move all diagram (or container) elements so that the diagram (or container) retrieves its origin while keeping the element layout. This action can be launched on several containers at same time.
-
-Specific cases:
-
-* Elements hidden by the user are not considered to compute the shift size but are shifted as the other shapes. That means if an hidden element is located at the top-left corner, the diagram coordinates will turn negative if the user reveals it after having executed the "Reset Origin" action.
-* Edges hidden because of a masked source or target are taken in account to compute the diagram bounds.
-
-### Hiding and showing elements and labels
-
-#### Hiding elements
+### Hiding elements
 
 Every graphical element on a diagram except compartments can be hidden explicitly. To do that, select the element(s) you want to hide. Then, choose *Hide Element* from the tab-bar. The graphical element is now hidden from view.
 
@@ -373,7 +456,7 @@ It is also possible to hide an element from the [outline view](33-Views.md#outli
 
 ![Hide element from outline](images/ui_diagram_hide_element_outline.png "Hide element from outline")
 
-#### Revealing hidden elements
+### Revealing hidden elements
 
 On the outline view, in outline mode, you can see every model element. The elements that are hidden have their names displayed in italic style and their icon is decorated with a yellow dot in the top left corner. To reveal one of this element, simply right click on it and choose *Show element*.
 
@@ -391,7 +474,7 @@ Some elements might be grayed in this tree (e.g. compartments), their selection 
 
 You can also use [regular expressions](#using-regular-expressions-to-find-diagram-elements) to easily retrieve the elements you want to hide/reveal.
 
-#### Hiding labels
+### Hiding labels
 
 It is also possible to hide the label of graphical elements. The approach is the same as for other elements, except that there are a specific button named *Hide label*.
 
@@ -412,17 +495,22 @@ Additional notes about different diagram elements:
 
 ![Hidden edge label](images/ui_diagram_show_hidden_edge_label.png "Hidden edge label")
 
-#### Hiding icons of labels on shapes or connectors
+### Hiding icons of labels on shapes or connectors
 
 When working on big diagrams, you may want to hide the icons of the labels on all shapes or connectors, in order to improve the readability of your representations. To do so, open the preferences (*Window > Preferences*) and select the [Appearance](30-UserInterface.md#appearance) category. The options *"Hide label icons on shapes"* and *"Hide label icons on connectors"* will allow you to do so.
 
 By default, no shapes neither connectors are hidden. If you check both options, next time you will open your diagram, all label icons of shapes and connectors will be hidden.
 
-### Opening other editors
+## Other diagram features
 
-You can open the [table editors](35-TableEditors.md#table-editors) directly from the diagram using the canvas' context menu.
+### Reset diagram or container origin
 
-![Open table editors](images/ui_diagram_open_tables.png "Open table editors")
+This action is available within the diagram or containers contextual menu ("Reset Origin"). ![Reset origin](images/ui_diagram_reset_origin.png) It aims to move all diagram (or container) elements so that the diagram (or container) retrieves its origin while keeping the element layout. This action can be launched on several containers at same time.
+
+Specific cases:
+
+* Elements hidden by the user are not considered to compute the shift size but are shifted as the other shapes. That means if an hidden element is located at the top-left corner, the diagram coordinates will turn negative if the user reveals it after having executed the "Reset Origin" action.
+* Edges hidden because of a masked source or target are taken in account to compute the diagram bounds.
 
 ### Exporting images
 
@@ -503,86 +591,19 @@ The input field at the top allows for easy filtering. This allows you to rapidly
 
 The star, `*`, is a joker character, allowing you to search with more complicated patterns. Regarding this, an element is found if there is a word in its name or one of its attributes that match with the text in the filter, so if you want to search within words too, add `*` at the start of your pattern. Also, you can navigate along the matching elements with `↑` and `↓`, and go to the selected element in your editor with **Enter** or by double-clicking on it.
 
+### Print support
 
+Using the *File > Page Setup...* you can adjust the parameter used when printing a diagram.
 
+![Page setup dialog for printing](images/ui_print_page_setup.png "Page setup dialog for printing")
 
+If you activate the *Use workspace settings* option at the top of the dialog the second tab *Configure workspace settings* becomes active. Click on it to open the [printing preferences](30-UserInterface.md#printing-preferences) in a separate window.
 
+When you want to print a diagram you can preview it before starting the actual process using the *File > Print Preview* action.
 
+![Print preview window](images/ui_print_preview.png "Print preview window")
 
+The final print dialog looks like this (the *Advanced Options* window can be reached using the *Properties...* button next to the printer selection):
 
-
-
-## Layers
-
-Layers allow to hide or show different concerns of the model which helps to keep focus on what is relevant for the moment. For example if you are currently not working on entity indexes, you can hide them by disabling the index layer. When disabling a layer both corresponding diagram elements and palette entries are hidden.
-
-### Base layer
-
-The base layer is always enabled. Beside the application itself it contains entities, relationships and maybe generator settings.
-
-#### Application properties
-
-The diagram canvas corresponds to the application described by the model. Some basic settings should be defined here which are available in the properties view.
-
-The most important fields should be already set because the new application wizard gathered the required information. This includes the application name, the database table prefix, the project home page (url) as well as the name and the email address of the developer.
-
-The *version* field defines the version number of the application in the form `x.y.z`. The *license* field specifies under which license the application is developed. Here LGPL is the default, but you are free to change this.
-
-A more advanced field is *capabilities*: it allows you to specify capability names which are used in Zikula to express certain functions a module is offering. This allows for a loose coupling between modules. For example you can let `MyProductsModule` depend on `MyCustomerModule`, but this is a very tight coupling. With capabilities you could instead let the products module query Zikula for `any module which is able to handle customers`. You can read more about this in the [CapabilityApi description](https://github.com/zikula/core/blob/1.4/src/docs/Core-2.0/Api/CapabilityApi.md).
-
-*TBD*
-
-#### Entities and relationships
-
-Entities and relationships define the data layer for an application. This represents the managed database tables as well as how the objects behave within the working application.
-
-When a new entity is created, the editor needs to know three things: the name for the entity in singular, and in plural, and a field specifying whether the entity is leading. In every application there must be one entity marked as leading. This is used as the default object type.
-
-The modelling of entities is the most important step in defining the data layer, but this process is incomplete without defining the relationships between them. To add a relationship choose the connection type in the palette and activate the tool with a mouse click. Next click on the source entity and (without releasing the mouse button) drag the mouse to the target entity, where the button is released. The editor cleverly determines the names for both sides of the relationship from the singular or plural names of the connected entities. If you want to create a self-relationship, a simple click on the corresponding entity is enough.
-
-*TBD*
-
-#### Settings
-
-*TBD*
-
-### Fields layer
-
-Inside a new entity you can create a first string field named for example `name`. Additional fields are easily created with the popup bar that appears when the mouse hovers over the fields container within the entity. This is significantly faster than moving the mouse to the palette and back all the time. There are several different field types available. You should experiment with them to get to know them better.
-
-*TBD*
-
-### Controller layer
-
-Controllers define the interaction between the user and a Zikula module - what the user sees, and what he can do. We define, therefore, which user functions should exist at this place in the model.
-
-If you enable the controller layer you see two additional palette groups, that are *controllers* and *actions*. The controllers represent different areas of an application. For example, there is a controller for the admin area, and another for the user area. Every controller contains one or more actions. Each action represents a callable function.
-
-Let's look at the controller elements first. With admin and user controllers we can create the administrative and user-oriented areas of the Zikula application. These two are also the most commonly required areas, but others are possible. The ajax controller represents a special controller type containing ajax functionality. (Strictly seen admin, user and ajax controllers are legacy concepts, because Symfony allows any functions in every controller. In a future version controllers this will be considered also in the DSL (see [this issue](https://github.com/Guite/MostGenerator/issues/715)). With the individual controllers arbitrary additional controller elements with their own names can be added.
-
-Note that each entity implicitly acts as a controller, too. So if you created a `person` entity, this represents also a person controller. For this reason both controllers and entities contain actions.
-
-The available action elements are self-explanatory. It should be mentioned, however, that delete is only there for backwards compatibility. Every form generated from an edit action contains a delete button already. From older modules, one might be used to having the delete confirmation question on a separate page. Also here, there is an element for additional entries that one can use to model method stubs for additional actions in the controller classes.
-
-*TBD*
-
-### Index layer
-
-An index tells the database to optimise a table for searches by specific fields. Every index gets a name and has a certain type. The index can contain different entries which must be named exactly like an existing field from the same entity.
-
-*TBD*
-
-### Variables layer
-
-Variables are generated as basic settings in the application. You can create one or more container elements for variables on the canvas. These containers can hold the definition of several variables. Variables can be created for boolean values, integers, text fields, file paths and lists.
-
-*TBD*
-
-### Workflow layer
-
-The workflow layer is not implemented yet (planned for version 0.8). This section is just a dummy for future. You can still configure a bunch of different workflows for your entities (see [generator reference](87-GeneratorReference.md#entity-workflow-type)).
-
-## List handling
-
-*TBD*
+![Print dialog](images/ui_print_dialog.png "Print dialog")
 

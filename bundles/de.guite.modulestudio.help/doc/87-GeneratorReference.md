@@ -37,7 +37,7 @@ If a documentation is defined for an entity this will be shown right after the h
 
 Represents an application described by the model.
 
-It includes the following basic properties:
+It includes the following basic properties which are mainly, but not only used to create meaningful file headers:
 
 * **vendor** - The vendor of the application. Usually this is the name of a company or institution. Starting with Zikula 1.4 the vendor and name of an application are combined to a unique name. This makes it possible to have for example multiple News modules installed from different vendors.
 * **author** - The author of the application. Usually this is the full name of the developer.
@@ -46,12 +46,12 @@ It includes the following basic properties:
 * **url** - The homepage of the developer.
 * **version** - The application version. Must conform to the pattern `x.y.z` - for example `1.0.0` which is also the default value. Will be used in the version class (Zikula 1.3.x) or the composer file (Zikula 1.4.x) of the created application.
 
-These basic fields are mainly used by the generator to create a meaningful file header.
-
 An application has some more fields for specifying specific aspects:
 
-* **capabilities** - A comma-separated list of capability names the application offers. Note the generator uses these just for specifying them in the generated module's version class (Zikula 1.3.x) or the composer file (Zikula 1.4.x). There is no further support for the capabilities you want to provide yet.
+* **capabilities** - A comma-separated list of capability names the application offers. Capabilities are used in Zikula to express certain functions a module is offering. This allows for a loose coupling between modules. For example you can let `MyProductsModule` depend on `MyCustomerModule`, but this is a very tight coupling. With capabilities you could instead let the products module query Zikula for `any module which is able to handle customers`. You can read more about this in the [CapabilityApi description](https://github.com/zikula/core/blob/1.4/src/docs/Core-2.0/Api/CapabilityApi.md). Note the generator uses these just for specifying them in the generated module's version class (Zikula 1.3.x) or the composer file (Zikula 1.4.x). There is no further support for the capabilities you want to provide yet.
 * **prefix** - A prefix for all database tables of this application. Will be used in entity classes.
+
+![Basic application properties](images/ui_diagram_application_properties.png "Basic application properties")
 
 An application may furthermore have the following references:
 
@@ -61,8 +61,6 @@ An application may furthermore have the following references:
 * **referredApplications** - Allows referencing other applications. See [below](#referred-application).
 * **relations** - Allows referencing one or more [relationships](#relationship).
 * **variables** - Allows referencing one or more [variables](#variables).
-
-![Application properties](images/application_properties.png "Application properties")
 
 #### Core version
 
