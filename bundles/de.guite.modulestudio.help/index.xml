@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?NLS TYPE="org.eclipse.help.index"?>
 <index>
+    <entry keyword="Benefits">
+        <topic title="Benefits" href="contents/Introduction.html" />
+    </entry>
+    <entry keyword="Main menu">
+        <topic title="Main menu" href="contents/User-interface.html" />
+    </entry>
+    <entry keyword="Themes">
+        <topic title="Themes" href="contents/User-interface.html" />
+    </entry>
+    <entry keyword="Preferences">
+        <topic title="Preferences" href="contents/User-interface.html" />
+    </entry>
+    <entry keyword="Views">
+        <entry keyword="Dashboard">
+            <topic title="Dashboard" href="contents/Views.html" />
+        </entry>
+        <entry keyword="Error log">
+            <topic title="Error log" href="contents/Views.html" />
+        </entry>
+        <entry keyword="Outline">
+            <topic title="Outline" href="contents/Views.html" />
+        </entry>
+        <entry keyword="Properties">
+            <topic title="Properties" href="contents/Views.html" />
+        </entry>
+        <entry keyword="Help">
+            <topic title="Help" href="contents/Views.html" />
+        </entry>
+    </entry>
     <entry keyword="Validation">
         <topic title="Validation" href="contents/Validation.html" />
     </entry>
     <entry keyword="Generator">
         <topic title="Generator" href="contents/Generating-applications.html" />
     </entry>
-<!-- 
-    - multiple topic elements within an entry are possible
-    - entry elements can be nested to realize hierarchical indices
- -->
+    <entry keyword="Customisation">
+        <topic title="Customisation" href="contents/Customisation-and-maintenace.html" />
+    </entry>
 </index>
