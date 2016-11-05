@@ -95,10 +95,12 @@ The help menu contains actions related to user assistance.
 
 ## Main UI components
 
-* [Diagram editor](32-DiagramEditor.md#diagram-editor)
-* [Views](33-Views.md#views)
-* [Table editors](35-TableEditors.md#table-editors)
-* [Textual editor](36-TextualEditor.md#textual-editor)
+Since the available editors and views are the most important parts of the ModuleStudio user interface, they are described in dedicated chapters.
+
+* The [diagram editor](32-DiagramEditor.md#diagram-editor) allows for graphical model creation and amendment.
+* Several [views](33-Views.md#views) assist you during your work by providing means for doing specific tasks or showing additional information.
+* There are [table editors](35-TableEditors.md#table-editors) which can be used in addition to the diagram editor.
+* A [textual editor](36-TextualEditor.md#textual-editor) is also available for advanced users.
 
 ## Other UI components
 
