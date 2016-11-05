@@ -23,3 +23,9 @@ Make sure to include the -p flag if you extract the `.tar.gz` to keep the correc
 ModuleStudio stores any temporary data as well as your project files in a special directory which is named `MostWorkspace` and located in your user home directory. So if you want to create a backup of a model look within `~/MostWorkspace/<YourProjectName>/`.
 
 At the moment this location is fixed. However, it is requested and planned to [make it configurable](https://github.com/Guite/MostGenerator/issues/832) in future.
+
+## Updating ModuleStudio
+
+Every time you start ModuleStudio it searches for available updates. In case an update is found ModuleStudio downloads and installs it automatically and restarts afterwards.
+
+By default MOST looks only for stable versions. You can also enable *staging updates* in the [preferences](30-UserInterface.md#preferences) though in order to include also unstable updates which includes every new build. You can read more about staging updates [here](30-UserInterface.md#modulestudio-base-preferences).

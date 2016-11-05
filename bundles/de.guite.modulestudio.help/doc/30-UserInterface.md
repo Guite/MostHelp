@@ -124,7 +124,7 @@ The help section allows you to change some context settings about how help infor
 
 ![Help preferences](images/ui_preferences_help.png "Help preferences")
 
-#### ModuleStudio
+#### ModuleStudio base preferences
 
 * *Default theme*: choose whether you like to have the light or dark [theme](#themes) per default.
 * *Vendor, Author, Email address, Url*: you can input your default values at this place. The wizard for [creating a new model project](20-GettingStarted.md#create-your-first-application-in-10-minutes) will reuse these values, so you do not have to enter them repeatedly.
