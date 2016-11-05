@@ -500,7 +500,7 @@ For the output in [view](#view-action) and [display](#display-action) pages a do
 it is shown instead of a text link (on edit pages too by the way).
 
 If an application has any upload fields the generator creates an additional helper class containing methods for image processing. The generated application uses it to determine arguments for creating thumbnail preview images on demand with the help of the [Imagine library](http://imagine.readthedocs.io/en/latest/).
-Applications targeting Zikula 1.3.x  which includes Imagine as a system plug-in use a generated view modifier which works together with the mentioned helper class and understands many parameters to use arbitrary images in the templates. In Zikula 1.4.x the view modifier is not required anymore because the [LiipImagineBundle](http://symfony.com/doc/current/bundles/LiipImagineBundle/index.html) is used instead which already provides Twig extensions.
+Applications targeting Zikula 1.3.x  which includes Imagine as a system plug-in use a generated view modifier which works together with the mentioned helper class and understands many parameters to use arbitrary images in the templates. In Zikula 1.4.x the view modifier is not required anymore because the [LiipImagineBundle](http://symfony.com/doc/current/bundles/LiipImagineBundle/index.html) is used instead which already provides a Twig extension.
 
 For upload fields with images there are additional settings generated at the configuration page. These allow enabling automatic shrinking of too large images down to configurable maximum dimensions.
 
