@@ -25,6 +25,14 @@ More information can be found in these articles:
 * [How MDSD reduces costs for long-term maintenance of comprehensive software system families](http://modulestudio.de/en/tutorial/how-mdsd-reduces-costs-for-long-term-maintenance-of-comprehensive-software-system-families.html)
 * [From scaffolding and UML to MDSD and DSL](http://modulestudio.de/en/tutorial/from-scaffolding-and-uml-to-mdsd-and-dsl.html)
 
+## Target audience
+
+Although ModuleStudio takes the tedious programming away from you it is still a development tool. This means that you need a basic understanding of what is going on in the generated applications. Otherwise it can lead to frustration if something does not work as expected and you have no idea of how to treat the problem. At the end ModuleStudio is abstracting development concepts; you still need to see the effects and changes caused by amending a certain setting in your model.
+
+* To be able to understand a generated application you need a basic knowledge of HTML and CSS as well as the ability to read PHP code.
+* For implementing additional business logic or functionalities you should be able to write custom PHP code.
+* For doing advanced customisation you should have gathered some basic skills of Symfony, Doctrine and Twig, too.
+
 ## About this manual
 
 This user manual is going to provide all required information to work with ModuleStudio. Furthermore it serves as a reference for all details of the generator. This document should be available in several formats:
