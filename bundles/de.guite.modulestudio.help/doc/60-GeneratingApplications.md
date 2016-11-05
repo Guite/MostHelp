@@ -57,3 +57,6 @@ The rough steps of the generator workflow are as follows:
 6. Execute a model-to-model transformation. This adds primary and foreign key fields as well as other derived elements.
 7. Call the actual generator workflow.
 
+## From model to generated artifacts
+
+The mapping from your model elements to the generated application elements is described in detail in the [generator reference](87-GeneratorReference.md#generator-reference) chapter.

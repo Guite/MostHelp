@@ -14,7 +14,7 @@ The `mostapp` file is the primarily important one for storing and exchanging app
 
 Besides the [main menu](#main-menu), the environment can be split into two areas. On the left side there are the *dashboard* view and the *editor* windows. Editors contain the actual notation for changing the model. For the diagram editor this consists of a canvas as well as a *palette* with the available tools. This is where the actual modelling happens. The diagram editor's palette separates the available model elements into several groups, like *Relationships*, *Fields* or *Actions*. It is possible to have multiple elements at the same time in one model for each of these types. The visible groups and tools in the palette depends on which *layers* you have enabled in the diagram. More about these layers will be explained later.
 
-On the right side is an arrangement of different *views*. For example there is an [outline view](33-Views#outline-view) with a miniature display of the editor window and a [properties view](33-Views#properties-view) used to edit properties of model elements.
+On the right side is an arrangement of different *views*. For example there is an [outline view](33-Views#outline-view) with a miniature display of the editor window and a [properties view](33-Views#properties-view) used to edit properties of model elements. You can change the views in multiple ways, for example you can close, reopen, resize and move them. All these different possible actions are described [below](#customising-the-ui).
 
 ![Editor with palette and several views](images/ui_basic.png "Editor with palette and several views")
 
@@ -236,13 +236,13 @@ The help system shows the manual using an internal web browser (you can also use
 
 It is worth exploring the functionality offered by this included help. You can not only search for desired topics, there is also a keyword index. Also you can create and manage custom bookmarks for finding interesting sections again with ease.
 
-## Customisation
-
-### Rearrange the UI
+## Customising the UI
 
 Most parts of the user interface can be customised, like one may expect from an Eclipse-based application. Views can be moved and replaced, e.g. you could have them at the left side, on the bottom or in the same tab bar as the editors.
 
 ![Views can be arbitrarily arranged](images/ui_view_arrangement.png "Views can be arbitrarily arranged")
+
+You can also close a view by clicking on the cross symbol on the top right of its heading tab. To reopen it again you need to use the corresponding entry of the *Window* [main menu](#window-menu). There is one exception: the [help view](33-Views.md#help-view) is reopened using the *Help* [main menu](#help-menu).
 
 Also you can minimise and maximise views by using the small icons at their top right corner. If a view is minimised their icons appear in a sidebar at the right of the application window. If you click on such an icon the view appears in a modal until the focus is lost again.
 
