@@ -50,11 +50,13 @@ Selected elements have an outline and anchors drawn on their border. Note that w
 
 *Zoom*. Next in the palette come two buttons to control the zoom level of the main diagram area. When the *Zoom in* (resp. *Zoom out*) button is active, clicking anywhere on the diagram will increment (resp. decrement) the zoom level by 25%. The current zoom level is visible in the tabbar when no diagram element is selected (see the [section on zooming](#zooming-the-diagram) for more ways to control the zoom level).
 
-*Notes and note attachments*. The diagram editor supports the creation of notes and text elements, which can be attached to diagram elements. These elements are purely graphical annotations, and have no effect on the semantic model. The three tools used to create them are available in a combo-box in the palette's top row. By default, the *Note* tool (represented by a yellow sticky note) is selected. If you click on the small arrow next to the sticky note, a menu appears where you can select which of the three tools to enable: *Note*, *Text* or *Note attachment*.
+*Notes and note attachments*. The diagram editor supports the creation of notes and text elements, which can be attached to diagram elements. These elements are purely graphical annotations, and have no effect on the semantic model. The three tools used to create them are available in a combo-box in the palette's top row. By default, the *Note* tool (represented by a yellow sticky note) is selected. If you click on the small arrow next to the sticky note, a menu appears where you can select which of the three tools to enable: *Note*, *Text* or *Note attachment*. These elements are primarily interesting when you are discussing a model with other persons. They allow you to explain your design decisions and asking open questions with regards to how well the requirements are met.
 
 *Notes* and *Text* elements are created in a similar way: either a single click somewhere on the diagram (which creates an element with a default size), or a click-drag to create the element with a custom initial size. Once created, you can edit the text inside the note or text zone using the standard "direct edit" behaviour (**F2**, a slow double click, or by directly starting to enter alpha-numeric text). The only difference between notes and text zones is the visual presentation; notes have a yellow background (by default) and a border which represents a sticky note with a folded top-right corner.
 
 *Note attachments* can be created to link either notes or text zones to diagram elements (including other notes and text attachments). To create an attachment, activate the tool and then click once on the source element and once on the target element. You can also click and drag from the source to the target elements.
+
+![Note, text and note attachment elements](images/ui_diagram_note_text_note_attachment.png "Note, text and note attachment elements")
 
 ### Palette contents
 
