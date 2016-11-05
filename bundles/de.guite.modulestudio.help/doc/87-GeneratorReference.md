@@ -376,7 +376,7 @@ A string field has the following properties in addition to the common [abstract 
 * **timezone** - A boolean specifying whether this field represents a time zone or not. Default value is `false`. Only applicable for the 1.4 target core version. In [edit forms](#edit-action) timezone fields will be rendered using a time zone selector.
 * **uuid** - A boolean specifying whether this field represents an UUID (Universally Unique Identifier) or not.
 
-In [edit pages](#edit-action) the generator will use singleline input elements for string fields - except you defined something else (using options like `language` or `password`). Other validations are added together and applied as well.
+In [edit pages](#edit-action) the generator will use single-line input elements for string fields - except you defined something else (using options like `language` or `password`). Other validations are added together and applied as well.
 
 #### ISBN style
 
@@ -429,15 +429,15 @@ A text field has the following properties in addition to the common [abstract st
 
 * **length** - The length of this field. Default value is `2000`.
 
-In [edit pages](#edit-action) the generator will use multiline input elements (textarea).
+In [edit pages](#edit-action) the generator will use multi-line input elements (textarea).
 
 #### User field
 
-Extension of [abstract integer field](#abstract-integer-field) for storing user ids.
+Extension of [abstract integer field](#abstract-integer-field) for storing user identifiers.
 
 An user field has the following properties in addition to the common [abstract integer field](#abstract-integer-field) settings:
 
-* **onAccountDeletion** - Controls how an app should change the field when users are deleted. Default value is `GUEST`. The available options are listed [here](#account-deletion-handler).
+* **onAccountDeletion** - Controls how an application should change the field when users are deleted. Default value is `GUEST`. The available options are listed [here](#account-deletion-handler).
 
 In [edit pages](#edit-action) the generator will implement an auto completion element allowing searching users by their name. For the output in [view](#view-action) and [display](#display-action) templates the user name is shown and linked to the corresponding user profile in case a profile module has been set in the Settings module administration.
 
@@ -496,10 +496,10 @@ All image settings are only applicable for the 1.4 target core version.
 
 In [edit pages](#edit-action) the generator will use upload input elements. If a field is mandatory the upload will be required when creating a new entity, but not when editing an existing one. If a field is optional (not mandatory) then it will be possible to delete existing uploads on editing.
 
-For the output in [view](#view-action) and [display](#display-action) pages a download link is shown together with the filesize. If the file is an image then a small version of
+For the output in [view](#view-action) and [display](#display-action) pages a download link is shown together with the file size. If the file is an image then a small version of
 it is shown instead of a text link (on edit pages too by the way).
 
-If an application has any upload fields the generator creates an additional helper class containing methods for image processing. The generated application uses it to create and store thumbnails on demand with the help of the Imagine library which is included in the Zikula core. There is a view modifier available which works together with the mentioned helper class and understands many parameters to use arbitrary images in the templates.
+If an application has any upload fields the generator creates an additional helper class containing methods for image processing in Zikula 1.3.x. The generated application uses it to create and store thumbnails on demand with the help of the [Imagine library](http://imagine.readthedocs.io/en/latest/) which is included in the Zikula core as a system plug-in. There is a view modifier available which works together with the mentioned helper class and understands many parameters to use arbitrary images in the templates. In Zikula 1.4.x both the view modifier is not required anymore because the [LiipImagineBundle](http://symfony.com/doc/current/bundles/LiipImagineBundle/index.html) is used instead which already provides Twig extensions.
 
 For upload fields with images there are additional settings generated at the configuration page. These allow enabling automatic shrinking of too large images down to configurable maximum dimensions.
 
