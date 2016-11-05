@@ -20,11 +20,11 @@ This section gives a brief overview of how validation can be executed and what c
 
 As validation shows what remains to be done in order to generate an application out of a given model, it is essential to provide convenient means for checking validation constraints.
 
-ModuleStudio validates a model every time you save it in the diagram editor. Validation is also executed after an existing model has been opened.
+ModuleStudio validates a model every time you save it in the [diagram editor](32-DiagramEditor.md#diagram-editor). Validation is also executed after an existing model has been opened.
 
-In addition you can always start the validator manually using the main menu or the context menu which might be advantageous to get immediate feedback after having done some amendments in the sub editors.
+In addition you can always start the validator manually using the [main menu](30-UserInterface.md#main-menu) or the context menu which might be advantageous to get immediate feedback after having done some amendments in any editors.
 
-Earlier versions of ModuleStudio used to perform a scheduled validation. This has been removed to save performance.
+Earlier versions of ModuleStudio used to perform a scheduled validation. This has been removed to save performance. However, you can still use the [auto save](30-UserInterface.md#autosave) feature to achieve the same behaviour if you like.
 
 ### Finding and solving problems
 
