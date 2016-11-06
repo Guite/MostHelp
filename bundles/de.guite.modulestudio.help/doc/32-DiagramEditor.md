@@ -86,16 +86,16 @@ To deselect a tool without executing it, simply press the **Esc** key, or select
 
 When a tool is selected and you move the mouse on the diagram, you will notice that the mouse cursor's shape changes depending on where it is, to indicate whether or not the selected tool can be applied at this particular location. For example some elements can only be created at the top-level of the diagram (in the diagram's background itself), and not inside other elements. For such a tool, if you put the cursor on top of another diagram element, the mouse cursor will change to indicate the action is not allowed. Note that the exact shape of the mouse cursor depends on the operating system.
 
-*Direct Action Tools*. Direct action tools are the simplest and most common one. They require a single click somewhere on the diagram (as long as it is allowed). The most common direct action tools are element creation tools.
+*Direct Action Tools*. Direct action tools are the simplest and most common one. They require a single click somewhere on the diagram (as long as it is allowed). The most common direct action tools are element creation tools. For example there is a palette entry named *Entity*: if you click on it and afterwards click on the diagram canvas a new entity element is added to your model.
 
-*Edge Creation Tools*. Edge creation tools are a little more complex, in that they require the specification of both the source and target element of the new edge. Once the tool is selected, there are two possible usage modes:
+*Edge Creation Tools*. Edge creation tools add relationships (for example a *Many to many* relation) to your model; they are a little more complex, in that they require the specification of both the source and target element of the new edge. Once the tool is selected, there are two possible usage modes:
 
 1. First do a single click on the source element, then move the mouse to the target element (which may be the same) and click a second time to finish the edge creation.
 2. Alternatively, you can click on the source element, keep the mouse button pressed, move the mouse to the target element and release it there. Both methods are equivalent.
 
 If you want to create a self-relationship (where source and target elements are identical), a simple click on the corresponding element is enough.
 
-*Tools With Selection Dialog*. Some complex tools require additional information to perform their jobs. In particular, tools with selection dialogs will open a dialog box when you use them on a diagram element to ask for more information. The details will vary from tool to tool, but to complete the interaction simply select the requested information and finish the dialog/wizard.
+*Tools With Selection Dialog*. Some complex tools may require additional information to perform their jobs. In particular, tools with selection dialogs will open a dialog box when you use them on a diagram element to ask for more information. The details will vary from tool to tool, but to complete the interaction simply select the requested information and finish the dialog/wizard.
 
 *Other Tools*. While not used yet, it may be possible that tools have more complex interaction patterns. These will usually be custom tools very specific to a particular use case which would be explicitly described in this manual.
 
