@@ -28,7 +28,7 @@ After inserting such a template you can easily go through all placeholders using
 
 ![Placeholders in templates](images/textual_template_proposal_placeholders.png "Placeholders in templates")
 
-Note you can change existing template proposals and add new ones in the [preferences](30-UserInterface.md#mostdsl).
+Note you can change existing template proposals and add new ones in the [preferences](38-Preferences.md#template-settings).
 
 ## Quick fixes
 

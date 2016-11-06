@@ -28,4 +28,4 @@ At the moment this location is fixed. However, it is requested and planned to [m
 
 Every time you start ModuleStudio it searches for available updates. In case an update is found ModuleStudio downloads and installs it automatically and restarts afterwards.
 
-By default MOST looks only for stable versions. You can also enable *staging updates* in the [preferences](30-UserInterface.md#preferences) though in order to include also unstable updates which includes every new build. You can read more about staging updates [here](30-UserInterface.md#modulestudio-base-preferences).
+By default MOST looks only for stable versions. You can also enable *staging updates* in the [preferences](38-Preferences.md#modulestudio-base-preferences) though in order to include also unstable updates which includes every new build. You can read more about staging updates [here](30-UserInterface.md#modulestudio-base-preferences).

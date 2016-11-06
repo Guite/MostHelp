@@ -24,7 +24,7 @@ ModuleStudio validates a model every time you save it in the [diagram editor](32
 
 In addition you can always start the validator manually using the [main menu](30-UserInterface.md#main-menu) or the context menu which might be advantageous to get immediate feedback after having done some amendments in any editors.
 
-Earlier versions of ModuleStudio used to perform a scheduled validation. This has been removed to save performance. However, you can still use the [auto save](30-UserInterface.md#autosave) feature to achieve the same behaviour if you like.
+Earlier versions of ModuleStudio used to perform a scheduled validation. This has been removed to save performance. However, you can still use the [auto save](38-Preferences.md#autosave) feature to achieve the same behaviour if you like.
 
 ### Finding and solving problems
 

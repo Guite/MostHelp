@@ -245,7 +245,7 @@ There are specific shortcuts to change the resize behaviour:
 * **Shift**: Resize that keeps the ratio.
 * **Alt** (or **Ctrl** for Mac users): Resize without snap (temporarily disables the snap during the resize if it is activated).
 * **F3**: Resize with children location relative to the parent. If the shape is resized to the left, upwards, or both, the children (contained nodes) are moved with the same offset than the resize.
-* **F4**: Resize with snap to all shapes (if the [snap to shapes preference](30-UserInterface.md#rulers-and-grid) is activated).
+* **F4**: Resize with snap to all shapes (if the [snap to shapes preference](38-Preferences.md#rulers-and-grid) is activated).
 
 Furthermore there are two special functions with regards to resizing.
 
@@ -268,7 +268,7 @@ There are specific shortcuts to change the move behaviour:
 * **Shift**: Constrained move (only vertical or horizontal move is authorised at once).
 * **Alt** (or **Ctrl** for Mac users): Ignore snap while dragging (temporarily disables the snap during the move if it is activated).
 * **F3**: Move the edge source and target if pressed during the edge move.
-* **F4**: Move with snap to all shapes (if the [snap to shapes preference](30-UserInterface.md#rulers-and-grid) is activated).
+* **F4**: Move with snap to all shapes (if the [snap to shapes preference](38-Preferences.md#rulers-and-grid) is activated).
 
 ### Editing and deleting elements
 
@@ -323,7 +323,7 @@ The result of this action is visible here:
 
 ### Move bend-points
 
-It is possible to snap the bend-points to all shapes by pressing **F4** shortcut key during the move. This feature is only available if the [snap to shapes preference](30-UserInterface.md#rulers-and-grid) is activated. As for *snap to grid*, and unlike to snap for node, there is no visual feedback (gray grid line) drawn during the move.
+It is possible to snap the bend-points to all shapes by pressing **F4** shortcut key during the move. This feature is only available if the [snap to shapes preference](38-Preferences.md#rulers-and-grid) is activated. As for *snap to grid*, and unlike to snap for node, there is no visual feedback (gray grid line) drawn during the move.
 
 ### Remove bend-points
 
@@ -359,7 +359,7 @@ The action is available (menu is displayed) if the selection contains only edges
 
 ### Display attachment link between edge and its labels
 
-It is possible to display an attachment link between an edge and its labels when edge or label is selected. This is not the default behaviour but it can be activated by [a preference](30-UserInterface.md#connections).
+It is possible to display an attachment link between an edge and its labels when edge or label is selected. This is not the default behaviour but it can be activated by [a preference](38-Preferences.md#connection-settings).
 
 If an edge is selected, one attachment is displayed for all associated labels. If a label is selected, only the attachment between the edge and this label is displayed.
 
@@ -499,7 +499,7 @@ Additional notes about different diagram elements:
 
 ### Hiding icons of labels on shapes or connectors
 
-When working on big diagrams, you may want to hide the icons of the labels on all shapes or connectors, in order to improve the readability of your representations. To do so, open the preferences (*Window > Preferences*) and select the [Appearance](30-UserInterface.md#appearance) category. The options *"Hide label icons on shapes"* and *"Hide label icons on connectors"* will allow you to do so.
+When working on big diagrams, you may want to hide the icons of the labels on all shapes or connectors, in order to improve the readability of your representations. To do so, open the preferences (*Window > Preferences*) and select the [Appearance](38-Preferences.md#appearance) category. The options *"Hide label icons on shapes"* and *"Hide label icons on connectors"* will allow you to do so.
 
 By default, no shapes neither connectors are hidden. If you check both options, next time you will open your diagram, all label icons of shapes and connectors will be hidden.
 
@@ -599,7 +599,7 @@ Using the *File > Page Setup...* you can adjust the parameter used when printing
 
 ![Page setup dialog for printing](images/ui_print_page_setup.png "Page setup dialog for printing")
 
-If you activate the *Use workspace settings* option at the top of the dialog the second tab *Configure workspace settings* becomes active. Click on it to open the [printing preferences](30-UserInterface.md#printing-preferences) in a separate window.
+If you activate the *Use workspace settings* option at the top of the dialog the second tab *Configure workspace settings* becomes active. Click on it to open the [printing preferences](38-Preferences.md#printing-preferences) in a separate window.
 
 When you want to print a diagram you can preview it before starting the actual process using the *File > Print Preview* action.
 
