@@ -505,6 +505,12 @@ By default, no shapes neither connectors are hidden. If you check both options, 
 
 ## Other diagram features
 
+### Hide children
+
+If an entity has outgoing relationships you can hide them together with their target elements using a small "minus" symbol. This is transitive, so the children's children are hidden, too. See the following screenshot showing how this works:
+
+![Hide outgoing relations](images/ui_diagram_hide_children.png "Hide outgoing relations")
+
 ### Reset diagram or container origin
 
 This action is available within the diagram or containers contextual menu ("Reset Origin"). ![Reset origin](images/ui_diagram_reset_origin.png) It aims to move all diagram (or container) elements so that the diagram (or container) retrieves its origin while keeping the element layout. This action can be launched on several containers at same time.
