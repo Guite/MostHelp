@@ -29,3 +29,32 @@ At the moment this location is fixed. However, it is requested and planned to [m
 Every time you start ModuleStudio it searches for available updates. In case an update is found ModuleStudio downloads and installs it automatically and restarts afterwards.
 
 By default MOST looks only for stable versions. You can also enable *staging updates* in the [preferences](38-Preferences.md#modulestudio-base-preferences) though in order to include also unstable updates which includes every new build. You can read more about staging updates [here](30-UserInterface.md#modulestudio-base-preferences).
+
+## Starting in a different language
+
+ModuleStudio uses the language of your operating system if a fitting localisation is available (at the moment only English and German are supported). But it is also possible to enforce using a specific language.
+
+So if your operating system is running in a language other than the one you want to start ModuleStudio in (for example, you are using German version of Windows, and you want to start Eclipse in English, provided that you have the required operating system language support including the keyboard layouts and input method editors installed), you have to specify the `-nl <locale>` command line argument when you launch ModuleStudio.
+
+### Windows
+
+On Windows, there are two ways to specify command line arguments for ModuleStudio:
+
+* *Command line:* Open a Windows Command Prompt and change directory to the directory where ModuleStudio is installed. Then enter the following command to launch ModuleStudio in for example English: `modulestudio.exe -nl en`.
+* *Windows shortcut:* Create a shortcut for the ModuleStudio executable file (for example, `C:\ModuleStudio\modulestudio.exe`). Select *Properties* from the pop-up menu for the shortcut. Append the `-nl en` command line argument to the end of the *Target* field. Click *OK* to save the changes. Afterwards you can double-click the shortcut to launch ModuleStudio in English.
+
+### Mac OS X
+
+On Mac OS X, if you need to pass arguments to ModuleStudio, you'll have to edit the `Info.plist` file inside the ModuleStudio application bundle:
+
+* Select the ModuleStudio application bundle icon while holding down the Control key (this will present you with a pop-up menu).
+* Select *Show Package Contents* in the pop-up menu.
+* Locate the `Info.plist` file in the *Contents* subfolder and open it with your favourite text editor.
+* Add the command line option `<string>-nl</string><string>en</string>` at the end of the *Eclipse* key (before the closing *array* element `</array>`).
+* Save the changes.
+* Double-click the ModuleStudio application bundle icon to launch ModuleStudio in English.
+
+### Linux
+
+On Linux, the easiest way is using the command line using your favourite console tool: change directory to the directory where ModuleStudio is installed. Then enter the following command to launch ModuleStudio in for example English: `./modulestudio -nl en`.
+
