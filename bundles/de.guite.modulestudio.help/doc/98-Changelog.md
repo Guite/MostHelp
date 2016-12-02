@@ -78,6 +78,8 @@
 * The `maxLength` property of text fields are now reflected in the generated form field properly.
 * Generation of MultiHook needles has been added (together with a new generator setting for that) (#13).
 * For upload fields with images additional settings are generated allowing to enable automatic shrinking of too large images down to configurable maximum dimensions (#800).
+* Form handlers redirect back to the referer if no `returnTo` parameter is specified (#844).
+* For 1.4 applications a `FeatureActivationHelper` class is created which can be used to disable/enable certain features (categories, attributes, translations, meta data, tree relatives) during runtime (#841). This is for example useful if you would like to make these features depending on some conditions, like a module variable.
 * Many minor bugfixes.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.0).
 
