@@ -14,7 +14,7 @@ Validators are generally not explicitly written in MOST, but simply defined usin
 
 The different types of relations in Doctrine are all offered, too. For inheritance relationships the strategy can be selected (single table, joined). All other connection types store a name for the two entities on both sides (source alias and target alias) as well as the referenced fields (source field and target field). Because the primary id fields of entities are not part of the model, but automatically added before the generation, the string `id` is allowed and also set per default. By changing these fields it is possible to describe also relations referencing other fields. Beside this it is possible to have multiple relationships between the same entities and also self relations, as long as their alias settings are unique. Finally you can also define how the cascading behaviour should look like, again supporting all options offered by Doctrine.
 
-The ModuleStudio DSL also supports several behavioural extensions for Doctrine, like for example trees, translatable fields, slugs and loggable entities. There are also some Zikula-specific additions by the way, like the behaviours Attributable, Categorisable, MetaData and StandardFields.
+The ModuleStudio DSL also supports several behavioural extensions for Doctrine, like for example trees, translatable fields, slugs and loggable entities. There are also some Zikula-specific additions by the way, like Attributable and Categorisable.
 
 Event listeners or subscribers are not explicitly described in the models, but some base implementations are already generated though which can be implemented in the empty subclasses if needed.
 
@@ -192,7 +192,7 @@ It has the following properties:
 * **leading** - A boolean specifying whether this is the primary (and default) entity or not.
 * **lockType** - Whether and which [locking strategy](#entity-lock-type) is applied. The default value is `PAGELOCK`.
 * **loggable** - A boolean specifying whether the loggable behavior is used or not. The generator will create an additional entity for managing the log entries if set to `true`. There is no user interface for the version management yet (see [#30](https://github.com/Guite/MostGenerator/issues/30) for more information).
-* **metaData** - A boolean specifying whether this entity should have support for meta data. If set to `true` the generator creates additional inclusion templates for displaying and changing corresponding fields.
+* **metaData** - A boolean specifying whether this entity should have support for meta data. This is *deprecated* and will cause nothing.
 
 ![Example for category selector and meta data](images/generator_categorisable_metadata.png "Example for category selector and meta data")
 

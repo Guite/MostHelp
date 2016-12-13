@@ -59,6 +59,7 @@
 * Removed action handlers, action events and transitions from controller layer.
 * Removed dsl properties for view layer, event listeners and transform objects.
 * Added `expandedSource` and `expandedTarget` properties to relationships for controlling their editing display type in Symfony Forms terminology. The `useChecks` property of list fields has been renamed to `expanded` accordingly.
+* The `metaData` extension is deprecated and does not have any effect anymore in the generator. If you need meta data create a normal entity for them instead.
 
 ### Generator changes
 

@@ -81,7 +81,7 @@ The biggest part is a reference section listing all validation rules in detail a
 * There must not exist an entity named `FooClosure` as this is reserved by the corresponding extension. For an entity named *person* with a closure tree ModuleStudio generates an additional entity named `PersonClosure` for managing it's closures. For nested sets this additional entity is not required.
 * There must not exist an entity named `FooAttribute` as this is reserved by the corresponding extension. For an entity named *person* with `attributable = true` ModuleStudio generates an additional entity named `PersonAttribute` for managing it's attributes.
 * There must not exist an entity named `FooCategory` as this is reserved by the corresponding extension. For an entity named *person* with `categorisable = true` ModuleStudio generates an additional entity named `PersonCategory` for managing it's categories.
-* There must not exist an entity named `FooMetaData` as this is reserved by the corresponding extension. For an entity named *person* with `meta data = true` ModuleStudio generates an additional entity named `PersonMetaData` for managing it's meta data.
+* The meta data extension is deprecated. If you need meta data create a normal entity for it instead. This warning occurs for an entity with `meta data = true`.
 
 ### Entity field
 
