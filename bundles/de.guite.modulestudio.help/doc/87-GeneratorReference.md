@@ -543,8 +543,9 @@ Represents an entry for a [list field](#list-field).
 It includes the following properties:
 
 * **default** - A boolean specifying whether this entry is selected by default or not. The default value is `false`.
-* **name** - Name of the item.
 * **image** - Optional name of an extrasmall image in the Zikula core, for example `xedit`.
+* **name** - Name of the item.
+* **value** - The value of this item. If not value exists, the name is used as value, too.
 
 See the [list field](#list-field) section for a description of what the generator does with those elements.
 
