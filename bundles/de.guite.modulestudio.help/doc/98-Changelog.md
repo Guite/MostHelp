@@ -59,7 +59,7 @@
 * Removed action handlers, action events and transitions from controller layer.
 * Removed dsl properties for view layer, event listeners and transform objects.
 * Added `expandedSource` and `expandedTarget` properties to relationships for controlling their editing display type in Symfony Forms terminology. The `useChecks` property of list fields has been renamed to `expanded` accordingly.
-* The `metaData` extension is deprecated and does not have any effect anymore in the generator. If you need meta data create a normal entity for them instead.
+* The `metaData` extension is deprecated and does not have any effect anymore in the generator. If you need meta data create a normal entity for them instead (#854).
 
 ### Generator changes
 
@@ -82,6 +82,7 @@
 * Form handlers redirect back to the referer if no `returnTo` parameter is specified (#844).
 * For 1.4 applications a `FeatureActivationHelper` class is created which can be used to disable/enable certain features (categories, attributes, translations, meta data, tree relatives) during runtime (#841). This is for example useful if you would like to make these features depending on some conditions, like a module variable.
 * Generated applications support category-based permissions now (#842).
+* The geolocation functionality is commented out by default. If you need it, you can just activate it in the template by removing the comment (#853).
 * Many minor bugfixes.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.0).
 
