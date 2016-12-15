@@ -25,7 +25,8 @@ The biggest part is a reference section listing all validation rules in detail a
 
 ### Settings container
 
-* The core version target is deprecated and going to be removed soon. This warning appears if you change the target core version to 1.3.x to `ZK135` or `ZK136`. Those are going to be removed in a later version.
+* The core version target is deprecated. Please choose another one. This error appears if you change the target core version to `ZK135` or `ZKPRE14`. Choose `ZK136` or `ZK14` instead.
+* The core version target is deprecated and going to be removed soon. This warning appears if you change the target core version to `ZK136`. Those are going to be removed in a later version.
 * Settings container must be assigned to an application. Should not occur in practice, this is just for completeness.
 * Scribite plug-ins require external controller and finder component. If you enable `generateScribitePlugins` you also need `generateExternalControllerAndFinder`.
 
