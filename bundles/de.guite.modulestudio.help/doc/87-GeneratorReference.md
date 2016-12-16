@@ -181,7 +181,7 @@ It has the following properties:
 * **categorisable** - A boolean specifying whether this entity should have categories or not. If set to `true` the generator creates an additional entity for managing the categories. During [edit actions](#edit-action) it is possible to select a desired category. This category will also be shown again on [display pages](#display-action) and in quick navigation forms of [view pages](#view-action). Generated applications also support filtering by categories as well as multiple category registries / properties / trees, however the implementation uses only `Main` per default. There is no built-in permission scheme based on categories implemented yet. Note that if you activate the `categorisable` property for an entity the generated installer relies on that you did not remove the default categories of Zikula. If you deleted them please do not set the amount of example rows to another value than `0` to avoid problems.
 * **categorisableMultiSelection** - A boolean specifying whether multiple categories can be selected or not.
 * **changeTrackingPolicy** - How change detection is being done (see [below](#entity-change-tracking-policy)). The default value is `DEFERRED_IMPLICIT`.
-* **displayPattern** - Pattern for displaying instances of this entity. In earlier ModuleStudio versions one had to mark one entity field as `leading`. However, this was not flexible enough in practice. With the display pattern you can specify arbitrary expressions which are used as textual representation for instances of this entity. For most cases you may want so declare just one field, which is done like `#title#`. A more complex example would be `#lastName#, #firstName# (#age# years)`. Of course all fields must exist in the entity with exactly the names used within the display pattern.
+* **displayPattern** - Pattern for displaying instances of this entity. In earlier ModuleStudio versions one had to mark one entity field as `leading`. However, this was not flexible enough in practice. With the display pattern you can specify arbitrary expressions which are used as textual representation for instances of this entity. For most cases you may want to declare just one field, which is done like `#title#`. A more complex example would be `#lastName#, #firstName# (#age# years)`. Of course all fields must exist in the entity with exactly the names used within the display pattern.
 * **geographical** - A boolean specifying whether the geographical extension is used or not. If set to `true` the generator will create two additional fields named `latitude` and `longitude`. Also it will consider them in all important application areas and provide an export for the *kml* format (if `generateKmlTemplates` setting has not been set to `false`). During the creation of a new entity with geographical support a nice geolocation feature can be used to ask the user for his current location (this needs to be activated in the template though). Also there is an included integration of the Mapstraction class allowing you to use different map providers in your application.
 
 ![Geolocation feature](images/generator_geographical_geolocation.png "Geolocation feature")
@@ -237,6 +237,26 @@ This base class has the following children at the moment:
 An entity field may have the following references:
 
 * **entity** - Reference to the owning [data object](#data-object).
+* **displayType** - Controls display-related settings for [view](#view-action) and [display](#display-action) pages. See [below](#entity-field-display-type). The default value is `ALL`.
+
+#### Entity field display type
+
+Specifies the kind of dependency to a certain application.
+
+Can be one of the following options:
+
+* `NONE` - The field is neither shown on view nor display pages. It may also not be used for sorting on view pages.
+* `SORTING` - The field is neither shown on view nor display pages. It may be used for sorting on view pages though.
+* `VIEW` - The field is shown on view pages, but not on display pages. It may not be used for sorting on view pages.
+* `VIEW_SORTING` - The field is shown on view pages, but not on display pages. It may be used for sorting on view pages.
+* `DISPLAY` - The field is not shown on view pages, but on display pages. It may not be used for sorting on view pages.
+* `DISPLAY_SORTING` - The field is not shown on view pages, but on display pages. It may be used for sorting on view pages.
+* `VIEW_DISPLAY` - The field is shown on both view and display pages. It may not be used for sorting on view pages though.
+* `ALL` - The field is shown on both view and display pages. It may also be used for sorting on view pages.
+
+The generator uses this value in the corresponding module dependency created in the version class.
+
+Note that this setting is ignored for [array fields](#array-field) and [object fields](#object-field). These are never shown on view pages.
 
 #### Derived field
 

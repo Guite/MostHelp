@@ -55,11 +55,12 @@
 * Moved data layer elements into main editor.
 * Moved property for amount of example rows into generator settings.
 * Moved remaining elements from controller layer into main editor.
-* Two new properties allow controlling field visibility and css classes.
+* Two new properties allow controlling field visibility and css classes for editing.
 * Removed action handlers, action events and transitions from controller layer.
 * Removed dsl properties for view layer, event listeners and transform objects.
 * Added `expandedSource` and `expandedTarget` properties to relationships for controlling their editing display type in Symfony Forms terminology. The `useChecks` property of list fields has been renamed to `expanded` accordingly.
 * The `metaData` extension is deprecated and does not have any effect anymore in the generator. If you need meta data create a normal entity for them instead (#854).
+* It is now possible to define for each field whether it should be visible on view pages, visible on display pages and whether it may be used for sorting or not (#858). 
 
 ### Generator changes
 
