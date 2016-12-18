@@ -81,6 +81,7 @@
 * Generation of MultiHook needles has been added (together with a new generator setting for that) (#13).
 * For upload fields with images additional settings are generated allowing to enable automatic downscaling of too large images down to configurable maximum dimensions (#800).
 * Further additional settings are generated for making thumbnail parameters configurable (#864).
+* For all view actions there are additional settings generated to control the amount of items per page.
 * Form handlers redirect back to the referer if no `returnTo` parameter is specified (#844).
 * For 1.4 applications a `FeatureActivationHelper` class is created which can be used to disable/enable certain features (categories, attributes, translations, meta data, tree relatives) during runtime (#841). This is for example useful if you would like to make these features depending on some conditions, like a module variable.
 * Generated applications support category-based permissions now (#842).

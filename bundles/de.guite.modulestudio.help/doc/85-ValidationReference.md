@@ -315,7 +315,6 @@ Includes basically all relationships in the data layer except inheritance.
 
 ### Variables
 
-* It is recommended to add two integer variables named `pageSize` and `showOnlyOwnEntries` for controlling the view action's behaviour. Occurs if a model contains a view action, but no according variables are found.
 * Every var container must have a name.
 * Var container names must be unique.
 * Var container sort positions must be unique.
