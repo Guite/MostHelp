@@ -28,7 +28,7 @@
 * Documentation is now based on Markdown.
 * ModuleStudio automatically searches for updates on startup. You can control in preferences whether only stable releases are included or also continuously incoming updates are considered, too.
 * Help search also includes results from zikula.org and zikula.de sites as well as documentation of Symfony, Doctrine and Twig. 
-* Updated to Eclipse 4.6.1 (Neon.1).
+* Updated to Eclipse Neon.2 (4.6.2).
 * ModuleStudio brings the required Java 8 environment along and can therewith also be used on systems without Java or with obsolete Java versions.
 
 ### DSL / Modelling language changes
@@ -93,7 +93,7 @@
 
 ### Product changes
 
-* Updated to Eclipse 4.4 (Luna).
+* Updated to Eclipse Luna (4.4).
 
 ### DSL / Modelling language changes
 
@@ -134,7 +134,7 @@
 * This release is the first which has been built completely by our CI server. The build infrastructure has matured and allows for reproducable builds with measuring quality metrics and testing. There are also some new platforms added to the list of supported versions. But most important it has become much easier to create and publish new releases now.
 * The MacOS versions behave like native MacOS apps.
 * One unrequired and confusing main menu entry (`File > Open File...`) has been hidden.
-* Updated to Eclipse 4.3.2 (Kepler SR2).
+* Updated to Eclipse Kepler SR2 (4.3.2).
 
 ### DSL / Modelling language changes
 
@@ -169,7 +169,7 @@
 * Reimplemented generator templates in new language. The generator has a much better performance now.
 * Errors and warnings can be translated into other languages now (German is supported already).
 * Validation is no longer performed automatically every few seconds, but on certain events (each model save in the main editor, after opening existing models, when starting generation) and when calling validation manually using the main menu.
-* Updated to Eclipse 4.2.2 (Juno SR2) and corresponding versions of third-party components. Mac OS X builds support only cocoa now, there are no launchers available for carbon anymore.
+* Updated to Eclipse Juno SR2 (4.2.2) and corresponding versions of third-party components. Mac OS X builds support only cocoa now, there are no launchers available for carbon anymore.
 * The example models from the `MostExamples` repository are now shipped in a folder named `examples` within MOST.
 * Removed custom beautifier component as it caused more problems than benefits.
 * Reimplemented validation constraints, errors and warnings now also with German translation.
