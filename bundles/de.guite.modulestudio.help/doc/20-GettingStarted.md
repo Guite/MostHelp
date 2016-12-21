@@ -25,11 +25,19 @@ This chapter shows how easy it is to define and generate Zikula applications wit
 
 ![Generated artifacts](images/tour_generation_results.png "Generated artifacts")
 
+## Open existing projects
+
+Projects which have been created before can simply be opened again by selecting them in a list presented in a dialog. This can be done using the [main menu](30-UserInterface.md#main-menu) or the [dashboard view](33-Views.md#dashboard-view). 
+
+## Importing model files
+
+To import an existing model use either the corresponding [main menu](30-UserInterface.md#main-menu) entry or the [dashboard view](33-Views.md#dashboard-view) action. The model will be migrated to the current DSL version and imported into a new project automatically. The name of this project is determined from the file name. So if you want to duplicate a model you need to rename the file before importing it. Otherwise you will see an error message because the project does already exist.
+
 ## Further helpful pointers for starting
 
 Here are some remarks for getting into ModuleStudio smoothly.
 
-* Every application is described and represented by a model. Each project consists of two files: a domain model (`*.mostapp`) and a representation (`*.representation`). The first one is the important one containing all information relevant for further processing like model-to-model and model-to-code transformations. The representation information is only cosmetical and not necessary. So if you want to exchange models, only the domain model is needed which can be [imported into a new project](40-Migration.md#importing-model-files) again any time.
+* Every application is described and represented by a model. Each project consists of two files: a domain model (`*.mostapp`) and a representation (`*.representation`). The first one is the important one containing all information relevant for further processing like model-to-model and model-to-code transformations. The representation information is only cosmetical and not necessary. So if you want to exchange models, only the domain model is needed which can be [imported into a new project](#importing-model-files) again any time.
 * Not all settings are directly embedded within the editor. To be able to set all fields refer to the [properties view](33-Views.md#properties-view) at the bottom right. In case you closed this view you can always reopen it again using the [main menu](30-UserInterface.md#window-menu).
 * For the beginning start with simple goals. Think about an application needing only three to five database tables (entity objects in the model editor). Keeping your application-specific logic simple helps to understand the architectural concepts of ModuleStudio.
 * There are some sample models contained in the `examples` folder inside ModuleStudio. You can also download them from [the examples project](https://github.com/Guite/MostExamples) on GitHub.

@@ -12,7 +12,7 @@ ModuleStudio organises its models in projects. A project is simply a folder with
 
 You can always have only one project opened. If you create a new application or open a project, this causes the currently opened project being closed.
 
-The `mostapp` file is the primarily important one for storing and exchanging applications. It can [imported](40-Migration.md#importing-model-files) into a new ModuleStudio project at any time, so you do not need to keep the representation file with it.
+The `mostapp` file is the primarily important one for storing and exchanging applications. It can [imported](20-GettingStarted.md#importing-model-files) into a new ModuleStudio project at any time, so you do not need to keep the representation file with it.
 
 Besides the [main menu](#main-menu), the environment can be split into two areas.
 
@@ -32,8 +32,7 @@ The file menu contains actions about handling model files and projects.
 
 
 1. ![Open project](images/menu_file_open_project.png) Open project - Displays a dialog for selecting an existing project to open. This dialog contains a list showing all projects which are located in your [workspace](15-Installation.md#the-workspace). If you want to open a project from another location you need to import its model file into a new project which is described in the next action.
-2. ![Import model file](images/menu_file_open_import.png) Import model - Displays a dialog for selecting an existing `.mostapp` file to be imported into a new project. Models from earlier versions are [automatically migrated](40-Migration.md#importing-model-files).
-3. ![Import xml table definition](images/menu_file_open_importxml.png) Import xml table definition - Allows to import a XML file containing legacy table definitions into a new project. More details are explained in [the migration chapter](40-Migration.md#migrating-old-modules).
+2. ![Import model file](images/menu_file_open_import.png) Import model - Displays a dialog for selecting an existing `.mostapp` file to be imported into a new project. Models from earlier versions are [automatically migrated](20-GettingStarted.md#importing-model-files).
 
 
 * ![Validate diagram](images/menu_file_validate.png) Validate diagram - Allows to trigger the [validation](50-Validation.md#triggering-validation) for your current model manually.

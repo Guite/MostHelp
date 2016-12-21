@@ -30,6 +30,7 @@
 * Help search also includes results from zikula.org and zikula.de sites as well as documentation of Symfony, Doctrine and Twig. 
 * Updated to Eclipse Neon.2 (4.6.2).
 * ModuleStudio brings the required Java 8 environment along and can therewith also be used on systems without Java or with obsolete Java versions.
+* Removed import of xml files created from old old pntables files (#829).
 
 ### DSL / Modelling language changes
 
