@@ -74,7 +74,7 @@
 * Editing time fields is now supported by a dedicated form plug-in. Also for date fields there is a new selector (#87).
 * In 1.4 applications annotations are used to distinguish between admin and user areas in entity controllers (#633).
 * The `postInstall` event newly introduced in Zikula 1.4 is supported.
-* Custom admin image and Scribite editor plug-in images are dynamically generated (#458).
+* Custom admin images are dynamically generated (#458).
 * The primary variable name for search terms has been changed to `q` for improved integration with analytics software.
 * For the generated templates YAML example files with example overrides are pregenerated for easy copy n paste (#460).
 * In 1.4 applications `RouteUrl` and `UrlInterface` are now used instead of the `ModUrl` class.
@@ -271,26 +271,6 @@
 
 ## ModuleStudio 0.5.3 (Oct 10, 2011)
 
-* A new selection api simplifies data selection in controller layers.
-* Entity actions are now centrally collected for easier extendability and reusability.
-* Bugfixes for user fields in combination with tree root nodes and edit forms.
-* Validation hooks in form handlers have been armed now (errors cause abortion).
-* Form handler refactoring outsourcing common code parts into generic parent class.
-* Added generation of templates for custom controller actions.
-* Using getOneOrNullResult method for single entity selections.
-* Improved formatting of action icons in list views.
-* Moved form handler base class location.
-* Added standard fields to list of allowed sorting criteria.
-* Parameter in image creation util class to be able to crop thumbnails individually, too.
-* Bugfixes for error handling and post processing in form handlers.
-* Make sort links in view templates consider the parameter for showing all items instead of paginated list properly.
-* Improved language detection in bootstrap file when using translatable fields.
-* Object actions in admin view templates contain now a preview icon if a user display action exists in the controller model.
-* Fixed errors in Content type, generic block and Mailz plug-in.
-* Added forgotten string field validation calls.
-* Fixed JavaScript problems for inline editing of related objects linked by many-to-many relationships.
-* Fixed missing generation of view modifier for displaying country names.
-* Updated Imagine pathes for thumbnail generation due to vendor changes.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.5.3).
 
 ## ModuleStudio 0.5.2 (Sep 8, 2011)
