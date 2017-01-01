@@ -13,6 +13,8 @@
 ### Generator changes
 
 * Fixed bug with editing entities containing upload fields having PageLock activated.
+* Fixed non-working display of only own entities (e.g. linked from user account panel).
+* Fixes for Blameable working differently than StandardFields (uses username instead of userid).
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
 
