@@ -1,5 +1,19 @@
 # Changelog
 
+## ModuleStudio 0.7.1
+
+### Product changes
+
+* None yet.
+
+### DSL / Modelling language changes
+
+* None yet.
+
+### Generator changes
+
+* Fixed bug with editing entities containing upload fields having PageLock activated.
+
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
 
 ### Product changes
