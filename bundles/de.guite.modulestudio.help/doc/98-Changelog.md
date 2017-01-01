@@ -1,5 +1,19 @@
 # Changelog
 
+## ModuleStudio 0.7.1
+
+### Product changes
+
+* None yet.
+
+### DSL / Modelling language changes
+
+* None yet.
+
+### Generator changes
+
+* Added missing arguments for category helper in installer class (#904).
+
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
 
 ### Product changes
