@@ -15,6 +15,8 @@
 * Added missing arguments for category helper in installer class (#904).
 * Use PlainResponse for external finder action.
 * More reasonable naming of user referencing standard fields.
+* Use more readable YAML syntax for argument lists (#900).
+* Introduced `GeographicalTrait` and `EntityWorkflowTrait` removing redundancies in entity classes (#890).
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
 
@@ -100,7 +102,7 @@
 * Further additional settings are generated for making thumbnail parameters configurable (#864).
 * For all view actions there are additional settings generated to control the amount of items per page.
 * Form handlers redirect back to the referer if no `returnTo` parameter is specified (#844).
-* For 1.4 applications a `FeatureActivationHelper` class is created which can be used to disable/enable certain features (categories, attributes, translations, meta data, tree relatives) during runtime (#841). This is for example useful if you would like to make these features depending on some conditions, like a module variable.
+* For 1.4 applications a `FeatureActivationHelper` class is created which can be used to disable/enable certain features (categories, attributes, translations, tree relatives) during runtime (#841). This is for example useful if you would like to make these features depending on some conditions, like a module variable.
 * Generated applications support category-based permissions now (#842).
 * The geolocation functionality is commented out by default. If you need it, you can just activate it in the template by removing the comment (#853).
 * Many minor bugfixes.
