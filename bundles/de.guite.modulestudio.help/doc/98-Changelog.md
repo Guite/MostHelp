@@ -14,6 +14,7 @@
 
 * Added missing arguments for category helper in installer class (#904).
 * Use PlainResponse for external finder action.
+* More reasonable naming of user referencing standard fields.
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
 
