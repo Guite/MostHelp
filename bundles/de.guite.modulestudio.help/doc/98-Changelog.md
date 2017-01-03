@@ -8,11 +8,12 @@
 
 ### DSL / Modelling language changes
 
-* None yet.
+* Removed support for Zikula 1.3.x (#260).
 
 ### Generator changes
 
 * Added missing arguments for category helper in installer class (#904).
+* Use PlainResponse for external finder action.
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
 

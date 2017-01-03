@@ -11,22 +11,21 @@ The biggest part is a reference section listing all validation rules in detail a
 ### Application
 
 * The application must have a name. Application name must have a length of at least five chars.
-* Application name must start with a capital letter. Since Zikula 1.3 extensions must start with a capital letter. Of course we could simply generate it this way. But for consistency we decided to follow this rule more strictly by enforcing it in the model already.
+* Application name must start with a capital letter. Since Zikula extensions must start with a capital letter. Of course we could simply generate it this way. But for consistency we decided to follow this rule more strictly by enforcing it in the model already.
 * The application must have an author.
 * The application must have an email address.
 * The value for the application email field must be a valid email address.
 * The value for the application url field must be a valid url. Protocols allowed per default are *http* and *https*.
 * The application must have a prefix for it's database tables. This prefix is required to prevent naming collisions between several modules. Otherwise it would be a problem if multiple extensions use common table names like *user* or *category*. The prefix must have a length of more than two chars, whereby a at least four is recommended.
 * The prefix must be a valid identifier (e.g. no whitespace or special characters). Essentially the same as the global rule for names above. You should use lowercase here, but it will be generated in lowercase in all cases.
-* The application must have a version. The application version must conform to the pattern `x.y.z`. Another requirement introduced in Zikula 1.3. Valid values are *1.0.0*, *1.2.2*, but not *1.1* or *2.1.0beta*.
+* The application must have a version. The application version must conform to the pattern `x.y.z`. Valid values are *1.0.0*, *1.2.2*, but not *1.1* or *2.1.0beta*.
 * The application must contain at least one entity. At the moment ModuleStudio wants a model with at least one entity. If you are modelling an extension without any data storage, just create some dummy elements.
 * The application must contain at least one controller. ModuleStudio requires at least one controller, because otherwise the module wouldn't do anything. If you are modelling an extension without any controllers, just create some dummy elements.
 * The application may contain only one settings container.
 
 ### Settings container
 
-* The core version target is deprecated. Please choose another one. This error appears if you change the target core version to `ZK135` or `ZKPRE14`. Choose `ZK136` or `ZK14` instead.
-* The core version target is deprecated and going to be removed soon. This warning appears if you change the target core version to `ZK136`. Those are going to be removed in a later version.
+* The core version target is deprecated. Please choose another one. This error appears if you change the target core version to `ZK135`, `ZK136` or `ZKPRE14`. Choose `ZK14` instead.
 * Settings container must be assigned to an application. Should not occur in practice, this is just for completeness.
 * Scribite plug-ins require external controller and finder component. If you enable `generateScribitePlugins` you also need `generateExternalControllerAndFinder`.
 
@@ -332,7 +331,7 @@ Includes basically all relationships in the data layer except inheritance.
 
 ### Controller
 
-* You must have an admin controller for hook subscriber functionality. Since Zikula 1.3 it is highly recommended to have an admin area as there is an additional page for defining hook assignments for different areas.
+* You must have an admin controller for hook subscriber functionality. It is highly recommended to have an admin area as there is an additional page for defining hook assignments for different areas.
 * Controller names must be unique. For example there may not be two controllers which are both named `admin`.
 * Please create an ajax controller including an arbitrary action, like index, because it is required for processing your model properly. This happens if your model contains relationships or an entity with either user fields or tree extension. As the generator creates additonal ajax methods in these cases it requires an ajax controller for keeping this information also in the model for documentation.
 * There must not exist more than one (`admin` | `user` | `ajax`) controller. Predefined controllers are unique per application (i.e. there is only one admin area).

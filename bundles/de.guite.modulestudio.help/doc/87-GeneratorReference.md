@@ -39,16 +39,16 @@ Represents an application described by the model.
 
 It includes the following basic properties which are mainly, but not only used to create meaningful file headers:
 
-* **vendor** - The vendor of the application. Usually this is the name of a company or institution. Starting with Zikula 1.4 the vendor and name of an application are combined to a unique name. This makes it possible to have for example multiple News modules installed from different vendors.
+* **vendor** - The vendor of the application. Usually this is the name of a company or institution. The vendor and name of an application are combined to a unique name. This makes it possible to have for example multiple News modules installed from different vendors.
 * **author** - The author of the application. Usually this is the full name of the developer.
 * **email** - The email address of the developer.
 * **license** - The license of this application. Defaults to LGPL. If either GPL or LGPL are used the generator creates corresponding license files, too.
 * **url** - The homepage of the developer.
-* **version** - The application version. Must conform to the pattern `x.y.z` - for example `1.0.0` which is also the default value. Will be used in the version class (Zikula 1.3.x) or the composer file (Zikula 1.4.x) of the created application.
+* **version** - The application version. Must conform to the pattern `x.y.z` - for example `1.0.0` which is also the default value. Will be used in the composer file of the created application.
 
 An application has some more fields for specifying specific aspects:
 
-* **capabilities** - A comma-separated list of capability names the application offers. Capabilities are used in Zikula to express certain functions a module is offering. This allows for a loose coupling between modules. For example you can let `MyProductsModule` depend on `MyCustomerModule`, but this is a very tight coupling. With capabilities you could instead let the products module query Zikula for `any module which is able to handle customers`. You can read more about this in the [CapabilityApi description](https://github.com/zikula/core/blob/1.4/src/docs/Core-2.0/Api/CapabilityApi.md). Note the generator uses these just for specifying them in the generated module's version class (Zikula 1.3.x) or the composer file (Zikula 1.4.x). There is no further support for the capabilities you want to provide yet.
+* **capabilities** - A comma-separated list of capability names the application offers. Capabilities are used in Zikula to express certain functions a module is offering. This allows for a loose coupling between modules. For example you can let `MyProductsModule` depend on `MyCustomerModule`, but this is a very tight coupling. With capabilities you could instead let the products module query Zikula for `any module which is able to handle customers`. You can read more about this in the [CapabilityApi description](https://github.com/zikula/core/blob/1.4/src/docs/Core-2.0/Api/CapabilityApi.md). Note the generator uses these just for specifying them in the generated composer file. There is no further support for the capabilities you want to provide yet.
 * **prefix** - A prefix for all database tables of this application. Will be used in entity classes.
 
 ![Basic application properties](images/ui_diagram_application_properties.png "Basic application properties")
@@ -72,8 +72,8 @@ Can be one of the following options:
 * `ZK14` - Targets the last stable Zikula 1.4.x version. This is the default value and useful when developing for future. Generated applications support the forward compatibility layer using 2.0.0 technology.
 * `ZK14DEV` - Targets the last unstable Zikula 1.4.x version. Thus it will always include changes for the next upcoming 1.4.x core release. You can use this to test new changes, while `ZK14` will still target the last stable core version.
 * `ZKPRE14` - Targets the last stable Zikula 1.4.x version; legacy alias for `ZK14`. Deprecated.
-* `ZK136` - Targets Zikula 1.3.10 and earlier. This is for backwards compatibility and useful when maintaining extensions in production. Although using this raises a deprecated warning you can still work with this until a future version.
-* `ZK135` - Targets Zikula 1.3.10 and earlier; legacy alias for `ZK136`. Deprecated.
+* `ZK136` - Targets Zikula 1.3.10 and earlier. This is deprecated and not supported anymore beginning with ModuleStudio 0.7.1.
+* `ZK135` - Targets Zikula 1.3.10 and earlier; legacy alias for `ZK136`.
 
 #### Settings container
 
@@ -207,7 +207,7 @@ It has the following properties:
 * **slugStyle** - Which [slug style](#entity-slug-style) is used. Default value is `LOWERCASE`.
 * **slugUnique** - A boolean specifying if the slug is unique or not. Default value is `true`.
 * **slugUpdatable** - A boolean specifying if the slug can be changed or not. Default value is `true`.
-* **softDeleteable** - Whether deleted items should only be marked as deleted instead of deleting them. Defines also whether the entity workflow provides means for trashing and recovering items or for deleting them. See [workflow types](#entity-workflow-type) for more information. The default value is `false`. Only applicable for the 1.4 target core version.
+* **softDeleteable** - Whether deleted items should only be marked as deleted instead of deleting them. Defines also whether the entity workflow provides means for trashing and recovering items or for deleting them. See [workflow types](#entity-workflow-type) for more information. The default value is `false`.
 * **tree** - Whether and which tree strategy is applied. Default value is `NONE`. More information about what the generator creates for trees can be found in the the section about [tree types](#entity-tree-type).
 
 ![Tree functionality with context menu and drag n drop](images/generator_tree.png "Tree functionality with context menu and drag n drop")
@@ -219,7 +219,7 @@ An entity has the following references in addition to the common [data object](#
 
 * **indexes** - Allows referencing one or more [indexes](#entity-index).
 
-One additional note about slugs and permalinks: the generated short url handlers will understand different url schemes for the [display](#display-action) pages depending on the entity settings (*at least in Zikula 1.3.x, not verified yet for 1.4.x*).
+One additional note about slugs and permalinks: the generated short url handlers will understand different url schemes for the [display](#display-action) pages depending on the entity settings (*not verified yet for Zikula 1.4.x, it may behave a bit differently there due to the usage of Symfony routing*).
 
 * Entities which are not sluggable use the identifier for display urls, for example `mymodule/person/5.html`.
 * Entities with unique slugs use the slug for display urls, for example `mymodule/person/william-smith.html`.
@@ -377,23 +377,23 @@ Represents a field type for storing string values.
 
 A string field has the following properties in addition to the common [abstract string field](#abstract-string-field) settings:
 
-* **bic** - A boolean specifying whether this field represents a BIC (business identifier code) or not. Default value is `false`. Only applicable for the 1.4 target core version.
+* **bic** - A boolean specifying whether this field represents a BIC (business identifier code) or not. Default value is `false`.
 * **country** - A boolean specifying whether this field represents a country code or not. Default value is `false`. If set to `true` a country selector is used in [edit pages](#edit-action). For the output in [view](#view-action) and [display](#display-action) templates an output modifier is used to display the full country name instead of the unreadable country code. If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
-* **creditCard** - A boolean to specify whether this field represents a credit card number or not. Default value is `false`. Only applicable for the 1.4 target core version.
-* **currency** - A boolean to specify whether this field represents a 3-letter ISO 4217 currency name or not. Possible example values are `USD` or `EUR`. Default value is `false`. Only applicable for the 1.4 target core version. In [edit forms](#edit-action) it will be rendered as a currency selector. If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
+* **creditCard** - A boolean to specify whether this field represents a credit card number or not. Default value is `false`.
+* **currency** - A boolean to specify whether this field represents a 3-letter ISO 4217 currency name or not. Possible example values are `USD` or `EUR`. Default value is `false`. In [edit forms](#edit-action) it will be rendered as a currency selector. If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
 * **htmlcolour** - A boolean specifying whether this field represents a html color code (like `#003399`) or not. Default value is `false`. If set to `true` a colour picker is used in [edit pages](#edit-action) for convenient selection of colour codes.
 
 ![Example for colour and language selectors](images/generator_colour_language.png "Example for colour and language selectors")
 
-* **iban** - A boolean to specify whether this field represents a bank account number in IBAN (International Bank Account Number) format. Default value is `false`. Only applicable for the 1.4 target core version.
-* **isbn** - Allows to define whether this field represents a number in ISBN (International Standard Book Number). Default value is `NONE`. You can choose from different [validation options](#isbn-style). Only applicable for the 1.4 target core version.
-* **issn** - Allows to define whether this field represents a number in ISSN (International Standard Serial Number). Default value is `NONE`. You can choose from different [validation options](#issn-style). Only applicable for the 1.4 target core version.
-* **ipAddress** - Allows to define whether this field represents an IP address. Default value is `NONE`. You can choose the covered [ip address scope](#ip-address-scope). Only applicable for the 1.4 target core version.
+* **iban** - A boolean to specify whether this field represents a bank account number in IBAN (International Bank Account Number) format. Default value is `false`.
+* **isbn** - Allows to define whether this field represents a number in ISBN (International Standard Book Number). Default value is `NONE`. You can choose from different [validation options](#isbn-style).
+* **issn** - Allows to define whether this field represents a number in ISSN (International Standard Serial Number). Default value is `NONE`. You can choose from different [validation options](#issn-style).
+* **ipAddress** - Allows to define whether this field represents an IP address. Default value is `NONE`. You can choose the covered [ip address scope](#ip-address-scope).
 * **language** - A boolean specifying whether this field represents an Unicode language identifier or not. Possible example values are `fr` or `zh-Hant`. Default value is `false`. If set to `true` a language selector is used in [edit pages](#edit-action). For the output in [view](#view-action) and [display](#display-action) templates an output modifier is used to display the full name instead of the unreadable language code. If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
 * **length** - The length of this field. Default value is `255`.
 * **locale** - A boolean to specify whether this field represents a locale or not. Possible example values are `fr` or `fr_FR`. Default value is `false`. If set to `true` the field will be rendered as a locale selector in [edit forms](#edit-action). If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
 * **password** - A boolean specifying whether this field represents a password or not. Default value is `false`. If set to `true` a password input element will be used instead of a normal one in [edit pages](#edit-action). Password fields are not shown on [view](#view-action) and [display](#display-action) pages for security reasons.
-* **timezone** - A boolean specifying whether this field represents a time zone or not. Default value is `false`. Only applicable for the 1.4 target core version. In [edit forms](#edit-action) timezone fields will be rendered using a time zone selector.
+* **timezone** - A boolean specifying whether this field represents a time zone or not. Default value is `false`. In [edit forms](#edit-action) timezone fields will be rendered using a time zone selector.
 * **uuid** - A boolean specifying whether this field represents an UUID (Universally Unique Identifier) or not.
 
 In [edit pages](#edit-action) the generator will use single-line input elements for string fields - except you defined something else (using options like `language` or `password`). Other validations are added together and applied as well.
@@ -467,8 +467,8 @@ Represents a field type for storing email addresses.
 
 An email field has the following properties in addition to the common [abstract string field](#abstract-string-field) settings:
 
-* **checkMX** - A boolean to specify whether the MX record's validity of the given email's host is checked or not. Default value is `false`. Only supported for the 1.4.x target core version.
-* **checkHost** - A boolean to specify whether the MX or A or AAAA record's validity of given email's host is checked or not. Default value is `false`. Only supported for the 1.4.x target core version.
+* **checkMX** - A boolean to specify whether the MX record's validity of the given email's host is checked or not. Default value is `false`.
+* **checkHost** - A boolean to specify whether the MX or A or AAAA record's validity of given email's host is checked or not. Default value is `false`.
 * **length** - The length of this field. Default value is `255`.
 
 In [edit pages](#edit-action) the generator will use email input elements as well as validation on client and server side. For the output in [view](#view-action) and [display](#display-action) pages an icon will be shown linking the email address.
@@ -479,7 +479,7 @@ Represents a field type for storing urls.
 
 An url field has the following properties in addition to the common [abstract string field](#abstract-string-field) settings:
 
-* **checkDNS** - A boolean to specify whether to check if the associated host exists or not. Default value is `false`. Only supported for the 1.4.x target core version.
+* **checkDNS** - A boolean to specify whether to check if the associated host exists or not. Default value is `false`.
 * **length** - The length of this field. Default value is `255`.
 
 In [edit pages](#edit-action) the generator will use url input elements as well as validation on client and server side. For the output in [view](#view-action) and [display](#display-action) pages an icon will be shown linking the url.
@@ -494,8 +494,8 @@ An upload field has the following properties in addition to the common [abstract
 * **allowedFileSize** - Maximum file size in bytes. Default is `0` for no limit. *This setting is deprecated in favour of `maxSize`. 
 * **length** - The length of this field. Default value is `255`.
 * **maxSize** - A string for a maximum file size. Default is an empty string for no limit. Examples: `4096` (bytes), `200k` (kilobytes), `2M` (megabytes), `32Ki` (kikibytes), `8Mi` (mebibytes). Read more about that [here](https://symfony.com/doc/current/reference/constraints/File.html#maxsize).
-* **mimeTypes** - A string containing a comma separated list of allowed mime types. Default is `image/*`. Example: `application/pdf, application/x-pdf`. Only applicable for the 1.4 target core version.
-* **multiple** - A boolean specifying whether this field allows multiple files or not. Default value is `false`. Only applicable for the 1.4 target core version. Note the UI has not been completely adapted for this yet (see [#123](https://github.com/Guite/MostGenerator/issues/123)).
+* **mimeTypes** - A string containing a comma separated list of allowed mime types. Default is `image/*`. Example: `application/pdf, application/x-pdf`.
+* **multiple** - A boolean specifying whether this field allows multiple files or not. Default value is `false`. Note the UI has not been completely adapted for this yet (see [#123](https://github.com/Guite/MostGenerator/issues/123)).
 * **namingScheme** - Defines how uploaded files [are named](#upload-naming-scheme). Default value is `ORIGINALWITHCOUNTER`.
 * **subFolderName** - Name of sub folder for storing uploaded files. If this is empty (default) the field name will be used as folder name.
 
@@ -512,15 +512,13 @@ Image-specific settings (use **only** if you did not change `allowedExtensions`)
 * **allowPortrait** - A boolean specifying whether portrait dimension is allowed or not. Default value is `true`. If this option is `false`, the image cannot be portrait oriented.
 * **detectCorrupted** - A boolean specifying whether image contents are validated or not. Default value is `false`. If this option is `true`, the image contents are validated to ensure that the image is not corrupted. This validation is done with PHP's [imagecreatefromstring](http://php.net/manual/en/function.imagecreatefromstring.php) function, which requires the [PHP GD extension](http://php.net/manual/en/book.image.php) to be enabled. **Note:** as this property has been introduced in Symfony 3.1, it is not used in the generator yet. It is going to be activated for the 2.0 target in future (see [#799](https://github.com/Guite/MostGenerator/issues/799)).
 
-All image settings are only applicable for the 1.4 target core version.
-
 In [edit pages](#edit-action) the generator will use upload input elements. If a field is mandatory the upload will be required when creating a new entity, but not when editing an existing one. If a field is optional (not mandatory) then it will be possible to delete existing uploads on editing.
 
 For the output in [view](#view-action) and [display](#display-action) pages a download link is shown together with the file size. If the file is an image then a small version of
 it is shown instead of a text link (on edit pages too by the way).
 
 If an application has any upload fields the generator creates an additional helper class containing methods for image processing. The generated application uses it to determine arguments for creating thumbnail preview images on demand with the help of the [Imagine library](http://imagine.readthedocs.io/en/latest/).
-Applications targeting Zikula 1.3.x  which includes Imagine as a system plug-in use a generated view modifier which works together with the mentioned helper class and understands many parameters to use arbitrary images in the templates. In Zikula 1.4.x the view modifier is not required anymore because the [LiipImagineBundle](http://symfony.com/doc/current/bundles/LiipImagineBundle/index.html) is used instead which already provides a Twig extension.
+Generated applications use the [LiipImagineBundle](http://symfony.com/doc/current/bundles/LiipImagineBundle/index.html) which also provides a Twig extension for generating and embedding thumbnails.
 
 For upload fields with images there are additional settings generated at the configuration page. These allow enabling automatic shrinking of too large images down to configurable maximum dimensions.
 
@@ -600,7 +598,7 @@ An abstract date field has the following properties in addition to the common [d
 * **timestampable** - Which [timestampable type](#entity-timestampable-type) is used. Default value is `NONE`.
 * **timestampableChangeTriggerField** - Optional name of field to use as change trigger (if type is `CHANGE`. Can also be `workflowState` or the name of a relation (syntax `property.field`).
 * **timestampableChangeTriggerValue** - Optional value of field to use as change trigger (if type is `CHANGE`).
-* **validatorAddition** - Additional validation constraint without the `Assert` annotation. Example values are `LessThanOrEqual("+15 minutes")` or `LessThan("-18 years UTC")` or `Range(min = "first day of January", max = "first day of January next year")`. For more details information see [this blog post](http://symfony.com/blog/new-in-symfony-2-6-date-support-for-validator-constraints). Used for Zikula 1.4+ only.
+* **validatorAddition** - Additional validation constraint without the `Assert` annotation. Example values are `LessThanOrEqual("+15 minutes")` or `LessThan("-18 years UTC")` or `Range(min = "first day of January", max = "first day of January next year")`. For more details information see [this blog post](http://symfony.com/blog/new-in-symfony-2-6-date-support-for-validator-constraints).
 
 The `past` and `future` properties are implemented as client-side and server-side validators.
 
@@ -759,7 +757,7 @@ In total there are nine different workflow states which are explained below. Not
 5. **Approved** - content has been approved and is available online.
 6. **Suspended** - content has been approved, but is temporarily offline. Only available if the entity has set the `hasTray` property to `true`.
 7. **Archived** - content has reached the end and became archived. Only available if the entity has set the `hasArchive` property to `true`. Requires a [datetime](#datetime-field) or a [date](#date-field) field being designated as end date.
-8. **Trashed** - content has been marked as deleted, but is still persisted in the database. Only available if the entity has set the `softDeleteable` property to `true`. Note that the soft deleteable implementation is only available for the 1.4 target.
+8. **Trashed** - content has been marked as deleted, but is still persisted in the database. Only available if the entity has set the `softDeleteable` property to `true`.
 9. **Deleted** - pseudo-state for content which has been deleted from the database.
 
 The following image shows an overview of all possible workflow states and actions.
@@ -774,7 +772,7 @@ For all entities having another workflow than `NONE` there are configuration opt
 
 ##### Troubleshooting if workflows are not fetched properly
 
-Due to a problem in Zikula 1.4.x the workflow data can not be fetched automatically for an entity yet. Because if the `postLoad` listener in the `EntityLifecycleListener` class would call the workflow the Zikula `WorkflowUtil` class would perform another selection for this. This leads to both selections getting into a competition about the internal object hydrator of Doctrine. The workflow selection "steals" it from the main selection. So after the first item, when it wants to fetch the second one, it is not possible anymore. In Zikula 1.3.x this was not a problem because workflows were called using DBUtil bridged by Doctrine 1.
+Due to a problem in Zikula 1.4.x the workflow data can not be fetched automatically for an entity yet. Because if the `postLoad` listener in the `EntityLifecycleListener` class would call the workflow the Zikula `WorkflowUtil` class would perform another selection for this. This leads to both selections getting into a competition about the internal object hydrator of Doctrine. The workflow selection "steals" it from the main selection. So after the first item, when it wants to fetch the second one, it is not possible anymore.
 
 Before the `initWorkflow()` entity method was called at two places: the entity constructor (for newly-created entities) and the `postLoad` listener (for fetched entities). The current workaround is having the `initWorkflow()` call moved outside the `postLoad` listener. But now we have to call it elsewhere. Therefore we need something in the controller actions like the following for bypassing the problem:
 
@@ -918,10 +916,6 @@ It includes the following properties in addition to the common [join relationshi
 * **maxSource** - Maximum amount of items enforced to be present on the source side. The default value is `0` which means that no certain amount is enforced.
 * **minTarget** - Minimum amount of items enforced to be present on the target side. The default value is `0`.
 * **maxTarget** - Maximum amount of items enforced to be present on the target side. The default value is `0` which means that no certain amount is enforced.
-
-##### Orphan removal with many-to-many relations
-
-If you are generating for Zikula 1.3.x please do not enable the *orphanRemoval* property for many-to-many relationships. This feature is supported only in newer versions of Doctrine 2, therefore you need to use the 1.4 target if you want to use it.
 
 #### Cascade type
 
@@ -1114,7 +1108,7 @@ This section is going to collect certain combinations of elements in practical s
 
 #### Controller
 
-A controller represents an area with functions which are called [actions](#action). In Zikula 1.3.x a controller is identified with the `type` parameter. Zikula 1.4.x uses Symfony routing instead. Note that [entities](#entity) act similarly as they contain actions, too.
+A controller represents an area with functions which are called [actions](#action). Zikula uses Symfony routing for that. Note that [entities](#entity) act similarly as they contain actions, too.
 
 The following controller types are available:
 
@@ -1134,7 +1128,7 @@ If you have added some [variables](#variables) also an additional `config` contr
 
 #### Action
 
-An action represents a controller function which can be called by the user. In Zikula 1.3.x an action is identified with the `func` parameter. Zikula 1.4.x uses Symfony routing instead. An action can either be contained in a controller element or in an entity which corresponds to an entity-related controller.
+An action represents a controller function which can be called by the user. Zikula uses Symfony routing for that. An action can either be contained in a controller element or in an entity which corresponds to an entity-related controller.
 
 The following action types are available:
 
@@ -1152,7 +1146,7 @@ An action may have the following references:
 
 The generator creates sensitive default implementations for all action types except custom actions which do only return an empty template.
 
-It is possible to create special versions for all templates by adding a suffix which will be assigned by the `tpl` parameter. For example you can call `display_myversion.tpl` (1.3.x) or `display_myversion.html.twig` (1.4.x) by adding `&tpl=myversion` to the url. Note this additional override capability is mainly intended for all actions which have a template for each entity and has therefore not been considered for index and custom actions yet.
+It is possible to create special versions for all templates by adding a suffix which will be assigned by the `tpl` parameter. For example you can call `displayMyVersion.html.twig` by adding `&tpl=myVersion` to the url. Note this additional override capability is mainly intended for all actions which have a template for each entity and has therefore not been considered for index and custom actions yet.
 
 #### Index action
 
