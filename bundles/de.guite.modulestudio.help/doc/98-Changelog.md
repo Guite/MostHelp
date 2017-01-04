@@ -18,6 +18,7 @@
 * Use more readable YAML syntax for argument lists (#900).
 * Introduced `GeographicalTrait` and `EntityWorkflowTrait` removing redundancies in entity classes (#890).
 * Moved automatic archiving from bootstrap file into helper class (#909).
+* Show no placeholder option for mandatory list fields.
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
 
