@@ -4,7 +4,7 @@
 
 ### Product changes
 
-* None yet.
+* Generator workflow exports the diagram only as JPG and only if `writeToModelDocs` is `true`. The JPEG file is placed in the same directory as the model file itself (#903). 
 
 ### DSL / Modelling language changes
 
@@ -21,7 +21,6 @@
 * Moved automatic archiving from bootstrap file into helper class (#909).
 * Show no placeholder option for mandatory list fields.
 * Improved base directory structure for easier understandability (#866).
-* Generator workflow exports the diagram only as JPG and only if `writeToModelDocs` is `true`. The JPEG file is placed in the same directory as the model file itself (#903). 
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
 
