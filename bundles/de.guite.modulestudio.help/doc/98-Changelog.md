@@ -9,6 +9,7 @@
 ### DSL / Modelling language changes
 
 * Removed support for Zikula 1.3.x (#260).
+* The `writeModelToDocs` setting is now `true` by default.
 
 ### Generator changes
 
@@ -19,6 +20,7 @@
 * Introduced `GeographicalTrait` and `EntityWorkflowTrait` removing redundancies in entity classes (#890).
 * Moved automatic archiving from bootstrap file into helper class (#909).
 * Show no placeholder option for mandatory list fields.
+* Improved base directory structure for easier understandability (#866).
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
 
