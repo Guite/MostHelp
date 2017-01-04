@@ -10,6 +10,7 @@
 
 * Removed support for Zikula 1.3.x (#260).
 * The `writeModelToDocs` setting is now `true` by default.
+* The `nospace` constraint is not required to be activated for string fields for bic, countries, currencies, languages, locales, ip addresses, colours and uuids anymore. It is added automatically as part of the generator workflow instead (#12).
 
 ### Generator changes
 

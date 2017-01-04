@@ -188,10 +188,8 @@ The following list has been merged and includes therefore all keywords of all su
 * String length for time zones must be at least `30` chars. Occurs if you activate the `timezone` property for a field with a length smaller than `30`.
 * String length for uuids must be at least `36` chars. Occurs if you activate the `uuid` property for a field with a length smaller than `36`.
 * A string can only be one of bic, country, creditCard, currency, language, locale, htmlcolour, iban, isbn, issn, ip address, password, timezone and uuid.
-* String fields for bic, countries, currencies, languages, locales, ip addresses, colours and uuids must also activate the nospace validator. The `nospace` property ensures that spaces are not allowed as part of the input value. The generator could use it without having set this to true, but as the setting is there anyway the proper solution is to enforce the user activating it for consistency.
 * String length must not be greater than `255`; for bigger sizes use text fields.
 * The default value for an email field must be a valid email address.
- 
 * The default value for an url field must be a valid url. Allowed protocols are `http`, `ftp` and `https`.
 
 #### Date and time fields
