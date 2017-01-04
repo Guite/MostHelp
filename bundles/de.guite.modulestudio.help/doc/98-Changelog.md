@@ -21,6 +21,7 @@
 * Moved automatic archiving from bootstrap file into helper class (#909).
 * Show no placeholder option for mandatory list fields.
 * Improved base directory structure for easier understandability (#866).
+* Fixed wrong call of `createdBy` user object if a new entity with enhanced workflow is created (#913).
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
 
