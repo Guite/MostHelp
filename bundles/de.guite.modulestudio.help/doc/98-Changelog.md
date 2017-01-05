@@ -26,6 +26,7 @@
 * Fixed wrong call of `createdBy` user object if a new entity with enhanced workflow is created (#913).
 * Fixed wrong initialisation of user fields in entity constructor.
 * Allow empty value in choice constraint callback for non-mandatory single-valued list fields.
+* Moved almost all inline JavaScript code into dedicated JS files (#891).
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
 
