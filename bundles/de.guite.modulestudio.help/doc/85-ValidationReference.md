@@ -20,7 +20,6 @@ The biggest part is a reference section listing all validation rules in detail a
 * The prefix must be a valid identifier (e.g. no whitespace or special characters). Essentially the same as the global rule for names above. You should use lowercase here, but it will be generated in lowercase in all cases.
 * The application must have a version. The application version must conform to the pattern `x.y.z`. Valid values are *1.0.0*, *1.2.2*, but not *1.1* or *2.1.0beta*.
 * The application must contain at least one entity. At the moment ModuleStudio wants a model with at least one entity. If you are modelling an extension without any data storage, just create some dummy elements.
-* The application must contain at least one controller. ModuleStudio requires at least one controller, because otherwise the module wouldn't do anything. If you are modelling an extension without any controllers, just create some dummy elements.
 * The application may contain only one settings container.
 
 ### Settings container
@@ -90,7 +89,7 @@ The biggest part is a reference section listing all validation rules in detail a
 * Field must be assigned to a data object. Should not occur in practice, this is just for completeness.
 * Every field must have a name. Field name must have a length of at least two chars. Should have more than three chars.
 * Field names must be unique. 
-* Field name is a reserved identifier (`module`, `type`, `func`, `lang`, `theme`). These are reserved vars in traditional Zikula extensions.
+* Field name is a reserved identifier (`module`, `type`, `func`, `config`, `ajax`, `external`, `lang`, `theme`, `newlang`, `newtheme`). These names are reserved.
 * Field name is a reserved identifier (`_controller`, `_method`, `_locale`). These are reserved vars in the Symfony framework.
 * Field name is a reserved identifier (`workflowState`). This list field is added automatically by a model-to-model transformation before the actual generation happens.
 * Field name is a reserved database keyword. ModuleStudio prevents the usage of keywords which are reserved in some database systems. Background is that there are no column prefixes anymore. For a list of all keywords see [the following section](#reserved-database-keywords).
@@ -329,29 +328,18 @@ Includes basically all relationships in the data layer except inheritance.
 
 ### Controller
 
-* You must have an admin controller for hook subscriber functionality. It is highly recommended to have an admin area as there is an additional page for defining hook assignments for different areas.
-* Controller names must be unique. For example there may not be two controllers which are both named `admin`.
-* Please create an ajax controller including an arbitrary action, like index, because it is required for processing your model properly. This happens if your model contains relationships or an entity with either user fields or tree extension. As the generator creates additonal ajax methods in these cases it requires an ajax controller for keeping this information also in the model for documentation.
-* There must not exist more than one (`admin` | `user` | `ajax`) controller. Predefined controllers are unique per application (i.e. there is only one admin area).
-* Names of custom controllers must be unique. For example there may not be two controllers which are both named `edit`.
-* The controller must be assigned to an application. Should not occur in practice, this is just for completeness.
-* Every controller must have a name. Controller name must have a length of at least three chars. Should be at least four chars.
-* Controller name must not contain underscores. Underscores are not allowed as they are used for class autoloading.
-* Controller name must not be `Admin`, `User`, `Account`, `Ajax` or `External`. These are reserved names and may therefore not be used for custom controllers.
-* Every controller must contain at least one action.
-* There must not exist any (`view` | `display` | `edit` | `delete`) action in a (`admin` | `user` | `custom`) controller. They are allowed for entities and ajax controllers though.
-* There must not exist more than one index action in one controller.
+* Controller elements are not supported anymore. Use entity elements as controllers instead. Please remove this element from your model.
+* Entity name is a reserved identifier (`module`, `type`, `func`, `config`, `ajax`, `external`, `lang`, `theme`, `newlang`, `newtheme`). These names are reserved.
 * There must not exist more than one (`index` | `view` | `display` | `edit` | `delete`) action in one entity.
-* Names of custom actions in one controller must be unique.
-* An ajax controller may not contain a delete action. Please remove it. The delete action is not implemented (yet) for ajax controllers.
+* Names of custom actions in one entity must be unique.
 
 ### Action
 
-* The action must be assigned to a controller or to an entity. Should not occur in practice, this is just for completeness.
+* The action must be assigned to an entity. Should not occur in practice, this is just for completeness.
 
 #### Custom action
 
-* The action must have a name. Action name must not be `New` or `Hooks`. Must have a length of at least four chars, whereby at least six chars are recommended.
+* The action must have a name. Action name must not be `New`. Must have a length of at least four chars, whereby at least six chars are recommended.
 * Action name must not be `Index`, `View`, `Display`, `Edit` or `Delete`. These are reserved names and may therefore not be used for custom actions.
 
 ## Workflow layer

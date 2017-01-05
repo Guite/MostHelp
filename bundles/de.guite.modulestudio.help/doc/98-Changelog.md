@@ -11,6 +11,7 @@
 * Removed support for Zikula 1.3.x (#260).
 * The `writeModelToDocs` setting is now `true` by default.
 * The `nospace` constraint is not required to be activated for string fields for bic, countries, currencies, languages, locales, ip addresses, colours and uuids anymore. It is added automatically as part of the generator workflow instead (#12).
+* Support for controller elements has been removed in favour of entity controller actions (#715).
 
 ### Generator changes
 
@@ -23,6 +24,8 @@
 * Show no placeholder option for mandatory list fields.
 * Improved base directory structure for easier understandability (#866).
 * Fixed wrong call of `createdBy` user object if a new entity with enhanced workflow is created (#913).
+* Fixed wrong initialisation of user fields in entity constructor.
+* Allow empty value in choice constraint callback for non-mandatory single-valued list fields.
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
 

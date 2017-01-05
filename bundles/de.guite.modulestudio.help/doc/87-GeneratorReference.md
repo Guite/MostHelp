@@ -55,7 +55,7 @@ An application has some more fields for specifying specific aspects:
 
 An application may furthermore have the following references:
 
-* **controllers** - Allows referencing one or more [controllers](#controller).
+* **controllers** - Allows referencing one or more [controllers](#controller). Deprecated, use entities only instead.
 * **entities** - Allows referencing one or more [data objects](#data-object).
 * **generatorSettings** - Allows specifying desired generator features and behaviour. More details in the [settings container](#settings-container) section.
 * **referredApplications** - Allows referencing other applications. See [below](#referred-application).
@@ -90,13 +90,13 @@ A settings container has the following fields:
 * **generateListBlock** - A boolean specifying whether a generic list block should be generated or not. Default value is `true`.
 * **generateModerationBlock** - A boolean specifying whether a moderation block should be generated or not. Requires at least one entity with a workflow including approval. Default value is `true`.
 * **generateListContentType** - A boolean specifying whether a content type for collection lists should be generated or not. Default value is `true`.
-* **generateDetailContentType** - A boolean specifying whether a content type for single objects should be generated or not. Requires user controller containing a display action. Default value is `true`.
+* **generateDetailContentType** - A boolean specifying whether a content type for single objects should be generated or not. Requires at least one entity containing a display action. Default value is `true`.
 * **generateNewsletterPlugin** - A boolean specifying whether a Newsletter plug-in should be generated or not. Default value is `true`.
 * **generateModerationPanel** - A boolean specifying whether a moderation panel should be generated or not. Requires at least one entity with a workflow including approval. Default value is `true`.
 * **generatePendingContentSupport** - A boolean specifying whether support for pending content should be generated or not. Requires at least one entity with a workflow including approval. Default value is `true`.
 * **generateExternalControllerAndFinder** - A boolean specifying whether a controller for external calls providing a generic finder component should be generated or not. Default value is `true`.
 * **generateScribitePlugins** - A boolean specifying whether support for several [Scribite editors](https://github.com/zikula-modules/Scribite/) should be generated or not. Requires external controller with finder component. Default value is `true`.
-* **generateTagSupport** - A boolean specifying whether tag support should be generated or not. Requires user or admin controller containing a display action. Default value is `true`.
+* **generateTagSupport** - A boolean specifying whether tag support should be generated or not. Requires at least one entity containing a display action. Default value is `true`.
 * **generateMultiHookNeedles** - A boolean specifying whether MultiHook needles should be generated or not. Default value is `true`.
 * **generateRssTemplates** - A boolean specifying whether RSS view templates should be generated or not. Default value is `true`.
 
@@ -697,7 +697,7 @@ If an entity has a tree type other than `NONE` then the generator creates severa
 
 * An additional template for managing the tree in a hierarchy view.
 * An additional view plug-in for including the Zikula tree JavaScript.
-* An additional template included in display pages for showing different types of relatives.
+* An additional template included in display pages for showing different types of relatives (parents, children, and so on).
 * Some ajax functions used by the hierarchy view.
 * For closure: separate classes for the closure entities.
 
@@ -1108,7 +1108,7 @@ This section is going to collect certain combinations of elements in practical s
 
 #### Controller
 
-A controller represents an area with functions which are called [actions](#action). Zikula uses Symfony routing for that. Note that [entities](#entity) act similarly as they contain actions, too.
+A controller represents an area with functions which are called [actions](#action). Zikula uses Symfony routing for that. Note that [entities](#entity) act similarly as they contain actions, too. Thus controllers are deprecated, use entities only instead.
 
 The following controller types are available:
 
@@ -1141,7 +1141,7 @@ The following action types are available:
 
 An action may have the following references:
 
-* **controller** - Reference to the owning [controller](#controller).
+* **controller** - Reference to the owning [controller](#controller). Deprecated, use entities only instead.
 * **entity** - Reference to the owning [entity](#entity) controller.
 
 The generator creates sensitive default implementations for all action types except custom actions which do only return an empty template.
