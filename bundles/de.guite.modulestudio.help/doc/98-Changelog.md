@@ -26,7 +26,7 @@
 * Fixed wrong call of `createdBy` user object if a new entity with enhanced workflow is created (#913).
 * Fixed wrong initialisation of user fields in entity constructor.
 * Allow empty value in choice constraint callback for non-mandatory single-valued list fields.
-* Moved almost all inline JavaScript code into dedicated JS files (#891).
+* Simplified some JS methods and moved almost all inline JavaScript code into dedicated JS files (#891).
 * Create dedicated helper template for moderation panel.
 * Allow managing related child items when editing parent objects (#10).
 * Fixed editing entities with relations which define a custom source or target field (#906).
@@ -34,6 +34,8 @@
 * Added missing import for user fields validation.
 * Fixed wrong reset value for upload fields when cloning an entity.
 * Fixed initialisation of relationships preset as url arguments (#916).
+* Improved support for custom template sets and block template overrides.
+* Applied simplifications to view helper class.
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
 
