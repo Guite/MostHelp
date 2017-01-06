@@ -30,6 +30,8 @@
 * Create dedicated helper template for moderation panel.
 * Allow managing related child items when editing parent objects (#10).
 * Fixed editing entities with relations which define a custom source or target field (#906).
+* Store referers for form redirects in session for each module independently.
+* Added missing import for user fields validation. 
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
 
