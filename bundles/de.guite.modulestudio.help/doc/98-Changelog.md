@@ -33,6 +33,7 @@
 * Store referers for form redirects in session for each module independently.
 * Added missing import for user fields validation.
 * Fixed wrong reset value for upload fields when cloning an entity.
+* Fixed initialisation of relationships preset as url arguments (#916).
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
 
