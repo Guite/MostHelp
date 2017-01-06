@@ -27,6 +27,9 @@
 * Fixed wrong initialisation of user fields in entity constructor.
 * Allow empty value in choice constraint callback for non-mandatory single-valued list fields.
 * Moved almost all inline JavaScript code into dedicated JS files (#891).
+* Create dedicated helper template for moderation panel.
+* Allow managing related child items when editing parent objects (#10).
+* Fixed editing entities with relations which define a custom source or target field (#906).
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
 
