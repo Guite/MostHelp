@@ -41,6 +41,8 @@
 * Use Bootstrap list groups for related items in display pages.
 * Check if entity exists before further processing it in mass handling (#679).
 * Cleanup for controller classes and actions (#880).
+* Use plain response instead of printer theme for quick view modals (#912).
+* Refactored common view action handling out of controllers into controller helper (#618).
 * Several minor cleanups and simplifications.
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
