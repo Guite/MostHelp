@@ -35,7 +35,7 @@
 * Fixed wrong reset value for upload fields when cloning an entity.
 * Fixed initialisation of relationships preset as url arguments (#916).
 * Improved support for custom template sets and block template overrides.
-* Applied simplifications to view helper class.
+* Several minor cleanups and simplifications.
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
 
