@@ -36,6 +36,8 @@
 * Fixed initialisation of relationships preset as url arguments (#916).
 * Improved support for custom template sets and block template overrides.
 * Skip truncate for tree and softdeletable entities during installation (#794).
+* Added supportsSlugInputFields method and hide slug inputs for now (#788).
+* Updated form fields option for nullable incoming relationships, (#917).
 * Several minor cleanups and simplifications.
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
