@@ -42,7 +42,11 @@
 * Check if entity exists before further processing it in mass handling (#679).
 * Cleanup for controller classes and actions (#880).
 * Use plain response instead of printer theme for quick view modals (#912).
-* Refactored common view action handling out of controllers into controller helper (#618).
+* Refactored common action handling parts out of controllers into controller helper (#618).
+* Use dropdown menu in config page tabs for grouping image settings for multiple upload fields (#920).
+* Only one central entity factory is used for all entity and repository types (#886).
+* Avoid injecting the service container (#886).
+* Removed almost all usages of legacy util classes (#886).
 * Several minor cleanups and simplifications.
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
