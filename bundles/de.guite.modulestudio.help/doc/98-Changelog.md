@@ -47,6 +47,7 @@
 * Only one central entity factory is used for all entity and repository types (#886).
 * Avoid injecting the service container (#886).
 * Removed almost all usages of legacy util classes (#886).
+* Updated usage of `max_length` constraint in form type classes (#927).
 * Several minor cleanups and simplifications.
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
