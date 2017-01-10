@@ -49,6 +49,7 @@
 * Removed almost all usages of legacy util classes (#886).
 * Updated usage of `max_length` constraint in form type classes (#927).
 * Support redirecting to own items or own related items.
+* If edited entry can not be found redirect back with flash message instead of throwing an error.
 * Several minor cleanups and simplifications.
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
