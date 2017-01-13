@@ -4,7 +4,8 @@
 
 ### Product changes
 
-* Generator workflow exports the diagram only as JPG and only if `writeToModelDocs` is `true`. The JPEG file is placed in the same directory as the model file itself (#903). 
+* Generator workflow exports the diagram only as JPG and only if `writeToModelDocs` is `true`. The JPEG file is placed in the same directory as the model file itself (#903).
+* Prevent potential null pointer exception on model import.
 
 ### DSL / Modelling language changes
 
