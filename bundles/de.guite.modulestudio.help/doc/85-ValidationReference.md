@@ -72,7 +72,7 @@ The biggest part is a reference section listing all validation rules in detail a
 
 #### Extension-related entity settings
 
-* Entities with owner permissions need standard fields activated. The standard fields extension is required to determine the owner (`createdUser`) of an object.
+* Entities with owner permissions need standard fields activated. The standard fields extension is required to determine the owner (`createdBy`) of an object.
 * Loggable entities need one field with the version attribute set to `true`. Can be either integer or datetime fields.
 * Entities with geographical behaviour should ideally contain a String Field with name zipcode with a length of at least 10. Just a warning to support best practices.
 * There must not exist an entity named `FooLogEntry` as this is reserved by the corresponding extension. For an entity named *person* with `loggable = true` ModuleStudio generates an additional entity named `PersonLogEntry` for managing the it's version log entries.
