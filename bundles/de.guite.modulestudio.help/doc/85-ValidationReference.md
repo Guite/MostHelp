@@ -183,13 +183,14 @@ The following list has been merged and includes therefore all keywords of all su
 * String length for locales must be at least `5` chars. Occurs if you activate the `locale` property for a field with a length smaller than `5`.
 * String length for HTML colour codes must be at least `7` chars. Occurs if you activate the `html colour` property for a field with a length smaller than `7`.
 * String length for ip addresses must be at least `15` chars. Occurs if you set the `ip address` property to a value covering IPv4 addresses for a field with a length smaller than `15`.
-* String length for ip addresses must be at least `39` chars. Occurs if you set the `ip address` property to a value covering IPv6 addresses for a field with a length smaller than `39`.
+* String length for ip addresses must be at least `39` chars. Occurs if you set the `ip address` property to a value covering IPv6 addresses or if you enable the `ipTraceable` extension for a field with a length smaller than `39`.
 * String length for time zones must be at least `30` chars. Occurs if you activate the `timezone` property for a field with a length smaller than `30`.
 * String length for uuids must be at least `36` chars. Occurs if you activate the `uuid` property for a field with a length smaller than `36`.
 * A string can only be one of bic, country, creditCard, currency, language, locale, htmlcolour, iban, isbn, issn, ip address, password, timezone and uuid.
 * String length must not be greater than `255`; for bigger sizes use text fields.
 * The default value for an email field must be a valid email address.
 * The default value for an url field must be a valid url. Allowed protocols are `http`, `ftp` and `https`.
+* The ipTraceable change trigger field must point to `workflowState`, the name of a field or a relation (property.field). If the `ipTraceable` property for a field has been set to `CHANGE` then this error can appear to remind you to set also the required attribute `ipTraceable change trigger field`. Either you did not set anything there or the value does neither correspond to `workflowState` nor the name of an entity field nor an incoming relation.
 
 #### Date and time fields
 

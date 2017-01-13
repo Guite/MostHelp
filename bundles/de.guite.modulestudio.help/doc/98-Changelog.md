@@ -13,6 +13,7 @@
 * The `writeModelToDocs` setting is now `true` by default.
 * The `nospace` constraint is not required to be activated for string fields for bic, countries, currencies, languages, locales, ip addresses, colours and uuids anymore. It is added automatically as part of the generator workflow instead (#12).
 * Support for controller elements has been removed in favour of entity controller actions (#715).
+* The `IpTraceable` extension is now supported (#452).
 
 ### Generator changes
 

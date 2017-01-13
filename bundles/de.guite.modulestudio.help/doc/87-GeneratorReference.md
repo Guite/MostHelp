@@ -389,6 +389,9 @@ A string field has the following properties in addition to the common [abstract 
 * **isbn** - Allows to define whether this field represents a number in ISBN (International Standard Book Number). Default value is `NONE`. You can choose from different [validation options](#isbn-style).
 * **issn** - Allows to define whether this field represents a number in ISSN (International Standard Serial Number). Default value is `NONE`. You can choose from different [validation options](#issn-style).
 * **ipAddress** - Allows to define whether this field represents an IP address. Default value is `NONE`. You can choose the covered [ip address scope](#ip-address-scope).
+* **ipTraceable** - Which [ipTraceable type](#entity-iptraceable-type) is used. Default value is `NONE`.
+* **ipTraceableChangeTriggerField** - Optional name of field to use as change trigger (if type is `CHANGE`. Can also be `workflowState` or the name of a relation (syntax `property.field`).
+* **ipTraceableChangeTriggerValue** - Optional value of field to use as change trigger (if type is `CHANGE`).
 * **language** - A boolean specifying whether this field represents an Unicode language identifier or not. Possible example values are `fr` or `zh-Hant`. Default value is `false`. If set to `true` a language selector is used in [edit pages](#edit-action). For the output in [view](#view-action) and [display](#display-action) templates an output modifier is used to display the full name instead of the unreadable language code. If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
 * **length** - The length of this field. Default value is `255`.
 * **locale** - A boolean to specify whether this field represents a locale or not. Possible example values are `fr` or `fr_FR`. Default value is `false`. If set to `true` the field will be rendered as a locale selector in [edit forms](#edit-action). If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
@@ -440,6 +443,19 @@ Can be one of the following options:
 * `IP4_PUBLIC` - Validates for IPv4 addresses using only public ranges (without private and reserved ranges).
 * `IP6_PUBLIC` - Validates for IPv6 addresses using only public ranges (without private and reserved ranges).
 * `ALL_PUBLIC` - Validates all IP formats using only public ranges (without private and reserved ranges).
+
+#### Entity ipTraceable type
+
+Represents different events for triggering the IpTraceable extension.
+
+Can be one of the following options:
+
+* `NONE` - No IpTraceable extension (default).
+* `UPDATE` - On update.
+* `CREATE` - On create.
+* `CHANGE` - On property change.
+
+The generator transforms these values to the corresponding implementation as is. There are no differences made between the different ipTraceable types. So beside the actual entity class there won't be any code parts affected based on which ipTraceable type you use.
 
 #### Text field
 
@@ -601,8 +617,6 @@ An abstract date field has the following properties in addition to the common [d
 * **validatorAddition** - Additional validation constraint without the `Assert` annotation. Example values are `LessThanOrEqual("+15 minutes")` or `LessThan("-18 years UTC")` or `Range(min = "first day of January", max = "first day of January next year")`. For more details information see [this blog post](http://symfony.com/blog/new-in-symfony-2-6-date-support-for-validator-constraints).
 
 The `past` and `future` properties are implemented as client-side and server-side validators.
-
-The generator transforms the timestampable attributes to the corresponding implementation as is. There are no differences made between the different timestampable types.
 
 #### Datetime field
 
