@@ -200,7 +200,7 @@ It has the following properties:
 * **onAccountDeletionCreator** - Controls how an app should change the creator when users are deleted. Only relevant if `standardFields` is enabled. Default value is `ADMIN`. The available options are listed [here](#account-deletion-handler).
 * **onAccountDeletionLastEditor** - Controls how an app should change the last editor when users are deleted. Only relevant if `standardFields` is enabled. Default value is `ADMIN`. The available options are listed [here](#account-deletion-handler).
 * **ownerPermission** - Whether users should be able to manage and edit their own data. Defines also whether the workflow should include a deferred state. See [workflow types](#entity-workflow-type) for more information. The default value is `false`.
-* **readOnly** - A boolean specifying whether this entity is read only or not. If set to `true` editing will not be possible.
+* **readOnly** - A boolean specifying whether this entity is read only or not. If set to `true` creating new entities will still be possible, but not editing them.
 * **skipHookSubscribers** - Whether hook subscriber support should be skipped for this entity. The default value is `false`. If you set this option to `true` no support for display and filter hooks is generated for the corresponding entity.
 * **slugLength** - Length of slug field. Defaults to `255`. An entity is [sluggable](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/sluggable.md) as soon as at least one of its fields has set `sluggable position` to a value greater than `0`.
 * **slugSeparator** - Separator which will separate words in slug. Default value is `-` like in Zikula, too.
