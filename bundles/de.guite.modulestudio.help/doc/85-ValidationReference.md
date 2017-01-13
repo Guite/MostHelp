@@ -192,6 +192,10 @@ The following list has been merged and includes therefore all keywords of all su
 * The default value for an url field must be a valid url. Allowed protocols are `http`, `ftp` and `https`.
 * The ipTraceable change trigger field must point to `workflowState`, the name of a field or a relation (property.field). If the `ipTraceable` property for a field has been set to `CHANGE` then this error can appear to remind you to set also the required attribute `ipTraceable change trigger field`. Either you did not set anything there or the value does neither correspond to `workflowState` nor the name of an entity field nor an incoming relation.
 
+#### User fields
+
+* The blameable change trigger field must point to `workflowState`, the name of a field or a relation (property.field). If the `blameable` property for a field has been set to `CHANGE` then this error can appear to remind you to set also the required attribute `blameable change trigger field`. Either you did not set anything there or the value does neither correspond to `workflowState` nor the name of an entity field nor an incoming relation.
+
 #### Date and time fields
 
 This section includes rules which apply only for datetime, date and time fields.

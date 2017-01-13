@@ -191,7 +191,7 @@ It has the following properties:
 * **identifierStrategy** - Whether and which [identifier strategy](#entity-identifier-strategy) is applied. The default value is `AUTO`.
 * **leading** - A boolean specifying whether this is the primary (and default) entity or not.
 * **lockType** - Whether and which [locking strategy](#entity-lock-type) is applied. The default value is `PAGELOCK`.
-* **loggable** - A boolean specifying whether the loggable behavior is used or not. The generator will create an additional entity for managing the log entries if set to `true`. There is no user interface for the version management yet (see [#30](https://github.com/Guite/MostGenerator/issues/30) for more information).
+* **loggable** - A boolean specifying whether the [Loggable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/loggable.md) is used or not. The generator will create an additional entity for managing the log entries if set to `true`. There is no user interface for the version management yet (see [#30](https://github.com/Guite/MostGenerator/issues/30) for more information).
 * **metaData** - A boolean specifying whether this entity should have support for meta data. This is *deprecated* and will cause nothing.
 
 ![Example for category selector and meta data](images/generator_categorisable_metadata.png "Example for category selector and meta data")
@@ -202,17 +202,17 @@ It has the following properties:
 * **ownerPermission** - Whether users should be able to manage and edit their own data. Defines also whether the workflow should include a deferred state. See [workflow types](#entity-workflow-type) for more information. The default value is `false`.
 * **readOnly** - A boolean specifying whether this entity is read only or not. If set to `true` editing will not be possible.
 * **skipHookSubscribers** - Whether hook subscriber support should be skipped for this entity. The default value is `false`. If you set this option to `true` no support for display and filter hooks is generated for the corresponding entity.
-* **slugLength** - Length of slug field. Defaults to `255`. An entity is sluggable as soon as at least one of its fields has set `sluggable position` to a value greater than `0`.
+* **slugLength** - Length of slug field. Defaults to `255`. An entity is [sluggable](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/sluggable.md) as soon as at least one of its fields has set `sluggable position` to a value greater than `0`.
 * **slugSeparator** - Separator which will separate words in slug. Default value is `-` like in Zikula, too.
 * **slugStyle** - Which [slug style](#entity-slug-style) is used. Default value is `LOWERCASE`.
 * **slugUnique** - A boolean specifying if the slug is unique or not. Default value is `true`.
 * **slugUpdatable** - A boolean specifying if the slug can be changed or not. Default value is `true`.
-* **softDeleteable** - Whether deleted items should only be marked as deleted instead of deleting them. Defines also whether the entity workflow provides means for trashing and recovering items or for deleting them. See [workflow types](#entity-workflow-type) for more information. The default value is `false`.
+* **softDeleteable** - Whether deleted items should only be marked as deleted instead of deleting them. Defines also whether the entity workflow provides means for trashing and recovering items or for deleting them. See [SoftDeleteable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/softdeleteable.md) and [workflow types](#entity-workflow-type) for more information. The default value is `false`.
 * **tree** - Whether and which tree strategy is applied. Default value is `NONE`. More information about what the generator creates for trees can be found in the the section about [tree types](#entity-tree-type).
 
 ![Tree functionality with context menu and drag n drop](images/generator_tree.png "Tree functionality with context menu and drag n drop")
 
-* **standardFields** - A boolean specifying whether the standard fields extension is used or not. If set to `true` the entity will get four additional fields for storing the id of the user who created the item, the id of the user who did the last update, as well as the creation and update dates. This information will be included on [display](#display-action) and [edit](#edit-action) actions.
+* **standardFields** - A boolean specifying whether the standard fields extension is used or not. If set to `true` the entity will get four additional fields for storing the id of the user who created the item (`createdBy` join to `UserEntity`), the id of the user who did the last update (`updatedBy` join to `UserEntity`), as well as the creation and update dates (`createdDate` and `updatedDate`). This information will be included on [display](#display-action) and [edit](#edit-action) actions.
 * **workflow** - The workflow which is applied to this entity. The default value is `NONE`. See [workflow types](#entity-workflow-type) for more information.
 
 An entity has the following references in addition to the common [data object](#data-object) settings:
@@ -272,8 +272,8 @@ A derived field has the following properties in addition to the common [entity f
 * **primaryKey** - A boolean specifying whether this is a primary key field or not. Default value is `false`. Usually there is no need to enable this for any fields as the generator adds primary and foreign key fields automatically. The only use case where the manual definition of primary keys makes sense is having composite keys. This should work in general with regards to the generated data layer, but support on controller and view layers in the created application may not be prepared properly yet for that (reports and patches are welcome).
 * **readonly** - A boolean specifying whether this a read only field or not. The default value is `false`. If set to `true` then this field may not be changed during editing.
 * **sluggablePosition** - Position of this field in the created slugs. A value of `0` (default) means that this field is not part of the slug at all. If at least one field in an entity has a sluggable position greater than `0` then this entity is considered as sluggable. In this case a permalink is built automatically from all fields in ascending position. See the slug properties on [entity](#entity) level for slug-related configuration options.
-* **sortableGroup** - A boolean specifying whether this field acts as grouping criteria for the sortable extension. The default value is `false`. SortableGroup is not fully implemented yet, do not use if you not understand the function.
-* **translatable** - A boolean specifying whether this field is translatable or not. The default value is `false`. If at least one field in an entity is translatable the generator creates an additional class for managing the translation entities. Overall support for translations in the application should get you started.
+* **sortableGroup** - A boolean specifying whether this field acts as grouping criteria for the [Sortable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/sortable.md). The default value is `false`. SortableGroup is not fully implemented yet, do not use if you not understand the function.
+* **translatable** - A boolean specifying whether this field is translatable or not. The default value is `false`. If at least one field in an entity is translatable the generator creates an additional class for managing the translation entities (see [Translatable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/translatable.md) for more details). Overall support for translations in the application should get you started.
 
 ![Edit form with translatable fields](images/generator_translatable.png "Edit form with translatable fields")
 
@@ -309,7 +309,7 @@ Represents an abstract integer field for grouping different implementations of t
 An abstract integer field has the following properties in addition to the common [derived field](#derived-field) settings:
 
 * **length** - The length of this field. This controls whether the Doctrine mapping type will be `integer` (5-11), `bigint` (> 11) or `smallint` (< 5). Default value is `11`.
-* **sortablePosition** - A boolean specifying whether this field stores the position for the sortable extension or not. If set to `true` this field will be used as default sorting criteria. There is no built-in reordering possibility, for example with drag n drop, implemented yet (see [#29](https://github.com/Guite/MostGenerator/issues/29) for more information).
+* **sortablePosition** - A boolean specifying whether this field stores the position for the [Sortable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/sortable.md) or not. If set to `true` this field will be used as default sorting criteria. There is no built-in reordering possibility, for example with drag n drop, implemented yet (see [#29](https://github.com/Guite/MostGenerator/issues/29) for more information).
 
 #### Integer field
 
@@ -446,7 +446,7 @@ Can be one of the following options:
 
 #### Entity ipTraceable type
 
-Represents different events for triggering the IpTraceable extension.
+Represents different events for triggering the [IpTraceable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/ip_traceable.md).
 
 Can be one of the following options:
 
@@ -473,9 +473,25 @@ Extension of [abstract integer field](#abstract-integer-field) for storing user 
 
 An user field has the following properties in addition to the common [abstract integer field](#abstract-integer-field) settings:
 
+* **blameable** - Which [blameable type](#entity-blameable-type) is used. Default value is `NONE`.
+* **blameableChangeTriggerField** - Optional name of field to use as change trigger (if type is `CHANGE`. Can also be `workflowState` or the name of a relation (syntax `property.field`).
+* **blameableChangeTriggerValue** - Optional value of field to use as change trigger (if type is `CHANGE`).
 * **onAccountDeletion** - Controls how an application should change the field when users are deleted. Default value is `GUEST`. The available options are listed [here](#account-deletion-handler).
 
 In [edit pages](#edit-action) the generator will implement an auto completion element allowing searching users by their name. For the output in [view](#view-action) and [display](#display-action) templates the user name is shown and linked to the corresponding user profile in case a profile module has been set in the Settings module administration.
+
+#### Entity blameable type
+
+Represents different events for triggering the [Blameable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/blameable.md).
+
+Can be one of the following options:
+
+* `NONE` - No Blameable extension (default).
+* `UPDATE` - On update.
+* `CREATE` - On create.
+* `CHANGE` - On property change.
+
+The generator transforms these values to the corresponding implementation as is. There are no differences made between the different blameable types. So beside the actual entity class there won't be any code parts affected based on which blameable type you use.
 
 #### Email field
 
@@ -699,7 +715,7 @@ If you choose an option including the PageLock module the form handlers generate
 
 #### Entity tree type
 
-Represents different tree strategies for entities.
+Represents different tree strategies for entities (see [Tree extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/tree.md) for more details).
 
 Can be one of the following options:
 
@@ -741,7 +757,7 @@ The generator transforms these values to the corresponding implementation as is.
 
 #### Entity timestampable type
 
-Represents different events for triggering the Timestampable extension.
+Represents different events for triggering the [Timestampable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/timestampable.md).
 
 Can be one of the following options:
 

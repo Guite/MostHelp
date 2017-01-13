@@ -14,12 +14,14 @@
 * The `nospace` constraint is not required to be activated for string fields for bic, countries, currencies, languages, locales, ip addresses, colours and uuids anymore. It is added automatically as part of the generator workflow instead (#12).
 * Support for controller elements has been removed in favour of entity controller actions (#715).
 * The `IpTraceable` extension is now supported (#452).
+* The `Blameable` extension is now supported (#910).
 
 ### Generator changes
 
 * Added missing arguments for category helper in installer class (#904).
 * Use PlainResponse for external finder action.
-* More reasonable naming of user referencing standard fields.
+* More reasonable naming of user referencing standard fields. Creating and last updating users are now joins referencing the `UserEntity`.
+* User fields are now generated as joins referencing the `UserEntity` (#910).
 * Use more readable YAML syntax for argument lists (#900).
 * Introduced `GeographicalTrait` and `EntityWorkflowTrait` removing redundancies in entity classes (#890).
 * Moved automatic archiving from bootstrap file into helper class (#909).
