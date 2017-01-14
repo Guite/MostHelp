@@ -57,6 +57,7 @@
 * Fixed missing generation of timestampable annotations.
 * Improved `ownerPermission` implementation, including filtered selection during editing related items (#922).
 * Added optional form fields for moderators to override creator and creation date (#857).
+* Added custom datetime form type for datetime-local input fields with better polyfill support.
 * Several minor cleanups and simplifications.
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
