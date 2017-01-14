@@ -193,9 +193,6 @@ It has the following properties:
 * **lockType** - Whether and which [locking strategy](#entity-lock-type) is applied. The default value is `PAGELOCK`.
 * **loggable** - A boolean specifying whether the [Loggable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/loggable.md) is used or not. The generator will create an additional entity for managing the log entries if set to `true`. There is no user interface for the version management yet (see [#30](https://github.com/Guite/MostGenerator/issues/30) for more information).
 * **metaData** - A boolean specifying whether this entity should have support for meta data. This is *deprecated* and will cause nothing.
-
-![Example for category selector and meta data](images/generator_categorisable_metadata.png "Example for category selector and meta data")
-
 * **nameMultiple** - Plural form of the name. The generator uses this for collections, list views and other areas where multiple entities are used.
 * **onAccountDeletionCreator** - Controls how an app should change the creator when users are deleted. Only relevant if `standardFields` is enabled. Default value is `ADMIN`. The available options are listed [here](#account-deletion-handler).
 * **onAccountDeletionLastEditor** - Controls how an app should change the last editor when users are deleted. Only relevant if `standardFields` is enabled. Default value is `ADMIN`. The available options are listed [here](#account-deletion-handler).
