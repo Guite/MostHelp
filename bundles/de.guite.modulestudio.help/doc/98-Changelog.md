@@ -8,6 +8,7 @@
 * Prevent potential null pointer exception on model import.
 * Fixed editor tab display which did not always show correct titles.
 * Improved dynamic filtering of visible property sheet tabs.
+* Fixed wrong title of problems view in English version (#902).
 
 ### DSL / Modelling language changes
 
