@@ -56,6 +56,7 @@
 * If edited entry can not be found redirect back with flash message instead of throwing an error.
 * Fixed missing generation of timestampable annotations.
 * Improved `ownerPermission` implementation, including filtered selection during editing related items (#922).
+* Added optional form fields for moderators to override creator and creation date (#857).
 * Several minor cleanups and simplifications.
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
