@@ -1189,7 +1189,9 @@ A display action results in a generic detail view of an entity. Again there are 
 
 #### Edit action
 
-The edit implementation creates form pages for changing entities and their relations. Beside the form handler classes this involves according template files.
+The edit implementation creates form pages for changing entities and their relations. Beside the form handler classes this involves form types and corresponding template files.
+
+Note it is possible to change entity form field default values by setting request variables when creating new entities. For example the GET parameter `set_xyz=123` sets the entity field `xyz` to `123` before rendering the form.
 
 #### Delete action
 

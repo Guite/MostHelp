@@ -66,6 +66,7 @@
 * Added raw base template for finder and quick view actions.
 * Added links for sending private messages in Zikula 1.4.6+ if a message module is installed and configured.
 * Added `urlencode()` call to upload URLs to avoid problems with Symfony's URL validator.
+* Added support for setting entity editing form field values using request parameters.
 * Several minor cleanups and simplifications.
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
