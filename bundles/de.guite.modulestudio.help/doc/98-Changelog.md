@@ -68,6 +68,7 @@
 * Added `urlencode()` call to upload URLs to avoid problems with Symfony's URL validator.
 * Added support for setting entity editing form field values using request parameters.
 * Allow sorting by user names of creator and updater.
+* The finder component (and therewith Scribite plugins) support inserting images including switching between multiple image fields (#938).
 * Several minor cleanups and simplifications.
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
