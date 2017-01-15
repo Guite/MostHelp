@@ -65,6 +65,7 @@
 * For all entities with view actions and standard fields there are additional settings generated to control whether a link to own entries should be added to the account page or not.
 * Added raw base template for finder and quick view actions.
 * Added links for sending private messages in Zikula 1.4.6+ if a message module is installed and configured.
+* Added `urlencode()` call to upload URLs to avoid problems with Symfony's URL validator.
 * Several minor cleanups and simplifications.
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
