@@ -45,7 +45,7 @@
 * Improved support for custom template sets and block template overrides.
 * Skip truncate for tree and softdeletable entities during installation (#794).
 * Added supportsSlugInputFields method and hide slug inputs for now (#788).
-* Updated form fields option for nullable incoming relationships, (#917).
+* Updated form fields option for nullable incoming relationships (#917).
 * Use Bootstrap list groups for related items in display pages.
 * Check if entity exists before further processing it in mass handling (#679).
 * Cleanup for controller classes and actions (#880).
