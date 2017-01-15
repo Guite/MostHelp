@@ -62,7 +62,8 @@
 * Improved `ownerPermission` implementation, including filtered selection during editing related items (#922).
 * Added optional form fields for moderators to override creator and creation date (#857).
 * Added custom datetime form type for datetime-local input fields with better polyfill support.
-* For all entities with view actions and standard fields there are additional settings generated to control whether a link to own entries should be added to the account page or not. 
+* For all entities with view actions and standard fields there are additional settings generated to control whether a link to own entries should be added to the account page or not.
+* Added raw base template for finder and quick view actions. 
 * Several minor cleanups and simplifications.
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
