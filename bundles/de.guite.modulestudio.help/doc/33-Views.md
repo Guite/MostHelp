@@ -104,6 +104,8 @@ The problem view shows errors and warnings detected by the [validation](50-Valid
 
 ![Problems view](images/ui_views_problems.png "Problems view")
 
+The icons of the problems may contain a bulb indicating that [quick fixes](#quick-fixes-for-problems) are available.
+
 You can sort the problems by clicking on the table column headers. If you click on them again the sorting direction will be changed from ascending to descending.
 
 It is possible to change the width of a column by placing the cursor between two column headers and moving the separator.
