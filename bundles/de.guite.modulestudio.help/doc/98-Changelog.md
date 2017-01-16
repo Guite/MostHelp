@@ -69,6 +69,7 @@
 * Added support for setting entity editing form field values using request parameters.
 * Allow sorting by user names of creator and updater.
 * The finder component (and therewith Scribite plugins) support inserting images including switching between multiple image fields (#938).
+* Fixed option selection in locale form type (#940).
 * Several minor cleanups and simplifications.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.1).
 
