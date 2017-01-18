@@ -297,6 +297,10 @@ Quite often you want to change the position of a field or a variable within its 
 
 Of course this seems a bit cumbersome. Note earlier versions of ModuleStudio allowed to do this using drag n drop. It was even possible to move one or multiple fields from one entity into another one. This is currently not possible, but going to be re-implemented very soon.
 
+### Move fields between entities
+
+You can use drag n drop to move fields into another entity. This is especially interesting if you refactor an existing model, for example to merge two entities sharing a common structure.
+
 ### Manage list entries
 
 There are two elements, list fields and list variables, which contain a number if list items. To work with these, just do a double-click on the field/variable element. This opens a dialog for editing the list items.
