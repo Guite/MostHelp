@@ -1,6 +1,6 @@
 # Changelog
 
-## ModuleStudio 0.7.1
+## ModuleStudio 0.7.1 (Jan 18, 2017)
 
 ### Product changes
 
