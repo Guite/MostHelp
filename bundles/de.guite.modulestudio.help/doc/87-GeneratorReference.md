@@ -72,7 +72,7 @@ Can be one of the following options:
 * `ZK14` - Targets the last stable Zikula 1.4.x version. This is the default value and useful when developing for future. Generated applications support the forward compatibility layer using 2.0.0 technology.
 * `ZK14DEV` - Targets the last unstable Zikula 1.4.x version. Thus it will always include changes for the next upcoming 1.4.x core release. You can use this to test new changes, while `ZK14` will still target the last stable core version.
 * `ZKPRE14` - Targets the last stable Zikula 1.4.x version; legacy alias for `ZK14`. Deprecated.
-* `ZK136` - Targets Zikula 1.3.10 and earlier. This is deprecated and not supported anymore beginning with ModuleStudio 0.7.1.
+* `ZK136` - Targets Zikula 1.3.10 and earlier. This is deprecated and not supported anymore beginning with ModuleStudio 0.7.2.
 * `ZK135` - Targets Zikula 1.3.10 and earlier; legacy alias for `ZK136`.
 
 #### Settings container

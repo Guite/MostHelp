@@ -1,5 +1,19 @@
 # Changelog
 
+## ModuleStudio 0.7.2 (unreleased)
+
+### Product changes
+
+* None yet.
+
+### DSL / Modelling language changes
+
+* None yet.
+
+### Generator changes
+
+* None yet.
+
 ## ModuleStudio 0.7.1 (Jan 18, 2017)
 
 ### Product changes
@@ -72,7 +86,7 @@
 * Fixed option selection in locale form type (#940).
 * Improved UI feedback after ajax-based tree operations.
 * Several minor cleanups and simplifications.
-* For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.1).
+* For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.2).
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
 

@@ -14,7 +14,7 @@
 
     <properties>
         <help.documentTitle>ModuleStudio User's Guide</help.documentTitle>
-        <help.version>0.7.1</help.version>
+        <help.version>0.7.2</help.version>
         <help.author>Axel Guckelsberger</help.author>
         <help.copyright>(c) 2007-2017  ${help.author}</help.copyright>
     </properties>
