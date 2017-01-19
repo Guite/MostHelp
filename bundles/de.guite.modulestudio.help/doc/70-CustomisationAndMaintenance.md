@@ -126,7 +126,7 @@ So when custom templates are placed outside the module this is fine for developm
 
 When using a module in production things are a bit different. A site owner may want to further customise some templates, so the system-wide resources directory should not be used by the module itself out of the box. This is not really a technical problem, but just a question of how the deployment process should be. You can for example move the overridden templates into the module before a release.
 
-If you need additional display-oriented logic, simply create a Twig extension (Smarty view plug-in in Zikula 1.3.x) encapsulating your efforts in a file which is not affected by the generator at all.
+If you need additional display-oriented logic, simply create a Twig extension encapsulating your efforts in a file which is not affected by the generator at all.
 
 ### Code additions
 
@@ -134,6 +134,6 @@ Perform logical enhancements in the generated implementation classes. These exte
 
 If you need to add complex behaviour put this into dedicated helper classes outside of generated files. Using the dependency injection from Symfony's service container you can use this helper class where you need it, keeping the additional code for children of generated classes small.
 
-There is a helper class (`ControllerHelper` in 1.4+, `ControllerUtil` in 1.3.x) which can be used to enable/disable specific controller actions (like view, display, ...) and additional functionality (like blocks, content types, mailz api, etc.) for particular entity types within custom conditions.
+There is a helper class named `ControllerHelper` which can be utilised to enable/disable specific controller actions (like view, display, ...) and additional functionality (like blocks, content types, mailz api, etc.) for particular entity types using custom conditions.
 
 After using an edit form the user is redirected to the referer by default. You can easily customise the redirect behaviour by appending a `returnTo` parameter to the edit url. For example let's imagine a customer entity having a bidirectional relationship to many addresses. Using the `returnTo` parameter you can assign certain pages like `display`, `view` and even related items like `customerDisplay`. You can also use arbitrary return urls this way, for example to redirect the user to a *thank you* page.
