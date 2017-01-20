@@ -13,8 +13,7 @@
 ### Generator changes
 
 * Fixed typo in creation methods of entity factory class.
-* Removed wrong `intval` call in user field setter method.
-* Avoid `inlineUsage` option used by user form fields if the form type does not know this option.
+* Several fixes for user fields handling.
 
 ## ModuleStudio 0.7.1 (Jan 18, 2017)
 
