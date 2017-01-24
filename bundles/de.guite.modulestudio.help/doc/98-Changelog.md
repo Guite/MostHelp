@@ -8,7 +8,7 @@
 
 ### DSL / Modelling language changes
 
-* None yet.
+* Multiple order by fields are allowed for `OneToManyRelationship` elements.
 
 ### Generator changes
 
