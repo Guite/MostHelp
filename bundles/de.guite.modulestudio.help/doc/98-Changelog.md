@@ -15,6 +15,7 @@
 * Fixed typo in creation methods of entity factory class.
 * Several fixes for user fields handling.
 * Fixed typos in hook subscriber bundle initialisation.
+* Avoid unwanted output in unique entity constraint for unique index annotations.
 
 ## ModuleStudio 0.7.1 (Jan 18, 2017)
 
