@@ -270,7 +270,7 @@ Includes basically all relationships in the data layer except inheritance.
 
 * The edit type `ACTIVE_CHOOSE_PASSIVE_NONE` is only valid for many to many relationships.
 * The edit type `ACTIVE_EDIT_PASSIVE_NONE` is only valid for many to many relationships.
-* The `orderBy` attribute points to an invalid field of the target entity. Checks whether the target entity contains a field equally named like the `orderBy` property.
+* The `orderBy` attribute points to an invalid field of the target entity. Checks whether the target entity contains a field equally named like the `orderBy` property. In case multiple fields are used in the `orderBy` property each single field is validated.
 * The `indexBy` attribute points to an invalid field of the target entity. Checks whether the target entity contains a field equally named like the `indexBy` property.
 * IndexBy fields must be unique. The target entity field used for `indexBy` must have the `unique` validator enabled.
 * Enforcing a certain amount of items on the target side requires setting both `minTarget` and `maxTarget` properties. Occurs if you set either `minTarget` or `maxTarget` to a value greater than `0`, but not both.
