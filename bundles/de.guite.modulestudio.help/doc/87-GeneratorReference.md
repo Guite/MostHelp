@@ -915,7 +915,7 @@ Represents one-to-many relationships.
 It includes the following properties in addition to the common [join relationship](#join-relationship) settings:
 
 * **indexBy** - Set to target field name (must be unique) to specify the index by criteria for the relation. Please note that this has not be tested very well yet.
-* **orderBy** - Set to target field name to specify the sorting criteria for the outgoing relation.
+* **orderBy** - Set to target field name to specify the sorting criteria for the outgoing relation. Also multiple fields can be referenced by using a comma as delimiter, as pointed out in the [Doctrine documentation](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/annotations-reference.html#annref-orderby).
 * **orphanRemoval** - Default value is `false`. If set to `true` orphans get removed automatically.
 * **minTarget** - Minimum amount of items enforced to be present on the target side. The default value is `0`.
 * **maxTarget** - Maximum amount of items enforced to be present on the target side. The default value is `0` which means that no certain amount is enforced.
