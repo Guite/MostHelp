@@ -16,6 +16,7 @@
 * Several fixes for user fields handling.
 * Fixed typos in hook subscriber bundle initialisation.
 * Avoid unwanted output in unique entity constraint for unique index annotations.
+* Create boolean modvars for account page controls only if `generateAccountApi` setting is `true`.
 
 ## ModuleStudio 0.7.1 (Jan 18, 2017)
 
