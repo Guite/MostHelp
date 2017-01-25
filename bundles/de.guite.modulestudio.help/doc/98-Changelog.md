@@ -17,6 +17,7 @@
 * Fixed typos in hook subscriber bundle initialisation.
 * Avoid unwanted output in unique entity constraint for unique index annotations.
 * Create boolean modvars for account page controls only if `generateAccountApi` setting is `true`.
+* Initialise polyfills also for config pages (#949).
 
 ## ModuleStudio 0.7.1 (Jan 18, 2017)
 
