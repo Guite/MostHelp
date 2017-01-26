@@ -9,6 +9,7 @@
 ### DSL / Modelling language changes
 
 * Multiple order by fields are allowed for `OneToManyRelationship` elements.
+* Foreign keys are allowed to be referenced by index items.
 
 ### Generator changes
 
@@ -18,6 +19,7 @@
 * Avoid unwanted output in unique entity constraint for unique index annotations.
 * Create boolean modvars for account page controls only if `generateAccountApi` setting is `true`.
 * Initialise polyfills also for config pages (#949).
+* Reactivated loading jQuery UI for related item quick view windows.
 
 ## ModuleStudio 0.7.1 (Jan 18, 2017)
 
