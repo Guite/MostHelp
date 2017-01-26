@@ -10,6 +10,7 @@
 
 * Multiple order by fields are allowed for `OneToManyRelationship` elements.
 * Foreign keys are allowed to be referenced by index items.
+* Changed errors about non-existing source/target fields (other than `id`) to warnings (as foreign keys are automatically created by Doctrine).
 
 ### Generator changes
 
