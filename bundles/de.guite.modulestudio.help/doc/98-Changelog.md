@@ -20,6 +20,7 @@
 * Create boolean modvars for account page controls only if `generateAccountApi` setting is `true`.
 * Initialise polyfills also for config pages (#949).
 * Reactivated loading jQuery UI for related item quick view windows.
+* Provide `radio-inline` and `checkbox-inline` classes for expanded relation choice fields.
 
 ## ModuleStudio 0.7.1 (Jan 18, 2017)
 
