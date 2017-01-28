@@ -23,6 +23,7 @@
 * Reactivated loading jQuery UI for related item quick view windows.
 * Provide `radio-inline` and `checkbox-inline` classes for expanded relation choice fields.
 * Removed generation of obsolete doc files (#948).
+* Added missing comma in route annotation parameter requirements for non-unique slugs.
 
 ## ModuleStudio 0.7.1 (Jan 18, 2017)
 
