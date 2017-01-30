@@ -24,6 +24,8 @@
 * Provide `radio-inline` and `checkbox-inline` classes for expanded relation choice fields.
 * Removed generation of obsolete doc files (#948).
 * Added missing comma in route annotation parameter requirements for non-unique slugs.
+* Use new `LocaleApi` for Zikula 1.4.6+.
+* Implemented `SearchableInterface` for Zikula 1.4.6+.
 
 ## ModuleStudio 0.7.1 (Jan 18, 2017)
 
