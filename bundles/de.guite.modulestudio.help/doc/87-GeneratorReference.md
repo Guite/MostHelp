@@ -915,7 +915,7 @@ Represents one-to-many relationships.
 It includes the following properties in addition to the common [join relationship](#join-relationship) settings:
 
 * **indexBy** - Set to target field name (must be unique) to specify the index by criteria for the relation. Please note that this has not be tested very well yet.
-* **orderBy** - Set to target field name to specify the sorting criteria for the outgoing relation. Also multiple fields can be referenced by using a comma as delimiter, as pointed out in the [Doctrine documentation](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/annotations-reference.html#annref-orderby).
+* **orderBy** - Set to target field name(s) to specify the sorting criteria for the outgoing relation. Some examples are shown [below](#ordering-many-valued-relationship-sides).
 * **orphanRemoval** - Default value is `false`. If set to `true` orphans get removed automatically.
 * **minTarget** - Minimum amount of items enforced to be present on the target side. The default value is `0`.
 * **maxTarget** - Maximum amount of items enforced to be present on the target side. The default value is `0` which means that no certain amount is enforced.
@@ -935,8 +935,8 @@ Represents many-to-many relationships.
 It includes the following properties in addition to the common [join relationship](#join-relationship) settings:
 
 * **indexBy** - Set to target field name (must be unique) to specify the index by criteria for the relation. Please note that this has not be tested very well yet.
-* **orderBy** - Set to target field name to specify the sorting criteria for the outgoing relation.
-* **orderByReverse** - Set to source field name to specify the sorting criteria for the incoming relation.
+* **orderBy** - Set to target field name(s) to specify the sorting criteria for the outgoing relation. Some examples are shown [below](#ordering-many-valued-relationship-sides).
+* **orderByReverse** - Set to source field name(s) to specify the sorting criteria for the incoming relation. Some examples are shown [below](#ordering-many-valued-relationship-sides).
 * **orphanRemoval** - Default value is `false`. If set to `true` orphans get removed automatically.
 * **refClass** - Specifies the reference class created for the linking table (for example `personAddress`). The generator creates additional classes for this reference-managing entity.
 * **minSource** - Minimum amount of items enforced to be present on the source side. The default value is `0`.
@@ -967,6 +967,21 @@ Can be one of the following options:
 * `ALL`
 
 The cascade type is implemented as defined in the association's annotation within the corresponding entity classes. At the moment there are no other code parts depending on that.
+
+#### Ordering many valued relationship sides
+
+As shown in the [Doctrine documentation](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/tutorials/ordered-associations.html) an `OrderBy` annotation can be used to specify an implicit sorting criteria which will be appended to DQL queries.
+
+Fields are used with their unqualified names and must exist in the referenced source or target entity. If the referenced entity uses the `geographical` extension you can also use `latitude` and `longitude`. If it uses the `standardFields` extension you can also use `createdDate`, `createdBy`, `updatedDate` and `updatedBy`.
+
+ModuleStudio offers different syntax variants for using this or single and multiple fields:
+
+* Order by a single field: `mySortField`
+* Order by a single field with direction: `mySortField:desc` or `mySortField:DESC`
+* Order by multiple fields: `lastName, firstName`
+* Order by multiple fields with direction: `score:desc, lastName:asc` or `score:DESC, lastName`
+
+The sorting direction is optional and defaults to `ASC`.
 
 #### Auto completion usage
 
