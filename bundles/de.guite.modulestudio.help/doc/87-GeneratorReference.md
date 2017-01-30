@@ -974,7 +974,7 @@ As shown in the [Doctrine documentation](http://docs.doctrine-project.org/projec
 
 Fields are used with their unqualified names and must exist in the referenced source or target entity. If the referenced entity uses the `geographical` extension you can also use `latitude` and `longitude`. If it uses the `standardFields` extension you can also use `createdDate`, `createdBy`, `updatedDate` and `updatedBy`.
 
-ModuleStudio offers different syntax variants for using this or single and multiple fields:
+ModuleStudio offers different syntax variants for using this for single and multiple fields:
 
 * Order by a single field: `mySortField`
 * Order by a single field with direction: `mySortField:desc` or `mySortField:DESC`
