@@ -26,6 +26,7 @@
 * Added missing comma in route annotation parameter requirements for non-unique slugs.
 * Use new `LocaleApi` for Zikula 1.4.6+.
 * Implemented `SearchableInterface` for Zikula 1.4.6+.
+* Fixed problem with url-encoded upload file pathes.
 
 ## ModuleStudio 0.7.1 (Jan 18, 2017)
 
