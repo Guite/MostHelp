@@ -29,6 +29,7 @@
 * Added links for sending private messages to users in Zikula 1.4.6+. 
 * Fixed problem with url-encoded upload file pathes.
 * Fixed tree usage combined with translatable (#226).
+* Fixed wrong variable names for moderation groups in notification helper (#954).
 
 ## ModuleStudio 0.7.1 (Jan 18, 2017)
 
