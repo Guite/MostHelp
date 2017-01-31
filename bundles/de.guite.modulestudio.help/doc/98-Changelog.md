@@ -4,7 +4,7 @@
 
 ### Product changes
 
-* None yet.
+* Minor vendor updates.
 
 ### DSL / Modelling language changes
 
