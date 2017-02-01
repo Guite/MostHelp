@@ -30,6 +30,7 @@
 * Fixed problem with url-encoded upload file pathes.
 * Fixed tree usage combined with translatable (#226).
 * Fixed wrong variable names for moderation groups in notification helper (#954).
+* Improved usage of tree verification and recovery.
 
 ## ModuleStudio 0.7.1 (Jan 18, 2017)
 
