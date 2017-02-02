@@ -25,7 +25,7 @@
 * Removed generation of obsolete doc files (#948).
 * Added missing comma in route annotation parameter requirements for non-unique slugs.
 * Use new `LocaleApi` for Zikula 1.4.6+.
-* Implemented `SearchableInterface` for Zikula 1.4.6+.
+* Implemented `SearchableInterface` for Zikula 1.4.6+ (#956).
 * Added links for sending private messages to users in Zikula 1.4.6+. 
 * Fixed problem with url-encoded upload file pathes.
 * Fixed tree usage combined with translatable (#226).
