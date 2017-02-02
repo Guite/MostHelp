@@ -36,6 +36,7 @@
 * Added tree node actions for moving to top and bottom.
 * Several fixes for content types (#952).
 * Support new image script in Zikula 1.4.6+ (#958).
+* Removed notblank constraint for slug fields.
 
 ## ModuleStudio 0.7.1 (Jan 18, 2017)
 
