@@ -33,6 +33,7 @@
 * Improved usage of tree verification and recovery.
 * Improved referencing the base path in templates (#953).
 * Added tree node actions for moving to top and bottom.
+* Several fixes for content types (#952).
 
 ## ModuleStudio 0.7.1 (Jan 18, 2017)
 
