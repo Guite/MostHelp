@@ -24,7 +24,7 @@
 * Provide `radio-inline` and `checkbox-inline` classes for expanded relation choice fields.
 * Removed generation of obsolete doc files (#948).
 * Added missing comma in route annotation parameter requirements for non-unique slugs.
-* Added missing comma in param converter parameter options for non-unique slugs.
+* Fixed syntax problems in param converter parameter options.
 * Use new `LocaleApi` for Zikula 1.4.6+.
 * Implemented `SearchableInterface` for Zikula 1.4.6+ (#956).
 * Added links for sending private messages to users in Zikula 1.4.6+. 
