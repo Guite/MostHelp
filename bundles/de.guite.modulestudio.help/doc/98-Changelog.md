@@ -34,6 +34,7 @@
 * Improved referencing the base path in templates (#953).
 * Added tree node actions for moving to top and bottom.
 * Several fixes for content types (#952).
+* Support new image script in Zikula 1.4.6+ (#958).
 
 ## ModuleStudio 0.7.1 (Jan 18, 2017)
 
