@@ -39,6 +39,7 @@
 * Removed notblank constraint for slug fields.
 * Select entity by slug only if slug is unique (#959).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.2).
+* Automatically provide settings related to geographical features (#960).
 
 ## ModuleStudio 0.7.1 (Jan 18, 2017)
 
