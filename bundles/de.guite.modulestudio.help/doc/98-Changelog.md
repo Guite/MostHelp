@@ -37,6 +37,7 @@
 * Several fixes for content types (#952).
 * Support new image script in Zikula 1.4.6+ (#958).
 * Removed notblank constraint for slug fields.
+* Select entity by slug only if slug is unique (#959).
 
 ## ModuleStudio 0.7.1 (Jan 18, 2017)
 
