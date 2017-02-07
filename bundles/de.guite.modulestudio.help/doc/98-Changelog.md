@@ -12,6 +12,7 @@
 * Multiple order by fields and custom sorting directions are allowed for `OneToManyRelationship` and `ManyToManyRelationship` elements. See the [generator reference](87-GeneratorReference.md#ordering-many-valued-relationship-sides) for examples.
 * Foreign keys are allowed to be referenced by index items.
 * Changed errors about non-existing source/target fields (other than `id`) to warnings (as foreign keys are automatically created by Doctrine).
+* Removed some obsolete DSL elements (#914).
 
 ### Generator changes
 

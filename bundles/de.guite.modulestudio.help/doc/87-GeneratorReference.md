@@ -55,7 +55,6 @@ An application has some more fields for specifying specific aspects:
 
 An application may furthermore have the following references:
 
-* **controllers** - Allows referencing one or more [controllers](#controller). Deprecated, use entities only instead.
 * **entities** - Allows referencing one or more [data objects](#data-object).
 * **generatorSettings** - Allows specifying desired generator features and behaviour. More details in the [settings container](#settings-container) section.
 * **referredApplications** - Allows referencing other applications. See [below](#referred-application).
@@ -71,9 +70,6 @@ Can be one of the following options:
 * `ZK20` - Targets Zikula 2.0.0 and later. This is not supported yet and will currently be treated like `ZK14`.
 * `ZK14` - Targets the last stable Zikula 1.4.x version. This is the default value and useful when developing for future. Generated applications support the forward compatibility layer using 2.0.0 technology.
 * `ZK14DEV` - Targets the last unstable Zikula 1.4.x version. Thus it will always include changes for the next upcoming 1.4.x core release. You can use this to test new changes, while `ZK14` will still target the last stable core version.
-* `ZKPRE14` - Targets the last stable Zikula 1.4.x version; legacy alias for `ZK14`. Deprecated.
-* `ZK136` - Targets Zikula 1.3.10 and earlier. This is deprecated and not supported anymore beginning with ModuleStudio 0.7.2.
-* `ZK135` - Targets Zikula 1.3.10 and earlier; legacy alias for `ZK136`.
 
 #### Settings container
 
@@ -192,7 +188,6 @@ It has the following properties:
 * **leading** - A boolean specifying whether this is the primary (and default) entity or not.
 * **lockType** - Whether and which [locking strategy](#entity-lock-type) is applied. The default value is `PAGELOCK`.
 * **loggable** - A boolean specifying whether the [Loggable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/loggable.md) is used or not. The generator will create an additional entity for managing the log entries if set to `true`. There is no user interface for the version management yet (see [#30](https://github.com/Guite/MostGenerator/issues/30) for more information).
-* **metaData** - A boolean specifying whether this entity should have support for meta data. This is *deprecated* and will cause nothing.
 * **nameMultiple** - Plural form of the name. The generator uses this for collections, list views and other areas where multiple entities are used.
 * **onAccountDeletionCreator** - Controls how an app should change the creator when users are deleted. Only relevant if `standardFields` is enabled. Default value is `ADMIN`. The available options are listed [here](#account-deletion-handler).
 * **onAccountDeletionLastEditor** - Controls how an app should change the last editor when users are deleted. Only relevant if `standardFields` is enabled. Default value is `ADMIN`. The available options are listed [here](#account-deletion-handler).
@@ -520,7 +515,6 @@ Represents a field type for storing upload files.
 An upload field has the following properties in addition to the common [abstract string field](#abstract-string-field) settings:
 
 * **allowedExtensions** - List of file extensions to be accepted during the upload, separated by a comma with a space char. Default value is `gif, jpeg, jpg, png`.
-* **allowedFileSize** - Maximum file size in bytes. Default is `0` for no limit. This setting is deprecated in favour of `maxSize`. 
 * **length** - The length of this field. Default value is `255`.
 * **maxSize** - A string for a maximum file size. Default is an empty string for no limit. Examples: `4096` (bytes), `200k` (kilobytes), `2M` (megabytes), `32Ki` (kikibytes), `8Mi` (mebibytes). Read more about that [here](https://symfony.com/doc/current/reference/constraints/File.html#maxsize).
 * **mimeTypes** - A string containing a comma separated list of allowed mime types. Default is `image/*`. Example: `application/pdf, application/x-pdf`.
@@ -1064,7 +1058,7 @@ A var container may have the following references:
 * **application** - Reference to the owning element.
 * **vars** - Allows referencing one or more [variables](#variable).
 
-As soon as at least one variable container exists the generator creates a `config` page in the admin area to let the site admin manage corresponding settings.
+As soon as at least one variable container exists the generator creates an additional `config` controller to let the site admin manage available settings.
 
 If a model contains multiple variable containers the config page will use a tabbed panel containing a tab for each container, sorted by the `sortOrder` field. This allows separating settings in bigger models into logical semantic groups.
 
@@ -1148,26 +1142,6 @@ This section is going to collect certain combinations of elements in practical s
 
 ### Language elements
 
-#### Controller
-
-A controller represents an area with functions which are called [actions](#action). Zikula uses Symfony routing for that. Note that [entities](#entity) act similarly as they contain actions, too. Thus controllers are deprecated, use entities only instead.
-
-The following controller types are available:
-
-* **Admin controller** - for admin areas.
-* **User controller** - for user areas.
-* **Ajax controller** - for ajax functions.
-* **Custom controller** - for custom areas.
-
-A controller may have the following references:
-
-* **actions** - Allows referencing one or more [actions](#action).
-* **application** - Reference to the owning element.
-
-The generator creates controller classes with methods for each actions.
-
-If you have added some [variables](#variables) also an additional `config` controller will be generated contain a method for managing the modvar settings.
-
 #### Action
 
 An action represents a controller function which can be called by the user. Zikula uses Symfony routing for that. An action can either be contained in a controller element or in an entity which corresponds to an entity-related controller.
@@ -1183,7 +1157,6 @@ The following action types are available:
 
 An action may have the following references:
 
-* **controller** - Reference to the owning [controller](#controller). Deprecated, use entities only instead.
 * **entity** - Reference to the owning [entity](#entity) controller.
 
 The generator creates sensitive default implementations for all action types except custom actions which do only return an empty template.

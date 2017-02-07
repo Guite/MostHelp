@@ -24,7 +24,6 @@ The biggest part is a reference section listing all validation rules in detail a
 
 ### Settings container
 
-* The core version target is deprecated. Please choose another one. This error appears if you change the target core version to `ZK135`, `ZK136` or `ZKPRE14`. Choose `ZK14` instead.
 * Settings container must be assigned to an application. Should not occur in practice, this is just for completeness.
 * Scribite plug-ins require external controller and finder component. If you enable `generateScribitePlugins` you also need `generateExternalControllerAndFinder`.
 
@@ -80,7 +79,6 @@ The biggest part is a reference section listing all validation rules in detail a
 * There must not exist an entity named `FooClosure` as this is reserved by the corresponding extension. For an entity named *person* with a closure tree ModuleStudio generates an additional entity named `PersonClosure` for managing it's closures. For nested sets this additional entity is not required.
 * There must not exist an entity named `FooAttribute` as this is reserved by the corresponding extension. For an entity named *person* with `attributable = true` ModuleStudio generates an additional entity named `PersonAttribute` for managing it's attributes.
 * There must not exist an entity named `FooCategory` as this is reserved by the corresponding extension. For an entity named *person* with `categorisable = true` ModuleStudio generates an additional entity named `PersonCategory` for managing it's categories.
-* The meta data extension is deprecated. If you need meta data create a normal entity for it instead. This warning occurs for an entity with `meta data = true`.
 
 ### Entity field
 
@@ -211,8 +209,6 @@ This section includes rules which apply only for datetime, date and time fields.
 #### Upload fields
 
 * The `allowed extensions` attribute must contain a comma separated list of the file types to be allowed during the upload (example: `gif, jpeg, jpg, png`). Note that the separator is `', '` including the space char.
-* The `allowedFileSize` attribute must not have a value lower than 0.
-* The `allowedFileSize` attribute is deprecated and will be removed in a future version. Please use `maxSize` instead.
 * There must not exist a field named `fooMeta` because this is reserved for an automatic field storing meta data for this upload.
 * Minimum image width must not be larger than maximum image width.
 * Minimum image height must not be larger than maximum image height.
@@ -333,7 +329,6 @@ Includes basically all relationships in the data layer except inheritance.
 
 ### Controller
 
-* Controller elements are not supported anymore. Use entity elements as controllers instead. Please remove this element from your model.
 * Entity name is a reserved identifier (`module`, `type`, `func`, `config`, `ajax`, `external`, `lang`, `theme`, `newlang`, `newtheme`). These names are reserved.
 * There must not exist more than one (`index` | `view` | `display` | `edit` | `delete`) action in one entity.
 * Names of custom actions in one entity must be unique.
