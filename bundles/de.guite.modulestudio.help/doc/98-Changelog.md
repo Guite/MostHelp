@@ -40,6 +40,7 @@
 * Select entity by slug only if slug is unique (#959).
 * Automatically provide settings related to geographical features (#960).
 * Corrected `maxlength` attribute for time form types.
+* Allow realising email notifications using designated entity fields (#955).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.2).
 
 ## ModuleStudio 0.7.1 (Jan 18, 2017)
