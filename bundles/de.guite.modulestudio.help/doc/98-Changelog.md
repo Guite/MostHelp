@@ -5,6 +5,7 @@
 ### Product changes
 
 * Minor vendor updates.
+* Fixed some missing German translations (#944).
 
 ### DSL / Modelling language changes
 

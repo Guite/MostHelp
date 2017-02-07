@@ -520,7 +520,7 @@ Represents a field type for storing upload files.
 An upload field has the following properties in addition to the common [abstract string field](#abstract-string-field) settings:
 
 * **allowedExtensions** - List of file extensions to be accepted during the upload, separated by a comma with a space char. Default value is `gif, jpeg, jpg, png`.
-* **allowedFileSize** - Maximum file size in bytes. Default is `0` for no limit. *This setting is deprecated in favour of `maxSize`. 
+* **allowedFileSize** - Maximum file size in bytes. Default is `0` for no limit. This setting is deprecated in favour of `maxSize`. 
 * **length** - The length of this field. Default value is `255`.
 * **maxSize** - A string for a maximum file size. Default is an empty string for no limit. Examples: `4096` (bytes), `200k` (kilobytes), `2M` (megabytes), `32Ki` (kikibytes), `8Mi` (mebibytes). Read more about that [here](https://symfony.com/doc/current/reference/constraints/File.html#maxsize).
 * **mimeTypes** - A string containing a comma separated list of allowed mime types. Default is `image/*`. Example: `application/pdf, application/x-pdf`.
