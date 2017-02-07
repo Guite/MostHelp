@@ -32,6 +32,7 @@
 * Fixed problem with url-encoded upload file pathes.
 * Fixed tree usage combined with translatable (#226).
 * Fixed wrong variable names for moderation groups in notification helper (#954).
+* Fixed incorrect loop over group members in notification helper.
 * Improved usage of tree verification and recovery.
 * Improved referencing the base path in templates (#953).
 * Added tree node actions for moving to top and bottom.
