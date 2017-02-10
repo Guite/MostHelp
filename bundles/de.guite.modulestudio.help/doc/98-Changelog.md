@@ -15,6 +15,7 @@
 * Changed errors about non-existing source/target fields (other than `id`) to warnings (as foreign keys are automatically created by Doctrine).
 * The `bidirectional` property has been removed for `ManyToOneRelationship` and `InheritanceRelationship` (#943).
 * The default value of `bidirectional` has been changed to `true` (#943).
+* The default value of `editType` has been changed to `ACTIVE_CHOOSE_PASSIVE_NONE` for `ManyToManyRelationship` and `ACTIVE_NONE_PASSIVE_CHOOSE` for other join relationships (#943).
 * Removed some obsolete DSL elements (#914).
 
 ### Generator changes

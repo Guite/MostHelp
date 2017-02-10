@@ -873,7 +873,7 @@ It includes the following properties:
 
 * **cascade** - The [cascade type](#cascade-type) used on application level from source view. The default value is `NONE`.
 * **cascadeReverse** - The [cascade type](#cascade-type) used on application level from target view (only for `bidirectional` relationships). The default value is `NONE`.
-* **editType** - The [edit type](#relation-edit-type) for this association, only applicable if `useAutoCompletion` is not set to `NONE`.
+* **editType** - The [edit type](#relation-edit-type) for this association. The default value is `ACTIVE_CHOOSE_PASSIVE_NONE` for many to many relationships and `ACTIVE_NONE_PASSIVE_CHOOSE` for other join relationships.
 * **expandedSource** - A boolean to enable usage of radio buttons (for single-valued relations) or checkboxes (for multi-valued relations) instead of a select field. The default value is `false`.
 * **expandedTarget** - A boolean to enable usage of radio buttons (for single-valued relations) or checkboxes (for multi-valued relations) instead of a select field. The default value is `false`.
 * **fetchType** - The [fetch type](#relation-fetch-type) for this association. The default value is `LAZY`.
@@ -889,7 +889,7 @@ It includes the following properties:
 
 The generator transforms most of these settings to the corresponding implementation as is. The only thing which is used outside of the entity classes is the [edit type](#relation-edit-type) which controls how relationships are handled in [edit actions](#edit-action).
 
-Join relationships are automatically incorporated into the dql queries which are placed in the entity repository classes. You can override these methods for changing selection details if required.
+Join relationships are automatically incorporated into the DQL queries which are placed in the entity repository classes. You can override these methods for changing selection details if required.
 
 #### One to one relationship
 
@@ -1022,7 +1022,7 @@ For each entity the generator creates some templates to be included in the [edit
 
 * `NONE` means that there is no possibility to take influence on the association.
 * `CHOOSE` means that it is possible to select a related entity with the help of auto completion.
-* `EDIT` means the same as `CHOOSE` plus that it is also possible to created and edit related entities during editing the main entity.
+* `EDIT` means the same as `CHOOSE` plus that it is also possible to created and edit related entities during editing the main entity. Only applicable if `useAutoCompletion` is not set to `NONE`.
 
 #### Inheritance relationship
 
