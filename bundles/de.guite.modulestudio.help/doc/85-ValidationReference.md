@@ -260,7 +260,6 @@ Includes basically all relationships in the data layer except inheritance.
 
 * The edit type `ACTIVE_CHOOSE_PASSIVE_NONE` is only valid for many to many relationships.
 * The edit type `ACTIVE_EDIT_PASSIVE_NONE` is only valid for many to many relationships.
-* A many-to-one relation must not be bidirectional.
 
 #### One to many relationship
 
