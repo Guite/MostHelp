@@ -4,8 +4,9 @@
 
 ### Product changes
 
-* Minor vendor updates.
+* When creating many-to-many relationships a default value for the `refClass` attribute is set automatically (#943).
 * Fixed some missing German translations (#944).
+* Minor vendor updates.
 
 ### DSL / Modelling language changes
 
