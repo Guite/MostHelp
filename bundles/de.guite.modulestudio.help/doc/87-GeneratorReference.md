@@ -31,7 +31,9 @@ It includes the following properties:
 * **name** - The name of the element.
 * **documentation** - A description for documenting the element.
 
-If a documentation is defined for an entity this will be shown right after the heading of the corresponding view template. So you could for example add a description for the *person* entity explaining what persons are and what information they store. If a user then navigates to the persons list he knows immediately what he is looking at.
+Documentation is used in several places of generated applications. For example if any documentation is defined for an entity this will be shown right after the heading of the corresponding view template. So you could for example add a description for the *person* entity explaining what persons are and what information they store. If a user then navigates to the persons list he knows immediately what he is looking at. Documentation for single fields is used in editing forms to provide additional help.
+
+In general documentation entries are generated as Gettext calls to support translations. For example `This is a test.` results in `{{ __('This is a test.') }}`. For entities and variable containers there is also a special expert feature available: you can use Twig variables in the documentation field. So `These are {{myVar}} and {{   otherVar  }}.` results in `{{ __f('These are %myVar% and %otherVar%.', { '%myVar%': myVar|default, '%otherVar%': otherVar|default }) }}`.
 
 #### Application
 
