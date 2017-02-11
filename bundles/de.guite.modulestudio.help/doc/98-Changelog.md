@@ -50,7 +50,7 @@
 * Allow realising email notifications using designated entity fields (#955).
 * Prevent error if default value for an `IntVar` is not numeric.
 * Added support for dynamic Twig variables used in documentation fields (for variable containers and entities) (#889).
-* Moved item actions into first column of view actions, allso made them fixed (#964). 
+* Moved item actions into first column of view actions, also made them fixed (#964). 
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.2).
 
 ## ModuleStudio 0.7.1 (Jan 18, 2017)
