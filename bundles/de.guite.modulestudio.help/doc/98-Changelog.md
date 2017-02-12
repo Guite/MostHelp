@@ -1,5 +1,20 @@
 # Changelog
 
+## ModuleStudio 0.7.3 (unreleased)
+
+### Product changes
+
+* None yet.
+
+### DSL / Modelling language changes
+
+* None yet.
+
+### Generator changes
+
+* None yet.
+* For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.3).
+
 ## ModuleStudio 0.7.2 (Feb 12, 2017)
 
 ### Product changes
