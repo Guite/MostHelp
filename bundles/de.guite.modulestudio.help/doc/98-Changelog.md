@@ -13,6 +13,7 @@
 ### Generator changes
 
 * Fixed access to entity property in constraint expression for date range validation.
+* Fixed categories selection in detail content type.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.3).
 
 ## ModuleStudio 0.7.2 (Feb 12, 2017)
