@@ -189,7 +189,7 @@ It has the following properties:
 * **identifierStrategy** - Whether and which [identifier strategy](#entity-identifier-strategy) is applied. The default value is `AUTO`.
 * **leading** - A boolean specifying whether this is the primary (and default) entity or not.
 * **lockType** - Whether and which [locking strategy](#entity-lock-type) is applied. The default value is `PAGELOCK`.
-* **loggable** - A boolean specifying whether the [Loggable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/loggable.md) is used or not. The generator will create an additional entity for managing the log entries if set to `true`. There is no user interface for the version management yet (see [#30](https://github.com/Guite/MostGenerator/issues/30) for more information).
+* **loggable** - A boolean specifying whether the [Loggable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/loggable.md) for tracking changes and managing versions is used or not. If loggable is activated the DSL will also require adding a `version` field and optimistic locking because it is handy to have the current version stored in the entity directly. The generator will create an additional entity for managing the log entries if set to `true`. There is no user interface for version management and reverting to older versions yet (see [#30](https://github.com/Guite/MostGenerator/issues/30) for more information).
 * **nameMultiple** - Plural form of the name. The generator uses this for collections, list views and other areas where multiple entities are used.
 * **onAccountDeletionCreator** - Controls how an app should change the creator when users are deleted. Only relevant if `standardFields` is enabled. Default value is `ADMIN`. The available options are listed [here](#account-deletion-handler).
 * **onAccountDeletionLastEditor** - Controls how an app should change the last editor when users are deleted. Only relevant if `standardFields` is enabled. Default value is `ADMIN`. The available options are listed [here](#account-deletion-handler).
@@ -316,7 +316,7 @@ An integer field has the following properties in addition to the common [abstrac
 * **minValue** - Minimum value. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
 * **percentage** - A boolean specifying whether this field represents a percentage value or not. Default value is `false`.
 * **range** - A boolean specifying whether this field represents a range or not. Default value is `false`. In [edit forms](#edit-action) a range field is represented as a slider.
-* **version** - A boolean specifying whether this field should act as a version. Default value is `false`. If set to `true` the owning entity will need to use [optimistic locking](#entity-lock-type). There is no user interface for version management generated yet (see [#30](https://github.com/Guite/MostGenerator/issues/30) for more information).
+* **version** - A boolean specifying whether this field should act as a version. Default value is `false`. If set to `true` the owning entity will need to use [optimistic locking](#entity-lock-type). If you need to track changes and manage versions you also need to activate `loggable` for the corresponding [entity](#entity).
 
 In [edit pages](#edit-action) the generator will use integer input elements as well as validation on client and server side. For the output in [view](#view-action) and [display](#display-action) templates the value will just be shown.
 
