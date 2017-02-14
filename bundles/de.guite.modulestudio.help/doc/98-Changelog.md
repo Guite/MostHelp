@@ -16,7 +16,8 @@
 
 * Fixed access to entity property in constraint expression for date range validation.
 * Fixed categories selection in detail content type.
-* Assign created date instead of creating user in search results. 
+* Assign created date instead of creating user in search results.
+* Support pasting relative links as well as absolute urls in Finder selection dialog used by Scribite plug-ins (#966). 
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.3).
 
 ## ModuleStudio 0.7.2 (Feb 12, 2017)
