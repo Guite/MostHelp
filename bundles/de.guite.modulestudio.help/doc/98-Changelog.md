@@ -20,6 +20,7 @@
 * Support pasting relative links as well as absolute urls in Finder selection dialog used by Scribite plug-ins (#966).
 * Avoid fixed columns for tables without item rows.
 * Fixed missing closing curly bracket in item actions menu for entities with multiple related item types.
+* Added missing `endif` tag for private message links displayed next to user fields.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.3).
 
 ## ModuleStudio 0.7.2 (Feb 12, 2017)
