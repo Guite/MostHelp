@@ -201,7 +201,7 @@ It has the following properties:
 * **slugStyle** - Which [slug style](#entity-slug-style) is used. Default value is `LOWERCASE`.
 * **slugUnique** - A boolean specifying if the slug is unique or not. Default value is `true`.
 * **slugUpdatable** - A boolean specifying if the slug can be changed or not. Default value is `true`.
-* **softDeleteable** - Whether deleted items should only be marked as deleted instead of deleting them. Defines also whether the entity workflow provides means for trashing and recovering items or for deleting them. See [SoftDeleteable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/softdeleteable.md) and [workflow types](#entity-workflow-type) for more information. The default value is `false`.
+* **softDeleteable** - Whether deleted items should only be marked as deleted instead of deleting them. Defines also whether the entity workflow provides means for trashing and recovering items or for deleting them. See [SoftDeleteable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/softdeleteable.md) and [workflow types](#entity-workflow-type) for more information. The default value is `false`. Be careful with combining this with other behaviours, as it seems there are problems with for example using it together with loggable and blameable.
 * **tree** - Whether and which tree strategy is applied. Default value is `NONE`. More information about what the generator creates for trees can be found in the the section about [tree types](#entity-tree-type).
 
 ![Tree functionality with context menu and drag n drop](images/generator_tree.png "Tree functionality with context menu and drag n drop")
