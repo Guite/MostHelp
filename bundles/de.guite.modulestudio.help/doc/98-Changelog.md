@@ -9,6 +9,7 @@
 ### DSL / Modelling language changes
 
 * Fixed problem in meta class operation preventing some validation constraints from being executed correctly.
+* Fixed problem in formatter to avoid new lines between closing brackets and commas.
 
 ### Generator changes
 
