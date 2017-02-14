@@ -8,7 +8,7 @@
 
 ### DSL / Modelling language changes
 
-* Fixed problem in meta class operation preventing some validation constraints form being executed correctly.
+* Fixed problem in meta class operation preventing some validation constraints from being executed correctly.
 
 ### Generator changes
 
