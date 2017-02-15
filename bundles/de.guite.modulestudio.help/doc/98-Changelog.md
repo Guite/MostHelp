@@ -24,6 +24,7 @@
 * Fixed wrong markup for map container in edit form of geographical entities.
 * Fixed initialisation of geographical editing.
 * Put page navigation links on view pages in a paragraph.
+* Exclude version fields from editing (#30).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.3).
 
 ## ModuleStudio 0.7.2 (Feb 12, 2017)
