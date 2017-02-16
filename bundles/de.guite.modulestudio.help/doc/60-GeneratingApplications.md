@@ -84,3 +84,5 @@ Using this little tool is particularly handy for things like:
 
 * **Batch jobs:** you can create a `.bat` (Windows) or `.sh` file for generating 10 different applications in one step.
 * **Automated build jobs:** incorporate regenerating an application from it's model into your build process.
+
+Note the stand-alone generator is updated after **every build**. So it always uses the latest Git revision.
