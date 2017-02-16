@@ -4,7 +4,7 @@
 
 ### Product changes
 
-* None yet.
+* Removed model migration from 0.6.x.
 
 ### DSL / Modelling language changes
 
