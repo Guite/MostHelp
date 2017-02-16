@@ -11,6 +11,7 @@
 * Fixed problem in meta class operation preventing some validation constraints from being executed correctly.
 * Fixed non-working validation constraint for ensuring a display pattern.
 * Fixed problem in formatter to avoid new lines between closing brackets and commas.
+* The `softDeleteable` extension has been deprecated. Consider using `loggable` instead.
 
 ### Generator changes
 
@@ -28,6 +29,13 @@
 * Fixed entity manager reference for edit locking.
 * Use AbstractLogEntry as base class for log entry entities (#30).
 * Added change history page for loggable entities (#30).
+* Allow displaying previous versions of loggable entities (#30).
+* Allow reverting loggable entities to previous versions (#30).
+* Avoid deleting upload files for loggable entities (#30).
+* Added a trash section for viewing deleted loggable entities (#30).
+* Allow viewing deleted loggable entities (#30).
+* Allow undeletion of deleted loggable entities (#30).
+* Provide diff view for comparing different versions of loggable entities (#30).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.3).
 
 ## ModuleStudio 0.7.2 (Feb 12, 2017)
