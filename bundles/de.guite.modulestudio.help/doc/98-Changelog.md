@@ -4,6 +4,7 @@
 
 ### Product changes
 
+* Now there is a stand-alone generator available (#967). Read more about that [here](60-GeneratingApplications.md#stand-alone-generator).
 * Hide some unrequired `MostDsl` preference sub pages (`Compiler`, `Refactoring` and `Task Tags`).
 * Removed model migration from 0.6.x.
 

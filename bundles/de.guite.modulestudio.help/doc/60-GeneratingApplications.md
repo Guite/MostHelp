@@ -60,3 +60,27 @@ The rough steps of the generator workflow are as follows:
 ## From model to generated artifacts
 
 The mapping from your model elements to the generated application elements is described in detail in the [generator reference](87-GeneratorReference.md#generator-reference) chapter.
+
+## Web generator
+
+The [web generator](http://webgen.modulestudio.de/en) regenerates your applications using the latest Git revision of the generator. You can upload models and generate the applications by clicking on a button. This may be useful if you rarely do amendments on a matured model, but want to update the implementation without having to start and update ModuleStudio itself.
+
+## Stand-alone generator
+
+There is also a stand-alone generator available. This is a JAR file which can be used to generate applications from the command line.
+
+    wget http://modulestudio.de/downloads/ModuleStudio-generator.jar
+    java -jar ModuleStudio-generator.jar MyModel.mostapp
+
+By default this creates a sub folder named `GeneratedModule` and puts all generated artifacts into this sub directory.
+
+You can also specify another directory name if you like:
+
+    java -jar ModuleStudio-generator.jar MyModel.mostapp MyDirectory
+
+Note the stand-alone generator currently assumes that the model files are in the same directory in which it is executed.
+
+Using this little tool is particularly handy for things like:
+
+* **Batch jobs:** you can create a `.bat` (Windows) or `.sh` file for generating 10 different applications in one step.
+* **Automated build jobs:** incorporate regenerating an application from it's model into your build process.
