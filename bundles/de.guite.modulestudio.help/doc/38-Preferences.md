@@ -31,7 +31,7 @@ The following preference pages are mainly intended for advanced users and are us
 
 ### MostDsl
 
-The *MostDsl* tab is related to the [textual editor](36-TextualEditor.md#textual-editor). It needs some cleanup, because many settings are actually not required. This section explains only those which are most relevant.
+The *MostDsl* tab is related to the [textual editor](36-TextualEditor.md#textual-editor).
 
 #### Syntax colouring
 

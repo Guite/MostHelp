@@ -4,6 +4,7 @@
 
 ### Product changes
 
+* Hide some unrequired `MostDsl` preference sub pages (`Compiler`, `Refactoring` and `Task Tags`).
 * Removed model migration from 0.6.x.
 
 ### DSL / Modelling language changes
