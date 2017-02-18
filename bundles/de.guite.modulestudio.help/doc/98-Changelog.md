@@ -39,6 +39,7 @@
 * Allow undeletion of deleted loggable entities (#30).
 * Provide diff view for comparing different versions of loggable entities (#30).
 * Avoid `scale` option for range form type.
+* Improved editing translatable fields (#177).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.3).
 
 ## ModuleStudio 0.7.2 (Feb 12, 2017)
