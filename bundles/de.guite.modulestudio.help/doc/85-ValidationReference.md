@@ -254,7 +254,6 @@ Includes basically all relationships in the data layer except inheritance.
 
 * The edit type `ACTIVE_CHOOSE_PASSIVE_NONE` is only valid for many to many relationships.
 * The edit type `ACTIVE_EDIT_PASSIVE_NONE` is only valid for many to many relationships.
-* Entities with soft-deleteable need a remove cascade for any incoming one-to-one relationships. See [this issue](https://github.com/Atlantic18/DoctrineExtensions/issues/936) for more information.
 
 #### Many to one relationship
 

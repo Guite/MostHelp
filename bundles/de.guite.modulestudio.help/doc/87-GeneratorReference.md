@@ -206,7 +206,6 @@ It has the following properties:
 * **slugStyle** - Which [slug style](#entity-slug-style) is used. Default value is `LOWERCASE`.
 * **slugUnique** - A boolean specifying if the slug is unique or not. Default value is `true`.
 * **slugUpdatable** - A boolean specifying if the slug can be changed or not. Default value is `true`.
-* **softDeleteable** - Whether deleted items should only be marked as deleted instead of deleting them. Defines also whether the entity workflow provides means for trashing and recovering items or for deleting them. See [SoftDeleteable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/softdeleteable.md) and [workflow types](#entity-workflow-type) for more information. The default value is `false`. Be careful with combining this with other behaviours, as it seems there are problems with for example using it together with loggable, timestampable and blameable. Thus this is **deprecated** and will be removed in a future version. Consider using loggable instead for which also undeletion functionality is generated (see above).
 * **tree** - Whether and which tree strategy is applied. Default value is `NONE`. More information about what the generator creates for trees can be found in the the section about [tree types](#entity-tree-type).
 
 ![Tree functionality with context menu and drag n drop](images/generator_tree.png "Tree functionality with context menu and drag n drop")
@@ -785,8 +784,7 @@ In total there are nine different workflow states which are explained below. Not
 5. **Approved** - content has been approved and is available online.
 6. **Suspended** - content has been approved, but is temporarily offline. Only available if the entity has set the `hasTray` property to `true`.
 7. **Archived** - content has reached the end and became archived. Only available if the entity has set the `hasArchive` property to `true`. Requires a [datetime](#datetime-field) or a [date](#date-field) field being designated as end date.
-8. **Trashed** - content has been marked as deleted, but is still persisted in the database. Only available if the entity has set the `softDeleteable` property to `true`.
-9. **Deleted** - pseudo-state for content which has been deleted from the database.
+8. **Deleted** - pseudo-state for content which has been deleted from the database.
 
 The following image shows an overview of all possible workflow states and actions.
 

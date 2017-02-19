@@ -8,7 +8,7 @@
 
 ### DSL / Modelling language changes
 
-* None yet.
+* Removed the `softDeleteable` property which has been deprecated before (#970).
 
 ### Generator changes
 
