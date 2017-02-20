@@ -606,7 +606,7 @@ An array field has the following properties in addition to the common [derived f
 * **min** - Minimum amount of items enforced to be present. The default value is `0`.
 * **max** - Maximum amount of items enforced to be present. The default value is `0` which means that no certain amount is enforced.
 
-The generator will exclude arrays in [edit pages](#edit-action) as well as for the output in [view](#view-action) and [display](#display-action) templates.
+The generator will exclude arrays for the output in [view](#view-action) templates. For [edit pages](#edit-action) and [display](#display-action) templates there is a simple implementation provided which might be sufficient for flat (non-nested) arrays though.
 
 #### Object field
 
