@@ -12,6 +12,7 @@
 
 ### Generator changes
 
+* Fixed handling of `DateTime` values in history view of loggable entities.
 * Use new general deletion form type for delete actions for Zikula 1.4.7+ instead of generating a custom form type class.
 * Use `PermissionApiInterface` for Zikula 1.4.7+.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.4).
