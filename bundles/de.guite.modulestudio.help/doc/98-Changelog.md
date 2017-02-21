@@ -17,6 +17,7 @@
 * Use `PermissionApiInterface` for Zikula 1.4.7+.
 * Added a simple implementation for array field on display and edit pages.
 * Refactored search integration form options for Zikula 1.4.7+ (#972).
+* Avoid `Image` validation constraint for upload fields supporting also other file types.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.4).
 
 ## ModuleStudio 0.7.3 (Feb 18, 2017)
