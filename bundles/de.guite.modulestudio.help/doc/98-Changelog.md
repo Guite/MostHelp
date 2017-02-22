@@ -21,6 +21,7 @@
 * Made check for slug parameter in selection helper more robust.
 * Fixed logging of upload fields.
 * Fixed broken redirect for entities with only edit actions.
+* Made form fields for nullable relationships unrequired.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.4).
 
 ## ModuleStudio 0.7.3 (Feb 18, 2017)
