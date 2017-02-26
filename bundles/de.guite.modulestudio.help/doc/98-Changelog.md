@@ -23,6 +23,7 @@
 * Fixed broken redirect for entities with only edit actions.
 * Made form fields for nullable relationships unrequired.
 * Removed listener generation for some deprecated events (related to `user.gettheme`, `pageutil.addvar_filter`, `system.outputfilter`, old module dispatching, legacy APIs, legacy core, Smarty theme templates, Smarty module templates).
+* Set translation domain explicitely in link container.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.4).
 
 ## ModuleStudio 0.7.3 (Feb 18, 2017)
