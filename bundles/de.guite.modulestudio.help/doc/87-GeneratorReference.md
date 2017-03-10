@@ -70,8 +70,8 @@ Specifies the Zikula version for which the application should be generated.
 Can be one of the following options:
 
 * `ZK20` - Targets Zikula 2.0.0 and later. This is not supported yet and will currently be treated like `ZK14`.
-* `ZK14` - Targets the last stable Zikula 1.4.x version. This is the default value and useful when developing for future. Generated applications support the forward compatibility layer using 2.0.0 technology.
-* `ZK14DEV` - Targets the last unstable Zikula 1.4.x version. Thus it will always include changes for the next upcoming 1.4.x core release. You can use this to test new changes, while `ZK14` will still target the last stable core version.
+* `ZK14` - Targets the last stable Zikula 1.x version. This is the default value and useful when developing for future. Generated applications support the forward compatibility layer using 2.0.0 technology.
+* `ZK14DEV` - Targets the last unstable Zikula 1.x version. Thus it will always include changes for the next upcoming 1.x core release. You can use this to test new changes, while `ZK14` will still target the last stable core version.
 
 #### Settings container
 

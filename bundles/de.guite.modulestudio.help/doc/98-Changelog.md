@@ -13,10 +13,10 @@
 ### Generator changes
 
 * Fixed handling of `DateTime` values in history view of loggable entities.
-* Use new general deletion form type for delete actions for Zikula 1.4.7+ instead of generating a custom form type class.
-* Use `PermissionApiInterface` for Zikula 1.4.7+.
+* Use new general deletion form type for delete actions for Zikula 1.5.0+ instead of generating a custom form type class.
+* Use `PermissionApiInterface` for Zikula 1.5.0+.
 * Added a simple implementation for array field on display and edit pages.
-* Refactored search integration form options for Zikula 1.4.7+ (#972).
+* Refactored search integration form options for Zikula 1.5.0+ (#972).
 * Avoid `Image` validation constraint for upload fields supporting also other file types.
 * Made check for slug parameter in selection helper more robust.
 * Fixed logging of upload fields.
@@ -25,6 +25,8 @@
 * Removed listener generation for some deprecated events (related to `user.gettheme`, `pageutil.addvar_filter`, `system.outputfilter`, old module dispatching, legacy APIs, legacy core, Smarty theme templates, Smarty module templates).
 * Set translation domain explicitely in link container.
 * Provide entity change set to filter event classes in preUpdate events.
+* Use new workflow system based on Symfony workflow component for Zikula 1.5.0+ (#973).
+* Category-related fixes for when using multiple registries.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.4).
 
 ## ModuleStudio 0.7.3 (Feb 18, 2017)
