@@ -814,7 +814,7 @@ Note you must call this for all fetched entities, not for new ones (as the call 
 
 This solution approach is a bit ugly, because we require you (the module developer) calling this explicitly from the using code. If you forget it in a certain method workflows are not initialised properly.
 
-Outlook: a clean solution would not use any workflow utility class, but join the workflow entity directly. Also to make it really beautiful we would need own workflow tables for each entity (like done with categories for example) in order to keep things together. Note the Doctrine 2 development is working on a new event which is triggered after all entities have been fetched (a real *post* fetch). There is also a new [workflow component](http://symfony.com/blog/new-in-symfony-3-2-workflow-component) offered since Symfony 3.2. We are probably going to incorporate this into Zikula (see [core ticket #2423](https://github.com/zikula/core/issues/2423)) which might solve this issue, too.
+Note: this is fixed in the generator for Zikula 1.5.0+, since we utilise the Symfony workflow component there.
 
 #### Account deletion handler
 
