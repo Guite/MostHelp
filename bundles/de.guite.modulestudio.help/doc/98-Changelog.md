@@ -28,6 +28,7 @@
 * Use new workflow system based on Symfony workflow component for Zikula 1.5.0+ (#973).
 * Category-related fixes for when using multiple registries.
 * Use form type class constants for Zikula 1.5.0+.
+* Fixed problem with `datetime-local` input field and the validator.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.4).
 
 ## ModuleStudio 0.7.3 (Feb 18, 2017)
