@@ -8,7 +8,8 @@
 
 ### DSL / Modelling language changes
 
-* Removed the `softDeleteable` property which has been deprecated before (#970).
+* Removed the `softDeleteable` property which had been deprecated before (#970).
+* Added target versions for Zikula 1.5.x.
 
 ### Generator changes
 
@@ -24,13 +25,13 @@
 * Made form fields for nullable relationships unrequired.
 * Removed listener generation for some deprecated events (related to `user.gettheme`, `pageutil.addvar_filter`, `system.outputfilter`, old module dispatching, legacy APIs, legacy core, Smarty theme templates, Smarty module templates).
 * Set translation domain explicitely in link container.
-* Provide entity change set to filter event classes in preUpdate events.
+* Provide entity change set to filter event classes in `preUpdate` events.
 * Use new workflow system based on Symfony workflow component for Zikula 1.5.0+ (#973).
 * Category-related fixes for when using multiple registries.
 * Use form type class constants for Zikula 1.5.0+.
 * Fixed problem with `datetime-local` input field and the validator.
 * Generate a configuration setting for controlling which object types should be used in Scribite plug-ins / Finder component (#894).
-* Minor fix for localizedcurrency filter usage.
+* Minor fix for `localizedcurrency` filter usage.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.4).
 
 ## ModuleStudio 0.7.3 (Feb 18, 2017)
