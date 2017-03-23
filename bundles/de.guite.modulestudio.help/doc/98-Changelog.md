@@ -4,7 +4,7 @@
 
 ### Product changes
 
-* None yet.
+* Updated to Eclipse Neon.3 (4.6.3).
 
 ### DSL / Modelling language changes
 
