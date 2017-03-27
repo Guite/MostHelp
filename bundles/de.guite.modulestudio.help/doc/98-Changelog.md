@@ -34,6 +34,8 @@
 * Minor fix for `localizedcurrency` filter usage.
 * Excluded user fields from sorting because it would require joining the user table for each user field in almost all queries.
 * Several tree handling fixes.
+* Minor fix for sorting behaviour (route argument was not evaluated correctly anymore).
+* Reactivate automatic request processing by FilterUtil.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.4).
 
 ## ModuleStudio 0.7.3 (Feb 18, 2017)
