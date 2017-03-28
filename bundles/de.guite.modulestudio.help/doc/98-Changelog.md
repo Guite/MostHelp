@@ -36,6 +36,7 @@
 * Several tree handling fixes.
 * Minor fix for sorting behaviour (route argument was not evaluated correctly anymore).
 * Reactivate automatic request processing by FilterUtil.
+* Updated category integration for Zikula 1.5.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.4).
 
 ## ModuleStudio 0.7.3 (Feb 18, 2017)
