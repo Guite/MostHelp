@@ -40,6 +40,7 @@
 * Refactored list entry validation callbacks as custom validation constraint.
 * Fixed datetime input problems with webshim.
 * Removed selection helper in favour of entity factory (#975).
+* Several other bugfixes.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.4).
 
 ## ModuleStudio 0.7.3 (Feb 18, 2017)
