@@ -61,10 +61,6 @@ The rough steps of the generator workflow are as follows:
 
 The mapping from your model elements to the generated application elements is described in detail in the [generator reference](87-GeneratorReference.md#generator-reference) chapter.
 
-## Web generator
-
-The [web generator](http://webgen.modulestudio.de/en) regenerates your applications using the latest Git revision of the generator. You can upload models and generate the applications by clicking on a button. This may be useful if you rarely do amendments on a matured model, but want to update the implementation without having to start and update ModuleStudio itself.
-
 ## Stand-alone generator
 
 There is also a stand-alone generator available. This is a JAR file which can be used to generate applications from the command line.
