@@ -41,6 +41,7 @@
 * Fixed datetime input problems with webshim.
 * Removed selection helper in favour of entity factory (#975).
 * Quick navigation is now hidden by default. There is a filter button added which can be used to show it again.
+* DateTime fields are now persisted in UTC for Zikula 1.5.0+.
 * Several other bugfixes.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.4).
 
