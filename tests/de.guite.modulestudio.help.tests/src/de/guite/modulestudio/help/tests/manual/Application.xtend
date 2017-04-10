@@ -1,6 +1,7 @@
 package de.guite.modulestudio.help.tests.manual
 
 import org.junit.Test
+
 import static extension org.junit.Assert.*
 
 /**
