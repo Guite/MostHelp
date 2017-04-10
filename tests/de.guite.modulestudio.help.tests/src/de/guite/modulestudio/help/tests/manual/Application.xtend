@@ -12,7 +12,7 @@ class Application {
      * First dummy test.
      */
     @Test
-    def void testDummy() {
+    def testDummy() {
         (4+1).assertEquals(5)
     }
 }

@@ -13,6 +13,6 @@ public class Application {
    */
   @Test
   public void testDummy() {
-    Assert.assertEquals(Integer.valueOf((4 + 1)).toString(), Integer.valueOf(5).toString());
+    Assert.assertEquals((4 + 1), 5);
   }
 }
