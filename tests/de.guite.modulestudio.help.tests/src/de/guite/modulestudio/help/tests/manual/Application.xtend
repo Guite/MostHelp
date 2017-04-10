@@ -12,6 +12,6 @@ class Application {
      */
     @Test
     def void testDummy() {
-        (4+1).toString.assertEquals(5.toString)
+        (4+1).assertEquals(5)
     }
 }
