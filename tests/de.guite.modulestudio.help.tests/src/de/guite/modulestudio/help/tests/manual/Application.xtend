@@ -1,13 +1,17 @@
 package de.guite.modulestudio.help.tests.manual
 
+import org.junit.Test
+import static extension org.junit.Assert.*
+
 /**
  * This class tests certain aspects of the Application meta class.
  */
-describe 'Basic application class tests' {
+class Application {
     /**
      * First dummy test.
      */
-    fact 'Just a dummy test' {
-        (2-1) should not be 5
+    @Test
+    def void testDummy() {
+        (4+1).toString.assertEquals(5.toString)
     }
 }
