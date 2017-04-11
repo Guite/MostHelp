@@ -329,7 +329,6 @@
 * Added basic support for cache annotations for 1.4.0 apps (#567).
 * Structure of entity classes has been refactored for 1.4.0 to allow easier overriding from outside of the module using service parameters (#565).
 * Display and delete actions use the `ParamConverter` annotation for object selection in 1.4.0 (#563).
-* If no filters are set the current page of paginated views is remembered from session (#548).
 * Applications for 1.4.0 support `Monolog` logger as well as Symfony components `Filesystem` and `Finder` (#546).
 * Changed generated event subscribers for 1.4.0. Removed support for obsolete events, added support for Symfony kernel events (#544).
 * Applications for Zikula 1.4.0 use Symfony's dependency injection container now (#535).
