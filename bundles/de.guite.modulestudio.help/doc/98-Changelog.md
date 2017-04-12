@@ -43,6 +43,7 @@
 * Quick navigation is now hidden by default. There is a filter button added which can be used to show it again.
 * DateTime fields are now persisted in UTC for Zikula 1.5.0+.
 * Eliminated custom loggable listener (#984).
+* For Zikula 1.5.0+ new API interfaces are used for type hinting service arguments.
 * Several other bugfixes.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.4).
 
