@@ -25,7 +25,7 @@
 * Fixed broken redirect for entities with only edit actions.
 * Made form fields for nullable relationships unrequired.
 * Removed listener generation for some deprecated events (related to `user.gettheme`, `pageutil.addvar_filter`, `system.outputfilter`, old module dispatching, legacy APIs, legacy core, Smarty theme templates, Smarty module templates).
-* Set translation domain explicitely in link container.
+* Set translation domain explicitly in link container.
 * Provide entity change set to filter event classes in `preUpdate` events.
 * Use new workflow system based on Symfony workflow component for Zikula 1.5.0+ (#973).
 * Category-related fixes for when using multiple registries.
