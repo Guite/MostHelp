@@ -10,6 +10,7 @@
 
 * Removed the `softDeleteable` property which had been deprecated before (#970).
 * Added target versions for Zikula 1.5.x.
+* The generator settings `generateMailzApi`, `generateNewsletterPlugin`, `generateTagSupport` and `generateMultiHookNeedles` are now `false` by default instead of `true` (#994).
 
 ### Generator changes
 
