@@ -47,6 +47,7 @@
 * For Zikula 1.5.0+ new API interfaces are used for type hinting service arguments.
 * For multiple groups tabs are now used instead of collapse sections on display and edit pages (#974).
 * Use truncate filter for text fields on view pages (#990).
+* Added entity initialiser for dynamic application of default values (#995).
 * Several other bugfixes.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.4).
 
