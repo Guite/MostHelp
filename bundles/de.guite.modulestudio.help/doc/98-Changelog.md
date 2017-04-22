@@ -49,6 +49,7 @@
 * Use truncate filter for text fields on view pages (#990).
 * Added entity initialiser for dynamic application of default values (#995).
 * Support `detectCorrupted` constraint for image upload fields in Zikula 2.x (#799).
+* Prevent marking unchanged numeric values as dirty causing loggable picking them up from the entity changeset.
 * Several other bugfixes.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.4).
 
