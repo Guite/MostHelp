@@ -633,6 +633,8 @@ An abstract date field has the following properties in addition to the common [d
 
 The `past` and `future` properties are implemented as client-side and server-side validators.
 
+Note you can also use `now` as default value for date and time fields which results in that always the current timestamp is used for setting the initial value.
+
 #### Datetime field
 
 Represents a field type for storing datetime values with the format `YYYY-MM-DD H:i:s`.
