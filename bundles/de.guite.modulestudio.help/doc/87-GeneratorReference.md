@@ -555,6 +555,8 @@ For upload fields with images there are additional settings generated at the con
 
 For every upload field `foo` there will be another [array field](#array-field) created which is named `fooMeta`. This field stores some meta information about the uploaded files for convenience, like the file size, the image format (`portrait`, `landscape`, `square`) and the image dimensions.
 
+Also for every upload field `foo` there exists another field named `fooUrl` which can be used for linking or embedding the original file in an absolute way which works also if short urls point to a virtual subfolder.
+
 #### Upload naming scheme
 
 Represents different schemes for naming uploaded files.
