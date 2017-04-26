@@ -54,6 +54,7 @@
 * Prevent marking unchanged numeric values as dirty causing loggable picking them up from the entity changeset.
 * Replaced `getTitleFromDisplayPattern()` entity method by an `EntityDisplayHelper` class and a corresponding Twig filter (#979).
 * Removed more usages of legacy util classes (#979).
+* Cleanups for repository classes (#1002).
 * Several other bugfixes.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.4).
 
