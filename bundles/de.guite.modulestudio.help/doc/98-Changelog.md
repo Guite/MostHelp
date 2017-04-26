@@ -5,6 +5,8 @@
 ### Product changes
 
 * Updated to Eclipse Neon.3 (4.6.3).
+* Made preference fields optional (#1001).
+* Fixed non-critical but ugly startup error on Mac OS.
 
 ### DSL / Modelling language changes
 
@@ -50,6 +52,8 @@
 * Added entity initialiser for dynamic application of default values (#995).
 * Support `detectCorrupted` constraint for image upload fields in Zikula 2.x (#799).
 * Prevent marking unchanged numeric values as dirty causing loggable picking them up from the entity changeset.
+* Replaced `getTitleFromDisplayPattern()` entity method by an `EntityDisplayHelper` class and a corresponding Twig filter (#979).
+* Removed more usages of legacy util classes (#979).
 * Several other bugfixes.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.4).
 
