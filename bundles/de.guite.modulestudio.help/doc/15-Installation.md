@@ -28,7 +28,7 @@ At the moment this location is fixed. However, it is requested and planned to [m
 
 Every time you start ModuleStudio it searches for available updates. In case an update is found ModuleStudio asks whether it should download and install. If yes, it performs these actions and restarts afterwards. In general it is reasonable to install updates, as they contain generator bug fixes in most cases and maybe also new features. However, there are situations where you could decide against it: for example if an obsolete Zikula core target is not longer supported in a new version, but you still work with it, you should stay with your current version.
 
-By default MOST looks only for stable versions. You can also enable *staging updates* in the [preferences](38-Preferences.md#modulestudio-base-preferences) though in order to include also unstable updates which includes every new build. You can read more about staging updates [here](30-UserInterface.md#modulestudio-base-preferences).
+By default MOST looks only for stable versions. You can also enable *staging updates* in the [preferences](38-Preferences.md#modulestudio-base-preferences) though in order to include also unstable updates which includes every new build. You can read more about staging updates [here](38-Preferences.md#modulestudio-base-preferences).
 
 ## Starting in a different language
 
