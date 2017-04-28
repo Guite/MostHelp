@@ -55,7 +55,7 @@
 * Replaced `getTitleFromDisplayPattern()` entity method by an `EntityDisplayHelper` class and a corresponding Twig filter (#979).
 * Removed more usages of legacy util classes (#979).
 * Cleanups for repository classes (#1002).
-* Avoid deletion of parent objects if related child exist for a relation without delete cascade (#11).
+* Avoid deletion of parent objects if related children exist for a relation without delete cascade (#11).
 * Several other bugfixes.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.4).
 
