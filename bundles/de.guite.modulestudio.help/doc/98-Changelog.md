@@ -13,6 +13,7 @@
 * Removed the `softDeleteable` property which had been deprecated before (#970).
 * Added target versions for Zikula 1.5.x.
 * The generator settings `generateMailzApi`, `generateNewsletterPlugin`, `generateTagSupport` and `generateMultiHookNeedles` are now `false` by default instead of `true` (#994).
+* Added new generator setting `separateAdminTemplates` to allow generating independent template for admin and user areas (#685).
 
 ### Generator changes
 
