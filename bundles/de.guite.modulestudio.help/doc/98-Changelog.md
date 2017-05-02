@@ -7,6 +7,8 @@
 * Updated to Eclipse Neon.3 (4.6.3).
 * Made preference fields optional (#1001).
 * Fixed non-critical but ugly startup error on Mac OS.
+* ModuleStudio features and updates are now signed using a purchased certificate (#801).
+* The ModuleStudio executable is additionally signed to satisfy Windows SmartScreen (#801).
 
 ### DSL / Modelling language changes
 
