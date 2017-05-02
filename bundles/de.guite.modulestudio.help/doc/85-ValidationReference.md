@@ -41,8 +41,8 @@ The biggest part is a reference section listing all validation rules in detail a
 
 * The data object must be assigned to an application. Should not occur in practice, this is just for completeness.
 * Every data object must contain at least one field or inherit fields from a parent object. Ensures that either there are some fields in this entity or an outgoing inheritance relationship.
-* You may not mark a field as primary, this is done automatically - unless maybe you want to create composite primary keys. This warning appears because ModuleStudio adds primary keys automatically and uses the Doctrine 2 default settings if nothing else is explicitly specified in the model. Beside special use cases like custom join conditions or composite primary keys you won't need to set primary keys manually.
-* Remove ID fields... you do not need them ;-) unless maybe you want to create composite primary keys. This warning appears if a field is named like `id` or `personid` or `person_id` for a data object named `person`. By default ModuleStudio adds primary keys automatically before generation happens.
+* You may not mark a field as primary, this is done automatically. This warning appears because ModuleStudio adds primary keys automatically and uses the Doctrine 2 default settings if nothing else is explicitly specified in the model. Beside special use cases like custom join conditions or composite primary keys you won't need to set primary keys manually.
+* Remove ID fields... you do not need them ;-) This warning appears if a field is named like `id` or `personid` or `person_id` for a data object named `person`. By default ModuleStudio adds primary keys automatically before generation happens.
 * Data object names must be unique. For example there must not exist two entities which are both named `person`.
 * Every entity must have a (name | name for multiple instances). Entity (multiple) name must have a length of at least two chars. Should have at least four chars.
 * Entity (multiple) name must not contain underscores. Underscores are not allowed as they are used for class autoloading.
@@ -55,7 +55,7 @@ The biggest part is a reference section listing all validation rules in detail a
 #### General entity settings
 
 * Exactly one entity must be declared as leading (`leading=true`).
-* Composite entities can only have identifier strategy `NONE`. Automatic identifier generation is not possible for composite primary keys.
+* Composite keys are not supported anymore.
 * The entity needs a display pattern. Occurs when no display pattern is defined.
 * The display pattern does not contain any field references. Please check whether this is on purpose or not. This warning occurs if a display pattern does not contain any field references.
 * Every entity with an archive (`hasArchive` set to `true`) must contain one datetime or date field designated as end date. For implementation of an automatic archiving functionality the system must know when an object has reached the end of it's lifecycle.
