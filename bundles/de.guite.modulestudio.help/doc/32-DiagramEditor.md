@@ -295,7 +295,7 @@ Quite often you want to change the position of a field or a variable within its 
 
 ![Change variable position](images/ui_diagram_reposition_variable.png "Change variable position")
 
-Of course this seems a bit cumbersome. Note earlier versions of ModuleStudio allowed to do this using drag n drop. It was even possible to move one or multiple fields from one entity into another one. This is currently not possible, but going to be re-implemented very soon.
+Of course this seems a bit cumbersome. Note earlier versions of ModuleStudio allowed to do this using drag n drop. This is currently not possible, but going to be re-implemented very soon.
 
 ### Move fields between entities
 
