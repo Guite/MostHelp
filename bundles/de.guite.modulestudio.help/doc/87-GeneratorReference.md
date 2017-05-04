@@ -991,7 +991,7 @@ The sorting direction is optional and defaults to `ASC`.
 
 #### Auto completion usage
 
-Defines whether and which sides of a relationship will be handled by an auto completion field instead of a drop-down field during editing. Note that inline creation and editing of related items (see [edit types](#relation-edit-type)) is only possible when using the auto completion approach.
+Defines whether and which sides of a relationship will be handled by an auto completion field instead of a drop-down field during editing. Note that inline creation and editing of related items (see [edit types](#relation-edit-type)) is only possible when using the auto completion approach. However, it is planned to make this available for choices, too (see [ticket #982](https://github.com/Guite/MostGenerator/issues/982)).
 
 Can be one of the following options:
 

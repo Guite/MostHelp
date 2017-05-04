@@ -63,6 +63,7 @@
 * Avoid deletion of parent objects if related children exist for a relation without delete cascade (#11).
 * Added more configuration settings for geographical options (defaults for latitude, longitude, map type and zoom level) (#1000).
 * For applications containing language or locale fields a configuration setting is generated allowing to activate locale-based filtering in the frontend (#998).
+* Added custom sluggable transliterator for proper handling of umlauts and accents during permalink generation (#241).
 * Several other bugfixes.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.4).
 
