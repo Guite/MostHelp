@@ -18,6 +18,7 @@
 * Added new generator setting `separateAdminTemplates` to allow generating independent templates for admin and user areas (#685).
 * Removed support for composite primary keys. Each entity may only have max. one field marked as `primaryKey` (#1035). Using multiple foreign keys in a relationship is still supported though.
 * Added new generator setting `authenticationMethod` to control whether a skeleton for an authentication method should be generated or not (default value is `NONE`) (#361).
+* Added possibility to mark a string field as `dateInterval` (#229). Only applicable for Zikula 2.0.
 
 ### Generator changes
 

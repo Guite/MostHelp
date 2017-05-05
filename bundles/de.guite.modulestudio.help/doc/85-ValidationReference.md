@@ -184,7 +184,7 @@ The following list has been merged and includes therefore all keywords of all su
 * String length for ip addresses must be at least `39` chars. Occurs if you set the `ip address` property to a value covering IPv6 addresses or if you enable the `ipTraceable` extension for a field with a length smaller than `39`.
 * String length for time zones must be at least `30` chars. Occurs if you activate the `timezone` property for a field with a length smaller than `30`.
 * String length for uuids must be at least `36` chars. Occurs if you activate the `uuid` property for a field with a length smaller than `36`.
-* A string can only be one of bic, country, creditCard, currency, language, locale, htmlcolour, iban, isbn, issn, ip address, password, timezone and uuid.
+* A string can only be one of bic, country, creditCard, currency, dateInterval, language, locale, htmlcolour, iban, isbn, issn, ip address, password, timezone and uuid.
 * String length must not be greater than `255`; for bigger sizes use text fields.
 * The default value for an email field must be a valid email address.
 * The default value for an url field must be a valid url. Allowed protocols are `http`, `ftp` and `https`.
