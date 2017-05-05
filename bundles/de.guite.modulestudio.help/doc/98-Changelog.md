@@ -64,7 +64,7 @@
 * Added more configuration settings for geographical options (defaults for latitude, longitude, map type and zoom level) (#1000).
 * For applications containing language or locale fields a configuration setting is generated allowing to activate locale-based filtering in the frontend (#998).
 * Added custom sluggable transliterator for proper handling of umlauts and accents during permalink generation (#241).
-* Utilised some features of Symfony 3 for the `ZK20` target (#797, to be continued).
+* Utilised some features of Symfony 3 for the `ZK20` target (#797). This includes new stuff from Symfony 3.1 and 3.2. News from Symfony 3.3 are approached later (after Zikula 2.0 has been updated to it).
 * Several other bugfixes.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.4).
 
