@@ -1062,9 +1062,8 @@ Container class for carrying module variables.
 
 It includes the following properties:
 
-* **sortOrder** - The sorting position for when using multiple variable sections.
-
-![Configuration form with multiple sections](images/generator_config_tabbedpanel.png "Configuration form with multiple sections")
+* **composite** - Whether this container should act as a composite variable or not. Default value is `false`.
+* **sortOrder** - The sorting position for when using multiple variable sections. Default value is `1`.
 
 A var container may have the following references:
 
@@ -1073,7 +1072,17 @@ A var container may have the following references:
 
 As soon as at least one variable container exists the generator creates an additional `config` controller to let the site admin manage available settings.
 
-If a model contains multiple variable containers the config page will use a tabbed panel containing a tab for each container, sorted by the `sortOrder` field. This allows separating settings in bigger models into logical semantic groups.
+If a model contains multiple variable containers the config page will use a tabbed panel containing a tab for each container, sorted by the `sortOrder` field, like shown in the following screenshot. This allows separating settings in bigger models into logical semantic groups.
+
+![Configuration form with multiple sections](images/generator_config_tabbedpanel.png "Configuration form with multiple sections")
+
+By default a variable container serves only for grouping the contained variables. If the `composite` flag is enabled though behaviour is different. In this case the variable container results in a module variable itself which is persisted as an array containing all single variables as elements.
+
+For example imagine you want to create to variables for a payment method and a payment url.
+
+Option 1: create a variable container named `payment` with `composite=false` and two variables `paymentMethod` and `paymentUrl` in it. This leads to two module variables `paymentMethod = ''` and `paymentUrl = ''`.
+
+Option 2: create a variable container named `payment` with `composite=true` and two variables `method` and `url` in it. This leads to one module variable `payment = ['paymentMethod' => '', 'paymentUrl' => '']`.
 
 #### Variable
 

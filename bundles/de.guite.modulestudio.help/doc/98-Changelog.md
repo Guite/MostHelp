@@ -19,6 +19,7 @@
 * Removed support for composite primary keys. Each entity may only have max. one field marked as `primaryKey` (#1035). Using multiple foreign keys in a relationship is still supported though.
 * Added new generator setting `authenticationMethod` to control whether a skeleton for an authentication method should be generated or not (default value is `NONE`) (#361).
 * Added possibility to mark a string field as `dateInterval` (#229). Only applicable for Zikula 2.0.
+* A variable container can now act as `composite` (#390). More details can be found in the [generator reference](87-GeneratorReference.md#variables).
 
 ### Generator changes
 
