@@ -1025,10 +1025,11 @@ Can be one of the following options:
 
 * `ACTIVE_NONE_PASSIVE_CHOOSE` - Editing the parent does nothing. Editing the child includes choosing the parent.
 * `ACTIVE_NONE_PASSIVE_EDIT` - Editing the parent does nothing. Editing the child includes choosing, adding and editing the parent.
-* `ACTIVE_CHOOSE_PASSIVE_NONE` - Only for many-to-many: Editing the parent includes choosing the children. Editing the child does nothing.
+* `ACTIVE_CHOOSE_PASSIVE_CHOOSE` - Editing the parent includes choosing the children. Editing the child includes choosing the parent.
+* `ACTIVE_CHOOSE_PASSIVE_NONE` - Editing the parent includes choosing the children. Editing the child does nothing.
 * `ACTIVE_EDIT_PASSIVE_CHOOSE` - Editing the parent includes choosing, adding and editing the children. Editing the child includes choosing the parent.
 * `ACTIVE_EDIT_PASSIVE_EDIT` - Editing the parent includes choosing, adding and editing the children. Editing the child includes choosing, adding and editing the parent.
-* `ACTIVE_EDIT_PASSIVE_NONE` - Only for many-to-many: Editing the parent includes choosing, adding and editing the children. Editing the child does nothing.
+* `ACTIVE_EDIT_PASSIVE_NONE` - Editing the parent includes choosing, adding and editing the children. Editing the child does nothing.
 
 For each entity the generator creates some templates to be included in the [edit templates](#edit-action) of related entities (for example a display list and another one for edit). Depending on which edit type is defined for a relationship the corresponding edit template (choose or edit) is included or not.
 

@@ -250,20 +250,8 @@ Includes basically all relationships in the data layer except inheritance.
 * Self relation must not reference the `sourceField` field for both source and target. For self relation the source field must not be equal to the target field (as the database needs two fields in order to store both sides).
 * Between two entities there must not be multiple join relations with cascade options.
 
-#### One to one relationship
-
-* The edit type `ACTIVE_CHOOSE_PASSIVE_NONE` is only valid for many to many relationships.
-* The edit type `ACTIVE_EDIT_PASSIVE_NONE` is only valid for many to many relationships.
-
-#### Many to one relationship
-
-* The edit type `ACTIVE_CHOOSE_PASSIVE_NONE` is only valid for many to many relationships.
-* The edit type `ACTIVE_EDIT_PASSIVE_NONE` is only valid for many to many relationships.
-
 #### One to many relationship
 
-* The edit type `ACTIVE_CHOOSE_PASSIVE_NONE` is only valid for many to many relationships.
-* The edit type `ACTIVE_EDIT_PASSIVE_NONE` is only valid for many to many relationships.
 * The `orderBy` attribute points to an invalid field of the target entity. Checks whether the target entity contains a field equally named like the `orderBy` property. In case multiple fields are used in the `orderBy` property each single field is validated.
 * The `indexBy` attribute points to an invalid field of the target entity. Checks whether the target entity contains a field equally named like the `indexBy` property.
 * IndexBy fields must be unique. The target entity field used for `indexBy` must have the `unique` validator enabled.

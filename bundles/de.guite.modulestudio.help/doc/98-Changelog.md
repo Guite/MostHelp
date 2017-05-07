@@ -20,6 +20,7 @@
 * Added new generator setting `authenticationMethod` to control whether a skeleton for an authentication method should be generated or not (default value is `NONE`) (#361).
 * Added possibility to mark a string field as `dateInterval` (#229). Only applicable for Zikula 2.0.
 * A variable container can now act as `composite` (#390). More details can be found in the [generator reference](87-GeneratorReference.md#variables).
+* Added `ACTIVE_CHOOSE_PASSIVE_CHOOSE` edit type, removed restrictions of some other edit types (#330).
 
 ### Generator changes
 
