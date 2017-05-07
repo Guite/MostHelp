@@ -46,7 +46,6 @@
 * Excluded user fields from sorting because it would require joining the user table for each user field in almost all queries.
 * Several tree handling fixes.
 * Minor fix for sorting behaviour (route argument was not evaluated correctly anymore).
-* Reactivate automatic request processing by FilterUtil.
 * Updated category integration for Zikula 1.5.
 * Refactored list entry validation callbacks as custom validation constraint.
 * Fixed datetime input problems with webshim.
