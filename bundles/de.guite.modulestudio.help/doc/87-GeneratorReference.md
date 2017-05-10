@@ -274,7 +274,7 @@ A derived field has the following properties in addition to the common [entity f
 * **primaryKey** - A boolean specifying whether this is a primary key field or not. Default value is `false`. Usually there is no need to enable this for any fields as the generator adds primary and foreign key fields automatically.
 * **readonly** - A boolean specifying whether this a read only field or not. The default value is `false`. If set to `true` then this field may not be changed during editing.
 * **sluggablePosition** - Position of this field in the created slugs. A value of `0` (default) means that this field is not part of the slug at all. If at least one field in an entity has a sluggable position greater than `0` then this entity is considered as sluggable. In this case a permalink is built automatically from all fields in ascending position. See the slug properties on [entity](#entity) level for slug-related configuration options.
-* **sortableGroup** - A boolean specifying whether this field acts as grouping criteria for the [Sortable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/sortable.md). The default value is `false`. SortableGroup is not fully implemented yet, do not use if you not understand the function.
+* **sortableGroup** - A boolean specifying whether this field acts as grouping criteria for the [Sortable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/sortable.md). The default value is `false`. SortableGroup is not utilised automatically in the repository queries yet, thus use it only if you understand how you want to use the function.
 * **translatable** - A boolean specifying whether this field is translatable or not. The default value is `false`. If at least one field in an entity is translatable the generator creates an additional class for managing the translation entities (see [Translatable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/translatable.md) for more details). Overall support for translations in the application should get you started. For customisation you can override `TranslatableHelper` methods.
 
 ![Edit form with translatable fields](images/generator_translatable.png "Edit form with translatable fields")
@@ -311,7 +311,7 @@ Represents an abstract integer field for grouping different implementations of t
 An abstract integer field has the following properties in addition to the common [derived field](#derived-field) settings:
 
 * **length** - The length of this field. This controls whether the Doctrine mapping type will be `integer` (5-11), `bigint` (> 11) or `smallint` (< 5). Default value is `11`.
-* **sortablePosition** - A boolean specifying whether this field stores the position for the [Sortable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/sortable.md) or not. If set to `true` this field will be used as default sorting criteria. There is no built-in reordering possibility, for example with drag n drop, implemented yet (see [#29](https://github.com/Guite/MostGenerator/issues/29) for more information).
+* **sortablePosition** - A boolean specifying whether this field stores the position for the [Sortable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/sortable.md) or not. If set to `true` this field will be used as default sorting criteria. In [view pages](#view-action) there is a drag n drop functionality offered for easy reordering.
 
 #### Integer field
 
@@ -933,6 +933,7 @@ Represents many-to-one relationships.
 It includes the following properties in addition to the common [join relationship](#join-relationship) settings:
 
 * **primaryKey** - A boolean specifying whether the foreign key of this relation should act as a primary key. The default value is `false`. Please note that this has not been tested yet and probably won't be supported properly yet by the controller layers in the generated application.
+* **sortableGroup** - A boolean specifying whether the foreign key of this relation acts as grouping criteria for the [Sortable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/sortable.md). The default value is `false`. SortableGroup is not utilised automatically in the repository queries yet, thus use it only if you understand how you want to use the function.
 
 #### Many to many relationship
 

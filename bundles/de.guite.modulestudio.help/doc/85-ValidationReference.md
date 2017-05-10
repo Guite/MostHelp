@@ -136,7 +136,7 @@ The following list has been merged and includes therefore all keywords of all su
 * The sluggable position values must be unique per entity. If fields are included into a slug by setting a value greater than `0`, this value must be unique per entity. The position defines in which order the field values are considered as permalink parts.
 * Only one field per entity may store the sortable position. Can occur if one tries to use multiple integer or user fields as position for the sortable extension.
 * The sortable position may not be the sortable group, too. As soon as a field is used as sortable position it can not also act as the grouping criteria at the same time.
-* You need another field as sortable position to make the sortable group work. Can occur for a field marked as sortable group.
+* You need another field as sortable position to make the sortable group work. Can occur for a field or a many to one relationship marked as sortable group if no integer field is marked as sortable position.
 * Only one field per entity may store the version. Can appear for integer and datetime fields if you enabled the `version` property for more than one field in the same entity.
 * Only one field per entity may represent a start date. Can appear for datetime and date fields if you enabled the `start date` property for more than one field in the same entity.
 * Only one field per entity may represent an end date. Can appear for datetime and date fields if you enabled the `end date` property for more than one field in the same entity.

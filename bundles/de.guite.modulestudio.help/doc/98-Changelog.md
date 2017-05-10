@@ -21,6 +21,7 @@
 * Added possibility to mark a string field as `dateInterval` (#229). Only applicable for Zikula 2.0.
 * A variable container can now act as `composite` (#390). More details can be found in the [generator reference](87-GeneratorReference.md#variables).
 * Added `ACTIVE_CHOOSE_PASSIVE_CHOOSE` edit type, removed restrictions of some other edit types (#330).
+* Added `sortableGroup` flag to `ManyToOne` relationships (#29).
 
 ### Generator changes
 
@@ -68,6 +69,8 @@
 * Added custom sluggable transliterator for proper handling of umlauts and accents during permalink generation (#241).
 * Reviewed and overhauled help texts about field constraints in edit forms (#847).
 * Utilised some features of Symfony 3 for the `ZK20` target (#797). This includes new stuff from Symfony 3.1 and 3.2. News from Symfony 3.3 are approached later (after Zikula 2.0 has been updated to it).
+* AutoCompletion is now based on jQuery UI instead of typeahead (#1045).
+* Added possibility to reorder sortable entities on view pages using drag n drop (#29).
 * Several other bugfixes.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.4).
 
