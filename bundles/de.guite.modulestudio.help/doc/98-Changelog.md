@@ -71,6 +71,7 @@
 * Utilised some features of Symfony 3 for the `ZK20` target (#797). This includes new stuff from Symfony 3.1 and 3.2. News from Symfony 3.3 are approached later (after Zikula 2.0 has been updated to it).
 * AutoCompletion is now based on jQuery UI instead of typeahead (#1045).
 * Added possibility to reorder sortable entities on view pages using drag n drop (#29).
+* Added a reset link for unsetting a non-mandatory user field (#1047).
 * Several other bugfixes.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.4).
 
