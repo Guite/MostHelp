@@ -22,6 +22,7 @@
 * A variable container can now act as `composite` (#390). More details can be found in the [generator reference](87-GeneratorReference.md#variables).
 * Added `ACTIVE_CHOOSE_PASSIVE_CHOOSE` edit type, removed restrictions of some other edit types (#330).
 * Added `sortableGroup` flag to `ManyToOne` relationships (#29).
+* The default value of `bidirectional` is `false` again to prevent serialisation problems.
 
 ### Generator changes
 

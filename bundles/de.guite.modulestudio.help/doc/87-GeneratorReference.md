@@ -909,7 +909,7 @@ Represents one-to-one relationships.
 
 It includes the following properties in addition to the common [join relationship](#join-relationship) settings:
 
-* **bidirectional** - A boolean specifying whether this relationship is bidirectional or not. The default value is `true`.
+* **bidirectional** - A boolean specifying whether this relationship is bidirectional or not. The default value is `false`.
 * **orphanRemoval** - Default value is `false`. If set to `true` orphans get removed automatically.
 * **primaryKey** - A boolean specifying whether the foreign key of this relation should act as a primary key. The default value is `false`. Please note that this has not been tested yet and probably won't be supported properly yet by the controller layers in the generated application.
 
@@ -919,7 +919,7 @@ Represents one-to-many relationships.
 
 It includes the following properties in addition to the common [join relationship](#join-relationship) settings:
 
-* **bidirectional** - A boolean specifying whether this relationship is bidirectional or not. The default value is `true`.
+* **bidirectional** - A boolean specifying whether this relationship is bidirectional or not. The default value is `false`.
 * **indexBy** - Set to target field name (must be unique) to specify the index by criteria for the relation. Please note that this has not be tested very well yet.
 * **orderBy** - Set to target field name(s) to specify the sorting criteria for the outgoing relation. Some examples are shown [below](#ordering-many-valued-relationship-sides).
 * **orphanRemoval** - Default value is `false`. If set to `true` orphans get removed automatically.
@@ -941,7 +941,7 @@ Represents many-to-many relationships.
 
 It includes the following properties in addition to the common [join relationship](#join-relationship) settings:
 
-* **bidirectional** - A boolean specifying whether this relationship is bidirectional or not. The default value is `true`.
+* **bidirectional** - A boolean specifying whether this relationship is bidirectional or not. The default value is `false`.
 * **indexBy** - Set to target field name (must be unique) to specify the index by criteria for the relation. Please note that this has not be tested very well yet.
 * **orderBy** - Set to target field name(s) to specify the sorting criteria for the outgoing relation. Some examples are shown [below](#ordering-many-valued-relationship-sides).
 * **orderByReverse** - Set to source field name(s) to specify the sorting criteria for the incoming relation. Some examples are shown [below](#ordering-many-valued-relationship-sides).
