@@ -1,5 +1,20 @@
 # Changelog
 
+## ModuleStudio 0.7.5 (unreleased)
+
+### Product changes
+
+* none yet
+
+### DSL / Modelling language changes
+
+* none yet
+
+### Generator changes
+
+* none yet
+* For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.5).
+
 ## ModuleStudio 0.7.4 (May 19, 2017)
 
 ### Product changes
@@ -74,7 +89,7 @@
 * Added possibility to reorder sortable entities on view pages using drag n drop (#29).
 * Added a reset link for unsetting a non-mandatory user field (#1047).
 * Several other bugfixes.
-* For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.4).
+* For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.5).
 
 ## ModuleStudio 0.7.3 (Feb 18, 2017)
 
