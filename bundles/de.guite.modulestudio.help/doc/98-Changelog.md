@@ -12,7 +12,7 @@
 
 ### Generator changes
 
-* Fixed some issues with auto completion based relationship handling (#1054).
+* Fixed some issues with auto completion based relationship handling (#1054, #1056).
 * Fixed generation of applications containing inheritance relationships (#1055).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.5).
 
