@@ -15,6 +15,7 @@
 * Fixed some issues with auto completion based relationship handling (#1054, #1056).
 * Fixed generation of applications containing inheritance relationships (#1055).
 * Fixed typos in `DiscriminatorMap` annotation (#1057, #1058).
+* Fixed wrong import statement for inheriting entities (#1062).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.5).
 
 ## ModuleStudio 0.7.4 (May 19, 2017)
