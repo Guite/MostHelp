@@ -5,6 +5,7 @@
 ### Product changes
 
 * Updated to Eclipse Oxygen (4.7).
+* Removed packages for Linux PPC.
 
 ### DSL / Modelling language changes
 
