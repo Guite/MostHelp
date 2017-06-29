@@ -4,7 +4,7 @@
 
 ### Product changes
 
-* none yet
+* Updated to Eclipse Oxygen (4.7).
 
 ### DSL / Modelling language changes
 
