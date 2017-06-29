@@ -7,7 +7,7 @@
 
     Original file: https://github.com/jpilgrim/mitra2/blob/master/plugins/de.jevopi.mitra2.doc/build-help.xml
 
-    Documentation of ant tasks: http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.mylyn.wikitext.help.ui%2Fhelp%2FMarkup-Generation.html
+    Documentation of ant tasks: http://help.eclipse.org/oxygen/topic/org.eclipse.mylyn.wikitext.help.ui/help/Markup-Generation.html?cp=69_1_3
 -->
     <description>Generate ModuleStudio help content</description>
     <!--
@@ -17,7 +17,7 @@
     <path id="wikitext.classpath">
         <pathelement path="${compile_classpath}"/>
     </path>
-    <taskdef classpathref="wikitext.classpath" resource="org/eclipse/mylyn/wikitext/core/ant/tasks.properties" />
+    <taskdef classpathref="wikitext.classpath" resource="org/eclipse/mylyn/wikitext/ant/tasks.properties" />
     <taskdef classpathref="wikitext.classpath" name="fop" classname="org.apache.fop.tools.anttasks.Fop"/>
 
     <property name="source.dir" value="${basedir}/doc" />
