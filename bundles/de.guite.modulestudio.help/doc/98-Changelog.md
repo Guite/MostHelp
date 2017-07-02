@@ -20,6 +20,7 @@
 * Fixed form field options for list block if only one entity exists (#1063).
 * Fixed categories related typo in list block editing template (#1065).
 * Fixed resizing of too huge original images.
+* Fixed cosmetical issue in categories filter in quick navigation forms in XS viewport (#1074).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.5).
 
 ## ModuleStudio 0.7.4 (May 19, 2017)
