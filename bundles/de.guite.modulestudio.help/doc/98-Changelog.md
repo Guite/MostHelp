@@ -23,6 +23,7 @@
 * Fixed cosmetic issue in categories filter in quick navigation forms in XS viewport (#1074).
 * Fixed potentially wrong routes in RouteUrl objects.
 * Applications for Zikula 1.5+ support `FormAwareHook` and non-persisted hooks (#1072).
+* Properly consider inheritance in `ListEntriesHelper`.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.5).
 
 ## ModuleStudio 0.7.4 (May 19, 2017)
