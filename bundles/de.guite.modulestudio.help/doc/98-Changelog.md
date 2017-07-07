@@ -28,6 +28,7 @@
 * Fixed workflow state field related issue for child entities (#1064).
 * Several other fixes regarding entity inheritance (#46).
 * Fixed resorting of view pages using table column headers or quick navigation.
+* Auto completion fields for related items are automatically triggered after having created a new one (#1060). Additionally, if only one result is found this is automatically selected.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.5).
 
 ## ModuleStudio 0.7.4 (May 19, 2017)
