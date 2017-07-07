@@ -83,7 +83,6 @@ A settings container has the following fields:
 
 * **targetCoreVersion** - The targeted Zikula core version. See [above](#core-version).
 * **isSystemModule** - A boolean specifying whether the model describes a system module or not. Default value is `false`.
-* **amountOfExampleRows** - The amount of example rows to create for entities in this application. This is *deprecated* and does not have any effect.
 * **generateAccountApi** - A boolean specifying whether account panel integration should be generated or not. Default value is `true`.
 * **generateSearchApi** - A boolean specifying whether search integration should be generated or not. Requires at least one string or text field in any entity. Default value is `true`.
 * **generateMailzApi** - A boolean specifying whether Mailz support should be generated or not. Default value is `false`.
