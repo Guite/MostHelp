@@ -92,7 +92,6 @@ Example:
         // manual code
     }
 
-While this implementation approach is quite elegant it is not completed yet in all areas unfortunately. At least during installation everything should be fine. When working with the application you will notice that inherited fields are handled well, but additional fields from the parent classes are not considered yet everywhere. See [#46](https://github.com/Guite/MostGenerator/issues/46) for more information.
 
 ## How to handle custom code
 

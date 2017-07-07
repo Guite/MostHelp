@@ -26,7 +26,7 @@
 * Applications for Zikula 1.5+ support `FormAwareHook` and non-persisted hooks (#1072).
 * Properly consider inheritance in `ListEntriesHelper`.
 * Fixed workflow state field related issue for child entities (#1064).
-* Several other fixes regarding entity inheritance.
+* Several other fixes regarding entity inheritance (#46).
 * Fixed resorting of view pages using table column headers or quick navigation.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.5).
 
