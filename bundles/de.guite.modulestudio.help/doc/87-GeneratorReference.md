@@ -86,18 +86,18 @@ A settings container has the following fields:
 * **isSystemModule** - A boolean specifying whether the model describes a system module or not. Default value is `false`.
 * **generateAccountApi** - A boolean specifying whether account panel integration should be generated or not. Default value is `true`.
 * **generateSearchApi** - A boolean specifying whether search integration should be generated or not. Requires at least one string or text field in any entity. Default value is `true`.
-* **generateMailzApi** - A boolean specifying whether Mailz support should be generated or not. Default value is `false`.
+* **generateMailzApi** - A boolean specifying whether Mailz support should be generated or not. Default value is `false`. This has no effect for Zikula 2.x because the Mailz module has not been migrated yet.
 * **generateListBlock** - A boolean specifying whether a generic list block should be generated or not. Default value is `true`.
 * **generateModerationBlock** - A boolean specifying whether a moderation block should be generated or not. Requires at least one entity with a workflow including approval. Default value is `true`.
-* **generateListContentType** - A boolean specifying whether a content type for collection lists should be generated or not. Default value is `true`.
-* **generateDetailContentType** - A boolean specifying whether a content type for single objects should be generated or not. Requires at least one entity containing a display action. Default value is `true`.
-* **generateNewsletterPlugin** - A boolean specifying whether a Newsletter plug-in should be generated or not. Default value is `false`.
+* **generateListContentType** - A boolean specifying whether a content type for collection lists should be generated or not. Default value is `true`. This has no effect for Zikula 2.x because the Content module has not been migrated yet.
+* **generateDetailContentType** - A boolean specifying whether a content type for single objects should be generated or not. Requires at least one entity containing a display action. Default value is `true`. This has no effect for Zikula 2.x because the Content module has not been migrated yet.
+* **generateNewsletterPlugin** - A boolean specifying whether a Newsletter plug-in should be generated or not. Default value is `false`. This has no effect for Zikula 2.x because the Newsletter module has not been migrated yet.
 * **generateModerationPanel** - A boolean specifying whether a moderation panel should be generated or not. Requires at least one entity with a workflow including approval. Default value is `true`.
 * **generatePendingContentSupport** - A boolean specifying whether support for pending content should be generated or not. Requires at least one entity with a workflow including approval. Default value is `true`.
 * **generateExternalControllerAndFinder** - A boolean specifying whether a controller for external calls providing a generic finder component should be generated or not. Default value is `true`. Works only for entities containing a [display action](#display-action).
 * **generateScribitePlugins** - A boolean specifying whether support for several [Scribite editors](https://github.com/zikula-modules/Scribite/) should be generated or not. Requires external controller with finder component. Default value is `true`.
-* **generateTagSupport** - A boolean specifying whether tag support should be generated or not. Requires at least one entity containing a display action. Default value is `false`.
-* **generateMultiHookNeedles** - A boolean specifying whether MultiHook needles should be generated or not. Default value is `false`.
+* **generateTagSupport** - A boolean specifying whether tag support should be generated or not. Requires at least one entity containing a display action. Default value is `false`. This has no effect for Zikula 2.x because the Tag module has not been migrated yet.
+* **generateMultiHookNeedles** - A boolean specifying whether MultiHook needles should be generated or not. Default value is `false`. This has no effect for Zikula 2.x because the MultiHook module has not been migrated yet.
 * **generateRssTemplates** - A boolean specifying whether RSS view templates should be generated or not. Default value is `true`.
 
 ![Example for RSS feed](images/generator_output_feed_rss.png "Example for RSS feed")
