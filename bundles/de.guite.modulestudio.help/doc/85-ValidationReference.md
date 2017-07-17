@@ -25,6 +25,7 @@ The biggest part is a reference section listing all validation rules in detail a
 ### Settings container
 
 * Settings container must be assigned to an application. Should not occur in practice, this is just for completeness.
+* Support for Zikula 1.4.x is deprecated and will be removed after the release of ModuleStudio 0.7.5. You might switch the target core version to `ZK15`.
 * Scribite plug-ins require external controller and finder component. If you enable `generateScribitePlugins` you also need `generateExternalControllerAndFinder`.
 
 ### Referred application

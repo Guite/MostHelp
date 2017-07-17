@@ -69,11 +69,12 @@ Specifies the Zikula version for which the application should be generated.
 
 Can be one of the following options:
 
-* `ZK20` - Targets Zikula 2.0.0 and later. This is not supported yet and will currently be treated like `ZK15DEV`.
-* `ZK15` - Targets the last stable Zikula 1.5.x version.
-* `ZK15DEV` - Targets the last unstable Zikula 1.5.x version and will always include changes for the next upcoming 1.5.x core release.
-* `ZK14` - Targets the last stable Zikula 1.4.x version. This is the default value.
-* `ZK14DEV` - Targets the last unstable Zikula 1.4.x version.
+* `ZK20` - Targets the last stable Zikula 2.0.x version.
+* `ZK2DEV` - Targets the last unstable Zikula 2.x version and may include changes for the next upcoming 2.x core release.
+* `ZK15` - Targets the last stable Zikula 1.5.x version. This is the default value.
+* `ZK15DEV` - Targets the last unstable Zikula 1.5.x version and may include changes for the next upcoming 1.5.x core release.
+* `ZK14` - Targets the last stable Zikula 1.4.x version. This is deprecated and will be removed after the release of ModuleStudio 0.7.5.
+* `ZK14DEV` - Targets the last unstable Zikula 1.4.x version. This is deprecated and will be removed after the release of ModuleStudio 0.7.5.
 
 #### Settings container
 

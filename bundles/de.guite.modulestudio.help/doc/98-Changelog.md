@@ -10,6 +10,8 @@
 
 ### DSL / Modelling language changes
 
+* The default target version is now `ZK15`. In the same step `ZK14` and `ZK14DEV` have been marked as deprecated and will be removed after the release of ModuleStudio 0.7.5 (#1081).
+* Added target version `ZK2DEV` to separate stable and development versions of Zikula 2.x. 
 * Minor improvements for validation within inheritance hierarchies (e.g. duplicate fields and actions, display pattern field references, no additional fields or actions).
 * Removed support for inserting example data during installation.
 
