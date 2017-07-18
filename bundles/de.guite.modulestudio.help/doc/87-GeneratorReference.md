@@ -222,12 +222,6 @@ An entity has the following references in addition to the common [data object](#
 
 * **indexes** - Allows referencing one or more [indexes](#entity-index).
 
-One additional note about slugs and permalinks: the generated short url handlers will understand different url schemes for the [display](#display-action) pages depending on the entity settings (*not verified yet for Zikula 1.4.x, it may behave a bit differently there due to the usage of Symfony routing*).
-
-* Entities which are not sluggable use the identifier for display urls, for example `mymodule/person/5.html`.
-* Entities with unique slugs use the slug for display urls, for example `mymodule/person/william-smith.html`.
-* Entities with non-unique slugs combine both methods, for example `mymodule/person/william-smith.5.html`.
-
 #### Entity field
 
 Represents an entity field in the data layer.
