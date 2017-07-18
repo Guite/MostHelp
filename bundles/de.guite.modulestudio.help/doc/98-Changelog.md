@@ -13,7 +13,6 @@
 * The default target version is now `ZK15`. In the same step `ZK14` and `ZK14DEV` have been marked as deprecated and will be removed after the release of ModuleStudio 0.7.5 (#1081).
 * Added target version `ZK2DEV` to separate stable and development versions of Zikula 2.x. 
 * Minor improvements for validation of inheritance hierarchies (e.g. duplicate fields and actions, display pattern field references, no additional fields or actions).
-* Removed support for inserting example data during installation.
 
 ### Generator changes
 
@@ -37,6 +36,7 @@
 * Skipping third party integrations for Zikula 2.0 applications whose modules are not migrated yet (#1075).
 * More robust handling of invalid filters in blocks, content types as well as Newsletter and Mailz plugins (#1082).
 * Properly set default values for editing new blocks in Zikula 1.5+.
+* Example data insertion has moved from the installer to a post installation event handler.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.5).
 
 ## ModuleStudio 0.7.4 (May 19, 2017)
