@@ -36,7 +36,7 @@
 * Skipping third party integrations for Zikula 2.0 applications whose modules are not migrated yet (#1075).
 * More robust handling of invalid filters in blocks, content types as well as Newsletter and Mailz plugins (#1082).
 * Properly set default values for editing new blocks in Zikula 1.5+.
-* Example data insertion has moved from the installer to a post installation event handler.
+* Example data insertion has moved from the installer to a post installation event handler to have own services available.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.5).
 
 ## ModuleStudio 0.7.4 (May 19, 2017)
