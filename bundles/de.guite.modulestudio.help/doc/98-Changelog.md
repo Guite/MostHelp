@@ -13,6 +13,7 @@
 * The default target version is now `ZK15`. In the same step `ZK14` and `ZK14DEV` have been marked as deprecated and will be removed after the release of ModuleStudio 0.7.5 (#1081).
 * Added target version `ZK2DEV` to separate stable and development versions of Zikula 2.x. 
 * Minor improvements for validation of inheritance hierarchies (e.g. duplicate fields and actions, display pattern field references, no additional fields or actions).
+* Added support for hook providers (filter hooks, form aware hooks, UI hooks) (#15).
 
 ### Generator changes
 
@@ -25,7 +26,7 @@
 * Fixed resizing of too huge original images.
 * Fixed cosmetic issue in categories filter in quick navigation forms in XS viewport (#1074).
 * Fixed potentially wrong routes in RouteUrl objects.
-* Applications for Zikula 1.5+ support `FormAwareHook` and non-persisted hooks (#1072).
+* Applications for Zikula 1.5+ support form aware hooks and non-persisted hooks (#1072).
 * Properly consider inheritance in `ListEntriesHelper`.
 * Fixed workflow state field related issue for child entities (#1064).
 * Several other fixes regarding entity inheritance (#46).
