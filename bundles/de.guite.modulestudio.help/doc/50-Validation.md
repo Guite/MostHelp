@@ -8,7 +8,7 @@ Validation is an essential part of a modelling language. By checking the current
 
 With the help of validation in ModuleStudio all subsequent components can process the given application model without having to revalidate common concerns.
 
-Having clean and properly validated models is also very helpful for Zikula as a framework because in the long term this leads to a constantly high quality across third party extensions which is traditionally a weak point for every open source system. See [this tutorial](http://modulestudio.de/en/tutorial/validation-instead-of-certification-of-3rd-party-framework-modules.html) for more information about this aspect.
+Having clean and properly validated models is also very helpful for Zikula as a framework because in the long term this leads to a constantly high quality across third party extensions which is traditionally a weak point for every open source system. See [this tutorial](https://modulestudio.de/en/tutorial/validation-instead-of-certification-of-3rd-party-framework-modules.html) for more information about this aspect.
 
 The constraints described here are evaluated within the graphical editor as well as during headless generator workflows.
 

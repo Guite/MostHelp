@@ -65,7 +65,7 @@ The mapping from your model elements to the generated application elements is de
 
 There is also a stand-alone generator available. This is a JAR file which can be used to generate applications from the command line.
 
-    wget http://modulestudio.de/downloads/ModuleStudio-generator.jar
+    wget https://modulestudio.de/downloads/ModuleStudio-generator.jar
     java -jar ModuleStudio-generator.jar MyModel.mostapp
 
 By default this creates a sub folder named `GeneratedModule` and puts all generated artifacts into this sub directory.
