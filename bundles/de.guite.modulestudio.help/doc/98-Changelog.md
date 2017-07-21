@@ -40,6 +40,7 @@
 * Properly set default values for editing new blocks in Zikula 1.5+.
 * Example data insertion has moved from the installer to a post installation event handler to have own services available.
 * Relocated Scribite plugins to prevent confusion with gitignore (#1086).
+* Fixed wrong query expression in finder if only images are selected (#1088).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.5).
 
 ## ModuleStudio 0.7.4 (May 19, 2017)
