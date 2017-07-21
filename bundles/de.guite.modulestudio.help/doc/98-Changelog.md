@@ -7,6 +7,7 @@
 * Updated to Eclipse Oxygen (4.7).
 * Removed packages for Linux PPC.
 * Added error tracking functionality and a setting to disable it.
+* Corrected missing icons for quick fixes.
 
 ### DSL / Modelling language changes
 
