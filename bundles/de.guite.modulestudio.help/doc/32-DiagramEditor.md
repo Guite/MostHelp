@@ -163,17 +163,11 @@ An index tells the database to optimise a table for searches by specific fields.
 
 Controllers define the interaction between the user and an application - what the user sees, and what he can do. We define, therefore, which user functions should exist at this place in the model.
 
-If you enable the controller layer you see two additional palette groups, that are *controllers* and *actions*. The controllers represent different areas of an application. Every controller contains one or more actions representing functions by the user.
-
-Let's look at the controller elements first. With admin and user controllers we can create the administrative and user-oriented areas of the Zikula application. These two are also the most commonly required areas, but others are possible. The ajax controller represents a special controller type containing ajax functionality. (Strictly seen admin, user and ajax controllers are legacy concepts, because Symfony allows any functions in every controller. In a future version controllers this will be considered also in the DSL (see [this issue](https://github.com/Guite/MostGenerator/issues/715)). With the individual controllers arbitrary additional controller elements with their own names can be added.
-
-![Controller with actions](images/ui_diagram_layers_controller.png "Controller with actions")
-
-Note that each entity implicitly acts as a controller, too. So if you created a `person` entity, this represents also a person controller. For this reason both controllers and entities contain actions.
+Note that each entity implicitly acts as a controller, too. So if you created a `person` entity, this represents also a person controller. If you enable the controller layer you see an additional palette group named *actions*. Every entity contains one or more actions representing functions which can be called or visited by the user.
 
 ![Entities with actions](images/ui_diagram_layers_actions.png "Entities with actions")
 
-The available action elements are self-explanatory. It should be mentioned, however, that *delete* is only there for backwards compatibility. Every form generated from an *edit* action contains a delete button already (given the user has the required permissions). From older modules, one might be used to having the delete confirmation question on a separate page. Also here, there is an element for additional entries (custom action) that one can use to model method stubs for additional actions in the controller classes.
+The available action elements are self-explanatory. It should be mentioned, however, that *delete* is only there for backwards compatibility. Every form generated from an *edit* action contains a delete button already (given the user has the required permissions). From older modules, one might be used to having the delete confirmation question on a separate page. Also there is an element for additional entries (custom action) that one can use to model method stubs for additional actions in the generated controller classes.
 
 ### Variables layer
 
