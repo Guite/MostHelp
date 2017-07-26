@@ -289,7 +289,9 @@ Of course this seems a bit cumbersome. Note earlier versions of ModuleStudio all
 
 ### Move fields between entities
 
-You can use drag n drop to move fields into another entity. This is especially interesting if you refactor an existing model, for example to merge two entities sharing a common structure.
+You can use drag n drop to move fields into another entity. This is especially interesting if you refactor an existing model, for example to merge two entities sharing a common structure. Note this also works with having multiple fields selected, so you can move several fields into another entity in one step.
+
+Similarly you can also move actions or indexes into other entities and variables into other variable containers.
 
 ### Manage list entries
 
