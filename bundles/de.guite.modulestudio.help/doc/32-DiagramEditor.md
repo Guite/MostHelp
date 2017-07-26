@@ -177,10 +177,6 @@ Variables are generated as basic settings in the application. You can create one
 
 These containers can hold the definition of several variables. Variables can be created for boolean values, integers, text fields, file paths and lists.
 
-### Workflow layer
-
-The workflow layer is not implemented yet (planned for version 0.8). It will probably be similar to the BPMN2 standard (business process modeling notation). This section is just a dummy for future. You can still configure a bunch of different workflows for your entities (see [generator reference](87-GeneratorReference.md#entity-workflow-type)).
-
 ## Filters
 
 Filters are a possibility to restrict the visible diagram elements. Applying a filter on a diagram will hide the graphical elements which match the filter's criterion. To apply a filter, open the *Filters* menu in the tab-bar to select which filters should be enabled or disabled.
