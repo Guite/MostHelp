@@ -101,7 +101,7 @@ If you want to create a self-relationship (where source and target elements are 
 
 ## Refreshing the diagram
 
-The *Refresh* operation will force an update of the diagram's content according to the latest version of the underlying semantic model. The default operational mode is to automatically refresh the diagram's content whenever any relevant change is detected in the semantic model (e.g. caused by another editor). This can be disabled using the *Automatic refresh* preference (accessible through *Window > Preferences > Sirius*). When in manual refresh mode (i.e. *Automatic refresh* is unchecked), you must manually use the *Refresh* operation whenever you want the diagram to take into account changes in the model. Even in automatic refresh mode, it may be sometimes necessary to invoke an explicit, manual refresh using this operation if ModuleStudio got confused.
+The *Refresh* operation will force an update of the diagram's content according to the latest version of the underlying semantic model. The default operational mode is to automatically refresh the diagram's content whenever any relevant change is detected in the semantic model (e.g. caused by another editor). In additional you can also manually use the *Refresh* operation whenever you want the diagram to take into account changes in the model. Sometimes it may be necessary to invoke an explicit, manual refresh using this operation if ModuleStudio got confused.
 
 You can invoke the refresh either by the tab-bar ![Refresh](images/ui_diagram_tabbar_refresh.png) or with the **F5** keyboard shortcut or using the canvas' context menu.
 
@@ -235,7 +235,7 @@ There are specific shortcuts to change the resize behaviour:
 * **Shift**: Resize that keeps the ratio.
 * **Alt** (or **Ctrl** for Mac users): Resize without snap (temporarily disables the snap during the resize if it is activated).
 * **F3**: Resize with children location relative to the parent. If the shape is resized to the left, upwards, or both, the children (contained nodes) are moved with the same offset than the resize.
-* **F4**: Resize with snap to all shapes (if the [snap to shapes preference](38-Preferences.md#rulers-and-grid) is activated).
+* **F4**: Resize with snap to all shapes.
 
 Furthermore there are two special functions with regards to resizing.
 
@@ -258,7 +258,7 @@ There are specific shortcuts to change the move behaviour:
 * **Shift**: Constrained move (only vertical or horizontal move is authorised at once).
 * **Alt** (or **Ctrl** for Mac users): Ignore snap while dragging (temporarily disables the snap during the move if it is activated).
 * **F3**: Move the edge source and target if pressed during the edge move.
-* **F4**: Move with snap to all shapes (if the [snap to shapes preference](38-Preferences.md#rulers-and-grid) is activated).
+* **F4**: Move with snap to all shapes.
 
 ### Editing and deleting elements
 
@@ -319,7 +319,7 @@ The result of this action is visible here:
 
 ### Move bend-points
 
-It is possible to snap the bend-points to all shapes by pressing **F4** shortcut key during the move. This feature is only available if the [snap to shapes preference](38-Preferences.md#rulers-and-grid) is activated. As for *snap to grid*, and unlike to snap for node, there is no visual feedback (gray grid line) drawn during the move.
+It is possible to snap the bend-points to all shapes by pressing **F4** shortcut key during the move. As for *snap to grid*, and unlike to snap for node, there is no visual feedback (gray grid line) drawn during the move.
 
 ### Remove bend-points
 
@@ -355,7 +355,7 @@ The action is available (menu is displayed) if the selection contains only edges
 
 ### Display attachment link between edge and its labels
 
-It is possible to display an attachment link between an edge and its labels when edge or label is selected. This is not the default behaviour but it can be activated by [a preference](38-Preferences.md#connection-settings).
+It is possible to display an attachment link between an edge and its labels when edge or label is selected. This is not the default behaviour but it can be activated by [a preference](38-Preferences.md#connections-settings).
 
 If an edge is selected, one attachment is displayed for all associated labels. If a label is selected, only the attachment between the edge and this label is displayed.
 
@@ -601,7 +601,7 @@ Using the *File > Page Setup...* you can adjust the parameter used when printing
 
 ![Page setup dialog for printing](images/ui_print_page_setup.png "Page setup dialog for printing")
 
-If you activate the *Use workspace settings* option at the top of the dialog the second tab *Configure workspace settings* becomes active. Click on it to open the [printing preferences](38-Preferences.md#printing-preferences) in a separate window.
+If you activate the *Use workspace settings* option at the top of the dialog the second tab *Configure workspace settings* becomes active. Click on it to open a separate window which allows to change the default values.
 
 When you want to print a diagram you can preview it before starting the actual process using the *File > Print Preview* action.
 

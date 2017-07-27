@@ -8,6 +8,7 @@
 * Removed packages for Linux PPC.
 * Added error tracking functionality and a setting to disable it.
 * Corrected missing icons for quick fixes.
+* Removed some unrequired preference pages.
 
 ### DSL / Modelling language changes
 
