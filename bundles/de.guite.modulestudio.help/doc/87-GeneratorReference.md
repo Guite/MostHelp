@@ -1092,7 +1092,7 @@ For example imagine you want to create to variables for a payment method and a p
 
 Option 1: create a variable container named `payment` with `composite=false` and two variables `paymentMethod` and `paymentUrl` in it. This leads to two module variables `paymentMethod = ''` and `paymentUrl = ''`.
 
-Option 2: create a variable container named `payment` with `composite=true` and two variables `method` and `url` in it. This leads to one module variable `payment = ['paymentMethod' => '', 'paymentUrl' => '']`.
+Option 2: create a variable container named `payment` with `composite=true` and two variables `method` and `url` in it. This leads to one module variable `payment = ['method' => '', 'url' => '']`.
 
 #### Variable
 
