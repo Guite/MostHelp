@@ -9,10 +9,10 @@
 * Added error tracking functionality and a setting to disable it.
 * Corrected missing icons for quick fixes.
 * Removed some unrequired preference pages.
-* Enumerations with many entries are now rendered as select widgets instead of radio widgets in property view.
-* Overhauled form-based property view, organising the properties into multiple tabs and sections.
-* Readded missing `minValue`/`maxValue` properties for integer fields to property view.
-* Removed the old tabular property view entirely.
+* Enumerations with many entries are now rendered as select widgets instead of radio widgets in properties view.
+* Overhauled form-based properties view, organising the properties into multiple tabs and sections.
+* Readded missing `minValue`/`maxValue` properties for integer fields to properties view.
+* Removed the old tabular properties view entirely.
 
 ### DSL / Modelling language changes
 
