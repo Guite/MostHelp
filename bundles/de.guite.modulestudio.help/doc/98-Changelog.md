@@ -13,7 +13,7 @@
 * Overhauled form-based properties view, organising the properties into multiple tabs and sections.
 * Readded missing `minValue`/`maxValue` properties for integer fields to properties view.
 * Removed the old tabular properties view entirely.
-* Prevent potential NPE during editor initialisation (#1091).
+* Prevent potential NPE during editor initialisation (#1092).
 
 ### DSL / Modelling language changes
 
