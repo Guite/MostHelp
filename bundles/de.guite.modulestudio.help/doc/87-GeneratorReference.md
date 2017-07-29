@@ -10,7 +10,7 @@ As Zikula uses Symfony and the Doctrine ORM layer, the data layer in ModuleStudi
 
 From each entity in the data layer there are entity classes and repository classes created. Therewith the contained fields as well as their properties are accordingly reflected. For many data types and basic properties, like *unique*, *readonly* or *notnull* this happens with a one to one adaption. Several things are shortened for convenience in ModuleStudio though. Furthermore there are some additional data types, like for example for users, email addresses, urls and file uploads. An email field is treated by the generator as a string field in Doctrine which has the email validator activated.
 
-Validators are generally not explicitly written in MOST, but simply defined using properties. So there are for example attributes like *nospace*, *country*, *ipaddress*, *htmlcolour* and many more for string fields. Date and time fields have according properties for *past* and *future*.
+Validators are generally not explicitly written in MOST, but simply defined using properties. So there are for example attributes like *nospace* and *ipaddress* for string fields. Date and time fields have according properties for *past* and *future*.
 
 The different types of relations in Doctrine are all offered, too. For inheritance relationships the strategy can be selected (single table, joined). All other connection types store a name for the two entities on both sides (source alias and target alias) as well as the referenced fields (source field and target field). Because the primary id fields of entities are not part of the model, but automatically added before the generation, the string `id` is allowed and also set per default. By changing these fields it is possible to describe also relations referencing other fields. Beside this it is possible to have multiple relationships between the same entities and also self relations, as long as their alias settings are unique. Finally you can also define how the cascading behaviour should look like, again supporting all options offered by Doctrine.
 
@@ -151,7 +151,7 @@ Can be one of the following options:
 * `RECOMMENDATION` - The module is recommended, for example to provide enhanced integration functionality.
 * `CONFLICT` - The module is in conflict with the modeled one, for example due to overlapping functionality.
 
-The generator uses this value in the corresponding module dependency created in the version class.
+The generator uses this value in the corresponding module dependency created in the `composer.json` file.
 
 #### Hook provider mode
 
@@ -387,30 +387,37 @@ Represents a field type for storing string values.
 
 A string field has the following properties in addition to the common [abstract string field](#abstract-string-field) settings:
 
-* **bic** - A boolean specifying whether this field represents a [BIC (business identifier code)](https://en.wikipedia.org/wiki/Business_Identifier_Code) or not. Default value is `false`.
-* **country** - A boolean specifying whether this field represents a [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) country code or not. Default value is `false`. If set to `true` a country selector is used in [edit pages](#edit-action). For the output in [view](#view-action) and [display](#display-action) templates an output modifier is used to display the full country name instead of the unreadable country code. If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
-* **creditCard** - A boolean to specify whether this field represents a credit card number or not. Default value is `false`.
-* **currency** - A boolean to specify whether this field represents a [3-letter ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency name or not. Possible example values are `USD` or `EUR`. Default value is `false`. In [edit forms](#edit-action) it will be rendered as a currency selector. If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
-* **dateInterval** - A boolean specifying whether this field represents an interval of time or not. Default value is `false`. The interval is persisted as a [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601#Durations) duration string. Only applicable for the `ZK20` target.
-* **htmlcolour** - A boolean specifying whether this field represents a html color code (like `#003399`) or not. Default value is `false`. If set to `true` a colour picker is used in [edit pages](#edit-action) for convenient selection of colour codes.
-
-![Example for colour and language selectors](images/generator_colour_language.png "Example for colour and language selectors")
-
-* **iban** - A boolean to specify whether this field represents a bank account number in [IBAN (International Bank Account Number)](https://en.wikipedia.org/wiki/International_Bank_Account_Number) format. Default value is `false`.
 * **isbn** - Allows to define whether this field represents a number in [ISBN (International Standard Book Number)](https://en.wikipedia.org/wiki/Isbn). Default value is `NONE`. You can choose from different [validation options](#isbn-style).
 * **issn** - Allows to define whether this field represents a number in [ISSN (International Standard Serial Number)](https://en.wikipedia.org/wiki/Issn). Default value is `NONE`. You can choose from different [validation options](#issn-style).
 * **ipAddress** - Allows to define whether this field represents an IP address. Default value is `NONE`. You can choose the covered [ip address scope](#ip-address-scope).
 * **ipTraceable** - Which [ipTraceable type](#entity-iptraceable-type) is used. Default value is `NONE`.
 * **ipTraceableChangeTriggerField** - Optional name of field to use as change trigger (if type is `CHANGE`. Can also be `workflowState` or the name of a relation (syntax `property.field`).
 * **ipTraceableChangeTriggerValue** - Optional value of field to use as change trigger (if type is `CHANGE`).
-* **language** - A boolean specifying whether this field represents an [Unicode language](http://site.icu-project.org/) identifier or not. Possible example values are `fr` or `zh-Hant`. Default value is `false`. If set to `true` a language selector is used in [edit pages](#edit-action). For the output in [view](#view-action) and [display](#display-action) templates an output modifier is used to display the full name instead of the unreadable language code. If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
 * **length** - The length of this field. Default value is `255`.
-* **locale** - A boolean to specify whether this field represents a locale or not. Possible example values are `fr` ([ISO 639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)) or `fr_FR` (ISO 639-1 followed by [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) country code). Default value is `false`. If set to `true` the field will be rendered as a locale selector in [edit forms](#edit-action). If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
-* **password** - A boolean specifying whether this field represents a password or not. Default value is `false`. If set to `true` a password input element will be used instead of a normal one in [edit pages](#edit-action). Password fields are not shown on [view](#view-action) and [display](#display-action) pages for security reasons.
-* **timezone** - A boolean specifying whether this field represents a time zone or not. Default value is `false`. In [edit forms](#edit-action) timezone fields will be rendered using a time zone selector.
-* **uuid** - A boolean specifying whether this field represents an [UUID (Universally Unique Identifier)](http://en.wikipedia.org/wiki/Universally_unique_identifier) or not.
+* **role** - Allows to define a semantic role for this field. Default value is `NONE`. The available options are explained [below](#string-role).
 
-In [edit pages](#edit-action) the generator will use single-line input elements for string fields - except you defined something else (using options like `language` or `password`). Other validations are added together and applied as well.
+In [edit pages](#edit-action) the generator will use single-line input elements for string fields - except you defined something else (using options like `role` or `isbn`). Other validations are added together and applied as well.
+
+#### String role
+
+Represents different semantic roles a [string field](#string-field) can have.
+
+Can be one of the following options:
+
+* `NONE` - Default value. Means that the corresponding [string field](#string-field) just represents a string without special semantic.
+* `BIC` - A [BIC (business identifier code)](https://en.wikipedia.org/wiki/Business_Identifier_Code).
+* `COLOUR` - A html color code (like `#003399`). A colour picker is used in [edit pages](#edit-action) for convenient selection of colour codes.
+* `COUNTRY` - A [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) country code. A country selector is used in [edit pages](#edit-action). For the output in [view](#view-action) and [display](#display-action) templates an output modifier is used to display the full country name instead of the unreadable country code. If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
+* `CREDIT_CARD` - A credit card number. By default all available card schemes provided by [Symfony validator](https://symfony.com/doc/current/reference/constraints/CardScheme.html#schemes) are allowed.
+* `CURRENCY` - A [3-letter ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency name. Possible example values are `USD` or `EUR`. In [edit forms](#edit-action) it will be rendered as a currency selector. If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
+* `DATE_INTERVAL` - An interval of time which is persisted as a [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601#Durations) duration string. Only applicable for the `ZK20` target.
+* `IBAN` - A bank account number in [IBAN (International Bank Account Number)](https://en.wikipedia.org/wiki/International_Bank_Account_Number) format.
+* `LANGUAGE` - An [Unicode language](http://site.icu-project.org/) identifier. Possible example values are `fr` or `zh-Hant`. A language selector is used in [edit pages](#edit-action). For the output in [view](#view-action) and [display](#display-action) templates an output modifier is used to display the full name instead of the unreadable language code. If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
+* `LOCALE` - A locale. Possible example values are `fr` ([ISO 639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)) or `fr_FR` (ISO 639-1 followed by [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) country code). The field will be rendered as a locale selector in [edit forms](#edit-action). If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
+* `PASSWORD` - A password. For this a password input element will be used instead of a normal one in [edit pages](#edit-action). Password fields are not shown on [view](#view-action) and [display](#display-action) pages for security reasons.
+* `TIME_ZONE` - A time zone. In [edit forms](#edit-action) such fields will be rendered using a time zone selector.
+* `UUID` - An [UUID (Universally Unique Identifier)](http://en.wikipedia.org/wiki/Universally_unique_identifier).
+
 
 #### ISBN style
 

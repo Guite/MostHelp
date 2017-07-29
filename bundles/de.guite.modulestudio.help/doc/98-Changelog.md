@@ -9,6 +9,10 @@
 * Added error tracking functionality and a setting to disable it.
 * Corrected missing icons for quick fixes.
 * Removed some unrequired preference pages.
+* Enumerations with many entries are now rendered as select widgets instead of radio widgets in property view.
+* Overhauled form-based property view, organising the properties into multiple tabs and sections.
+* Readded missing `minValue`/`maxValue` properties for integer fields to property view.
+* Removed the old tabular property view entirely.
 
 ### DSL / Modelling language changes
 
@@ -16,6 +20,7 @@
 * Added target version `ZK2DEV` to separate stable and development versions of Zikula 2.x. 
 * Minor improvements for validation of inheritance hierarchies (e.g. duplicate fields and actions, display pattern field references, no additional fields or actions).
 * Added support for hook providers (filter hooks, form aware hooks, UI hooks) (#15).
+* Several boolean flags of string fields (like `bic`, `country`, `locale`, and so on) are replaced by a single `role` property represented by a select widget. Note while your old models can still be opened these properties are **not migrated automatically**. This means you will have to set the `role` property to the desired semantics for your existing fields.
 
 ### Generator changes
 
