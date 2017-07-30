@@ -53,6 +53,7 @@
 * Strip tags when showing truncated text fields on view pages.
 * Properly detect item action titles if Bootstrap tooltips are used, too.
 * Properly handle finder pop-up if primary object type is forbidden.
+* Fixed ajax-based duplicate check.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.5).
 
 ## ModuleStudio 0.7.4 (May 19, 2017)
