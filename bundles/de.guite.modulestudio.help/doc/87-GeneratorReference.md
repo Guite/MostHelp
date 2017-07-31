@@ -69,12 +69,10 @@ Specifies the Zikula version for which the application should be generated.
 
 Can be one of the following options:
 
-* `ZK20` - Targets the last stable Zikula 2.0.x version.
+* `ZK20` - Targets the last stable Zikula 2.0.x version. This is the default value.
 * `ZK2DEV` - Targets the last unstable Zikula 2.x version and may include changes for the next upcoming 2.x core release.
-* `ZK15` - Targets the last stable Zikula 1.5.x version. This is the default value.
+* `ZK15` - Targets the last stable Zikula 1.5.x version.
 * `ZK15DEV` - Targets the last unstable Zikula 1.5.x version and may include changes for the next upcoming 1.5.x core release.
-* `ZK14` - Targets the last stable Zikula 1.4.x version. This is deprecated and will be removed after the release of ModuleStudio 0.7.5.
-* `ZK14DEV` - Targets the last unstable Zikula 1.4.x version. This is deprecated and will be removed after the release of ModuleStudio 0.7.5.
 
 #### Settings container
 
@@ -119,7 +117,7 @@ A settings container has the following fields:
 * **generateKmlTemplates** - A boolean specifying whether KML templates should be generated or not. Requires geographical flag on corresponding entities. Default value is `true`.
 * **generateIcsTemplates** - A boolean specifying whether ICS (iCalendar) templates should be generated or not. Requires start date and end date fields on corresponding entities. Default value is `true`.
 * **authenticationMethod** - Allows to generate a skeleton for an authentication method implementation. Default value is `NONE` which means that no authentication method should be provided by the generated application. `REMOTE` represents a ReEntrant method while `LOCAL` stands for a NonReEntrant method. See [this documentation](https://github.com/zikula/core/blob/master/src/docs/UsersAndAuthentication/AuthenticationMethodInterface.md) for more details about this.
-* **filterHookProvider** - Allows to specify whether a [filter hook provider](https://github.com/zikula/core/tree/master/src/docs/Hooks) should be generated for the application. Default value is `DISABLED`. Allowed values are explained [here](#hook-provider-mode). The generated filter hook provider only adds some dummy output and therefore needs to be customised in the empty child class. This property has no effect for Zikula 1.4 and is only supported for 1.5+.
+* **filterHookProvider** - Allows to specify whether a [filter hook provider](https://github.com/zikula/core/tree/master/src/docs/Hooks) should be generated for the application. Default value is `DISABLED`. Allowed values are explained [here](#hook-provider-mode). The generated filter hook provider only adds some dummy output and therefore needs to be customised in the empty child class.
 * **generateOnlyBaseClasses** - A boolean specifying whether only base classes should be generated. May be useful for doing simple upgrades without structural changes. Default value is `false`.
 * **skipFiles** - Comma-separated blacklist with each entry representing a file path which should not be generated. The file pathes are relative from the application's root folder, for example `Resources/views/Person/display.html.twig`. Default value is an empty string.
 * **markFiles** - Comma-separated list with file pathes which should be marked by special file names. The file pathes are relative from the application's root folder, for example `Resources/views/Person/display.html.twig`. Instead of the original name each file is generated using the pattern `filename.generated.extension`. This setting can be useful for doing bigger merges comparing the generated version with a customised one. Default value is an empty string.
@@ -196,7 +194,7 @@ It has the following properties:
 * **categorisableMultiSelection** - A boolean specifying whether multiple categories can be selected or not.
 * **changeTrackingPolicy** - How change detection is being done (see [below](#entity-change-tracking-policy)). The default value is `DEFERRED_IMPLICIT`.
 * **displayPattern** - Pattern for displaying instances of this entity. In earlier ModuleStudio versions one had to mark one entity field as `leading`. However, this was not flexible enough in practice. With the display pattern you can specify arbitrary expressions which are used as textual representation for instances of this entity. For most cases you may want to declare just one field, which is done like `#title#`. A more complex example would be `#lastName#, #firstName# (#age# years)`. Of course all fields must exist in the entity with exactly the names used within the display pattern.
-* **formAwareHookProvider** - Allows to specify whether a [form aware hook provider](https://github.com/zikula/core/tree/master/src/docs/Hooks) should be generated for the entity. Default value is `DISABLED`. Allowed values are explained [here](#hook-provider-mode). The generated form aware hook providers only add some dummy form fields and therefore need to be customised in the empty child classes. This property has no effect for Zikula 1.4 and is only supported for 1.5+.
+* **formAwareHookProvider** - Allows to specify whether a [form aware hook provider](https://github.com/zikula/core/tree/master/src/docs/Hooks) should be generated for the entity. Default value is `DISABLED`. Allowed values are explained [here](#hook-provider-mode). The generated form aware hook providers only add some dummy form fields and therefore need to be customised in the empty child classes.
 * **geographical** - A boolean specifying whether the geographical extension is used or not. If set to `true` the generator will create two additional fields named `latitude` and `longitude`. Also it will consider them in all important application areas and provide an export for the *kml* format (if `generateKmlTemplates` setting has not been set to `false`). During the creation of a new entity with geographical support a nice geolocation feature can be used to ask the user for his current location (this needs to be activated in the template though). Also there is an included integration of the Mapstraction class allowing you to use different map providers in your application.
 
 ![Geolocation feature](images/generator_geographical_geolocation.png "Geolocation feature")
@@ -228,7 +226,7 @@ It has the following properties:
 ![Tree functionality with context menu and drag n drop](images/generator_tree.png "Tree functionality with context menu and drag n drop")
 
 * **standardFields** - A boolean specifying whether the standard fields extension is used or not. If set to `true` the entity will get four additional fields for storing the id of the user who created the item (`createdBy` join to `UserEntity`), the id of the user who did the last update (`updatedBy` join to `UserEntity`), as well as the creation and update dates (`createdDate` and `updatedDate`). This information will be included on [display](#display-action) and [edit](#edit-action) actions.
-* **uiHooksProvider** - Allows to specify whether a [UI hooks provider](https://github.com/zikula/core/tree/master/src/docs/Hooks) should be generated for the entity. Default value is `DISABLED`. Allowed values are explained [here](#hook-provider-mode). The generated UI hook providers allow for attaching entities to the subscriber areas which also includes the inline creation (and automatic assignment) of new entities. All assignments are stored in an additional database table so it is possible to attach the same entity to several different data objects (for example an image could be added to three news articles). Owning data objects are linked from the entity display pages, too. Existing assignments are automatically removed when the owning data object is deleted or the owning module is removed from the system. This property has no effect for Zikula 1.4 and is only supported for 1.5+.
+* **uiHooksProvider** - Allows to specify whether a [UI hooks provider](https://github.com/zikula/core/tree/master/src/docs/Hooks) should be generated for the entity. Default value is `DISABLED`. Allowed values are explained [here](#hook-provider-mode). The generated UI hook providers allow for attaching entities to the subscriber areas which also includes the inline creation (and automatic assignment) of new entities. All assignments are stored in an additional database table so it is possible to attach the same entity to several different data objects (for example an image could be added to three news articles). Owning data objects are linked from the entity display pages, too. Existing assignments are automatically removed when the owning data object is deleted or the owning module is removed from the system.
 * **workflow** - The workflow which is applied to this entity. The default value is `NONE`. See [workflow types](#entity-workflow-type) for more information.
 
 An entity has the following references in addition to the common [data object](#data-object) settings:
@@ -819,26 +817,6 @@ The current state for a certain object is stored in the workflow itself. Further
 Note that it is easily possible to model [date or datetime fields](#abstract-date-field) which set their value automatically depending on a certain workflow state. Just set their [timestampable type](#entity-timestampable-type) to `CHANGE` and set `workflowState` as change trigger field. Also set the change trigger value to the name of the desired state. So you could for example create an approval date by using `approved` for the trigger value property.
 
 For all entities having another workflow than `NONE` there are configuration options in the generated configuration page for selecting user groups for moderation. If these settings are not applied, the default group for administrators is used as fallback. With the help of this information, email notifications are sent between creator and moderators on state changes. For moderators there is a textarea field provided in the form for specifying additional remarks, like a reason for deny (particularly useful for `reject` and `demote` / `disapprove` actions).
-
-##### Troubleshooting if workflows are not fetched properly
-
-Due to a problem in Zikula 1.4.x the workflow data can not be fetched automatically for an entity yet. Because if the `postLoad` listener in the `EntityLifecycleListener` class would call the workflow the Zikula `WorkflowUtil` class would perform another selection for this. This leads to both selections getting into a competition about the internal object hydrator of Doctrine. The workflow selection "steals" it from the main selection. So after the first item, when it wants to fetch the second one, it is not possible anymore.
-
-Before the `initWorkflow()` entity method was called at two places: the entity constructor (for newly-created entities) and the `postLoad` listener (for fetched entities). The current workaround is having the `initWorkflow()` call moved outside the `postLoad` listener. But now we have to call it elsewhere. Therefore we need something in the controller actions like the following for bypassing the problem:
-
-    // single entity
-    $myEntity->initWorkflow();
-
-    // collection of entities
-    foreach ($entities as $k => $entity) {
-        $entity->initWorkflow();
-    }
-
-Note you must call this for all fetched entities, not for new ones (as the call is still included in the constructor).
-
-This solution approach is a bit ugly, because we require you (the module developer) calling this explicitly from the using code. If you forget it in a certain method workflows are not initialised properly.
-
-Note: this is fixed in the generator for Zikula 1.5.0+, since we utilise the Symfony workflow component there.
 
 #### Account deletion handler
 
