@@ -54,9 +54,7 @@ Inside the input field you can use [content assist](36-TextualEditor.md#content-
 
 ### Sirius Diagram
 
-This tab is about the [diagram editor](32-DiagramEditor.md#diagram-editor). It needs some cleanup, because many settings are actually not required. This section explains only those which are most relevant.
-
-Primarily this section allows you to disable certain features of the diagram editor. For example you could hide the status line or deactivate animated zoom.
+This tab is about the [diagram editor](32-DiagramEditor.md#diagram-editor). Primarily this section allows you to enable or disable certain features. For example you could hide the status line or deactivate animated zoom.
 
 ![Diagram preferences](images/ui_preferences_diagram.png "Diagram preferences")
 
