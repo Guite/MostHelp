@@ -1,5 +1,20 @@
 # Changelog
 
+## ModuleStudio 1.0.1 (unreleased)
+
+### Product changes
+
+* None yet
+
+### DSL / Modelling language changes
+
+* None yet
+
+### Generator changes
+
+* None yet
+* For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.0.1).
+
 ## ModuleStudio 1.0.0 (July 31, 2017)
 
 ### Product changes
@@ -33,7 +48,7 @@
 
 ### DSL / Modelling language changes
 
-* The default target version is now `ZK15`. In the same step `ZK14` and `ZK14DEV` have been marked as deprecated and will be removed after the release of ModuleStudio 1.0.0 (#1081).
+* The default target version is now `ZK15`. In the same step `ZK14` and `ZK14DEV` have been marked as deprecated and will be removed after the release of ModuleStudio 1.0.1 (#1081).
 * Added target version `ZK2DEV` to separate stable and development versions of Zikula 2.x. 
 * Minor improvements for validation of inheritance hierarchies (e.g. duplicate fields and actions, display pattern field references, no additional fields or actions).
 * Added support for hook providers (filter hooks, form aware hooks, UI hooks) (#15).
@@ -71,7 +86,7 @@
 * Properly handle finder pop-up if primary object type is forbidden.
 * Fixed ajax-based duplicate check.
 * Fixed processing of upload field of entity being edited in display pattern resolver.
-* For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.0.0).
+* For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.5).
 
 ## ModuleStudio 0.7.4 (May 19, 2017)
 
@@ -147,7 +162,7 @@
 * Added possibility to reorder sortable entities on view pages using drag n drop (#29).
 * Added a reset link for unsetting a non-mandatory user field (#1047).
 * Several other bugfixes.
-* For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.0.0).
+* For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.0.1).
 
 ## ModuleStudio 0.7.3 (Feb 18, 2017)
 
