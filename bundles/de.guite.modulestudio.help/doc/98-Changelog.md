@@ -1,6 +1,6 @@
 # Changelog
 
-## ModuleStudio 1.0.0 (unreleased)
+## ModuleStudio 1.0.0 (July 31, 2017)
 
 ### Product changes
 
