@@ -14,7 +14,7 @@
 
 * Removed `composer.lock` and `phpunit.xml` from `.gitignore`.
 * Added `require-dev` section to `composer.json` containing phpunit, analysis tools and phpdox.
-* Fixed syntax error regarding hook providers (#1095, #1096).
+* Fixed syntax errors regarding hook providers (#1095, #1096, #1097).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.0.1).
 
 ## ModuleStudio 1.0.0 (July 31, 2017)
