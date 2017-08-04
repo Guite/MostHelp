@@ -4,7 +4,7 @@
 
 ### Product changes
 
-* None yet
+* Overhauled example models for showing a wider range of functionality (#1098).
 
 ### DSL / Modelling language changes
 
