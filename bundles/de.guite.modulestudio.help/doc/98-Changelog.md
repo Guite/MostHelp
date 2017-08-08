@@ -16,6 +16,7 @@
 * Added `require-dev` section to `composer.json` containing phpunit, analysis tools and phpdox.
 * Fixed several errors regarding hook providers (#1095, #1096, #1097, #1100, #1101, #1102).
 * Added missing relationship editing templates if `generateSeparateAdminTemplates` is activated (#1099).
+* Updated sorting classes for Zikula 2.0.1.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.0.1).
 
 ## ModuleStudio 1.0.0 (July 31, 2017)
