@@ -4,7 +4,7 @@ Simply download the archive for your operating system and extract it inside your
 
 Afterwards you are ready to start the ModuleStudio executable.
 
-ModuleStudio 0.7.0 and later requires Java 8, but includes it already. So it should start also if you have an older version or no Java installed at all.
+ModuleStudio requires Java 8, but includes it already. So it should start also if you have an older version or no Java installed at all.
 
 ## Additional notes for Windows
 
