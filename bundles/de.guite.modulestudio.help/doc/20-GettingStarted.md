@@ -2,8 +2,6 @@
 
 This chapter explains the first steps required for starting creating applications with ModuleStudio.
 
-For now we refer only to existing tutorials as they describe things still quite well.
-
 ## Create your first application in 10 minutes
 
 This chapter shows how easy it is to define and generate Zikula applications with ModuleStudio. It shows the overall idea in a quick tour, using an example model. So let's do a module together!
