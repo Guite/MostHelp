@@ -21,6 +21,7 @@
 * Fixed route parameters for history and diff views of entities with unique slugs.
 * Updated forgotten target version fallback from `ZK15` to `ZK20`.
 * Use central parent service for form handler service definitions.
+* Fixed deprecated usage of isbn constraints (#1114).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.0.1).
 
 ## ModuleStudio 1.0.0 (July 31, 2017)
