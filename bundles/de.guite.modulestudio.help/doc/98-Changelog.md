@@ -23,6 +23,7 @@
 * Use central parent service for form handler service definitions.
 * Fixed deprecated usage of isbn constraints (#1114).
 * Added generation of StyleCI configuration file.
+* Migrated obsolete `OptionsResolver` method call (#1116).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.0.1).
 
 ## ModuleStudio 1.0.0 (July 31, 2017)
