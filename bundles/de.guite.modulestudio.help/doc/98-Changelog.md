@@ -15,7 +15,7 @@
 
 * Removed `composer.lock` and `phpunit.xml` from `.gitignore`.
 * Added `require-dev` section to `composer.json` containing PHPUnit, analysis tools and phpDox.
-* Fixed several errors regarding hook providers (#1095 - #1097, #1100 - #1102, #1105 - #1111).
+* Fixed several errors regarding hook providers (#1095 - #1097, #1100 - #1102, #1105 - #1111, #1121).
 * Added missing relationship editing templates if `generateSeparateAdminTemplates` is activated (#1099).
 * Updated sorting classes for Zikula 2.0.1.
 * Fixed route parameters for history and diff views of entities with unique slugs.
