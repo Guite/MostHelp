@@ -26,6 +26,7 @@
 * Migrated obsolete `OptionsResolver` method call (#1116).
 * Fixed logical issue in `SearchHelper` (#1117).
 * Fixed invalid redirect after mass operation if no index action is available (#1118).
+* Fixed UI hooks inclusion in subscriber templates.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.0.1).
 
 ## ModuleStudio 1.0.0 (July 31, 2017)
