@@ -29,6 +29,7 @@
 * Fixed UI hooks inclusion in subscriber templates.
 * Fixed empty submission and display for optional and nullable date/datetime fields.
 * Fixed updating hook assignment URL information of updated subscriber data objects.
+* Fixed logical issue in quick navigation form for disabled categories enablement.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.0.1).
 
 ## ModuleStudio 1.0.0 (July 31, 2017)
