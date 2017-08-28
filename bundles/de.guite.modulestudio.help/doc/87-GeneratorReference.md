@@ -874,7 +874,7 @@ A relationship may have the following references:
 
 Collects all foreign key and join relationships.
 
-It includes the following properties:
+It includes the following properties in addition to the common [relationship](#relationship) settings:
 
 * **cascade** - The [cascade type](#cascade-type) used on application level from source view. The default value is `NONE`.
 * **cascadeReverse** - The [cascade type](#cascade-type) used on application level from target view (only for `bidirectional` relationships). The default value is `NONE`.
@@ -1035,7 +1035,7 @@ For each entity the generator creates some templates to be included in the [edit
 
 Represents inheritance relationships for describing entity class hierarchies.
 
-It includes the following properties in addition to the common ref:GenRefRelationship[relationship settings:
+It includes the following properties in addition to the common [relationship](#relationship) settings:
 
 * **discriminatorColumn** - Name of the field used for storing the entity type.
 * **strategy** - The inheritance strategy used for data storage. The default value is `SINGLE_TABLE`.
