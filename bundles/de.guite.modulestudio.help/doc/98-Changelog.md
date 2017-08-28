@@ -35,6 +35,7 @@
 * Fixed processing of translatable slugs (#1094).
 * Separated inline editing from auto completion (#1084).
 * Added option for custom display template in single object content type (#965).
+* Added unarchive action to republish archived items (#225).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.0.1).
 
 ## ModuleStudio 1.0.0 (July 31, 2017)
