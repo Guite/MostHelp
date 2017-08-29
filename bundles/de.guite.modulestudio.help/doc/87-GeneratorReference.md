@@ -87,6 +87,7 @@ A settings container has the following fields:
 * **generateSearchApi** - A boolean specifying whether search integration should be generated or not. Requires at least one string or text field in any entity. Default value is `true`.
 * **generateMailzApi** - A boolean specifying whether Mailz support should be generated or not. Default value is `false`. This has no effect for Zikula 2.x because the Mailz module has not been migrated yet.
 * **generateListBlock** - A boolean specifying whether a generic list block should be generated or not. Default value is `true`.
+* **generateDetailBlock** - A boolean specifying whether a generic detail view block should be generated or not. Requires at least one entity containing a display action. Default value is `true`.
 * **generateModerationBlock** - A boolean specifying whether a moderation block should be generated or not. Requires at least one entity with a workflow including approval. Default value is `true`.
 * **generateListContentType** - A boolean specifying whether a content type for collection lists should be generated or not. Default value is `true`. This has no effect for Zikula 2.x because the Content module has not been migrated yet.
 * **generateDetailContentType** - A boolean specifying whether a content type for single objects should be generated or not. Requires at least one entity containing a display action. Default value is `true`. This has no effect for Zikula 2.x because the Content module has not been migrated yet.

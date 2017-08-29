@@ -9,7 +9,7 @@
 
 ### DSL / Modelling language changes
 
-* None yet
+* Added support for a block providing a detail view for one specific entity (#883).
 
 ### Generator changes
 
@@ -39,6 +39,7 @@
 * Moved `ParamConverter` and `Cache` annotations from base controllers into child controllers.
 * Fixed `Cache` annotation for edit actions (#1126).
 * Added fallback for list block templates if no content types are generated.
+* Added support for a block providing a detail view for one specific entity (#883).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.0.1).
 
 ## ModuleStudio 1.0.0 (July 31, 2017)
