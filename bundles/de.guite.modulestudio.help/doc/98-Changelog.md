@@ -38,6 +38,7 @@
 * Added unarchive action to republish archived items (#225).
 * Moved `ParamConverter` and `Cache` annotations from base controllers into child controllers.
 * Fixed `Cache` annotation for edit actions (#1126).
+* Added fallback for list block templates if no content types are generated.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.0.1).
 
 ## ModuleStudio 1.0.0 (July 31, 2017)
