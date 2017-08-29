@@ -25,6 +25,8 @@ The biggest part is a reference section listing all validation rules in detail a
 ### Settings container
 
 * Settings container must be assigned to an application. Should not occur in practice, this is just for completeness.
+* The detail block requires external controller and finder component. If you enable `generateDetailBlock` you also need `generateExternalControllerAndFinder`.
+* The detail content type requires external controller and finder component. If you enable `generateDetailContentType` you also need `generateExternalControllerAndFinder`.
 * Scribite plug-ins require external controller and finder component. If you enable `generateScribitePlugins` you also need `generateExternalControllerAndFinder`.
 
 ### Referred application
