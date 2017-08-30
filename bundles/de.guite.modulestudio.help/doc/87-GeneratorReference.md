@@ -987,7 +987,7 @@ The sorting direction is optional and defaults to `ASC`.
 
 #### Auto completion usage
 
-Defines whether and which sides of a relationship will be handled by an auto completion field instead of a drop-down field during editing. Note that inline creation and editing of related items (see [edit types](#relation-edit-type)) is only possible when using the auto completion approach. However, it is planned to make this available for choices, too (see [ticket #982](https://github.com/Guite/MostGenerator/issues/982)).
+Defines whether and which sides of a relationship will be handled by an auto completion field instead of a drop-down field during editing.
 
 Can be one of the following options:
 
@@ -995,10 +995,6 @@ Can be one of the following options:
 * `ONLY_SOURCE_SIDE` - Use auto completion when selecting entities of the source side (editing of the target side).
 * `ONLY_TARGET_SIDE` - Use auto completion when selecting entities of the target side (editing of the source side).
 * `BOTH_SIDES` - Use auto completion on both sides.
-
-Example for inline editing:
-
-![Inline editing](images/example_inline_editing.png "Inline editing")
 
 #### Relation fetch type
 
@@ -1030,7 +1026,11 @@ For each entity the generator creates some templates to be included in the [edit
 
 * `NONE` means that there is no possibility to take influence on the association.
 * `CHOOSE` means that it is possible to select a related entity with the help of auto completion.
-* `EDIT` means the same as `CHOOSE` plus that it is also possible to created and edit related entities during editing the main entity. Only applicable if `useAutoCompletion` is not set to `NONE`.
+* `EDIT` means the same as `CHOOSE` plus that it is also possible to created and edit related entities during editing the main entity.
+
+Example for inline editing:
+
+![Inline editing](images/example_inline_editing.png "Inline editing")
 
 #### Inheritance relationship
 

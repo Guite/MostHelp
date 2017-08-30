@@ -40,6 +40,9 @@
 * Fixed `Cache` annotation for edit actions (#1126).
 * Added fallback for list block templates if no content types are generated.
 * Added support for a block providing a detail view for one specific entity (#883).
+* Inline editing is now not only possible for auto completion, but also for list-based relationship sides (selects, check-boxes, radio buttons) (#982).
+* Properly consider `NONE` as passive edit type for the target side of a relationship.
+* Skip additional moderation fields (custom creator, custom creation date) for inline editing.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.0.1).
 
 ## ModuleStudio 1.0.0 (July 31, 2017)
