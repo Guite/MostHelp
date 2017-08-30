@@ -6,6 +6,7 @@
 
 * Fixed copying of diagram image and model files to docs folder if no generator settings element has been created.
 * Overhauled example models for showing a wider range of functionality (#1098).
+* Simplified and improved wizard for creating new projects.
 
 ### DSL / Modelling language changes
 
