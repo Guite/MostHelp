@@ -43,7 +43,8 @@
 * Added support for a block providing a detail view for one specific entity (#883).
 * Inline editing is now not only possible for auto completion, but also for list-based relationship sides (selects, check-boxes, radio buttons) (#982).
 * Properly consider `NONE` as passive edit type for the target side of a relationship.
-* Skip additional moderation fields (custom creator, custom creation date) for inline editing.
+* Minor improvements for multiple relationships between same entities.
+* Skip return control and additional moderation fields (custom creator, custom creation date) for inline editing.
 * Introduced the Leaflet library for geographical functionality replacing Mapstraction (#340).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.0.1).
 
