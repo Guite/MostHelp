@@ -27,13 +27,13 @@ This chapter collects links to several manuals and further documentation you wil
 
 ### Backend
 
-* [Symfony](http://symfony.com/doc/current/index.html)
+* [Symfony](https://symfony.com/doc/current/index.html)
 * [Doctrine ORM](http://docs.doctrine-project.org/en/latest/)
 * [Doctrine DBAL](http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/)
 * [Doctrine Extensions](https://github.com/Atlantic18/DoctrineExtensions/tree/master/doc)
 
 ### Zikula
 
-* [Core 2.0 Docs](https://github.com/zikula/core/tree/1.4/src/docs/Core-2.0)
+* [Core Docs](https://github.com/zikula/core/tree/master/src/docs)
 * [Issue about different docs locations](https://github.com/zikula/core/issues/2503)
 
