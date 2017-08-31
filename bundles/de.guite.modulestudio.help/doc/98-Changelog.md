@@ -10,7 +10,8 @@
 
 ### DSL / Modelling language changes
 
-* Added support for a block providing a detail view for one specific entity (#883).
+* Added new generator setting for a block providing a detail view for one specific entity (#883).
+* Added new generator setting for configuring generation of support for PDF export (#798).
 
 ### Generator changes
 
@@ -46,6 +47,7 @@
 * Minor improvements for multiple relationships between same entities.
 * Skip return control and additional moderation fields (custom creator, custom creation date) for inline editing.
 * Introduced the Leaflet library for geographical functionality replacing Mapstraction (#340).
+* Improved support for exporting PDF files (#798).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.0.1).
 
 ## ModuleStudio 1.0.0 (July 31, 2017)
