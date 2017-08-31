@@ -18,7 +18,7 @@ Make sure to include the -p flag if you extract the `.tar.gz` to keep the correc
 
 ModuleStudio stores any temporary data as well as your project files in a special directory which is named `MostWorkspace` and located in your user home directory. So if you want to create a backup of a model look within `~/MostWorkspace/<YourProjectName>/`.
 
-At the moment this location is fixed. However, it is requested and planned to [make it configurable](https://github.com/Guite/MostGenerator/issues/832) in future.
+This location is rather fixed and not configurable within the application. However, it is possible to change it nevertheless like shown [below](#custom-workspace-directory). 
 
 ## Updating ModuleStudio
 
@@ -54,3 +54,33 @@ On Mac OS X, if you need to pass arguments to ModuleStudio, you'll have to edit 
 
 On Linux, the easiest way is using the command line using your favourite console tool: change directory to the directory where ModuleStudio is installed. Then enter the following command to launch ModuleStudio in for example English: `./modulestudio -nl en`.
 
+
+## Custom workspace directory
+
+If you want to change the path where ModuleStudio persists its data edit the `modulestudio.ini` file using a text editor.
+
+Locate the following setting:
+
+```
+-data
+@user.home/MostWorkspace
+```
+
+You can change this to any other path. Note you need to use forward slashes also for Windows machines.
+
+For example:
+
+```
+-data
+/path/to/any/directory
+```
+
+or
+
+
+```
+-data
+C:/Users/some/other/directory
+```
+
+Please ensure that the configured directory is writable,
