@@ -54,7 +54,6 @@ On Mac OS X, if you need to pass arguments to ModuleStudio, you'll have to edit 
 
 On Linux, the easiest way is using the command line using your favourite console tool: change directory to the directory where ModuleStudio is installed. Then enter the following command to launch ModuleStudio in for example English: `./modulestudio -nl en`.
 
-
 ## Custom workspace directory
 
 If you want to change the path where ModuleStudio persists its data edit the `modulestudio.ini` file using a text editor.
