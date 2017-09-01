@@ -151,7 +151,7 @@ Note if you search for a keyword, this keyword is highlighted in the results.
 
 ### Searching on web sites
 
-The help view allows you to extend a search to different websites, like the English and German Zikula support sites and documentation for Symfony, Doctrine and Twig.
+The help view allows you to extend a search to different websites, like the (German) Zikula support site and documentation for Symfony, Doctrine and Twig.
 
 ![Search options in help view](images/ui_views_help_search_options.png "Search options in help view")
 
