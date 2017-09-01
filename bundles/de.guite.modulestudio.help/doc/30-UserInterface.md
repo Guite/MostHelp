@@ -37,7 +37,8 @@ The file menu contains actions about handling model files and projects.
 
 * ![Validate diagram](images/menu_file_validate.png) Validate diagram - Allows to trigger the [validation](50-Validation.md#triggering-validation) for your current model manually.
 * ![Generate application](images/menu_file_generate.png) Generate application - Starts the [generation process](60-GeneratingApplications.md#how-it-works) for creating application source code from your current model.
-* ![Delete project](images/menu_file_delete_project.png) Delete project - Deletes the current project from [workspace](15-Installation.md#the-workspace). This action can not be reverted.
+* ![Copy project](images/menu_file_copy_project.png) Copy project - Duplicates the currently opened project using a new name.
+* ![Delete project](images/menu_file_delete_project.png) Delete project - Deletes the current project from the [workspace](15-Installation.md#the-workspace). This action can not be reverted.
 * ![Close](images/menu_file_close.png) Close - Closes the current editor. This is the same as clicking on the cross symbol on the top right of its heading tab. If you need the editor again you can reopen it using the [Window main menu](#window-menu) or the [dashboard view](33-Views.md#dashboard-view).
 * ![Close all](images/menu_file_close_all.png) Close All - This closes all open editors at once.
 * ![Save](images/menu_file_save.png) Save - Saves the current editor.

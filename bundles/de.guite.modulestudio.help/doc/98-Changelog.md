@@ -9,6 +9,8 @@
 * Simplified and improved wizard for creating new projects.
 * Disable _Delete project_ action if no project is opened.
 * Disable _Validate diagram_, _Generate application_ and _Print preview_ actions if no editor is opened.
+* Added _Copy project_ action to duplicate the current project using a new name (#802).
+* Fixed some wrong mnemonics for main menu actions.
 
 ### DSL / Modelling language changes
 
