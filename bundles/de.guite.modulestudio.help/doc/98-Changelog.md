@@ -7,7 +7,8 @@
 * Fixed copying of diagram image and model files to docs folder if no generator settings element has been created.
 * Overhauled example models for showing a wider range of functionality (#1098).
 * Simplified and improved wizard for creating new projects.
-* Disable _Validate diagram_ and _Generate application_ actions if no editor is opened.
+* Disable _Delete project_ action if no project is opened.
+* Disable _Validate diagram_, _Generate application_ and _Print preview_ actions if no editor is opened.
 
 ### DSL / Modelling language changes
 
