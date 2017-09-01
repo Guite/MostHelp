@@ -1,0 +1,1120 @@
+<graphml version="1.3" xmlns="http://graphml.graphdrawing.org/xmlns/graphml" xmlns:y="http://www.yworks.com/xml/graphml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <key id="d0" for="graphml" yfiles.type="resources"/>
+  <key id="d1" for="port" attr.name="style" attr.type="complex"/>
+  <key id="d2" for="port" attr.name="geometry" attr.type="complex">
+    <y:Geometry x="0" y="0"/>
+  </key>
+  <key id="d3" for="port" attr.name="http://www.yworks.com/xml/yfiles-graphml/1.0/portviewstates" attr.type="complex"/>
+  <key id="d4" for="node" attr.name="style" attr.type="complex"/>
+  <key id="d5" for="node" attr.name="labels" attr.type="complex"/>
+  <key id="d6" for="node" attr.name="node-2-id" attr.type="string"/>
+  <key id="d7" for="node" attr.name="geometry" attr.type="complex">
+    <y:Geometry x="-15" y="-15" width="30" height="30"/>
+  </key>
+  <key id="d8" for="node" attr.name="nodeinsets" attr.type="complex">
+    <y:Insets left="0" top="0" right="0" bottom="0"/>
+  </key>
+  <key id="d9" for="node" attr.name="node-description" attr.type="string"/>
+  <key id="d10" for="node" attr.name="node-url" attr.type="string"/>
+  <key id="d11" for="node" attr.name="http://www.yworks.com/xml/yfiles-graphml/1.0/nodeviewstates" attr.type="complex"/>
+  <key id="d12" for="node" attr.name="http://www.yworks.com/xml/yfiles-graphml/1.0/expansionstate" attr.type="boolean">
+    <default>true</default>
+  </key>
+  <key id="d13" for="edge" attr.name="style" attr.type="complex"/>
+  <key id="d14" for="edge" attr.name="labels" attr.type="complex"/>
+  <key id="d15" for="edge" attr.name="edge-2-id" attr.type="string"/>
+  <key id="d16" for="edge" attr.name="geometry" attr.type="complex">
+    <y:Path/>
+  </key>
+  <key id="d17" for="edge" attr.name="edge-description" attr.type="string"/>
+  <key id="d18" for="edge" attr.name="edge-url" attr.type="string"/>
+  <key id="d19" for="edge" attr.name="http://www.yworks.com/xml/yfiles-graphml/1.0/edgeviewstates" attr.type="complex"/>
+  <key id="d20" for="all" attr.name="usertags" attr.type="complex"/>
+  <key id="d21" for="graph" attr.name="sharedData" attr.type="complex"/>
+  <graph id="G" edgedefault="directed">
+    <data key="d21">
+      <y:SharedData>
+        <y:Font family="Dialog" points="12" style="Regular" color="#000000" id="1"/>
+        <y:Brush name="SolidBrush" color="Black" id="2"/>
+        <y:Pen name="SolidColor" color="Black" width="1" id="3"/>
+        <y:InteriorLabelModel position="North" id="4">
+          <y:ModelState refid="5"/>
+        </y:InteriorLabelModel>
+        <y:ModelState id="5">
+          <y:Insets left="0" right="0" top="0" bottom="0"/>
+        </y:ModelState>
+        <y:ModelState id="6">
+          <y:Insets left="0" right="0" top="0" bottom="0"/>
+        </y:ModelState>
+        <y:InteriorLabelModel position="Center" id="7">
+          <y:ModelState refid="6"/>
+        </y:InteriorLabelModel>
+        <y:Pen name="SolidColor" color="Black" width="1" id="8"/>
+        <y:Pen name="SolidColor" color="Black" width="1" id="9"/>
+        <y:ISimpleLabelStyle clipText="true" autoFlip="true" id="10">
+          <y:Font refid="1"/>
+          <y:Brush name="SolidBrush" color="Black"/>
+        </y:ISimpleLabelStyle>
+      </y:SharedData>
+    </data>
+    <node id="G:n0">
+      <port name="p0"/>
+      <port name="p1"/>
+      <port name="p2"/>
+      <port name="p3"/>
+      <data key="d5">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle refid="10"/>
+            <y:InteriorLabelModel refid="7"/>
+            <y:Text>INITIAL</y:Text>
+            <y:PreferredSize width="45.35" height="15.95"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d6">0</data>
+      <data key="d7">
+        <y:Geometry x="-563.949843325799" y="-304.126162419264" width="80" height="40"/>
+      </data>
+      <data key="d4">
+        <y:IShapeNodeStyle>
+          <y:Shape>Rectangle</y:Shape>
+          <y:Pen name="SolidColor" color="Black" width="1"/>
+          <y:Brush name="SolidBrush" color="#ffff8800"/>
+        </y:IShapeNodeStyle>
+      </data>
+    </node>
+    <node id="G:n1">
+      <port name="p0"/>
+      <port name="p1"/>
+      <port name="p2"/>
+      <data key="d5">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font refid="1"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+            </y:ISimpleLabelStyle>
+            <y:InteriorLabelModel refid="7"/>
+            <y:Text>DEFERRED</y:Text>
+            <y:PreferredSize width="62.9" height="15.95"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d6">1</data>
+      <data key="d7">
+        <y:Geometry x="-147.0401245231019" y="-304.126162419264" width="80" height="40"/>
+      </data>
+      <data key="d4">
+        <y:IShapeNodeStyle>
+          <y:Shape>Rectangle</y:Shape>
+          <y:Pen name="SolidColor" color="Black" width="1"/>
+          <y:Brush name="SolidBrush" color="#ffff8800"/>
+        </y:IShapeNodeStyle>
+      </data>
+    </node>
+    <node id="G:n2">
+      <port name="p0"/>
+      <port name="p1"/>
+      <port name="p2"/>
+      <port name="p3"/>
+      <port name="p4"/>
+      <data key="d5">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font refid="1"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+            </y:ISimpleLabelStyle>
+            <y:InteriorLabelModel refid="7"/>
+            <y:Text>ACCEPTED</y:Text>
+            <y:PreferredSize width="64.8" height="15.95"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d6">2</data>
+      <data key="d7">
+        <y:Geometry x="-479.16013801137893" y="-152.9544569077333" width="80" height="40"/>
+      </data>
+      <data key="d4">
+        <y:IShapeNodeStyle>
+          <y:Shape>Rectangle</y:Shape>
+          <y:Pen name="SolidColor" color="Black" width="1"/>
+          <y:Brush name="SolidBrush" color="#ffff8800"/>
+        </y:IShapeNodeStyle>
+      </data>
+    </node>
+    <node id="G:n3">
+      <port name="p0"/>
+      <port name="p1"/>
+      <port name="p2"/>
+      <port name="p3"/>
+      <port name="p4"/>
+      <data key="d5">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font refid="1"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+            </y:ISimpleLabelStyle>
+            <y:InteriorLabelModel refid="7"/>
+            <y:Text>APPROVED</y:Text>
+            <y:PreferredSize width="65.55" height="15.95"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d6">3</data>
+      <data key="d7">
+        <y:Geometry x="-479.1601380113789" y="8.217248603797444" width="80" height="40"/>
+      </data>
+      <data key="d4">
+        <y:IShapeNodeStyle>
+          <y:Shape>Rectangle</y:Shape>
+          <y:Pen name="SolidColor" color="Black" width="1"/>
+          <y:Brush name="SolidBrush" color="#ffff8800"/>
+        </y:IShapeNodeStyle>
+      </data>
+    </node>
+    <node id="G:n4">
+      <port name="p0"/>
+      <port name="p1"/>
+      <port name="p2"/>
+      <data key="d5">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font refid="1"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+            </y:ISimpleLabelStyle>
+            <y:InteriorLabelModel refid="7"/>
+            <y:Text>SUSPENDED</y:Text>
+            <y:PreferredSize width="71.5" height="15.95"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d6">4</data>
+      <data key="d7">
+        <y:Geometry x="-147.0401245231019" y="8.217248603797444" width="80" height="40"/>
+      </data>
+      <data key="d4">
+        <y:IShapeNodeStyle>
+          <y:Shape>Rectangle</y:Shape>
+          <y:Pen name="SolidColor" color="Black" width="1"/>
+          <y:Brush name="SolidBrush" color="#ffff8800"/>
+        </y:IShapeNodeStyle>
+      </data>
+    </node>
+    <node id="G:n5">
+      <port name="p0">
+        <data key="d2">
+          <y:Geometry x="-40" y="0"/>
+        </data>
+      </port>
+      <port name="p1"/>
+      <port name="p2"/>
+      <data key="d5">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font refid="1"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+            </y:ISimpleLabelStyle>
+            <y:InteriorLabelModel refid="7"/>
+            <y:Text>ARCHIVED</y:Text>
+            <y:PreferredSize width="63.5" height="15.95"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d6">5</data>
+      <data key="d7">
+        <y:Geometry x="-147.0401245231019" y="168.4318491484696" width="80" height="40"/>
+      </data>
+      <data key="d4">
+        <y:IShapeNodeStyle>
+          <y:Shape>Rectangle</y:Shape>
+          <y:Pen name="SolidColor" color="Black" width="1"/>
+          <y:Brush name="SolidBrush" color="#ffff8800"/>
+        </y:IShapeNodeStyle>
+      </data>
+    </node>
+    <node id="G:n6">
+      <port name="p0"/>
+      <data key="d5">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font refid="1"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+            </y:ISimpleLabelStyle>
+            <y:InteriorLabelModel refid="7"/>
+            <y:Text>DELETED</y:Text>
+            <y:PreferredSize width="55.25" height="15.95"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d6">7</data>
+      <data key="d7">
+        <y:Geometry x="-147.0401245231019" y="366.5023678552656" width="80" height="40"/>
+      </data>
+      <data key="d4">
+        <y:IShapeNodeStyle>
+          <y:Shape>Rectangle</y:Shape>
+          <y:Pen name="SolidColor" color="Black" width="1"/>
+          <y:Brush name="SolidBrush" color="#ffff8800"/>
+        </y:IShapeNodeStyle>
+      </data>
+    </node>
+    <node id="G:n7">
+      <port name="p0"/>
+      <port name="p1"/>
+      <port name="p2"/>
+      <port name="p3"/>
+      <port name="p4"/>
+      <port name="p5"/>
+      <data key="d5">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font refid="1"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+            </y:ISimpleLabelStyle>
+            <y:InteriorLabelModel refid="7"/>
+            <y:Text>WAITING</y:Text>
+            <y:PreferredSize width="54.35" height="15.95"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d6">8</data>
+      <data key="d7">
+        <y:Geometry x="-147.0401245231019" y="-152.9544569077333" width="80" height="40"/>
+      </data>
+      <data key="d4">
+        <y:IShapeNodeStyle>
+          <y:Shape>Rectangle</y:Shape>
+          <y:Pen name="SolidColor" color="Black" width="1"/>
+          <y:Brush name="SolidBrush" color="#ffff8800"/>
+        </y:IShapeNodeStyle>
+      </data>
+    </node>
+    <node id="G:n8">
+      <port name="p0"/>
+      <port name="p1"/>
+      <data key="d5">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle refid="10"/>
+            <y:InteriorLabelModel refid="7"/>
+            <y:Text>Pending Content</y:Text>
+            <y:PreferredSize width="100.3" height="15.95"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d6">9</data>
+      <data key="d7">
+        <y:Geometry x="-326.5588146504815" y="-124.74703302084396" width="106.91736676648247" height="20.988188941226554"/>
+      </data>
+      <data key="d4">
+        <y:IPanelNodeStyle color="#ffcccccc" labelInsetsColor="Silver">
+          <y:InsetsRectangle x="0" y="0" width="0" height="0"/>
+        </y:IPanelNodeStyle>
+      </data>
+    </node>
+    <node id="G:n9">
+      <port name="p0"/>
+      <port name="p1"/>
+      <data key="d5">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font refid="1"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+            </y:ISimpleLabelStyle>
+            <y:InteriorLabelModel refid="7"/>
+            <y:Text>hasTray</y:Text>
+            <y:PreferredSize width="49.25" height="15.95"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d6">11</data>
+      <data key="d7">
+        <y:Geometry x="-10.156218943049282" y="17.723154133184167" width="106.91736676648247" height="20.988188941226554"/>
+      </data>
+      <data key="d4">
+        <y:IPanelNodeStyle color="#ffcccccc" labelInsetsColor="Silver">
+          <y:InsetsRectangle x="0" y="0" width="0" height="0"/>
+        </y:IPanelNodeStyle>
+      </data>
+    </node>
+    <node id="G:n10">
+      <port name="p0"/>
+      <port name="p1"/>
+      <data key="d5">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font refid="1"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+            </y:ISimpleLabelStyle>
+            <y:InteriorLabelModel refid="7"/>
+            <y:Text>hasArchive</y:Text>
+            <y:PreferredSize width="66.95" height="15.95"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d6">12</data>
+      <data key="d7">
+        <y:Geometry x="-10.156218943049282" y="176.23493746454912" width="106.91736676648247" height="20.988188941226554"/>
+      </data>
+      <data key="d4">
+        <y:IPanelNodeStyle color="#ffcccccc" labelInsetsColor="Silver">
+          <y:InsetsRectangle x="0" y="0" width="0" height="0"/>
+        </y:IPanelNodeStyle>
+      </data>
+    </node>
+    <node id="G:n11">
+      <port name="p0"/>
+      <port name="p1"/>
+      <data key="d5">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font refid="1"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+            </y:ISimpleLabelStyle>
+            <y:InteriorLabelModel refid="7"/>
+            <y:Text>ownerPermission</y:Text>
+            <y:PreferredSize width="102.45" height="15.95"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d6">13</data>
+      <data key="d7">
+        <y:Geometry x="-39.76532238618006" y="-294.62025688987717" width="136.5264702096133" height="20.988188941226554"/>
+      </data>
+      <data key="d4">
+        <y:IPanelNodeStyle color="#ffcccccc" labelInsetsColor="Silver">
+          <y:InsetsRectangle x="0" y="0" width="0" height="0"/>
+        </y:IPanelNodeStyle>
+      </data>
+    </node>
+    <node id="G:n12">
+      <port name="p0"/>
+      <data key="d5">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle refid="10"/>
+            <y:InteriorLabelModel refid="7"/>
+            <y:Text>All except INITIAL</y:Text>
+            <y:PreferredSize width="106.8" height="15.95"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d6">14</data>
+      <data key="d7">
+        <y:Geometry x="-563.9498433257988" y="283.97926267778894" width="136.5264702096133" height="40"/>
+      </data>
+      <data key="d4">
+        <y:IShapeNodeStyle>
+          <y:Shape>Rectangle</y:Shape>
+          <y:Pen name="SolidColor" color="Black" width="1"/>
+          <y:Brush name="SolidBrush" color="#ffff8800"/>
+        </y:IShapeNodeStyle>
+      </data>
+    </node>
+    <node id="G:n13">
+      <data key="d5">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle refid="10"/>
+            <y:InteriorLabelModel refid="4"/>
+            <y:Text>DESTRUCTION</y:Text>
+            <y:PreferredSize width="86.65" height="15.95"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d6">15</data>
+      <data key="d7">
+        <y:Geometry x="-693.9498433257988" y="283.97926267778894" width="106.91736676648247" height="40"/>
+      </data>
+      <data key="d8">
+        <y:Insets left="5" top="5" right="5" bottom="5"/>
+      </data>
+      <data key="d4">
+        <y:IPanelNodeStyle color="White" labelInsetsColor="#ffffcc00">
+          <y:InsetsRectangle x="5" y="5" width="5" height="5"/>
+        </y:IPanelNodeStyle>
+      </data>
+    </node>
+    <node id="G:n14">
+      <data key="d5">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font refid="1"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+            </y:ISimpleLabelStyle>
+            <y:InteriorLabelModel refid="4"/>
+            <y:Text>USAGE</y:Text>
+            <y:PreferredSize width="42" height="15.95"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d6">16</data>
+      <data key="d7">
+        <y:Geometry x="-693.9498433257988" y="8.217248603797444" width="106.91736676648247" height="40"/>
+      </data>
+      <data key="d8">
+        <y:Insets left="5" top="5" right="5" bottom="5"/>
+      </data>
+      <data key="d4">
+        <y:IPanelNodeStyle color="White" labelInsetsColor="#ffffcc00">
+          <y:InsetsRectangle x="5" y="5" width="5" height="5"/>
+        </y:IPanelNodeStyle>
+      </data>
+    </node>
+    <node id="G:n15">
+      <data key="d5">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font refid="1"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+            </y:ISimpleLabelStyle>
+            <y:InteriorLabelModel refid="4"/>
+            <y:Text>CONSTRUCTION</y:Text>
+            <y:PreferredSize width="97.6" height="15.95"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d6">17</data>
+      <data key="d7">
+        <y:Geometry x="-693.9498433257988" y="-304.6202568898773" width="106.91736676648247" height="40"/>
+      </data>
+      <data key="d8">
+        <y:Insets left="5" top="5" right="5" bottom="5"/>
+      </data>
+      <data key="d4">
+        <y:IPanelNodeStyle color="White" labelInsetsColor="#ffffcc00">
+          <y:InsetsRectangle x="5" y="5" width="5" height="5"/>
+        </y:IPanelNodeStyle>
+      </data>
+    </node>
+    <node id="G:n16">
+      <port name="p0"/>
+      <port name="p1"/>
+      <data key="d5">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font refid="1"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+            </y:ISimpleLabelStyle>
+            <y:InteriorLabelModel refid="7"/>
+            <y:Text>STANDARD+ENTERPRISEfor NONE directly to APPROVED</y:Text>
+            <y:PreferredSize width="185.15" height="29.9"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d6">18</data>
+      <data key="d7">
+        <y:Geometry x="-39.76532238618006" y="-147.79931055709778" width="195.3993455992636" height="39.68970729872916"/>
+      </data>
+      <data key="d4">
+        <y:IPanelNodeStyle color="#ffcccccc" labelInsetsColor="Silver">
+          <y:InsetsRectangle x="0" y="0" width="0" height="0"/>
+        </y:IPanelNodeStyle>
+      </data>
+    </node>
+    <node id="G:n17">
+      <port name="p0"/>
+      <port name="p1"/>
+      <data key="d5">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font refid="1"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+            </y:ISimpleLabelStyle>
+            <y:InteriorLabelModel refid="7"/>
+            <y:Text>ENTERPRISE only</y:Text>
+            <y:PreferredSize width="99.5" height="15.95"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d6">19</data>
+      <data key="d7">
+        <y:Geometry x="-431.1227114357369" y="-183.94264584895984" width="114.99257679642722" height="20.988188941226554"/>
+      </data>
+      <data key="d4">
+        <y:IPanelNodeStyle color="#ffcccccc" labelInsetsColor="Silver">
+          <y:InsetsRectangle x="0" y="0" width="0" height="0"/>
+        </y:IPanelNodeStyle>
+      </data>
+    </node>
+    <node id="G:n18">
+      <port name="p0"/>
+      <port name="p1"/>
+      <port name="p2"/>
+      <port name="p3"/>
+      <data key="d5">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font refid="1"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+            </y:ISimpleLabelStyle>
+            <y:InteriorLabelModel refid="7"/>
+            <y:Text>All except INITIAL</y:Text>
+            <y:PreferredSize width="106.8" height="15.95"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d6">20</data>
+      <data key="d7">
+        <y:Geometry x="-563.9498433257988" y="153.0048973206435" width="136.5264702096133" height="40"/>
+      </data>
+      <data key="d4">
+        <y:IShapeNodeStyle>
+          <y:Shape>Rectangle</y:Shape>
+          <y:Pen name="SolidColor" color="Black" width="1"/>
+          <y:Brush name="SolidBrush" color="#ffff8800"/>
+        </y:IShapeNodeStyle>
+      </data>
+    </node>
+    <edge id="G:e0" source="G:n0" target="G:n1" sourceport="p0" targetport="p0">
+      <data key="d14">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font family="Dialog" points="9" style="Regular" color="#000000"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+              <y:StringFormat lineAlignment="Center"/>
+            </y:ISimpleLabelStyle>
+            <y:RotatingEdgeLabelModel ratio="0.5">
+              <y:ModelState angle="0" distance="0" edgeRelativeDistance="false"/>
+            </y:RotatingEdgeLabelModel>
+            <y:Text><![CDATA[defer [edit for NONE, else comment]]]></y:Text>
+            <y:PreferredSize width="160.9" height="22.9"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d15">0</data>
+      <data key="d13">
+        <y:IPolylineEdgeStyle>
+          <y:Pen refid="8"/>
+          <y:TargetArrow>
+            <y:DefaultArrow type="Spearhead" cropLength="0" scale="1">
+              <y:Pen refid="9"/>
+              <y:Brush refid="2"/>
+            </y:DefaultArrow>
+          </y:TargetArrow>
+        </y:IPolylineEdgeStyle>
+      </data>
+    </edge>
+    <edge id="G:e1" source="G:n0" target="G:n3" sourceport="p1" targetport="p0">
+      <data key="d14">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font family="Dialog" points="9" style="Regular" color="#000000"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+              <y:StringFormat lineAlignment="Center"/>
+            </y:ISimpleLabelStyle>
+            <y:RotatingEdgeLabelModel ratio="0.5">
+              <y:ModelState angle="0" distance="0" edgeRelativeDistance="false"/>
+            </y:RotatingEdgeLabelModel>
+            <y:Text><![CDATA[submit + approve [add]]]></y:Text>
+            <y:PreferredSize width="106.6" height="22.9"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d15">1</data>
+      <data key="d16">
+        <y:Path>
+          <y:Point x="-523.949843325799" y="28.217248603797444"/>
+          <y:Point x="-480.8820564994269" y="28.217248603797444"/>
+        </y:Path>
+      </data>
+      <data key="d13">
+        <y:IPolylineEdgeStyle>
+          <y:Pen refid="8"/>
+          <y:TargetArrow>
+            <y:DefaultArrow type="Spearhead" cropLength="0" scale="1">
+              <y:Pen refid="9"/>
+              <y:Brush refid="2"/>
+            </y:DefaultArrow>
+          </y:TargetArrow>
+        </y:IPolylineEdgeStyle>
+      </data>
+    </edge>
+    <edge id="G:e2" source="G:n1" target="G:n7" sourceport="p1" targetport="p0">
+      <data key="d14">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font family="Dialog" points="9" style="Regular" color="#000000"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+              <y:StringFormat lineAlignment="Center"/>
+            </y:ISimpleLabelStyle>
+            <y:RotatingEdgeLabelModel ratio="0.5">
+              <y:ModelState angle="0" distance="0" edgeRelativeDistance="false"/>
+            </y:RotatingEdgeLabelModel>
+            <y:Text>submit [comment]reject [edit]</y:Text>
+            <y:PreferredSize width="83.3" height="33.35"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d15">2</data>
+      <data key="d13">
+        <y:IPolylineEdgeStyle>
+          <y:Pen refid="8"/>
+          <y:SourceArrow>
+            <y:DefaultArrow type="Spearhead" cropLength="0" scale="1">
+              <y:Pen refid="8"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+            </y:DefaultArrow>
+          </y:SourceArrow>
+          <y:TargetArrow>
+            <y:DefaultArrow type="Spearhead" cropLength="0" scale="1">
+              <y:Pen refid="9"/>
+              <y:Brush refid="2"/>
+            </y:DefaultArrow>
+          </y:TargetArrow>
+        </y:IPolylineEdgeStyle>
+      </data>
+    </edge>
+    <edge id="G:e3" source="G:n0" target="G:n7" sourceport="p2" targetport="p1">
+      <data key="d14">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font family="Dialog" points="9" style="Regular" color="#000000"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+              <y:StringFormat lineAlignment="Center"/>
+            </y:ISimpleLabelStyle>
+            <y:RotatingEdgeLabelModel ratio="0.5">
+              <y:ModelState angle="0" distance="0" edgeRelativeDistance="false"/>
+            </y:RotatingEdgeLabelModel>
+            <y:Text><![CDATA[submit [comment]]]></y:Text>
+            <y:PreferredSize width="83.3" height="22.9"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d15">3</data>
+      <data key="d13">
+        <y:IPolylineEdgeStyle>
+          <y:Pen refid="8"/>
+          <y:TargetArrow>
+            <y:DefaultArrow type="Spearhead" cropLength="0" scale="1">
+              <y:Pen refid="9"/>
+              <y:Brush refid="2"/>
+            </y:DefaultArrow>
+          </y:TargetArrow>
+        </y:IPolylineEdgeStyle>
+      </data>
+    </edge>
+    <edge id="G:e4" source="G:n7" target="G:n3" sourceport="p2" targetport="p1">
+      <data key="d14">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font family="Dialog" points="9" style="Regular" color="#000000"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+              <y:StringFormat lineAlignment="Center"/>
+            </y:ISimpleLabelStyle>
+            <y:RotatingEdgeLabelModel ratio="0.5">
+              <y:ModelState angle="0" distance="0" edgeRelativeDistance="false"/>
+            </y:RotatingEdgeLabelModel>
+            <y:Text><![CDATA[approve [add]]]></y:Text>
+            <y:PreferredSize width="63.85" height="22.9"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d15">4</data>
+      <data key="d13">
+        <y:IPolylineEdgeStyle>
+          <y:Pen refid="8"/>
+          <y:TargetArrow>
+            <y:DefaultArrow type="Spearhead" cropLength="0" scale="1">
+              <y:Pen refid="9"/>
+              <y:Brush refid="2"/>
+            </y:DefaultArrow>
+          </y:TargetArrow>
+        </y:IPolylineEdgeStyle>
+      </data>
+    </edge>
+    <edge id="G:e5" source="G:n3" target="G:n4" sourceport="p2" targetport="p0">
+      <data key="d14">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font family="Dialog" points="9" style="Regular" color="#000000"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+              <y:StringFormat lineAlignment="Center"/>
+            </y:ISimpleLabelStyle>
+            <y:RotatingEdgeLabelModel ratio="0.5">
+              <y:ModelState angle="0" distance="0" edgeRelativeDistance="false"/>
+            </y:RotatingEdgeLabelModel>
+            <y:Text>unpublish [edit]publish [edit]</y:Text>
+            <y:PreferredSize width="72.3" height="33.35"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d15">5</data>
+      <data key="d13">
+        <y:IPolylineEdgeStyle>
+          <y:Pen refid="8"/>
+          <y:SourceArrow>
+            <y:DefaultArrow type="Spearhead" cropLength="0" scale="1">
+              <y:Pen refid="8"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+            </y:DefaultArrow>
+          </y:SourceArrow>
+          <y:TargetArrow>
+            <y:DefaultArrow type="Spearhead" cropLength="0" scale="1">
+              <y:Pen refid="9"/>
+              <y:Brush refid="2"/>
+            </y:DefaultArrow>
+          </y:TargetArrow>
+        </y:IPolylineEdgeStyle>
+      </data>
+    </edge>
+    <edge id="G:e6" source="G:n3" target="G:n2" sourceport="p3" targetport="p0">
+      <data key="d14">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font family="Dialog" points="9" style="Regular" color="#000000"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+              <y:StringFormat lineAlignment="Center"/>
+            </y:ISimpleLabelStyle>
+            <y:RotatingEdgeLabelModel ratio="0.5">
+              <y:ModelState angle="0" distance="0" edgeRelativeDistance="false"/>
+            </y:RotatingEdgeLabelModel>
+            <y:Text>approve [add]disapprove [add]</y:Text>
+            <y:PreferredSize width="76.6" height="33.35"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d15">7</data>
+      <data key="d13">
+        <y:IPolylineEdgeStyle>
+          <y:Pen refid="8"/>
+          <y:SourceArrow>
+            <y:DefaultArrow type="Spearhead" cropLength="0" scale="1">
+              <y:Pen refid="8"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+            </y:DefaultArrow>
+          </y:SourceArrow>
+          <y:TargetArrow>
+            <y:DefaultArrow type="Spearhead" cropLength="0" scale="1">
+              <y:Pen refid="9"/>
+              <y:Brush refid="2"/>
+            </y:DefaultArrow>
+          </y:TargetArrow>
+        </y:IPolylineEdgeStyle>
+      </data>
+    </edge>
+    <edge id="G:e7" source="G:n0" target="G:n2" sourceport="p3" targetport="p1">
+      <data key="d14">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font family="Dialog" points="9" style="Regular" color="#000000"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+              <y:StringFormat lineAlignment="Center"/>
+            </y:ISimpleLabelStyle>
+            <y:RotatingEdgeLabelModel ratio="0.5">
+              <y:ModelState angle="0" distance="0" edgeRelativeDistance="false"/>
+            </y:RotatingEdgeLabelModel>
+            <y:Text><![CDATA[submit + accept [edit]]]></y:Text>
+            <y:PreferredSize width="100.05" height="22.9"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d15">8</data>
+      <data key="d13">
+        <y:IPolylineEdgeStyle>
+          <y:Pen name="SolidColor" color="Black" width="1"/>
+          <y:TargetArrow>
+            <y:DefaultArrow type="Spearhead" cropLength="0" scale="1">
+              <y:Pen name="SolidColor" color="Black" width="1"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+            </y:DefaultArrow>
+          </y:TargetArrow>
+        </y:IPolylineEdgeStyle>
+      </data>
+    </edge>
+    <edge id="G:e8" source="G:n7" target="G:n2" sourceport="p3" targetport="p2">
+      <data key="d14">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font family="Dialog" points="9" style="Regular" color="#000000"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+              <y:StringFormat lineAlignment="Center"/>
+            </y:ISimpleLabelStyle>
+            <y:RotatingEdgeLabelModel ratio="0.5">
+              <y:ModelState angle="0" distance="0" edgeRelativeDistance="false"/>
+            </y:RotatingEdgeLabelModel>
+            <y:Text><![CDATA[accept [edit]]]></y:Text>
+            <y:PreferredSize width="57.3" height="22.9"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d15">9</data>
+      <data key="d13">
+        <y:IPolylineEdgeStyle>
+          <y:Pen name="SolidColor" color="Black" width="1"/>
+          <y:TargetArrow>
+            <y:DefaultArrow type="Spearhead" cropLength="0" scale="1">
+              <y:Pen name="SolidColor" color="Black" width="1"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+            </y:DefaultArrow>
+          </y:TargetArrow>
+        </y:IPolylineEdgeStyle>
+      </data>
+    </edge>
+    <edge id="G:e9" source="G:n3" target="G:n5" sourceport="p4" targetport="p0">
+      <data key="d14">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font family="Dialog" points="9" style="Regular" color="#000000"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+              <y:StringFormat lineAlignment="Center"/>
+            </y:ISimpleLabelStyle>
+            <y:RotatingEdgeLabelModel ratio="0.5">
+              <y:ModelState angle="0" distance="0" edgeRelativeDistance="false"/>
+            </y:RotatingEdgeLabelModel>
+            <y:Text><![CDATA[archive [edit] or automatic [enddate]unarchive [edit]]]></y:Text>
+            <y:PreferredSize width="161.7" height="33.35"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d15">10</data>
+      <data key="d13">
+        <y:IPolylineEdgeStyle>
+          <y:Pen refid="3"/>
+          <y:SourceArrow>
+            <y:DefaultArrow type="Spearhead" cropLength="0" scale="1">
+              <y:Pen refid="3"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+            </y:DefaultArrow>
+          </y:SourceArrow>
+          <y:TargetArrow>
+            <y:DefaultArrow type="Spearhead" cropLength="0" scale="1">
+              <y:Pen name="SolidColor" color="Black" width="1"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+            </y:DefaultArrow>
+          </y:TargetArrow>
+        </y:IPolylineEdgeStyle>
+      </data>
+    </edge>
+    <edge id="G:e10" source="G:n4" target="G:n5" sourceport="p1" targetport="p1">
+      <data key="d14">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font family="Dialog" points="9" style="Regular" color="#000000"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+              <y:StringFormat lineAlignment="Center"/>
+            </y:ISimpleLabelStyle>
+            <y:RotatingEdgeLabelModel ratio="0.5">
+              <y:ModelState angle="0" distance="0" edgeRelativeDistance="false"/>
+            </y:RotatingEdgeLabelModel>
+            <y:Text>archive [edit]or automatic [enddate]</y:Text>
+            <y:PreferredSize width="102.85" height="33.35"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d15">11</data>
+      <data key="d13">
+        <y:IPolylineEdgeStyle>
+          <y:Pen name="SolidColor" color="Black" width="1"/>
+          <y:SourceArrow>
+            <y:DefaultArrow type="None"/>
+          </y:SourceArrow>
+          <y:TargetArrow>
+            <y:DefaultArrow type="Spearhead" cropLength="0" scale="1">
+              <y:Pen name="SolidColor" color="Black" width="1"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+            </y:DefaultArrow>
+          </y:TargetArrow>
+        </y:IPolylineEdgeStyle>
+      </data>
+    </edge>
+    <edge id="G:e11" source="G:n12" target="G:n6" sourceport="p0" targetport="p0">
+      <data key="d14">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font family="Dialog" points="9" style="Regular" color="#000000"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+              <y:StringFormat lineAlignment="Center"/>
+            </y:ISimpleLabelStyle>
+            <y:RotatingEdgeLabelModel ratio="0.5">
+              <y:ModelState angle="0" distance="0" edgeRelativeDistance="false"/>
+            </y:RotatingEdgeLabelModel>
+            <y:Text><![CDATA[delete [delete]]]></y:Text>
+            <y:PreferredSize width="65.7" height="22.9"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d15">16</data>
+      <data key="d16">
+        <y:Path>
+          <y:Point x="-495.68660822099207" y="386.5023678552657"/>
+          <y:Point x="-498.9542075022077" y="386.5023678552657"/>
+        </y:Path>
+      </data>
+      <data key="d13">
+        <y:IPolylineEdgeStyle>
+          <y:Pen name="SolidColor" color="Black" width="1"/>
+          <y:TargetArrow>
+            <y:DefaultArrow type="Spearhead" cropLength="0" scale="1">
+              <y:Pen name="SolidColor" color="Black" width="1"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+            </y:DefaultArrow>
+          </y:TargetArrow>
+        </y:IPolylineEdgeStyle>
+      </data>
+    </edge>
+    <edge id="G:e12" source="G:n7" target="G:n8" sourceport="p4" targetport="p0">
+      <data key="d15">20</data>
+      <data key="d13">
+        <y:IPolylineEdgeStyle>
+          <y:Pen name="SolidColor" color="Black" width="1"/>
+          <y:SourceArrow>
+            <y:DefaultArrow type="None"/>
+          </y:SourceArrow>
+          <y:TargetArrow>
+            <y:DefaultArrow type="None"/>
+          </y:TargetArrow>
+        </y:IPolylineEdgeStyle>
+      </data>
+    </edge>
+    <edge id="G:e13" source="G:n2" target="G:n8" sourceport="p3" targetport="p1">
+      <data key="d15">21</data>
+      <data key="d13">
+        <y:IPolylineEdgeStyle>
+          <y:Pen name="SolidColor" color="Black" width="1"/>
+          <y:SourceArrow>
+            <y:DefaultArrow type="None"/>
+          </y:SourceArrow>
+          <y:TargetArrow>
+            <y:DefaultArrow type="None"/>
+          </y:TargetArrow>
+        </y:IPolylineEdgeStyle>
+      </data>
+    </edge>
+    <edge id="G:e14" source="G:n4" target="G:n9" sourceport="p2" targetport="p0">
+      <data key="d15">24</data>
+      <data key="d13">
+        <y:IPolylineEdgeStyle>
+          <y:Pen name="SolidColor" color="Black" width="1"/>
+          <y:SourceArrow>
+            <y:DefaultArrow type="None"/>
+          </y:SourceArrow>
+          <y:TargetArrow>
+            <y:DefaultArrow type="None"/>
+          </y:TargetArrow>
+        </y:IPolylineEdgeStyle>
+      </data>
+    </edge>
+    <edge id="G:e15" source="G:n5" target="G:n10" sourceport="p2" targetport="p0">
+      <data key="d15">25</data>
+      <data key="d13">
+        <y:IPolylineEdgeStyle>
+          <y:Pen name="SolidColor" color="Black" width="1"/>
+          <y:SourceArrow>
+            <y:DefaultArrow type="None"/>
+          </y:SourceArrow>
+          <y:TargetArrow>
+            <y:DefaultArrow type="None"/>
+          </y:TargetArrow>
+        </y:IPolylineEdgeStyle>
+      </data>
+    </edge>
+    <edge id="G:e16" source="G:n1" target="G:n11" sourceport="p2" targetport="p0">
+      <data key="d15">26</data>
+      <data key="d13">
+        <y:IPolylineEdgeStyle>
+          <y:Pen name="SolidColor" color="Black" width="1"/>
+          <y:SourceArrow>
+            <y:DefaultArrow type="None"/>
+          </y:SourceArrow>
+          <y:TargetArrow>
+            <y:DefaultArrow type="None"/>
+          </y:TargetArrow>
+        </y:IPolylineEdgeStyle>
+      </data>
+    </edge>
+    <edge id="G:e17" source="G:n2" target="G:n17" sourceport="p4" targetport="p0">
+      <data key="d15">27</data>
+      <data key="d13">
+        <y:IPolylineEdgeStyle>
+          <y:Pen name="SolidColor" color="Black" width="1"/>
+          <y:SourceArrow>
+            <y:DefaultArrow type="None"/>
+          </y:SourceArrow>
+          <y:TargetArrow>
+            <y:DefaultArrow type="None"/>
+          </y:TargetArrow>
+        </y:IPolylineEdgeStyle>
+      </data>
+    </edge>
+    <edge id="G:e18" source="G:n7" target="G:n16" sourceport="p5" targetport="p0">
+      <data key="d15">28</data>
+      <data key="d13">
+        <y:IPolylineEdgeStyle>
+          <y:Pen name="SolidColor" color="Black" width="1"/>
+          <y:SourceArrow>
+            <y:DefaultArrow type="None"/>
+          </y:SourceArrow>
+          <y:TargetArrow>
+            <y:DefaultArrow type="None"/>
+          </y:TargetArrow>
+        </y:IPolylineEdgeStyle>
+      </data>
+    </edge>
+    <edge id="G:e19" source="G:n18" target="G:n18" sourceport="p2" targetport="p3">
+      <data key="d14">
+        <y:Labels>
+          <y:Label>
+            <y:ISimpleLabelStyle clipText="true" autoFlip="true">
+              <y:Font family="Dialog" points="9" style="Regular" color="#000000"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+              <y:StringFormat lineAlignment="Center"/>
+            </y:ISimpleLabelStyle>
+            <y:RotatingEdgeLabelModel ratio="0.4">
+              <y:ModelState angle="0" distance="0" edgeRelativeDistance="false"/>
+            </y:RotatingEdgeLabelModel>
+            <y:Text><![CDATA[update [edit]]]></y:Text>
+            <y:PreferredSize width="59.3" height="22.9"/>
+          </y:Label>
+        </y:Labels>
+      </data>
+      <data key="d15">29</data>
+      <data key="d16">
+        <y:Path>
+          <y:Point x="-392.0547461700342" y="90.90692868287152"/>
+        </y:Path>
+      </data>
+      <data key="d13">
+        <y:IPolylineEdgeStyle>
+          <y:Pen name="SolidColor" color="Black" width="1"/>
+          <y:TargetArrow>
+            <y:DefaultArrow type="Spearhead" cropLength="0" scale="1">
+              <y:Pen name="SolidColor" color="Black" width="1"/>
+              <y:Brush name="SolidBrush" color="Black"/>
+            </y:DefaultArrow>
+          </y:TargetArrow>
+        </y:IPolylineEdgeStyle>
+      </data>
+    </edge>
+  </graph>
+  <data key="d0">
+    <y:Resources/>
+  </data>
+</graphml>

@@ -814,7 +814,7 @@ The following image shows an overview of all possible workflow states and action
 
 ![Workflow overview](images/workflows.png "Workflow overview")
 
-The current state for a certain object is stored in the workflow itself. Furthermore ModuleStudio creates an additional field named `workflowState` to each entity before starting the generation. This allows for easier filtering and other useful applications without having to load the workflow in all cases. In fact ModuleStudio adds it as a [list field](#list-field) which contains a [list field item](#list-field-item) for each state.
+For storing the current state for a certain object ModuleStudio adds an additional field named `workflowState` to each entity before starting the generation. This can also be used for easy filtering. In fact ModuleStudio adds it as a [list field](#list-field) which contains a [list field item](#list-field-item) for each state.
 
 Note that it is easily possible to model [date or datetime fields](#abstract-date-field) which set their value automatically depending on a certain workflow state. Just set their [timestampable type](#entity-timestampable-type) to `CHANGE` and set `workflowState` as change trigger field. Also set the change trigger value to the name of the desired state. So you could for example create an approval date by using `approved` for the trigger value property.
 
