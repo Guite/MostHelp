@@ -53,6 +53,7 @@
 * Introduced the Leaflet library for geographical functionality replacing Mapstraction (#340).
 * Improved support for exporting PDF files (#798).
 * Fixed deletion of optional upload files when no new file was provided.
+* Fixed permission level for submission of new entries with workflows with approval (#1129).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.0.1).
 
 ## ModuleStudio 1.0.0 (July 31, 2017)
