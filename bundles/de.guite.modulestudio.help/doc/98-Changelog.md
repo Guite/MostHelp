@@ -1,6 +1,6 @@
 # Changelog
 
-## ModuleStudio 1.0.1 (unreleased)
+## ModuleStudio 1.0.1 (Sep 2, 2017)
 
 ### Product changes
 
@@ -433,7 +433,7 @@
 * Moved remaining elements from controller layer into main editor.
 * Two new properties allow controlling field visibility and css classes for editing.
 * Removed action handlers, action events and transitions from controller layer.
-* Removed dsl properties for view layer, event listeners and transform objects.
+* Removed DSL properties for view layer, event listeners and transform objects.
 * Added `expandedSource` and `expandedTarget` properties to relationships for controlling their editing display type in Symfony Forms terminology. The `useChecks` property of list fields has been renamed to `expanded` accordingly.
 * The `metaData` extension is deprecated and does not have any effect anymore in the generator. If you need meta data create a normal entity for them instead (#854).
 * It is now possible to define for each field whether it should be visible on view pages, visible on display pages and whether it may be used for sorting or not (#858). 
@@ -461,7 +461,7 @@
 * Form handlers redirect back to the referer if no `returnTo` parameter is specified (#844).
 * For 1.4 applications a `FeatureActivationHelper` class is created which can be used to disable/enable certain features (categories, attributes, translations, tree relatives) during runtime (#841). This is for example useful if you would like to make these features depending on some conditions, like a module variable.
 * Generated applications support category-based permissions now (#842).
-* The geolocation functionality is commented out by default. If you need it, you can just activate it in the template by removing the comment (#853).
+* The geolocation functionality is disabled by default (#853).
 * Many minor bugfixes.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A0.7.0).
 
