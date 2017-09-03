@@ -12,7 +12,7 @@
 
 ### Generator changes
 
-* None yet.
+* Use fine-grained processing of display hooks again (for Zikula 1.5.2+ and 2.0.2+) (#1132).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.0.2).
 
 ## ModuleStudio 1.0.1 (Sep 2, 2017)
