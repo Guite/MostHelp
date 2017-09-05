@@ -4,7 +4,7 @@
 
 ### Product changes
 
-* None yet.
+* Avoid skipping some relationship validation constraints in wrong cases.
 
 ### DSL / Modelling language changes
 
