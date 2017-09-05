@@ -235,16 +235,16 @@ This section includes rules which apply only for datetime, date and time fields.
 
 * Relation must be assigned to an application. Should not occur in practice, this is just for completeness.
 * Every relation must have a (source | target) data object. Should not occur in practice, this is just for completeness.
+* Every relation must have a (source | target) alias. Aliases must have a length of at least two chars. Recommended are at least four chars.
+* Relationship source aliases must be unique for all incoming relations of an entity.
+* Relationship target aliases must be unique for all outgoing relations of an entity.
+* Relationship source aliases must not be named like a field of the target entity.
+* Relationship target aliases must not be named like a field of the source entity.
 
 #### Join relationship
 
 Includes basically all relationships in the data layer except inheritance.
 
-* Every join relation must have a (source | target) alias. Aliases must have a length of at least two chars. Recommended are at least four chars.
-* Relationship source aliases must be unique for all incoming relations of an entity.
-* Relationship source aliases must not be named like a field of the target entity.
-* Relationship target aliases must be unique for all outgoing relations of an entity.
-* Relationship target aliases must not be named like a field of the source entity.
 * The (`sourceField` | `targetField`) attribute must contain either `id` for automatic primary key or a comma separated list of (source | target) fields to be referenced. Note that the separator is `', '` including the space char.
 * The amount of join columns must be equal for association source and target sides. If source or target field are not `id` ModuleStudio splits both values by the separator above and compares the amount of elements on both sides. This enables joins over multiple fields.
 * The field `sourceField` | `targetField` must be an integer field with a length of `11`. Is only checked if the (source | target) field is named `id`.

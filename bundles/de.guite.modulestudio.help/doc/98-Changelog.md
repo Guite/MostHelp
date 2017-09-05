@@ -8,7 +8,8 @@
 
 ### DSL / Modelling language changes
 
-* None yet.
+* The `sourceAlias` and `targetAlias` attributes moved from `JoinRelationship` to `Relationship`, so also inheritance relationships have these now.
+* Made textual grammar more flexible with regards to relation sources and targets in order to improve support for mapped super classes.
 
 ### Generator changes
 
