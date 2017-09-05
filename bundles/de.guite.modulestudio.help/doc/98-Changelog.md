@@ -18,6 +18,7 @@
 * Added support for Scribite 6.0 and plugins for Quill and Summernote (#1133).
 * Updated TinyMCE plugin (#1133).
 * Fixed issues in Scribite plugins if Zikula is installed in a sub directory (#1133).
+* Fixed ignored amount of items quick navigation setting.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.0.2).
 
 ## ModuleStudio 1.0.1 (Sep 2, 2017)
