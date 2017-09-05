@@ -10,7 +10,7 @@ The following screenshot shows a model opened in the textual editor:
 
 ![Example of textual editor](images/textual_example.png "Example of textual editor")
 
-As you can see the editor offers syntax highlighting and folding. The minus symbols on the left side allow collapsing parts which are current not relevant for you. If you hover a collapsed block it's content is shown in a tooltip.
+As you can see the editor offers syntax highlighting and folding. The minus symbols on the left side allow collapsing parts which are currently not relevant for you. If you hover a collapsed block it's content is shown in a tooltip.
 
 ## Content assist
 
