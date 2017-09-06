@@ -505,7 +505,7 @@ By default, no shapes neither connectors are hidden. If you check both options, 
 
 ModuleStudio is going to move towards hybrid modelling, combining different kinds of editors in the same UI. One concrete use case for this is that the [textual editor](36-TextualEditor.md) can be used inside the diagram editor. This may be handy to specify a large amount of properties directly for example.
 
-If you double-click data objects (mapped super classes and entities), settings containers and relationships an embedded textual editor is opened right at this position. This embedded editor provides many features of the main textual editor, like syntax highlighting, content assist and template proposals. Some advanced features are not part of the embedded editor (yet) though: for example folding is not possible and problems as well as quick fixes are not shown.
+If you double-click data objects (mapped super classes and entities), settings containers and relationships an embedded textual editor is opened right at this position. This embedded editor provides many features of the main textual editor, like syntax highlighting, content assist and template proposals. Some advanced features are not part of the embedded editor (yet) though: for example folding is not available and problems as well as quick fixes are not shown.
 
 One benefit of the embedded editor though is that it relates to the context of one specific element instead of showing the entire model at once. So it is interesting for modifying the *inner structure* of a certain element only.
 

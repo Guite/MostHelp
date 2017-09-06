@@ -15,6 +15,12 @@ The following screenshot shows a model opened in the textual editor:
 
 As you can see the editor offers syntax highlighting and folding. The minus symbols on the left side allow collapsing parts which are currently not relevant for you. If you hover a collapsed block it's content is shown in a tooltip.
 
+## Line numbers
+
+If you click with the right mouse button on the left column a context menu opens offering some options. Particularly you can enable line numbers which may help with navigation.
+
+![Textual editor with line numbers](images/textual_line_numbers.png "Textual editor with line numbers")
+
 ## Content assist
 
 The next important feature is auto completion (content assist) which can be triggered by pressing **Ctrl + Space**. Depending on the current cursor position it suggests different possible keywords or names to insert.
