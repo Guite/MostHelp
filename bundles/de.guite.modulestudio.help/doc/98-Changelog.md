@@ -6,6 +6,7 @@
 
 * Avoid skipping some relationship validation constraints in wrong cases.
 * Ensure that only one settings container can be added to a model.
+* Initially assigned names for new data objects now contain an incrementing counter. 
 
 ### DSL / Modelling language changes
 
