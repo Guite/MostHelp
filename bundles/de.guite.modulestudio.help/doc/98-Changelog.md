@@ -5,6 +5,7 @@
 ### Product changes
 
 * Avoid skipping some relationship validation constraints in wrong cases.
+* Ensure that only one settings container can be added to a model.
 
 ### DSL / Modelling language changes
 
