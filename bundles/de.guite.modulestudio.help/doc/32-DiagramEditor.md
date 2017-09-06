@@ -501,6 +501,30 @@ When working on big diagrams, you may want to hide the icons of the labels on al
 
 By default, no shapes neither connectors are hidden. If you check both options, next time you will open your diagram, all label icons of shapes and connectors will be hidden.
 
+## Embedded textual editor
+
+ModuleStudio is going to move towards hybrid modelling, combining different kinds of editors in the same UI. One concrete use case for this is that the [textual editor](36-TextualEditor.md) can be used inside the diagram editor. This may be handy to specify a large amount of properties directly for example.
+
+If you double-click data objects (mapped super classes and entities), settings containers and relationships an embedded textual editor is opened right at this position. This embedded editor provides many features of the main textual editor, like syntax highlighting, content assist and template proposals. Some advanced features are not part of the embedded editor (yet) though: for example folding is not possible and problems as well as quick fixes are not shown.
+
+One benefit of the embedded editor though is that it relates to the context of one specific element instead of showing the entire model at once. So it is interesting for modifying the *inner structure* of a certain element only.
+
+To save your changes and close the embedded editor press **Ctrl + Enter**. If you press **Esc** the editor is closed without saving. For other shortcuts see the [corresponding chapter](82-KeyboardShortcuts.md).
+
+The following screenshot shows an embedded textual editor for an entity:
+
+![Embedded editor for an entity](images/ui_diagram_embedded_entity.png "Embedded editor for an entity")
+
+And here is an example for a relationship:
+
+![Embedded editor for a relationship](images/ui_diagram_embedded_relationship.png "Embedded editor for a relationship")
+
+It is even possible to have multiple embedded editors open concurrently. The following example shows the previous editor for a relationship with an additional editor for the generator settings opened.
+
+![Multiple embedded editors](images/ui_diagram_embedded_multiple.png "Multiple embedded editors")
+
+Note this embedded editor is in **experimental state**, some fine-tuning tasks and extensions are still to be done!
+
 ## Other diagram features
 
 ### Hide children

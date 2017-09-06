@@ -77,6 +77,12 @@
 * **Up** or **Down** - Navigate between group and tools.
 * **Ctrl + Mouse** - Multiple additions. Select a palette tool for element creation and keep **Ctrl** pressed (**Alt** on Mac). Now you can use multiple mouse clicks for creating multiple elements without having to reselect the palette tool.
 
+### Embedded textual editor
+
+* Almost all shortcuts shown [below](#keyboard-shortcuts-in-textual-editors).
+* **Ctrl + Enter** - Save and close.
+* **Esc** - Cancel and close. 
+
 ## Keyboard shortcuts in table and tree editors
 
 * **F2** - Direct edit of selected element.
@@ -103,7 +109,7 @@ The following list shows some basic commands which might be helpful when using t
 * **Ctrl + Space** - Start content assist suggesting possible values.
 * **Ctrl + D** - Delete current line.
 * **Ctrl + L** - Go to a certain line.
-* **Ctrl + M** - Maximize current editor window.
+* **Ctrl + M** - Maximise current editor window.
 * **Ctrl + W** - Close current editor tab.
 * **Ctrl + Q** - Go to last edit location.
 * **Ctrl + Shift + F** - Start the source code formatter.
