@@ -327,7 +327,7 @@ Represents a field type for storing integer numbers.
 
 An integer field has the following properties in addition to the common [abstract integer field](#abstract-integer-field) settings:
 
-* **aggregateFor** - Aggregate field: one-to-many target alias and field name (syntax: `views#amount`) which causes the generator creating special methods for aggregation.
+* **aggregateFor** - Aggregate field: one-to-many target alias and field name (syntax: `views#amount`) which causes the generator creating special methods for aggregation. More information can be found in [this article](http://doctrine-orm.readthedocs.io/en/latest/cookbook/aggregate-fields.html).
 * **maxValue** - Maximum value. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
 * **minValue** - Minimum value. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
 * **percentage** - A boolean specifying whether this field represents a percentage value or not. Default value is `false`.
@@ -342,7 +342,7 @@ Represents a field type for storing decimal numbers.
 
 A decimal field has the following properties in addition to the common [derived field](#derived-field) settings:
 
-* **aggregationField** - A boolean specifying whether this field should act as an aggregate field. Default value is `false`. If set to `true` the generator creates special methods for aggregation.
+* **aggregationField** - A boolean specifying whether this field should act as an aggregate field. Default value is `false`. If set to `true` the generator creates special methods for aggregation. More information can be found in [this article](http://doctrine-orm.readthedocs.io/en/latest/cookbook/aggregate-fields.html).
 * **currency** - A boolean specifying whether this field should be treated as currency. Default value is `false`. If set to `true` the generator will use the `formatcurrency` modifier instead of `formatnumber` during output.
 * **length** - The length of this field. Default value is `10`.
 * **maxValue** - Maximum value. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
@@ -358,7 +358,7 @@ Represents a field type for storing float numbers.
 
 A float field has the following properties in addition to the common [derived field](#derived-field) settings:
 
-* **aggregationField** - A boolean specifying whether this field should act as an aggregate field. Default value is `false`. If set to `true` the generator creates special methods for aggregation.
+* **aggregationField** - A boolean specifying whether this field should act as an aggregate field. Default value is `false`. If set to `true` the generator creates special methods for aggregation. More information can be found in [this article](http://doctrine-orm.readthedocs.io/en/latest/cookbook/aggregate-fields.html).
 * **currency** - A boolean specifying whether this field should be treated as currency. Default value is `false`. If set to `true` the generator will use the `formatcurrency` modifier instead of `formatnumber` during output.
 * **length** - The length of this field. Default value is `10`.
 * **maxValue** - Maximum value. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
@@ -915,7 +915,7 @@ Represents one-to-many relationships.
 It includes the following properties in addition to the common [join relationship](#join-relationship) settings:
 
 * **bidirectional** - A boolean specifying whether this relationship is bidirectional or not. The default value is `false`.
-* **indexBy** - Set to target field name (must be unique) to specify the index by criteria for the relation. Please note that this has not be tested very well yet.
+* **indexBy** - Set to target field name (must be unique) to specify the index by criteria for the relation. Please note that this has not be tested very well yet. More information can be found in [this article](http://doctrine-orm.readthedocs.io/en/latest/tutorials/working-with-indexed-associations.html).
 * **orderBy** - Set to target field name(s) to specify the sorting criteria for the outgoing relation. Some examples are shown [below](#ordering-many-valued-relationship-sides).
 * **orphanRemoval** - Default value is `false`. If set to `true` orphans get removed automatically.
 * **minTarget** - Minimum amount of items enforced to be present on the target side. The default value is `0`.
@@ -937,7 +937,7 @@ Represents many-to-many relationships.
 It includes the following properties in addition to the common [join relationship](#join-relationship) settings:
 
 * **bidirectional** - A boolean specifying whether this relationship is bidirectional or not. The default value is `false`.
-* **indexBy** - Set to target field name (must be unique) to specify the index by criteria for the relation. Please note that this has not be tested very well yet.
+* **indexBy** - Set to target field name (must be unique) to specify the index by criteria for the relation. Please note that this has not be tested very well yet. More information can be found in [this article](http://doctrine-orm.readthedocs.io/en/latest/tutorials/working-with-indexed-associations.html).
 * **orderBy** - Set to target field name(s) to specify the sorting criteria for the outgoing relation. Some examples are shown [below](#ordering-many-valued-relationship-sides).
 * **orderByReverse** - Set to source field name(s) to specify the sorting criteria for the incoming relation. Some examples are shown [below](#ordering-many-valued-relationship-sides).
 * **orphanRemoval** - Default value is `false`. If set to `true` orphans get removed automatically.
