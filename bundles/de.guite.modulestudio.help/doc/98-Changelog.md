@@ -7,7 +7,7 @@
 * Avoid skipping some relationship validation constraints in wrong cases.
 * Ensure that only one settings container can be added to a model.
 * Initially assigned names for new data objects now contain an incrementing counter.
-* Double-clicking data objects (mapped super classes and entities), settings containers and relationships opens an embedded textual editor inside the diagram editor. Read more about that [this section](32-DiagramEditor.md#embedded-textual-editor).
+* Double-clicking data objects (mapped super classes and entities), settings containers and relationships opens an embedded textual editor inside the diagram editor. Read more about that in [this section](32-DiagramEditor.md#embedded-textual-editor).
 
 ### DSL / Modelling language changes
 
