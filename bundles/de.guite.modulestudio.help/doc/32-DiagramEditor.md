@@ -523,6 +523,8 @@ It is even possible to have multiple embedded editors open concurrently. The fol
 
 ![Multiple embedded editors](images/ui_diagram_embedded_multiple.png "Multiple embedded editors")
 
+You can also open the embedded editor for *any element* (also e.g. for single fields) by right-clicking it and using the *Open embedded Xtext editor* action in the context menu.
+
 Note this embedded editor is in **experimental state**, some fine-tuning tasks and extensions are still to be done!
 
 ## Other diagram features
