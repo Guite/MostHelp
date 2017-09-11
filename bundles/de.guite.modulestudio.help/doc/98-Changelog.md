@@ -19,7 +19,7 @@
 * Use fine-grained processing of display hooks again (for Zikula 1.5.2+ and 2.0.2+) (#1132).
 * Fixed form type option `inline_usage` missing in some cases (#1130).
 * Reactivated Scribite support for Zikula 2.x (#1133).
-* Added support for Scribite 6.0 and plugins for Quill and Summernote (#1133).
+* Added support for Scribite 6.0 providing additional plugins for new Quill and Summernote editors (#1133).
 * Updated TinyMCE plugin (#1133).
 * Fixed issues in Scribite plugins if Zikula is installed in a sub directory (#1133).
 * Fixed ignored amount of items quick navigation setting.
