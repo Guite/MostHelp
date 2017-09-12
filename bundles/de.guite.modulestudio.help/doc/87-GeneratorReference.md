@@ -870,7 +870,9 @@ A relationship may have the following references:
 
 * **application** - Reference to the owning element.
 * **source** - Allows referencing a [target data object](#data-object).
+* **sourceAlias** - The alias for the source entity, required to have multiple associations between the same entities. The name should reflect the cardinality on the source side (singular or plural forms) depending on the relationship type. As with all names mixed case is preferred, for example `personAddresses`.
 * **target** - Allows referencing a [source data object](#data-object).
+* **targetAlias** - The alias for the target entity, required to have multiple associations between the same entities. The name should reflect the cardinality on the target side (singular or plural forms) depending on the relationship type. As with all names mixed case is preferred, for example `personAddresses`. Furthermore it is possible to use multiple field names separated by a comma with a space char in order to join entities with multiple keys.
 
 #### Join relationship
 
@@ -888,9 +890,7 @@ It includes the following properties in addition to the common [relationship](#r
 * **onDelete** - String for optional update cascade options on database level (for example `RESTRICT` or `SETNULL`).
 * **onDelete** - String for optional delete cascade options on database level (for example `RESTRICT` or `SETNULL`).
 * **useAutoCompletion** - If set to any value except `NONE` the generator will create an auto completion field instead of a normal drop-down select field for the corresponding side(s) of the relationship. For more information see the [available options](#auto-completion-usage).
-* **sourceAlias** - The alias for the source entity, required to have multiple associations between the same entities. The name should reflect the cardinality on the source side (singular or plural forms) depending on the relationship type. As with all names mixed case is preferred, for example `personAddresses`.
 * **sourceField** - Name of the source entity field(s) used for the join. The default value is `id` which means that the source entity is joined by it's primary key. It is possible to change that value for custom join conditions. Furthermore it is possible to use multiple field names separated by a comma with a space char in order to join entities with multiple keys.
-* **targetAlias** - The alias for the target entity, required to have multiple associations between the same entities. The name should reflect the cardinality on the target side (singular or plural forms) depending on the relationship type. As with all names mixed case is preferred, for example `personAddresses`. Furthermore it is possible to use multiple field names separated by a comma with a space char in order to join entities with multiple keys.
 * **targetField** - Name of the target entity field(s) used for the join. The default value is `id` which means that the target entity is joined by it's primary key. It is possible to change that value for custom join conditions.
 * **unique** - A boolean specifying whether the field for this relationship is unique or not. The default value is `false`.
 
