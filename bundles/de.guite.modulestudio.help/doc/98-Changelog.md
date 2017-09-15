@@ -25,6 +25,7 @@
 * Fixed ignored amount of items quick navigation setting.
 * Properly consider `nullable` flag for user fields.
 * Fixed potential exception in archive helper (#1140).
+* Cleaner UI for repeated item creation (#1138).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.0.2).
 
 ## ModuleStudio 1.0.1 (Sep 2, 2017)
