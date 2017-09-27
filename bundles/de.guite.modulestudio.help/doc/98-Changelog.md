@@ -4,6 +4,7 @@
 
 ### Product changes
 
+* Updated to Eclipse Oxygen.1 (4.7.1).
 * Avoid skipping some relationship validation constraints in wrong cases.
 * Ensure that only one settings container can be added to a model.
 * Initially assigned names for new data objects now contain an incrementing counter.
