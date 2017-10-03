@@ -1,6 +1,6 @@
 # Changelog
 
-## ModuleStudio 1.0.2 (unreleased)
+## ModuleStudio 1.0.2 (Oct 3, 2017)
 
 ### Product changes
 
@@ -17,7 +17,7 @@
 
 ### Generator changes
 
-* Use fine-grained processing of display hooks again (for Zikula 1.5.2+ and 2.0.2+) (#1132).
+* Use fine-grained processing of display hooks again (#1132).
 * Fixed form type option `inline_usage` missing in some cases (#1130).
 * Reactivated Scribite support for Zikula 2.x (#1133).
 * Added support for Scribite 6.0 providing additional plugins for new Quill and Summernote editors (#1133).
