@@ -16,6 +16,7 @@
 * Avoid putting thumb runtime options into query to prevent pager problem.
 * Use named argument for `notifyDisplayHooks` calls.
 * Fixed problems in RSS and Atom templates.
+* Fixed usage of `getChildrenQueryBuilder` in list content type.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.1.0).
 
 ## ModuleStudio 1.0.2 (Oct 3, 2017)
