@@ -79,7 +79,7 @@ In the window menu you can find actions about managing editors, views and prefer
 1. ![Toggle Full Screen](images/menu_window_appearance_toggle_full_screen.png) Toggle Full Screen - Enables/disables a full screen mode.
 
 
-* ![DEditors](images/menu_window_editors.png) Editors - Displays a sub menu for opening the different editors. This sub menu contains the following items:
+* ![Editors](images/menu_window_editors.png) Editors - Displays a sub menu for opening the different editors. This sub menu contains the following items:
 
 
 1. ![Open diagram](images/menu_window_editors_diagram.png) Open diagram - Opens the [diagram editor](32-DiagramEditor.md#diagram-editor).
