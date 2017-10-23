@@ -5,6 +5,7 @@
 ### Product changes
 
 * Removed redundant filter panel.
+* Removed unused table editors.
 
 ### DSL / Modelling language changes
 

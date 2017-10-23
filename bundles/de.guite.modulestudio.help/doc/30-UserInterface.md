@@ -79,12 +79,10 @@ In the window menu you can find actions about managing editors, views and prefer
 1. ![Toggle Full Screen](images/menu_window_appearance_toggle_full_screen.png) Toggle Full Screen - Enables/disables a full screen mode.
 
 
-* ![Editors](images/menu_window_editors.png) Editors - Displays a sub menu for opening the different editors. This sub menu contains the following items:
+* ![DEditors](images/menu_window_editors.png) Editors - Displays a sub menu for opening the different editors. This sub menu contains the following items:
 
 
 1. ![Open diagram](images/menu_window_editors_diagram.png) Open diagram - Opens the [diagram editor](32-DiagramEditor.md#diagram-editor).
-2. ![Open variables table](images/menu_window_editors_table.png) Open variables table - Opens the [table editor](35-TableEditors.md#table-editors) for variables.
-3. ![Open entities table](images/menu_window_editors_table.png) Open entities table - Opens the [table editor](35-TableEditors.md#table-editors) for entities.
 
 
 * ![Views](images/menu_window_views.png) Views - Displays a sub menu for opening the different views. Helpful if you closed one and need it back. This sub menu contains the following items:
@@ -136,7 +134,6 @@ Since the available editors and views are the most important parts of the Module
 
 * The [diagram editor](32-DiagramEditor.md#diagram-editor) allows for graphical model creation and amendment.
 * Several [views](33-Views.md#views) assist you during your work by providing means for doing specific tasks or showing additional information.
-* There are [table editors](35-TableEditors.md#table-editors) which can be used in addition to the diagram editor.
 * A [textual editor](36-TextualEditor.md#textual-editor) is also available for advanced users.
 * Several configuration options can be defined in the [preferences](38-Preferences.md#preferences).
 

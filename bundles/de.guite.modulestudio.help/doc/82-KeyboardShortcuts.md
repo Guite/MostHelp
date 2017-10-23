@@ -83,14 +83,6 @@
 * **Ctrl + Enter** - Save and close.
 * **Esc** - Cancel and close. 
 
-## Keyboard shortcuts in table and tree editors
-
-* **F2** - Direct edit of selected element.
-* **F5** - Refresh. Force an update of the displayed data according to the latest version of the semantic model.
-* **+** - Expand direct children.
-* **-** or **/** - Collapse.
-* ** * ** - Expand all children.
-
 ## Keyboard shortcuts in textual editors
 
 The following list shows some basic commands which might be helpful when using the textual editors.
