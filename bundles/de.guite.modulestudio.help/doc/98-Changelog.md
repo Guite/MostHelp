@@ -4,7 +4,7 @@
 
 ### Product changes
 
-* None yet.
+* Removed redundant filter panel.
 
 ### DSL / Modelling language changes
 

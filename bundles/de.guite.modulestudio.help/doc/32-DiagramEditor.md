@@ -179,20 +179,6 @@ Variables are generated as basic settings in the application. You can create one
 
 These containers can hold the definition of several variables. Variables can be created for boolean values, integers, text fields, file paths and lists.
 
-## Filters
-
-Filters are a possibility to restrict the visible diagram elements. Applying a filter on a diagram will hide the graphical elements which match the filter's criterion. To apply a filter, open the *Filters* menu in the tab-bar to select which filters should be enabled or disabled.
-
-![Filters menu](images/ui_diagram_filters_menu.png "Filters menu")
-
-Note that the current filters are just examples. We require **your feedback** to decide if this function and, if yes, which filters are reasonable and should be added in future.
-
-The last filter, *Hide specific entities*, opens a selection wizard which allows you to specify which entities should be hidden.
-
-![Filter selection wizard](images/ui_diagram_filters_selection.png "Filter selection wizard")
-
-At the moment this has basically the same effect than hiding the elements like shown [above](#hiding-elements). But of course the filter could be combined with further selection criteria.
-
 ## Pop-up bars
 
 The user interface objects appearing in pop-up bars are buttons in a bubble-like shape. The buttons are generally used to create elements in the context of the diagram element below the mouse location.
@@ -466,7 +452,7 @@ Another possibility is a *Show/Hide* button the tab-bar provides when there is n
 
 ![Show/Hide button](images/ui_diagram_show_hide_button.png "Show/Hide button")
 
-This button opens a dialog to manage the shown and hidden elements on the diagram with a tree view, using various selection buttons (Check all, Uncheck all, Expand All and Collapse all) and various filters (All element, only checked elements and only unchecked elements).
+This button opens a dialog to manage the shown and hidden elements on the diagram with a tree view, using various selection buttons (Check all, Uncheck all, Expand All and Collapse all) and various filters (all elements, only checked elements and only unchecked elements).
 
 ![Show/Hide dialog](images/ui_diagram_show_hide_dialog.png "Show/Hide dialog")
 
