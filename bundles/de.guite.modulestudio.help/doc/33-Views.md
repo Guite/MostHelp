@@ -10,8 +10,6 @@ The dashboard view is just a control panel providing you quick links to some com
 * ![Open project](images/menu_file_open_project.png) Open project - Displays a dialog for selecting an existing project to open.
 * ![Import model file](images/menu_file_open_import.png) Import model - Displays a dialog for selecting an existing `.mostapp` file to be imported into a new project. Models from earlier versions are [automatically migrated](20-GettingStarted.md#importing-model-files).
 * ![Diagram editor](images/menu_window_editors_diagram.png) Diagram editor - Opens the [diagram editor](32-DiagramEditor.md#diagram-editor).
-* ![Variables table](images/menu_window_editors_table.png) Variables table - Opens the [table editor](35-TableEditors.md#table-editors) for variables.
-* ![Entities table](images/menu_window_editors_table.png) Entities table - Opens the [table editor](35-TableEditors.md#table-editors) for entities.
 
 ## Error log view
 

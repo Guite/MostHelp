@@ -205,12 +205,6 @@ The *Zoom in* and *Zoom out* buttons behave similarly to their equivalents in th
 
 The zoom function can also be accessed by using the combination of the keyboard key **Ctrl** and the mouse wheel - as is used in many browsers, which makes it an intuitive option. In this case, the zoom is done on the mouse location instead of the center of the editor. 
 
-### Opening other editors
-
-You can open the [table editors](35-TableEditors.md#table-editors) directly from the diagram using the canvas' context menu.
-
-![Open table editors](images/ui_diagram_open_tables.png "Open table editors")
-
 ## Working with diagram elements
 
 ### Resizing elements
