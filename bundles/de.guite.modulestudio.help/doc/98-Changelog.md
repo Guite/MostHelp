@@ -18,6 +18,7 @@
 * Fixed problems in RSS and Atom templates.
 * Fixed usage of `getChildrenQueryBuilder` in list content type.
 * Fixed edge case in `CategoryHelper`.
+* Fixed some Font Awesome icon usages.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.1.0).
 
 ## ModuleStudio 1.0.2 (Oct 3, 2017)
