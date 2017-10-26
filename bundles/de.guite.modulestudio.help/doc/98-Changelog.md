@@ -22,6 +22,7 @@
 * Fixed some Font Awesome icon usages.
 * Fixed potentially missing generation of `ThirdPartyListener` for 2.x targets (#1145).
 * Fixed potentially missing generation of detail block form type for 2.x targets (#1146).
+* Properly consider incoming relationships acting as primary key.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.1.0).
 
 ## ModuleStudio 1.0.2 (Oct 3, 2017)
