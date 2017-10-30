@@ -83,6 +83,7 @@ In the window menu you can find actions about managing editors, views and prefer
 
 
 1. ![Open diagram](images/menu_window_editors_diagram.png) Open diagram - Opens the [diagram editor](32-DiagramEditor.md#diagram-editor).
+2. ![Open text](images/menu_window_editors_text.png) Open text - Opens the [textual editor](36-TextualEditor.md#textual-editor).
 
 
 * ![Views](images/menu_window_views.png) Views - Displays a sub menu for opening the different views. Helpful if you closed one and need it back. This sub menu contains the following items:
@@ -151,7 +152,7 @@ Also you can minimise and maximise views by using the small icons at their top r
 
 It is even possible to use multiple editors in parallel by arranging them next to each other.
 
-![Table editor and textual editor side by side](images/ui_multiple_editors.png "Table editor and textual editor side by side")
+![Diagram editor and textual editor side by side](images/ui_multiple_editors.png "Diagram editor and textual editor side by side")
 
 Experiment with these options and use them to meet your personal workflow.
 

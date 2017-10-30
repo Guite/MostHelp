@@ -6,6 +6,7 @@
 
 * Removed redundant filter panel.
 * Removed unused table editors.
+* Added possibility to open textual editor from dashboard view or main menu.
 
 ### DSL / Modelling language changes
 
