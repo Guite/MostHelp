@@ -1094,7 +1094,7 @@ A variable may have the following references:
 
 * **container** - Reference to the owning element.
 
-For each variable the generator creates an according input element in the config page. Also the variable is handled properly in the installer classes which takes care for initialisation and removal on uninstallation.
+For each variable the generator creates an according input element in the config page. Also the variable is handled properly in the installer class which takes care for initialisation and removal on uninstallation.
 
 #### Text var
 
