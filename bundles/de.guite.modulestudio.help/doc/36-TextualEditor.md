@@ -5,7 +5,7 @@ ModuleStudio also includes a textual syntax notation.
 The textual editor can be used in two different ways:
 
 1. **Included in the diagram editor:** see [this section](32-DiagramEditor.md#embedded-textual-editor).
-2. **Standalone:** to use the textual editor in a separate window open the *Open resource* dialog using **Ctrl + Shift + R**, type `*.mostapp` into the filter field and click on the *Open* button. A question pops up asking whether you want to add the Xtext nature to the project. Select *No*. Afterwards the editor window should appear.
+2. **Standalone:** to use the textual editor in a separate window open it from either the dashboard view or the main menu.
 
 ## Basic features of textual editor
 
