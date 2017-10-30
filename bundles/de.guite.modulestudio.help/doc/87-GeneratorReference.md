@@ -1075,7 +1075,7 @@ If a model contains multiple variable containers the config page will use a tabb
 
 By default a variable container serves only for grouping the contained variables. If the `composite` flag is enabled though behaviour is different. In this case the variable container results in a module variable itself which is persisted as an array containing all single variables as elements.
 
-For example imagine you want to create to variables for a payment method and a payment url.
+For example imagine you want to create two variables for a payment method and a payment url.
 
 Option 1: create a variable container named `payment` with `composite=false` and two variables `paymentMethod` and `paymentUrl` in it. This leads to two module variables `paymentMethod = ''` and `paymentUrl = ''`.
 
