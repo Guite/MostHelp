@@ -7,6 +7,11 @@
 * Removed redundant filter panel.
 * Removed unused table editors.
 * Added possibility to open textual editor from dashboard view or main menu.
+* Hide `defaultValue` property for some field types (list, upload, array, object).
+* Hide `fixedLength`, `nospace` and `minLength` properties for list and upload fields.
+* Hide `sluggablePosition` property for some field types (email, url, list, upload).
+* Hide `sortableGroup` property for upload, array and object fields.
+* Hide `translatable` property for some field types (list, upload, array, object).
 
 ### DSL / Modelling language changes
 
