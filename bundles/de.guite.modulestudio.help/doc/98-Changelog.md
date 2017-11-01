@@ -32,6 +32,7 @@
 * Reload view page after drag n drop resorting.
 * Improved formatting of list field item text.
 * Fixed formatting of relation alias parameters for relation presets in edit forms.
+* Fixed potentially missing generation of inline editing JavaScript file.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.1.0).
 
 ## ModuleStudio 1.0.2 (Oct 3, 2017)
