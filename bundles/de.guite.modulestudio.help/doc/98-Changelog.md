@@ -35,6 +35,7 @@
 * Fixed potentially missing generation of inline editing JavaScript file.
 * Added fallback for non-existing moderation group modvars.
 * Disabled `@Cache` annotations to prevent confusion.
+* Introduced a container element for fields with inline editing to improve JavaScript reliability.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.1.0).
 
 ## ModuleStudio 1.0.2 (Oct 3, 2017)
