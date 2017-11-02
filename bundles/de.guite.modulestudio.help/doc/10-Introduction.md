@@ -69,10 +69,10 @@ The inner core of MOST is a domain-specific language (DSL) for Zikula extensions
 
 The user interface consists of different types of editors which may include event different kinds of how information is described. The following list gives an impression about what is possible as well as the pros and cons. See the [user interface chapter](30-UserInterface.md#user-interface) for more detailed information about the ModuleStudio UI components.
 
-* **Graphical** notations are convenient for modelling edges between different nodes. They are not that well suited for creating huge lists of similar elements for instance. ModuleStudio offers a graphical editor for creating and changing models for describing different applications. This editor consists of different layers and is the primary editor of ModuleStudio.
-* **Textual** syntax is very nice for rapid creation of structures. It becomes less handy for relationships. While there exists a textual editor in ModuleStudio, it is not visible yet. This is going to change soon though (see below).
-* **Structural** views, for example trees, forms or tables, are another possible viewpoint for describing a model. ModuleStudio includes two table editors for entity fields and variables. These can be used as alternatives for the graphical editor, but are less matured at the moment. It can be useful to print a table view or export table data as a csv file though.
-* **Hybrid** modelling is where ModuleStudio is heading to in future. This combines different kinds of editors in the same UI. One concrete use case is an embedded textual editor inside the graphical editor allowing to specify details on entity level.
+* **Graphical** notations are convenient for modelling edges between different nodes. They are not that well suited for creating huge lists of similar elements for instance. ModuleStudio offers a graphical editor for creating and changing models for describing different applications. This editor consists of different layers and is the primary editor of ModuleStudio. There is a dedicated chapter about the [diagram editor](32-DiagramEditor.md#diagram-editor).
+* **Textual** syntax is very nice for rapid creation of structures. It becomes less handy for relationships though. There is a dedicated chapter about the [textual editor](36-TextualEditor.md#textual-editor).
+* **Structural** views, for example trees, forms or tables, are another possible viewpoint for describing a model. ModuleStudio earlier included table editors, but these have been removed as their usability was rather clumsy.
+* **Hybrid** modelling is where ModuleStudio is heading to in future. This combines different kinds of editors in the same UI. One concrete use case is an [embedded textual editor](32-DiagramEditor.md#embedded-textual-editor) inside the graphical editor allowing to specify details within the context of a certain model element.
 
 ### Generator
 
