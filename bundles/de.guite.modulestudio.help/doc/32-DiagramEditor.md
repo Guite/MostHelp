@@ -177,7 +177,7 @@ Variables are generated as basic settings in the application. You can create one
 
 ![Variable containers](images/ui_diagram_layers_variables.png "Variable containers")
 
-These containers can hold the definition of several variables. Variables can be created for boolean values, integers, text fields, file paths and lists.
+These containers can hold the definition of several variables which are represented by the same fields that are also added to entities.
 
 ## Pop-up bars
 
@@ -261,23 +261,23 @@ To delete one or more selected elements you can either:
 
 ### Reposition fields and variables
 
-Quite often you want to change the position of a field or a variable within its container. You can do this using the context menu.
+Quite often you want to change the position of a field within its container. You can do this using the context menu.
 
 ![Change field position](images/ui_diagram_reposition_field.png "Change field position")
 
-![Change variable position](images/ui_diagram_reposition_variable.png "Change variable position")
-
-Of course this seems a bit cumbersome. Note earlier versions of ModuleStudio allowed to do this using drag n drop. This is currently not possible, but going to be re-implemented very soon.
+Of course this seems a bit cumbersome. Note earlier versions of ModuleStudio allowed to do this using drag n drop. This is currently not possible, but going to be re-implemented very soon. Also read the next section for a workaround.
 
 ### Move fields between entities
 
-You can use drag n drop to move fields into another entity. This is especially interesting if you refactor an existing model, for example to merge two entities sharing a common structure. Note this also works with having multiple fields selected, so you can move several fields into another entity in one step.
+You can use drag n drop to move fields into another entity or variable container. This is especially interesting if you refactor an existing model, for example to merge two entities sharing a common structure. Note this also works with having multiple fields selected, so you can move several fields into another entity in one step.
+
+With this functionality repositioning is also possible by moving a field into another entity and move it back afterwards.
 
 Similarly you can also move actions or indexes into other entities and variables into other variable containers.
 
 ### Manage list entries
 
-There are two elements, list fields and list variables, which contain a number if list items. To work with these, just do a double-click on the field/variable element. This opens a dialog for editing the list items.
+List fields contain a number if list items. To work with these, just do a double-click on the field element. This opens a dialog for editing the list items.
 
 ![Editing list items](images/ui_diagram_list_items_dialog.png "Editing list items")
 

@@ -10,7 +10,7 @@ As Zikula uses Symfony and the Doctrine ORM layer, the data layer in ModuleStudi
 
 From each entity in the data layer there are entity classes and repository classes created. Therewith the contained fields as well as their properties are accordingly reflected. For many data types and basic properties, like *unique*, *readonly* or *notnull* this happens with a one to one adaption. Several things are shortened for convenience in ModuleStudio though. Furthermore there are some additional data types, like for example for users, email addresses, urls and file uploads. An email field is treated by the generator as a string field in Doctrine which has the email validator activated.
 
-Validators are generally not explicitly written in MOST, but simply defined using properties. So there are for example attributes like *nospace* and *ipaddress* for string fields. Date and time fields have according properties for *past* and *future*.
+Validators are generally not explicitly written in MOST, but simply defined using properties. So there are for example attributes like *nospace* and *ipaddress* for string fields. Date and time fields have properties for *past*, *future* and others.
 
 The different types of relations in Doctrine are all offered, too. For inheritance relationships the strategy can be selected (single table, joined). All other connection types store a name for the two entities on both sides (source alias and target alias) as well as the referenced fields (source field and target field). Because the primary id fields of entities are not part of the model, but automatically added before the generation, the string `id` is allowed and also set per default. By changing these fields it is possible to describe also relations referencing other fields. Beside this it is possible to have multiple relationships between the same entities and also self relations, as long as their alias settings are unique. Finally you can also define how the cascading behaviour should look like, again supporting all options offered by Doctrine.
 
@@ -176,7 +176,7 @@ This abstract class collects properties which are shared by [mapped superclasses
 A data object has no properties, but may have the following references:
 
 * **application** - Reference to the owning element.
-* **fields** - Allows referencing one or more [entity fields](#entity-field).
+* **fields** - Allows referencing one or more [fields](#field).
 
 #### Mapped superclass
 
@@ -195,7 +195,7 @@ It has the following properties:
 * **categorisable** - A boolean specifying whether this entity should have categories or not. If set to `true` the generator creates an additional entity for managing the categories. During [edit actions](#edit-action) it is possible to select a desired category. This category will also be shown again on [display pages](#display-action) and in quick navigation forms of [view pages](#view-action). Generated applications also support filtering by categories as well as multiple category registries / properties / trees, however the implementation uses only `Main` per default. Also category-based permissions are supported. Note that if you activate the `categorisable` property for an entity the generated installer relies on that you did not remove the default categories of Zikula. If you deleted them you will need to customise the installer class to avoid problems.
 * **categorisableMultiSelection** - A boolean specifying whether multiple categories can be selected or not.
 * **changeTrackingPolicy** - How change detection is being done (see [below](#entity-change-tracking-policy)). The default value is `DEFERRED_IMPLICIT`.
-* **displayPattern** - Pattern for displaying instances of this entity. In earlier ModuleStudio versions one had to mark one entity field as `leading`. However, this was not flexible enough in practice. With the display pattern you can specify arbitrary expressions which are used as textual representation for instances of this entity. For most cases you may want to declare just one field, which is done like `#title#`. A more complex example would be `#lastName#, #firstName# (#age# years)`. Of course all fields must exist in the entity with exactly the names used within the display pattern.
+* **displayPattern** - Pattern for displaying instances of this entity. In earlier ModuleStudio versions one had to mark one field as `leading`. However, this was not flexible enough in practice. With the display pattern you can specify arbitrary expressions which are used as textual representation for instances of this entity. For most cases you may want to declare just one field, which is done like `#title#`. A more complex example would be `#lastName#, #firstName# (#age# years)`. Of course all fields must exist in the entity with exactly the names used within the display pattern.
 * **formAwareHookProvider** - Allows to specify whether a [form aware hook provider](https://github.com/zikula/core/tree/master/src/docs/Hooks) should be generated for the entity. Default value is `DISABLED`. Allowed values are explained [here](#hook-provider-mode). The generated form aware hook providers only add some dummy form fields and therefore need to be customised in the empty child classes.
 * **geographical** - A boolean specifying whether the geographical extension is used or not. If set to `true` the generator will create two additional fields named `latitude` and `longitude`. Also it will consider them in all important application areas and provide an export for the *kml* format (if `generateKmlTemplates` setting has not been set to `false`). During the creation of a new entity with geographical support a nice geolocation feature can be used to ask the user for his current location (this needs to be activated in the template though). Also there is an included integration of the [Leaflet library](http://leafletjs.com/) allowing you to utilise comprehensive map interaction functionality in your application.
 
@@ -206,7 +206,7 @@ It has the following properties:
 * **identifierStrategy** - Whether and which [identifier strategy](#entity-identifier-strategy) is applied. The default value is `AUTO`.
 * **leading** - A boolean specifying whether this is the primary (and default) entity or not.
 * **lockType** - Whether and which [locking strategy](#entity-lock-type) is applied. The default value is `PAGELOCK`.
-* **loggable** - A boolean specifying whether the [Loggable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/loggable.md) for tracking changes and managing versions is used or not. If loggable is activated the DSL will also require adding a `version` field and [optimistic locking](#entity-lock-type) because it is handy to have the current version stored in the entity directly. The generator will create an additional entity for managing the log entries if set to `true`. Furthermore there is a history page generated which will be available as soon as more than one version of an entity exists. On this history page changes are shown for each version. If the entity has a display action there is a preview link to display each version. You can also preview multiple versions at the same time and arrange the windows next to each other for easy comparison. Also there are functions to revert an entity to a previous version and to compare different versions using a diff view. Finally if there are deleted entities there is a possibility to inspect and undelete them. One drawback here is that a reinserted entity gets a new identifier. This needs to be improved after we switched to [a new workflow component](https://github.com/zikula/core/issues/2423).
+* **loggable** - A boolean specifying whether the [Loggable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/loggable.md) for tracking changes and managing versions is used or not. If loggable is activated the DSL will also require adding a `version` field and [optimistic locking](#entity-lock-type) because it is handy to have the current version stored in the entity directly. The generator will create an additional entity for managing the log entries if set to `true`. Furthermore there is a history page generated which will be available as soon as more than one version of an entity exists. On this history page changes are shown for each version. If the entity has a display action there is a preview link to display each version. You can also preview multiple versions at the same time and arrange the windows next to each other for easy comparison. Also there are functions to revert an entity to a previous version and to compare different versions using a diff view. Finally if there are deleted entities there is a possibility to inspect and undelete them. One drawback here is that a reinserted entity gets a new identifier due to a drawback in a legacy workflow component that was used earlier. This can/should be improved though now that we switched to the Symfony workflow component.
 
 ![Change history page for loggable entity with revert functionality](images/generator_loggable_change_history.png "Change history page for loggable entity with revert functionality")
 
@@ -235,21 +235,24 @@ An entity has the following references in addition to the common [data object](#
 
 * **indexes** - Allows referencing one or more [indexes](#entity-index).
 
-#### Entity field
+#### Field
 
-Represents an entity field in the data layer.
+Represents a field in the data layer.
 
 This base class has the following children at the moment:
 
 * [Derived fields](#derived-field) correspond to normal columns which are stored in a database.
 * [Calculated fields](#calculated-field) correspond to fields which can calculate their values based on other fields.
 
-An entity field may have the following references:
+A field may have the following references:
 
 * **entity** - Reference to the owning [data object](#data-object).
-* **displayType** - Controls display-related settings for [view](#view-action) and [display](#display-action) pages. See [below](#entity-field-display-type). The default value is `ALL`.
+* **varContainer** - Reference to the owning [variable container](#variables).
+* **displayType** - Controls display-related settings for [view](#view-action) and [display](#display-action) pages. See [below](#field-display-type). The default value is `ALL`.
 
-#### Entity field display type
+In the following sections all field types are explained in detail. Note that not all properties have an effect if a field is added to a variable container. For example several Doctrine extensions, like tree or translatable, work only with entities and not with variables.
+
+#### Field display type
 
 Specifies the kind of dependency to a certain application.
 
@@ -270,9 +273,9 @@ Note that this setting is ignored for [array fields](#array-field) and [object f
 
 #### Derived field
 
-Represents an entity field in the data layer which is mapped to a database column. A derived field comes straight from the data source.
+Represents a field in the data layer which is mapped to a database column. A derived field comes straight from the data source.
 
-A derived field has the following properties in addition to the common [entity field](#entity-field) settings: 
+A derived field has the following properties in addition to the common [field](#field) settings: 
 
 * **cssClass** - Optional specification of arbitrary css classes, used for [edit pages](#edit-action).
 * **dbName** - Name of the database column represented by this field. The default value is an empty string which means that the field name is used for the column, too. This property is primarily interesting for avoiding changes in the database schema when migrating legacy apps.
@@ -281,7 +284,6 @@ A derived field has the following properties in addition to the common [entity f
 * **nullable** - A boolean specifying whether the field may be null or not. The default value is `false`. A nullable field may not be mandatory at the same time.
 * **primaryKey** - A boolean specifying whether this is a primary key field or not. Default value is `false`. Usually there is no need to enable this for any fields as the generator adds primary and foreign key fields automatically.
 * **readonly** - A boolean specifying whether this a read only field or not. The default value is `false`. If set to `true` then this field may not be changed during editing.
-* **sluggablePosition** - Position of this field in the created slugs. A value of `0` (default) means that this field is not part of the slug at all. If at least one field in an entity has a sluggable position greater than `0` then this entity is considered as sluggable. In this case a permalink is built automatically from all fields in ascending position. See the slug properties on [entity](#entity) level for slug-related configuration options.
 * **sortableGroup** - A boolean specifying whether this field acts as grouping criteria for the [Sortable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/sortable.md). The default value is `false`.
 * **translatable** - A boolean specifying whether this field is translatable or not. The default value is `false`. If at least one field in an entity is translatable the generator creates an additional class for managing the translation entities (see [Translatable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/translatable.md) for more details). Overall support for translations in the application should get you started. For customisation you can override `TranslatableHelper` methods.
 
@@ -294,9 +296,9 @@ All fields are implemented as entity class member vars. The following sections w
 
 #### Calculated field
 
-Represents an entity field which can dynamically compute it's value based on other fields.
+Represents a field which can dynamically compute it's value based on other fields.
 
-A calculated field may have the following references in addition to the common [entity field](#entity-field) settings: 
+A calculated field may have the following references in addition to the common [field](#field) settings: 
 
 * **operands** - Allows referencing one or more [derived fields](#derived-field).
 
@@ -380,6 +382,8 @@ An abstract string field has the following properties in addition to the common 
 * **regexpOpposite** - A boolean specifying the logical way of checking `regexp`. Default value is `false`. If set to `true` then validation will pass only if the given string does *not* match the pattern.
 
 If one of these properties is set to `true` a corresponding validator will check this constraint on client and server level.
+
+* **sluggablePosition** - Position of this field in the created slugs. A value of `0` (default) means that this field is not part of the slug at all. If at least one field in an entity has a sluggable position greater than `0` then this entity is considered as sluggable. In this case a permalink is built automatically from all fields in ascending position. See the slug properties on [entity](#entity) level for slug-related configuration options.
 
 #### String field
 
@@ -638,11 +642,58 @@ An object field has no fields or references in addition to the common [derived f
 
 The generator will exclude objects in [edit pages](#edit-action) as well as for the output in [view](#view-action) and [display](#display-action) templates.
 
-#### Abstract date field
+#### Datetime field
 
-Represents an abstract date dependent field for grouping those field types.
+Represents a field type for storing datetime values with the format `YYYY-MM-DD H:i:s`.
 
-An abstract date field has the following properties in addition to the common [derived field](#derived-field) settings:
+A datetime field has the following properties in addition to the common [derived field](#derived-field) settings:
+
+* **components** - Which [date/time components](#datetime-components) are activated. Default value is `DATE_TIME`.
+* **future** - A boolean specifying whether the value must be in the future or not. Default value is `false`.
+* **past** - A boolean specifying whether the value must be in the past or not. Default value is `false`.
+* **startDate** - A boolean specifying whether this field should be treated as a start date. Default value is `false`. If set to `true` this field is included into determining public visibility of the corresponding objects.
+* **endDate** - A boolean specifying whether this field should be treated as an end date. Default value is `false`. If set to `true` this field is included into determining public visibility of the corresponding objects.
+* **timestampable** - Which [timestampable type](#entity-timestampable-type) is used. Default value is `NONE`.
+* **timestampableChangeTriggerField** - Optional name of field to use as change trigger (if type is `CHANGE`. Can also be `workflowState` or the name of a relation (syntax `property.field`).
+* **timestampableChangeTriggerValue** - Optional value of field to use as change trigger (if type is `CHANGE`).
+* **validatorAddition** - Additional validation constraint without the `Assert` annotation. Example values are `LessThanOrEqual("+15 minutes")` or `LessThan("-18 years UTC")` or `Range(min = "first day of January", max = "first day of January next year")`. For more details information see [this blog post](http://symfony.com/blog/new-in-symfony-2-6-date-support-for-validator-constraints).
+
+Note you can also use `now` as default value for date and time fields which results in that always the current timestamp is used for setting the initial value.
+
+The `past` and `future` properties are implemented as client-side and server-side validators.
+
+The generator will treat datetime values as date input elements in [edit pages](#edit-action). For the output in [view](#view-action) and [display](#display-action) templates a modifier is used to format the datetime according to the current locale.
+
+#### Date field
+
+**Deprecated in favour of [datetime fields](#datetime-field) with `components=DATE`, will be removed in ModuleStudio 1.2.0.**
+
+Represents a field type for storing date values with the format `YYYY-MM-DD`.
+
+A date field has the following properties in addition to the common [derived field](#derived-field) settings:
+
+* **future** - A boolean specifying whether the value must be in the future or not. Default value is `false`.
+* **past** - A boolean specifying whether the value must be in the past or not. Default value is `false`.
+* **startDate** - A boolean specifying whether this field should be treated as a start date. Default value is `false`. If set to `true` this field is included into determining public visibility of the corresponding objects.
+* **endDate** - A boolean specifying whether this field should be treated as an end date. Default value is `false`. If set to `true` this field is included into determining public visibility of the corresponding objects.
+* **timestampable** - Which [timestampable type](#entity-timestampable-type) is used. Default value is `NONE`.
+* **timestampableChangeTriggerField** - Optional name of field to use as change trigger (if type is `CHANGE`. Can also be `workflowState` or the name of a relation (syntax `property.field`).
+* **timestampableChangeTriggerValue** - Optional value of field to use as change trigger (if type is `CHANGE`).
+* **validatorAddition** - Additional validation constraint without the `Assert` annotation. Example values are `LessThanOrEqual("+15 minutes")` or `LessThan("-18 years UTC")` or `Range(min = "first day of January", max = "first day of January next year")`. For more details information see [this blog post](http://symfony.com/blog/new-in-symfony-2-6-date-support-for-validator-constraints).
+
+Note you can also use `now` as default value for date and time fields which results in that always the current timestamp is used for setting the initial value.
+
+The `past` and `future` properties are implemented as client-side and server-side validators.
+
+The generator will treat date values as date input elements in [edit pages](#edit-action). For the output in [view](#view-action) and [display](#display-action) templates a modifier is used to format the date according to the current locale.
+
+#### Time field
+
+**Deprecated in favour of [datetime fields](#datetime-field) with `components=TIME`, will be removed in ModuleStudio 1.2.0.**
+
+Represents a field type for storing time values with the format `H:i:s`.
+
+A time field has the following properties in addition to the common [derived field](#derived-field) settings.
 
 * **future** - A boolean specifying whether the value must be in the future or not. Default value is `false`.
 * **past** - A boolean specifying whether the value must be in the past or not. Default value is `false`.
@@ -651,41 +702,22 @@ An abstract date field has the following properties in addition to the common [d
 * **timestampableChangeTriggerValue** - Optional value of field to use as change trigger (if type is `CHANGE`).
 * **validatorAddition** - Additional validation constraint without the `Assert` annotation. Example values are `LessThanOrEqual("+15 minutes")` or `LessThan("-18 years UTC")` or `Range(min = "first day of January", max = "first day of January next year")`. For more details information see [this blog post](http://symfony.com/blog/new-in-symfony-2-6-date-support-for-validator-constraints).
 
-The `past` and `future` properties are implemented as client-side and server-side validators.
-
 Note you can also use `now` as default value for date and time fields which results in that always the current timestamp is used for setting the initial value.
 
-#### Datetime field
-
-Represents a field type for storing datetime values with the format `YYYY-MM-DD H:i:s`.
-
-A datetime field has the following properties in addition to the common [abstract date field](#abstract-date-field) settings:
-
-* **startDate** - A boolean specifying whether this field should be treated as a start date. Default value is `false`. If set to `true` this field is included into determining public visibility of the corresponding objects.
-* **endDate** - A boolean specifying whether this field should be treated as an end date. Default value is `false`. If set to `true` this field is included into determining public visibility of the corresponding objects.
-* **version** - A boolean specifying whether this field should act as a version. Default value is `false`. If set to `true` the owning entity will need to use [optimistic locking](#entity-lock-type). Please read more at the [integer field](#integer-field) section. Also please note that it is preferred to use integer fields instead of datetime fields for version storage (read more in the [validation reference](85-ValidationReference.md#date-and-time-fields)).
-
-The generator will treat datetime values as date input elements in [edit pages](#edit-action). For the output in [view](#view-action) and [display](#display-action) templates a modifier is used to format the datetime according to the current locale.
-
-#### Date field
-
-Represents a field type for storing date values with the format `YYYY-MM-DD`.
-
-A date field has the following properties in addition to the common [abstract date field](#abstract-date-field) settings:
-
-* **startDate** - A boolean specifying whether this field should be treated as a start date. Default value is `false`. If set to `true` this field is included into determining public visibility of the corresponding objects.
-* **endDate** - A boolean specifying whether this field should be treated as an end date. Default value is `false`. If set to `true` this field is included into determining public visibility of the corresponding objects.
-
-The generator will treat date values as date input elements in [edit pages](#edit-action). For the output in [view](#view-action) and [display](#display-action) templates a modifier is used to format the date according to the current locale.
-
-#### Time field
-
-Represents a field type for storing time values with the format `H:i:s`.
-
-A time field has no fields or references in addition to the common [abstract date field](#abstract-date-field) settings.
+The `past` and `future` properties are implemented as client-side and server-side validators.
 
 The generator renders time fields using a time input field in [edit pages](#edit-action). For the output in [view](#view-action) and [display](#display-action) templates a modifier
 is used to format the time according to the current locale.
+
+#### DateTime components
+
+Represents different types of [date and time fields](#datetime-field).
+
+Can be one of the following options:
+
+* `DATE_TIME` - Field stores date with time (default).
+* `DATE` - Field stores date only.
+* `TIME` - Field stores time only.
 
 #### Entity identifier strategy
 
@@ -730,7 +762,7 @@ Can be one of the following options:
 * `PAGELOCK_PESSIMISTIC_READ` - Use PageLock module combined with pessimistic read locking.
 * `PAGELOCK_PESSIMISTIC_WRITE` - Use PageLock module combined with pessimistic write locking.
 
-The generator transforms these values to the corresponding implementation as is. If you use optimistic locking the entity needs a version field which can be an [integer](#integer-field) or a [datetime](#datetime-field) field whereby an integer is preferred.
+The generator transforms these values to the corresponding implementation as is. If you use optimistic locking the entity needs an [integer](#integer-field) with `version` set to `true`.
 
 If you choose an option including the PageLock module the form handlers generated for the [edit pages](#edit-action) will call a locking service of the PageLock extension in order to incorporate these features.
 
@@ -816,7 +848,7 @@ The following image shows an overview of all possible workflow states and action
 
 For storing the current state for a certain object ModuleStudio adds an additional field named `workflowState` to each entity before starting the generation. This can also be used for easy filtering. In fact ModuleStudio adds it as a [list field](#list-field) which contains a [list field item](#list-field-item) for each state.
 
-Note that it is easily possible to model [date or datetime fields](#abstract-date-field) which set their value automatically depending on a certain workflow state. Just set their [timestampable type](#entity-timestampable-type) to `CHANGE` and set `workflowState` as change trigger field. Also set the change trigger value to the name of the desired state. So you could for example create an approval date by using `approved` for the trigger value property.
+Note that it is easily possible to model [date or datetime fields](#datetime-field) which set their value automatically depending on a certain workflow state. Just set their [timestampable type](#entity-timestampable-type) to `CHANGE` and set `workflowState` as change trigger field. Also set the change trigger value to the name of the desired state. So you could for example create an approval date by using `approved` for the trigger value property.
 
 For all entities having another workflow than `NONE` there are configuration options in the generated configuration page for selecting user groups for moderation. If these settings are not applied, the default group for administrators is used as fallback. With the help of this information, email notifications are sent between creator and moderators on state changes. For moderators there is a textarea field provided in the form for specifying additional remarks, like a reason for deny (particularly useful for `reject` and `demote` / `disapprove` actions).
 
@@ -856,7 +888,7 @@ The generator transforms these values to the corresponding implementation as is.
 
 #### Entity index item
 
-Represents a part of an [index](#entity-index), referencing to an equally-named [entity field](#entity-field).
+Represents a part of an [index](#entity-index), referencing to an equally-named [field](#field).
 
 An index item may have the following references:
 
@@ -1059,15 +1091,16 @@ Container class for carrying module variables.
 
 It includes the following properties:
 
-* **composite** - Whether this container should act as a composite variable or not. Default value is `false`.
+* **composite** - Whether this container should act as a composite variable or not. Default value is `false`. See below for a detailed description of what this property does.
 * **sortOrder** - The sorting position for when using multiple variable sections. Default value is `1`.
 
 A var container may have the following references:
 
 * **application** - Reference to the owning element.
-* **vars** - Allows referencing one or more [variables](#variable).
+* **vars** - Allows referencing one or more [variables](#variable). **Deprecated in favour of [fields](#field), will be removed in ModuleStudio 1.2.0.**
+* **fields** - Allows referencing one or more [fields](#field).
 
-As soon as at least one variable container exists the generator creates an additional `config` controller to let the site admin manage available settings.
+As soon as at least one variable container exists the generator creates an additional `config` controller to let the site administrator manage available settings. For each variable the generator creates an according input element in the config page. Also the variable is handled properly in the installer class which takes care for initialisation and removal on uninstallation.
 
 If a model contains multiple variable containers the config page will use a tabbed panel containing a tab for each container, sorted by the `sortOrder` field, like shown in the following screenshot. This allows separating settings in bigger models into logical semantic groups.
 
@@ -1077,13 +1110,13 @@ By default a variable container serves only for grouping the contained variables
 
 For example imagine you want to create two variables for a payment method and a payment url.
 
-Option 1: create a variable container named `payment` with `composite=false` and two variables `paymentMethod` and `paymentUrl` in it. This leads to two module variables `paymentMethod = ''` and `paymentUrl = ''`.
+Option 1: create a variable container named `payment` with `composite=false` and two variables `paymentMethod` and `paymentUrl` in it. This results in two module variables `paymentMethod = ''` and `paymentUrl = ''`.
 
-Option 2: create a variable container named `payment` with `composite=true` and two variables `method` and `url` in it. This leads to one module variable `payment = ['method' => '', 'url' => '']`.
+Option 2: create a variable container named `payment` with `composite=true` and two variables `method` and `url` in it. This results in one module variable `payment = ['method' => '', 'url' => '']`.
 
 #### Variable
 
-Represents a module variable.
+Represents a module variable. **Deprecated in favour of [fields](#field), will be removed in ModuleStudio 1.2.0.**
 
 It includes the following properties:
 
@@ -1094,11 +1127,9 @@ A variable may have the following references:
 
 * **container** - Reference to the owning element.
 
-For each variable the generator creates an according input element in the config page. Also the variable is handled properly in the installer class which takes care for initialisation and removal on uninstallation.
-
 #### Text var
 
-Represents a setting with alphanumeric values.
+Represents a setting with alphanumeric values. **Deprecated in favour of [string fields](#string-field) and [text fields](#text-field), will be removed in ModuleStudio 1.2.0.**
 
 It includes the following properties in addition to the common [variable](#variable) settings:
 
@@ -1109,19 +1140,19 @@ The generator creates an input for text for a text variable. The maximum length 
 
 #### Int var
 
-Represents a setting with numeric (integer) values.
+Represents a setting with numeric (integer) values. **Deprecated in favour of [integer fields](#integer-field), will be removed in ModuleStudio 1.2.0.**
 
 The generator creates an input element for integers (digits) for an integer variable.
 
 #### Bool var
 
-Represents a setting with boolean values.
+Represents a setting with boolean values. **Deprecated in favour of [boolean fields](#boolean-field), will be removed in ModuleStudio 1.2.0.**
 
 The generator creates a checkbox input element for a boolean variable.
 
 #### File path var
 
-Represents a setting with file path values.
+Represents a setting with file path values. **Deprecated in favour of [url fields](#url-field), will be removed in ModuleStudio 1.2.0.**
 
 It includes the following properties in addition to the common [variable](#variable) settings:
 
@@ -1132,7 +1163,7 @@ The generator will create a text input element for a file path variable as well 
 
 #### List var
 
-Represents a setting with list values.
+Represents a setting with list values. **Deprecated in favour of [list fields](#list-field), will be removed in ModuleStudio 1.2.0.**
 
 It includes the following properties in addition to the common [variable](#variable) settings:
 
@@ -1146,16 +1177,12 @@ The generator will create a list of checkboxes (if `multiple` is set to `true`) 
 
 #### List var item
 
-Represents an entry for a setting with list values.
+Represents an entry for a setting with list values. **Deprecated in favour of [list field items](#list-field-item), will be removed in ModuleStudio 1.2.0.**
 
 It includes the following properties:
 
 * **default** - A boolean specifying whether this entry is selected by default or not. The default value is `false`.
 * **name** - Name of the item.
-
-### Combinations and edge cases
-
-This section is going to collect certain combinations of elements in practical scenarios. The intention of this section is to point out dependencies and other essential aspects relating the combination of model elements in various ways.
 
 ## Controller layer
 

@@ -82,13 +82,13 @@ The biggest part is a reference section listing all validation rules in detail a
 * There must not exist an entity named `FooAttribute` as this is reserved by the corresponding extension. For an entity named *person* with `attributable = true` ModuleStudio generates an additional entity named `PersonAttribute` for managing it's attributes.
 * There must not exist an entity named `FooCategory` as this is reserved by the corresponding extension. For an entity named *person* with `categorisable = true` ModuleStudio generates an additional entity named `PersonCategory` for managing it's categories.
 
-### Entity field
+### Field
 
 #### General field settings
 
-* Field must be assigned to a data object. Should not occur in practice, this is just for completeness.
+* Field must be assigned to a data object or a variable container. Should not occur in practice, this is just for completeness.
 * Every field must have a name. Field name must have a length of at least two chars. Should have more than three chars.
-* Field names must be unique. 
+* Field names must be unique.
 * Field name is a reserved identifier (`module`, `type`, `func`, `config`, `ajax`, `external`, `lang`, `theme`, `newlang`, `newtheme`). These names are reserved.
 * Field name is a reserved identifier (`_controller`, `_method`, `_locale`). These are reserved vars in the Symfony framework.
 * Field name is a reserved identifier (`workflowState`). This list field is added automatically by a model-to-model transformation before the actual generation happens.
@@ -139,10 +139,10 @@ The following list has been merged and includes therefore all keywords of all su
 * Only one field per entity may store the sortable position. Can occur if one tries to use multiple integer or user fields as position for the sortable extension.
 * The sortable position may not be the sortable group, too. As soon as a field is used as sortable position it can not also act as the grouping criteria at the same time.
 * You need another field as sortable position to make the sortable group work. Can occur for a field or a many to one relationship marked as sortable group if no integer field is marked as sortable position.
-* Only one field per entity may store the version. Can appear for integer and datetime fields if you enabled the `version` property for more than one field in the same entity.
+* Only one field per entity may store the version. Can appear for integer fields if you enabled the `version` property for more than one field in the same entity.
 * Only one field per entity may represent a start date. Can appear for datetime and date fields if you enabled the `start date` property for more than one field in the same entity.
 * Only one field per entity may represent an end date. Can appear for datetime and date fields if you enabled the `end date` property for more than one field in the same entity.
-* Entities with a version field must use optimistic locking. Can appear for integer and datetime fields with the `version` property enabled. You must set the locking type of the corresponding entity to either `OPTIMISTIC` or `PAGELOCK_OPTIMISTIC`, depending on whether you want support the Zikula PageLock functionality in addition or not.
+* Entities with a version field must use optimistic locking. Can appear for integer fields with the `version` property enabled. You must set the locking type of the corresponding entity to either `OPTIMISTIC` or `PAGELOCK_OPTIMISTIC`, depending on whether you want support the Zikula PageLock functionality in addition or not.
 * Entities with optimistic locking must contain a field declared as version field. The opposite rule to ensure that every entity using optimistic locking has a version field for storing and comparison the version as locking criteria.
 * The version attribute can not be combined with a primary key. A field can only act as either a version or a primary key, not both at the same time.
 * Entities with geographical extension have additional fields names (`longitude`, `latitude`). Thus your (fields may not contain these names | reference may not contain these (source | target) aliases). If an entity has activated the `geographical` extension ModuleStudio creates coordinate fields automatically in addition to the other fields in the model (as well as some usage of geolocation when creating new entities).
@@ -158,7 +158,7 @@ The following list has been merged and includes therefore all keywords of all su
 * The default value for an integer field must contain only digits.
 * The maximum length for an integer field is `18`. Corresponds to a `bigint` mapping in Doctrine 2.
 * Minimum value must not be larger than maximum value.
-* An integer field must not act as percentage and range at the same time.
+* An integer field must not act as `percentage` and `range` at the same time.
 * Entities with an aggregate field should use a locking strategy (optimistic or pessimistic read). If an integer field acts as aggregate field the corresponding entity must use one locking strategy of `OPTIMISTIC`, `PAGELOCK_OPTIMISTIC`, `PESSIMISTIC_READ` or `PAGELOCK_PESSIMISTIC_READ`, depending on whether you want support the Zikula PageLock functionality in addition or not.
 * Aggregate fields work only in combination with an outgoing and bidirectional one-to-many relationship with persist cascade.
 * Naming of aggregateFor attribute values must follow the syntax `targetAlias#targetFieldName` (for example `views#amount`). If an integer field acts as aggregate field the property `aggregate for` must define the target alias of corresponding outgoing and bidirectional one-to-many relationship with persist cascade. After a `#` char as delimiter the name of the target field (to be aggregated) follows.
@@ -203,10 +203,12 @@ This section includes rules which apply only for datetime, date and time fields.
 * A value can not be in the past and in the future at the same time. You can only activate either `past` or `future` validators for one field.
 * A value can not represent both start and end date at the same time. You can only activate either `start date` or `end date` flags for one field.
 * The timestampable change trigger field must point to `workflowState`, the name of a field or a relation (property.field). If the `timestampable` property for a field has been set to `CHANGE` then this error can appear to remind you to set also the required attribute `timestampable change trigger field`. Either you did not set anything there or the value does neither correspond to `workflowState` nor the name of an entity field nor an incoming relation.
-* It would be preferable to use an integer column as version field, as datetimes could potentially lead to conflicts for high traffic sites depending on the timestamp resulution in the database. If you use datetime fields with `version = true` this warning will appear. As the Doctrine 2 manual points out integers are more robust against race conditions in high traffic environments where timestamp comparisons are limited due to how precise the used database does it. Therefore you should prefer integer fields for storing versions except side conditions require the usage of datetime fields for that.
 * The default value for a datetime field must conform to the pattern `YYYY-MM-DD HH:MM:SS` or `now`. You can either set a certain value or use `now` to specify the current timestamp.
 * The default value for a date field must conform to the pattern `YYYY-MM-DD` or `now`. You can either set a certain value or use `now` to specify today.
 * The default value for a time field must conform to the pattern `HH:MM:SS` or `now`. You can either set a certain value or use `now` to specify the current moment.
+* Date fields are deprecated. Use a datetime field with `components = DATE` instead.
+* Time fields are deprecated. Use a datetime field with `components = TIME` instead.
+* Time fields may not act as start/end date.
 
 #### Upload fields
 
@@ -304,10 +306,8 @@ Includes basically all relationships in the data layer except inheritance.
 * Var container sort positions must be unique.
 * Every var container must contain at least one variable.
 * Var container must be assigned to an application. Should not occur in practice, this is just for completeness.
-* The var must be assigned to a container. Should not occur in practice, this is just for completeness.
-* Every var must have a name. The var name must have a length of at least two chars. Recommended are at least four chars.
-* A var must not have the same name as an entity.
-* A list var must contain at least one item.
+* Variables are deprecated, use normal fields instead.
+* Variable names must be unique.
 
 ### Calculated field
 
@@ -329,7 +329,3 @@ Includes basically all relationships in the data layer except inheritance.
 
 * The action must have a name. Action name must not be `New`. Must have a length of at least four chars, whereby at least six chars are recommended.
 * Action name must not be `Index`, `View`, `Display`, `Edit` or `Delete`. These are reserved names and may therefore not be used for custom actions.
-
-## Workflow layer
-
-The workflow layer is not implemented yet (planned for version 0.8). This section is just a dummy for future.

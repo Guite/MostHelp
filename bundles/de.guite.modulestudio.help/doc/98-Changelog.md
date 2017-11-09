@@ -15,7 +15,9 @@
 
 ### DSL / Modelling language changes
 
-* None yet.
+* Variable elements have been deprecated. Variable containers include normal fields now instead. There are [quick fixes](33-Views.md#quick-fixes-for-problems) available for migrating variables in existing models (#97). So you can now use many more options and field types for configuration pages, e.g. colours, countries, locales, timezones, email addresses, uploads, date intervals, expanded lists, and so on.
+* Datetime, date and time fields have been unified. Thus, date and time fields are deprecated. You can use datetime fields and configure the `components` property instead (#1154).
+* The `version` property for date time fields has been removed. Better use integer fields for versions, as datetimes could potentially lead to conflicts for high traffic sites depending on the timestamp resulution in the database. As the Doctrine 2 manual points out integers are more robust against race conditions in high traffic environments where timestamp comparisons are limited due to how precise the used database does it.
 
 ### Generator changes
 
@@ -44,6 +46,8 @@
 * Ensure filters are not applied for backend pages (#1150).
 * Fixed undefined isCategorisable variable in list block editing (#1151).
 * Apply start and end date filters also for related items (#1152).
+* Module variables are handled in a dedicated `AppSettings` class (#97).
+* Prevent user access to detail pages of waiting entities.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.1.0).
 
 ## ModuleStudio 1.0.2 (Oct 3, 2017)
