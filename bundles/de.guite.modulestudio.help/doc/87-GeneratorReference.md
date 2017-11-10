@@ -618,8 +618,9 @@ Can be one of the following options:
 * `ORIGINALWITHCOUNTER` - Keep the original file name. Add a counter suffix if required to avoid duplicated file names.
 * `RANDOMCHECKSUM` - Use a random checksum. This results in quite cryptic filenames.
 * `FIELDNAMEWITHCOUNTER` - Use the field name as a prefix together with a counter. For example `image1`, `image2`, and so on.
+* `USERDEFINEDWITHCOUNTER` - Let the user optionally define a custom file name. Falls back to `ORIGINALWITHCOUNTER`.
 
-Within the generated upload handler class one of those strategies will be selected depending on the currently treated upload field.
+Within the generated upload helper class one of those strategies will be selected depending on the currently treated upload field.
 
 #### List field
 
@@ -637,7 +638,7 @@ A list field may have the following references:
 
 * **items** - Allows referencing one or more [items](#list-field-item).
 
-The generator creates an additional class for handling the available list items centrally. Based on this information [edit pages](#edit-action) provide either a drop-down list (for single or multiple values depending on the `multiple` property), radio buttons (if `multiple` is set to `false` and `expanded` is set to `true`) or a checkbox list (if `multiple` and `expanded` are both set to `true`). For the output in [view](#view-action) and [display](#display-action) templates there is a modifier generated which cares for showing the names instead of the raw option values.
+The generator creates an additional class for handling the available list items centrally. Based on this information [edit pages](#edit-action) provide either a drop-down list (for single or multiple values depending on the `multiple` property), radio buttons (if `multiple` is set to `false` and `expanded` is set to `true`) or a checkbox list (if `multiple` and `expanded` are both set to `true`). For the output in [view](#view-action) and [display](#display-action) templates there is a filter generated which cares for showing the names instead of the raw option values.
 
 #### List field item
 

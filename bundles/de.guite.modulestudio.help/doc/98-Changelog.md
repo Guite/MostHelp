@@ -19,6 +19,7 @@
 * Datetime, date and time fields have been unified. Thus, date and time fields have been deprecated. You can use datetime fields and configure the `components` property instead (#1154).
 * The `version` property for date time fields has been removed. Better use integer fields for versions, as datetimes could potentially lead to conflicts for high traffic sites depending on the timestamp resolution in the database. As the Doctrine 2 manual points out integers are more robust against race conditions in high traffic environments where timestamp comparisons are limited due to how precise the used database does it.
 * A new number field type supersedes decimal and float fields which have been deprecated. A `numberType` property allows to specify whether a decimal or a floating number is desired (#1155).
+* Added new upload naming scheme for user defined file names (#862).
 
 ### Generator changes
 
