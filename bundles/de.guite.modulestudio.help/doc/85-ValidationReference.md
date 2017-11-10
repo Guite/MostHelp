@@ -94,9 +94,7 @@ The biggest part is a reference section listing all validation rules in detail a
 * Field name is a reserved identifier (`workflowState`). This list field is added automatically by a model-to-model transformation before the actual generation happens.
 * Field name is a reserved database keyword. ModuleStudio prevents the usage of keywords which are reserved in some database systems. Background is that there are no column prefixes anymore. For a list of all keywords see [the following section](#reserved-database-keywords).
 * Mandatory fields may not be nullable, too. Occurs if you try to activate both `mandatory` and `nullable` properties for a field.
-* The default value is too long for the specified field length.
-* The minimum value is too long for the specified field length.
-* The maximum value is too long for the specified field length.
+* The default/minimum/maximum value is too long for the specified field length.
 * Fields using text or blob data types must not be unique (applies for text, array and object fields).
   
 Note all rules for name validation are applied not only to `name`, but also to the `dbName` property, too, if it is set for a certain field.
@@ -162,13 +160,11 @@ The following list has been merged and includes therefore all keywords of all su
 * Entities with an aggregate field should use a locking strategy (optimistic or pessimistic read). If an integer field acts as aggregate field the corresponding entity must use one locking strategy of `OPTIMISTIC`, `PAGELOCK_OPTIMISTIC`, `PESSIMISTIC_READ` or `PAGELOCK_PESSIMISTIC_READ`, depending on whether you want support the Zikula PageLock functionality in addition or not.
 * Aggregate fields work only in combination with an outgoing and bidirectional one-to-many relationship with persist cascade.
 * Naming of aggregateFor attribute values must follow the syntax `targetAlias#targetFieldName` (for example `views#amount`). If an integer field acts as aggregate field the property `aggregate for` must define the target alias of corresponding outgoing and bidirectional one-to-many relationship with persist cascade. After a `#` char as delimiter the name of the target field (to be aggregated) follows.
-* The default value for a decimal field must be a floating point number.
-* The length (precision) of a decimal field must be greater than the scale. For example `1234.12` is valid (4 > 2), but `123.1234` is not.
-* Minimum value must not be larger than maximum value.
-* A decimal field must not act as `percentage` and `currency` at the same time.
-* The default value for a float field must be a floating point number.
-* Minimum value must not be larger than maximum value.
-* A float field must not act as `percentage` and `currency` at the same time.
+* Decimal fields are deprecated. Use a number field with `numberType = DECIMAL` instead.
+* Float fields are deprecated. Use a number field with `numberType = FLOAT` instead.
+* The default value for a number field must be a floating point number.
+* The length (precision) of a number field must be greater than the scale. For example `1234.12` is valid (4 > 2), but `123.1234` is not.
+* A number field must not act as `percentage` and `currency` at the same time.
 
 #### String and text fields
 

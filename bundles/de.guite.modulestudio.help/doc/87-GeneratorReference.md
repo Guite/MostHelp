@@ -338,36 +338,66 @@ An integer field has the following properties in addition to the common [abstrac
 
 In [edit pages](#edit-action) the generator will use integer input elements as well as validation on client and server side. For the output in [view](#view-action) and [display](#display-action) templates the value will just be shown.
 
+#### Number field
+
+Represents a field type for storing decimal and floating numbers.
+
+A number field has the following properties in addition to the common [derived field](#derived-field) settings:
+
+* **aggregationField** - A boolean specifying whether this field should act as an aggregate field. Default value is `false`. If set to `true` the generator creates special methods for aggregation. More information can be found in [this article](http://doctrine-orm.readthedocs.io/en/latest/cookbook/aggregate-fields.html).
+* **currency** - A boolean specifying whether this field should be treated as currency. Default value is `false`. If set to `true` the generator will use the `localizedcurrency` filter instead of `localizednumber` during output.
+* **length** - The length of this field. Default value is `10`.
+* **maxValue** - Maximum value. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
+* **minValue** - Minimum value. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
+* **numberType** - Allows to define the number type for this field. Default value is `DECIMAL`. The available options are explained [below](#number-field-type).
+* **percentage** - A boolean specifying whether this field represents a percentage value or not. Default value is `false`.
+* **scale** - The amount of digits after the dot. Default value is `2`.
+
+In [edit pages](#edit-action) the generator will use number input elements as well as validation on client and server side. For the output in [view](#view-action) and [display](#display-action) templates the value will just be shown using a formatting filter.
+
+#### Number field type
+
+Represents different types for a number field.
+
+Can be one of the following options:
+
+* `DECIMAL` - Default value. Represents a decimal number.
+* `FLOAT` - Represents a floating number.
+
 #### Decimal field
+
+**Deprecated in favour of [number fields](#number-field) with `numberType=DECIMAL`, will be removed in ModuleStudio 1.2.0.**
 
 Represents a field type for storing decimal numbers.
 
 A decimal field has the following properties in addition to the common [derived field](#derived-field) settings:
 
 * **aggregationField** - A boolean specifying whether this field should act as an aggregate field. Default value is `false`. If set to `true` the generator creates special methods for aggregation. More information can be found in [this article](http://doctrine-orm.readthedocs.io/en/latest/cookbook/aggregate-fields.html).
-* **currency** - A boolean specifying whether this field should be treated as currency. Default value is `false`. If set to `true` the generator will use the `formatcurrency` modifier instead of `formatnumber` during output.
+* **currency** - A boolean specifying whether this field should be treated as currency. Default value is `false`. If set to `true` the generator will use the `localizedcurrency` filter instead of `localizednumber` during output.
 * **length** - The length of this field. Default value is `10`.
 * **maxValue** - Maximum value. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
 * **minValue** - Minimum value. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
 * **percentage** - A boolean specifying whether this field represents a percentage value or not. Default value is `false`.
 * **scale** - The amount of digits after the dot. Default value is `2`.
 
-In [edit pages](#edit-action) the generator will use float input elements as well as validation on client and server side. For the output in [view](#view-action) and [display](#display-action) templates the value will just be shown using a formatting modifier.
+In [edit pages](#edit-action) the generator will use number input elements as well as validation on client and server side. For the output in [view](#view-action) and [display](#display-action) templates the value will just be shown using a formatting filter.
 
 #### Float field
+
+**Deprecated in favour of [number fields](#number-field) with `numberType=FLOAT`, will be removed in ModuleStudio 1.2.0.**
 
 Represents a field type for storing float numbers.
 
 A float field has the following properties in addition to the common [derived field](#derived-field) settings:
 
 * **aggregationField** - A boolean specifying whether this field should act as an aggregate field. Default value is `false`. If set to `true` the generator creates special methods for aggregation. More information can be found in [this article](http://doctrine-orm.readthedocs.io/en/latest/cookbook/aggregate-fields.html).
-* **currency** - A boolean specifying whether this field should be treated as currency. Default value is `false`. If set to `true` the generator will use the `formatcurrency` modifier instead of `formatnumber` during output.
+* **currency** - A boolean specifying whether this field should be treated as currency. Default value is `false`. If set to `true` the generator will use the `localizedcurrency` filter instead of `localizednumber` during output.
 * **length** - The length of this field. Default value is `10`.
 * **maxValue** - Maximum value. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
 * **minValue** - Minimum value. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
 * **percentage** - A boolean specifying whether this field represents a percentage value or not. Default value is `false`.
 
-In [edit pages](#edit-action) the generator will use float input elements as well as validation on client and server side. For the output in [view](#view-action) and [display](#display-action) pages the value will just be shown using a formatting modifier.
+In [edit pages](#edit-action) the generator will use number input elements as well as validation on client and server side. For the output in [view](#view-action) and [display](#display-action) pages the value will just be shown using a formatting filter.
 
 #### Abstract string field
 
