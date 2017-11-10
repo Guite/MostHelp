@@ -21,7 +21,6 @@
 * A new number field type supersedes decimal and float fields which have been deprecated. A `numberType` property allows to specify whether a decimal or a floating number is desired (#1155).
 * Added new upload naming scheme for user defined file names (#862).
 * Allowed dashes in list item names (whitespace and underscores were already allowed before).
-* Added permission based filtering for view pages.
 * Added new relationship properties for permission inheritance to control whether and how the source visibility should affect the target visibility in view and display pages (#1125).
 
 ### Generator changes
@@ -55,6 +54,8 @@
 * Prevent user access to detail pages of waiting entities.
 * Utilise new category selector option `showRegistryLabels` in 1.5.4+ and 2.0.4+ (#1147).
 * Moderation fields in edit forms are now limited to admin permissions.
+* Added permission based filtering for view pages.
+* Added relation-based permission filtering for view and display pages (#1125).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.1.0).
 
 ## ModuleStudio 1.0.2 (Oct 3, 2017)
