@@ -48,6 +48,7 @@
 * Apply start and end date filters also for related items (#1152).
 * Module variables are handled in a dedicated `AppSettings` class (#97). This also allows for easy addition of custom behaviour, like for example clearing the cache after a specific setting has been changed.
 * Prevent user access to detail pages of waiting entities.
+* Utilise new category selector option `showRegistryLabels` in 1.5.4+ and 2.0.4+ (#1147).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.1.0).
 
 ## ModuleStudio 1.0.2 (Oct 3, 2017)
