@@ -21,6 +21,8 @@
 * A new number field type supersedes decimal and float fields which have been deprecated. A `numberType` property allows to specify whether a decimal or a floating number is desired (#1155).
 * Added new upload naming scheme for user defined file names (#862).
 * Allowed dashes in list item names (whitespace and underscores were already allowed before).
+* Added permission based filtering for view pages.
+* Added new relationship properties for permission inheritance to control whether and how the source visibility should affect the target visibility in view and display pages (#1125).
 
 ### Generator changes
 

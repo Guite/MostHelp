@@ -968,6 +968,7 @@ Represents one-to-one relationships.
 It includes the following properties in addition to the common [join relationship](#join-relationship) settings:
 
 * **bidirectional** - A boolean specifying whether this relationship is bidirectional or not. The default value is `false`.
+* **inheritPermissions** - A boolean specifying whether the source visibility should affect the target visibility or not (only for `bidirectional` relationships). The default value is `false`. If set to `true` the target can only be accessed if normal permissions are given and access to the source is also granted.
 * **orphanRemoval** - Default value is `false`. If set to `true` orphans get removed automatically.
 * **primaryKey** - A boolean specifying whether the foreign key of this relation should act as a primary key. The default value is `false`. Please note that this has not been tested yet and probably won't be supported properly yet by the controller layers in the generated application.
 
@@ -979,6 +980,7 @@ It includes the following properties in addition to the common [join relationshi
 
 * **bidirectional** - A boolean specifying whether this relationship is bidirectional or not. The default value is `false`.
 * **indexBy** - Set to target field name (must be unique) to specify the index by criteria for the relation. Please note that this has not be tested very well yet. More information can be found in [this article](http://doctrine-orm.readthedocs.io/en/latest/tutorials/working-with-indexed-associations.html).
+* **inheritPermissions** - A boolean specifying whether the source visibility should affect the target visibility or not (only for `bidirectional` relationships). The default value is `false`. If set to `true` the target can only be accessed if normal permissions are given and access to the source is also granted.
 * **orderBy** - Set to target field name(s) to specify the sorting criteria for the outgoing relation. Some examples are shown [below](#ordering-many-valued-relationship-sides).
 * **orphanRemoval** - Default value is `false`. If set to `true` orphans get removed automatically.
 * **minTarget** - Minimum amount of items enforced to be present on the target side. The default value is `0`.
@@ -1001,6 +1003,7 @@ It includes the following properties in addition to the common [join relationshi
 
 * **bidirectional** - A boolean specifying whether this relationship is bidirectional or not. The default value is `false`.
 * **indexBy** - Set to target field name (must be unique) to specify the index by criteria for the relation. Please note that this has not be tested very well yet. More information can be found in [this article](http://doctrine-orm.readthedocs.io/en/latest/tutorials/working-with-indexed-associations.html).
+* **inheritPermissions** - The [permission inheritance type](#many-to-many-permission-inheritance-type) specifying whether and how the source visibility should affect the target visibility (only for `bidirectional` relationships). The default value is `NONE`.
 * **orderBy** - Set to target field name(s) to specify the sorting criteria for the outgoing relation. Some examples are shown [below](#ordering-many-valued-relationship-sides).
 * **orderByReverse** - Set to source field name(s) to specify the sorting criteria for the incoming relation. Some examples are shown [below](#ordering-many-valued-relationship-sides).
 * **orphanRemoval** - Default value is `false`. If set to `true` orphans get removed automatically.
@@ -1048,6 +1051,16 @@ ModuleStudio offers different syntax variants for using this for single and mult
 * Order by multiple fields with direction: `score:desc, lastName:asc` or `score:DESC, lastName`
 
 The sorting direction is optional and defaults to `ASC`.
+
+#### Many to many permission inheritance type
+
+Defines whether and how the source visibility should affect the target visibility (only for `bidirectional` many to many relationships).
+
+Can be one of the following options:
+
+* `NONE` - Use no permission inheritance (default). The target can be accessed if normal permissions are given.
+* `AFFIRMATIVE` - The target can only be accessed if normal permissions are given and access to at least one source is also granted.
+* `UNANIMOUS` - The target can only be accessed if normal permissions are given and access to all sources is also granted.
 
 #### Auto completion usage
 
