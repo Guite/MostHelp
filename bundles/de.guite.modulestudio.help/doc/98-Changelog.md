@@ -59,6 +59,7 @@
 * Fixed multi list filters in quick navigation.
 * Added missing argument assignments in detail block form type (#1158).
 * Fixed wrong container reference in detail block class (#1159).
+* Fixed wrong route parameter default in external controller.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.1.0).
 
 ## ModuleStudio 1.0.2 (Oct 3, 2017)
