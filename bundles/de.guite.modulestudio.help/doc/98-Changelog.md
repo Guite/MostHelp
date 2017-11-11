@@ -56,6 +56,7 @@
 * Moderation fields in edit forms are now limited to admin permissions.
 * Added permission based filtering for view pages.
 * Added relation-based permission filtering for view and display pages (#1125).
+* Fixed multi list filters in quick navigation.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.1.0).
 
 ## ModuleStudio 1.0.2 (Oct 3, 2017)
