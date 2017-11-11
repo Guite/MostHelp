@@ -57,6 +57,7 @@
 * Added permission based filtering for view pages.
 * Added relation-based permission filtering for view and display pages (#1125).
 * Fixed multi list filters in quick navigation.
+* Added missing argument assignments in detail block form type (#1158).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.1.0).
 
 ## ModuleStudio 1.0.2 (Oct 3, 2017)
