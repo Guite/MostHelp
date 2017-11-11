@@ -26,6 +26,7 @@
 ### Generator changes
 
 * Fixed potential form redirect problem for edit and display pages of entities without unique slugs.
+* Slug support has been extended to utilise tree slug handlers and relative slug handlers (#305). Relative slugs will only be used for now if both entities (connected by the corresponding relationship) have sluggable fields.
 * Avoid putting thumb runtime options into query to prevent pager problem.
 * Use named argument for `notifyDisplayHooks` calls.
 * Fixed problems in RSS and Atom templates.
