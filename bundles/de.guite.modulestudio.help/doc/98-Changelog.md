@@ -2,7 +2,7 @@
 
 ## ModuleStudio 1.1.0 (unreleased)
 
-### Product changes
+### Product / Tooling changes
 
 * Removed redundant filter panel.
 * Removed unused table editors.
@@ -12,6 +12,7 @@
 * Hide `sluggablePosition` property for some field types (email, url, list, upload).
 * Hide `sortableGroup` property for upload, array and object fields.
 * Hide `translatable` property for some field types (list, upload, array, object).
+* Reduced font size for splash screen (#100).
 
 ### DSL / Modelling language changes
 
@@ -69,7 +70,7 @@
 
 ## ModuleStudio 1.0.2 (Oct 3, 2017)
 
-### Product changes
+### Product / Tooling changes
 
 * Updated to Eclipse Oxygen.1 (4.7.1).
 * Avoid skipping some relationship validation constraints in wrong cases.
@@ -101,7 +102,7 @@
 
 ## ModuleStudio 1.0.1 (Sep 2, 2017)
 
-### Product changes
+### Product / Tooling changes
 
 * Fixed copying of diagram image and model files to docs folder if no generator settings element has been created.
 * Overhauled example models for showing a wider range of functionality (#1098).
@@ -157,7 +158,7 @@
 
 ## ModuleStudio 1.0.0 (July 31, 2017)
 
-### Product changes
+### Product / Tooling changes
 
 * None
 
@@ -173,7 +174,7 @@
 
 ## ModuleStudio 0.7.5 (July 31, 2017)
 
-### Product changes
+### Product / Tooling changes
 
 * Updated to Eclipse Oxygen (4.7).
 * Removed packages for Linux PPC.
@@ -230,7 +231,7 @@
 
 ## ModuleStudio 0.7.4 (May 19, 2017)
 
-### Product changes
+### Product / Tooling changes
 
 * Updated to Eclipse Neon.3 (4.6.3).
 * Made preference fields optional (#1001).
@@ -306,7 +307,7 @@
 
 ## ModuleStudio 0.7.3 (Feb 18, 2017)
 
-### Product changes
+### Product / Tooling changes
 
 * Now there is a stand-alone generator available (#967). Read more about that [here](60-GeneratingApplications.md#stand-alone-generator).
 * Hide some unrequired `MostDsl` preference sub pages (`Compiler`, `Refactoring` and `Task Tags`).
@@ -348,7 +349,7 @@
 
 ## ModuleStudio 0.7.2 (Feb 12, 2017)
 
-### Product changes
+### Product / Tooling changes
 
 * When creating many-to-many relationships a default value for the `refClass` attribute is set automatically (#943).
 * Fixed some missing German translations (#944).
@@ -402,7 +403,7 @@
 
 ## ModuleStudio 0.7.1 (Jan 18, 2017)
 
-### Product changes
+### Product / Tooling changes
 
 * Generator workflow exports the diagram only as JPG and only if `writeToModelDocs` is `true`. The JPEG file is placed in the same directory as the model file itself (#903).
 * Prevent potential null pointer exception on model import.
@@ -476,7 +477,7 @@
 
 ## ModuleStudio 0.7.0 (Jan 1, 2017)
 
-### Product changes
+### Product / Tooling changes
 
 * New implementation for the main program, overhauled UI contributions. Hence, the ModuleStudio UI is now more slim and limits itself to the relevant control elements.
 * There are two different designs available: light and dark.
