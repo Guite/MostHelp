@@ -257,6 +257,7 @@ Includes basically all relationships in the data layer except inheritance.
 * IndexBy fields must be unique. The target entity field used for `indexBy` must have the `unique` validator enabled.
 * Enforcing a certain amount of items on the target side requires setting both `minTarget` and `maxTarget` properties. Occurs if you set either `minTarget` or `maxTarget` to a value greater than `0`, but not both.
 * The maximum amount of enforced items on the target side must not be smaller than the minimum amount of enforced items. Occurs if you set `maxTarget` to a smaller value than `minTarget`.
+* Embedded editing is not supported (yet) for multi-valued association sides. Occurs if you set `targetEditing=EMBEDDED`.
 
 #### Many to many relationship
 
@@ -270,6 +271,7 @@ Includes basically all relationships in the data layer except inheritance.
 * The maximum amount of enforced items on the source side must not be smaller than the minimum amount of enforced items. Occurs if you set `maxSource` to a smaller value than `minSource`.
 * Enforcing a certain amount of items on the target side requires setting both `minTarget` and `maxTarget` properties. Occurs if you set either `minTarget` or `maxTarget` to a value greater than `0`, but not both.
 * The maximum amount of enforced items on the target side must not be smaller than the minimum amount of enforced items. Occurs if you set `maxTarget` to a smaller value than `minTarget`.
+* Embedded editing is not supported (yet) for multi-valued association sides. Occurs if you set `sourceEditing=EMBEDDED` or `targetEditing=EMBEDDED`.
 
 #### Inheritance relationship
 

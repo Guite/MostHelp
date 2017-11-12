@@ -22,6 +22,7 @@
 * Added new upload naming scheme for user defined file names (#862).
 * Allowed dashes in list item names (whitespace and underscores were already allowed before).
 * Added new relationship properties for permission inheritance to control whether and how the source visibility should affect the target visibility in view and display pages (#1125).
+* The `editType` property of join relationships has been deprecated in favour of two new properties `sourceEditing` and `targetEditing`. Beside inline editing now also embedded editing is supported (but limited to single-valued sides for now) (#3).
 
 ### Generator changes
 
@@ -62,6 +63,7 @@
 * Fixed wrong container reference in detail block class (#1159).
 * Fixed wrong route parameter default in external controller.
 * Added missing parameter in parent call in external controller (#1159).
+* Added support for embedded editing of related objects (#3).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.1.0).
 
 ## ModuleStudio 1.0.2 (Oct 3, 2017)

@@ -945,17 +945,19 @@ It includes the following properties in addition to the common [relationship](#r
 
 * **cascade** - The [cascade type](#cascade-type) used on application level from source view. The default value is `NONE`.
 * **cascadeReverse** - The [cascade type](#cascade-type) used on application level from target view (only for `bidirectional` relationships). The default value is `NONE`.
-* **editType** - The [edit type](#relation-edit-type) for this association. The default value is `ACTIVE_CHOOSE_PASSIVE_NONE` for many to many relationships and `ACTIVE_NONE_PASSIVE_CHOOSE` for other join relationships.
+* **editType** - The [edit type](#relation-edit-type) for this association. The default value is `ACTIVE_CHOOSE_PASSIVE_NONE` for many to many relationships and `ACTIVE_NONE_PASSIVE_CHOOSE` for other join relationships. **Deprecated in favour of sourceEditing and targetEditing, will be removed in ModuleStudio 1.2.0.**
 * **expandedSource** - A boolean to enable usage of radio buttons (for single-valued relations) or checkboxes (for multi-valued relations) instead of a select field. The default value is `false`.
 * **expandedTarget** - A boolean to enable usage of radio buttons (for single-valued relations) or checkboxes (for multi-valued relations) instead of a select field. The default value is `false`.
 * **fetchType** - The [fetch type](#relation-fetch-type) for this association. The default value is `LAZY`.
 * **nullable** - A boolean specifying whether the field for this relationship may be null or not. The Default value is `true`.
 * **onDelete** - String for optional update cascade options on database level (for example `RESTRICT` or `SETNULL`).
 * **onDelete** - String for optional delete cascade options on database level (for example `RESTRICT` or `SETNULL`).
-* **useAutoCompletion** - If set to any value except `NONE` the generator will create an auto completion field instead of a normal drop-down select field for the corresponding side(s) of the relationship. For more information see the [available options](#auto-completion-usage).
+* **sourceEditing** - The [edit mode](#relation-edit-mode) for target elements during editing the source side of this association. The default value is `CHOOSE` for many to many relationships and `NONE` for other join relationships.
 * **sourceField** - Name of the source entity field(s) used for the join. The default value is `id` which means that the source entity is joined by it's primary key. It is possible to change that value for custom join conditions. Furthermore it is possible to use multiple field names separated by a comma with a space char in order to join entities with multiple keys.
+* **targetEditing** - The [edit mode](#relation-edit-mode) for source elements during editing the target side of this association. The default value is `NONE` for many to many relationships and `CHOOSE` for other join relationships.
 * **targetField** - Name of the target entity field(s) used for the join. The default value is `id` which means that the target entity is joined by it's primary key. It is possible to change that value for custom join conditions. Furthermore it is possible to use multiple field names separated by a comma with a space char in order to join entities with multiple keys.
 * **unique** - A boolean specifying whether the field for this relationship is unique or not. The default value is `false`.
+* **useAutoCompletion** - If set to any value except `NONE` the generator will create an auto completion field instead of a normal form field (dropdowns, checkboxes, radio buttons) for the corresponding side(s) of the relationship. For more information see the [available options](#auto-completion-usage).
 
 The generator transforms most of these settings to the corresponding implementation as is. The only thing which is used outside of the entity classes is the [edit type](#relation-edit-type) which controls how relationships are handled in [edit actions](#edit-action).
 
@@ -1064,7 +1066,7 @@ Can be one of the following options:
 
 #### Auto completion usage
 
-Defines whether and which sides of a relationship will be handled by an auto completion field instead of a drop-down field during editing.
+Defines whether and which sides of a relationship will be handled by an auto completion field instead of normal form fields (dropdowns, checkboxes, radio buttons) during editing.
 
 Can be one of the following options:
 
@@ -1087,6 +1089,8 @@ The generator transforms these values to the corresponding implementation. There
 
 #### Relation edit type
 
+**Deprecated in favour of [edit modes](#relation-edit-mode), will be removed in ModuleStudio 1.2.0.**
+
 Represents different edit types for [join relationships](#join-relationship).
 
 Can be one of the following options:
@@ -1102,12 +1106,32 @@ Can be one of the following options:
 For each entity the generator creates some templates to be included in the [edit templates](#edit-action) of related entities (for example a display list and another one for edit). Depending on which edit type is defined for a relationship the corresponding edit template (choose or edit) is included or not.
 
 * `NONE` means that there is no possibility to take influence on the association.
-* `CHOOSE` means that it is possible to select a related entity with the help of auto completion.
-* `EDIT` means the same as `CHOOSE` plus that it is also possible to created and edit related entities during editing the main entity.
+* `CHOOSE` means that it is possible to select a related entity (using dropdowns, radio buttons, checkboxes or auto completion).
+* `EDIT` means the same as `CHOOSE` plus that it is also possible to create and edit related entities during editing the main entity.
+
+#### Relation edit mode
+
+Represents different edit modes for each side of [join relationships](#join-relationship).
+
+Can be one of the following options:
+
+* `NONE` - Editing the other side does nothing regarding elements from this side.
+* `CHOOSE` - Editing the other side includes choosing elements from this side.
+* `INLINE` - Editing the other side includes choosing, creating and editing elements from this side.
+* `EMBEDDED` - Editing the other side allows embedded creation and editing of an element from this side.
+
+For each entity the generator creates some templates to be included in the [edit templates](#edit-action) of related entities (for example a display list and another one for edit). Depending on which edit mode is defined for a relationship the corresponding edit template (choose or edit) is included or not.
+
+* `NONE` means that there is no possibility to take influence on the association.
+* `CHOOSE` means that it is possible to select a related entity (using dropdowns, radio buttons, checkboxes or auto completion).
+* `INLINE` means the same as `CHOOSE` plus that it is also possible to create and edit related entities during editing the main entity.
+* `EMBEDDED` means that the edit form for the related entity will be incorporated into the edit form of the main entity.
 
 Example for inline editing:
 
 ![Inline editing](images/example_inline_editing.png "Inline editing")
+
+Embedded editing is limited to single-valued relationship sides at the moment. So you can for example embed editing a category into editing an article, but not multiple categories.
 
 #### Inheritance relationship
 
