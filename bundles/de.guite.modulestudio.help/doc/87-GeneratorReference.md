@@ -129,6 +129,7 @@ A settings container has the following fields:
 * **generatePoweredByBacklinksIntoFooterTemplates** - A boolean specifying whether generated footer templates should contain backlinks to the ModuleStudio website. Default value is `true`.
 * **generateTests** - A boolean specifying whether test cases should be generated or not. Default value is `true`. At the moment only some stubs are created though (see [generator issue #6 on GitHub](https://github.com/Guite/MostGenerator/issues/6)).
 * **writeModelToDocs** - A boolean specifying whether the model file and it's diagram image are written into the application's docs folder or not. Default value is `true`.
+* **generateTechnicalDocumentation** - A boolean specifying whether stand-alone HTML files with technical documentation should be generated or not. Default value is `false`.
 
 #### Referred application
 
@@ -266,8 +267,6 @@ Can be one of the following options:
 * `DISPLAY_SORTING` - The field is not shown on view pages, but on display pages. It may be used for sorting on view pages.
 * `VIEW_DISPLAY` - The field is shown on both view and display pages. It may not be used for sorting on view pages though.
 * `ALL` - The field is shown on both view and display pages. It may also be used for sorting on view pages.
-
-The generator uses this value in the corresponding module dependency created in the version class.
 
 Note that this setting is ignored for [array fields](#array-field) and [object fields](#object-field). These are never shown on view pages.
 

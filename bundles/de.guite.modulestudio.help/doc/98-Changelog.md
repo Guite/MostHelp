@@ -24,6 +24,7 @@
 * Allowed dashes in list item names (whitespace and underscores were already allowed before).
 * Added new relationship properties for permission inheritance to control whether and how the source visibility should affect the target visibility in view and display pages (#1125).
 * The `editType` property of join relationships has been deprecated in favour of two new properties `sourceEditing` and `targetEditing`. Beside inline editing now also embedded editing is supported (but limited to single-valued sides for now) (#3).
+* Added new generator setting `generateTechnicalDocumentation` for creating stand-alone HTML files with technical documentation.
 
 ### Generator changes
 
@@ -502,7 +503,7 @@
 * When creating relationships the source and target descriptions are automatically preset to the appropriate singular or plural names of corresponding entities.
 * Documentation is now based on Markdown.
 * ModuleStudio automatically searches for updates on startup. You can control in preferences whether only stable releases are included or also continuously incoming updates are considered, too.
-* Help search also includes results from zikula.org and zikula.de sites as well as documentation of Symfony, Doctrine and Twig. 
+* Help search also includes results from documentation of Symfony, Doctrine and Twig. 
 * Updated to Eclipse Neon.2 (4.6.2).
 * ModuleStudio brings the required Java 8 environment along and can therewith also be used on systems without Java or with obsolete Java versions.
 * Removed import of xml files created from old old pntables files (#829).
