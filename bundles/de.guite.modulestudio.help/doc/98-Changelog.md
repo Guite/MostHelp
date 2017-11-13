@@ -67,6 +67,7 @@
 * Added missing parameter in parent call in external controller (#1159).
 * Added support for embedded editing of related objects (#3).
 * Avoid item actions for preview of deleted items.
+* Added generation of technical documentation reports.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.1.0).
 
 ## ModuleStudio 1.0.2 (Oct 3, 2017)

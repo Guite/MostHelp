@@ -129,7 +129,7 @@ A settings container has the following fields:
 * **generatePoweredByBacklinksIntoFooterTemplates** - A boolean specifying whether generated footer templates should contain backlinks to the ModuleStudio website. Default value is `true`.
 * **generateTests** - A boolean specifying whether test cases should be generated or not. Default value is `true`. At the moment only some stubs are created though (see [generator issue #6 on GitHub](https://github.com/Guite/MostGenerator/issues/6)).
 * **writeModelToDocs** - A boolean specifying whether the model file and it's diagram image are written into the application's docs folder or not. Default value is `true`.
-* **generateTechnicalDocumentation** - A boolean specifying whether stand-alone HTML files with technical documentation should be generated or not. Default value is `false`.
+* **generateTechnicalDocumentation** - A boolean specifying whether stand-alone HTML files with technical documentation should be generated or not. Default value is `false`. At the moment two reports are generated: _structural overview_ and _technical complexity_ - both in English and German.
 
 #### Referred application
 
