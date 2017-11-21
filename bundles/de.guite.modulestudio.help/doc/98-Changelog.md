@@ -71,6 +71,7 @@
 * Improved identifier and version handling during undeletion of loggable entities.
 * Several other improvements for loggable entities.
 * Changed private visibility of several member variables to protected (#1168).
+* Removed fixed columns from view actions (crude and problematic).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.1.0).
 
 ## ModuleStudio 1.0.2 (Oct 3, 2017)
