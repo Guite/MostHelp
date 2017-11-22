@@ -73,6 +73,7 @@
 * Changed private visibility of several member variables to protected (#1168).
 * Removed fixed columns from view actions (crude and problematic).
 * Avoid image distortion when shrinking too large dimensions.
+* Use configured thumbnail mode also for shrinking original images.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.1.0).
 
 ## ModuleStudio 1.0.2 (Oct 3, 2017)
