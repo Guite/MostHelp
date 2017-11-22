@@ -155,7 +155,7 @@ Specifies the style used for item actions.
 Can be one of the following options:
 
 * `LINK` - Normal links/anchors with a label and optionally an icon.
-* `ICON` - Normal links/anchors with an icon only (no label).
+* `ICON` - Normal links/anchors with an icon only (no label, but tooltips).
 * `BUTTON` - Links/anchors styled as buttons with a label and optionally an icon.
 * `BUTTON_GROUP` - Links/anchors styled as a button group with a label and optionally an icon.
 * `DROPDOWN` - Default value. A drop-down menu containing normal links/anchors with a label and optionally an icon.
