@@ -28,6 +28,8 @@ The biggest part is a reference section listing all validation rules in detail a
 * The detail block requires external controller and finder component. If you enable `generateDetailBlock` you also need `generateExternalControllerAndFinder`.
 * The detail content type requires external controller and finder component. If you enable `generateDetailContentType` you also need `generateExternalControllerAndFinder`.
 * Scribite plug-ins require external controller and finder component. If you enable `generateScribitePlugins` you also need `generateExternalControllerAndFinder`.
+* Item action position both must not be enabled for view actions.
+* Item action icons flag must not be disabled if item action style is configured to use icons only.
 
 ### Referred application
 

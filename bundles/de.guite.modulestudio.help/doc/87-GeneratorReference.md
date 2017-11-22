@@ -130,6 +130,37 @@ A settings container has the following fields:
 * **generateTests** - A boolean specifying whether test cases should be generated or not. Default value is `true`. At the moment only some stubs are created though (see [generator issue #6 on GitHub](https://github.com/Guite/MostGenerator/issues/6)).
 * **writeModelToDocs** - A boolean specifying whether the model file and it's diagram image are written into the application's docs folder or not. Default value is `true`.
 * **generateTechnicalDocumentation** - A boolean specifying whether stand-alone HTML files with technical documentation should be generated or not. Default value is `true`. At the moment two reports are generated: _structural overview_ and _technical complexity_ - both in English and German.
+* **viewActionsPosition** - Allows to specify whether and where item actions should be available in view pages. Default value is `START`. Available options are explained [below](#item-actions-position).
+* **viewActionsStyle** - Allows to specify the style used by the included item actions in view pages. Default value is `DROPDOWN`. Available options are explained [below](#item-actions-style).
+* **viewActionsWithIcons** - A boolean specifying whether item actions in view pages should contain an icon in addition to their label or not. Default value is `true`.
+* **displayActionsPosition** - Allows to specify whether and where item actions should be available in display pages. Default value is `START`. Available options are explained [below](#item-actions-position).
+* **displayActionsStyle** - Allows to specify the style used by the included item actions in display pages. Default value is `DROPDOWN`. Available options are explained [below](#item-actions-style).
+* **displayActionsWithIcons** - A boolean specifying whether item actions in display pages should contain an icon in addition to their label or not. Default value is `true`.
+
+#### Item actions position
+
+Specifies the placement of item actions.
+
+Can be one of the following options:
+
+* `NONE` - No item actions are available at all.
+* `START` - Default value. Item actions are included at the beginning, for example in the first table column on view pages or the top area on display pages.
+* `END` - Item actions are included at the end, for example in the last table column on view pages or the bottom area on display pages.
+* `BOTH` - Combines `START` and `END`. Only allowed for display pages.
+
+#### Item actions style
+
+Specifies the style used for item actions.
+
+Can be one of the following options:
+
+* `LINK` - Normal links/anchors with a label and optionally an icon.
+* `ICON` - Normal links/anchors with an icon only (no label).
+* `BUTTON` - Links/anchors styled as buttons with a label and optionally an icon.
+* `BUTTON_GROUP` - Links/anchors styled as a button group with a label and optionally an icon.
+* `DROPDOWN` - Default value. A drop-down menu containing normal links/anchors with a label and optionally an icon.
+
+For all options except `ICON` the links contain a label and optionally an additional icon (depending on the `withIcons` flags). 
 
 #### Referred application
 
@@ -266,7 +297,7 @@ Can be one of the following options:
 * `DISPLAY` - The field is not shown on view pages, but on display pages. It may not be used for sorting on view pages.
 * `DISPLAY_SORTING` - The field is not shown on view pages, but on display pages. It may be used for sorting on view pages.
 * `VIEW_DISPLAY` - The field is shown on both view and display pages. It may not be used for sorting on view pages though.
-* `ALL` - The field is shown on both view and display pages. It may also be used for sorting on view pages.
+* `ALL` - Default value. The field is shown on both view and display pages. It may also be used for sorting on view pages.
 
 Note that this setting is ignored for [array fields](#array-field) and [object fields](#object-field). These are never shown on view pages.
 

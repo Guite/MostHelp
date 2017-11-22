@@ -25,6 +25,7 @@
 * Added new relationship properties for permission inheritance to control whether and how the source visibility should affect the target visibility in view and display pages (#1125).
 * The `editType` property of join relationships has been deprecated in favour of two new properties `sourceEditing` and `targetEditing`. Beside inline editing now also embedded editing is supported (but limited to single-valued sides for now) (#3).
 * Added new generator setting `generateTechnicalDocumentation` for creating stand-alone HTML files with technical documentation (#1166).
+* Added new generator settings to configure different placements and styles for item actions (#1169).
 
 ### Generator changes
 
@@ -74,6 +75,7 @@
 * Removed fixed columns from view actions (crude and problematic).
 * Avoid image distortion when shrinking too large dimensions.
 * Use configured thumbnail mode also for shrinking original images.
+* Added support for different placements and styles for item actions (#1169).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.1.0).
 
 ## ModuleStudio 1.0.2 (Oct 3, 2017)
