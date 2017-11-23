@@ -76,6 +76,7 @@
 * Avoid image distortion when shrinking too large dimensions.
 * Use configured thumbnail mode also for shrinking original images.
 * Added support for different placements and styles for item actions (#1169).
+* Fixed logical error in category related quick nav parameter handling.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.1.0).
 
 ## ModuleStudio 1.0.2 (Oct 3, 2017)
