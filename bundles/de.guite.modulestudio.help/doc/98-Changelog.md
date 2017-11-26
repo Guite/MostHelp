@@ -1,6 +1,6 @@
 # Changelog
 
-## ModuleStudio 1.1.0 (unreleased)
+## ModuleStudio 1.1.0 (Nov 26, 2017)
 
 ### Product / Tooling changes
 
