@@ -12,7 +12,7 @@
 
 ### Generator changes
 
-* Readded css classes for image shrinking variables.
+* Re-added CSS class for image shrinking enablement.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.2.0).
 
 ## ModuleStudio 1.1.0 (Nov 26, 2017)
