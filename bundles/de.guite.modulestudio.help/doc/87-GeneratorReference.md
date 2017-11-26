@@ -233,7 +233,7 @@ It has the following properties:
 
 ![Geolocation feature](images/generator_geographical_geolocation.png "Geolocation feature")
 
-* **hasArchive** - Whether the workflow should include an archived state with automatic archiving. Requires a [datetime](#datetime-field) or [date](#date-field) field which has been designated as end date. See [workflow types](#entity-workflow-type) for more information. The default value is `false`.
+* **hasArchive** - Whether the workflow should include an archived state with automatic archiving. Requires a [datetime](#datetime-field) field which has been designated as end date. See [workflow types](#entity-workflow-type) for more information. The default value is `false`.
 * **hasTray** - Whether the workflow should include a suspended state. See [workflow types](#entity-workflow-type) for more information. The default value is `false`.
 * **identifierStrategy** - Whether and which [identifier strategy](#entity-identifier-strategy) is applied. The default value is `AUTO`.
 * **leading** - A boolean specifying whether this is the primary (and default) entity or not.
@@ -393,41 +393,6 @@ Can be one of the following options:
 
 * `DECIMAL` - Default value. Represents a decimal number.
 * `FLOAT` - Represents a floating number.
-
-#### Decimal field
-
-**Deprecated in favour of [number fields](#number-field) with `numberType=DECIMAL`, will be removed in ModuleStudio 1.2.0.**
-
-Represents a field type for storing decimal numbers.
-
-A decimal field has the following properties in addition to the common [derived field](#derived-field) settings:
-
-* **aggregationField** - A boolean specifying whether this field should act as an aggregate field. Default value is `false`. If set to `true` the generator creates special methods for aggregation. More information can be found in [this article](http://doctrine-orm.readthedocs.io/en/latest/cookbook/aggregate-fields.html).
-* **currency** - A boolean specifying whether this field should be treated as currency. Default value is `false`. If set to `true` the generator will use the `localizedcurrency` filter instead of `localizednumber` during output.
-* **length** - The length of this field. Default value is `10`.
-* **maxValue** - Maximum value. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
-* **minValue** - Minimum value. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
-* **percentage** - A boolean specifying whether this field represents a percentage value or not. Default value is `false`.
-* **scale** - The amount of digits after the dot. Default value is `2`.
-
-In [edit pages](#edit-action) the generator will use number input elements as well as validation on client and server side. For the output in [view](#view-action) and [display](#display-action) templates the value will just be shown using a formatting filter.
-
-#### Float field
-
-**Deprecated in favour of [number fields](#number-field) with `numberType=FLOAT`, will be removed in ModuleStudio 1.2.0.**
-
-Represents a field type for storing float numbers.
-
-A float field has the following properties in addition to the common [derived field](#derived-field) settings:
-
-* **aggregationField** - A boolean specifying whether this field should act as an aggregate field. Default value is `false`. If set to `true` the generator creates special methods for aggregation. More information can be found in [this article](http://doctrine-orm.readthedocs.io/en/latest/cookbook/aggregate-fields.html).
-* **currency** - A boolean specifying whether this field should be treated as currency. Default value is `false`. If set to `true` the generator will use the `localizedcurrency` filter instead of `localizednumber` during output.
-* **length** - The length of this field. Default value is `10`.
-* **maxValue** - Maximum value. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
-* **minValue** - Minimum value. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
-* **percentage** - A boolean specifying whether this field represents a percentage value or not. Default value is `false`.
-
-In [edit pages](#edit-action) the generator will use number input elements as well as validation on client and server side. For the output in [view](#view-action) and [display](#display-action) pages the value will just be shown using a formatting filter.
 
 #### Abstract string field
 
@@ -705,7 +670,7 @@ The generator will exclude objects in [edit pages](#edit-action) as well as for 
 
 #### Datetime field
 
-Represents a field type for storing datetime values with the format `YYYY-MM-DD H:i:s`.
+Represents a field type for storing either datetime values with the format `YYYY-MM-DD H:i:s` or date values with the format `YYYY-MM-DD` or time values with the format `H:i:s`.
 
 A datetime field has the following properties in addition to the common [derived field](#derived-field) settings:
 
@@ -723,52 +688,7 @@ Note you can also use `now` as default value for date and time fields which resu
 
 The `past` and `future` properties are implemented as client-side and server-side validators.
 
-The generator will treat datetime values as date input elements in [edit pages](#edit-action). For the output in [view](#view-action) and [display](#display-action) templates a modifier is used to format the datetime according to the current locale.
-
-#### Date field
-
-**Deprecated in favour of [datetime fields](#datetime-field) with `components=DATE`, will be removed in ModuleStudio 1.2.0.**
-
-Represents a field type for storing date values with the format `YYYY-MM-DD`.
-
-A date field has the following properties in addition to the common [derived field](#derived-field) settings:
-
-* **future** - A boolean specifying whether the value must be in the future or not. Default value is `false`.
-* **past** - A boolean specifying whether the value must be in the past or not. Default value is `false`.
-* **startDate** - A boolean specifying whether this field should be treated as a start date. Default value is `false`. If set to `true` this field is included into determining public visibility of the corresponding objects.
-* **endDate** - A boolean specifying whether this field should be treated as an end date. Default value is `false`. If set to `true` this field is included into determining public visibility of the corresponding objects.
-* **timestampable** - Which [timestampable type](#entity-timestampable-type) is used. Default value is `NONE`.
-* **timestampableChangeTriggerField** - Optional name of field to use as change trigger (if type is `CHANGE`. Can also be `workflowState` or the name of a relation (syntax `property.field`).
-* **timestampableChangeTriggerValue** - Optional value of field to use as change trigger (if type is `CHANGE`).
-* **validatorAddition** - Additional validation constraint without the `Assert` annotation. Example values are `LessThanOrEqual("+15 minutes")` or `LessThan("-18 years UTC")` or `Range(min = "first day of January", max = "first day of January next year")`. For more details information see [this blog post](http://symfony.com/blog/new-in-symfony-2-6-date-support-for-validator-constraints).
-
-Note you can also use `now` as default value for date and time fields which results in that always the current timestamp is used for setting the initial value.
-
-The `past` and `future` properties are implemented as client-side and server-side validators.
-
-The generator will treat date values as date input elements in [edit pages](#edit-action). For the output in [view](#view-action) and [display](#display-action) templates a modifier is used to format the date according to the current locale.
-
-#### Time field
-
-**Deprecated in favour of [datetime fields](#datetime-field) with `components=TIME`, will be removed in ModuleStudio 1.2.0.**
-
-Represents a field type for storing time values with the format `H:i:s`.
-
-A time field has the following properties in addition to the common [derived field](#derived-field) settings.
-
-* **future** - A boolean specifying whether the value must be in the future or not. Default value is `false`.
-* **past** - A boolean specifying whether the value must be in the past or not. Default value is `false`.
-* **timestampable** - Which [timestampable type](#entity-timestampable-type) is used. Default value is `NONE`.
-* **timestampableChangeTriggerField** - Optional name of field to use as change trigger (if type is `CHANGE`. Can also be `workflowState` or the name of a relation (syntax `property.field`).
-* **timestampableChangeTriggerValue** - Optional value of field to use as change trigger (if type is `CHANGE`).
-* **validatorAddition** - Additional validation constraint without the `Assert` annotation. Example values are `LessThanOrEqual("+15 minutes")` or `LessThan("-18 years UTC")` or `Range(min = "first day of January", max = "first day of January next year")`. For more details information see [this blog post](http://symfony.com/blog/new-in-symfony-2-6-date-support-for-validator-constraints).
-
-Note you can also use `now` as default value for date and time fields which results in that always the current timestamp is used for setting the initial value.
-
-The `past` and `future` properties are implemented as client-side and server-side validators.
-
-The generator renders time fields using a time input field in [edit pages](#edit-action). For the output in [view](#view-action) and [display](#display-action) templates a modifier
-is used to format the time according to the current locale.
+The generator will treat input values as date and/or time input elements in [edit pages](#edit-action). For the output in [view](#view-action) and [display](#display-action) templates a modifier is used to format the value according to the current locale.
 
 #### DateTime components
 
@@ -900,7 +820,7 @@ In total there are nine different workflow states which are explained below. Not
 4. **Accepted** - content has been submitted and accepted, but still waits for approval. Only available for `ENTERPRISE`. Fetched for pending content integration and moderation panel.
 5. **Approved** - content has been approved and is available online.
 6. **Suspended** - content has been approved, but is temporarily offline. Only available if the entity has set the `hasTray` property to `true`.
-7. **Archived** - content has reached the end and became archived. Only available if the entity has set the `hasArchive` property to `true`. Requires a [datetime](#datetime-field) or a [date](#date-field) field being designated as end date.
+7. **Archived** - content has reached the end and became archived. Only available if the entity has set the `hasArchive` property to `true`. Requires a [datetime](#datetime-field) field being designated as end date.
 8. **Deleted** - pseudo-state for content which has been deleted from the database.
 
 The following image shows an overview of all possible workflow states and actions.
@@ -975,7 +895,6 @@ It includes the following properties in addition to the common [relationship](#r
 
 * **cascade** - The [cascade type](#cascade-type) used on application level from source view. The default value is `NONE`.
 * **cascadeReverse** - The [cascade type](#cascade-type) used on application level from target view (only for `bidirectional` relationships). The default value is `NONE`.
-* **editType** - The [edit type](#relation-edit-type) for this association. The default value is `ACTIVE_CHOOSE_PASSIVE_NONE` for many to many relationships and `ACTIVE_NONE_PASSIVE_CHOOSE` for other join relationships. **Deprecated in favour of sourceEditing and targetEditing, will be removed in ModuleStudio 1.2.0.**
 * **expandedSource** - A boolean to enable usage of radio buttons (for single-valued relations) or checkboxes (for multi-valued relations) instead of a select field. The default value is `false`.
 * **expandedTarget** - A boolean to enable usage of radio buttons (for single-valued relations) or checkboxes (for multi-valued relations) instead of a select field. The default value is `false`.
 * **fetchType** - The [fetch type](#relation-fetch-type) for this association. The default value is `LAZY`.
@@ -989,7 +908,7 @@ It includes the following properties in addition to the common [relationship](#r
 * **unique** - A boolean specifying whether the field for this relationship is unique or not. The default value is `false`.
 * **useAutoCompletion** - If set to any value except `NONE` the generator will create an auto completion field instead of a normal form field (dropdowns, checkboxes, radio buttons) for the corresponding side(s) of the relationship. For more information see the [available options](#auto-completion-usage).
 
-The generator transforms most of these settings to the corresponding implementation as is. The only thing which is used outside of the entity classes is the [edit type](#relation-edit-type) which controls how relationships are handled in [edit actions](#edit-action).
+The generator transforms most of these settings to the corresponding implementation as is. The only thing which is used outside of the entity classes are the [edit mode](#relation-edit-mode) and [auto completion usage](#auto-completion-usage) which control how relationships are handled in [edit actions](#edit-action).
 
 Join relationships are automatically incorporated into the DQL queries which are placed in the entity repository classes. You can override these methods for changing selection details if required.
 
@@ -1117,28 +1036,6 @@ Can be one of the following options:
 
 The generator transforms these values to the corresponding implementation. There are no differences made yet between the different fetch types as the generator uses DQL for almost all selections. So beside the actual entity class there won't be any code parts affected based on which fetch type you use.
 
-#### Relation edit type
-
-**Deprecated in favour of [edit modes](#relation-edit-mode), will be removed in ModuleStudio 1.2.0.**
-
-Represents different edit types for [join relationships](#join-relationship).
-
-Can be one of the following options:
-
-* `ACTIVE_NONE_PASSIVE_CHOOSE` - Editing the parent does nothing. Editing the child includes choosing the parent.
-* `ACTIVE_NONE_PASSIVE_EDIT` - Editing the parent does nothing. Editing the child includes choosing, adding and editing the parent.
-* `ACTIVE_CHOOSE_PASSIVE_CHOOSE` - Editing the parent includes choosing the children. Editing the child includes choosing the parent.
-* `ACTIVE_CHOOSE_PASSIVE_NONE` - Editing the parent includes choosing the children. Editing the child does nothing.
-* `ACTIVE_EDIT_PASSIVE_CHOOSE` - Editing the parent includes choosing, adding and editing the children. Editing the child includes choosing the parent.
-* `ACTIVE_EDIT_PASSIVE_EDIT` - Editing the parent includes choosing, adding and editing the children. Editing the child includes choosing, adding and editing the parent.
-* `ACTIVE_EDIT_PASSIVE_NONE` - Editing the parent includes choosing, adding and editing the children. Editing the child does nothing.
-
-For each entity the generator creates some templates to be included in the [edit templates](#edit-action) of related entities (for example a display list and another one for edit). Depending on which edit type is defined for a relationship the corresponding edit template (choose or edit) is included or not.
-
-* `NONE` means that there is no possibility to take influence on the association.
-* `CHOOSE` means that it is possible to select a related entity (using dropdowns, radio buttons, checkboxes or auto completion).
-* `EDIT` means the same as `CHOOSE` plus that it is also possible to create and edit related entities during editing the main entity.
-
 #### Relation edit mode
 
 Represents different edit modes for each side of [join relationships](#join-relationship).
@@ -1195,7 +1092,6 @@ It includes the following properties:
 A var container may have the following references:
 
 * **application** - Reference to the owning element.
-* **vars** - Allows referencing one or more [variables](#variable). **Deprecated in favour of [fields](#field), will be removed in ModuleStudio 1.2.0.**
 * **fields** - Allows referencing one or more [fields](#field).
 
 As soon as at least one variable container exists the generator creates an additional `config` controller to let the site administrator manage available settings. For each variable the generator creates an according input element in the config page. Also the variable is handled properly in the installer class which takes care for initialisation and removal on uninstallation.
@@ -1211,76 +1107,6 @@ For example imagine you want to create two variables for a payment method and a 
 Option 1: create a variable container named `payment` with `composite=false` and two variables `paymentMethod` and `paymentUrl` in it. This results in two module variables `paymentMethod = ''` and `paymentUrl = ''`.
 
 Option 2: create a variable container named `payment` with `composite=true` and two variables `method` and `url` in it. This results in one module variable `payment = ['method' => '', 'url' => '']`.
-
-#### Variable
-
-Represents a module variable. **Deprecated in favour of [fields](#field), will be removed in ModuleStudio 1.2.0.**
-
-It includes the following properties:
-
-* **name** - Name of the variable.
-* **value** - Default value of the variable.
-
-A variable may have the following references:
-
-* **container** - Reference to the owning element.
-
-#### Text var
-
-Represents a setting with alphanumeric values. **Deprecated in favour of [string fields](#string-field) and [text fields](#text-field), will be removed in ModuleStudio 1.2.0.**
-
-It includes the following properties in addition to the common [variable](#variable) settings:
-
-* **maxLength** - The maximum length.
-* **multiline** - Whether this field is single- or multi-lined. Default value is `false`.
-
-The generator creates an input for text for a text variable. The maximum length is not considered anywhere in the generated code yet.
-
-#### Int var
-
-Represents a setting with numeric (integer) values. **Deprecated in favour of [integer fields](#integer-field), will be removed in ModuleStudio 1.2.0.**
-
-The generator creates an input element for integers (digits) for an integer variable.
-
-#### Bool var
-
-Represents a setting with boolean values. **Deprecated in favour of [boolean fields](#boolean-field), will be removed in ModuleStudio 1.2.0.**
-
-The generator creates a checkbox input element for a boolean variable.
-
-#### File path var
-
-Represents a setting with file path values. **Deprecated in favour of [url fields](#url-field), will be removed in ModuleStudio 1.2.0.**
-
-It includes the following properties in addition to the common [variable](#variable) settings:
-
-* **withinDocRoot** - A boolean specifying whether this path is placed inside the web root or not. The Default value is `true`.
-* **writable** - A boolean specifying whether this file path is writable or not. The default value is `false`.
-
-The generator will create a text input element for a file path variable as well as additional behaviour to consider it's fields properly. At the moment this has not been done yet though, so file path vars are currently handled in the same way like text vars.
-
-#### List var
-
-Represents a setting with list values. **Deprecated in favour of [list fields](#list-field), will be removed in ModuleStudio 1.2.0.**
-
-It includes the following properties in addition to the common [variable](#variable) settings:
-
-* **multiple** - A boolean specifying whether multiple items can be selected concurrently or not. The default value is `false`.
-
-A list variable may have the following references:
-
-* **items** - Allows referencing one or more [items](#list-var-item).
-
-The generator will create a list of checkboxes (if `multiple` is set to `true`) or a select element (otherwise) for a list variable.
-
-#### List var item
-
-Represents an entry for a setting with list values. **Deprecated in favour of [list field items](#list-field-item), will be removed in ModuleStudio 1.2.0.**
-
-It includes the following properties:
-
-* **default** - A boolean specifying whether this entry is selected by default or not. The default value is `false`.
-* **name** - Name of the item.
 
 ## Controller layer
 

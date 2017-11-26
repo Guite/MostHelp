@@ -162,8 +162,6 @@ The following list has been merged and includes therefore all keywords of all su
 * Entities with an aggregate field should use a locking strategy (optimistic or pessimistic read). If an integer field acts as aggregate field the corresponding entity must use one locking strategy of `OPTIMISTIC`, `PAGELOCK_OPTIMISTIC`, `PESSIMISTIC_READ` or `PAGELOCK_PESSIMISTIC_READ`, depending on whether you want support the Zikula PageLock functionality in addition or not.
 * Aggregate fields work only in combination with an outgoing and bidirectional one-to-many relationship with persist cascade.
 * Naming of aggregateFor attribute values must follow the syntax `targetAlias#targetFieldName` (for example `views#amount`). If an integer field acts as aggregate field the property `aggregate for` must define the target alias of corresponding outgoing and bidirectional one-to-many relationship with persist cascade. After a `#` char as delimiter the name of the target field (to be aggregated) follows.
-* Decimal fields are deprecated. Use a number field with `numberType = DECIMAL` instead.
-* Float fields are deprecated. Use a number field with `numberType = FLOAT` instead.
 * The default value for a number field must be a floating point number.
 * The length (precision) of a number field must be greater than the scale. For example `1234.12` is valid (4 > 2), but `123.1234` is not.
 * A number field must not act as `percentage` and `currency` at the same time.
@@ -204,8 +202,6 @@ This section includes rules which apply only for datetime, date and time fields.
 * The default value for a datetime field must conform to the pattern `YYYY-MM-DD HH:MM:SS` or `now`. You can either set a certain value or use `now` to specify the current timestamp.
 * The default value for a date field must conform to the pattern `YYYY-MM-DD` or `now`. You can either set a certain value or use `now` to specify today.
 * The default value for a time field must conform to the pattern `HH:MM:SS` or `now`. You can either set a certain value or use `now` to specify the current moment.
-* Date fields are deprecated. Use a datetime field with `components = DATE` instead.
-* Time fields are deprecated. Use a datetime field with `components = TIME` instead.
 * Time fields may not act as start/end date.
 
 #### Upload fields
@@ -306,7 +302,6 @@ Includes basically all relationships in the data layer except inheritance.
 * Var container sort positions must be unique.
 * Every var container must contain at least one variable.
 * Var container must be assigned to an application. Should not occur in practice, this is just for completeness.
-* Variables are deprecated, use normal fields instead.
 * Variable names must be unique.
 
 ### Calculated field
