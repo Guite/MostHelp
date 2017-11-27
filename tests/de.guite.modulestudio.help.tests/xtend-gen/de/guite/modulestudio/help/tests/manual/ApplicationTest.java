@@ -7,7 +7,7 @@ import org.junit.Test;
  * This class tests certain aspects of the Application meta class.
  */
 @SuppressWarnings("all")
-public class Application {
+public class ApplicationTest {
   /**
    * First dummy test.
    */

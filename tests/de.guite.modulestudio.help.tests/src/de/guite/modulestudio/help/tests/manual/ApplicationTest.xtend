@@ -7,7 +7,7 @@ import static extension org.junit.Assert.*
 /**
  * This class tests certain aspects of the Application meta class.
  */
-class Application {
+class ApplicationTest {
     /**
      * First dummy test.
      */
