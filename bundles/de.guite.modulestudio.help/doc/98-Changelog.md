@@ -4,7 +4,7 @@
 
 ### Product / Tooling changes
 
-* None yet.
+* Added icons to all quick fixes which did not have one yet.
 
 ### DSL / Modelling language changes
 
