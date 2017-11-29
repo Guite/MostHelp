@@ -1,3 +1,6 @@
+/**
+ * Copyright (c) 2007-2017 Axel Guckelsberger
+ */
 package de.guite.modulestudio.help.tests.manual
 
 import org.junit.Test
