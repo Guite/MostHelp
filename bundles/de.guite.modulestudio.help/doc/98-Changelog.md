@@ -9,6 +9,8 @@
 ### DSL / Modelling language changes
 
 * Removed obsolete DSL elements (#139).
+* Improved validation with regards of detecting missing names and other mandatory settings.
+* The formatter now adds a new line after the last closing bracket.
 
 ### Generator changes
 
