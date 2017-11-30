@@ -273,10 +273,9 @@ Includes basically all relationships in the data layer except inheritance.
 
 #### Inheritance relationship
 
-* Self relations are not allowed for inheritance relationships.
 * The `discriminatorColumn` attribute must not be empty for inheritance relations. Per default this attribute has the value `discr` so this shouldn't happen as long as you don't delete this value. ModuleStudio uses this value to tell Doctrine 2 where to store the type of stored entities.
 * Please rename the `discriminatorColumn` field as it is reserved for the discriminator column, or change corresponding attribute. Happens if the target entity includes a field with the same name as specified in the `discriminator` setting.
-* Inheritance cycles are not allowed. Recursive check to detect cycles within inheritance hierarchies.
+* Self inheritance relations and inheritance cycles are not allowed. Recursive check to detect cycles within inheritance hierarchies.
 * All inheritance connections within a class hierarchy must have the same inheritance strategy.
 * All inheritance connections within a class hierarchy must have the same discriminator column.
 * An entity can not inherit from multiple entities.
