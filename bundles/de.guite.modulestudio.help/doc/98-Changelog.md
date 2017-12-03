@@ -22,6 +22,7 @@
 * Added missing JavaScript inclusion for UI hooks provider.
 * Fixed idPrefix for initialising UI hook provider auto completion.
 * Support legacy subscriber URLs in UI hooks provider.
+* Fixed declaration in legacy item selector form type.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.2.0).
 
 ## ModuleStudio 1.1.0 (Nov 26, 2017)
