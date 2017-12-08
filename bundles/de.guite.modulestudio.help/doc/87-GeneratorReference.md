@@ -45,42 +45,24 @@ It includes the following basic properties which are mainly, but not only used t
 * **author** - The author of the application. Usually this is the full name of the developer.
 * **email** - The email address of the developer.
 * **license** - The license of this application. Defaults to LGPL. If either GPL or LGPL are used the generator creates corresponding license files, too.
+* **prefix** - A prefix for all database tables of this application. Will be used in entity classes.
 * **url** - The homepage of the developer.
 * **version** - The application version. Must conform to the pattern `x.y.z` - for example `1.0.0` which is also the default value. Will be used in the composer file of the created application.
-
-An application has some more fields for specifying specific aspects:
-
-* **capabilities** - A comma-separated list of capability names the application offers. Capabilities are used in Zikula to express certain functions a module is offering. This allows for a loose coupling between modules. For example you can let `MyProductsModule` depend on `MyCustomerModule`, but this is a very tight coupling. With capabilities you could instead let the products module query Zikula for `any module which is able to handle customers`. You can read more about this in the [CapabilityApi description](https://github.com/zikula/core/blob/master/src/docs/Api/CapabilityApi.md). Note the generator uses these just for specifying them in the generated composer file. There is no further support for the capabilities you want to provide yet.
-* **prefix** - A prefix for all database tables of this application. Will be used in entity classes.
 
 ![Basic application properties](images/ui_diagram_application_properties.png "Basic application properties")
 
 An application may furthermore have the following references:
 
 * **entities** - Allows referencing one or more [data objects](#data-object).
-* **generatorSettings** - Allows specifying desired generator features and behaviour. More details in the [settings container](#settings-container) section.
+* **generatorSettings** - Allows specifying desired generator features and behaviour. *Deprecated, as settings are specified at the application directly beginning with ModuleStudio 1.2.0.*.
 * **referredApplications** - Allows referencing other applications. See [below](#referred-application).
 * **relations** - Allows referencing one or more [relationships](#relationship).
 * **variables** - Allows referencing one or more [variables](#variables).
 
-#### Core version
+In addition, an application can configure several further properties to customise generator settings. You can control which features should be generated and take influence on some behavioural aspects of the generator.
 
-Specifies the Zikula version for which the application should be generated.
-
-Can be one of the following options:
-
-* `ZK20` - Targets the last stable Zikula 2.0.x version. This is the default value.
-* `ZK2DEV` - Targets the last unstable Zikula 2.x version and may include changes for the next upcoming 2.x core release.
-* `ZK15` - Targets the last stable Zikula 1.5.x version.
-* `ZK15DEV` - Targets the last unstable Zikula 1.5.x version and may include changes for the next upcoming 1.5.x core release.
-
-#### Settings container
-
-Each application may contain one settings container for customising generator settings. You can control which features should be generated and take influence on some behavioural aspects of the generator.
-
-A settings container has the following fields:
-
-* **targetCoreVersion** - The targeted Zikula core version. See [above](#core-version).
+* **targetCoreVersion** - The targeted Zikula core version. See [below](#core-version).
+* **capabilities** - A comma-separated list of capability names the application offers. Capabilities are used in Zikula to express certain functions a module is offering. This allows for a loose coupling between modules. For example you can let `MyProductsModule` depend on `MyCustomerModule`, but this is a very tight coupling. With capabilities you could instead let the products module query Zikula for `any module which is able to handle customers`. You can read more about this in the [CapabilityApi description](https://github.com/zikula/core/blob/master/src/docs/Api/CapabilityApi.md). Note the generator uses these just for specifying them in the generated composer file. There is no further support for the capabilities you want to provide yet.
 * **isSystemModule** - A boolean specifying whether the model describes a system module or not. Default value is `false`.
 * **amountOfExampleRows** - The amount of example rows to create for entities in this application. Default value is `0`. Note that if you activate the `categorisable` property for an entity the generated installer relies on that you did not remove the default categories of Zikula. If you deleted them please set the amount of example rows to `0` to avoid problems.
 * **generateAccountApi** - A boolean specifying whether account panel integration should be generated or not. Default value is `true`.
@@ -136,6 +118,17 @@ A settings container has the following fields:
 * **displayActionsPosition** - Allows to specify whether and where item actions should be available in display pages. Default value is `START`. Available options are explained [below](#item-actions-position).
 * **displayActionsStyle** - Allows to specify the style used by the included item actions in display pages. Default value is `DROPDOWN`. Available options are explained [below](#item-actions-style).
 * **displayActionsWithIcons** - A boolean specifying whether item actions in display pages should contain an icon in addition to their label or not. Default value is `true`.
+
+#### Core version
+
+Specifies the Zikula version for which the application should be generated.
+
+Can be one of the following options:
+
+* `ZK20` - Targets the last stable Zikula 2.0.x version. This is the default value.
+* `ZK2DEV` - Targets the last unstable Zikula 2.x version and may include changes for the next upcoming 2.x core release.
+* `ZK15` - Targets the last stable Zikula 1.5.x version.
+* `ZK15DEV` - Targets the last unstable Zikula 1.5.x version and may include changes for the next upcoming 1.5.x core release.
 
 #### Item actions position
 

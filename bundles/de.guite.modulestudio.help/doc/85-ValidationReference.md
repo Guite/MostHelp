@@ -20,11 +20,7 @@ The biggest part is a reference section listing all validation rules in detail a
 * The prefix must be a valid identifier (e.g. no whitespace or special characters). Essentially the same as the global rule for names above. You should use lowercase here, but it will be generated in lowercase in all cases.
 * The application must have a version. The application version must conform to the pattern `x.y.z`. Valid values are *1.0.0*, *1.2.2*, but not *1.1* or *2.1.0beta*.
 * The application must contain at least one entity. At the moment ModuleStudio wants a model with at least one entity. If you are modelling an extension without any data storage, just create some dummy elements.
-* The application may contain only one settings container.
-
-### Settings container
-
-* Settings container must be assigned to an application. Should not occur in practice, this is just for completeness.
+* Settings containers are deprecated. Instead configure your generator settings at the application directly.
 * The detail block requires external controller and finder component. If you enable `generateDetailBlock` you also need `generateExternalControllerAndFinder`.
 * The detail content type requires external controller and finder component. If you enable `generateDetailContentType` you also need `generateExternalControllerAndFinder`.
 * Scribite plug-ins require external controller and finder component. If you enable `generateScribitePlugins` you also need `generateExternalControllerAndFinder`.

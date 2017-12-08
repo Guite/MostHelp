@@ -11,6 +11,7 @@
 * Removed obsolete DSL elements (#139).
 * Improved validation with regards of detecting missing names and other mandatory settings.
 * The formatter now adds a new line after the last closing bracket.
+* Generator settings are now defined at the application element directly; settings containers are not used anymore (#1172). Migration is simplified using a quick fix.
 
 ### Generator changes
 
