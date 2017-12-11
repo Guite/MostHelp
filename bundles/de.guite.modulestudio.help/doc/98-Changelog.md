@@ -26,6 +26,7 @@
 * Fixed declaration in legacy item selector form type.
 * Fixed constructor arguments for `IntlDateFormatter` in `EntityDisplayHelper`.
 * Fixed inline editing redirect if no auto completion is used.
+* Introduced getFormOptions method in form handlers for easier customisation.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.2.0).
 
 ## ModuleStudio 1.1.0 (Nov 26, 2017)
