@@ -10,7 +10,7 @@ As Zikula uses Symfony and the Doctrine ORM layer, the data layer in ModuleStudi
 
 From each entity in the data layer there are entity classes and repository classes created. Therewith the contained fields as well as their properties are accordingly reflected. For many data types and basic properties, like *unique*, *readonly* or *notnull* this happens with a one to one adaption. Several things are shortened for convenience in ModuleStudio though. Furthermore there are some additional data types, like for example for users, email addresses, urls and file uploads. An email field is treated by the generator as a string field in Doctrine which has the email validator activated.
 
-Validators are generally not explicitly written in MOST, but simply defined using properties. So there are for example attributes like *nospace* and *ipaddress* for string fields. Date and time fields have properties for *past*, *future* and others.
+Validators are generally not explicitly written in MOST, but simply defined using properties. So there are for example attributes like *ipaddress* for string fields or *past* and *future* for date and time fields.
 
 The different types of relations in Doctrine are all offered, too. For inheritance relationships the strategy can be selected (single table, joined). All other connection types store a name for the two entities on both sides (source alias and target alias) as well as the referenced fields (source field and target field). Because the primary id fields of entities are not part of the model, but automatically added before the generation, the string `id` is allowed and also set per default. By changing these fields it is possible to describe also relations referencing other fields. Beside this it is possible to have multiple relationships between the same entities and also self relations, as long as their alias settings are unique. Finally you can also define how the cascading behaviour should look like, again supporting all options offered by Doctrine.
 
@@ -395,7 +395,7 @@ An abstract string field has the following properties in addition to the common 
 
 * **fixed** - A boolean specifying whether this field has a fixed length or not. Default value is `false`.
 * **minLength** - Minimum length. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
-* **nospace** - A boolean specifying whether space chars are forbidden or not. Default value is `false`.
+* **nospace** - A boolean specifying whether space chars are forbidden or not. Default value is `false`. *Deprecated beginning with ModuleStudio 1.2.0, use regexp instead.*.
 * **regexp** - Regular expression to validate against. Possible example values are `/^\w+/` and `/\d/`.
 * **regexpOpposite** - A boolean specifying the logical way of checking `regexp`. Default value is `false`. If set to `true` then validation will pass only if the given string does *not* match the pattern.
 

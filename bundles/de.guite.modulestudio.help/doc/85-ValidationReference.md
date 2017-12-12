@@ -73,7 +73,7 @@ The biggest part is a reference section listing all validation rules in detail a
 
 * Entities with owner permissions need standard fields activated. The standard fields extension is required to determine the owner (`createdBy`) of an object.
 * Loggable entities need one field with the version attribute set to `true`. Can be either integer or datetime fields.
-* Entities with geographical behaviour should ideally contain a String Field with name zipcode with a length of at least 10. Just a warning to support best practices.
+* Entities with geographical behaviour should ideally contain a String field with name zipcode with a length of at least 10. Just a warning to support best practices.
 * There must not exist an entity named `FooLogEntry` as this is reserved by the corresponding extension. For an entity named *person* with `loggable = true` ModuleStudio generates an additional entity named `PersonLogEntry` for managing the it's version log entries.
 * There must not exist an entity named `FooTranslation` as this is reserved by the corresponding extension. For an entity named *person* with translatable fields ModuleStudio generates an additional entity named `PersonTranslatable` for managing it's translations.
 * There must not exist an entity named `FooClosure` as this is reserved by the corresponding extension. For an entity named *person* with a closure tree ModuleStudio generates an additional entity named `PersonClosure` for managing it's closures. For nested sets this additional entity is not required.
@@ -178,6 +178,7 @@ The following list has been merged and includes therefore all keywords of all su
 * String length for ip addresses must be at least `39` chars. Occurs if you set the `ip address` property to a value covering IPv6 addresses or if you enable the `ipTraceable` extension for a field with a length smaller than `39`.
 * String length for time zones must be at least `30` chars. Occurs if you activate the `timezone` role for a string field with a length smaller than `30`.
 * String length for uuids must be at least `36` chars. Occurs if you activate the `uuid` role for a string field with a length smaller than `36`.
+* The `nospace` property is deprecated. Use the `regexp` validator instead if needed.
 * A string can only have one special semantic (role, isbn, issn, ip address).
 * String length must not be greater than `255`; for bigger sizes use text fields.
 * The default value for an email field must be a valid email address.
