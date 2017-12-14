@@ -437,8 +437,9 @@ Can be one of the following options:
 * `LANGUAGE` - An [Unicode language](http://site.icu-project.org/) identifier. Possible example values are `fr` or `zh-Hant`. A language selector is used in [edit pages](#edit-action). For the output in [view](#view-action) and [display](#display-action) templates an output modifier is used to display the full name instead of the unreadable language code. If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
 * `LOCALE` - A locale. Possible example values are `fr` ([ISO 639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)) or `fr_FR` (ISO 639-1 followed by [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) country code). The field will be rendered as a locale selector in [edit forms](#edit-action). If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
 * `PASSWORD` - A password. For this a password input element will be used instead of a normal one in [edit pages](#edit-action). Password fields are not shown on [view](#view-action) and [display](#display-action) pages for security reasons.
+* `PHONE_NUMBER` - A telephone number.
 * `TIME_ZONE` - A time zone. In [edit forms](#edit-action) such fields will be rendered using a time zone selector.
-* `UUID` - An [UUID (Universally Unique Identifier)](http://en.wikipedia.org/wiki/Universally_unique_identifier).
+* `UUID` - An [UUID (Universally Unique Identifier)](https://en.wikipedia.org/wiki/Universally_unique_identifier).
 
 
 #### ISBN style
@@ -576,20 +577,22 @@ Image-specific settings (use **only** if you did not change `allowedExtensions`)
 * **maxWidth** - An integer for a maximum width. Default is `0` for no constraint. If set, the width of the image file must be less than or equal to this value in pixels.
 * **minHeight** - An integer for a minimum height. Default is `0` for no constraint. If set, the height of the image file must be greater than or equal to this value in pixels.
 * **maxHeight** - An integer for a maximum height. Default is `0` for no constraint. If set, the height of the image file must be less than or equal to this value in pixels.
+* **minPixels** - An integer for a minimum amount of pixels. Default is `0` for no constraint. If set, the image's amount of pixels must be greater than or equal to this value. Only applicable for the `ZK20DEV` target.
+* **maxPixels** - An integer for a maximum amount of pixels. Default is `0` for no constraint. If set, the image's amount of pixels must be less than or equal to this value. Only applicable for the `ZK20DEV` target.
 * **minRatio** - A float for a minimum aspect ratio (width / height). Default is `0.00` for no constraint. If set, the aspect ratio of the image file must be greater than or equal to this value. If you for example want to ensure that only images are accepted which have a 16:9 format (like a width of 640 pixels and a height of 360 pixels) set both `minRatio` and `maxRatio` to `1.77`.
 * **maxRatio** - A float for a maximum aspect ratio (width / height). Default is `0.00` for no constraint. If set, the aspect ratio of the image file must be less than or equal to this value. If you for example want to ensure that only images are accepted which have a 16:9 format (like a width of 640 pixels and a height of 360 pixels) set both `minRatio` and `maxRatio` to `1.77`.
 * **allowSquare** - A boolean specifying whether square dimension is allowed or not. Default value is `true`. If this option is `false`, the image cannot be a square. If you want to force a square image, then set `allowLandscape` and `allowPortrait` both to `false`.
 * **allowLandscape** - A boolean specifying whether landscape dimension is allowed or not. Default value is `true`. If this option is `false`, the image cannot be landscape oriented. 
 * **allowPortrait** - A boolean specifying whether portrait dimension is allowed or not. Default value is `true`. If this option is `false`, the image cannot be portrait oriented.
-* **detectCorrupted** - A boolean specifying whether image contents are validated or not. Default value is `false`. If this option is `true`, the image contents are validated to ensure that the image is not corrupted. This validation is done with PHP's [imagecreatefromstring](http://php.net/manual/en/function.imagecreatefromstring.php) function, which requires the [PHP GD extension](http://php.net/manual/en/book.image.php) to be enabled. **Note:** as this property has been introduced in Symfony 3.1, it is only supported for the `ZK20` core target version.
+* **detectCorrupted** - A boolean specifying whether image contents are validated or not. Default value is `false`. If this option is `true`, the image contents are validated to ensure that the image is not corrupted. This validation is done with PHP's [imagecreatefromstring](https://secure.php.net/manual/en/function.imagecreatefromstring.php) function, which requires the [PHP GD extension](https://secure.php.net/manual/en/book.image.php) to be enabled. **Note:** as this property has been introduced in Symfony 3.1, it is only supported for the `ZK20` core target version.
 
 In [edit pages](#edit-action) the generator will use upload input elements. If a field is mandatory the upload will be required when creating a new entity, but not when editing an existing one. If a field is optional (not mandatory) then it will be possible to delete existing uploads on editing.
 
 For the output in [view](#view-action) and [display](#display-action) pages a download link is shown together with the file size. If the file is an image then a small version of
 it is shown instead of a text link (on edit pages too by the way).
 
-If an application has any upload fields the generator creates an additional helper class containing methods for image processing. The generated application uses it to determine arguments for creating thumbnail preview images on demand with the help of the [Imagine library](http://imagine.readthedocs.io/en/latest/).
-Generated applications use the [LiipImagineBundle](http://symfony.com/doc/current/bundles/LiipImagineBundle/index.html) which also provides a Twig extension for generating and embedding thumbnails.
+If an application has any upload fields the generator creates an additional helper class containing methods for image processing. The generated application uses it to determine arguments for creating thumbnail preview images on demand with the help of the [Imagine library](https://imagine.readthedocs.io/en/latest/).
+Generated applications use the [LiipImagineBundle](https://symfony.com/doc/current/bundles/LiipImagineBundle/index.html) which also provides a Twig extension for generating and embedding thumbnails.
 
 For upload fields with images there are additional settings generated at the configuration page. These allow enabling automatic shrinking of too large images down to configurable maximum dimensions.
 
@@ -669,13 +672,14 @@ A datetime field has the following properties in addition to the common [derived
 
 * **components** - Which [date/time components](#datetime-components) are activated. Default value is `DATE_TIME`.
 * **future** - A boolean specifying whether the value must be in the future or not. Default value is `false`.
+* **immutable** - A boolean specifying whether the value is immutable or not. Default value is `false`. If set to true `DateTimeImmutable` is used instead of `DateTime`. This setting is not reflected in the ORM yet because this requires Doctrine DBAL 2.6.
 * **past** - A boolean specifying whether the value must be in the past or not. Default value is `false`.
 * **startDate** - A boolean specifying whether this field should be treated as a start date. Default value is `false`. If set to `true` this field is included into determining public visibility of the corresponding objects.
 * **endDate** - A boolean specifying whether this field should be treated as an end date. Default value is `false`. If set to `true` this field is included into determining public visibility of the corresponding objects.
 * **timestampable** - Which [timestampable type](#entity-timestampable-type) is used. Default value is `NONE`.
 * **timestampableChangeTriggerField** - Optional name of field to use as change trigger (if type is `CHANGE`. Can also be `workflowState` or the name of a relation (syntax `property.field`).
 * **timestampableChangeTriggerValue** - Optional value of field to use as change trigger (if type is `CHANGE`).
-* **validatorAddition** - Additional validation constraint without the `Assert` annotation. Example values are `LessThanOrEqual("+15 minutes")` or `LessThan("-18 years UTC")` or `Range(min = "first day of January", max = "first day of January next year")`. For more details information see [this blog post](http://symfony.com/blog/new-in-symfony-2-6-date-support-for-validator-constraints).
+* **validatorAddition** - Additional validation constraint without the `Assert` annotation. Example values are `LessThanOrEqual("+15 minutes")` or `LessThan("-18 years UTC")` or `Range(min = "first day of January", max = "first day of January next year")`. For more details information see [this blog post](https://symfony.com/blog/new-in-symfony-2-6-date-support-for-validator-constraints).
 
 Note you can also use `now` as default value for date and time fields which results in that always the current timestamp is used for setting the initial value.
 
