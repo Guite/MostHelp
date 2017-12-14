@@ -36,6 +36,7 @@
 * Applications for Zikula 2.0.4+ support an additional workflow event (`completed`) introduced in Symfony 3.4 (#1171).
 * For Zikula 2.0.4+ the colour form type is not generated anymore, since it is provided by Symfony 3.4 (#1171).
 * A form field for telephone numbers is used for the new string field role `PHONE_NUMBER`. For Zikula 2.0.4+ it is used from Symfony 3.4, for earlier versions it is generated (#1171). 
+* Avoid selecting deletion log entries for undeleted entries.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.2.0).
 
 ## ModuleStudio 1.1.0 (Nov 26, 2017)
