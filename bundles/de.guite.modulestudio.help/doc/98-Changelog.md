@@ -8,7 +8,7 @@
 
 ### DSL / Modelling language changes
 
-* none yet
+* Removed obsolete DSL elements (#1173).
 
 ### Generator changes
 

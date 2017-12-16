@@ -54,7 +54,6 @@ It includes the following basic properties which are mainly, but not only used t
 An application may furthermore have the following references:
 
 * **entities** - Allows referencing one or more [data objects](#data-object).
-* **generatorSettings** - Allows specifying desired generator features and behaviour. *Deprecated, as settings are specified at the application directly beginning with ModuleStudio 1.3.0.*.
 * **referredApplications** - Allows referencing other applications. See [below](#referred-application).
 * **relations** - Allows referencing one or more [relationships](#relationship).
 * **variables** - Allows referencing one or more [variables](#variables).
@@ -395,7 +394,6 @@ An abstract string field has the following properties in addition to the common 
 
 * **fixed** - A boolean specifying whether this field has a fixed length or not. Default value is `false`.
 * **minLength** - Minimum length. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
-* **nospace** - A boolean specifying whether space chars are forbidden or not. Default value is `false`. *Deprecated beginning with ModuleStudio 1.3.0, use regexp instead.*.
 * **regexp** - Regular expression to validate against. Possible example values are `/^\w+/` and `/\d/`.
 * **regexpOpposite** - A boolean specifying the logical way of checking `regexp`. Default value is `false`. If set to `true` then validation will pass only if the given string does *not* match the pattern.
 

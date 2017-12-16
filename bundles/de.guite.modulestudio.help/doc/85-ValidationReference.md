@@ -20,7 +20,6 @@ The biggest part is a reference section listing all validation rules in detail a
 * The prefix must be a valid identifier (e.g. no whitespace or special characters). Essentially the same as the global rule for names above. You should use lowercase here, but it will be generated in lowercase in all cases.
 * The application must have a version. The application version must conform to the pattern `x.y.z`. Valid values are *1.0.0*, *1.2.2*, but not *1.1* or *2.1.0beta*.
 * The application must contain at least one entity. At the moment ModuleStudio wants a model with at least one entity. If you are modelling an extension without any data storage, just create some dummy elements.
-* Settings containers are deprecated. Instead configure your generator settings at the application directly.
 * The detail block requires external controller and finder component. If you enable `generateDetailBlock` you also need `generateExternalControllerAndFinder`.
 * The detail content type requires external controller and finder component. If you enable `generateDetailContentType` you also need `generateExternalControllerAndFinder`.
 * Scribite plug-ins require external controller and finder component. If you enable `generateScribitePlugins` you also need `generateExternalControllerAndFinder`.
@@ -178,7 +177,6 @@ The following list has been merged and includes therefore all keywords of all su
 * String length for ip addresses must be at least `39` chars. Occurs if you set the `ip address` property to a value covering IPv6 addresses or if you enable the `ipTraceable` extension for a field with a length smaller than `39`.
 * String length for time zones must be at least `30` chars. Occurs if you activate the `timezone` role for a string field with a length smaller than `30`.
 * String length for uuids must be at least `36` chars. Occurs if you activate the `uuid` role for a string field with a length smaller than `36`.
-* The `nospace` property is deprecated. Use the `regexp` validator instead if needed.
 * A string can only have one special semantic (role, isbn, issn, ip address).
 * String length must not be greater than `255`; for bigger sizes use text fields.
 * The default value for an email field must be a valid email address.
