@@ -13,7 +13,7 @@
 * The formatter now adds a new line after the last closing bracket.
 * Generator settings are now defined at the application element directly; settings containers are not used anymore (#1172). A quick fix is provided for simple migration.
 * The `nospace` property has been deprecated and will be removed in ModuleStudio 1.3.0 (#1174). A quick fix is provided for simple migration.
-* Added `minPixels` and `maxPixels` constraints to upload fields for Zikula 2.0.4+ (#1171).
+* Added `minPixels` and `maxPixels` constraints to upload fields for Zikula 2 (#1171).
 * Added `immutable` flag for datetime, date and time fields (#1171).
 * Added new string field role `PHONE_NUMBER` for telephone numbers (#1171). 
 
@@ -31,11 +31,11 @@
 * Fixed constructor arguments for `IntlDateFormatter` in `EntityDisplayHelper`.
 * Fixed inline editing redirect if no auto completion is used.
 * Introduced `getFormOptions` method in form handlers for easier customisation.
-* Added some new features of Symfony 3.4 for Zikula 2.0.4+ (#1171).
+* Added some new features of Symfony 3.4 for Zikula 2 (#1171).
 * Workflows may contain multiple transitions with the same name again in Zikula 2.x (#1171). Thus, instead of `updatewaiting`, `updateapproved` and so on simply `update` is used again.
-* Applications for Zikula 2.0.4+ support an additional workflow event (`completed`) introduced in Symfony 3.4 (#1171).
-* For Zikula 2.0.4+ the colour form type is not generated anymore, since it is provided by Symfony 3.4 (#1171).
-* A form field for telephone numbers is used for the new string field role `PHONE_NUMBER`. For Zikula 2.0.4+ it is used from Symfony 3.4, for earlier versions it is generated (#1171). 
+* Applications for Zikula 2 support an additional workflow event (`completed`) introduced in Symfony 3.4 (#1171).
+* For Zikula 2 the colour form type is not generated anymore, since it is provided by Symfony 3.4 (#1171).
+* A form field for telephone numbers is used for the new string field role `PHONE_NUMBER`. For Zikula 2 it is used from Symfony 3.4, for earlier versions it is generated (#1171). 
 * Avoid selecting deletion log entries for undeleted entries.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.2.0).
 
@@ -96,7 +96,7 @@
 * Apply start and end date filters also for related items (#1152).
 * Module variables are handled in a dedicated `AppSettings` class (#97). This also allows for easy addition of custom behaviour, like for example clearing the cache after a specific setting has been changed.
 * Prevent user access to detail pages of waiting entities.
-* Utilise new category selector option `showRegistryLabels` in 1.5.4+ and 2.0.4+ (#1147).
+* Utilise new category selector option `showRegistryLabels` (#1147).
 * Moderation fields in edit forms are now limited to admin permissions.
 * Added permission based filtering for view pages.
 * Added relation-based permission filtering for view and display pages (#1125).
