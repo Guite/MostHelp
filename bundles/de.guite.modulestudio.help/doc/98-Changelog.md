@@ -12,7 +12,7 @@
 
 ### Generator changes
 
-* none yet
+* Added image EXIF data to upload field meta data (#1175).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.0).
 
 ## ModuleStudio 1.2.0 (Dec 16, 2017)
