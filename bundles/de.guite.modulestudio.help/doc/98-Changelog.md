@@ -8,6 +8,7 @@
 
 ### DSL / Modelling language changes
 
+* Fixed wrong validation logic regarding item actions settings.
 * Removed obsolete DSL elements (#1173).
 
 ### Generator changes
