@@ -8,8 +8,12 @@
 
 ### DSL / Modelling language changes
 
-* Fixed wrong validation logic regarding item actions settings.
 * Removed obsolete DSL elements (#1173).
+* Fixed wrong validation logic regarding item actions settings.
+* Improved validation constraints for inheritance aliases and join fields with regards to inheritance hierarchies.
+* Fixed non-working validation constraint to verify an entity has only one outgoing inheritance relationship.
+* Several fixes for relations from/to mapped super classes.
+* Further fixes for minor validation issues.
 
 ### Generator changes
 
