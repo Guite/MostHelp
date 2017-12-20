@@ -26,10 +26,10 @@
       <import plugin="org.apache.lucene.core" version="6.1.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.core.runtime" version="3.13.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.equinox.http.registry" version="1.1.400" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.help" version="3.8.0" match="greaterOrEqual"/>
-      <import plugin="org.objectweb.asm" version="5.0.1" match="greaterOrEqual"/>
-      <import feature="org.eclipse.help" version="2.0.0.v20130605-2000"/>
+      <import plugin="org.eclipse.help" version="3.8.1" match="greaterOrEqual"/>
       <import plugin="org.eclipse.help.webapp" version="3.9.1" match="greaterOrEqual"/>
+      <import plugin="org.objectweb.asm" version="5.0.1" match="greaterOrEqual"/>
+      <import feature="org.eclipse.help" version="2.2.102.v20171130-0510"/>
    </requires>
 
    <plugin

@@ -4,7 +4,7 @@
 
 ### Product / Tooling changes
 
-* none yet
+* Updated to Eclipse Oxygen.2 (4.7.2).
 
 ### DSL / Modelling language changes
 
@@ -14,7 +14,9 @@
 * Improved several relation-oriented validation constraints considering inheritance hierarchies.
 * Fixed non-working validation constraint to verify an entity has only one outgoing inheritance relationship.
 * Overhauled validation constraints for reserved slug field.
-* Further fixes for minor validation issues.
+* Added validation constraints with quick fixes for required minimum length of ISBN and ISSN fields.
+* Added validation constraint with quick fixes for minimum and maximum image pixels.
+* Several further fixes and improvements for the validation layer.
 
 ### Generator changes
 

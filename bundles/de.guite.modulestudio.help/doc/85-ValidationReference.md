@@ -164,18 +164,20 @@ The following list has been merged and includes therefore all keywords of all su
 
 * String size must not be smaller than `1`. Occurs if length is set to `0`.
 * String size must be larger than minimum length. If you set a minimum length it must not be larger than the actual field length.
-* String length for bic numbers must be at least `12` chars. Occurs if you activate the `bic` role for a string field with a length smaller than `12`.
+* String length for BIC numbers must be at least `12` chars. Occurs if you activate the `bic` role for a string field with a length smaller than `12`.
 * String length for colour codes must be at least `7` chars. Occurs if you activate the `colour` role for a string field with a length smaller than `7`.
 * String length for country codes must be at least `2` chars. Occurs if you activate the `country` role for a string field with a length smaller than `2`.
 * String length for credit card numbers must be at least `20` chars. Occurs if you activate the `credit card` role for a string field with a length smaller than `20`.
 * String length for currency codes must be at least `3` chars. Occurs if you activate the `currency` role for a string field with a length smaller than `3`.
-* String length for iban numbers must be at least `34` chars. Occurs if you activate the `iban` role for a string field with a length smaller than `34`.
+* String length for IBAN numbers must be at least `34` chars. Occurs if you activate the `iban` role for a string field with a length smaller than `34`.
+* String length for ISBN numbers must be at least `17` chars. Occurs if you activate the set the `isbn` property for a string field with a length smaller than `17`.
+* String length for ISSN numbers must be at least `9` chars. Occurs if you activate the set the `issn` property for a string field with a length smaller than `9`.
 * String length for languages must be at least `7` chars. Occurs if you activate the `language` role for a string field with a length smaller than `7`.
 * String length for locales must be at least `5` chars. Occurs if you activate the `locale` role for a string field with a length smaller than `5`.
-* String length for ip addresses must be at least `15` chars. Occurs if you set the `ip address` property to a value covering IPv4 addresses for a field with a length smaller than `15`.
-* String length for ip addresses must be at least `39` chars. Occurs if you set the `ip address` property to a value covering IPv6 addresses or if you enable the `ipTraceable` extension for a field with a length smaller than `39`.
+* String length for IP addresses must be at least `15` chars. Occurs if you set the `ip address` property to a value covering IPv4 addresses for a field with a length smaller than `15`.
+* String length for IP addresses must be at least `39` chars. Occurs if you set the `ip address` property to a value covering IPv6 addresses or if you enable the `ipTraceable` extension for a field with a length smaller than `39`.
 * String length for time zones must be at least `30` chars. Occurs if you activate the `timezone` role for a string field with a length smaller than `30`.
-* String length for uuids must be at least `36` chars. Occurs if you activate the `uuid` role for a string field with a length smaller than `36`.
+* String length for UUIDs must be at least `36` chars. Occurs if you activate the `uuid` role for a string field with a length smaller than `36`.
 * A string can only have one special semantic (role, isbn, issn, ip address).
 * String length must not be greater than `255`; for bigger sizes use text fields.
 * The default value for an email field must be a valid email address.
