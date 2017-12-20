@@ -214,6 +214,7 @@ This section includes rules which apply only for datetime, date and time fields.
 * The list must contain at least one item.
 * The list must contain at least two items. Occurs if you enable `multiple` without having defined multiple list items.
 * The list is not set to multiple and may therefore only contain one item with `default` property set to `true`.
+* List item values must be unique.
 * Only lists with multiple selections can define an enforced minimum (maximum) amount of selected values. Occurs if you set `min` (`max`) to a value not equal to `0`, without having set `multiple = true`.
 * The amount of list items must not be smaller than the minimum (maximum) amount of enforced values. Occurs if you set `min` (`max`) to a value which is greater than the actual number of existing list items.
 * The maximum amount of enforced values must not be smaller than the minimum amount of enforced values. Occurs if you set `max` to a smaller value than `min`.

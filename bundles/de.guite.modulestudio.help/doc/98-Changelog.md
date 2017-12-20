@@ -16,6 +16,7 @@
 * Overhauled validation constraints for reserved slug field.
 * Added validation constraints with quick fixes for required minimum length of ISBN and ISSN fields.
 * Added validation constraint with quick fixes for minimum and maximum image pixels.
+* Added validation constraint for unique values of list items.
 * Several further fixes and improvements for the validation layer.
 
 ### Generator changes
