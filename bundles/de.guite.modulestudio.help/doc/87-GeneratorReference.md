@@ -797,37 +797,6 @@ Can be one of the following options:
 
 The generator transforms these values to the corresponding implementation as is. There are no differences made between the different timestampable types. So beside the actual entity class there won't be any code parts affected based on which timestampable type you use.
 
-#### Entity workflow type
-
-Represents different workflows for entities.
-
-Can be one of the following options:
-
-* `NONE` - No approval (default).
-* `STANDARD` - Single approval.
-* `ENTERPRISE` - Double approval.
-
-In total there are nine different workflow states which are explained below. Note that you can arrange many states by corresponding properties in the model.
-
-1. **Initial** - pseudo-state for content which is just created and not persisted yet.
-2. **Deferred** - content has not been submitted yet or has been waiting, but was rejected. Only available if the entity has set the `ownerPermission` property to `true`. Allows users to manage their contributions. Otherwise rejected content would be deleted.
-3. **Waiting** - content has been submitted and waits for approval. Only available for `STANDARD` and `ENTERPRISE`. Fetched for pending content integration and moderation panel.
-4. **Accepted** - content has been submitted and accepted, but still waits for approval. Only available for `ENTERPRISE`. Fetched for pending content integration and moderation panel.
-5. **Approved** - content has been approved and is available online.
-6. **Suspended** - content has been approved, but is temporarily offline. Only available if the entity has set the `hasTray` property to `true`.
-7. **Archived** - content has reached the end and became archived. Only available if the entity has set the `hasArchive` property to `true`. Requires a [datetime](#datetime-field) field being designated as end date.
-8. **Deleted** - pseudo-state for content which has been deleted from the database.
-
-The following image shows an overview of all possible workflow states and actions.
-
-![Workflow overview](images/workflows.png "Workflow overview")
-
-For storing the current state for a certain object ModuleStudio adds an additional field named `workflowState` to each entity before starting the generation. This can also be used for easy filtering. In fact ModuleStudio adds it as a [list field](#list-field) which contains a [list field item](#list-field-item) for each state.
-
-Note that it is easily possible to model [date or datetime fields](#datetime-field) which set their value automatically depending on a certain workflow state. Just set their [timestampable type](#entity-timestampable-type) to `CHANGE` and set `workflowState` as change trigger field. Also set the change trigger value to the name of the desired state. So you could for example create an approval date by using `approved` for the trigger value property.
-
-For all entities having another workflow than `NONE` there are configuration options in the generated configuration page for selecting user groups for moderation. If these settings are not applied, the default group for administrators is used as fallback. With the help of this information, email notifications are sent between creator and moderators on state changes. For moderators there is a textarea field provided in the form for specifying additional remarks, like a reason for deny (particularly useful for `reject` and `demote` / `disapprove` actions).
-
 #### Account deletion handler
 
 Represents the kind of reaction to perform if users are deleted, but still referenced in some data of the generated application.
@@ -1156,6 +1125,49 @@ A custom action is only created as a mockup which contains the permission check 
 
 ## Workflow layer
 
-The workflow layer is not very configurable yet. At the moment there are three predefined workflows available which can be defined in the model for each [entity](#entity). For more information see [entity workflow types](#entity-workflow-type).
+The workflow layer is not very configurable yet. At the moment there are three predefined workflows available which can be defined in the model for each [entity](#entity).
 
-In future (probably for version 0.8) it is planned to create a dedicated layer for modelling only possible workflow states and actions.
+### Entity workflow type
+
+Represents different workflows for entities.
+
+Can be one of the following options:
+
+* `NONE` - No approval (default).
+* `STANDARD` - Single approval.
+* `ENTERPRISE` - Double approval.
+
+In total there are nine different workflow states which are explained below. Note that you can arrange many states by corresponding properties in the model.
+
+1. **Initial** - pseudo-state for content which is just created and not persisted yet.
+2. **Deferred** - content has not been submitted yet or has been waiting, but was rejected. Only available if the entity has set the `ownerPermission` property to `true`. Allows users to manage their contributions. Otherwise rejected content would be deleted.
+3. **Waiting** - content has been submitted and waits for approval. Only available for `STANDARD` and `ENTERPRISE`. Fetched for pending content integration and moderation panel.
+4. **Accepted** - content has been submitted and accepted, but still waits for approval. Only available for `ENTERPRISE`. Fetched for pending content integration and moderation panel.
+5. **Approved** - content has been approved and is available online.
+6. **Suspended** - content has been approved, but is temporarily offline. Only available if the entity has set the `hasTray` property to `true`.
+7. **Archived** - content has reached the end and became archived. Only available if the entity has set the `hasArchive` property to `true`. Requires a [datetime](#datetime-field) field being designated as end date.
+8. **Deleted** - pseudo-state for content which has been deleted from the database.
+
+The following image shows an overview of all possible workflow states and actions.
+
+![Workflow overview](images/workflows.png "Workflow overview")
+
+For storing the current state for a certain object ModuleStudio adds an additional field named `workflowState` to each entity before starting the generation. This can also be used for easy filtering. In fact ModuleStudio adds it as a [list field](#list-field) which contains a [list field item](#list-field-item) for each state.
+
+Note that it is easily possible to model [date or datetime fields](#datetime-field) which set their value automatically depending on a certain workflow state. Just set their [timestampable type](#entity-timestampable-type) to `CHANGE` and set `workflowState` as change trigger field. Also set the change trigger value to the name of the desired state. So you could for example create an approval date by using `approved` for the trigger value property.
+
+For all entities having another workflow than `NONE` there are configuration options in the generated configuration page for selecting user groups for moderation. If these settings are not applied, the default group for administrators is used as fallback. With the help of this information, email notifications are sent between creator and moderators on state changes. For moderators there is a textarea field provided in the form for specifying additional remarks, like a reason for deny (particularly useful for `reject` and `demote` / `disapprove` actions).
+
+### Workflow customisation
+
+If you need to use a more custom workflow or if you want to let several entities in multiple modules the same workflow you can do the following:
+
+1. Open the configuration page of one module. The configuration form has one tab for workflow-related settings. Within this tab you find links to a graphical workflow editor which allows to create a custom workflow based on an existing one. Of course you can also just use a text editor instead if you know the details (see below).
+2. When you are finished you need to save this workflow in `app/Resources/workflows/`.
+3. All entities using your custom workflow must not occur in any other workflows. So you need to customise or remove the generated workflow files within the corresponding modules.
+
+### Further resources
+
+* [Symfony workflow component](https://symfony.com/doc/current/workflow.html)
+* [Zikula workflow additions](https://github.com/zikula/core/blob/master/src/docs/Workflows/Workflows.md)
+

@@ -46,7 +46,7 @@ The biggest part is a reference section listing all validation rules in detail a
 * Every entity must have a (name | name for multiple instances). Entity (multiple) name must have a length of at least two chars. Should have at least four chars.
 * Entity (multiple) name must not contain underscores. Underscores are not allowed as they are used for class autoloading.
 * Data object name must not be `config`. The generator creates a dedicated config controller for handling configuration pages.
-* The amount of data objects is getting quite high. Maybe it makes sense to split up the model into two single applications. This warning appears if you have more than 14 data objects. Remember Zikula is a modular system. You can design whole families of extensions with ModuleStudio, so please try keeping complexity low and apply the principle *separation of concerns*.
+* The amount of data objects is getting quite high. Maybe it makes sense to split up the model into two single applications. This warning appears if you have more than 14 data objects. Remember Zikula is a modular system. You can design whole families of extensions with ModuleStudio, so please try keeping complexity low and apply the *separation of concerns* principle.
 * A data object must not have the same name as the application. This case is reserved as it could make sense to use corresponding namespaces in generation for encapsulating some common code parts.
 
 ### Entity
