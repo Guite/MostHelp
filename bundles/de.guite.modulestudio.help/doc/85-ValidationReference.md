@@ -63,7 +63,6 @@ The biggest part is a reference section listing all validation rules in detail a
 #### Inheritance-related entity settings
 
 * All entities within a class hierarchy must have the same change tracking policy. Requirement by Doctrine 2.
-* All entities within a class hierarchy must not have a field with the same name.
 * All associations outgoing from mapped super classes must be unidirectional.
 * One-to-many relations are not possible for mapped super classes.
 * Many-to-many relations are only possible for mapped super classes if it is used only in one entity at the same time.
