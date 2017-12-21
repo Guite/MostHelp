@@ -38,7 +38,6 @@ The biggest part is a reference section listing all validation rules in detail a
 
 ### Data object
 
-* The data object must be assigned to an application. Should not occur in practice, this is just for completeness.
 * Every data object must contain at least one field or inherit fields from a parent object. Ensures that either there are some fields in this entity or an outgoing inheritance relationship.
 * You may not mark a field as primary, this is done automatically. This warning appears because ModuleStudio adds primary keys automatically and uses the Doctrine 2 default settings if nothing else is explicitly specified in the model. Beside special use cases like custom join conditions or composite primary keys you won't need to set primary keys manually.
 * Remove ID fields... you do not need them ;-) This warning appears if a field is named like `id` or `personid` or `person_id` for a data object named `person`. By default ModuleStudio adds primary keys automatically before generation happens.
@@ -82,7 +81,6 @@ The biggest part is a reference section listing all validation rules in detail a
 
 #### General field settings
 
-* Field must be assigned to a data object or a variable container. Should not occur in practice, this is just for completeness.
 * Every field must have a name. Field name must have a length of at least two chars. Should have more than three chars.
 * Field names must be unique.
 * Field name is a reserved identifier (`module`, `type`, `func`, `config`, `ajax`, `external`, `lang`, `theme`, `newlang`, `newtheme`). These names are reserved.
@@ -226,8 +224,7 @@ This section includes rules which apply only for datetime, date and time fields.
 
 ### Relationship
 
-* Relation must be assigned to an application. Should not occur in practice, this is just for completeness.
-* Every relation must have a (source | target) data object. Should not occur in practice, this is just for completeness.
+* Every relation must have a (source | target) data object.
 * Every relation must have a (source | target) alias. Aliases must have a length of at least two chars. Recommended are at least four chars.
 * Relationship source aliases must be unique for all incoming relations of an entity.
 * Relationship target aliases must be unique for all outgoing relations of an entity.
@@ -279,7 +276,6 @@ Includes basically all relationships in the data layer except inheritance.
 
 ### Entity index
 
-* Index must be assigned to a data object. Should not occur in practice, this is just for completeness.
 * Every index must have a name. The index name must have a length of at least two chars. Recommended are at least four chars.
 * Every index must contain at least one item referencing an entity field.
 * The length of all index fields must not be higher than `333`. The limit is `1000` bytes, while UTF-8 requires three bytes for each char.
@@ -288,7 +284,6 @@ Includes basically all relationships in the data layer except inheritance.
 
 #### Entity index item
 
-* The index item must be assigned to an index. Should not occur in practice, this is just for completeness.
 * Every index item must have the same name as the referenced entity field. This occurs if no equally named field is found in the entity.
 
 ### Variables
@@ -297,7 +292,6 @@ Includes basically all relationships in the data layer except inheritance.
 * Var container names must be unique.
 * Var container sort positions must be unique.
 * Every var container must contain at least one variable.
-* Var container must be assigned to an application. Should not occur in practice, this is just for completeness.
 * Variable names must be unique.
 
 ### Calculated field
@@ -313,8 +307,6 @@ Includes basically all relationships in the data layer except inheritance.
 * Names of custom actions in one entity must be unique.
 
 ### Action
-
-* The action must be assigned to an entity. Should not occur in practice, this is just for completeness.
 
 #### Custom action
 

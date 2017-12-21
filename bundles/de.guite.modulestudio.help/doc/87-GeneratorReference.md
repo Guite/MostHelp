@@ -411,7 +411,7 @@ A string field has the following properties in addition to the common [abstract 
 * **issn** - Allows to define whether this field represents a number in [ISSN (International Standard Serial Number)](https://en.wikipedia.org/wiki/Issn). Default value is `NONE`. You can choose from different [validation options](#issn-style).
 * **ipAddress** - Allows to define whether this field represents an IP address. Default value is `NONE`. You can choose the covered [ip address scope](#ip-address-scope).
 * **ipTraceable** - Which [ipTraceable type](#entity-iptraceable-type) is used. Default value is `NONE`.
-* **ipTraceableChangeTriggerField** - Optional name of field to use as change trigger (if type is `CHANGE`. Can also be `workflowState` or the name of a relation (syntax `property.field`).
+* **ipTraceableChangeTriggerField** - Optional name of field to use as change trigger (if type is `CHANGE`. Can also be `workflowState` or the name of an incoming relation (syntax `sourceAlias.field`).
 * **ipTraceableChangeTriggerValue** - Optional value of field to use as change trigger (if type is `CHANGE`).
 * **length** - The length of this field. Default value is `255`.
 * **role** - Allows to define a semantic role for this field. Default value is `NONE`. The available options are explained [below](#string-role).
@@ -513,7 +513,7 @@ Extension of [abstract integer field](#abstract-integer-field) for storing user 
 An user field has the following properties in addition to the common [abstract integer field](#abstract-integer-field) settings:
 
 * **blameable** - Which [blameable type](#entity-blameable-type) is used. Default value is `NONE`.
-* **blameableChangeTriggerField** - Optional name of field to use as change trigger (if type is `CHANGE`. Can also be `workflowState` or the name of a relation (syntax `property.field`).
+* **blameableChangeTriggerField** - Optional name of field to use as change trigger (if type is `CHANGE`. Can also be `workflowState` or the name of an incoming relation (syntax `sourceAlias.field`).
 * **blameableChangeTriggerValue** - Optional value of field to use as change trigger (if type is `CHANGE`).
 * **onAccountDeletion** - Controls how an application should change the field when users are deleted. Default value is `GUEST`. The available options are listed [here](#account-deletion-handler).
 
@@ -675,7 +675,7 @@ A datetime field has the following properties in addition to the common [derived
 * **startDate** - A boolean specifying whether this field should be treated as a start date. Default value is `false`. If set to `true` this field is included into determining public visibility of the corresponding objects.
 * **endDate** - A boolean specifying whether this field should be treated as an end date. Default value is `false`. If set to `true` this field is included into determining public visibility of the corresponding objects.
 * **timestampable** - Which [timestampable type](#entity-timestampable-type) is used. Default value is `NONE`.
-* **timestampableChangeTriggerField** - Optional name of field to use as change trigger (if type is `CHANGE`. Can also be `workflowState` or the name of a relation (syntax `property.field`).
+* **timestampableChangeTriggerField** - Optional name of field to use as change trigger (if type is `CHANGE`. Can also be `workflowState` or the name of an incoming relation (syntax `sourceAlias.field`).
 * **timestampableChangeTriggerValue** - Optional value of field to use as change trigger (if type is `CHANGE`).
 * **validatorAddition** - Additional validation constraint without the `Assert` annotation. Example values are `LessThanOrEqual("+15 minutes")` or `LessThan("-18 years UTC")` or `Range(min = "first day of January", max = "first day of January next year")`. For more details information see [this blog post](https://symfony.com/blog/new-in-symfony-2-6-date-support-for-validator-constraints).
 
