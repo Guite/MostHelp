@@ -69,7 +69,7 @@ The biggest part is a reference section listing all validation rules in detail a
 #### Extension-related entity settings
 
 * Entities with owner permissions need standard fields activated. The standard fields extension is required to determine the owner (`createdBy`) of an object.
-* Loggable entities need one field with the version attribute set to `true`. Can be either integer or datetime fields.
+* Loggable entities need an integer field with the `version` attribute set to `true`.
 * Entities with geographical behaviour should ideally contain a String field with name zipcode with a length of at least 10. Just a warning to support best practices.
 * There must not exist an entity named `FooLogEntry` as this is reserved by the corresponding extension. For an entity named *person* with `loggable = true` ModuleStudio generates an additional entity named `PersonLogEntry` for managing the it's version log entries.
 * There must not exist an entity named `FooTranslation` as this is reserved by the corresponding extension. For an entity named *person* with translatable fields ModuleStudio generates an additional entity named `PersonTranslatable` for managing it's translations.
@@ -153,7 +153,7 @@ The following list has been merged and includes therefore all keywords of all su
 * An integer field must not act as `percentage` and `range` at the same time.
 * Entities with an aggregate field should use a locking strategy (optimistic or pessimistic read). If an integer field acts as aggregate field the corresponding entity must use one locking strategy of `OPTIMISTIC`, `PAGELOCK_OPTIMISTIC`, `PESSIMISTIC_READ` or `PAGELOCK_PESSIMISTIC_READ`, depending on whether you want support the Zikula PageLock functionality in addition or not.
 * Aggregate fields work only in combination with an outgoing and bidirectional one-to-many relationship with persist cascade.
-* Naming of aggregateFor attribute values must follow the syntax `targetAlias#targetFieldName` (for example `views#amount`). If an integer field acts as aggregate field the property `aggregate for` must define the target alias of corresponding outgoing and bidirectional one-to-many relationship with persist cascade. After a `#` char as delimiter the name of the target field (to be aggregated) follows.
+* Naming of aggregateFor attribute values must follow the syntax `targetAlias#targetFieldName` (for example `views#amount`). If an integer field acts as aggregate field the property `aggregate for` must define the target alias of corresponding outgoing and bidirectional one-to-many relationship with persist cascade. After a `.` char as delimiter the name of the target field (to be aggregated) follows.
 * The default value for a number field must be a floating point number.
 * The length (precision) of a number field must be greater than the scale. For example `1234.12` is valid (4 > 2), but `123.1234` is not.
 * A number field must not act as `percentage` and `currency` at the same time.

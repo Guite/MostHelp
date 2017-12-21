@@ -351,7 +351,7 @@ Represents a field type for storing integer numbers.
 
 An integer field has the following properties in addition to the common [abstract integer field](#abstract-integer-field) settings:
 
-* **aggregateFor** - Aggregate field: one-to-many target alias and field name (syntax: `views#amount`) which causes the generator creating special methods for aggregation. More information can be found in [this article](http://doctrine-orm.readthedocs.io/en/latest/cookbook/aggregate-fields.html).
+* **aggregateFor** - Aggregate field: one-to-many target alias and field name (syntax: `views.amount`) which causes the generator creating special methods for aggregation. More information can be found in [this article](http://doctrine-orm.readthedocs.io/en/latest/cookbook/aggregate-fields.html).
 * **maxValue** - Maximum value. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
 * **minValue** - Minimum value. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
 * **percentage** - A boolean specifying whether this field represents a percentage value or not. Default value is `false`.

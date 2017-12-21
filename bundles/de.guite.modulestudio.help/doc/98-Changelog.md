@@ -8,6 +8,8 @@
 
 ### DSL / Modelling language changes
 
+* Model parser is now automatically tested (#1170).
+* Validation constraints are now automatically tested (#1170).
 * Removed obsolete DSL elements (#1173).
 * Several fixes for relations from/to mapped super classes.
 * Fixed wrong validation logic regarding item actions settings.
@@ -19,7 +21,6 @@
 * Added validation constraint for unique values of list items.
 * Several further fixes and improvements for the validation layer.
 * Removed some unneeded validation constraints.
-* Validation constraints are now automatically tested.
 
 ### Generator changes
 
