@@ -5,6 +5,7 @@
 ### Product / Tooling changes
 
 * Updated to Eclipse Oxygen.2 (4.7.2).
+* Avoid broken diagram if problems with parsing textual model occur.
 
 ### DSL / Modelling language changes
 

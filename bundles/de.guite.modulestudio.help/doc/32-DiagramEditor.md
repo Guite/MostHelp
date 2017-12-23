@@ -107,6 +107,12 @@ You can invoke the refresh either by the tab-bar ![Refresh](images/ui_diagram_ta
 
 ![Refresh in context menu](images/ui_diagram_refresh_menu.png "Refresh in context menu")
 
+### Visualisation of parsing issues
+
+If your model is broken (either because it is obsolete or you saved it after doing some invalid changes using the [textual editor](36-TextualEditor.md#textual-editor)) the diagram shows this by marking those elements which *would* be removed from the diagram after a refresh. This gives you control to fix the problems in the textual editor so you do not need to rearrange your diagram layout.
+
+![Unrecognised elements are marked](images/ui_diagram_parse_issues.png "Unrecognised elements are marked")
+
 ## Layers
 
 The various kinds of elements which can appear on a diagram, and the tools which are available to manipulate them, are organised in Layers. The diagram has a default layer which is always enabled, but also has additional layers which are optional. You can enable or disable the optional layers at will, to hide or reveal new kinds of elements. So layers allow to hide or show different concerns of the model which helps to keep focus on what is relevant for the moment.
