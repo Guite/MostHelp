@@ -5,7 +5,7 @@
 ### Product / Tooling changes
 
 * Updated to Eclipse Oxygen.2 (4.7.2).
-* Avoid broken diagram if problems with parsing textual model occur.
+* Avoid broken diagram if problems with parsing textual model occur. Read more about that [here](32-DiagramEditor.md#visualisation-of-parsing-issues).
 
 ### DSL / Modelling language changes
 
