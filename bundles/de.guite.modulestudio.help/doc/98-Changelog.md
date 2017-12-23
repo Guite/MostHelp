@@ -26,6 +26,7 @@
 * Added image EXIF data to upload field meta data (#1175).
 * Added missing separator for inheritance discriminator map.
 * Added generation of a `custom.css` file for easier addition of custom styles.
+* Fixed model to model transformation issue with mapped super classes.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.0).
 
 ## ModuleStudio 1.2.0 (Dec 16, 2017)
