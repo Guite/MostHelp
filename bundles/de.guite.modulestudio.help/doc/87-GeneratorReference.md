@@ -1146,7 +1146,8 @@ In total there are nine different workflow states which are explained below. Not
 5. **Approved** - content has been approved and is available online.
 6. **Suspended** - content has been approved, but is temporarily offline. Only available if the entity has set the `hasTray` property to `true`.
 7. **Archived** - content has reached the end and became archived. Only available if the entity has set the `hasArchive` property to `true`. Requires a [datetime](#datetime-field) field being designated as end date.
-8. **Deleted** - pseudo-state for content which has been deleted from the database.
+8. **Trashed** - content has been marked as deleted, but is still persisted in the database.
+9. **Deleted** - pseudo-state for content which has been deleted from the database.
 
 The following image shows an overview of all possible workflow states and actions.
 
