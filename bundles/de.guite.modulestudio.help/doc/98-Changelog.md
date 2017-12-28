@@ -33,6 +33,7 @@
 * Fixed regular expression for detecting Twig variables in documentation fields.
 * Consider query arguments in uri for repeated creations.
 * Reenabled `trashed` workflow state (#1177).
+* Minor fix for undeletion check during persisting log entries.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.0).
 
 ## ModuleStudio 1.2.0 (Dec 16, 2017)
