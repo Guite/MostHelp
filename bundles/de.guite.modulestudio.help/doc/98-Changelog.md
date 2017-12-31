@@ -26,6 +26,7 @@
 
 * The generator is now automatically tested (#1170).
 * Added image EXIF data to upload field meta data (#1175).
+* Added auto-rotation of incorrectly oriented images (#1176).
 * Added missing separator for inheritance discriminator map.
 * Added generation of a `custom.css` file for easier addition of custom styles.
 * Fixed model to model transformation issue with mapped super classes.
