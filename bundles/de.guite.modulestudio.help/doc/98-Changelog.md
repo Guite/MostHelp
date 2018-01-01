@@ -38,6 +38,7 @@
 * Define weight for loading magnific popup to ensure proper load order.
 * Avoid processing search value as normal collection filter.
 * Skip feature activation helper in quick navigation to prevent pager issues.
+* Added links to switch between only own and all entries on view pages.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.0).
 
 ## ModuleStudio 1.2.0 (Dec 16, 2017)
