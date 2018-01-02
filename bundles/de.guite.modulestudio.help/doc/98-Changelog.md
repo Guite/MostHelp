@@ -41,6 +41,7 @@
 * Added links to switch between only own and all entries on view pages.
 * Updated implementation of pending content listener.
 * Explicitly set translation domain in UI hook template.
+* Use default selection for sorting related items in quick navigation.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.0).
 
 ## ModuleStudio 1.2.0 (Dec 16, 2017)
