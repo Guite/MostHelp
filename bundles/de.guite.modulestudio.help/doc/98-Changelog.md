@@ -32,7 +32,7 @@
 * Fixed model to model transformation issue with mapped super classes.
 * Fixed several filter queries for variables in multiple containers.
 * Fixed regular expression for detecting Twig variables in documentation fields.
-* Consider query arguments in uri for repeated creations.
+* Consider query arguments in URI for repeated creations.
 * Reenabled `trashed` workflow state (#1177).
 * Minor fix for undeletion check during persisting log entries.
 * Define weight for loading magnific popup to ensure proper load order.
@@ -42,6 +42,7 @@
 * Updated implementation of pending content listener.
 * Explicitly set translation domain in UI hook template.
 * Use default selection for sorting related items in quick navigation.
+* Fixed typo in ICS template.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.0).
 
 ## ModuleStudio 1.2.0 (Dec 16, 2017)
