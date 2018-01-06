@@ -44,6 +44,7 @@
 * Use default selection for sorting related items in quick navigation.
 * Fixed typo in ICS template.
 * Reactivated possibility to manually specify a slug value.
+* Show delete submit button in edit forms with owner permission.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.0).
 
 ## ModuleStudio 1.2.0 (Dec 16, 2017)
