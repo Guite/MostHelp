@@ -20,6 +20,7 @@
 * Added validation constraint with quick fixes for minimum and maximum image pixels.
 * Added validation constraint for unique values of list items.
 * Several further fixes and improvements for the validation layer.
+* Allow dots, commas, slashes and brackets in text of list items.
 * Removed some unneeded validation constraints.
 
 ### Generator changes
