@@ -47,7 +47,8 @@
 * Reactivated possibility to manually specify a slug value.
 * Show delete actions and delete submit button in edit forms with edit permissions if `ownerPermission` is enabled.
 * Simplified customisability of category-based permission checks behaviour.
-* Skip `handleCommand` action in form handler when cancel action is clicked. 
+* Skip `handleCommand` action in form handler when cancel action is clicked.
+* Added missing readonly attribute to field form type options (#1179).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.0).
 
 ## ModuleStudio 1.2.0 (Dec 16, 2017)
