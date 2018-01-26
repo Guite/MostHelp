@@ -49,6 +49,7 @@
 * Simplified customisability of category-based permission checks behaviour.
 * Skip `handleCommand` action in form handler when cancel action is clicked.
 * Added missing readonly attribute to field form type options (#1179).
+* Prevent form validation when `cancel` button is used (#1180).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.0).
 
 ## ModuleStudio 1.2.0 (Dec 16, 2017)
