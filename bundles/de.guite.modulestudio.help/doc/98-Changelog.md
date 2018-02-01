@@ -1,6 +1,21 @@
 # Changelog
 
-## ModuleStudio 1.3.1 (Feb 1, 2017)
+## ModuleStudio 1.3.1 (unreleased)
+
+### Product / Tooling changes
+
+* None yet.
+
+### DSL / Modelling language changes
+
+* None yet.
+
+### Generator changes
+
+* None yet.
+* For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.1).
+
+## ModuleStudio 1.3.0 (Feb 1, 2017)
 
 ### Product / Tooling changes
 
@@ -51,7 +66,7 @@
 * Skip `handleCommand` action in form handler when cancel action is clicked.
 * Added missing readonly attribute to field form type options (#1179).
 * Prevent form validation when `cancel` button is used (#1180).
-* For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.1).
+* For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.0).
 
 ## ModuleStudio 1.2.0 (Dec 16, 2017)
 
