@@ -1,6 +1,6 @@
 # Changelog
 
-## ModuleStudio 1.3.0 (Feb 2, 2017)
+## ModuleStudio 1.3.0 (Feb 1, 2017)
 
 ### Product / Tooling changes
 
