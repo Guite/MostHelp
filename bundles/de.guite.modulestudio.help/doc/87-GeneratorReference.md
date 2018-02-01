@@ -594,7 +594,7 @@ Generated applications use the [LiipImagineBundle](https://symfony.com/doc/curre
 
 For upload fields with images there are additional settings generated at the configuration page. These allow enabling automatic shrinking of too large images down to configurable maximum dimensions.
 
-For every upload field `foo` there will be another [array field](#array-field) created which is named `fooMeta`. This field stores some meta information about the uploaded files for convenience, like the file size, the image format (`portrait`, `landscape`, `square`) and the image dimensions.
+For every upload field `foo` there will be another [array field](#array-field) created which is named `fooMeta`. This field stores some meta information about the uploaded files for convenience, like the file size, the image format (`portrait`, `landscape`, `square`) and the image dimensions. Also EXIF data is saved in this array.
 
 Also for every upload field `foo` there exists another field named `fooUrl` which can be used for linking or embedding the original file in an absolute way which works also if short urls point to a virtual subfolder.
 

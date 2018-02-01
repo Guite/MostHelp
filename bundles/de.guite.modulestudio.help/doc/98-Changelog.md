@@ -1,11 +1,12 @@
 # Changelog
 
-## ModuleStudio 1.3.0 (unreleased)
+## ModuleStudio 1.3.0 (Feb 2, 2017)
 
 ### Product / Tooling changes
 
 * Updated to Eclipse Oxygen.2 (4.7.2).
 * Avoid broken diagram if problems with parsing textual model occur. Read more about that [here](32-DiagramEditor.md#visualisation-of-parsing-issues).
+* Fixed double palette entries after synchronising diagram after saving model changes in textual editors.
 
 ### DSL / Modelling language changes
 
