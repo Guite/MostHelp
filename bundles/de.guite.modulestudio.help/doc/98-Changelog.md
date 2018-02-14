@@ -4,7 +4,7 @@
 
 ### Product / Tooling changes
 
-* None yet.
+* Force refresh after context menu actions for repositioning fields in diagram editor.
 
 ### DSL / Modelling language changes
 
