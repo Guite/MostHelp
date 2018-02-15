@@ -8,7 +8,7 @@
 
 ### DSL / Modelling language changes
 
-* None yet.
+* Fixed wrong validation of minimum value constraint if no maximum value constraint is set.
 
 ### Generator changes
 
