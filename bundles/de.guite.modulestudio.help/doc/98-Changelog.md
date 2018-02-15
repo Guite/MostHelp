@@ -9,6 +9,7 @@
 ### DSL / Modelling language changes
 
 * Fixed wrong validation of minimum value constraint if no maximum value constraint is set.
+* Default value for `sourceEditing` property of many to one relationships is now `CHOOSE` instead of `NONE`.
 
 ### Generator changes
 
