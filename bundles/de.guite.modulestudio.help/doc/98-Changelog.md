@@ -14,6 +14,7 @@
 ### Generator changes
 
 * Exclude many to one relationships from outgoing edit relations.
+* Updated some deprecated SPDX license identifiers in composer file.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.1).
 
 ## ModuleStudio 1.3.0 (Feb 1, 2018)
