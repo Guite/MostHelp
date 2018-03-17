@@ -17,6 +17,7 @@
 * Updated some deprecated SPDX license identifiers in composer file.
 * Fixed typo in pending content listener.
 * Generate inline usage redirect in form handler only if needed.
+* Properly initialise image thumbnail options for display hooks template.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.1).
 
 ## ModuleStudio 1.3.0 (Feb 1, 2018)
