@@ -4,6 +4,7 @@
 
 ### Product / Tooling changes
 
+* Updated to Eclipse Oxygen.3 (4.7.3).
 * Force refresh after context menu actions for repositioning fields in diagram editor.
 
 ### DSL / Modelling language changes
