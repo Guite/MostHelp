@@ -22,7 +22,6 @@ The help section allows you to change some context settings about how help infor
 * *Override existing files*: if you enable this option the generator will not abort if files exist in the selected output directory. *Use with caution!*
 * *Use staging updates*: if that option is activated the auto update function will include unstable releases. Each time you start ModuleStudio it looks for whether updates are available. Per default it searches only for stable releases. With the staging channel you get also updates from every single build which earlier brings you new features, but also includes the risk of breaking things.
 * *Ignore updates*: enable this option if you do not want ModuleStudio searching for updates.
-* *Disable error tracking*: by default ModuleStudio tracks errors and exceptions; enable this option if you do not want that.
 
 ![ModuleStudio base preferences](images/ui_preferences_modulestudio.png "ModuleStudio base preferences")
 
