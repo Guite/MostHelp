@@ -22,6 +22,7 @@
 * Logical fix for removing old upload files.
 * Added fallback check to list field transformer.
 * Fixed typo in tree slug handler annotation.
+* Avoid index column size too large on MySQL < 5.7 for log entries and translations (see [this issue](https://github.com/Atlantic18/DoctrineExtensions/issues/1904) and [this patch](https://github.com/Atlantic18/DoctrineExtensions/pull/1905) for the details).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.1).
 
 ## ModuleStudio 1.3.0 (Feb 1, 2018)
