@@ -6,6 +6,7 @@
 
 * Updated to Eclipse Oxygen.3 (4.7.3).
 * Force refresh after context menu actions for repositioning fields in diagram editor.
+* Build improvements for Mac OS - the product archive now contains a proper app bundle with a `ModuleStudio.app` directory.
 
 ### DSL / Modelling language changes
 
