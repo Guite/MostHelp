@@ -12,6 +12,7 @@
 
 * Fixed wrong validation of minimum value constraint if no maximum value constraint is set.
 * Default value for `sourceEditing` property of many to one relationships is now `CHOOSE` instead of `NONE`.
+* The finder is now also supported for entities containing image upload fields but no display action (#1182).
 
 ### Generator changes
 
@@ -25,6 +26,7 @@
 * Fixed typo in tree slug handler annotation.
 * Avoid index column size too large on MySQL < 5.7 for log entries and translations (see [this issue](https://github.com/Atlantic18/DoctrineExtensions/issues/1904) and [this patch](https://github.com/Atlantic18/DoctrineExtensions/pull/1905) for the details).
 * Ensure custom view sorting is properly reflected in the pager.
+* The finder is now also supported for entities containing image upload fields but no display action (#1182).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.1).
 
 ## ModuleStudio 1.3.0 (Feb 1, 2018)
