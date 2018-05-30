@@ -149,7 +149,7 @@ Note if you search for a keyword, this keyword is highlighted in the results.
 
 ### Searching on web sites
 
-The help view allows you to extend a search to different websites, like the (German) Zikula support site and documentation for Symfony, Doctrine and Twig.
+The help view allows you to extend a search to different websites, like documentation for Symfony, Doctrine and Twig.
 
 ![Search options in help view](images/ui_views_help_search_options.png "Search options in help view")
 
@@ -169,5 +169,5 @@ Finally you could even create additional search engines using the *New...* butto
 
 ![Creating additional search engines](images/ui_views_help_search_options_additions.png "Creating additional search engines")
 
-So you could have several *Local Help* entries, each referencing different topics of the manual. Or you could add a web search pointing to some website offering further information you find useful. You only need the search results URL and replace the keyword by `{expression}`. You can even use a web search engine if a site does not provide a search function. For example for the Twig documentation the URL template used is `https://www.google.com/?q={expression}+site:twig.sensiolabs.org`.
+So you could have several *Local Help* entries, each referencing different topics of the manual. Or you could add a web search pointing to some website offering further information you find useful. You only need the search results URL and replace the keyword by `{expression}`. You can even use a web search engine if a site does not provide a search function. For example for the Twig documentation the URL template used is `https://www.google.com/?q={expression}+site:https://twig.symfony.com/`.
 
