@@ -13,6 +13,7 @@
 ### Generator changes
 
 * Prevent imagine usage during swf file handling.
+* Minor cleanup in ajax tree handler.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.2).
 
 ## ModuleStudio 1.3.1 (May 30, 2018)
