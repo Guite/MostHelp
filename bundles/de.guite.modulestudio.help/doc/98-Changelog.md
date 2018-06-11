@@ -16,7 +16,7 @@
 * Minor cleanup in ajax tree handler.
 * Fixed typos related to example row handling (#1185).
 * Refactored usage of deprecated service in item actions menu for loggable entities.
-* Fixed typo in loggableHistoryActionInternal signature.
+* Fixed typo in `loggableHistoryActionInternal` signature.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.2).
 
 ## ModuleStudio 1.3.1 (May 30, 2018)
