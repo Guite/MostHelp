@@ -24,7 +24,7 @@
 * Corrected route requirement for tree slugs containing slashes.
 * Fixed undefined variable in tree relatives macro.
 * Fixed dependency syntax in composer file.
-* Do not throw an error during installation of category registries could not be created.
+* Show a warning instead of an error during installation if category registries could not be created.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.2).
 
 ## ModuleStudio 1.3.1 (May 30, 2018)
