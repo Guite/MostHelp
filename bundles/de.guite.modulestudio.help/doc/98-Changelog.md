@@ -19,6 +19,7 @@
 * Fixed typo in `loggableHistoryActionInternal` signature.
 * Minor cosmetical improvements for tree pages.
 * Fixed handling of multiple trees on same page.
+* Updated check to avoid dragging tree root nodes.
 * Updated logic for title and description field name determination.
 * Automatically preset language/locale fields in entity initialiser.
 * Corrected route requirement for tree slugs containing slashes.
