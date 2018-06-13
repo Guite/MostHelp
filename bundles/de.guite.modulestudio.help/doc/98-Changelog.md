@@ -29,6 +29,8 @@
 * Added `raw` filter to JSON output.
 * Avoid confusing placeholder text for expanded relationship representations.
 * Fixed client-side date range validation.
+* Improved handling of unidirectional one to one relationships.
+* Excluded fields used as custom join columns from edit forms.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.2).
 
 ## ModuleStudio 1.3.1 (May 30, 2018)
