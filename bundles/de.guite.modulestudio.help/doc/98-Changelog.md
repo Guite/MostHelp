@@ -36,6 +36,7 @@
 * Logical fix in list entry validator.
 * Fixed unique slug handling in tree actions.
 * Fixed wrong arguments for ajax-based slug unique check.
+* Moved default sorting determination in controller helper into own method.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.2).
 
 ## ModuleStudio 1.3.1 (May 30, 2018)
