@@ -41,6 +41,7 @@
 * Fixed handling of unique slugs for relation form presets.
 * Fixed slightly wrong help messages about minimum and maximum values.
 * Provide unique slug in item actions for creating related items.
+* Do not assume that table column exists for current sorting field.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.2).
 
 ## ModuleStudio 1.3.1 (May 30, 2018)
