@@ -4,7 +4,7 @@
 
 ### Product / Tooling changes
 
-* none yet
+* Updated to Eclipse Photon (4.8).
 
 ### DSL / Modelling language changes
 
@@ -17,7 +17,7 @@
 * Fixed typos related to example row handling (#1185).
 * Refactored usage of deprecated service in item actions menu for loggable entities.
 * Fixed typo in `loggableHistoryActionInternal` signature.
-* Minor cosmetical improvements for tree pages.
+* Minor cosmetic improvements for tree pages.
 * Fixed handling of multiple trees on same page.
 * Updated check to avoid dragging tree root nodes.
 * Updated logic for title and description field name determination.
@@ -42,6 +42,7 @@
 * Fixed slightly wrong help messages about minimum and maximum values.
 * Provide unique slug in item actions for creating related items.
 * Do not assume that table column exists for current sorting field.
+* Improved image handling for PDF output.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.2).
 
 ## ModuleStudio 1.3.1 (May 30, 2018)
