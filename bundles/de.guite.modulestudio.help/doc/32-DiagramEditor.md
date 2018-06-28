@@ -58,6 +58,10 @@ Selected elements have an outline and anchors drawn on their border. Note that w
 
 ![Note, text and note attachment elements](images/ui_diagram_note_text_note_attachment.png "Note, text and note attachment elements")
 
+The *generic connection creation tool* allows you to create relationships between nodes very quickly. After selecting the tool first click on the source entity and then on the target entity. A pop-up menu appears asking you which type of relationship should be created.
+
+![Generic connection creation](images/ui_diagram_generic_connection_creation.png "Generic connectionc reation") 
+
 ### Palette contents
 
 Below the palette's header, which contains the general tools described above, you will find all the specific modelling tools. Note that depending on which [layers](#layers) are currently enabled, some tools may or may not be visible.

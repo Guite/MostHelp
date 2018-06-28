@@ -5,6 +5,7 @@
 ### Product / Tooling changes
 
 * Updated to Eclipse Photon (4.8).
+* Added generic connection creation tool. Read more about that [here](32-DiagramEditor.md#palette-standard-tools).
 
 ### DSL / Modelling language changes
 
