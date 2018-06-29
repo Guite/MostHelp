@@ -40,7 +40,7 @@
 * Added missing check in entity initialiser.
 * Fixed handling of unique slugs for relation form presets.
 * Fixed slightly wrong help messages about minimum and maximum values.
-* Provide unique slug in item actions for creating related items.
+* Provide unique slug in item actions and display sections for creating related items.
 * Do not assume that table column exists for current sorting field.
 * Improved image handling for PDF output.
 * Added custom messages for date related validation constraints.
