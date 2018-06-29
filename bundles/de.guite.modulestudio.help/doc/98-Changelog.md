@@ -29,7 +29,6 @@
 * Show a warning instead of an error during installation if category registries could not be created.
 * Added `raw` filter to JSON output.
 * Avoid confusing placeholder text for expanded relationship representations.
-* Fixed client-side date range validation.
 * Improved handling of unidirectional one to one relationships.
 * Excluded fields used as custom join columns from edit forms.
 * Removed loading of unrequired bootstrap-jqueryui assets.
@@ -44,6 +43,8 @@
 * Provide unique slug in item actions for creating related items.
 * Do not assume that table column exists for current sorting field.
 * Improved image handling for PDF output.
+* Added custom messages for date related validation constraints.
+* Fixed and improved client-side date range validation.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.2).
 
 ## ModuleStudio 1.3.1 (May 30, 2018)
