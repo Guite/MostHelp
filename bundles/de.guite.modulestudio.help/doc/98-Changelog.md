@@ -49,6 +49,7 @@
 * Fixed several minor issues with relationship auto completion.
 * Avoid invalid item actions and display page sections for unidirectional many-to-many relationships.
 * Added permission helper to support implementations of custom permission layers (#1187).
+* Fixed wrong handling of `enabledFinderTypes` setting in external controller (#1191).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.2).
 
 ## ModuleStudio 1.3.1 (May 30, 2018)
