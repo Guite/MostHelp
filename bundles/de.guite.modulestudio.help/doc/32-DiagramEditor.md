@@ -60,7 +60,7 @@ Selected elements have an outline and anchors drawn on their border. Note that w
 
 The *generic connection creation tool* allows you to create relationships between nodes very quickly. After selecting the tool first click on the source entity and then on the target entity. A pop-up menu appears asking you which type of relationship should be created.
 
-![Generic connection creation](images/ui_diagram_generic_connection_creation.png "Generic connectionc reation") 
+![Generic connection creation](images/ui_diagram_generic_connection_creation.png "Generic connection creation") 
 
 ### Palette contents
 
