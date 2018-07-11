@@ -13,6 +13,13 @@
 
 ### Generator changes
 
+* Added permission helper to support implementations of custom permission layers (#1187).
+* Allow normal creation of tree entities by selecting a parent.
+* Automatically preset language/locale fields in entity initialiser.
+* Added more differentiated subjects for workflow notification mails.
+* Provide unique slug in item actions and display sections for creating related items.
+* Improved image handling for PDF output.
+* Added custom messages for date related validation constraints.
 * Prevent imagine usage during swf file handling.
 * Minor cleanup in ajax tree handler.
 * Fixed typos related to example row handling (#1185).
@@ -22,7 +29,6 @@
 * Fixed handling of multiple trees on same page.
 * Updated check to avoid dragging tree root nodes.
 * Updated logic for title and description field name determination.
-* Automatically preset language/locale fields in entity initialiser.
 * Corrected route requirement for tree slugs containing slashes.
 * Fixed undefined variable in tree relatives macro.
 * Fixed dependency syntax in composer file.
@@ -32,7 +38,6 @@
 * Improved handling of unidirectional one to one relationships.
 * Excluded fields used as custom join columns from edit forms.
 * Removed loading of unrequired bootstrap-jqueryui assets.
-* Added more differentiated subjects for workflow notification mails.
 * Logical fix in list entry validator.
 * Fixed unique slug handling in tree actions.
 * Fixed wrong arguments for ajax-based slug unique check.
@@ -40,21 +45,16 @@
 * Added missing check in entity initialiser.
 * Fixed handling of unique slugs for relation form presets.
 * Fixed slightly wrong help messages about minimum and maximum values.
-* Provide unique slug in item actions and display sections for creating related items.
 * Do not assume that table column exists for current sorting field.
-* Improved image handling for PDF output.
-* Added custom messages for date related validation constraints.
 * Fixed and improved client-side date range validation.
 * Fixed several issues in entity tree form type.
 * Fixed several minor issues with relationship auto completion.
 * Avoid invalid item actions and display page sections for unidirectional many-to-many relationships.
-* Added permission helper to support implementations of custom permission layers (#1187).
 * Fixed wrong handling of `enabledFinderTypes` setting in external controller (#1191).
 * Properly consider `mandatory` flag in relation editing inclusion templates.
 * Added missing remarks for text fields, email fields, url fields and object fields to technical docs.
 * Fixed client-side date and datetime resetting functionality.
 * Fixed detection of geolocation enablement.
-* Allow normal creation of tree entities by selecting a parent.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.2).
 
 ## ModuleStudio 1.3.1 (May 30, 2018)
