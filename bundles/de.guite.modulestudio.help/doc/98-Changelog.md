@@ -19,6 +19,7 @@
 * Added more differentiated subjects for workflow notification mails.
 * Provide unique slug in item actions and display sections for creating related items.
 * Improved image handling for PDF output.
+* Improved visualisation of boolean field states using bootstrap text classes.
 * Added custom messages for date related validation constraints.
 * Prevent imagine usage during swf file handling.
 * Minor cleanup in ajax tree handler.
