@@ -22,13 +22,14 @@
 * Improved visualisation of boolean field states using bootstrap text classes.
 * Always show boolean fields on display pages.
 * Added custom messages for date related validation constraints.
+* Improved and fixed different possible drag n drop behaviours of tree nodes (including multi tree support).
 * Prevent imagine usage during swf file handling.
 * Minor cleanup in ajax tree handler.
 * Fixed typos related to example row handling (#1185).
 * Refactored usage of deprecated service in item actions menu for loggable entities.
 * Fixed typo in `loggableHistoryActionInternal` signature.
 * Minor cosmetic improvements for tree pages.
-* Fixed handling of multiple trees on same page.
+* Fixed behaviour of multiple trees on same page (searching, expanding/collapsing, etc.).
 * Updated check to avoid dragging tree root nodes.
 * Updated logic for title and description field name determination.
 * Corrected route requirement for tree slugs containing slashes.

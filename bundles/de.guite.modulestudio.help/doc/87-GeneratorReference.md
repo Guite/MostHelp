@@ -755,7 +755,7 @@ Can be one of the following options:
 If an entity has a tree type other than `NONE` then the generator creates several additional artifacts, like for example:
 
 * An additional template for managing the tree in a hierarchy view.
-* An additional view plug-in for including the Zikula tree JavaScript.
+* An additional view plug-in for creating markup for [jsTree](https://www.jstree.com/).
 * An additional template included in display pages for showing different types of relatives (parents, children, and so on).
 * Some ajax functions used by the hierarchy view.
 * For closure: separate classes for the closure entities.
