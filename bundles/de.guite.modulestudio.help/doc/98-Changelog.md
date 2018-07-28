@@ -61,6 +61,7 @@
 * Fixed detection of geolocation enablement.
 * Trim leading and trailing regex slashes for client-side validation.
 * Avoid assigning invalid routes to processing hooks.
+* Fixed wrong method call for creating thumbnail images within auto completion.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.2).
 
 ## ModuleStudio 1.3.1 (May 30, 2018)
