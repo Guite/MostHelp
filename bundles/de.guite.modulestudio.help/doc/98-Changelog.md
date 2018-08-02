@@ -65,6 +65,7 @@
 * Readded missing recover action for trashed data in 2.x targets.
 * Fixed wrong formatting of time fields in entity display helper (#1194).
 * Removed updated date from rss item title.
+* Avoid exception in archive helper when module has just been uninstalled.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.2).
 
 ## ModuleStudio 1.3.1 (May 30, 2018)
