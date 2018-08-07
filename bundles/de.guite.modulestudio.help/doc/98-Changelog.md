@@ -24,6 +24,7 @@
 * Always show boolean fields on display pages.
 * Added custom messages for date related validation constraints.
 * Improved and fixed different possible drag n drop behaviours of tree nodes (including multi tree support).
+* Fixed design problem with upload files handling (file names and file objects are stored in different fields now).
 * Prevent imagine usage during swf file handling.
 * Minor cleanup in ajax tree handler.
 * Fixed typos related to example row handling (#1185).
