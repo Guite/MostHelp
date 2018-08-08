@@ -35,6 +35,7 @@
 * Updated check to avoid dragging tree root nodes.
 * Updated logic for title and description field name determination.
 * Corrected route requirement for tree slugs containing slashes.
+* Improved behaviour or tree slug handlers and relative slug handlers.
 * Fixed undefined variable in tree relatives macro.
 * Fixed dependency syntax in composer file.
 * Show a warning instead of an error during installation if category registries could not be created.
