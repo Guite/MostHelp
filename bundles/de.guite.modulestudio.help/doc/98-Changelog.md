@@ -15,6 +15,7 @@
 
 * Added permission helper to support implementations of custom permission layers (#1187).
 * Allow normal creation of tree entities by selecting a parent.
+* Added item action for creating tree sub nodes.
 * Automatically preset language/locale fields in entity initialiser.
 * Added more differentiated subjects for workflow notification mails.
 * Provide unique slug in item actions and display sections for creating related items.
