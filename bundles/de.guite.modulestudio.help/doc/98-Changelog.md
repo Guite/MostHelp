@@ -25,14 +25,15 @@
 * Added custom messages for date related validation constraints.
 * Improved and fixed different possible drag n drop behaviours of tree nodes (including multi tree support).
 * Fixed design problem with upload files handling (file names and file objects are stored in different fields now).
+* Applied default filters from `CollectionFilterHelper` also to selections of single entities by default.
 * Prevent imagine usage during swf file handling.
-* Minor cleanup in ajax tree handler.
 * Fixed typos related to example row handling (#1185).
 * Refactored usage of deprecated service in item actions menu for loggable entities.
 * Fixed typo in `loggableHistoryActionInternal` signature.
-* Minor cosmetic improvements for tree pages.
 * Fixed behaviour of multiple trees on same page (searching, expanding/collapsing, etc.).
 * Updated check to avoid dragging tree root nodes.
+* Minor cosmetic improvements for tree pages.
+* Minor cleanup in ajax tree handler.
 * Updated logic for title and description field name determination.
 * Corrected route requirement for tree slugs containing slashes.
 * Improved behaviour or tree slug handlers and relative slug handlers.
