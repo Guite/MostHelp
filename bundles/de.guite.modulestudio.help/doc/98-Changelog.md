@@ -32,6 +32,7 @@
 * Fixed typos related to example row handling (#1185).
 * Refactored usage of deprecated service in item actions menu for loggable entities.
 * Fixed typo in `loggableHistoryActionInternal` signature.
+* Show latest loggable version as part of meta data during editing.
 * Fixed behaviour of multiple trees on same page (searching, expanding/collapsing, etc.).
 * Updated check to avoid dragging tree root nodes.
 * Minor cosmetic improvements for tree pages.
