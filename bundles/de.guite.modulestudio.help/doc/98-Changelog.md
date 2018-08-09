@@ -26,6 +26,7 @@
 * Improved and fixed different possible drag n drop behaviours of tree nodes (including multi tree support).
 * Fixed design problem with upload files handling (file names and file objects are stored in different fields now).
 * Applied default filters from `CollectionFilterHelper` also to selections of single entities by default.
+* Removed usages of param converters.
 * Prevent imagine usage during swf file handling.
 * Fixed typos related to example row handling (#1185).
 * Refactored usage of deprecated service in item actions menu for loggable entities.
