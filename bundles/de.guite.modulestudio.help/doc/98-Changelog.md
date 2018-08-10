@@ -45,6 +45,7 @@
 * Fixed dependency syntax in composer file.
 * Show a warning instead of an error during installation if category registries could not be created.
 * Added `raw` filter to JSON output.
+* Minor improvements for CSV and XML output.
 * Avoid confusing placeholder text for expanded relationship representations.
 * Improved handling of unidirectional one to one relationships.
 * Excluded fields used as custom join columns from edit forms.
