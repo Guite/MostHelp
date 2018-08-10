@@ -57,6 +57,7 @@
 * Added missing check in entity initialiser.
 * Fixed count queries with join conditions.
 * Improved dynamic checks for hook enablements.
+* Added sorting by updated date to list block, list content type, mailz and newsletter plugins.
 * Fixed handling of unique slugs for relation form presets.
 * Fixed slightly wrong help messages about minimum and maximum values.
 * Do not assume that table column exists for current sorting field.
