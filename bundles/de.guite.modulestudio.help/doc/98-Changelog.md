@@ -56,6 +56,7 @@
 * Moved default sorting determination in controller helper into own method.
 * Added missing check in entity initialiser.
 * Fixed count queries with join conditions.
+* Improved dynamic checks for hook enablements.
 * Fixed handling of unique slugs for relation form presets.
 * Fixed slightly wrong help messages about minimum and maximum values.
 * Do not assume that table column exists for current sorting field.
