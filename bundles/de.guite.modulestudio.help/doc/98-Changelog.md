@@ -37,6 +37,7 @@
 * Fixed behaviour of multiple trees on same page (searching, expanding/collapsing, etc.).
 * Proper service injection into menu builder.
 * Reuse item actions also for tree context menus.
+* Added pre and post configuration events for amending or extending item actions menu (#1193).
 * Updated check to avoid dragging tree root nodes.
 * Minor cosmetic improvements for tree pages.
 * Minor cleanup in ajax tree handler.
