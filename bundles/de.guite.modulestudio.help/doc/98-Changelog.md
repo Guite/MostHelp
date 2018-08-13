@@ -41,6 +41,7 @@
 * Updated check to avoid dragging tree root nodes.
 * Minor cosmetic improvements for tree pages.
 * Minor cleanup in ajax tree handler.
+* Enabled reuse functionality for entities with trees.
 * Updated logic for title and description field name determination.
 * Corrected route requirement for tree slugs containing slashes.
 * Improved behaviour or tree slug handlers and relative slug handlers.
