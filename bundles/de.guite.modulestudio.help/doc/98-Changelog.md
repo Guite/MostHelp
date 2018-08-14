@@ -74,6 +74,7 @@
 * Added missing remarks for text fields, email fields, url fields and object fields to technical docs.
 * Fixed client-side date and datetime resetting functionality.
 * Fixed detection of geolocation enablement.
+* Consider collection filtering and translation walker in search helper.
 * Trim leading and trailing regex slashes for client-side validation.
 * Avoid assigning invalid routes to processing hooks.
 * Fixed wrong method call for creating thumbnail images within auto completion.
