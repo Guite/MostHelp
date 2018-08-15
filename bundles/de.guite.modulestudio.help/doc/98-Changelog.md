@@ -81,7 +81,8 @@
 * Fixed wrong method call for creating thumbnail images within auto completion.
 * Readded missing recover action for trashed data in 2.x targets.
 * Fixed wrong formatting of time fields in entity display helper (#1194).
-* Removed updated date from rss item title.
+* Removed updated date from RSS item title.
+* Fixed wrong call to webmaster email address in RSS templates (#1197).
 * Avoid exception in archive helper when module has just been uninstalled.
 * Improved detection of whether magnific popup is available.
 * Cleanup for request access (use request stack as late as possible).
