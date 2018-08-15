@@ -46,6 +46,7 @@
 * Corrected route requirement for tree slugs containing slashes.
 * Improved behaviour or tree slug handlers and relative slug handlers.
 * Fixed undefined variable in tree relatives macro.
+* Improved form redirect behaviour, e.g. with regards to translatable slugs.
 * Fixed dependency syntax in composer file.
 * Show a warning instead of an error during installation if category registries could not be created.
 * Added `raw` filter to JSON output.
