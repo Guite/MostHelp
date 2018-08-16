@@ -60,6 +60,7 @@
 * Fixed wrong arguments for ajax-based slug unique check.
 * Moved default sorting determination in controller helper into own method.
 * Added missing check in entity initialiser.
+* Translatable performance fix.
 * Fixed count queries with join conditions.
 * Improved dynamic checks for hook enablements.
 * Added sorting by updated date to list block, list content type, mailz and newsletter plugins.
