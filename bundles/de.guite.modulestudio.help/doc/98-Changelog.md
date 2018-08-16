@@ -61,6 +61,7 @@
 * Moved default sorting determination in controller helper into own method.
 * Added missing check in entity initialiser.
 * Translatable performance fix.
+* Fallback fix for empty translation data.
 * Fixed count queries with join conditions.
 * Improved dynamic checks for hook enablements.
 * Added sorting by updated date to list block, list content type, mailz and newsletter plugins.
