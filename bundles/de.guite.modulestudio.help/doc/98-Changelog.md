@@ -22,6 +22,7 @@
 * Improved image handling for PDF output.
 * Improved visualisation of boolean field states using bootstrap text classes.
 * Added configuration setting for whether only own entries should be shown on view pages by default or not.
+* Reenabled support for Content types in Zikula 2.x by migrating them to Content 5.
 * Always show boolean fields on display pages.
 * Added custom messages for date related validation constraints.
 * Improved and fixed different possible drag n drop behaviours of tree nodes (including multi tree support).

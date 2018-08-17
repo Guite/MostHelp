@@ -70,8 +70,8 @@ In addition, an application can configure several further properties to customis
 * **generateListBlock** - A boolean specifying whether a generic list block should be generated or not. Default value is `true`.
 * **generateDetailBlock** - A boolean specifying whether a generic detail view block should be generated or not. Requires at least one entity containing a display action. Default value is `true`.
 * **generateModerationBlock** - A boolean specifying whether a moderation block should be generated or not. Requires at least one entity with a workflow including approval. Default value is `true`.
-* **generateListContentType** - A boolean specifying whether a content type for collection lists should be generated or not. Default value is `true`. This has no effect for Zikula 2.x because the Content module has not been migrated yet.
-* **generateDetailContentType** - A boolean specifying whether a content type for single objects should be generated or not. Requires at least one entity containing a display action. Default value is `true`. This has no effect for Zikula 2.x because the Content module has not been migrated yet.
+* **generateListContentType** - A boolean specifying whether a content type for collection lists should be generated or not. Default value is `true`.
+* **generateDetailContentType** - A boolean specifying whether a content type for single objects should be generated or not. Requires at least one entity containing a display action. Default value is `true`.
 * **generateNewsletterPlugin** - A boolean specifying whether a Newsletter plug-in should be generated or not. Default value is `false`. This has no effect for Zikula 2.x because the Newsletter module has not been migrated yet.
 * **generateModerationPanel** - A boolean specifying whether a moderation panel should be generated or not. Requires at least one entity with a workflow including approval. Default value is `true`.
 * **generatePendingContentSupport** - A boolean specifying whether support for pending content should be generated or not. Requires at least one entity with a workflow including approval. Default value is `true`.
