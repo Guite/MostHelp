@@ -6,6 +6,7 @@
 
 * Updated to Eclipse Photon (4.8).
 * Added generic connection creation tool. Read more about that [here](32-DiagramEditor.md#palette-standard-tools).
+* Ensure all diagram layers are correctly displayed for newly added entities (#1199).
 
 ### DSL / Modelling language changes
 
