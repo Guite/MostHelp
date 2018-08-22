@@ -34,6 +34,7 @@
 * Fixed typos related to example row handling (#1185).
 * Allow undeletion of loggable entities also without display action.
 * Refactored usage of deprecated service in item actions menu for loggable entities.
+* Call `postLoad` event handler for freshly initialised undeleted objects.
 * Improved permission checks for loggable history actions.
 * Fixed typo in `loggableHistoryActionInternal` signature.
 * Show latest loggable version as part of meta data during editing.
