@@ -32,11 +32,13 @@
 * Removed usages of param converters.
 * Prevent Imagine usage during SWF file handling.
 * Fixed typos related to example row handling (#1185).
+* Added configuration options to control usage of moderation fields in edit forms of entities with standard fields.
 * Allow undeletion of loggable entities also without display action.
 * Refactored usage of deprecated service in item actions menu for loggable entities.
 * Made `parent` relation versionable for loggable entities with a tree in order to improve their undeletion.
 * Call `postLoad` event handler for freshly initialised undeleted objects.
 * Improved permission checks for loggable history actions.
+* Added possibility to limit loggable history by amount of log entries or date intervals.
 * Fixed typo in `loggableHistoryActionInternal` signature.
 * Show latest loggable version as part of meta data during editing.
 * Fixed behaviour of multiple trees on same page (searching, expanding/collapsing, etc.).
