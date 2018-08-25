@@ -42,6 +42,7 @@
 * Fixed typo in `loggableHistoryActionInternal` signature.
 * Show latest loggable version as part of meta data during editing.
 * Removed version annotation from translatable locale to avoid unrequired log entries.
+* Dynamically disable and reenable timestampable listener when persisting translations for loggable entities to avoid unrequired log entries.
 * Fixed behaviour of multiple trees on same page (searching, expanding/collapsing, etc.).
 * Proper service injection into menu builder.
 * Reuse item actions also for tree context menus.
