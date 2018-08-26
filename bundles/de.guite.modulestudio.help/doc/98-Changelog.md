@@ -81,6 +81,8 @@
 * Fixed several issues in entity tree form type.
 * Fixed several minor issues with relationship auto completion.
 * Avoid invalid item actions and display page sections for unidirectional many-to-many relationships.
+* Fixed wrong check if one-to-one relation already exists in item action menu (#1200).
+* Added a check for whether view action exists in templates for moderation block and moderation panel.
 * Fixed wrong handling of `enabledFinderTypes` setting in external controller (#1191).
 * Properly consider `mandatory` flag in relation editing inclusion templates.
 * Added missing remarks for text fields, email fields, url fields and object fields to technical docs.
