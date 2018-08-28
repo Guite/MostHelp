@@ -29,12 +29,8 @@ The file menu contains actions about handling model files and projects.
 
 * ![New application](images/menu_file_new.png) New application - Starts the wizard for [creating a new model project](20-GettingStarted.md#create-your-first-application-in-10-minutes). After you finished the wizard, a new project will be created. If you had another project opened before doing this, it will be closed.
 * ![Open model](images/menu_file_open.png) Open model - Displays a sub menu for different ways to open existing models. This sub menu contains the following items:
-
-
-1. ![Open project](images/menu_file_open_project.png) Open project - Displays a dialog for selecting an existing project to open. This dialog contains a list showing all projects which are located in your [workspace](15-Installation.md#the-workspace). If you want to open a project from another location you need to import its model file into a new project which is described in the next action.
-2. ![Import model file](images/menu_file_open_import.png) Import model - Displays a dialog for selecting an existing `.mostapp` file to be imported into a new project. Models from earlier versions are [automatically migrated](20-GettingStarted.md#importing-model-files).
-
-
+    * ![Open project](images/menu_file_open_project.png) Open project - Displays a dialog for selecting an existing project to open. This dialog contains a list showing all projects which are located in your [workspace](15-Installation.md#the-workspace). If you want to open a project from another location you need to import its model file into a new project which is described in the next action.
+    * ![Import model file](images/menu_file_open_import.png) Import model - Displays a dialog for selecting an existing `.mostapp` file to be imported into a new project. Models from earlier versions are [automatically migrated](20-GettingStarted.md#importing-model-files).
 * ![Validate diagram](images/menu_file_validate.png) Validate diagram - Allows to trigger the [validation](50-Validation.md#triggering-validation) for your current model manually.
 * ![Generate application](images/menu_file_generate.png) Generate application - Starts the [generation process](60-GeneratingApplications.md#how-it-works) for creating application source code from your current model.
 * ![Copy project](images/menu_file_copy_project.png) Copy project - Duplicates the currently opened project using a new name.
@@ -66,36 +62,20 @@ The file menu collects actions regarding working with model element amendments.
 In the window menu you can find actions about managing editors, views and preferences.
 
 * ![Editor](images/menu_window_editor.png) Editor - Displays a sub menu for options with regards to the current editor. This sub menu contains the following items:
-
-
-1. ![Toggle Split Editor (Horizontal)](images/menu_window_editor_split_horizontal.png) Toggle Split Editor (Horizontal) - Enables/disables horizontal split of the editor window. This causes that the editor window has two areas (top and bottom) with a separator between. In both areas you can navigate independently allowing you to look at different areas of your model at the same time.
-2. ![Toggle Split Editor (Vertical)](images/menu_window_editor_split_vertical.png) Toggle Split Editor (Vertical) - Enables/disables vertical split of the editor window. This causes that the editor window has two areas (left and right) with a separator between. In both areas you can navigate independently allowing you to look at different areas of your model at the same time.
-3. ![Clone](images/menu_window_editor_clone.png) Clone - Clones the editor window. This adds a second window containing the same editor again. You can [arbitrarily arrange](#customising-the-ui) both windows.
-
-
+    * ![Toggle Split Editor (Horizontal)](images/menu_window_editor_split_horizontal.png) Toggle Split Editor (Horizontal) - Enables/disables horizontal split of the editor window. This causes that the editor window has two areas (top and bottom) with a separator between. In both areas you can navigate independently allowing you to look at different areas of your model at the same time.
+    * ![Toggle Split Editor (Vertical)](images/menu_window_editor_split_vertical.png) Toggle Split Editor (Vertical) - Enables/disables vertical split of the editor window. This causes that the editor window has two areas (left and right) with a separator between. In both areas you can navigate independently allowing you to look at different areas of your model at the same time.
+    * ![Clone](images/menu_window_editor_clone.png) Clone - Clones the editor window. This adds a second window containing the same editor again. You can [arbitrarily arrange](#customising-the-ui) both windows.
 * ![Appearance](images/menu_window_appearance.png) Appearance - Displays a sub menu for options with regards to the application's appearance. This sub menu contains the following items:
-
-
-1. ![Toggle Full Screen](images/menu_window_appearance_toggle_full_screen.png) Toggle Full Screen - Enables/disables a full screen mode.
-
-
+    * ![Toggle Full Screen](images/menu_window_appearance_toggle_full_screen.png) Toggle Full Screen - Enables/disables a full screen mode.
 * ![Editors](images/menu_window_editors.png) Editors - Displays a sub menu for opening the different editors. This sub menu contains the following items:
-
-
-1. ![Open diagram](images/menu_window_editors_diagram.png) Open diagram - Opens the [diagram editor](32-DiagramEditor.md#diagram-editor).
-2. ![Open text](images/menu_window_editors_text.png) Open text - Opens the [textual editor](36-TextualEditor.md#textual-editor).
-
-
+    * ![Open diagram](images/menu_window_editors_diagram.png) Open diagram - Opens the [diagram editor](32-DiagramEditor.md#diagram-editor).
+    * ![Open text](images/menu_window_editors_text.png) Open text - Opens the [textual editor](36-TextualEditor.md#textual-editor).
 * ![Views](images/menu_window_views.png) Views - Displays a sub menu for opening the different views. Helpful if you closed one and need it back. This sub menu contains the following items:
-
-
-1. ![Open dashboard](images/menu_window_views_dashboard.png) Open dashboard - Opens the [dashboard view](33-Views.md#dashboard-view).
-2. ![Open error log](images/menu_window_views_error_log.png) Open error log - Opens the [error log view](33-Views.md#error-log-view).
-3. ![Open outline](images/menu_window_views_outline.png) Open outline - Opens the [outline view](33-Views.md#outline-view).
-4. ![Open properties](images/menu_window_views_properties.png) Open properties - Opens the [properties view](33-Views.md#properties-view).
-5. ![Open problems](images/menu_window_views_problems.png) Open problems - Opens the [problems view](33-Views.md#problems-view).
-
-
+    * ![Open dashboard](images/menu_window_views_dashboard.png) Open dashboard - Opens the [dashboard view](33-Views.md#dashboard-view).
+    * ![Open error log](images/menu_window_views_error_log.png) Open error log - Opens the [error log view](33-Views.md#error-log-view).
+    * ![Open outline](images/menu_window_views_outline.png) Open outline - Opens the [outline view](33-Views.md#outline-view).
+    * ![Open properties](images/menu_window_views_properties.png) Open properties - Opens the [properties view](33-Views.md#properties-view).
+    * ![Open problems](images/menu_window_views_problems.png) Open problems - Opens the [problems view](33-Views.md#problems-view).
 * ![Switch theme](images/menu_window_switch_theme.png) Switch theme - Changes the current [theme](#themes).
 * ![Preferences](images/menu_window_preferences.png) Preferences - Opens the [preferences](38-Preferences.md#preferences) dialog.
 

@@ -105,17 +105,15 @@
 ## S-Z
 
 * **SDK** - Software Development Kit
-* **Smarty** - Template engine used in Zikula 1.3.x for a strict separation of content and presentation.
 * **Software Engineering** - Engineer discipline for systematic improvement of the quality of software systems.
 * **Software system family** - Collection of several applications whose schematic code parts are based on the same architectural principles.
 * **SPL** - Standard PHP Library
 * **Sub domain** - Functional or technical partition of a domain which deals with the representation of specific aspects of a software system.
-* **SVN** - Subversion
 * **SWT** - Standard Widget Toolkit
 * **Symfony** - A set of flexible components for PHP frameworks. Internally used by Zikula.
 * **System use case** - See Use case.
 * **Transformation** - Modification of models leading to other models again or to source code.
-* **Twig** - Template engine used in Zikula 1.4.x for a strict separation of content and presentation.
+* **Twig** - Template engine used in Zikula for a strict separation of content and presentation.
 * **UML** - See Unified Modeling Language
 * **Unified Modeling Language** - Standardised language adapted by the Object Management Group for describing software systems with models. The UML works model-based.
 * **URI** - Uniform Resource Identifier
@@ -125,6 +123,5 @@
 * **XMI** - XML Metadata Interchange
 * **XML** - Extensible Markup Language
 * **XML Metadata Interchange** - XML-based file format for interoperable storage of models.
-* **XP** - Extreme Programming
 * **XSD** - XML Schema Definition
 * **Zikula** - A powerful Symfony-based application framework.

@@ -15,53 +15,66 @@
 ### Generator changes
 
 * Added permission helper to support implementations of custom permission layers (#1187).
-* Allow normal creation of tree entities by selecting a parent.
-* Added item action for creating tree sub nodes.
-* Automatically preset language/locale fields in entity initialiser.
-* Added more differentiated subjects for workflow notification mails.
-* Provide unique slug in item actions and display sections for creating related items.
-* Improved image handling for PDF output.
-* Improved visualisation of boolean field states using bootstrap text classes.
-* Added configuration setting for whether only own entries should be shown on view pages by default or not.
-* Reenabled support for Content types in Zikula 2.x by migrating them to Content 5.
-* Always show boolean fields on display pages.
-* Added custom messages for date related validation constraints.
-* Improved and fixed different possible drag n drop behaviours of tree nodes (including multi tree support).
+* Re-enabled support for Content types in Zikula 2.x by migrating them to Content 5.
 * Fixed design problem with upload files handling (file names and file objects are stored in different fields now).
+* Several enhancements for trees
+    * Allow normal creation of tree entities by selecting a parent.
+    * Added item action for creating tree sub nodes.
+    * Improved and fixed different possible drag n drop behaviours of tree nodes (including multi tree support).
+    * Fixed behaviour of multiple trees on same page (searching, expanding/collapsing, etc.).
+    * Reuse item actions also for tree context menus.
+    * Updated check to avoid dragging tree root nodes.
+    * Minor cosmetic improvements for tree pages.
+    * Minor cleanup in ajax tree handler.
+    * Enabled reuse functionality for entities with trees.
+    * Fixed several issues in entity tree form type.
+    * Fixed undefined variable in tree relatives macro.
+* Several enhancements for loggable
+    * Allow undeletion of loggable entities also without display action.
+    * Refactored usage of deprecated service in item actions menu for loggable entities.
+    * Call `postLoad` event handler for freshly initialised undeleted objects.
+    * Improved permission checks for loggable history actions.
+    * Added possibility to limit loggable history by amount of log entries or date intervals.
+    * Fixed typo in `loggableHistoryActionInternal` signature.
+    * Show latest loggable version as part of meta data during editing.
+    * Introduced loggable helper class for reusing common logic and taking load from controllers.
+    * Enhanced history and diff views showing array field details.
+    * Added additional field for log entries for storing an extended description of the executed action which produced a log entry. This is shown in both the normal history view as well as the list of deleted items (which helps to identify a specific one).
+    * Show user profile link and avatar for creator and last editor in history and diff views.
+* Combination of loggable and tree
+    * Made `parent` relation versionable for loggable entities with a tree in order to improve their undeletion.
+    * Removed version annotation from root, lft, right and lvl properties to improve revert process.
+* Combination of loggable and translatable
+    * Removed version annotation from translatable locale to avoid unrequired log entries.
+    * Dynamically disable and reenable loggable listener when persisting translations to avoid unrequired log entries.
+    * Added revision handling for translations (combining loggable with translatable).
+    * Enhanced history and diff views showing changes per language for translatable entities.
+* Fixes for translatable
+    * Translatable performance fix.
+    * Fallback fix for empty translation data.
+* Fixes for sluggable and permalink handling
+    * Corrected route requirement for tree slugs containing slashes.
+    * Improved behaviour or tree slug handlers and relative slug handlers.
+    * Fixed unique slug handling in tree actions.
+    * Improved form redirect behaviour, e.g. with regards to translatable slugs.
+    * Provide unique slug in item actions and display sections for creating related items.
+    * Fixed wrong arguments for ajax-based slug unique check.
+    * Fixed handling of unique slugs for relation form presets.
+* Added support for `preFlush` and `onFlush` Doctrine events in entity lifecycle listener.
+* Proper service injection into menu builder.
+* Added pre and post configuration events for amending or extending item actions menu (#1193).
+* Updated logic for title and description field name determination.
 * Applied default filters from `CollectionFilterHelper` also to selections of single entities by default.
 * Removed usages of param converters.
 * Prevent Imagine usage during SWF file handling.
-* Fixed typos related to example row handling (#1185).
-* Added configuration options to control usage of moderation fields in edit forms of entities with standard fields.
-* Allow undeletion of loggable entities also without display action.
-* Refactored usage of deprecated service in item actions menu for loggable entities.
-* Made `parent` relation versionable for loggable entities with a tree in order to improve their undeletion.
-* Call `postLoad` event handler for freshly initialised undeleted objects.
-* Improved permission checks for loggable history actions.
-* Added possibility to limit loggable history by amount of log entries or date intervals.
-* Fixed typo in `loggableHistoryActionInternal` signature.
-* Show latest loggable version as part of meta data during editing.
-* Removed version annotation from translatable locale to avoid unrequired log entries.
-* Dynamically disable and reenable timestampable listener when persisting translations for loggable entities to avoid unrequired log entries.
-* Introduced loggable helper class for reusing common logic and taking load from controllers.
-* Added revision handling for translations (combining loggable with translatable).
-* Enhanced history and diff views showing array field details in general and specifically changes per language for translatable entities.
-* Added additional field for log entries for storing an extended description of the executed action which produced a log entry. This is shown in both the normal history view as well as the list of deleted items (which helps to identify a specific one).
-* Show user profile link and avatar for creator and last editor in history and diff views.
-* Added support for `preFlush` and `onFlush` Doctrine events in entity lifecycle listener.
-* Fixed behaviour of multiple trees on same page (searching, expanding/collapsing, etc.).
-* Proper service injection into menu builder.
-* Reuse item actions also for tree context menus.
-* Added pre and post configuration events for amending or extending item actions menu (#1193).
-* Updated check to avoid dragging tree root nodes.
-* Minor cosmetic improvements for tree pages.
-* Minor cleanup in ajax tree handler.
-* Enabled reuse functionality for entities with trees.
-* Updated logic for title and description field name determination.
-* Corrected route requirement for tree slugs containing slashes.
-* Improved behaviour or tree slug handlers and relative slug handlers.
-* Fixed undefined variable in tree relatives macro.
-* Improved form redirect behaviour, e.g. with regards to translatable slugs.
+* Added configuration settings to control usage of moderation fields in edit forms of entities with standard fields.
+* Added configuration setting for whether only own entries should be shown on view pages by default or not.
+* Automatically preset language/locale fields in entity initialiser.
+* Added more differentiated subjects for workflow notification mails.
+* Improved image handling for PDF output.
+* Improved visualisation of boolean field states using bootstrap text classes.
+* Always show boolean fields on display pages.
+* Added custom messages for date related validation constraints.
 * Fixed dependency syntax in composer file.
 * Show a warning instead of an error during installation if category registries could not be created.
 * Added `raw` filter to JSON output.
@@ -71,20 +84,14 @@
 * Excluded fields used as custom join columns from edit forms.
 * Removed loading of unrequired bootstrap-jqueryui assets.
 * Logical fix in list entry validator.
-* Fixed unique slug handling in tree actions.
-* Fixed wrong arguments for ajax-based slug unique check.
 * Moved default sorting determination in controller helper into own method.
 * Added missing check in entity initialiser.
-* Translatable performance fix.
-* Fallback fix for empty translation data.
 * Fixed count queries with join conditions.
 * Improved dynamic checks for hook enablements.
 * Added sorting by updated date to list block, list content type, mailz and newsletter plugins.
-* Fixed handling of unique slugs for relation form presets.
 * Fixed slightly wrong help messages about minimum and maximum values.
 * Do not assume that table column exists for current sorting field.
 * Fixed and improved client-side date range validation.
-* Fixed several issues in entity tree form type.
 * Fixed several minor issues with relationship auto completion.
 * Avoid invalid item actions and display page sections for unidirectional many-to-many relationships.
 * Fixed wrong check if one-to-one relation already exists in item action menu (#1200).
@@ -108,6 +115,7 @@
 * Fixed categories handling in list blocks.
 * Explicitly set translation domain for block form types.
 * Some fixes for example data creation.
+* Fixed typos related to example row handling (#1185).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.2).
 
 ## ModuleStudio 1.3.1 (May 30, 2018)
