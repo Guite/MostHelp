@@ -54,7 +54,7 @@
 * Provide unique slug in item actions and display sections for creating related items.
 * Fixed wrong arguments for ajax-based slug unique check.
 * Fixed handling of unique slugs for relation form presets.
-* Added support for `preFlush` and `onFlush` Doctrine events in entity lifecycle listener.
+* Added support for `preFlush`, `onFlush` and `postFlush` Doctrine events in entity lifecycle listener.
 * Proper service injection into menu builder.
 * Added pre and post configuration events for amending or extending item actions menu (#1193).
 * Updated logic for title and description field name determination.
