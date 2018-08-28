@@ -46,6 +46,9 @@
 * Introduced loggable helper class for reusing common logic and taking load from controllers.
 * Added revision handling for translations (combining loggable with translatable).
 * Enhanced history and diff views showing array field details in general and specifically changes per language for translatable entities.
+* Added additional field for log entries for storing an extended description of the executed action which produced a log entry. This is shown in both the normal history view as well as the list of deleted items (which helps to identify a specific one).
+* Show user profile link and avatar for creator and last editor in history and diff views.
+* Added support for `preFlush` and `onFlush` Doctrine events in entity lifecycle listener.
 * Fixed behaviour of multiple trees on same page (searching, expanding/collapsing, etc.).
 * Proper service injection into menu builder.
 * Reuse item actions also for tree context menus.
