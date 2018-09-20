@@ -1,5 +1,19 @@
 # Changelog
 
+## ModuleStudio 1.4.0 (unreleased)
+
+### Product / Tooling changes
+
+* none yet
+
+### DSL / Modelling language changes
+
+* none yet
+
+### Generator changes
+
+* none yet
+
 ## ModuleStudio 1.3.2 (September 20, 2018)
 
 ### Product / Tooling changes
@@ -10,7 +24,7 @@
 
 ### DSL / Modelling language changes
 
-* none yet
+* none
 
 ### Generator changes
 
