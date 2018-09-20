@@ -4,7 +4,7 @@
 
 ### Product / Tooling changes
 
-* Updated to Eclipse Photon (4.8).
+* Updated to Eclipse 2018-09 (4.9).
 * Added generic connection creation tool. Read more about that [here](32-DiagramEditor.md#palette-standard-tools).
 * Ensure all diagram layers are correctly displayed for newly added entities (#1199).
 
