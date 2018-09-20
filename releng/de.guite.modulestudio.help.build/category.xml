@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/de.guite.modulestudio.help.feature_1.3.2.qualifier.jar" id="de.guite.modulestudio.help.feature" version="1.3.2.qualifier">
+   <feature url="features/de.guite.modulestudio.help.feature_1.4.0.qualifier.jar" id="de.guite.modulestudio.help.feature" version="1.4.0.qualifier">
       <category name="de.guite.modulestudio.help.category"/>
    </feature>
    <category-def name="de.guite.modulestudio.help.category" label="%CategoryHelpLabel">
