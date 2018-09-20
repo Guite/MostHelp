@@ -13,8 +13,9 @@
 ### Generator changes
 
 * none yet
+* For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.4.0).
 
-## ModuleStudio 1.4.0 (September 20, 2018)
+## ModuleStudio 1.3.2 (September 20, 2018)
 
 ### Product / Tooling changes
 
@@ -124,7 +125,7 @@
 * Explicitly set translation domain for block form types.
 * Some fixes for example data creation.
 * Fixed typos related to example row handling (#1185).
-* For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.4.0).
+* For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.2).
 
 ## ModuleStudio 1.3.1 (May 30, 2018)
 
