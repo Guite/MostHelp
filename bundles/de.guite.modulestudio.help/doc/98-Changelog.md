@@ -12,7 +12,7 @@
 
 ### Generator changes
 
-* none yet
+* Fixed empty list settings for revision handling if an application contains multiple loggable entities.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.4.0).
 
 ## ModuleStudio 1.3.2 (September 20, 2018)
