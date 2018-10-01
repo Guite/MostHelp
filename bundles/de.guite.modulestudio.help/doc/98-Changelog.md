@@ -16,6 +16,7 @@
 * Fixed categories related problem in list content type (Zikula 2 only).
 * Added import for `Response` class used in docblocks (#1205).
 * Fixed wrong upload field reference in external finder (#1204).
+* Fixed hardcoded specific directory structure for Scribite integration (#1202).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.4.0).
 
 ## ModuleStudio 1.3.2 (September 20, 2018)
