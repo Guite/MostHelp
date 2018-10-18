@@ -20,6 +20,7 @@
 * Generate JavaScript edit functions also for just a config page.
 * Fixed deletion of replaced upload file (#1206).
 * Use title as fallback for description in finder.
+* Fixed undefined variable in UI hook provider views (#1207).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.4.0).
 
 ## ModuleStudio 1.3.2 (September 20, 2018)
