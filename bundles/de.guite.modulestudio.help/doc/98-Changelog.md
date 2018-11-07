@@ -23,6 +23,7 @@
 * Fixed undefined variable in UI hook provider views (#1207).
 * Fixed pagination for categorisable and translatable entities (#1211).
 * Allow empty value for list entry validation.
+* Fixed creation redirect exception for sluggable entities.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.4.0).
 
 ## ModuleStudio 1.3.2 (September 20, 2018)
