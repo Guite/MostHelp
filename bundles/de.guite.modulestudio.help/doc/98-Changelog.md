@@ -27,6 +27,7 @@
 * Added missing min/max attributes for number input fields.
 * Fixed logical mix-up of relation sides for embedded editing.
 * Inform submitter about pending content approvals.
+* Prevent wrong translation domain when resolving list entries in Twig templates.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.4.0).
 
 ## ModuleStudio 1.3.2 (September 20, 2018)
