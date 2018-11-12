@@ -12,6 +12,7 @@
 
 ### Generator changes
 
+* Added support for map views showing a list of markers for multiple geographical entities (#1212).
 * Fixed empty list settings for revision handling if an application contains multiple loggable entities.
 * Fixed categories related problem in list content type (Zikula 2 only).
 * Added import for `Response` class used in docblocks (#1205).
