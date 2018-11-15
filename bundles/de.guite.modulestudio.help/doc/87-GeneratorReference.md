@@ -564,7 +564,7 @@ An upload field has the following properties in addition to the common [abstract
 * **allowedExtensions** - List of file extensions to be accepted during the upload, separated by a comma with a space char. Default value is `gif, jpeg, jpg, png`.
 * **length** - The length of this field. Default value is `255`.
 * **maxSize** - A string for a maximum file size. Default is an empty string for no limit. Examples: `4096` (bytes), `200k` (kilobytes), `2M` (megabytes), `32Ki` (kikibytes), `8Mi` (mebibytes). Read more about that [here](https://symfony.com/doc/current/reference/constraints/File.html#maxsize).
-* **mimeTypes** - A string containing a comma separated list of allowed mime types. Default is `image/*`. Example: `application/pdf, application/x-pdf`.
+* **mimeTypes** - A string containing a comma separated list of allowed mime types. Default is `image/*`. Example: `application/pdf, application/x-pdf`. If you want to allow all mime types, just use `*`.
 * **multiple** - A boolean specifying whether this field allows multiple files or not. Default value is `false`. Note the UI has not been completely adapted for this yet (see [#123](https://github.com/Guite/MostGenerator/issues/123)).
 * **namingScheme** - Defines how uploaded files [are named](#upload-naming-scheme). Default value is `ORIGINALWITHCOUNTER`.
 * **subFolderName** - Name of sub folder for storing uploaded files. If this is empty (default) the field name will be used as folder name.
