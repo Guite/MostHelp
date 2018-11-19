@@ -33,6 +33,7 @@
 * Trigger email notifications after workflow transition has been completed.
 * Use `*` value for allowing all mime types in an upload field.
 * Fixed several problems in example data helper.
+* Minor cosmetical improvement for auto completion based relation editing.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.4.0).
 
 ## ModuleStudio 1.3.2 (September 20, 2018)
