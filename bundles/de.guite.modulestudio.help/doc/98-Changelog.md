@@ -13,6 +13,7 @@
 ### Generator changes
 
 * Added support for map views showing a list of markers for multiple geographical entities (#1212).
+* Form types automatically derive allowed upload file extensions from upload helper.
 * Fixed empty list settings for revision handling if an application contains multiple loggable entities.
 * Fixed categories related problem in list content type (Zikula 2 only).
 * Added import for `Response` class used in docblocks (#1205).
