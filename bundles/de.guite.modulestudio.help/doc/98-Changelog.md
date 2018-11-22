@@ -8,7 +8,7 @@
 
 ### DSL / Modelling language changes
 
-* none yet
+* Fixed validation problems of image constraints.
 
 ### Generator changes
 
