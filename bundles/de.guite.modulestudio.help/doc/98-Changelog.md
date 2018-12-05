@@ -40,6 +40,7 @@
 * Ensure multiple join tables between same entities get unique names.
 * Restrict custom loggable listener action to entities from same bundle.
 * Fixed several minor issues in generated technical documentation.
+* Fixed possible invalid states for boolean filter in quick navigation.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.4.0).
 
 ## ModuleStudio 1.3.2 (September 20, 2018)
