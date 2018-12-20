@@ -4,7 +4,7 @@
 
 ### Product / Tooling changes
 
-* none yet
+* Updated to Eclipse 2018-12 (4.10).
 
 ### DSL / Modelling language changes
 
