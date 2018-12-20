@@ -5,6 +5,7 @@
 ### Product / Tooling changes
 
 * Updated to Eclipse 2018-12 (4.10).
+* Dropped support for 32 bit platforms.
 
 ### DSL / Modelling language changes
 
