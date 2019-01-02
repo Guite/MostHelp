@@ -99,7 +99,7 @@ Example:
 
 Document your changes to simplify the merging process you will have to do after regeneration. For example after you added some fields later on, or you got a new generator version fixing some bugs, and so on you will want to know again where you did which changes for which reason.
 
-Best practice is to add a [generator settings container](87-GeneratorReference.md#settings-container) to your model. It contains two properties called `skipFiles` and `markFiles` (follow link to get more information) allowing you to specify your amendments inside the model. The generator will then either not generate these files (skip) or create them with a custom file name containing `.generated`.
+Best practice is to use application properties called `skipFiles` and `markFiles` allowing you to specify your amendments inside the model. The generator will then either not generate these files (skip) or create them with a custom file name containing `.generated`.
 
 If you just implemented a child class which was generated empty anyway, you can use `skipFiles`. Personally I use `markFiles` for almost everything, but that's a matter of taste. There is also an additional setting named `generateOnlyBaseClasses` which can be helpful sometimes, too.
 
