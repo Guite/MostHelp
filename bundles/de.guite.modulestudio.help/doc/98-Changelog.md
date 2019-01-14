@@ -14,6 +14,7 @@
 ### Generator changes
 
 * Added support for map views showing a list of markers for multiple geographical entities (#1212).
+* Added option for private mode extending `ownerPermission` setting for viewing data. 
 * Form types automatically derive allowed upload file extensions from upload helper.
 * Fixed empty list settings for revision handling if an application contains multiple loggable entities.
 * Fixed categories related problem in list content type (Zikula 2 only).
@@ -44,6 +45,7 @@
 * Fixed several minor issues in generated technical documentation.
 * Fixed possible invalid states for boolean filter in quick navigation.
 * Improved handling of entities without view or index actions in moderation panel and moderation block.
+* Hide link for creating related items in quick view.
 * Overhauled and improved asset handling on raw pages (e.g. for inline editing).
 * Fixed handling of plural forms in translations.
 * Avoid date range validation class on other datetime fields in same entity.
