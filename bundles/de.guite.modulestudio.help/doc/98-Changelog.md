@@ -14,7 +14,7 @@
 ### Generator changes
 
 * Added support for map views showing a list of markers for multiple geographical entities (#1212).
-* Added option for private mode extending `ownerPermission` setting for viewing data. 
+* Added generated configuration option for private mode extending `ownerPermission` setting for viewing data. 
 * Form types automatically derive allowed upload file extensions from upload helper.
 * Fixed empty list settings for revision handling if an application contains multiple loggable entities.
 * Fixed categories related problem in list content type (Zikula 2 only).
