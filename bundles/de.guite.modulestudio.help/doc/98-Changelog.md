@@ -10,6 +10,7 @@
 ### DSL / Modelling language changes
 
 * Fixed validation problems of image constraints.
+* Added target core versions for Zikula Core 3.0.x.
 
 ### Generator changes
 
