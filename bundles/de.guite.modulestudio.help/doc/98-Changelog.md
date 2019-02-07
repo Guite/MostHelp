@@ -50,6 +50,7 @@
 * Overhauled and improved asset handling on raw pages (e.g. for inline editing).
 * Fixed handling of plural forms in translations.
 * Avoid date range validation class on other datetime fields in same entity.
+* Provide translation domain in search helper.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.4.0).
 
 ## ModuleStudio 1.3.2 (September 20, 2018)
