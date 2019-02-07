@@ -37,6 +37,7 @@
 * Trigger email notifications after workflow transition has been completed.
 * Use `*` value for allowing all file extensions in an upload field.
 * Use `*` value for allowing all mime types in an upload field.
+* Fixed several problems in search helper.
 * Fixed several problems in example data helper.
 * Minor cosmetical improvement for auto completion based relation editing.
 * Skip client-side past and future validation for empty date values.
@@ -50,7 +51,6 @@
 * Overhauled and improved asset handling on raw pages (e.g. for inline editing).
 * Fixed handling of plural forms in translations.
 * Avoid date range validation class on other datetime fields in same entity.
-* Provide translation domain in search helper.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.4.0).
 
 ## ModuleStudio 1.3.2 (September 20, 2018)
