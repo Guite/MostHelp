@@ -49,6 +49,7 @@
 * Improved handling of entities without view or index actions in moderation panel and moderation block.
 * Hide link for creating related items in quick view.
 * Overhauled and improved asset handling on raw pages (e.g. for inline editing).
+* Properly consider doctrine proxies in listeners.
 * Fixed handling of plural forms in translations.
 * Avoid date range validation class on other datetime fields in same entity.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.4.0).
