@@ -36,6 +36,7 @@
 * Prevent wrong translation domain when resolving list entries in Twig templates.
 * Fixed Leaflet inclusion in raw templates.
 * Trigger email notifications after workflow transition has been completed.
+* Apply workflow not before entity change for proper create notifications.
 * Use `*` value for allowing all file extensions in an upload field.
 * Use `*` value for allowing all mime types in an upload field.
 * Fixed several problems in search helper.
