@@ -41,6 +41,7 @@
 * Use `*` value for allowing all mime types in an upload field.
 * Fixed several problems in search helper.
 * Fixed several problems in example data helper.
+* Fixed possible wrong quick search results caused by numeric fields.
 * Minor cosmetical improvement for auto completion based relation editing.
 * Skip client-side past and future validation for empty date values.
 * Fixed processing of request-based relation presets in edit forms.
