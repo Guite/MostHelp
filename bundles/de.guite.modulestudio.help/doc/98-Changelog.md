@@ -41,6 +41,7 @@
 * Use `*` value for allowing all mime types in an upload field.
 * Fixed several problems in search helper.
 * Fixed several problems in example data helper.
+* Improved dynamic activation of loggable listeners in multiple modules.
 * Fixed possible wrong quick search results caused by numeric fields.
 * Minor cosmetical improvement for auto completion based relation editing.
 * Skip client-side past and future validation for empty date values.
