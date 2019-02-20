@@ -11,6 +11,7 @@
 
 * Fixed validation problems of image constraints.
 * Added target core versions for Zikula Core 3.0.x.
+* Added warning about target core versions 1.5.x becoming deprecated.
 * Fixed problems in quick fixes for validation constraints regarding duplicates.
 
 ### Generator changes
