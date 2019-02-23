@@ -6,7 +6,7 @@ ModuleStudio (MOST) is a development environment for quick, simple and efficient
 
 ModuleStudio rapidly simplifies the creation, maintenance and customisation of applications for Zikula. It speeds up this process and ensures quality of those applications at the same time. Developers can design or customise application models in a graphical editor and repeatedly generate source code. In this way, the process is automated speeding up development time and quality many hundred fold. Maintenance and customisation also benefit from this process via graphical modelling and code generation. 
 
-Read more at this page: [What is ModuleStudio](https://modulestudio.de/en/product/what-is-modulestudio.html).
+Read more at this page: [What is ModuleStudio](https://modulestudio.de/en/what-is-modulestudio/).
 
 *Replace coding by modelling and simplify your development!*
 
@@ -21,9 +21,9 @@ Read more at this page: [What is ModuleStudio](https://modulestudio.de/en/produc
 
 More information can be found in these articles:
 
-* [Advantages of ModuleStudio](https://modulestudio.de/en/product/advantages-of-modulestudio.html)
-* [How MDSD reduces costs for long-term maintenance of comprehensive software system families](https://modulestudio.de/en/tutorial/how-mdsd-reduces-costs-for-long-term-maintenance-of-comprehensive-software-system-families.html)
-* [From scaffolding and UML to MDSD and DSL](https://modulestudio.de/en/tutorial/from-scaffolding-and-uml-to-mdsd-and-dsl.html)
+* [Advantages of ModuleStudio](https://modulestudio.de/en/advantages-of-modulestudio/)
+* [How MDSD reduces costs for long-term maintenance of comprehensive software system families](https://modulestudio.de/en/tutorial/how-mdsd-reduces-costs-for-long-term-maintenance-of-comprehensive-software-system-families/)
+* [From scaffolding and UML to MDSD and DSL](https://modulestudio.de/en/tutorial/from-scaffolding-and-uml-to-mdsd-and-dsl/)
 
 ## Target audience
 

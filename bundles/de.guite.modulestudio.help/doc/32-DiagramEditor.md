@@ -161,7 +161,7 @@ Inside a new entity you create several fields for persisting different propertie
 
 ![Entities with fields](images/ui_diagram_layers_fields.png "Entities with fields")
 
-These fields are easily created with the [pop-up bar](#pop-up-bars) that appears when the mouse hovers over the fields container within the entity. This is significantly faster than moving the mouse to the palette and back all the time. There are several different field types available. Most of them represent [Doctrine mapping types](http://docs.doctrine-project.org/en/latest/reference/basic-mapping.html#doctrine-mapping-types), but there are also some additional ones which are Zikula-specific (e.g. a user fields) or just for convenience (like upload fields).
+These fields are easily created with the [pop-up bar](#pop-up-bars) that appears when the mouse hovers over the fields container within the entity. This is significantly faster than moving the mouse to the palette and back all the time. There are several different field types available. Most of them represent [Doctrine mapping types](https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/reference/basic-mapping.html#doctrine-mapping-types), but there are also some additional ones which are Zikula-specific (e.g. a user fields) or just for convenience (like upload fields).
 
 Note you can also add fields using copy and paste. So if you for example want to add four upload fields to an entity simply create the first one. Afterwards select and copy it. Then you can select the outer fields element and easily paste the field multiple times.
 

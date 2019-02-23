@@ -191,7 +191,7 @@ Can be one of the following options:
 
 ## Data layer
 
-The data layer in ModuleStudio has been designed for a precise description of entities and associations. To understand all the elements and properties please read the [Doctrine 2 documentation](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/index.html) before.
+The data layer in ModuleStudio has been designed for a precise description of entities and associations. To understand all the elements and properties please read the [Doctrine 2 documentation](https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/index.html) before.
 
 ### Language elements
 
@@ -206,7 +206,7 @@ A data object has no properties, but may have the following references:
 
 #### Mapped superclass
 
-Represents a mapped superclass like described [here](http://doctrine-orm.readthedocs.org/en/latest/reference/inheritance-mapping.html).
+Represents a mapped superclass like described [here](https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/reference/inheritance-mapping.html#inheritance-mapping).
 
 A mapped superclass has no properties or references in addition to the common [data object](#data-object) settings.
 
@@ -353,7 +353,7 @@ Represents a field type for storing integer numbers.
 
 An integer field has the following properties in addition to the common [abstract integer field](#abstract-integer-field) settings:
 
-* **aggregateFor** - Aggregate field: one-to-many target alias and field name (syntax: `views.amount`) which causes the generator creating special methods for aggregation. More information can be found in [this article](http://doctrine-orm.readthedocs.io/en/latest/cookbook/aggregate-fields.html).
+* **aggregateFor** - Aggregate field: one-to-many target alias and field name (syntax: `views.amount`) which causes the generator creating special methods for aggregation. More information can be found in [this article](https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/cookbook/aggregate-fields.html).
 * **maxValue** - Maximum value. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
 * **minValue** - Minimum value. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
 * **percentage** - A boolean specifying whether this field represents a percentage value or not. Default value is `false`.
@@ -368,7 +368,7 @@ Represents a field type for storing decimal and floating numbers.
 
 A number field has the following properties in addition to the common [derived field](#derived-field) settings:
 
-* **aggregationField** - A boolean specifying whether this field should act as an aggregate field. Default value is `false`. If set to `true` the generator creates special methods for aggregation. More information can be found in [this article](http://doctrine-orm.readthedocs.io/en/latest/cookbook/aggregate-fields.html).
+* **aggregationField** - A boolean specifying whether this field should act as an aggregate field. Default value is `false`. If set to `true` the generator creates special methods for aggregation. More information can be found in [this article](https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/cookbook/aggregate-fields.html).
 * **currency** - A boolean specifying whether this field should be treated as currency. Default value is `false`. If set to `true` the generator will use the `localizedcurrency` filter instead of `localizednumber` during output.
 * **length** - The length of this field. Default value is `10`.
 * **maxValue** - Maximum value. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
@@ -896,7 +896,7 @@ Represents one-to-many relationships.
 It includes the following properties in addition to the common [join relationship](#join-relationship) settings:
 
 * **bidirectional** - A boolean specifying whether this relationship is bidirectional or not. The default value is `false`.
-* **indexBy** - Set to target field name (must be unique) to specify the index by criteria for the relation. Please note that this has not be tested very well yet. More information can be found in [this article](http://doctrine-orm.readthedocs.io/en/latest/tutorials/working-with-indexed-associations.html).
+* **indexBy** - Set to target field name (must be unique) to specify the index by criteria for the relation. Please note that this has not be tested very well yet. More information can be found in [this article](https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/tutorials/working-with-indexed-associations.html).
 * **inheritPermissions** - A boolean specifying whether the source visibility should affect the target visibility or not (only for `bidirectional` relationships). The default value is `false`. If set to `true` the target can only be accessed if normal permissions are given and access to the source is also granted.
 * **orderBy** - Set to target field name(s) to specify the sorting criteria for the outgoing relation. Some examples are shown [below](#ordering-many-valued-relationship-sides).
 * **orphanRemoval** - Default value is `false`. If set to `true` orphans get removed automatically.
@@ -919,7 +919,7 @@ Represents many-to-many relationships.
 It includes the following properties in addition to the common [join relationship](#join-relationship) settings:
 
 * **bidirectional** - A boolean specifying whether this relationship is bidirectional or not. The default value is `false`.
-* **indexBy** - Set to target field name (must be unique) to specify the index by criteria for the relation. Please note that this has not be tested very well yet. More information can be found in [this article](http://doctrine-orm.readthedocs.io/en/latest/tutorials/working-with-indexed-associations.html).
+* **indexBy** - Set to target field name (must be unique) to specify the index by criteria for the relation. Please note that this has not be tested very well yet. More information can be found in [this article](https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/tutorials/working-with-indexed-associations.html).
 * **inheritPermissions** - The [permission inheritance type](#many-to-many-permission-inheritance-type) specifying whether and how the source visibility should affect the target visibility (only for `bidirectional` relationships). The default value is `NONE`.
 * **orderBy** - Set to target field name(s) to specify the sorting criteria for the outgoing relation. Some examples are shown [below](#ordering-many-valued-relationship-sides).
 * **orderByReverse** - Set to source field name(s) to specify the sorting criteria for the incoming relation. Some examples are shown [below](#ordering-many-valued-relationship-sides).
@@ -956,7 +956,7 @@ The cascade type is implemented as defined in the association's annotation withi
 
 #### Ordering many valued relationship sides
 
-As shown in the [Doctrine documentation](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/tutorials/ordered-associations.html) an `OrderBy` annotation can be used to specify an implicit sorting criteria which will be appended to DQL queries.
+As shown in the [Doctrine documentation](https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/tutorials/ordered-associations.html) an `OrderBy` annotation can be used to specify an implicit sorting criteria which will be appended to DQL queries.
 
 Fields are used with their unqualified names and must exist in the referenced source or target entity. If the referenced entity uses the `geographical` extension you can also use `latitude` and `longitude`. If it uses the `standardFields` extension you can also use `createdDate`, `createdBy`, `updatedDate` and `updatedBy`.
 
