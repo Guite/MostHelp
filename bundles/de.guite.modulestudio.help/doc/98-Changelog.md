@@ -58,6 +58,7 @@
 * Fixed handling of plural forms in translations.
 * Avoid date range validation class on other datetime fields in same entity.
 * Reselect sluggable entity before redirect after reverting to old revision.
+* Fixed typo in UI hooks provider.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.4.0).
 
 ## ModuleStudio 1.3.2 (September 20, 2018)
