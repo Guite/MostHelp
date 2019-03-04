@@ -78,7 +78,7 @@ In addition, an application can configure several further properties to customis
 * **generateExternalControllerAndFinder** - A boolean specifying whether a controller for external calls providing a generic finder component should be generated or not. Default value is `true`. Works only for entities containing either a [display action](#display-action) or at least one [upload field](#upload-field) supporting images.
 * **generateScribitePlugins** - A boolean specifying whether support for several [Scribite editors](https://github.com/zikula-modules/Scribite/) should be generated or not. Requires external controller with finder component. Default value is `true`. At the moment CKEditor, Quill, Summernote and TinyMCE are supported.
 * **generateTagSupport** - A boolean specifying whether tag support should be generated or not. Requires at least one entity containing a display action. Default value is `false`. This has no effect for Zikula 2.x because the Tag module has not been migrated yet.
-* **generateMultiHookNeedles** - A boolean specifying whether MultiHook needles should be generated or not. Default value is `false`. This has no effect for Zikula 2.x because the MultiHook module has not been migrated yet.
+* **generateMultiHookNeedles** - A boolean specifying whether MultiHook needles should be generated or not. Default value is `false`.
 * **generateRssTemplates** - A boolean specifying whether RSS view templates should be generated or not. Default value is `true`.
 
 ![Example for RSS feed](images/generator_output_feed_rss.png "Example for RSS feed")
