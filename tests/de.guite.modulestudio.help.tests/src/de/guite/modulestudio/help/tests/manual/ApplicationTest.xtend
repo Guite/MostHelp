@@ -3,9 +3,9 @@
  */
 package de.guite.modulestudio.help.tests.manual
 
-import org.junit.Test
+import org.junit.jupiter.api.Test
 
-import static extension org.junit.Assert.*
+import static extension org.junit.jupiter.api.Assertions.*
 
 /**
  * This class tests certain aspects of the Application meta class.
