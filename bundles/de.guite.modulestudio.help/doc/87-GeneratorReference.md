@@ -672,7 +672,7 @@ A datetime field has the following properties in addition to the common [derived
 
 * **components** - Which [date/time components](#datetime-components) are activated. Default value is `DATE_TIME`.
 * **future** - A boolean specifying whether the value must be in the future or not. Default value is `false`.
-* **immutable** - A boolean specifying whether the value is immutable or not. Default value is `false`. If set to true `DateTimeImmutable` is used instead of `DateTime`. This setting is not reflected in the ORM yet because this requires Doctrine DBAL 2.6.
+* **immutable** - A boolean specifying whether the value is immutable or not. Default value is `false`. If set to true `DateTimeImmutable` is used instead of `DateTime`. This setting is only reflected in the ORM for Zikula 3+ because it requires Doctrine DBAL 2.6 which was not available in earlier Zikula core versions.
 * **past** - A boolean specifying whether the value must be in the past or not. Default value is `false`.
 * **startDate** - A boolean specifying whether this field should be treated as a start date. Default value is `false`. If set to `true` this field is included into determining public visibility of the corresponding objects.
 * **endDate** - A boolean specifying whether this field should be treated as an end date. Default value is `false`. If set to `true` this field is included into determining public visibility of the corresponding objects.
