@@ -20,6 +20,7 @@
 * Added generated configuration option for private mode extending `ownerPermission` setting for viewing data. 
 * Form types automatically derive allowed upload file extensions from upload helper.
 * Fixed empty list settings for revision handling if an application contains multiple loggable entities.
+* Prevent log entry creation from other modules.
 * Fixed categories related problem in list content type (Zikula 2 only).
 * Added import for `Response` class used in docblocks (#1205).
 * Fixed wrong upload field reference in external finder (#1204).
