@@ -133,6 +133,4 @@ Perform logical enhancements in the generated implementation classes. These exte
 
 If you need to add complex behaviour put this into dedicated helper classes outside of generated files. Using the dependency injection from Symfony's service container you can use this helper class where you need it, keeping the additional code for children of generated classes small.
 
-There is a helper class named `ControllerHelper` which can be utilised to enable/disable specific controller actions (like view, display, ...) and additional functionality (like blocks, content types, mailz API, etc.) for particular entity types using custom conditions.
-
 After using an edit form the user is redirected to the referrer by default. You can easily customise the redirect behaviour by appending a `returnTo` parameter to the edit URL. For example let's imagine a customer entity having a bidirectional relationship to many addresses. Using the `returnTo` parameter you can assign certain pages like `display`, `view` and even related items like `customerDisplay`. You can also use arbitrary return URLs this way, for example to redirect the user to a *thank you* page.
