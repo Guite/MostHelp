@@ -16,12 +16,13 @@
 
 ### Generator changes
 
+* Added support for autowiring and autoconfiguration (Zikula 3 only) (#1188).
 * Added support for map views showing a list of markers for multiple geographical entities (#1212).
 * Added generated configuration option for private mode extending `ownerPermission` setting for viewing data. 
 * Form types automatically derive allowed upload file extensions from upload helper.
 * Fixed empty list settings for revision handling if an application contains multiple loggable entities.
 * Prevent log entry creation from other modules.
-* Fixed categories related problem in list content type (Zikula 2 only).
+* Fixed categories related problem in list content type (does not affect Zikula 1.x).
 * Added import for `Response` class used in docblocks (#1205).
 * Fixed wrong upload field reference in external finder (#1204).
 * Fixed hardcoded specific directory structure for Scribite integration (#1202).
