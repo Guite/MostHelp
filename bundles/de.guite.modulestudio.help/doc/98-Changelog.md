@@ -66,6 +66,7 @@
 * Added support for Doctrine types `json`, `datetime_immutable`, `date_immutable`, `time_immutable` and `dateinterval` (Zikula 3 only).
 * Lowered required permission level for creating entities with moderation.
 * Item actions on display pages are not shown inside quick view windows.
+* Add support for new `group.pre_delete` event in Core-3.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.4.0).
 
 ## ModuleStudio 1.3.2 (September 20, 2018)
