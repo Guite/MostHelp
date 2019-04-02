@@ -71,6 +71,7 @@
 * Add support for new `group.pre_delete` event in Zikula Core 3.x targets.
 * Added missing call of `{{ moduleFooter() }}` (#1219).
 * Hide link to own entries for users without edit access (#1220).
+* Added reset button to quick navigation forms (#1221).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.4.0).
 
 ## ModuleStudio 1.3.2 (September 20, 2018)
