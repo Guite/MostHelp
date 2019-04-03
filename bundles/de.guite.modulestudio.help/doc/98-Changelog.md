@@ -72,6 +72,7 @@
 * Added missing call of `{{ moduleFooter() }}` (#1219).
 * Hide link to own entries for users without edit access (#1220).
 * Added reset button to quick navigation forms (#1221).
+* Delay automatic filter submission for 5 seconds.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.4.0).
 
 ## ModuleStudio 1.3.2 (September 20, 2018)
