@@ -69,7 +69,7 @@
 * Item actions on display pages are not shown inside quick view windows.
 * Introduced permission helper method for quick navigation forms; require only view permissions instead of edit (#1218).
 * Add support for new `group.pre_delete` event in Zikula Core 3.x targets.
-* Added missing call of `{{ moduleFooter() }}` (#1219).
+* Added missing `{{ moduleFooter() }}` call to base template (#1219).
 * Hide link to own entries for users without edit access (#1220).
 * Added reset button to quick navigation forms (#1221).
 * Delay automatic filter submission for 5 seconds.
