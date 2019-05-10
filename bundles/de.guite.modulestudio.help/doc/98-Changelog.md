@@ -75,6 +75,8 @@
 * Delay automatic filter submission for 5 seconds for improved usability.
 * Several fixes for form-aware hook provider dummy implementation.
 * Select collections without joins by default.
+* Fixed creator filter in admin area.
+* Fixed regression in workflow state exclusion filter.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.4.0).
 
 ## ModuleStudio 1.3.2 (September 20, 2018)
