@@ -4,7 +4,7 @@ Simply download the archive for your operating system and extract it inside your
 
 Afterwards you are ready to start the ModuleStudio executable.
 
-ModuleStudio requires Java 8 which you can download from [java.com](https://www.java.com).
+ModuleStudio requires **Java 8** which you can download from [java.com](https://www.java.com/en/download/manual.jsp). Ensure you download the **64 bit version**.
 
 ## Additional notes for Windows
 
