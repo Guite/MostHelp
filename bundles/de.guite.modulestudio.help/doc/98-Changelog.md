@@ -6,6 +6,7 @@
 
 * Updated to Eclipse 2019-03 (4.11).
 * Dropped support for 32 bit platforms.
+* Requires Java 11 now.
 
 ### DSL / Modelling language changes
 
