@@ -8,7 +8,9 @@ ModuleStudio requires **Java 11 (64 bit)** which you can download from [oracle.c
 
 ## Additional notes for Windows
 
-Because Windows has a limit of 260 characters for pathes, do not choose a too nested directory, but ideally a simple path like `C:\ModuleStudio\`.
+- Because Windows has a limit of 260 characters for pathes, do not choose a too nested directory, but ideally a simple path like `C:\ModuleStudio\`.
+- Uninstall all older Java versions to avoid conflicts.
+- If ModuleStudio does not work, open a command line window (execute `cmd`) and check if Java is correctly configured by executing `java --version`. If some errors occur ensure that the correct `PATH` is set (`echo %PATH%`) and follow [these instructions](https://stackoverflow.com/questions/54007069/error-opening-registry-key-software-javasoft-jre-while-installing-elki).
 
 ## Additional notes for Linux and MacOSX
 
