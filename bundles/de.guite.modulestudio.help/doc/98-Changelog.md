@@ -4,7 +4,7 @@
 
 ### Product / Tooling changes
 
-* Updated to Eclipse 2019-03 (4.11).
+* Updated to Eclipse 2019-06 (4.12).
 * Dropped support for 32 bit platforms.
 * Requires Java 11 now.
 
