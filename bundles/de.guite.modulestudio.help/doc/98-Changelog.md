@@ -80,6 +80,7 @@
 * Fixed regression in workflow state exclusion filter.
 * Fixed wrong fallback value for editing optional multi list fields.
 * Moved permission inheritance functionality and category permission checks into permission helper to apply them for search and other integration areas (#1223).
+* Fixed tree selection form type with duplicate labels.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.4.0).
 
 ## ModuleStudio 1.3.2 (September 20, 2018)
