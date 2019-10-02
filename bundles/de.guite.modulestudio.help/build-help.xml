@@ -104,6 +104,9 @@
             <fileset dir="${source.dir}" includes="**/*.md"/>
         </wikitext-to-html>
 
+    	<!-- generate target folder if it does not exist yet -->
+    	<mkdir dir="${website.dir}"/>
+
     	<!-- delete old files -->
         <delete>
             <fileset dir="${website.dir}" includes="**/*.html"/>
