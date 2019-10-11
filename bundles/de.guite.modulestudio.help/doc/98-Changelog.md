@@ -37,6 +37,7 @@
 * Allow empty value for list entry validation.
 * Fixed creation redirect exception for sluggable entities.
 * Added missing min/max attributes for number input fields.
+* Fixed wrong fallback value for array fields
 * Fixed logical mix-up of relation sides for embedded editing.
 * Inform submitter about pending content approvals.
 * Prevent wrong translation domain when resolving list entries in Twig templates.
