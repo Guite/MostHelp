@@ -280,7 +280,7 @@ In the following sections all field types are explained in detail. Note that not
 
 #### Field display type
 
-Specifies the kind of dependency to a certain application.
+Specifies where a specific field is shown and/or used.
 
 Can be one of the following options:
 
