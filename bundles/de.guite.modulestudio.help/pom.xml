@@ -6,8 +6,9 @@
 
     <parent>
         <groupId>de.guite.modulestudio.help</groupId>
-        <artifactId>de.guite.modulestudio.help.bundles</artifactId>
+        <artifactId>bundles</artifactId>
         <version>1.4.0-SNAPSHOT</version>
+        <relativePath>../pom.tycho</relativePath>
     </parent>
 
     <properties>
