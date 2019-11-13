@@ -43,6 +43,8 @@
 * Inform submitter about pending content approvals.
 * Prevent wrong translation domain when resolving list entries in Twig templates.
 * Fixed Leaflet inclusion in raw templates.
+* Truncate string using whole words in auto completion handler.
+* Removed all artifacts which are entirely related to release engineering (Travis and StyleCI configuration files, composer dev requirements).
 * Trigger email notifications after workflow transition has been completed.
 * Apply workflow not before entity change for proper create notifications.
 * Use `*` value for allowing all file extensions in an upload field.
