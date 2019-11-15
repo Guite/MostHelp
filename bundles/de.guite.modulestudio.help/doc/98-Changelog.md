@@ -58,6 +58,7 @@
 * Fixed processing of request-based relation presets in edit forms.
 * Ensure multiple join tables between same entities get unique names.
 * Restrict custom loggable listener action to entities from same bundle.
+* Fixed YAML problems in authentication method service definition.
 * Fixed several minor issues in generated technical documentation.
 * Fixed possible invalid states for boolean filter in quick navigation.
 * Improved handling of entities without view or index actions in moderation panel and moderation block.
