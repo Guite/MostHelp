@@ -42,6 +42,7 @@
 * Fixed logical mix-up of relation sides for embedded editing.
 * Inform submitter about pending content approvals.
 * Fixed possibly wrong default values for non-nullable integer and user fields.
+* Fallback to guest user if an optional user field is not nullable.
 * Prevent wrong translation domain when resolving list entries in Twig templates.
 * Fixed Leaflet inclusion in raw templates.
 * Truncate string using whole words in auto completion handler.
