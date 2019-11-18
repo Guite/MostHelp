@@ -41,6 +41,7 @@
 * Fixed wrong fallback value for array fields.
 * Fixed logical mix-up of relation sides for embedded editing.
 * Inform submitter about pending content approvals.
+* Provide `empty_data` fallback value for non-nullable user form input fields.
 * Prevent wrong translation domain when resolving list entries in Twig templates.
 * Fixed Leaflet inclusion in raw templates.
 * Truncate string using whole words in auto completion handler.
