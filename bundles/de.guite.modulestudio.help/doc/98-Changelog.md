@@ -44,6 +44,7 @@
 * Fixed possibly wrong default values for non-nullable integer and user fields.
 * Fallback to guest user if an optional user field is not nullable.
 * Prevent wrong translation domain when resolving list entries in Twig templates.
+* Disable collection filter helper when determining moderation items.
 * Fixed Leaflet inclusion in raw templates.
 * Truncate string using whole words in auto completion handler.
 * Removed all artifacts which are entirely related to release engineering (Travis and StyleCI configuration files, composer dev requirements).
