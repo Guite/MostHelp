@@ -37,6 +37,7 @@
 * Fixed pagination for categorisable and translatable entities (#1211).
 * Allow empty value for list entry validation.
 * Fixed creation redirect exception for sluggable entities.
+* More unobtrusive display for item actions dropdown menu.
 * Added missing min/max attributes for number input fields.
 * Fixed wrong fallback value for array fields.
 * Fixed logical mix-up of relation sides for embedded editing.
