@@ -67,6 +67,7 @@
 * Fixed several minor issues in generated technical documentation.
 * Fixed possible invalid states for boolean filter in quick navigation.
 * Improved handling of entities without view or index actions in moderation panel and moderation block.
+* Removed usage of deprecated jQuery ajax callbacks.
 * Hide link for creating related items in quick view.
 * Overhauled and improved asset handling on raw pages (e.g. for inline editing).
 * Properly consider doctrine proxies in listeners.
