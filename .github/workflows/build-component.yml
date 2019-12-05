@@ -17,12 +17,9 @@ jobs:
         path: MostProduct
 
     - run: ln -s /home/runner/work/MostHelp/MostHelp/MostProduct /home/runner/work/MostHelp/MostProduct
-    - run: ls -l /home/runner/work/
-    - run: ls -l /home/runner/work/MostHelp
-    - run: ls -l /home/runner/work/MostHelp/MostHelp
-    - run: ls -l /home/runner/work/MostHelp/MostHelp/MostProduct
-    - run: ls -l /home/runner/work/MostHelp/MostProduct
-    - run: ls -l ../MostProduct/releng
+    - run: ln -s /home/runner/work/MostHelp/MostHelp/MostProduct /github/MostProduct
+    - run: ls -l /github
+    - run: ls -l /github/workspace
 
     # see https://github.com/xlui/action-maven-cli
     - name: Call Maven
