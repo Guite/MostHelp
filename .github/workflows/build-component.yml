@@ -11,6 +11,12 @@ jobs:
       with:
         ref: master
 
+    - name: Checkout additional sources from product repository
+      run: |
+        mkdir -p MostProduct && cd MostProduct
+        git clone git@github.com:Guite/MostProduct.git
+        cd ..
+
     # see https://github.com/xlui/action-maven-cli
     - name: Call Maven
       uses: xlui/action-maven-cli/jdk11@master
