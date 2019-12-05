@@ -6,7 +6,7 @@ jobs:
     # This job runs on Linux
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout sources from master branch
+    - name: Checkout sources from component repository
       uses: actions/checkout@v2-beta
 
     - name: Checkout additional sources from product repository
@@ -16,7 +16,7 @@ jobs:
         token: ${{ secrets.ACCESS_MOST_PRODUCT }}
         path: MostProduct
 
-    - run: ln -s /home/runner/work/MostHelp/MostProduct /home/runner/work/MostHelp/MostHelp/MostProduct
+    - run: ln -s /home/runner/work/MostHelp/MostHelp/MostProduct /home/runner/work/MostHelp/MostProduct
     - run: ls -l /home/runner/work/
     - run: ls -l /home/runner/work/MostHelp
     - run: ls -l /home/runner/work/MostHelp/MostHelp
