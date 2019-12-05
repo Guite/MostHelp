@@ -16,7 +16,7 @@ jobs:
         token: ${{ secrets.ACCESS_MOST_PRODUCT }}
         path: MostProduct
 
-    - run: ln -s /github/MostProduct /github/workspace/MostProduct
+    - run: ln -s /home/runner/work/MostHelp/MostProduct /home/runner/work/MostHelp/MostHelp/MostProduct
     - run: ls -l ../MostProduct/releng
 
     # see https://github.com/xlui/action-maven-cli
