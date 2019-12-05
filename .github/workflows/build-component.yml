@@ -20,4 +20,4 @@ jobs:
     - name: Call Maven
       uses: xlui/action-maven-cli/jdk11@master
       with:
-        args: --quiet clean verify
+        args: --no-transfer-progress clean verify
