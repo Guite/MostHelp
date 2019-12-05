@@ -11,17 +11,13 @@ jobs:
       with:
         ref: master
 
-    # see https://github.com/fregante/setup-git-token
-    - name: Setup Git token
-      uses: fregante/setup-git-token@v1
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-
     - name: Checkout additional sources from product repository
-      run: |
-        mkdir -p MostProduct && cd MostProduct
-        git clone ssh://git@github.com:Guite/MostProduct.git
-        cd ..
+      uses: actions/checkout@v2-beta
+      with:
+        repository: Guite/MostProduct
+        ref: refs/heads/master
+        token: ${{ secrets.ACCESS_MOST_PRODUCT }}
+        path: MostProduct
 
     # see https://github.com/xlui/action-maven-cli
     - name: Call Maven
