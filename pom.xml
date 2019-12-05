@@ -10,7 +10,7 @@
         <groupId>de.guite.modulestudio</groupId>
         <artifactId>de.guite.modulestudio.configuration</artifactId>
         <version>1.4.0-SNAPSHOT</version>
-        <relativePath>../MostProduct/releng/de.guite.modulestudio.configuration/pom.xml</relativePath>
+        <relativePath>MostProduct/releng/de.guite.modulestudio.configuration/pom.xml</relativePath>
     </parent>
 
     <properties>
@@ -18,7 +18,7 @@
     </properties>
 
     <modules>
-        <module>../MostProduct/releng/de.guite.modulestudio.target</module>
+        <module>MostProduct/releng/de.guite.modulestudio.target</module>
         <module>bundles</module>
         <module>features</module>
         <module>tests</module>
