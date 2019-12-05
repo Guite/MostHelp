@@ -8,8 +8,6 @@ jobs:
     steps:
     - name: Checkout sources from master branch
       uses: actions/checkout@v2-beta
-      with:
-        path: MostHelp
 
     - name: Checkout additional sources from product repository
       uses: actions/checkout@v2-beta
