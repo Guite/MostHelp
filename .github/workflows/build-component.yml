@@ -7,16 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout sources from master branch
-      uses: actions/checkout@v1
+      uses: actions/checkout@v2-beta
       with:
-        ref: master
         path: MostHelp
 
     - name: Checkout additional sources from product repository
       uses: actions/checkout@v2-beta
       with:
         repository: Guite/MostProduct
-        ref: refs/heads/master
         token: ${{ secrets.ACCESS_MOST_PRODUCT }}
         path: MostProduct
 
