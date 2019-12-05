@@ -13,7 +13,7 @@ jobs:
 
     # see https://github.com/fregante/setup-git-token
     - name: Setup Git token
-    - uses: fregante/setup-git-token@v1
+      uses: fregante/setup-git-token@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
 
