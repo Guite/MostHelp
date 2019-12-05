@@ -20,7 +20,7 @@ jobs:
     - name: Checkout additional sources from product repository
       run: |
         mkdir -p MostProduct && cd MostProduct
-        git clone https://github.com/Guite/MostProduct.git
+        git clone ssh://git@github.com:Guite/MostProduct.git
         cd ..
 
     # see https://github.com/xlui/action-maven-cli
