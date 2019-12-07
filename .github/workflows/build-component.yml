@@ -33,19 +33,20 @@ jobs:
 
     # see https://github.com/sebastianpopp/ftp-action
     - name: Deploy repository
-      uses: sebastianpopp/ftp-action@master
-      with:
-        host: ${{ secrets.FTP_SERVER }}
-        user: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        localDir: deploy/repo
-        remoteDir: components/help
-        ARGS: --delete --exclude=.* --exclude=.*/ --include=
+      uses: SamKirkland/FTP-Deploy-Action@master
+      env:
+        FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        LOCALDIR: deploy/repo
+        REMOTEDIR: components/help
+        ARGS: --delete --continue
     - name: Deploy other artifacts
-      uses: sebastianpopp/ftp-action@master
-      with:
-        host: ${{ secrets.FTP_SERVER }}
-        user: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        localDir: deploy/assets
-        remoteDir: components/help-assets
+      uses: SamKirkland/FTP-Deploy-Action@master
+      env:
+        FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        LOCALDIR: deploy/assets
+        REMOTEDIR: components/help-assets
+        ARGS: --delete --continue
