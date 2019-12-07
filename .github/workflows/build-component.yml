@@ -32,7 +32,7 @@ jobs:
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         LOCAL_DIR: releng/de.guite.modulestudio.help.build/target
         REMOTE_DIR: components/help
-        ARGS: --delete --include-glob=de.guite.modulestudio.help.build*.zip
+        ARGS: --delete --exclude-glob=.* --exclude-glob=.* --include-glob=**/releng/**/target/de.guite.modulestudio.help.build*.zip
     - name: Deploy other artifacts
       uses: SamKirkland/FTP-Deploy-Action@master
       env:
@@ -41,4 +41,4 @@ jobs:
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         LOCAL_DIR: bundles/de.guite.modulestudio.help
         REMOTE_DIR: components/help-assets
-        ARGS: --delete --include-glob=doc/** --include-glob=pdfmanual/*.pdf
+        ARGS: --delete --exclude-glob=.* --exclude-glob=.* --include-glob=**/bundles/de.guite.modulestudio.help/doc/** --include-glob=**/bundles/de.guite.modulestudio.help/pdfmanual/*.pdf
