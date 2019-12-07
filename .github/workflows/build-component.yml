@@ -38,8 +38,8 @@ jobs:
         FTP_SERVER: ${{ secrets.FTP_SERVER }}
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        LOCALDIR: deploy/repo
-        REMOTEDIR: components/help
+        LOCAL_DIR: deploy/repo
+        REMOTE_DIR: components/help
         ARGS: --delete --continue --ignore-time
     - name: Deploy other artifacts
       uses: SamKirkland/FTP-Deploy-Action@master
@@ -47,6 +47,6 @@ jobs:
         FTP_SERVER: ${{ secrets.FTP_SERVER }}
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        LOCALDIR: deploy/assets
-        REMOTEDIR: components/help-assets
+        LOCAL_DIR: deploy/assets
+        REMOTE_DIR: components/help-assets
         ARGS: --delete --continue --ignore-time
