@@ -22,3 +22,23 @@ jobs:
       with:
         # https://stackoverflow.com/questions/71069/can-maven-be-made-less-verbose
         args: clean verify -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+
+    # see https://github.com/SamKirkland/FTP-Deploy-Action
+    - name: Deploy repository
+      uses: SamKirkland/FTP-Deploy-Action@master
+      env:
+        FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        LOCAL_DIR: releng/de.guite.modulestudio.help.build/target
+        REMOTE_DIR: components/help
+        ARGS: --delete --include-glob=de.guite.modulestudio.help.build*.zip
+    - name: Deploy other artifacts
+      uses: SamKirkland/FTP-Deploy-Action@master
+      env:
+        FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        LOCAL_DIR: bundles/de.guite.modulestudio.help
+        REMOTE_DIR: components/help-assets
+        ARGS: --delete --include-glob=doc/** --include-glob=pdfmanual/*.pdf
