@@ -31,7 +31,7 @@ jobs:
         cp -R bundles/de.guite.modulestudio.help/doc/* deploy/assets
         cp bundles/de.guite.modulestudio.help/pdfmanual/*.pdf deploy/assets
 
-    # see https://github.com/sebastianpopp/ftp-action
+    # see https://github.com/SamKirkland/FTP-Deploy-Action
     - name: Deploy repository
       uses: SamKirkland/FTP-Deploy-Action@master
       env:
@@ -40,7 +40,7 @@ jobs:
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         LOCALDIR: deploy/repo
         REMOTEDIR: components/help
-        ARGS: --delete --continue
+        ARGS: --delete --continue --ignore-time
     - name: Deploy other artifacts
       uses: SamKirkland/FTP-Deploy-Action@master
       env:
@@ -49,4 +49,4 @@ jobs:
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         LOCALDIR: deploy/assets
         REMOTEDIR: components/help-assets
-        ARGS: --delete --continue
+        ARGS: --delete --continue --ignore-time
