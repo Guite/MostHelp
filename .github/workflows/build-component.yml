@@ -39,7 +39,7 @@ jobs:
       run: |
         mkdir -p deploy/repo
         mkdir -p deploy/assets
-        cp releng/de.guite.modulestudio.help.build/target/de.guite.modulestudio.help.build*.zip deploy/repo
+        cp -R releng/de.guite.modulestudio.help.build/target/repository/* deploy/repo
         cp -R bundles/de.guite.modulestudio.help/doc/* deploy/assets
         cp bundles/de.guite.modulestudio.help/pdfmanual/*.pdf deploy/assets
 
