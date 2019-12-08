@@ -73,3 +73,9 @@ jobs:
         token: ${{ secrets.DISPATCH_TOKEN }}
         repository: Guite/MostLocales
         event-type: upstream-build
+    - name: Dispatch downstream job
+      uses: peter-evans/repository-dispatch@master
+      with:
+        token: ${{ secrets.DISPATCH_TOKEN }}
+        repository: Guite/Static_modulestudio.de
+        event-type: docs-update
