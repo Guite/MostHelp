@@ -43,6 +43,7 @@ jobs:
         cd bundles/de.guite.modulestudio.help
         tar cfvz docs.tar.gz doc
         mv docs.tar.gz ../../deploy/assets
+        cd ../../
         cp bundles/de.guite.modulestudio.help/pdfmanual/*.pdf deploy/assets
 
     # see https://github.com/SamKirkland/FTP-Deploy-Action
