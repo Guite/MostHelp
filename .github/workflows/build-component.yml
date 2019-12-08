@@ -40,7 +40,9 @@ jobs:
         mkdir -p deploy/repo
         mkdir -p deploy/assets
         cp -R releng/de.guite.modulestudio.help.build/target/repository/* deploy/repo
-        cp -R bundles/de.guite.modulestudio.help/doc/* deploy/assets
+        cd bundles/de.guite.modulestudio.help/doc
+        tar cfvz docs.tar.gz .
+        mv docs.tar.gz ../../../deploy/assets
         cp bundles/de.guite.modulestudio.help/pdfmanual/*.pdf deploy/assets
 
     # see https://github.com/SamKirkland/FTP-Deploy-Action
@@ -60,5 +62,5 @@ jobs:
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         LOCAL_DIR: deploy/assets
-        REMOTE_DIR: components/help-assets
+        REMOTE_DIR: help-assets
         ARGS: --delete --continue --ignore-time
