@@ -40,9 +40,9 @@ jobs:
         mkdir -p deploy/repo
         mkdir -p deploy/assets
         cp -R releng/de.guite.modulestudio.help.build/target/repository/* deploy/repo
-        cd bundles/de.guite.modulestudio.help/doc
-        tar cfvz docs.tar.gz .
-        mv docs.tar.gz ../../../deploy/assets
+        cd bundles/de.guite.modulestudio.help
+        tar cfvz docs.tar.gz doc
+        mv docs.tar.gz ../../deploy/assets
         cp bundles/de.guite.modulestudio.help/pdfmanual/*.pdf deploy/assets
 
     # see https://github.com/SamKirkland/FTP-Deploy-Action
