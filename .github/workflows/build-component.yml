@@ -59,7 +59,7 @@ jobs:
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         LOCAL_DIR: deploy/repo
         REMOTE_DIR: components/help
-        ARGS: --delete --continue --ignore-time
+        ARGS: --delete --continue
     - name: Deploy other artifacts
       uses: SamKirkland/FTP-Deploy-Action@master
       env:
