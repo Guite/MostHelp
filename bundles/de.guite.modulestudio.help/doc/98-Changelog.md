@@ -4,7 +4,7 @@
 
 ### Product / Tooling changes
 
-* Updated to Eclipse 2019-09 (4.13).
+* Updated to Eclipse 2019-12 (4.14).
 * Use SVG icons in included help web app.
 * Dropped support for 32 bit platforms.
 * Requires Java 11 now.
