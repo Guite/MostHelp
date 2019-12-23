@@ -540,8 +540,8 @@ Represents a field type for storing email addresses.
 
 An email field has the following properties in addition to the common [abstract string field](#abstract-string-field) settings:
 
-* **checkMX** - A boolean to specify whether the MX record's validity of the given email's host is checked or not. Default value is `false`.
-* **checkHost** - A boolean to specify whether the MX or A or AAAA record's validity of given email's host is checked or not. Default value is `false`.
+* **checkMX** - A boolean to specify whether the MX record's validity of the given email's host is checked or not. Default value is `false`. This setting is considered **deprecated** and will be removed in a future version. It does not have any effect in Zikula 3 anymore.
+* **checkHost** - A boolean to specify whether the MX or A or AAAA record's validity of given email's host is checked or not. Default value is `false`. This setting is considered **deprecated** and will be removed in a future version. It does not have any effect in Zikula 3 anymore.
 * **length** - The length of this field. Default value is `255`.
 
 In [edit pages](#edit-action) the generator will use email input elements as well as validation on client and server side. For the output in [view](#view-action) and [display](#display-action) pages an icon will be shown linking the email address.
@@ -552,7 +552,7 @@ Represents a field type for storing urls.
 
 An url field has the following properties in addition to the common [abstract string field](#abstract-string-field) settings:
 
-* **checkDNS** - A boolean to specify whether to check if the associated host exists or not. Default value is `false`.
+* **checkDNS** - A boolean to specify whether to check if the associated host exists or not. Default value is `false`. This setting is considered **deprecated** and will be removed in a future version. It does not have any effect in Zikula 3 anymore.
 * **length** - The length of this field. Default value is `255`.
 
 In [edit pages](#edit-action) the generator will use url input elements as well as validation on client and server side. For the output in [view](#view-action) and [display](#display-action) pages an icon will be shown linking the url.

@@ -21,6 +21,7 @@
 * Added support for autowiring and autoconfiguration (Zikula 3 only) (#1188).
 * Use scalar typehints for Zikula 3.
 * Use `LegacyEventDispatcherProxy` for event dispatching in Zikula 3.
+* Added support for form fields with immutable dates in Zikula 3. 
 * Added support for map views showing a list of markers for multiple geographical entities (#1212).
 * Coordinate input fields are shown below map when editing geographical entities.
 * Added generated configuration option for private mode extending `ownerPermission` setting for viewing data. 
