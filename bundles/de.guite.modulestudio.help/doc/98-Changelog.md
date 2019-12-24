@@ -18,10 +18,6 @@
 
 ### Generator changes
 
-* Added support for autowiring and autoconfiguration (Zikula 3 only) (#1188).
-* Use scalar typehints for Zikula 3.
-* Use `LegacyEventDispatcherProxy` for event dispatching in Zikula 3.
-* Added support for form fields with immutable dates in Zikula 3. 
 * Added support for map views showing a list of markers for multiple geographical entities (#1212).
 * Coordinate input fields are shown below map when editing geographical entities.
 * Added generated configuration option for private mode extending `ownerPermission` setting for viewing data. 
@@ -80,7 +76,6 @@
 * Fixed typo in UI hooks provider.
 * Call filter hooks for text fields on display pages.
 * Upgraded MultiHook needle support for MultiHook 6.0.0.
-* Added support for Doctrine types `json`, `datetime_immutable`, `date_immutable`, `time_immutable` and `dateinterval` (Zikula 3 only).
 * Lowered required permission level for creating entities with moderation.
 * Item actions on display pages are not shown inside quick view windows.
 * Introduced permission helper method for quick navigation forms; require only view permissions instead of edit (#1218).
@@ -97,6 +92,12 @@
 * Moved permission inheritance functionality and category permission checks into permission helper to apply them for search and other integration areas (#1223).
 * Fixed tree selection form type with duplicate labels.
 * Disable CSRF protection for quick navigation forms, fixing redirects after editing.
+* Zikula 3 only: added support for autowiring and autoconfiguration (#1188).
+* Zikula 3 only: use scalar typehints.
+* Zikula 3 only: use `LegacyEventDispatcherProxy` for event dispatching.
+* Zikula 3 only: added support for form fields with immutable dates. 
+* Zikula 3 only: support localisation of countries, currencies, languages, locales and timezones in both forms and display.
+* Zikula 3 only: added support for Doctrine types `json`, `datetime_immutable`, `date_immutable`, `time_immutable` and `dateinterval`.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.4.0).
 
 ## ModuleStudio 1.3.2 (September 20, 2018)
