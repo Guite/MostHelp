@@ -94,7 +94,6 @@
 * Disable CSRF protection for quick navigation forms, fixing redirects after editing.
 * Zikula 3 only: added support for autowiring and autoconfiguration (#1188).
 * Zikula 3 only: use scalar typehints.
-* Zikula 3 only: use `LegacyEventDispatcherProxy` for event dispatching.
 * Zikula 3 only: added support for form fields with immutable dates. 
 * Zikula 3 only: support localisation of countries, currencies, languages, locales and timezones in both forms and display.
 * Zikula 3 only: added support for Doctrine types `json`, `datetime_immutable`, `date_immutable`, `time_immutable` and `dateinterval`.
