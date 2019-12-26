@@ -99,6 +99,10 @@
 * Zikula 3 only: support localisation of countries, currencies, languages, locales and timezones in both forms and display.
 * Zikula 3 only: added support for Doctrine types `json`, `datetime_immutable`, `date_immutable`, `time_immutable` and `dateinterval`.
 * Zikula 3 only: provide workflow transition blockers with reasons for unallowed deletion actions.
+* Zikula 3 only: ability to validate BIC and IBAN codes together.
+* Zikula 3 only: extended credit card validation to include "UATP" cards.
+* Zikula 3 only: added validation of JSON array fields.
+* Zikula 3 only: added validation of timezone fields.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.4.0).
 
 ## ModuleStudio 1.3.2 (September 20, 2018)
