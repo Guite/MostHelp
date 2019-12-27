@@ -15,6 +15,7 @@
 * Added target core versions for Zikula Core 3.0.x.
 * Added warning about target core versions 1.5.x becoming deprecated.
 * Fixed problems in quick fixes for validation constraints regarding duplicates.
+* Added possibility to configure validation mode for email fields (used in Zikula 3 only).
 
 ### Generator changes
 
@@ -102,6 +103,7 @@
 * Zikula 3 only: extended credit card validation to include "UATP" cards.
 * Zikula 3 only: added validation of JSON array fields.
 * Zikula 3 only: added validation of timezone fields.
+* Zikula 3 only: added support for different validation modes for email fields.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.4.0).
 
 ## ModuleStudio 1.3.2 (September 20, 2018)

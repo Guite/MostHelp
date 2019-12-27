@@ -543,8 +543,19 @@ An email field has the following properties in addition to the common [abstract 
 * **checkMX** - A boolean to specify whether the MX record's validity of the given email's host is checked or not. Default value is `false`. This setting is considered **deprecated** and will be removed in a future version. It does not have any effect in Zikula 3 anymore.
 * **checkHost** - A boolean to specify whether the MX or A or AAAA record's validity of given email's host is checked or not. Default value is `false`. This setting is considered **deprecated** and will be removed in a future version. It does not have any effect in Zikula 3 anymore.
 * **length** - The length of this field. Default value is `255`.
+* **validationMode** - Defines the pattern the email address is validated against. Valid values are [shown here](#email-validation-mode). Default value is `HTML5`. This setting is only used in Zikula 3 and does not have any effect in earlier target core versions.
 
 In [edit pages](#edit-action) the generator will use email input elements as well as validation on client and server side. For the output in [view](#view-action) and [display](#display-action) pages an icon will be shown linking the email address.
+
+#### Email validation mode
+
+Represents different pattern an email address is validated against.
+
+Can be one of the following options:
+
+* `LOOSE` - A simple regular expression. Allows all values with an "@" symbol in, and a "." in the second host part of the email address.
+* `STRICT` - Uses the [egulias/email-validator](https://packagist.org/packages/egulias/email-validator) library to perform an RFC compliant validation.
+* `HTML5` - This matches the pattern used for the [HTML5 email input element](https://www.w3.org/TR/html5/sec-forms.html#email-state-typeemail).
 
 #### Url field
 
