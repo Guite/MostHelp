@@ -43,21 +43,23 @@ Normally all created classes are generated twice. Thereby an empty concrete clas
 
 Example:
 
-    namespace MyModule\Entity\Base;
+```php
+namespace MyModule\Entity\Base;
 
-    abstract class AbstractPersonEntity
-    {
-        // generator code
-    }
+abstract class AbstractPersonEntity
+{
+    // generator code
+}
 
-    namespace MyModule\Entity;
+namespace MyModule\Entity;
 
-    use MyModule\Entity\Base\AbstractPersonEntity;
+use MyModule\Entity\Base\AbstractPersonEntity;
 
-    class PersonEntity extends AbstractPersonEntity
-    {
-        // manual code
-    }
+class PersonEntity extends AbstractPersonEntity
+{
+    // manual code
+}
+```
 
 Whenever you want to change the default implementation you can add corresponding extensions. If you recognise that you are doing the same changes again and again please [submit them as patches](95-HowToContribute.md#how-to-contribute) for the generator.
 
@@ -71,27 +73,28 @@ As explained above all generated concrete classes inherit from corresponding abs
 
 Example:
 
-    namespace MyModule\Entity\Base;
+```php
+namespace MyModule\Entity\Base;
 
-    abstract class AbstractPersonEntity
-    {
-        // generator code
-    }
+abstract class AbstractPersonEntity
+{
+    // generator code
+}
 
-    namespace MyModule\Entity;
+namespace MyModule\Entity;
 
-    class PersonEntity extends Base\AbstractPersonEntity
-    {
-        // manual code
-    }
+class PersonEntity extends Base\AbstractPersonEntity
+{
+    // manual code
+}
 
-    namespace MyModule\Entity;
+namespace MyModule\Entity;
 
-    class CustomerEntity extends PersonEntity
-    {
-        // manual code
-    }
-
+class CustomerEntity extends PersonEntity
+{
+    // manual code
+}
+```
 
 ## How to handle custom code
 
