@@ -41,16 +41,22 @@ Normally all created classes are generated twice. Thereby an empty concrete clas
 
 ![Class structure](images/class_structure.png "Class structure")
 
-Example:
+Example base class:
 
 ```php
+<?php
 namespace MyModule\Entity\Base;
 
 abstract class AbstractPersonEntity
 {
     // generator code
 }
+```
 
+Example child class:
+
+```php
+<?php
 namespace MyModule\Entity;
 
 use MyModule\Entity\Base\AbstractPersonEntity;
@@ -65,29 +71,16 @@ Whenever you want to change the default implementation you can add corresponding
 
 ### Structure with inheritance hierarchies
 
-One exception for this scheme is inheritance. If you add inheritance relationships to a model, the generator considers this inheritance for all classes which are created for each single entity. This naturally includes the entity classes itself, but also additional classes like repositories, validators or additional entities for extensions like attributes, categories, log entries, translations and more.
+One exception for this scheme is inheritance. If you add inheritance relationships to a model, the generator considers this inheritance for all classes which are created for each single entity. This naturally includes the entity classes itself, but also additional classes like repositories or additional entities for extensions like attributes, categories, log entries, translations and more.
 
 As explained above all generated concrete classes inherit from corresponding abstract base classes. As soon as an entity does inherit from another one, there will be no base class created for it. Instead the concrete implementation class will inherit from the concrete class of the parent entity.
 
 ![Class structure for entity inheritance](images/class_structure_inheritance.png "Class structure for entity inheritance")
 
-Example:
+Example inheriting child class:
 
 ```php
-namespace MyModule\Entity\Base;
-
-abstract class AbstractPersonEntity
-{
-    // generator code
-}
-
-namespace MyModule\Entity;
-
-class PersonEntity extends Base\AbstractPersonEntity
-{
-    // manual code
-}
-
+<?php
 namespace MyModule\Entity;
 
 class CustomerEntity extends PersonEntity

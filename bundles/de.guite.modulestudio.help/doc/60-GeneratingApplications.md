@@ -8,34 +8,40 @@ Every application consists of different types of code parts. While some code is 
 
 A very simple example will make this clear very quickly:
 
+```php
+<?php
+
+/**
+ * imagine some long comments about this class here
+ * @ORM\Entity ...
+ * some more annotations
+ */
+class Person
+{
     /**
-     * imagine some long comments about this class here
-     * @ORM\Entity ...
+     * imagine some long comments about this field here
+     * @ORM\Column ...
      * some more annotations
      */
-    class Person
-    {
-        /**
-         * imagine some long comments about this field here
-         * @ORM\Column ...
-         * some more annotations
-         */
-        protected $firstName;
+    protected $firstName;
 
-        /**
-         * imagine some long comments about this field here
-         * @ORM\Column ...
-         * some more annotations
-         */
-        protected $lastName;
-    }
+    /**
+     * imagine some long comments about this field here
+     * @ORM\Column ...
+     * some more annotations
+     */
+    protected $lastName;
+}
+```
 
 This code has obviously not very much knowledge which is essential for this certain application. Reduced to what is really required from a functional view one would get something like:
 
-    entity person {
-        string firstName
-        string lastName
-    }
+```
+entity person {
+    string firstName
+    string lastName
+}
+```
 
 Thought a little further the generator helps reaching a constantly high code quality, as all implementation details are always considered completely. For example if a new extension is activated for an entity this is not forgotten anywhere inside the code.
 
