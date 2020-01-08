@@ -440,6 +440,7 @@ Can be one of the following options:
 * `PHONE_NUMBER` - A telephone number.
 * `TIME_ZONE` - A time zone. In [edit forms](#edit-action) such fields will be rendered using a time zone selector.
 * `UUID` - An [UUID (Universally Unique Identifier)](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+* `WEEK` - An [ISO 8601](https://en.wikipedia.org/wiki/ISO_week_date) week number. Possible example value is `2011-W17`. Used in Zikula 3 only, represented by a [week form type](https://symfony.com/blog/new-in-symfony-4-4-week-form-type).
 
 
 #### ISBN style

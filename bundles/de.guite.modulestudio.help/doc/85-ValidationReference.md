@@ -174,8 +174,10 @@ The following list has been merged and includes therefore all keywords of all su
 * String length for locales must be at least `5` chars. Occurs if you activate the `locale` role for a string field with a length smaller than `5`.
 * String length for IP addresses must be at least `15` chars. Occurs if you set the `ip address` property to a value covering IPv4 addresses for a field with a length smaller than `15`.
 * String length for IP addresses must be at least `39` chars. Occurs if you set the `ip address` property to a value covering IPv6 addresses or if you enable the `ipTraceable` extension for a field with a length smaller than `39`.
+* String length for phone numbers must be at least `8` chars. Occurs if you activate the `phone_number` role for a string field with a length smaller than `8`.
 * String length for time zones must be at least `30` chars. Occurs if you activate the `timezone` role for a string field with a length smaller than `30`.
 * String length for UUIDs must be at least `36` chars. Occurs if you activate the `uuid` role for a string field with a length smaller than `36`.
+* String length for week numbers must be at least `8` chars. Occurs if you activate the `week` role for a string field with a length smaller than `8`.
 * A string can only have one special semantic (role, isbn, issn, ip address).
 * String length must not be greater than `255`; for bigger sizes use text fields.
 * The default value for an email field must be a valid email address.

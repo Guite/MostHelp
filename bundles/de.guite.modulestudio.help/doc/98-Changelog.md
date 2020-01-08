@@ -16,6 +16,7 @@
 * Added warning about target core versions 1.5.x becoming deprecated.
 * Fixed problems in quick fixes for validation constraints regarding duplicates.
 * Added possibility to configure validation mode for email fields (used in Zikula 3 only).
+* Added new string role for week fields (used in Zikula 3 only). More details can be found in the [generator reference](87-GeneratorReference.md#string-role).
 
 ### Generator changes
 
