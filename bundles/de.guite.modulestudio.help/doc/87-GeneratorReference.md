@@ -650,7 +650,7 @@ Represents an entry for a [list field](#list-field).
 It includes the following properties:
 
 * **default** - A boolean specifying whether this entry is selected by default or not. The default value is `false`.
-* **image** - Optional name of an extrasmall image in the Zikula core, for example `xedit`.
+* **image** - Optional name of a font awesome icon without `fa-` prefix, for example `pencil`.
 * **name** - Name of the item.
 * **value** - The value of this item. If not value exists, the name is used as value, too.
 
