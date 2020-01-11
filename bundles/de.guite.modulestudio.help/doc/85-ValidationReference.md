@@ -168,6 +168,7 @@ The following list has been merged and includes therefore all keywords of all su
 * String length for credit card numbers must be at least `20` chars. Occurs if you activate the `credit card` role for a string field with a length smaller than `20`.
 * String length for currency codes must be at least `3` chars. Occurs if you activate the `currency` role for a string field with a length smaller than `3`.
 * String length for IBAN numbers must be at least `34` chars. Occurs if you activate the `iban` role for a string field with a length smaller than `34`.
+* String length for icons must be at least `50` chars. Occurs if you activate the `icon` role for a string field with a length smaller than `50`.
 * String length for ISBN numbers must be at least `17` chars. Occurs if you activate the set the `isbn` property for a string field with a length smaller than `17`.
 * String length for ISSN numbers must be at least `9` chars. Occurs if you activate the set the `issn` property for a string field with a length smaller than `9`.
 * String length for languages must be at least `7` chars. Occurs if you activate the `language` role for a string field with a length smaller than `7`.

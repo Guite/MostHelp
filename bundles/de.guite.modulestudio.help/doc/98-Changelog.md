@@ -17,6 +17,7 @@
 * Fixed problems in quick fixes for validation constraints regarding duplicates.
 * Added possibility to configure validation mode for email fields (used in Zikula 3 only).
 * Added new string role for week fields (used in Zikula 3 only). More details can be found in the [generator reference](87-GeneratorReference.md#string-role).
+* Added new string role for icons (used in Zikula 3 only). More details can be found in the [generator reference](87-GeneratorReference.md#string-role).
 
 ### Generator changes
 
