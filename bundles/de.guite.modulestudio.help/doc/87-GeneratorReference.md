@@ -358,6 +358,7 @@ An integer field has the following properties in addition to the common [abstrac
 * **minValue** - Minimum value. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
 * **percentage** - A boolean specifying whether this field represents a percentage value or not. Default value is `false`.
 * **range** - A boolean specifying whether this field represents a range or not. Default value is `false`. In [edit forms](#edit-action) a range field is represented as a slider.
+* **unit** - An optional field unit which will be used in both [edit forms](#edit-action) and [display pages](#display-action). For example a field named `effort` could use a `unit` named `hours`. Units will be translated.
 * **version** - A boolean specifying whether this field should act as a version. Default value is `false`. If set to `true` the owning entity will need to use [optimistic locking](#entity-lock-type). If you need to track changes and manage versions you also need to activate `loggable` for the corresponding [entity](#entity).
 
 In [edit pages](#edit-action) the generator will use integer input elements as well as validation on client and server side. For the output in [view](#view-action) and [display](#display-action) templates the value will just be shown.
@@ -376,6 +377,7 @@ A number field has the following properties in addition to the common [derived f
 * **numberType** - Allows to define the number type for this field. Default value is `DECIMAL`. The available options are explained [below](#number-field-type).
 * **percentage** - A boolean specifying whether this field represents a percentage value or not. Default value is `false`.
 * **scale** - The amount of digits after the dot. Default value is `2`.
+* **unit** - An optional field unit which will be used in both [edit forms](#edit-action) and [display pages](#display-action). For example a field named `effort` could use a `unit` named `hours`. Units will be translated.
 
 In [edit pages](#edit-action) the generator will use number input elements as well as validation on client and server side. For the output in [view](#view-action) and [display](#display-action) templates the value will just be shown using a formatting filter.
 
@@ -417,6 +419,7 @@ A string field has the following properties in addition to the common [abstract 
 * **ipTraceableChangeTriggerValue** - Optional value of field to use as change trigger (if type is `CHANGE`).
 * **length** - The length of this field. Default value is `255`.
 * **role** - Allows to define a semantic role for this field. Default value is `NONE`. The available options are explained [below](#string-role).
+* **unit** - An optional field unit which will be used in both [edit forms](#edit-action) and [display pages](#display-action). For example a field named `effort` could use a `unit` named `hours`. Units will be translated.
 
 In [edit pages](#edit-action) the generator will use single-line input elements for string fields - except you defined something else (using options like `role` or `isbn`). Other validations are added together and applied as well.
 
