@@ -22,6 +22,7 @@
 
 ### Generator changes
 
+* Added support for all changes in Zikula Core 3.
 * Added support for map views showing a list of markers for multiple geographical entities (#1212).
 * Coordinate input fields are shown below map when editing geographical entities.
 * Added generated configuration option for private mode extending `ownerPermission` setting for viewing data. 
@@ -107,6 +108,7 @@
 * Zikula 3 only: extended credit card validation to include "UATP" cards.
 * Zikula 3 only: added validation of timezone fields.
 * Zikula 3 only: added support for different validation modes for email fields.
+* Zikula 3 only: added ability for auto-creation of imagine cache directory.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.4.0).
 
 ## ModuleStudio 1.3.2 (September 20, 2018)
