@@ -55,7 +55,7 @@
 * Removed all artifacts which are entirely related to release engineering (Travis and StyleCI configuration files, composer dev requirements).
 * Trigger email notifications after workflow transition has been completed.
 * Apply workflow not before entity change for proper create notifications.
-* The finder component can now dynamically switch languages to insert links in another language into editors (#328).
+* The finder component can now dynamically switch languages to insert links in another language into editors (#1214).
 * Use `*` value for allowing all file extensions in an upload field.
 * Use `*` value for allowing all mime types in an upload field.
 * Fixed several problems in search helper.
