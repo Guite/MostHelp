@@ -354,6 +354,7 @@ Represents a field type for storing integer numbers.
 An integer field has the following properties in addition to the common [abstract integer field](#abstract-integer-field) settings:
 
 * **aggregateFor** - Aggregate field: one-to-many target alias and field name (syntax: `views.amount`) which causes the generator creating special methods for aggregation. More information can be found in [this article](https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/cookbook/aggregate-fields.html).
+* **counter** - A boolean whether this field should act as a counter. Default value is `false`. If set to `true` and the owning entity has a [display action](#display-action) each view of the detail page will be counted. This property can ideally be combined with `defaultValue "0", mandatory false, visible false`.
 * **maxValue** - Maximum value. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
 * **minValue** - Minimum value. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
 * **percentage** - A boolean specifying whether this field represents a percentage value or not. Default value is `false`.

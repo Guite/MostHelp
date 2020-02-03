@@ -19,6 +19,7 @@
 * Added new string role for week fields (used in Zikula 3 only). More details can be found in the [generator reference](87-GeneratorReference.md#string-role).
 * Added new string role for icons (used in Zikula 3 only). More details can be found in the [generator reference](87-GeneratorReference.md#string-role).
 * Added possibility to define arbitrary field units for integer, number and string fields (#1201).
+* Added `counter` flag to integer fields to provide view counter functionality (#1226).
 
 ### Generator changes
 
