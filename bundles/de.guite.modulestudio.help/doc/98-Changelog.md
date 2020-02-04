@@ -100,6 +100,7 @@
 * Fixed tree selection form type with duplicate labels.
 * Disable CSRF protection for quick navigation forms, fixing redirects after editing.
 * View page actions / navigation links are now handled by MenuBuilder using KnpMenu (#1213).
+* Fixed sorting items in view pages by related entities (#1229).
 * Zikula 3 only: added support for autowiring and autoconfiguration (#1188).
 * Zikula 3 only: use scalar typehints.
 * Zikula 3 only: added support for form fields with immutable dates. 
