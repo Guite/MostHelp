@@ -86,6 +86,7 @@
 * Lowered required permission level for creating entities with moderation.
 * Item actions on display pages are not shown inside quick view windows.
 * Introduced permission helper method for quick navigation forms; require only view permissions instead of edit (#1218).
+* Related entities in quick navigation forms are filtered by permissions (#1230).
 * Add support for new `group.pre_delete` event in Zikula Core 3.x targets.
 * Added missing `{{ moduleFooter() }}` call to base template (#1219).
 * Hide link to own entries for users without edit access (#1220).
