@@ -85,8 +85,10 @@
 * Upgraded MultiHook needle support for MultiHook 6.0.0.
 * Lowered required permission level for creating entities with moderation.
 * Item actions on display pages are not shown inside quick view windows.
-* Introduced permission helper method for quick navigation forms; require only view permissions instead of edit (#1218).
+* Introduced permission helper method for accessing quick navigation forms; require only view permissions instead of edit (#1218).
 * Related entities in quick navigation forms are filtered by permissions (#1230).
+* Added dropdown fields for target sides of one2one and many2one relationships to quick navigation (#1217).
+* Added dropdown fields for many-valued relationship sides to quick navigation (#1217).
 * Add support for new `group.pre_delete` event in Zikula Core 3.x targets.
 * Added missing `{{ moduleFooter() }}` call to base template (#1219).
 * Hide link to own entries for users without edit access (#1220).
