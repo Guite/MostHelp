@@ -4,7 +4,7 @@ Simply download the archive for your operating system and extract it inside your
 
 Afterwards you are ready to start the ModuleStudio executable.
 
-ModuleStudio requires **Java 11 (64 bit)** which you can download from [oracle.com](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
+ModuleStudio requires **Java 11 (64 bit)** which you can download from [java.net](https://jdk.java.net/).
 
 ## Additional notes for Windows
 
