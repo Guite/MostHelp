@@ -8,6 +8,7 @@
 * Use SVG icons in included help web app.
 * Dropped support for 32 bit platforms.
 * Requires Java 11 now.
+* Fixed project switcher issue in some Windows environments (#1209).
 
 ### DSL / Modelling language changes
 
