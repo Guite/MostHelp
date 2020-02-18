@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout sources from component repository
-      uses: actions/checkout@v2-beta
+      uses: actions/checkout@v2
 
     - name: Checkout additional sources from product repository
-      uses: actions/checkout@v2-beta
+      uses: actions/checkout@v2
       with:
         repository: Guite/MostProduct
         token: ${{ secrets.ACCESS_MOST_PRODUCT }}
@@ -56,7 +56,7 @@ jobs:
         #ftp-username: ${{ secrets.FTP_USERNAME }}
         #ftp-password: ${{ secrets.FTP_PASSWORD }}
         #local-dir: deploy/repo
-      uses: SamKirkland/FTP-Deploy-Action@v2
+      uses: SamKirkland/FTP-Deploy-Action@2.0.0
       env:
         FTP_SERVER: ${{ secrets.FTP_SERVER }}
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
@@ -72,7 +72,7 @@ jobs:
         #ftp-username: ${{ secrets.FTP_USERNAME }}
         #ftp-password: ${{ secrets.FTP_PASSWORD }}
         #local-dir: deploy/assets
-      uses: SamKirkland/FTP-Deploy-Action@v2
+      uses: SamKirkland/FTP-Deploy-Action@2.0.0
       env:
         FTP_SERVER: ${{ secrets.FTP_SERVER }}
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
