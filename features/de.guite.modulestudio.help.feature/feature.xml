@@ -21,15 +21,13 @@
 
    <requires>
       <import plugin="javax.servlet.jsp" version="2.2.0" match="greaterOrEqual"/>
-      <import plugin="org.apache.lucene" version="3.5.0" match="greaterOrEqual"/>
-      <import plugin="org.apache.lucene.analysis" version="3.5.0" match="greaterOrEqual"/>
-      <import plugin="org.apache.lucene.core" version="8.0.0" match="greaterOrEqual"/>
+      <import plugin="org.apache.lucene.core" version="8.4.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.runtime" version="3.17.100" match="greaterOrEqual"/>
       <import plugin="org.eclipse.equinox.http.registry" version="1.1.700" match="greaterOrEqual"/>
-      <import feature="org.eclipse.help" version="2.2.102.v20171130-0510"/>
-      <import plugin="org.eclipse.core.runtime" version="3.17.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.help" version="3.8.600" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.help.webapp" version="3.9.700" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.help" version="3.8.700" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.help.webapp" version="3.9.800" match="greaterOrEqual"/>
       <import plugin="org.objectweb.asm" version="7.2.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.help" version="2.2.102.v20171130-0510"/>
    </requires>
 
    <plugin
