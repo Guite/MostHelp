@@ -74,6 +74,7 @@
 * Fixed possible invalid states for boolean filter in quick navigation.
 * Improved handling of entities without view or index actions in moderation panel and moderation block.
 * Removed usage of deprecated jQuery ajax callbacks.
+* Show information about last editor in workflow notification emails (of entities with standard fields) for moderators.
 * Several improvements for CSV and XML output (e.g. array fields and relationship data).
 * Hide link for creating related items in quick view.
 * Overhauled and improved asset handling on raw pages (e.g. for inline editing).
@@ -117,6 +118,7 @@
 * Zikula 3 only: added validation of timezone fields.
 * Zikula 3 only: added support for different validation modes for email fields.
 * Zikula 3 only: added ability for auto-creation of imagine cache directory.
+* Zikula 3 only: use Symfony Mailer component instead of old SwiftMailer-based Mailer API.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.4.0).
 
 ## ModuleStudio 1.3.2 (September 20, 2018)
