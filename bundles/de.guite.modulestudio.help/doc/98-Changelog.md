@@ -98,6 +98,7 @@
 * Delay automatic filter submission for 5 seconds for improved usability.
 * Several fixes for form-aware hook provider dummy implementation.
 * Select collections without joins by default.
+* Properly provide entity changeset in pre update events.
 * Fixed creator filter in admin area.
 * Fixed regression in workflow state exclusion filter.
 * Fixed wrong fallback value for editing optional multi list fields.
