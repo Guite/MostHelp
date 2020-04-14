@@ -120,6 +120,7 @@
 * Zikula 3 only: added ability for auto-creation of imagine cache directory.
 * Zikula 3 only: use Symfony Mailer component instead of old SwiftMailer-based Mailer API.
 * Zikula 3 only: added listener for `FormTypeChoiceEvent`.
+* Zikula 3 only: custom application events are now represented by dedicated event classes.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.4.0).
 
 ## ModuleStudio 1.3.2 (September 20, 2018)
