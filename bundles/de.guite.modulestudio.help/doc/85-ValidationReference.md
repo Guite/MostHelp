@@ -57,6 +57,8 @@ The biggest part is a reference section listing all validation rules in detail a
 * The entity needs a display pattern. Occurs when no display pattern is defined.
 * The display pattern does not contain any field references. Please check whether this is on purpose or not. This warning occurs if a display pattern does not contain any field references.
 * Every entity with an archive (`hasArchive` set to `true`) must contain one datetime or date field designated as end date. For implementation of an automatic archiving functionality the system must know when an object has reached the end of it's lifecycle.
+* Every entity with automatic deletion (`deleteExpired` set to `true`) must contain one datetime or date field designated as end date. For implementation of an automatic archiving functionality the system must know when an object has reached the end of it's lifecycle.
+* An entity must not use concurrently both archiving and deletion. Occurs if both `hasArchive` and `deleteExpired` are set to `true`.
 * The length of all entity fields must not be higher than `21845`. The limit is `65535` bytes, while UTF-8 requires three bytes for each char.
 
 #### Inheritance-related entity settings

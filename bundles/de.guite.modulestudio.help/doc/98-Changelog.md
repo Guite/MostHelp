@@ -19,6 +19,7 @@
 * Added possibility to configure validation mode for email fields (used in Zikula 3 only). More details can be found in the [generator reference](87-GeneratorReference.md#email-validation-mode).
 * Added possibility to define arbitrary field units for integer, number and string fields (#1201).
 * Added `counter` flag to integer fields to provide view counter functionality (#1226).
+* Added `deleteExpired` flag for automatic deletion of obsolete data (#1232).
 * Added new string role for week fields (used in Zikula 3 only). More details can be found in the [generator reference](87-GeneratorReference.md#string-role).
 * Added new string role for icon fields (used in Zikula 3 only). More details can be found in the [generator reference](87-GeneratorReference.md#string-role).
 * Added new string role for hostname fields (used in Zikula 3 only). More details can be found in the [generator reference](87-GeneratorReference.md#string-role).
