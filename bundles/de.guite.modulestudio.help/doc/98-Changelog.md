@@ -1,5 +1,20 @@
 # Changelog
 
+## ModuleStudio 1.5.0 (unreleased)
+
+### Product / Tooling changes
+
+* none yet
+
+### DSL / Modelling language changes
+
+* none yet
+
+### Generator changes
+
+* none yet
+* For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.5.0).
+
 ## ModuleStudio 1.4.0 (June 26, 2020)
 
 ### Product / Tooling changes
@@ -334,7 +349,7 @@
 * Improved validation with regards of detecting missing names and other mandatory settings.
 * The formatter now adds a new line after the last closing bracket.
 * Generator settings are now defined at the application element directly; settings containers are not used anymore (#1172). A quick fix is provided for simple migration.
-* The `nospace` property has been deprecated and will be removed in ModuleStudio 1.4.0 (#1174). A quick fix is provided for simple migration.
+* The `nospace` property has been deprecated and will be removed in ModuleStudio 1.5.0 (#1174). A quick fix is provided for simple migration.
 * Added `minPixels` and `maxPixels` constraints to upload fields for Zikula 2 (#1171).
 * Added `immutable` flag for datetime, date and time fields (#1171).
 * Added new string field role `PHONE_NUMBER` for telephone numbers (#1171). 
@@ -561,7 +576,7 @@
 
 ### DSL / Modelling language changes
 
-* The default target version is now `ZK15`. In the same step `ZK14` and `ZK14DEV` have been marked as deprecated and will be removed after the release of ModuleStudio 1.4.0 (#1081).
+* The default target version is now `ZK15`. In the same step `ZK14` and `ZK14DEV` have been marked as deprecated and will be removed after the release of ModuleStudio 1.5.0 (#1081).
 * Added target version `ZK2DEV` to separate stable and development versions of Zikula 2.x. 
 * Minor improvements for validation of inheritance hierarchies (e.g. duplicate fields and actions, display pattern field references, no additional fields or actions).
 * Added support for hook providers (filter hooks, form aware hooks, UI hooks) (#15).
@@ -675,7 +690,7 @@
 * Added possibility to reorder sortable entities on view pages using drag n drop (#29).
 * Added a reset link for unsetting a non-mandatory user field (#1047).
 * Several other bugfixes.
-* For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.4.0).
+* For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.5.0).
 
 ## ModuleStudio 0.7.3 (Feb 18, 2017)
 
