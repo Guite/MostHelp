@@ -82,4 +82,4 @@ or
 C:/Users/some/other/directory
 ```
 
-Please ensure that the configured directory is writable,
+Please ensure that the configured directory is writable.
