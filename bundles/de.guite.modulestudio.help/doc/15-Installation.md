@@ -4,18 +4,15 @@ Simply download the archive for your operating system and extract it inside your
 
 Afterwards you are ready to start the ModuleStudio executable.
 
-ModuleStudio requires **Java 11 (64 bit)** which you can download from [java.net](https://jdk.java.net/).
+ModuleStudio requires at least **Java 11 (64 bit)**, but it comes with Java 14.0.1 already included. So it should start also if you have an older version or no Java installed at all.
 
 ## Additional notes for Windows
 
-- Because Windows has a limit of 260 characters for pathes, do not choose a too nested directory, but ideally a simple path like `C:\ModuleStudio\`.
-- Uninstall all older Java versions to avoid conflicts.
-- If ModuleStudio does not work, open a command line window (execute `cmd`) and check if Java is correctly configured by executing `java --version`. If some errors occur ensure that the correct `PATH` is set (`echo %PATH%`) and follow [these instructions](https://stackoverflow.com/questions/54007069/error-opening-registry-key-software-javasoft-jre-while-installing-elki#answer-54563772).
-- If you are unsure about how to install Java: unpack the archive, rename the main folder into `jre` and move this `jre` directory into the ModuleStudio main directory.
+- Because Windows has a limit of 260 characters for paths, do not choose a too nested directory, but ideally a simple path like `C:\ModuleStudio\`.
 
 ## Additional notes for Linux and MacOSX
 
-Make sure to include the -p flag if you extract the `.tar.gz` to keep the correct permissions (for example: `tar -xpzvf ModuleStudio-linux.gtk.x86_64.tar.gz`).
+Make sure to include the `-p` flag if you extract the `.tar.gz` to keep the correct permissions (for example: `tar -xpzvf ModuleStudio-linux.gtk.x86_64.tar.gz`).
 
 ## The workspace
 

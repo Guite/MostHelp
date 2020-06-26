@@ -1,13 +1,13 @@
 # Changelog
 
-## ModuleStudio 1.4.0 (unreleased)
+## ModuleStudio 1.4.0 (June 26, 2020)
 
 ### Product / Tooling changes
 
 * Updated to Eclipse 2020-06 (4.16).
-* Use SVG icons in included help web app.
+* Includes Java 14.0.1 now.
 * Dropped support for 32 bit platforms.
-* Requires Java 11 now.
+* Use SVG icons in included help web app.
 * Fixed project switcher issue in some Windows environments (#1209).
 
 ### DSL / Modelling language changes
