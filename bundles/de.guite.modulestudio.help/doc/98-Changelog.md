@@ -110,6 +110,7 @@
 * View page actions / navigation links are now handled by MenuBuilder using KnpMenu (#1213).
 * Fixed sorting items in view pages by related entities (#1229).
 * Fixed handling of ID insertion into Summernote editor.
+* Fixed searching in / filtering by translatable fields (#1234).
 * Zikula 3 only: added support for autowiring and autoconfiguration (#1188).
 * Zikula 3 only: use scalar typehints.
 * Zikula 3 only: added support for form fields with immutable dates. 
