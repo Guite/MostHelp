@@ -4,7 +4,7 @@
 
 ### Product / Tooling changes
 
-* none yet
+* Fixed problem preventing embedded textual editor to open properly.
 
 ### DSL / Modelling language changes
 
