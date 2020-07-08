@@ -12,7 +12,7 @@
 
 ### Generator changes
 
-* none yet
+* Fixed regression regarding filtering user fields.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.5.0).
 
 ## ModuleStudio 1.4.0 (June 26, 2020)
