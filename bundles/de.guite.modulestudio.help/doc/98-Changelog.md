@@ -12,6 +12,7 @@
 
 ### Generator changes
 
+* Fixed display hook processing on edit and delete pages.
 * Fixed regression regarding filtering user fields.
 * Fixed wrong import in `ConnectionsMenuListener`.
 * Fixed exception when editing entities with allowed but unset specific creation date.
