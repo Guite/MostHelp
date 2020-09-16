@@ -4,6 +4,7 @@
 
 ### Product / Tooling changes
 
+* Updated to Eclipse 2020-09 (4.17).
 * Fixed problem preventing embedded textual editor to open properly.
 
 ### DSL / Modelling language changes
