@@ -20,6 +20,7 @@
 * Fixed paths to Leaflet assets for geographical entities in Zikula 3 (#1243).
 * Provide object identifier to form aware hook in Zikula 3.
 * Fixed regressions in auto completion functionality in Zikula 3.
+* Use lazy-loaded Twig extensions.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.5.0).
 
 ## ModuleStudio 1.4.0 (June 26, 2020)
