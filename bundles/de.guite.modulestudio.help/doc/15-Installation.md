@@ -4,7 +4,7 @@ Simply download the archive for your operating system and extract it inside your
 
 Afterwards you are ready to start the ModuleStudio executable.
 
-ModuleStudio requires at least **Java 11 (64 bit)**, but it comes with Java 14.0.1 already included. So it should start also if you have an older version or no Java installed at all.
+ModuleStudio requires at least **Java 11 (64 bit)**, but it comes with Java 15.0.1 already included. So it should start also if you have an older version or no Java installed at all.
 
 ## Additional notes for Windows
 
