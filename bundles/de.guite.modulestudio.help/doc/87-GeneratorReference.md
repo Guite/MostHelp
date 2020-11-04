@@ -884,7 +884,6 @@ It includes the following properties in addition to the common [relationship](#r
 * **expandedTarget** - A boolean to enable usage of radio buttons (for single-valued relations) or checkboxes (for multi-valued relations) instead of a select field. The default value is `false`.
 * **fetchType** - The [fetch type](#relation-fetch-type) for this association. The default value is `LAZY`.
 * **nullable** - A boolean specifying whether the field for this relationship may be null or not. The Default value is `true`.
-* **onDelete** - String for optional update cascade options on database level (for example `RESTRICT` or `SETNULL`).
 * **onDelete** - String for optional delete cascade options on database level (for example `RESTRICT` or `SETNULL`).
 * **sourceEditing** - The [edit mode](#relation-edit-mode) for target elements during editing the source side of this association. The default value is `CHOOSE` for many to one as well as many to many relationships and `NONE` for other join relationships.
 * **sourceField** - Name of the source entity field(s) used for the join. The default value is `id` which means that the source entity is joined by it's primary key. It is possible to change that value for custom join conditions. Furthermore it is possible to use multiple field names separated by a comma with a space char in order to join entities with multiple keys.
