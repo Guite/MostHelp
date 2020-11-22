@@ -49,6 +49,7 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: deploy/repo/
         server-dir: components/help/
+        dangerous-clean-slate: true
 
     - name: Deploy other artifacts
       uses: SamKirkland/FTP-Deploy-Action@master
@@ -58,6 +59,7 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: deploy/assets/
         server-dir: help-assets/
+        dangerous-clean-slate: true
 
     # see https://github.com/peter-evans/repository-dispatch
     - name: Dispatch downstream job
