@@ -10,7 +10,7 @@
 
 ### DSL / Modelling language changes
 
-* none yet
+* Reduced `slugLength` default and max value from 255 to 190 for better `utf8mb4` compatibility.
 
 ### Generator changes
 
