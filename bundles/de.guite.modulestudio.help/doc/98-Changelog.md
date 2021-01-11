@@ -23,6 +23,8 @@
 * Fixed regressions in auto completion functionality in Zikula 3.
 * Use lazy-loaded Twig extensions.
 * Provide default values for default coordinate fields to prevent invalid form state.
+* Reset page number to 1 to avoid empty page if filters have been set.
+* Fixed usage of mapped superclasses.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.5.0).
 
 ## ModuleStudio 1.4.0 (June 26, 2020)
