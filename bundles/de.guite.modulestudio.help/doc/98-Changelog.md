@@ -24,6 +24,7 @@
 * Use lazy-loaded Twig extensions.
 * Provide default values for default coordinate fields to prevent invalid form state.
 * Reset page number to 1 to avoid empty page if filters have been set.
+* Add fluent setters and made add/remove methods for multi-values associations more solid.
 * Fixed usage of mapped superclasses.
 * Updated structure for classes related to entities with inheritance relationships.
 * Skip sending creator-related notification if creator has approval permissions (#1249).
