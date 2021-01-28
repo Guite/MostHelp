@@ -27,6 +27,7 @@
 * Add fluent setters and made add/remove methods for multi-valued associations more solid.
 * Fixed usage of mapped superclasses.
 * Updated structure for classes related to entities with inheritance relationships.
+* Provide `getDescription` helper method in `EntityDisplayHelper`.
 * Skip sending creator-related notification if creator has approval permissions (#1249).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.5.0).
 
