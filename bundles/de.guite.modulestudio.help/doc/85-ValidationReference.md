@@ -282,7 +282,7 @@ Includes basically all relationships in the data layer except inheritance.
 
 * Every index must have a name. The index name must have a length of at least two chars. Recommended are at least four chars.
 * Every index must contain at least one item referencing an entity field.
-* The length of all index fields must not be higher than `333`. The limit is `1000` bytes, while UTF-8 requires three bytes for each char.
+* The length of all index fields must not be higher than `191`. The limit is `767` bytes, while UTF-8 requires four bytes for each char.
 * Index names must be unique per entity.
 * Index item names must be unique per index.
 
