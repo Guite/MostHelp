@@ -59,7 +59,7 @@ The biggest part is a reference section listing all validation rules in detail a
 * Every entity with an archive (`hasArchive` set to `true`) must contain one datetime or date field designated as end date. For implementation of an automatic archiving functionality the system must know when an object has reached the end of it's lifecycle.
 * Every entity with automatic deletion (`deleteExpired` set to `true`) must contain one datetime or date field designated as end date. For implementation of an automatic archiving functionality the system must know when an object has reached the end of it's lifecycle.
 * An entity must not use concurrently both archiving and deletion. Occurs if both `hasArchive` and `deleteExpired` are set to `true`.
-* The length of all entity fields must not be higher than `21845`. The limit is `65535` bytes, while UTF-8 requires three bytes for each char.
+* The length of all entity fields must not be higher than `16383`. The limit is `65535` bytes, while UTF-8 requires four bytes for each char.
 
 #### Inheritance-related entity settings
 
