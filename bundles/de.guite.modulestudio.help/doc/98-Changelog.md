@@ -31,6 +31,7 @@
 * Fixed an issue with `directParent` selection in tree relatives template.
 * Skip sending creator-related notification if creator has approval permissions (#1249).
 * Fixes for ICS templates (#1254).
+* Add missing cast to getter for decimal fields (#1257).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.5.0).
 
 ## ModuleStudio 1.4.0 (June 26, 2020)
