@@ -288,7 +288,7 @@ Includes basically all relationships in the data layer except inheritance.
 
 #### Entity index item
 
-* Every index item must have the same name as the referenced entity field. This occurs if no equally named field is found in the entity.
+* Every index item must have the same name as the referenced entity field or relation source/target alias. This occurs if no equally named field or foreign key is found in the entity.
 
 ### Variables
 
