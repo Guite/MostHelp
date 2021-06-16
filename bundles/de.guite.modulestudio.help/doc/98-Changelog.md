@@ -4,7 +4,7 @@
 
 ### Product / Tooling changes
 
-* Updated to Eclipse 2021-03 (4.19).
+* Updated to Eclipse 2021-06 (4.20).
 * Updated included Java version from 14.0.1 to 15.0.2
 * Fixed problem preventing embedded textual editor to open properly.
 
