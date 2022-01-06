@@ -11,6 +11,11 @@
 ### DSL / Modelling language changes
 
 * Reduced `slugLength` default and max value from 255 to 190 for better `utf8mb4` compatibility.
+* Removed support for older target core versions 1.5.x and 2.x.
+* Added support for newer target core versions (now supporting: `ZK30`, `ZK31`, `ZK40`). 
+* Removed obsolete application properties `generateMailzApi`, `generateNewsletterPlugin`, `generateTagSupport`.
+* Removed obsolete email field properties `checkMX`, `checkHost`.
+* Removed obsolete URL field property `checkDNS`.
 
 ### Generator changes
 
@@ -32,6 +37,7 @@
 * Skip sending creator-related notification if creator has approval permissions (#1249).
 * Fixes for ICS templates (#1254).
 * Add missing cast to getter for decimal fields (#1257).
+* Removed colons from form labels.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.5.0).
 
 ## ModuleStudio 1.4.0 (June 26, 2020)

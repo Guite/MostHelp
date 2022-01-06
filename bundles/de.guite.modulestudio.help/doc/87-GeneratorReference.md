@@ -66,18 +66,15 @@ In addition, an application can configure several further properties to customis
 * **amountOfExampleRows** - The amount of example rows to create for entities in this application. Default value is `0`. Note that if you activate the `categorisable` property for an entity the generated installer relies on that you did not remove the default categories of Zikula.
 * **generateAccountApi** - A boolean specifying whether account panel integration should be generated or not. Default value is `true`.
 * **generateSearchApi** - A boolean specifying whether search integration should be generated or not. Requires at least one string or text field in any entity. Default value is `true`.
-* **generateMailzApi** - A boolean specifying whether Mailz support should be generated or not. Default value is `false`. This has no effect for Zikula 2.x because the Mailz module has not been migrated yet.
 * **generateListBlock** - A boolean specifying whether a generic list block should be generated or not. Default value is `true`.
 * **generateDetailBlock** - A boolean specifying whether a generic detail view block should be generated or not. Requires at least one entity containing a display action. Default value is `true`.
 * **generateModerationBlock** - A boolean specifying whether a moderation block should be generated or not. Requires at least one entity with a workflow including approval. Default value is `true`.
 * **generateListContentType** - A boolean specifying whether a content type for collection lists should be generated or not. Default value is `true`.
 * **generateDetailContentType** - A boolean specifying whether a content type for single objects should be generated or not. Requires at least one entity containing a display action. Default value is `true`.
-* **generateNewsletterPlugin** - A boolean specifying whether a Newsletter plug-in should be generated or not. Default value is `false`. This has no effect for Zikula 2.x because the Newsletter module has not been migrated yet.
 * **generateModerationPanel** - A boolean specifying whether a moderation panel should be generated or not. Requires at least one entity with a workflow including approval. Default value is `true`.
 * **generatePendingContentSupport** - A boolean specifying whether support for pending content should be generated or not. Requires at least one entity with a workflow including approval. Default value is `true`.
 * **generateExternalControllerAndFinder** - A boolean specifying whether a controller for external calls providing a generic finder component should be generated or not. Default value is `true`. Works only for entities containing either a [display action](#display-action) or at least one [upload field](#upload-field) supporting images.
 * **generateScribitePlugins** - A boolean specifying whether support for several [Scribite editors](https://github.com/zikula-modules/Scribite/) should be generated or not. Requires external controller with finder component. Default value is `true`. At the moment CKEditor, Quill, Summernote and TinyMCE are supported.
-* **generateTagSupport** - A boolean specifying whether tag support should be generated or not. Requires at least one entity containing a display action. Default value is `false`. This has no effect for Zikula 2.x because the Tag module has not been migrated yet.
 * **generateMultiHookNeedles** - A boolean specifying whether MultiHook needles should be generated or not. Default value is `false`.
 * **generateRssTemplates** - A boolean specifying whether RSS view templates should be generated or not. Default value is `true`.
 
@@ -124,9 +121,13 @@ Specifies the Zikula version for which the application should be generated.
 
 Can be one of the following options:
 
-* `ZK30` - Targets the last stable Zikula 3.0.x version.
-* `ZK3DEV` - Targets the last unstable Zikula 3.x version.
-* `ZK20` - Targets the last stable Zikula 2.0.x version. This is the default value.
+* `ZK40` - Targets the last unstable Zikula 4.0.x version.
+* `ZK31` - Targets the last stable Zikula 3.1.x version.
+* `ZK30` - Targets the last stable Zikula 3.0.x version. This is the default value.
+
+The following options are deprecated and being removed in ModuleStudio 1.5.0:
+
+* `ZK20` - Targets the last stable Zikula 2.0.x version.
 * `ZK2DEV` - Targets the last unstable Zikula 2.x version and may include changes for the next upcoming 2.x core release.
 * `ZK15` - Targets the last stable Zikula 1.5.x version.
 * `ZK15DEV` - Targets the last unstable Zikula 1.5.x version and may include changes for the next upcoming 1.5.x core release.
@@ -437,8 +438,8 @@ Can be one of the following options:
 * `COUNTRY` - A [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) country code. A country selector is used in [edit pages](#edit-action). For the output in [view](#view-action) and [display](#display-action) templates an output modifier is used to display the full country name instead of the unreadable country code. If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
 * `CREDIT_CARD` - A credit card number. By default all available card schemes provided by [Symfony validator](https://symfony.com/doc/current/reference/constraints/CardScheme.html#schemes) are allowed.
 * `CURRENCY` - A [3-letter ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency name. Possible example values are `USD` or `EUR`. In [edit forms](#edit-action) it will be rendered as a currency selector. If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
-* `DATE_INTERVAL` - An interval of time which is persisted as a [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601#Durations) duration string. Only applicable for Zikula 2 and 3 targets.
-* `HOSTNAME` - A host name including a top-level domain. Possible example value: `example.com`. Special top-level domains reserved in [RFC 2606](https://tools.ietf.org/html/rfc2606) (`.invalid`, `.localhost`, etc.) are excluded. Used in Zikula 3 only.
+* `DATE_INTERVAL` - An interval of time which is persisted as a [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601#Durations) duration string.
+* `HOSTNAME` - A host name including a top-level domain. Possible example value: `example.com`. Special top-level domains reserved in [RFC 2606](https://tools.ietf.org/html/rfc2606) (`.invalid`, `.localhost`, etc.) are excluded.
 * `IBAN` - A bank account number in [IBAN (International Bank Account Number)](https://en.wikipedia.org/wiki/International_Bank_Account_Number) format.
 * `ICON` - A [Font Awesome](https://fontawesome.com/) icon. An icon selector is provided on [edit pages](#edit-action).
 * `LANGUAGE` - An [Unicode language](http://site.icu-project.org/) identifier. Possible example values are `fr` or `zh-Hant`. A language selector is used in [edit pages](#edit-action). For the output in [view](#view-action) and [display](#display-action) templates an output modifier is used to display the full name instead of the unreadable language code. If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
@@ -447,7 +448,7 @@ Can be one of the following options:
 * `PHONE_NUMBER` - A telephone number.
 * `TIME_ZONE` - A time zone. In [edit forms](#edit-action) such fields will be rendered using a time zone selector.
 * `UUID` - An [UUID (Universally Unique Identifier)](https://en.wikipedia.org/wiki/Universally_unique_identifier).
-* `WEEK` - An [ISO 8601](https://en.wikipedia.org/wiki/ISO_week_date) week number. Possible example value is `2011-W17`. Used in Zikula 3 only, represented by a [week form type](https://symfony.com/blog/new-in-symfony-4-4-week-form-type).
+* `WEEK` - An [ISO 8601](https://en.wikipedia.org/wiki/ISO_week_date) week number. Possible example value is `2011-W17`. Represented by a [week form type](https://symfony.com/blog/new-in-symfony-4-4-week-form-type).
 
 
 #### ISBN style
@@ -548,10 +549,8 @@ Represents a field type for storing email addresses.
 
 An email field has the following properties in addition to the common [abstract string field](#abstract-string-field) settings:
 
-* **checkMX** - A boolean to specify whether the MX record's validity of the given email's host is checked or not. Default value is `false`. This setting is considered **deprecated** and will be removed in a future version. It does not have any effect in Zikula 3 anymore.
-* **checkHost** - A boolean to specify whether the MX or A or AAAA record's validity of given email's host is checked or not. Default value is `false`. This setting is considered **deprecated** and will be removed in a future version. It does not have any effect in Zikula 3 anymore.
 * **length** - The length of this field. Default value is `255`.
-* **validationMode** - Defines the pattern the email address is validated against. Valid values are [shown here](#email-validation-mode). Default value is `HTML5`. This setting is only used in Zikula 3 and does not have any effect in earlier target core versions.
+* **validationMode** - Defines the pattern the email address is validated against. Valid values are [shown here](#email-validation-mode). Default value is `HTML5`.
 
 In [edit pages](#edit-action) the generator will use email input elements as well as validation on client and server side. For the output in [view](#view-action) and [display](#display-action) pages an icon will be shown linking the email address.
 
@@ -571,7 +570,6 @@ Represents a field type for storing urls.
 
 An url field has the following properties in addition to the common [abstract string field](#abstract-string-field) settings:
 
-* **checkDNS** - A boolean to specify whether to check if the associated host exists or not. Default value is `false`. This setting is considered **deprecated** and will be removed in a future version. It does not have any effect in Zikula 3 anymore.
 * **length** - The length of this field. Default value is `255`.
 
 In [edit pages](#edit-action) the generator will use url input elements as well as validation on client and server side. For the output in [view](#view-action) and [display](#display-action) pages an icon will be shown linking the url.
@@ -596,14 +594,14 @@ Image-specific settings (use **only** if you did not change `allowedExtensions`)
 * **maxWidth** - An integer for a maximum width. Default is `0` for no constraint. If set, the width of the image file must be less than or equal to this value in pixels.
 * **minHeight** - An integer for a minimum height. Default is `0` for no constraint. If set, the height of the image file must be greater than or equal to this value in pixels.
 * **maxHeight** - An integer for a maximum height. Default is `0` for no constraint. If set, the height of the image file must be less than or equal to this value in pixels.
-* **minPixels** - An integer for a minimum amount of pixels. Default is `0` for no constraint. If set, the image's amount of pixels must be greater than or equal to this value. Only applicable for Zikula 2 and 3 targets.
-* **maxPixels** - An integer for a maximum amount of pixels. Default is `0` for no constraint. If set, the image's amount of pixels must be less than or equal to this value. Only applicable for Zikula 2 and 3 targets.
+* **minPixels** - An integer for a minimum amount of pixels. Default is `0` for no constraint. If set, the image's amount of pixels must be greater than or equal to this value.
+* **maxPixels** - An integer for a maximum amount of pixels. Default is `0` for no constraint. If set, the image's amount of pixels must be less than or equal to this value.
 * **minRatio** - A float for a minimum aspect ratio (width / height). Default is `0.00` for no constraint. If set, the aspect ratio of the image file must be greater than or equal to this value. If you for example want to ensure that only images are accepted which have a 16:9 format (like a width of 640 pixels and a height of 360 pixels) set both `minRatio` and `maxRatio` to `1.77`.
 * **maxRatio** - A float for a maximum aspect ratio (width / height). Default is `0.00` for no constraint. If set, the aspect ratio of the image file must be less than or equal to this value. If you for example want to ensure that only images are accepted which have a 16:9 format (like a width of 640 pixels and a height of 360 pixels) set both `minRatio` and `maxRatio` to `1.77`.
 * **allowSquare** - A boolean specifying whether square dimension is allowed or not. Default value is `true`. If this option is `false`, the image cannot be a square. If you want to force a square image, then set `allowLandscape` and `allowPortrait` both to `false`.
 * **allowLandscape** - A boolean specifying whether landscape dimension is allowed or not. Default value is `true`. If this option is `false`, the image cannot be landscape oriented. 
 * **allowPortrait** - A boolean specifying whether portrait dimension is allowed or not. Default value is `true`. If this option is `false`, the image cannot be portrait oriented.
-* **detectCorrupted** - A boolean specifying whether image contents are validated or not. Default value is `false`. If this option is `true`, the image contents are validated to ensure that the image is not corrupted. This validation is done with PHP's [imagecreatefromstring](https://secure.php.net/manual/en/function.imagecreatefromstring.php) function, which requires the [PHP GD extension](https://secure.php.net/manual/en/book.image.php) to be enabled. **Note:** as this property has been introduced in Symfony 3.1, it is only supported for Zikula 2 targets.
+* **detectCorrupted** - A boolean specifying whether image contents are validated or not. Default value is `false`. If this option is `true`, the image contents are validated to ensure that the image is not corrupted. This validation is done with PHP's [imagecreatefromstring](https://secure.php.net/manual/en/function.imagecreatefromstring.php) function, which requires the [PHP GD extension](https://secure.php.net/manual/en/book.image.php) to be enabled.
 
 In [edit pages](#edit-action) the generator will use upload input elements. If a field is mandatory the upload will be required when creating a new entity, but not when editing an existing one. If a field is optional (not mandatory) then it will be possible to delete existing uploads on editing.
 
@@ -691,7 +689,7 @@ A datetime field has the following properties in addition to the common [derived
 
 * **components** - Which [date/time components](#datetime-components) are activated. Default value is `DATE_TIME`.
 * **future** - A boolean specifying whether the value must be in the future or not. Default value is `false`.
-* **immutable** - A boolean specifying whether the value is immutable or not. Default value is `false`. If set to true `DateTimeImmutable` is used instead of `DateTime`. This setting is only reflected in the ORM for Zikula 3+ because it requires Doctrine DBAL 2.6 which was not available in earlier Zikula core versions.
+* **immutable** - A boolean specifying whether the value is immutable or not. Default value is `false`. If set to true `DateTimeImmutable` is used instead of `DateTime`.
 * **past** - A boolean specifying whether the value must be in the past or not. Default value is `false`.
 * **startDate** - A boolean specifying whether this field should be treated as a start date. Default value is `false`. If set to `true` this field is included into determining public visibility of the corresponding objects.
 * **endDate** - A boolean specifying whether this field should be treated as an end date. Default value is `false`. If set to `true` this field is included into determining public visibility of the corresponding objects.
