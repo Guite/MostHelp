@@ -38,6 +38,7 @@
 * Fixes for ICS templates (#1254).
 * Add missing cast to getter for decimal fields (#1257).
 * Removed colons from form labels.
+* Update changed user names in log entries (#1251).
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.5.0).
 
 ## ModuleStudio 1.4.0 (June 26, 2020)
