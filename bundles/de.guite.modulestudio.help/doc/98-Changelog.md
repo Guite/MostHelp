@@ -19,6 +19,9 @@
 
 ### Generator changes
 
+* Generated bundles require at least PHP 8.0.
+* Use property type hints; remove unrequired casts in setter methods.
+* Use constructor property promotion.
 * Fixed display hook processing on edit and delete pages.
 * Fixed regression regarding filtering user fields.
 * Fixed wrong import in `ConnectionsMenuListener`.
