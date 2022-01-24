@@ -22,6 +22,8 @@
 * Generated bundles require at least PHP 8.0.
 * Use property type hints; remove unrequired casts in setter methods.
 * Use constructor property promotion.
+* Use other PHP 8 features (e.g. nullsafe operator, non-capturing catches, `::class` on objects).
+* Annotate Doctrine collection so PhpStorm can provide its generics support.
 * Fixed display hook processing on edit and delete pages.
 * Fixed regression regarding filtering user fields.
 * Fixed wrong import in `ConnectionsMenuListener`.
