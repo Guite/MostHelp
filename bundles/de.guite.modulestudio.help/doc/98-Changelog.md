@@ -25,6 +25,7 @@
 * Use other PHP 8 features (e.g. nullsafe operator, non-capturing catches, `::class` on objects).
 * Annotate Doctrine collection so PhpStorm can provide its generics support.
 * Use native PHP attributes for validation constraints, route definitions and setter injections.
+* Introduce repository interfaces and utilise autowiring for them using `ServiceEntityRepository(Interface)` (#1253).
 * Fixed display hook processing on edit and delete pages.
 * Fixed regression regarding filtering user fields.
 * Fixed wrong import in `ConnectionsMenuListener`.
