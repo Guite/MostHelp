@@ -26,6 +26,7 @@
 * Annotate Doctrine collection so PhpStorm can provide its generics support.
 * Use native PHP attributes for validation constraints, route definitions and setter injections.
 * Introduce repository interfaces and utilise autowiring for them using `ServiceEntityRepository(Interface)` (#1253).
+* Introduce application specific entity interfaces for easier separation of entities inside event listeners and subscribers.
 * Fixed display hook processing on edit and delete pages.
 * Fixed regression regarding filtering user fields.
 * Fixed wrong import in `ConnectionsMenuListener`.
