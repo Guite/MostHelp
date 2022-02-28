@@ -19,7 +19,7 @@
 
 ### Generator changes
 
-* Generated bundles require at least PHP 8.0.
+* Generated bundles require at least PHP 8.0 (for Zikula 3.0.*) or PHP 8.1 (for Zikula 3.1.* and 4.0.*).
 * Use property type hints; remove unrequired casts in setter methods.
 * Use constructor property promotion.
 * Use other PHP 8 features (e.g. nullsafe operator, non-capturing catches, `::class` on objects).
