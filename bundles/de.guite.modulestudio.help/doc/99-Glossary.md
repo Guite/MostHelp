@@ -48,7 +48,6 @@
 * **Graphical Editing Framework** - Eclipse-based framework for the realisation of concrete notations in the form of graphical editors.
 * **Graphical Modeling Framework** - Generative bridge between the Eclipse Modeling Framework and the Graphical Editing Framework. Creates graphical editors based on Ecore-based meta models.
 * **GUI** - Graphical User Interface
-* **Hook** - Special form of a Zikula application, enriches other components by additional functionality.
 * **HTML** - Hypertext Markup Language
 * **IDE** - Integrated Development Environment
 * **Interceptor** - Special method in PHP which is called automatically on certain events.

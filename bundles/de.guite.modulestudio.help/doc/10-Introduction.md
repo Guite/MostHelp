@@ -52,7 +52,7 @@ The Zikula Application Framework is a powerful solution for realising web applic
 
 Since Zikula already provides many basic functions for running web projects, like management for users, groups and permissions as well as means for content management, custom modules can typically focus on implementing additional data structures and behaviour. And this is where ModuleStudio can help you. Whether you do a product database, a social network or a forum: they are different from a functional point of view only. Technically they are equally implemented!
 
-A module is basically very similarly structured as a Symfony bundle. Under the hood Zikula modules and themes are nothing else than special bundle types. The main difference here is that they can be installed, enabled, disabled and uninstalled on runtime using the extension and theme management modules in the Zikula administration area. Also modules can utilise some additional functionality provided by Zikula which are expressed by capabilities. For example modules can work with each other using a flexible hook system.
+A module is basically very similarly structured as a Symfony bundle. Under the hood Zikula modules and themes are nothing else than special bundle types. The main difference here is that they can be installed, enabled, disabled and uninstalled on runtime using the extension and theme management modules in the Zikula administration area.
 
 ## Component overview
 

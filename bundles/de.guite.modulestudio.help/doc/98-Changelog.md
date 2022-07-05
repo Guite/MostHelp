@@ -16,6 +16,7 @@
 * Removed obsolete application properties `generateMailzApi`, `generateNewsletterPlugin`, `generateTagSupport`.
 * Removed obsolete email field properties `checkMX`, `checkHost`.
 * Removed obsolete URL field property `checkDNS`.
+* Removed hooks support entirely.
 
 ### Generator changes
 

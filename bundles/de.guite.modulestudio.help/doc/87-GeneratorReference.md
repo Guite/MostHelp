@@ -97,7 +97,6 @@ In addition, an application can configure several further properties to customis
 * **generateIcsTemplates** - A boolean specifying whether ICS (iCalendar) templates should be generated or not. Requires start date and end date fields on corresponding entities. Default value is `true`.
 * **generatePdfSupport** - A boolean specifying whether support for exporting PDF files should be generated or not. Default value is `false`.
 * **authenticationMethod** - Allows to generate a skeleton for an authentication method implementation. Default value is `NONE` which means that no authentication method should be provided by the generated application. `REMOTE` represents a ReEntrant method while `LOCAL` stands for a NonReEntrant method. See [this documentation](https://docs.ziku.la/AccessControl/Authentication/Dev/authenticationmethodinterface.html) for more details about this.
-* **filterHookProvider** - Allows to specify whether a [filter hook provider](https://docs.ziku.la/Development/Hooks/index.html) should be generated for the application. Default value is `DISABLED`. Allowed values are explained [here](#hook-provider-mode). The generated filter hook provider only adds some dummy output and therefore needs to be customised in the empty child class.
 * **generateOnlyBaseClasses** - A boolean specifying whether only base classes should be generated. May be useful for doing simple upgrades without structural changes. Default value is `false`.
 * **skipFiles** - Comma-separated blacklist with each entry representing a file path which should not be generated. The file pathes are relative from the application's root folder, for example `Resources/views/Person/display.html.twig`. Default value is an empty string.
 * **markFiles** - Comma-separated list with file pathes which should be marked by special file names. The file pathes are relative from the application's root folder, for example `Resources/views/Person/display.html.twig`. Instead of the original name each file is generated using the pattern `filename.generated.extension`. This setting can be useful for doing bigger merges comparing the generated version with a customised one. Default value is an empty string.
@@ -180,16 +179,6 @@ Can be one of the following options:
 
 The generator uses this value in the corresponding module dependency created in the `composer.json` file.
 
-#### Hook provider mode
-
-Specifies a kind of hook provider to generate.
-
-Can be one of the following options:
-
-* `DISABLED` - Default value. No hook provider is generated for the corresponding setting.
-* `ENABLED` - Defines that a hook provider is generated for the corresponding setting.
-* `ENABLED_SELF` - Defines that a hook provider is generated for the corresponding setting which is allowed to hook to its own hook subscribers. For example an UI hook provider could allow to attach comments to other comments.
-
 ## Data layer
 
 The data layer in ModuleStudio has been designed for a precise description of entities and associations. To understand all the elements and properties please read the [Doctrine 2 documentation](https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/index.html) before.
@@ -224,7 +213,6 @@ It has the following properties:
 * **changeTrackingPolicy** - How change detection is being done (see [below](#entity-change-tracking-policy)). The default value is `DEFERRED_IMPLICIT`.
 * **deleteExpired** - Whether obsolete data should be automatically deleted. Requires a [datetime](#datetime-field) field which has been designated as end date. The default value is `false`. See also **hasArchive** below if you want to use archiving instead of deletion.
 * **displayPattern** - Pattern for displaying instances of this entity. In earlier ModuleStudio versions one had to mark one field as `leading`. However, this was not flexible enough in practice. With the display pattern you can specify arbitrary expressions which are used as textual representation for instances of this entity. For most cases you may want to declare just one field, which is done like `#title#`. A more complex example would be `#lastName#, #firstName# (#age# years)`. Of course all fields must exist in the entity with exactly the names used within the display pattern.
-* **formAwareHookProvider** - Allows to specify whether a [form aware hook provider](https://docs.ziku.la/Development/Hooks/index.html) should be generated for the entity. Default value is `DISABLED`. Allowed values are explained [here](#hook-provider-mode). The generated form aware hook providers only add some dummy form fields and therefore need to be customised in the empty child classes.
 * **geographical** - A boolean specifying whether the geographical extension is used or not. If set to `true` the generator will create two additional fields named `latitude` and `longitude`. Also it will consider them in all important application areas and provide an export for the *kml* format (if `generateKmlTemplates` setting has not been set to `false`). During the creation of a new entity with geographical support a nice geolocation feature can be used to ask the user for his current location (this needs to be activated in the application settings though; in addition you need to use HTTPS to make this work in most browsers). Also there is an included integration of the [Leaflet library](http://leafletjs.com/) allowing you to utilise comprehensive map interaction functionality in your application.
 
 ![Geolocation feature](images/generator_geographical_geolocation.png "Geolocation feature")
@@ -245,7 +233,6 @@ It has the following properties:
 * **onAccountDeletionLastEditor** - Controls how an app should change the last editor when users are deleted. Only relevant if `standardFields` is enabled. Default value is `ADMIN`. The available options are listed [here](#account-deletion-handler).
 * **ownerPermission** - Whether users should be able to manage and edit their own data. Defines also whether the workflow should include a *deferred* state. See [workflow types](#entity-workflow-type) for more information. The default value is `false`. If `ownerPermission` is enabled the *edit* permission level allows editing and deleting only for "own" content. For editing also content from other users at least the *add* level is required then. In addition, the generator creates configuration options which allow to enable a *private mode*. This extends the owner-based filter also to viewing and accessing data. So with the private option enabled, every user may only see his own data.
 * **readOnly** - A boolean specifying whether this entity is read only or not. If set to `true` creating new entities will still be possible, but not editing them.
-* **skipHookSubscribers** - Whether hook subscriber support should be skipped for this entity. The default value is `false`. If you set this option to `true` no support for hooks is generated for the corresponding entity.
 * **slugLength** - Length of slug field. Defaults to `190`. An entity is [sluggable](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/sluggable.md) as soon as at least one of its fields has set `sluggablePosition` to a value greater than `0`. Depending on the `tree` setting (explained below) and existing relationships slug support will automatically be extended to utilise tree slug handlers or relative slug handlers. Relative slugs will only be used for now if both entities (connected by the corresponding relationship) have sluggable fields. If there are multiple relationships found where both sides are sluggable the first one will be used for each direction (relative slug handler vs. inversed relative slug handler).
 * **slugSeparator** - Separator which will separate words in slug. Default value is `-` like in Zikula, too.
 * **slugStyle** - Which [slug style](#entity-slug-style) is used. Default value is `LOWERCASE`.
@@ -256,7 +243,6 @@ It has the following properties:
 ![Tree functionality with context menu and drag n drop](images/generator_tree.png "Tree functionality with context menu and drag n drop")
 
 * **standardFields** - A boolean specifying whether the standard fields extension is used or not. If set to `true` the entity will get four additional fields for storing the id of the user who created the item (`createdBy` join to `UserEntity`), the id of the user who did the last update (`updatedBy` join to `UserEntity`), as well as the creation and update dates (`createdDate` and `updatedDate`). This information will be included on [display](#display-action) and [edit](#edit-action) actions.
-* **uiHooksProvider** - Allows to specify whether a [UI hooks provider](https://docs.ziku.la/Development/Hooks/index.html) should be generated for the entity. Default value is `DISABLED`. Allowed values are explained [here](#hook-provider-mode). The generated UI hook providers allow for attaching entities to the subscriber areas which also includes the inline creation (and automatic assignment) of new entities. All assignments are stored in an additional database table so it is possible to attach the same entity to several different data objects (for example an image could be added to three news articles). Owning data objects are linked from the entity display pages, too. Existing assignments are automatically removed when the owning data object is deleted or the owning module is removed from the system.
 * **workflow** - The workflow which is applied to this entity. The default value is `NONE`. See [workflow types](#entity-workflow-type) for more information.
 
 An entity has the following references in addition to the common [data object](#data-object) settings:
