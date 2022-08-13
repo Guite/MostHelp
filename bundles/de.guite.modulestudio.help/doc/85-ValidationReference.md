@@ -22,7 +22,6 @@ The biggest part is a reference section listing all validation rules in detail a
 * The application must contain at least one entity. At the moment ModuleStudio wants a model with at least one entity. If you are modelling an extension without any data storage, just create some dummy elements.
 * The detail block requires external controller and finder component. If you enable `generateDetailBlock` you also need `generateExternalControllerAndFinder`.
 * The detail content type requires external controller and finder component. If you enable `generateDetailContentType` you also need `generateExternalControllerAndFinder`.
-* Scribite plug-ins require external controller and finder component. If you enable `generateScribitePlugins` you also need `generateExternalControllerAndFinder`.
 * Item action position both must not be enabled for view actions.
 * Item action icons flag must not be disabled if item action style is configured to use icons only.
 
@@ -134,7 +133,7 @@ The following list has been merged and includes therefore all keywords of all su
 * Only one field per entity may store the version. Can appear for integer fields if you enabled the `version` property for more than one field in the same entity.
 * Only one field per entity may represent a start date. Can appear for datetime and date fields if you enabled the `start date` property for more than one field in the same entity.
 * Only one field per entity may represent an end date. Can appear for datetime and date fields if you enabled the `end date` property for more than one field in the same entity.
-* Entities with a version field must use optimistic locking. Can appear for integer fields with the `version` property enabled. You must set the locking type of the corresponding entity to either `OPTIMISTIC` or `PAGELOCK_OPTIMISTIC`, depending on whether you want support the Zikula PageLock functionality in addition or not.
+* Entities with a version field must use optimistic locking. Can appear for integer fields with the `version` property enabled. You must set the locking type of the corresponding entity to `OPTIMISTIC`.
 * Entities with optimistic locking must contain a field declared as version field. The opposite rule to ensure that every entity using optimistic locking has a version field for storing and comparison the version as locking criteria.
 * The version attribute can not be combined with a primary key. A field can only act as either a version or a primary key, not both at the same time.
 * Entities with geographical extension have additional fields names (`longitude`, `latitude`). Thus your (fields may not contain these names | reference may not contain these (source | target) aliases). If an entity has activated the `geographical` extension ModuleStudio creates coordinate fields automatically in addition to the other fields in the model (as well as some usage of geolocation when creating new entities).
@@ -152,7 +151,7 @@ The following list has been merged and includes therefore all keywords of all su
 * The maximum length for an integer field is `18`. Corresponds to a `bigint` mapping in Doctrine 2.
 * Minimum value must not be larger than maximum value.
 * An integer field must not act as `percentage` and `range` at the same time.
-* Entities with an aggregate field should use a locking strategy (optimistic or pessimistic read). If an integer field acts as aggregate field the corresponding entity must use one locking strategy of `OPTIMISTIC`, `PAGELOCK_OPTIMISTIC`, `PESSIMISTIC_READ` or `PAGELOCK_PESSIMISTIC_READ`, depending on whether you want support the Zikula PageLock functionality in addition or not.
+* Entities with an aggregate field should use a locking strategy (optimistic or pessimistic read). If an integer field acts as aggregate field the corresponding entity must use one locking strategy of `OPTIMISTIC` or `PESSIMISTIC_READ`.
 * Aggregate fields work only in combination with an outgoing and bidirectional one-to-many relationship with persist cascade.
 * Naming of aggregateFor attribute values must follow the syntax `targetAlias#targetFieldName` (for example `views#amount`). If an integer field acts as aggregate field the property `aggregate for` must define the target alias of corresponding outgoing and bidirectional one-to-many relationship with persist cascade. After a `.` char as delimiter the name of the target field (to be aggregated) follows.
 * The default value for a number field must be a floating point number.
