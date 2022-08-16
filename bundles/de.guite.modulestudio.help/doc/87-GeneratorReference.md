@@ -65,12 +65,6 @@ In addition, an application can configure several further properties to customis
 * **isSystemModule** - A boolean specifying whether the model describes a system module or not. Default value is `false`.
 * **amountOfExampleRows** - The amount of example rows to create for entities in this application. Default value is `0`. Note that if you activate the `categorisable` property for an entity the generated installer relies on that you did not remove the default categories of Zikula.
 * **generateAccountApi** - A boolean specifying whether account panel integration should be generated or not. Default value is `true`.
-* **generateSearchApi** - A boolean specifying whether search integration should be generated or not. Requires at least one string or text field in any entity. Default value is `true`.
-* **generateListBlock** - A boolean specifying whether a generic list block should be generated or not. Default value is `true`.
-* **generateDetailBlock** - A boolean specifying whether a generic detail view block should be generated or not. Requires at least one entity containing a display action. Default value is `true`.
-* **generateModerationBlock** - A boolean specifying whether a moderation block should be generated or not. Requires at least one entity with a workflow including approval. Default value is `true`.
-* **generateListContentType** - A boolean specifying whether a content type for collection lists should be generated or not. Default value is `true`.
-* **generateDetailContentType** - A boolean specifying whether a content type for single objects should be generated or not. Requires at least one entity containing a display action. Default value is `true`.
 * **generateModerationPanel** - A boolean specifying whether a moderation panel should be generated or not. Requires at least one entity with a workflow including approval. Default value is `true`.
 * **generateExternalControllerAndFinder** - A boolean specifying whether a controller for external calls providing a generic finder component should be generated or not. Default value is `true`. Works only for entities containing either a [display action](#display-action) or at least one [upload field](#upload-field) supporting images.
 * **generateRssTemplates** - A boolean specifying whether RSS view templates should be generated or not. Default value is `true`.
@@ -583,7 +577,7 @@ Image-specific settings (use **only** if you did not change `allowedExtensions`)
 * **allowSquare** - A boolean specifying whether square dimension is allowed or not. Default value is `true`. If this option is `false`, the image cannot be a square. If you want to force a square image, then set `allowLandscape` and `allowPortrait` both to `false`.
 * **allowLandscape** - A boolean specifying whether landscape dimension is allowed or not. Default value is `true`. If this option is `false`, the image cannot be landscape oriented. 
 * **allowPortrait** - A boolean specifying whether portrait dimension is allowed or not. Default value is `true`. If this option is `false`, the image cannot be portrait oriented.
-* **detectCorrupted** - A boolean specifying whether image contents are validated or not. Default value is `false`. If this option is `true`, the image contents are validated to ensure that the image is not corrupted. This validation is done with PHP's [imagecreatefromstring](https://secure.php.net/manual/en/function.imagecreatefromstring.php) function, which requires the [PHP GD extension](https://secure.php.net/manual/en/book.image.php) to be enabled.
+* **detectCorrupted** - A boolean specifying whether image content is validated or not. Default value is `false`. If this option is `true`, the image content is validated to ensure that the image is not corrupted. This validation is done with PHP's [imagecreatefromstring](https://secure.php.net/manual/en/function.imagecreatefromstring.php) function, which requires the [PHP GD extension](https://secure.php.net/manual/en/book.image.php) to be enabled.
 
 In [edit pages](#edit-action) the generator will use upload input elements. If a field is mandatory the upload will be required when creating a new entity, but not when editing an existing one. If a field is optional (not mandatory) then it will be possible to delete existing uploads on editing.
 

@@ -17,10 +17,7 @@
 * Removed obsolete email field properties `checkMX`, `checkHost`.
 * Removed obsolete URL field property `checkDNS`.
 * Removed hooks support entirely.
-* Removed support for `PageLock` module.
-* Removed support for pending content.
-* Removed support for MultiHook needles.
-* Removed support for Scribite plugins.
+* Removed support for Zikula specific legacy content concepts (`PageLock` module, pending content, MultiHook needles, Scribite plugins, blocks, content types, search integration).
 * Removed support for separate admin templates.
 
 ### Generator changes

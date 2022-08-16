@@ -20,8 +20,6 @@ The biggest part is a reference section listing all validation rules in detail a
 * The prefix must be a valid identifier (e.g. no whitespace or special characters). Essentially the same as the global rule for names above. You should use lowercase here, but it will be generated in lowercase in all cases.
 * The application must have a version. The application version must conform to the pattern `x.y.z`. Valid values are *1.0.0*, *1.2.2*, but not *1.1* or *2.1.0beta*.
 * The application must contain at least one entity. At the moment ModuleStudio wants a model with at least one entity. If you are modelling an extension without any data storage, just create some dummy elements.
-* The detail block requires external controller and finder component. If you enable `generateDetailBlock` you also need `generateExternalControllerAndFinder`.
-* The detail content type requires external controller and finder component. If you enable `generateDetailContentType` you also need `generateExternalControllerAndFinder`.
 * Item action position both must not be enabled for view actions.
 * Item action icons flag must not be disabled if item action style is configured to use icons only.
 
