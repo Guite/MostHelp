@@ -19,6 +19,7 @@
 * Removed hooks support entirely.
 * Removed support for Zikula specific legacy content concepts (`PageLock` module, pending content, MultiHook needles, Scribite plugins, blocks, content types, search integration).
 * Removed support for separate admin templates.
+* Removed attributable behavior.
 
 ### Generator changes
 
