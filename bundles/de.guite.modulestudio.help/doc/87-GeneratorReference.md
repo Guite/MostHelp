@@ -41,7 +41,7 @@ Represents an application described by the model.
 
 It includes the following basic properties which are mainly, but not only used to create meaningful file headers:
 
-* **vendor** - The vendor of the application. Usually this is the name of a company or institution. The vendor and name of an application are combined to a unique name. This makes it possible to have for example multiple News modules installed from different vendors.
+* **vendor** - The vendor of the application. Usually this is the name of a company or institution. The vendor and name of an application are combined to a unique name. This makes it possible to have for example multiple `News` bundles installed from different vendors.
 * **author** - The author of the application. Usually this is the full name of the developer.
 * **email** - The email address of the developer.
 * **license** - The license of this application. Defaults to LGPL. If either GPL or LGPL are used the generator creates corresponding license files, too.
@@ -61,8 +61,8 @@ An application may furthermore have the following references:
 In addition, an application can configure several further properties to customise generator settings. You can control which features should be generated and take influence on some behavioural aspects of the generator.
 
 * **targetCoreVersion** - The targeted Zikula core version. See [below](#core-version).
-* **capabilities** - A comma-separated list of capability names the application offers. Capabilities are used in Zikula to express certain functions a module is offering. This allows for a loose coupling between modules. For example you can let `MyProductsModule` depend on `MyCustomerModule`, but this is a very tight coupling. With capabilities you could instead let the products module query Zikula for `any module which is able to handle customers`. You can read more about this in the [CapabilityApi description](https://docs.ziku.la/Development/Extensions/capabilityapi.html). Note the generator uses these just for specifying them in the generated composer file. There is no further support for the capabilities you want to provide yet.
-* **isSystemModule** - A boolean specifying whether the model describes a system module or not. Default value is `false`.
+* **capabilities** - A comma-separated list of capability names the application offers. Capabilities are used in Zikula to express certain functions a bundle is offering. This allows for a loose coupling between bundles. For example you can let `MyProductsBundle` depend on `MyCustomerBundle`, but this is a very tight coupling. With capabilities you could instead let the products bundle query Zikula for `any bundle which is able to handle customers`. You can read more about this in the [CapabilityApi description](https://docs.ziku.la/Development/Extensions/capabilityapi.html). Note the generator uses these just for specifying them in the generated composer file. There is no further support for the capabilities you want to provide yet.
+* **isSystemBundle** - A boolean specifying whether the model describes a system bundle or not. Default value is `false`.
 * **amountOfExampleRows** - The amount of example rows to create for entities in this application. Default value is `0`. Note that if you activate the `categorisable` property for an entity the generated installer relies on that you did not remove the default categories of Zikula.
 * **generateAccountApi** - A boolean specifying whether account panel integration should be generated or not. Default value is `true`.
 * **generateModerationPanel** - A boolean specifying whether a moderation panel should be generated or not. Requires at least one entity with a workflow including approval. Default value is `true`.
@@ -163,11 +163,11 @@ Specifies the kind of dependency to a certain application.
 
 Can be one of the following options:
 
-* `REQUIREMENT` - The module is required, for example to join related entities.
-* `RECOMMENDATION` - The module is recommended, for example to provide enhanced integration functionality.
-* `CONFLICT` - The module is in conflict with the modeled one, for example due to overlapping functionality.
+* `REQUIREMENT` - The bundle is required, for example to join related entities.
+* `RECOMMENDATION` - The bundle is recommended, for example to provide enhanced integration functionality.
+* `CONFLICT` - The bundle is in conflict with the modeled one, for example due to overlapping functionality.
 
-The generator uses this value in the corresponding module dependency created in the `composer.json` file.
+The generator uses this value in the corresponding bundle dependency created in the `composer.json` file.
 
 ## Data layer
 
@@ -201,7 +201,7 @@ It has the following properties:
 * **categorisableMultiSelection** - A boolean specifying whether multiple categories can be selected or not.
 * **changeTrackingPolicy** - How change detection is being done (see [below](#entity-change-tracking-policy)). The default value is `DEFERRED_IMPLICIT`.
 * **deleteExpired** - Whether obsolete data should be automatically deleted. Requires a [datetime](#datetime-field) field which has been designated as end date. The default value is `false`. See also **hasArchive** below if you want to use archiving instead of deletion.
-* **displayPattern** - Pattern for displaying instances of this entity. In earlier ModuleStudio versions one had to mark one field as `leading`. However, this was not flexible enough in practice. With the display pattern you can specify arbitrary expressions which are used as textual representation for instances of this entity. For most cases you may want to declare just one field, which is done like `#title#`. A more complex example would be `#lastName#, #firstName# (#age# years)`. Of course all fields must exist in the entity with exactly the names used within the display pattern.
+* **displayPattern** - Pattern for displaying instances of this entity. With the display pattern you can specify arbitrary expressions which are used as textual representation for instances of this entity. For most cases you may want to declare just one field, which is done like `#title#`. A more complex example would be `#lastName#, #firstName# (#age# years)`. Of course all fields must exist in the entity with exactly the names used within the display pattern.
 * **geographical** - A boolean specifying whether the geographical extension is used or not. If set to `true` the generator will create two additional fields named `latitude` and `longitude`. Also it will consider them in all important application areas and provide an export for the *kml* format (if `generateKmlTemplates` setting has not been set to `false`). During the creation of a new entity with geographical support a nice geolocation feature can be used to ask the user for his current location (this needs to be activated in the application settings though; in addition you need to use HTTPS to make this work in most browsers). Also there is an included integration of the [Leaflet library](http://leafletjs.com/) allowing you to utilise comprehensive map interaction functionality in your application.
 
 ![Geolocation feature](images/generator_geographical_geolocation.png "Geolocation feature")
@@ -503,7 +503,7 @@ An user field has the following properties in addition to the common [abstract i
 * **blameableChangeTriggerValue** - Optional value of field to use as change trigger (if type is `CHANGE`).
 * **onAccountDeletion** - Controls how an application should change the field when users are deleted. Default value is `GUEST`. The available options are listed [here](#account-deletion-handler).
 
-In [edit pages](#edit-action) the generator will implement an auto completion element allowing searching users by their name. For the output in [view](#view-action) and [display](#display-action) templates the user name is shown and linked to the corresponding user profile in case a profile module has been set in the Settings module administration.
+In [edit pages](#edit-action) the generator will implement an auto completion element allowing searching users by their name. For the output in [view](#view-action) and [display](#display-action) templates the user name is shown and linked to the corresponding user profile in case a profile bundle has been set in the Settings bundle administration.
 
 #### Entity blameable type
 
@@ -1033,7 +1033,7 @@ The generator transforms these values to the corresponding implementation. There
 
 #### Variables
 
-Container class for carrying module variables.
+Container class for carrying bundle variables.
 
 It includes the following properties:
 
@@ -1051,13 +1051,13 @@ If a model contains multiple variable containers the config page will use a tabb
 
 ![Configuration form with multiple sections](images/generator_config_tabbedpanel.png "Configuration form with multiple sections")
 
-By default a variable container serves only for grouping the contained variables. If the `composite` flag is enabled though behaviour is different. In this case the variable container results in a module variable itself which is persisted as an array containing all single variables as elements.
+By default a variable container serves only for grouping the contained variables. If the `composite` flag is enabled though behaviour is different. In this case the variable container results in a bundle variable itself which is persisted as an array containing all single variables as elements.
 
 For example imagine you want to create two variables for a payment method and a payment url.
 
-Option 1: create a variable container named `payment` with `composite=false` and two variables `paymentMethod` and `paymentUrl` in it. This results in two module variables `paymentMethod = ''` and `paymentUrl = ''`.
+Option 1: create a variable container named `payment` with `composite=false` and two variables `paymentMethod` and `paymentUrl` in it. This results in two bundle variables `paymentMethod = ''` and `paymentUrl = ''`.
 
-Option 2: create a variable container named `payment` with `composite=true` and two variables `method` and `url` in it. This results in one module variable `payment = ['method' => '', 'url' => '']`.
+Option 2: create a variable container named `payment` with `composite=true` and two variables `method` and `url` in it. This results in one bundle variable `payment = ['method' => '', 'url' => '']`.
 
 ## Controller layer
 
@@ -1148,11 +1148,11 @@ For all entities having another workflow than `NONE` there are configuration opt
 
 ### Workflow customisation
 
-If you need to use a more custom workflow or if you want to let several entities in multiple modules the same workflow you can do the following:
+If you need to use a more custom workflow or if you want to let several entities in multiple bundles the same workflow you can do the following:
 
-1. Open the configuration page of one module. The configuration form has one tab for workflow-related settings. Within this tab you find links to a graphical workflow editor which allows to create a custom workflow based on an existing one. Of course you can also just use a text editor instead if you know the details (see below).
+1. You can edit the generated workflow YAML files using a text editor.
 2. When you are finished you need to save this workflow in `app/Resources/workflows/`.
-3. All entities using your custom workflow must not occur in any other workflows. So you need to customise or remove the generated workflow files within the corresponding modules.
+3. All entities using your custom workflow must not occur in any other workflows. So you need to customize or remove the generated workflow files within the corresponding bundles.
 
 ### Further resources
 

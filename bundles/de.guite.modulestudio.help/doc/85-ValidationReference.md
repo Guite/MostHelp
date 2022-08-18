@@ -16,7 +16,7 @@ The biggest part is a reference section listing all validation rules in detail a
 * The application must have an email address.
 * The value for the application email field must be a valid email address.
 * The value for the application url field must be a valid url. Protocols allowed per default are *http* and *https*.
-* The application must have a prefix for it's database tables. This prefix is required to prevent naming collisions between several modules. Otherwise it would be a problem if multiple extensions use common table names like *user* or *category*. The prefix must have a length of more than two chars, whereby a at least four is recommended.
+* The application must have a prefix for it's database tables. This prefix is required to prevent naming collisions between several bundles. Otherwise it would be a problem if multiple extensions use common table names like *user* or *category*. The prefix must have a length of more than two chars, whereby a at least four is recommended.
 * The prefix must be a valid identifier (e.g. no whitespace or special characters). Essentially the same as the global rule for names above. You should use lowercase here, but it will be generated in lowercase in all cases.
 * The application must have a version. The application version must conform to the pattern `x.y.z`. Valid values are *1.0.0*, *1.2.2*, but not *1.1* or *2.1.0beta*.
 * The application must contain at least one entity. At the moment ModuleStudio wants a model with at least one entity. If you are modelling an extension without any data storage, just create some dummy elements.
@@ -25,7 +25,7 @@ The biggest part is a reference section listing all validation rules in detail a
 
 ### Referred application
 
-* The imported application must have a name. Use the real name of the module being imported.
+* The imported application must have a name. Use the real name of the bundle being imported.
 * Please specify the minimum version for the dependency. The minimum version must conform to the pattern `x.y.z`.
 * Please specify the maximum version for the dependency. The maximum version must conform to the pattern `x.y.z`.
 * The minimum version must not be greater than the maximum version.
@@ -81,7 +81,7 @@ The biggest part is a reference section listing all validation rules in detail a
 
 * Every field must have a name. Field name must have a length of at least two chars. Should have more than three chars.
 * Field names must be unique.
-* Field name is a reserved identifier (`module`, `type`, `func`, `config`, `ajax`, `external`, `lang`, `theme`, `newlang`, `newtheme`). These names are reserved.
+* Field name is a reserved identifier (`config`, `ajax`, `external`, `theme`). These names are reserved.
 * Field name is a reserved identifier (`_controller`, `_method`, `_locale`). These are reserved vars in the Symfony framework.
 * Field name is a reserved identifier (`workflowState`). This list field is added automatically by a model-to-model transformation before the actual generation happens.
 * Field name is a reserved database keyword. ModuleStudio prevents the usage of keywords which are reserved in some database systems. Background is that there are no column prefixes anymore. For a list of all keywords see [the following section](#reserved-database-keywords).
@@ -301,7 +301,7 @@ Includes basically all relationships in the data layer except inheritance.
 
 ### Controller
 
-* Entity name is a reserved identifier (`module`, `type`, `func`, `config`, `ajax`, `external`, `lang`, `theme`, `newlang`, `newtheme`). These names are reserved.
+* Entity name is a reserved identifier (`config`, `ajax`, `external`, `theme`). These names are reserved.
 * There must not exist more than one (`index` | `view` | `display` | `edit` | `delete`) action in one entity.
 * Names of custom actions in one entity must be unique.
 
