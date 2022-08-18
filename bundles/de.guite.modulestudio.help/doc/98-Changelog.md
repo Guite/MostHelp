@@ -23,12 +23,12 @@
 
 ### Generator changes
 
-* Generated bundles require at least PHP 8.0 (for Zikula 3.0) or PHP 8.1 (for Zikula 3.1 and 4.0).
+* Generated bundles require at least PHP 8.1 and Zikula 4.0 (Symfony 5.4+).
 * Use property type hints; remove unrequired casts in setter methods.
 * Use constructor property promotion.
-* Use other PHP 8 features (e.g. nullsafe operator, non-capturing catches, `::class` on objects).
 * Annotate Doctrine collection so PhpStorm can provide its generics support.
-* Use native PHP attributes for validation constraints, route definitions and setter injections.
+* Use native PHP attributes for validation constraints, route definitions, setter injections and ORM mappings.
+* Use other PHP 8 features (e.g. nullsafe operator, non-capturing catches, `::class` on objects).
 * Introduce repository interfaces and utilise autowiring for them using `ServiceEntityRepository(Interface)` (#1253).
 * Introduce application specific entity interfaces for easier separation of entities inside event listeners and subscribers.
 * Fixed display hook processing on edit and delete pages.
