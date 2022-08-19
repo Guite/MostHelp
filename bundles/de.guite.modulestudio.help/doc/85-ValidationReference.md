@@ -6,7 +6,7 @@ The biggest part is a reference section listing all validation rules in detail a
 
 ### Global rules
 
-* The name must be a valid identifier (e.g. no whitespace or special characters). Mixed case is recommended to get more readable messages generated, for example *mySpecialUser*.
+* The name must be a valid identifier (e.g. no whitespace or special characters). Camel case is recommended to get more readable messages generated, for example *mySpecialUser*.
 
 ### Application
 

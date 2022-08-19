@@ -53,7 +53,7 @@ Below we assume an example model containing an entity for products. This entity 
 
 Certainly you can name this field just `additionalshippingcosts`. This will work normally and also won't cause any problems. But it takes away the possibility from the generator to differently format the name depending on the use case.
 
-Recommended for ModuleStudio is the so-called **mixed case** notation: with this the field from above would be named `additionalShippingCosts`. First this is much more readable for humans dealing up with the model and/or the source code. Second the generator can work more flexibly with this name - here are some examples:
+Recommended for ModuleStudio is the so-called **camel case** notation: with this the field from above would be named `additionalShippingCosts`. First this is much more readable for humans dealing up with the model and/or the source code. Second the generator can work more flexibly with this name - here are some examples:
 
 * Name of the field for code and Doctrine: `additionalShippingCosts`
 * Readable name with capitalisation, for example for a form label: `Additional shipping costs:`

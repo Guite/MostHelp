@@ -835,9 +835,9 @@ A relationship may have the following references:
 
 * **application** - Reference to the owning element.
 * **source** - Allows referencing a [target data object](#data-object).
-* **sourceAlias** - The alias for the source entity, required to have multiple associations between the same entities. The name should reflect the cardinality on the source side (singular or plural forms) depending on the relationship type. As with all names mixed case is preferred, for example `personAddresses`.
+* **sourceAlias** - The alias for the source entity, required to have multiple associations between the same entities. The name should reflect the cardinality on the source side (singular or plural forms) depending on the relationship type. As with all names camel case is preferred, for example `personAddresses`.
 * **target** - Allows referencing a [source data object](#data-object).
-* **targetAlias** - The alias for the target entity, required to have multiple associations between the same entities. The name should reflect the cardinality on the target side (singular or plural forms) depending on the relationship type. As with all names mixed case is preferred, for example `personAddresses`.
+* **targetAlias** - The alias for the target entity, required to have multiple associations between the same entities. The name should reflect the cardinality on the target side (singular or plural forms) depending on the relationship type. As with all names camel case is preferred, for example `personAddresses`.
 
 #### Join relationship
 
