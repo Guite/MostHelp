@@ -20,6 +20,8 @@
 * Removed support for Zikula specific legacy content concepts (`PageLock` module, pending content, MultiHook needles, Scribite plugins, blocks, content types, search integration).
 * Removed support for separate admin templates.
 * Removed attributable behavior.
+* Removed support for example data.
+* Removed support for authentication method skeletons.
 
 ### Generator changes
 
