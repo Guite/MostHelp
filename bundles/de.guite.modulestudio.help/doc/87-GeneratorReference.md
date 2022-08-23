@@ -33,7 +33,7 @@ It includes the following properties:
 
 Documentation is used in several places of generated applications. For example if any documentation is defined for an entity this will be shown right after the heading of the corresponding view template. So you could for example add a description for the *person* entity explaining what persons are and what information they store. If a user then navigates to the persons list he knows immediately what he is looking at. Documentation for single fields is used in editing forms to provide additional help.
 
-In general documentation entries are generated as Gettext calls to support translations. For example `This is a test.` results in `{% trans %}This is a test.{% endtrans %}`. For entities and variable containers there is also a special expert feature available: you can use Twig variables in the documentation field. So `These are {{myVar}} and {{   otherVar  }}.` results in `{% trans with {'%myVar%': myVar|default, '%otherVar%': otherVar|default} %}These are %myVar% and %otherVar%.{% endtrans %}`.
+In general documentation entries are generated as Translator calls to support translations. For example `This is a test.` results in `{% trans %}This is a test.{% endtrans %}`. For entities there is also a special expert feature available: you can use Twig variables in the documentation field. So `These are {{myVar}} and {{   otherVar  }}.` results in `{% trans with {'%myVar%': myVar|default, '%otherVar%': otherVar|default} %}These are %myVar% and %otherVar%.{% endtrans %}`.
 
 #### Application
 
@@ -1034,7 +1034,6 @@ Container class for carrying bundle variables.
 
 It includes the following properties:
 
-* **composite** - Whether this container should act as a composite variable or not. Default value is `false`. See below for a detailed description of what this property does.
 * **sortOrder** - The sorting position for when using multiple variable sections. Default value is `1`.
 
 A var container may have the following references:
@@ -1042,19 +1041,8 @@ A var container may have the following references:
 * **application** - Reference to the owning element.
 * **fields** - Allows referencing one or more [fields](#field).
 
-As soon as at least one variable container exists the generator creates an additional `config` controller to let the site administrator manage available settings. For each variable the generator creates an according input element in the config page. Also the variable is handled properly in the installer class which takes care for initialisation and removal on uninstallation.
-
-If a model contains multiple variable containers the config page will use a tabbed panel containing a tab for each container, sorted by the `sortOrder` field, like shown in the following screenshot. This allows separating settings in bigger models into logical semantic groups.
-
-![Configuration form with multiple sections](images/generator_config_tabbedpanel.png "Configuration form with multiple sections")
-
-By default a variable container serves only for grouping the contained variables. If the `composite` flag is enabled though behaviour is different. In this case the variable container results in a bundle variable itself which is persisted as an array containing all single variables as elements.
-
-For example imagine you want to create two variables for a payment method and a payment url.
-
-Option 1: create a variable container named `payment` with `composite=false` and two variables `paymentMethod` and `paymentUrl` in it. This results in two bundle variables `paymentMethod = ''` and `paymentUrl = ''`.
-
-Option 2: create a variable container named `payment` with `composite=true` and two variables `method` and `url` in it. This results in one bundle variable `payment = ['method' => '', 'url' => '']`.
+The generator creates a [bundle configuration](https://symfony.com/doc/current/components/config/definition.html) for variables.
+Multiple variable containers can be used to group settings into logical semantic groups.
 
 ## Controller layer
 

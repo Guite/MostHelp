@@ -17,7 +17,7 @@
 * Removed obsolete email field properties `checkMX`, `checkHost`.
 * Removed obsolete URL field property `checkDNS`.
 * Removed hooks support entirely.
-* Removed support for Zikula specific legacy content concepts (`PageLock` module, pending content, MultiHook needles, Scribite plugins, blocks, content types, search integration).
+* Removed support for Zikula specific legacy content concepts (PageLock module, pending content, MultiHook needles, Scribite plugins, blocks, content types, search integration).
 * Removed support for separate admin templates.
 * Removed attributable behavior.
 * Removed support for example data.
@@ -28,17 +28,15 @@
 * Generated bundles require at least PHP 8.1 and Zikula 4.0 (Symfony 5.4+).
 * Use property type hints; remove unrequired casts in setter methods.
 * Use constructor property promotion.
-* Annotate Doctrine collection so PhpStorm can provide its generics support.
 * Use native PHP attributes for validation constraints, route definitions, setter injections and ORM mappings.
 * Use other PHP 8 features (e.g. nullsafe operator, non-capturing catches, `::class` on objects).
-* Introduce repository interfaces and utilise autowiring for them using `ServiceEntityRepository(Interface)` (#1253).
+* Introduce repository interfaces and utilize autowiring for them using `ServiceEntityRepository(Interface)` (#1253).
 * Introduce application specific entity interfaces for easier separation of entities inside event listeners and subscribers.
-* Fixed display hook processing on edit and delete pages.
+* Variables are now processed as Symfony bundle configuration instead of having a config controller (no modvars anymore).
+* Annotate Doctrine collection so PhpStorm can provide its generics support.
 * Fixed regression regarding filtering user fields.
-* Fixed wrong import in `ConnectionsMenuListener`.
 * Fixed exception when editing entities with allowed but unset specific creation date.
 * Fixed paths to Leaflet assets for geographical entities in Zikula 3 (#1243).
-* Provide object identifier to form aware hook in Zikula 3.
 * Fixed regressions in auto completion functionality in Zikula 3.
 * Use lazy-loaded Twig extensions.
 * Provide default values for default coordinate fields to prevent invalid form state.

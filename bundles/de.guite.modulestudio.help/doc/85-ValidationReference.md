@@ -41,7 +41,6 @@ The biggest part is a reference section listing all validation rules in detail a
 * Data object names must be unique. For example there must not exist two entities which are both named `person`.
 * Every entity must have a (name | name for multiple instances). Entity (multiple) name must have a length of at least two chars. Should have at least four chars.
 * Entity (multiple) name must not contain underscores. Underscores are not allowed as they are used for class autoloading.
-* Data object name must not be `config`. The generator creates a dedicated config controller for handling configuration pages.
 * The amount of data objects is getting quite high. Maybe it makes sense to split up the model into two single applications. This warning appears if you have more than 14 data objects. Remember Zikula is a modular system. You can design whole families of extensions with ModuleStudio, so please try keeping complexity low and apply the *separation of concerns* principle.
 * A data object must not have the same name as the application. This case is reserved as it could make sense to use corresponding namespaces in generation for encapsulating some common code parts.
 
@@ -81,7 +80,7 @@ The biggest part is a reference section listing all validation rules in detail a
 
 * Every field must have a name. Field name must have a length of at least two chars. Should have more than three chars.
 * Field names must be unique.
-* Field name is a reserved identifier (`config`, `ajax`, `external`, `theme`). These names are reserved.
+* Field name is a reserved identifier (`ajax`, `external`, `theme`). These names are reserved.
 * Field name is a reserved identifier (`_controller`, `_method`, `_locale`). These are reserved vars in the Symfony framework.
 * Field name is a reserved identifier (`workflowState`). This list field is added automatically by a model-to-model transformation before the actual generation happens.
 * Field name is a reserved database keyword. ModuleStudio prevents the usage of keywords which are reserved in some database systems. Background is that there are no column prefixes anymore. For a list of all keywords see [the following section](#reserved-database-keywords).
@@ -301,7 +300,7 @@ Includes basically all relationships in the data layer except inheritance.
 
 ### Controller
 
-* Entity name is a reserved identifier (`config`, `ajax`, `external`, `theme`). These names are reserved.
+* Entity name is a reserved identifier (`ajax`, `external`, `theme`). These names are reserved.
 * There must not exist more than one (`index` | `view` | `display` | `edit` | `delete`) action in one entity.
 * Names of custom actions in one entity must be unique.
 
