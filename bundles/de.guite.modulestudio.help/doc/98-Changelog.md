@@ -11,8 +11,7 @@
 ### DSL / Modelling language changes
 
 * Reduced `slugLength` default and max value from 255 to 190 for better `utf8mb4` compatibility.
-* Removed support for older target core versions 1.5.x and 2.x.
-* Added support for newer target core versions (now supporting: `ZK30`, `ZK31`, `ZK40`). 
+* Target version is now a Symfony version (currently: `SF70`, `SF62`, `SF61`, `SF54`).
 * Removed obsolete application properties `generateMailzApi`, `generateNewsletterPlugin`, `generateTagSupport`.
 * Removed obsolete email field properties `checkMX`, `checkHost`.
 * Removed obsolete URL field property `checkDNS`.
@@ -25,7 +24,7 @@
 
 ### Generator changes
 
-* Generated bundles require at least PHP 8.1 and Zikula 4.0 (Symfony 5.4+).
+* Generated bundles require at least PHP 8.1 and Symfony 5.4 (Zikula 4.0).
 * Use property type hints; remove unrequired casts in setter methods.
 * Use constructor property promotion.
 * Use native PHP attributes for validation constraints, route definitions, setter injections and ORM mappings.

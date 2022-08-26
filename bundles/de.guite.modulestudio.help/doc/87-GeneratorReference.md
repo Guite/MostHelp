@@ -60,7 +60,7 @@ An application may furthermore have the following references:
 
 In addition, an application can configure several further properties to customise generator settings. You can control which features should be generated and take influence on some behavioural aspects of the generator.
 
-* **targetCoreVersion** - The targeted Zikula core version. See [below](#core-version).
+* **symfonyVersion** - The targeted Symfony version. See [below](#symfony-version).
 * **generateAccountApi** - A boolean specifying whether account panel integration should be generated or not. Default value is `true`.
 * **generateModerationPanel** - A boolean specifying whether a moderation panel should be generated or not. Requires at least one entity with a workflow including approval. Default value is `true`.
 * **generateExternalControllerAndFinder** - A boolean specifying whether a controller for external calls providing a generic finder component should be generated or not. Default value is `true`. Works only for entities containing either a [display action](#display-action) or at least one [upload field](#upload-field) supporting images.
@@ -100,22 +100,16 @@ In addition, an application can configure several further properties to customis
 * **displayActionsStyle** - Allows to specify the style used by the included item actions in display pages. Default value is `DROPDOWN`. Available options are explained [below](#item-actions-style).
 * **displayActionsWithIcons** - A boolean specifying whether item actions in display pages should contain an icon in addition to their label or not. Default value is `true`.
 
-#### Core version
+#### Symfony version
 
-Specifies the Zikula version for which the application should be generated.
+Specifies the Symfony version for which the application should be generated.
 
 Can be one of the following options:
 
-* `ZK40` - Targets the last unstable Zikula 4.0.x version.
-* `ZK31` - Targets the last stable Zikula 3.1.x version.
-* `ZK30` - Targets the last stable Zikula 3.0.x version. This is the default value.
-
-The following options are deprecated and being removed in ModuleStudio 1.5.0:
-
-* `ZK20` - Targets the last stable Zikula 2.0.x version.
-* `ZK2DEV` - Targets the last unstable Zikula 2.x version and may include changes for the next upcoming 2.x core release.
-* `ZK15` - Targets the last stable Zikula 1.5.x version.
-* `ZK15DEV` - Targets the last unstable Zikula 1.5.x version and may include changes for the next upcoming 1.5.x core release.
+* `SF70` - Targets the last unstable Symfony 7.0.x version.
+* `SF62` - Targets the last unstable Symfony 6.2.x version.
+* `SF61` - Targets the last stable Symfony 6.1.x version.
+* `SF54` - Targets the last stable Symfony 5.4.x version. This is the default value.
 
 #### Item actions position
 
