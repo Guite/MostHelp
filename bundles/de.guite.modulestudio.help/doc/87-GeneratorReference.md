@@ -109,6 +109,7 @@ Can be one of the following options:
 * `SF70` - Targets the last unstable Symfony 7.0.x version.
 * `SF62` - Targets the last unstable Symfony 6.2.x version.
 * `SF61` - Targets the last stable Symfony 6.1.x version.
+* `SF60` - Targets the last stable Symfony 6.0.x version.
 * `SF54` - Targets the last stable Symfony 5.4.x version. This is the default value.
 
 #### Item actions position
