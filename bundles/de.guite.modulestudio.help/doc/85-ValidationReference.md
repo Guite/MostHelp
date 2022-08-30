@@ -20,7 +20,7 @@ The biggest part is a reference section listing all validation rules in detail a
 * The prefix must be a valid identifier (e.g. no whitespace or special characters). Essentially the same as the global rule for names above. You should use lowercase here, but it will be generated in lowercase in all cases.
 * The application must have a version. The application version must conform to the pattern `x.y.z`. Valid values are *1.0.0*, *1.2.2*, but not *1.1* or *2.1.0beta*.
 * The application must contain at least one entity. At the moment ModuleStudio wants a model with at least one entity. If you are modelling an extension without any data storage, just create some dummy elements.
-* Item action position both must not be enabled for view actions.
+* Item action position both must not be enabled for index actions.
 * Item action icons flag must not be disabled if item action style is configured to use icons only.
 
 ### Referred application
@@ -301,7 +301,7 @@ Includes basically all relationships in the data layer except inheritance.
 ### Controller
 
 * Entity name is a reserved identifier (`ajax`, `external`, `theme`). These names are reserved.
-* There must not exist more than one (`index` | `view` | `display` | `edit` | `delete`) action in one entity.
+* There must not exist more than one (`index` | `detail` | `edit` | `delete`) action in one entity.
 * Names of custom actions in one entity must be unique.
 
 ### Action
@@ -309,4 +309,4 @@ Includes basically all relationships in the data layer except inheritance.
 #### Custom action
 
 * The action must have a name. Action name must not be `New`. Must have a length of at least four chars, whereby at least six chars are recommended.
-* Action name must not be `Index`, `View`, `Display`, `Edit` or `Delete`. These are reserved names and may therefore not be used for custom actions.
+* Action name must not be `Index`, `Detail`, `Edit` or `Delete`. These are reserved names and may therefore not be used for custom actions.

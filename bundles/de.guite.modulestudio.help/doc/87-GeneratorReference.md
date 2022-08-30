@@ -31,7 +31,7 @@ It includes the following properties:
 * **name** - The name of the element.
 * **documentation** - A description for documenting the element.
 
-Documentation is used in several places of generated applications. For example if any documentation is defined for an entity this will be shown right after the heading of the corresponding view template. So you could for example add a description for the *person* entity explaining what persons are and what information they store. If a user then navigates to the persons list he knows immediately what he is looking at. Documentation for single fields is used in editing forms to provide additional help.
+Documentation is used in several places of generated applications. For example if any documentation is defined for an entity this will be shown right after the heading of the corresponding index template. So you could for example add a description for the *person* entity explaining what persons are and what information they store. If a user then navigates to the persons list he knows immediately what he is looking at. Documentation for single fields is used in editing forms to provide additional help.
 
 In general documentation entries are generated as Translator calls to support translations. For example `This is a test.` results in `{% trans %}This is a test.{% endtrans %}`. For entities there is also a special expert feature available: you can use Twig variables in the documentation field. So `These are {{myVar}} and {{   otherVar  }}.` results in `{% trans with {'%myVar%': myVar|default, '%otherVar%': otherVar|default} %}These are %myVar% and %otherVar%.{% endtrans %}`.
 
@@ -63,17 +63,17 @@ In addition, an application can configure several further properties to customis
 * **symfonyVersion** - The targeted Symfony version. See [below](#symfony-version).
 * **generateAccountApi** - A boolean specifying whether account panel integration should be generated or not. Default value is `true`.
 * **generateModerationPanel** - A boolean specifying whether a moderation panel should be generated or not. Requires at least one entity with a workflow including approval. Default value is `true`.
-* **generateExternalControllerAndFinder** - A boolean specifying whether a controller for external calls providing a generic finder component should be generated or not. Default value is `true`. Works only for entities containing either a [display action](#display-action) or at least one [upload field](#upload-field) supporting images.
-* **generateRssTemplates** - A boolean specifying whether RSS view templates should be generated or not. Default value is `true`.
+* **generateExternalControllerAndFinder** - A boolean specifying whether a controller for external calls providing a generic finder component should be generated or not. Default value is `true`. Works only for entities containing either a [detail action](#detail-action) or at least one [upload field](#upload-field) supporting images.
+* **generateRssTemplates** - A boolean specifying whether RSS index templates should be generated or not. Default value is `true`.
 
 ![Example for RSS feed](images/generator_output_feed_rss.png "Example for RSS feed")
 
-* **generateAtomTemplates** - A boolean specifying whether Atom view templates should be generated or not. Default value is `true`.
+* **generateAtomTemplates** - A boolean specifying whether Atom index templates should be generated or not. Default value is `true`.
 
 ![Example for Atom feed](images/generator_output_feed_atom.png "Example for Atom feed")
 
-* **generateCsvTemplates** - A boolean specifying whether CSV view templates should be generated or not. Default value is `true`.
-* **generateXmlTemplates** - A boolean specifying whether XML display and view templates should be generated or not. Default value is `true`.
+* **generateCsvTemplates** - A boolean specifying whether CSV index templates should be generated or not. Default value is `true`.
+* **generateXmlTemplates** - A boolean specifying whether XML index and detail templates should be generated or not. Default value is `true`.
 
 ![Example for XML output](images/generator_output_xml.png "Example for XML output")
 
@@ -85,20 +85,20 @@ In addition, an application can configure several further properties to customis
 * **generateIcsTemplates** - A boolean specifying whether ICS (iCalendar) templates should be generated or not. Requires start date and end date fields on corresponding entities. Default value is `true`.
 * **generatePdfSupport** - A boolean specifying whether support for exporting PDF files should be generated or not. Default value is `false`.
 * **generateOnlyBaseClasses** - A boolean specifying whether only base classes should be generated. May be useful for doing simple upgrades without structural changes. Default value is `false`.
-* **skipFiles** - Comma-separated blacklist with each entry representing a file path which should not be generated. The file pathes are relative from the application's root folder, for example `Resources/views/Person/display.html.twig`. Default value is an empty string.
-* **markFiles** - Comma-separated list with file pathes which should be marked by special file names. The file pathes are relative from the application's root folder, for example `Resources/views/Person/display.html.twig`. Instead of the original name each file is generated using the pattern `filename.generated.extension`. This setting can be useful for doing bigger merges comparing the generated version with a customised one. Default value is an empty string.
+* **skipFiles** - Comma-separated blacklist with each entry representing a file path which should not be generated. The file pathes are relative from the application's root folder, for example `Resources/views/Person/detail.html.twig`. Default value is an empty string.
+* **markFiles** - Comma-separated list with file pathes which should be marked by special file names. The file pathes are relative from the application's root folder, for example `Resources/views/Person/detail.html.twig`. Instead of the original name each file is generated using the pattern `filename.generated.extension`. This setting can be useful for doing bigger merges comparing the generated version with a customised one. Default value is an empty string.
 * **timestampAllGeneratedFiles** - A boolean specifying whether the generated by message should contain a timestamp in all files or only in the Bootstrap file. Default value is `false`.
 * **versionAllGeneratedFiles** - A boolean specifying whether the generated by message should contain the ModuleStudio version in all files or only in the Bootstrap file. Default value is `true`.
 * **generatePoweredByBacklinksIntoFooterTemplates** - A boolean specifying whether generated footer templates should contain backlinks to the ModuleStudio website. Default value is `true`.
 * **generateTests** - A boolean specifying whether test cases should be generated or not. Default value is `true`. At the moment only some stubs are created though (see [generator issue #6 on GitHub](https://github.com/Guite/MostGenerator/issues/6)).
 * **writeModelToDocs** - A boolean specifying whether the model file and it's diagram image are written into the application's docs folder or not. Default value is `true`.
 * **generateTechnicalDocumentation** - A boolean specifying whether stand-alone HTML files with technical documentation should be generated or not. Default value is `true`. At the moment two reports are generated: _structural overview_ and _technical complexity_ - both in English and German.
-* **viewActionsPosition** - Allows to specify whether and where item actions should be available in view pages. Default value is `START`. Available options are explained [below](#item-actions-position).
-* **viewActionsStyle** - Allows to specify the style used by the included item actions in view pages. Default value is `DROPDOWN`. Available options are explained [below](#item-actions-style).
-* **viewActionsWithIcons** - A boolean specifying whether item actions in view pages should contain an icon in addition to their label or not. Default value is `true`.
-* **displayActionsPosition** - Allows to specify whether and where item actions should be available in display pages. Default value is `START`. Available options are explained [below](#item-actions-position).
-* **displayActionsStyle** - Allows to specify the style used by the included item actions in display pages. Default value is `DROPDOWN`. Available options are explained [below](#item-actions-style).
-* **displayActionsWithIcons** - A boolean specifying whether item actions in display pages should contain an icon in addition to their label or not. Default value is `true`.
+* **indexActionsPosition** - Allows to specify whether and where item actions should be available on index pages. Default value is `START`. Available options are explained [below](#item-actions-position).
+* **indexActionsStyle** - Allows to specify the style used by the included item actions on index pages. Default value is `DROPDOWN`. Available options are explained [below](#item-actions-style).
+* **indexActionsWithIcons** - A boolean specifying whether item actions on index pages should contain an icon in addition to their label or not. Default value is `true`.
+* **detailActionsPosition** - Allows to specify whether and where item actions should be available on detail pages. Default value is `START`. Available options are explained [below](#item-actions-position).
+* **detailActionsStyle** - Allows to specify the style used by the included item actions on detail pages. Default value is `DROPDOWN`. Available options are explained [below](#item-actions-style).
+* **detailActionsWithIcons** - A boolean specifying whether item actions on detail pages should contain an icon in addition to their label or not. Default value is `true`.
 
 #### Symfony version
 
@@ -119,9 +119,9 @@ Specifies the placement of item actions.
 Can be one of the following options:
 
 * `NONE` - No item actions are available at all.
-* `START` - Default value. Item actions are included at the beginning, for example in the first table column on view pages or the top area on display pages.
-* `END` - Item actions are included at the end, for example in the last table column on view pages or the bottom area on display pages.
-* `BOTH` - Combines `START` and `END`. Only allowed for display pages.
+* `START` - Default value. Item actions are included at the beginning, for example in the first table column on index pages or the top area on detail pages.
+* `END` - Item actions are included at the end, for example in the last table column on index pages or the bottom area on detail pages.
+* `BOTH` - Combines `START` and `END`. Only allowed for detail pages.
 
 #### Item actions style
 
@@ -188,7 +188,7 @@ Represents an entity in the data layer which is mapped to a database table.
 It has the following properties:
 
 * **actions** - Allows referencing one or more [actions](#action).
-* **categorisable** - A boolean specifying whether this entity should have categories or not. If set to `true` the generator creates an additional entity for managing the categories. During [edit actions](#edit-action) it is possible to select a desired category. This category will also be shown again on [display pages](#display-action) and in quick navigation forms of [view pages](#view-action). Generated applications also support filtering by categories as well as multiple category registries / properties / trees, however the implementation uses only `Main` per default. Also category-based permissions are supported. Note that if you activate the `categorisable` property for an entity the generated installer relies on that you did not remove the default categories of Zikula.
+* **categorisable** - A boolean specifying whether this entity should have categories or not. If set to `true` the generator creates an additional entity for managing the categories. During [edit actions](#edit-action) it is possible to select a desired category. This category will also be shown again on [detail pages](#detail-action) and in quick navigation forms of [index pages](#index-action). Generated applications also support filtering by categories as well as multiple category registries / properties / trees, however the implementation uses only `Main` per default. Also category-based permissions are supported. Note that if you activate the `categorisable` property for an entity the generated installer relies on that you did not remove the default categories of Zikula.
 * **categorisableMultiSelection** - A boolean specifying whether multiple categories can be selected or not.
 * **changeTrackingPolicy** - How change detection is being done (see [below](#entity-change-tracking-policy)). The default value is `DEFERRED_IMPLICIT`.
 * **deleteExpired** - Whether obsolete data should be automatically deleted. Requires a [datetime](#datetime-field) field which has been designated as end date. The default value is `false`. See also **hasArchive** below if you want to use archiving instead of deletion.
@@ -202,7 +202,7 @@ It has the following properties:
 * **identifierStrategy** - Whether and which [identifier strategy](#entity-identifier-strategy) is applied. The default value is `AUTO`.
 * **leading** - A boolean specifying whether this is the primary (and default) entity or not.
 * **lockType** - Whether and which [locking strategy](#entity-lock-type) is applied. The default value is `NONE`.
-* **loggable** - A boolean specifying whether the [Loggable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/loggable.md) for tracking changes and managing versions is used or not. If loggable is activated the DSL will also require adding a `version` field and [optimistic locking](#entity-lock-type) because it is handy to have the current version stored in the entity directly. The generator will create an additional entity for managing the log entries if set to `true`. Furthermore there is a history page generated which will be available as soon as more than one version of an entity exists. On this history page changes are shown for each version. If the entity has a display action there is a preview link to display each version. You can also preview multiple versions at the same time and arrange the windows next to each other for easy comparison. Also there are functions to revert an entity to a previous version and to compare different versions using a diff view. Finally if there are deleted entities there is a possibility to inspect and undelete them.
+* **loggable** - A boolean specifying whether the [Loggable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/loggable.md) for tracking changes and managing versions is used or not. If loggable is activated the DSL will also require adding a `version` field and [optimistic locking](#entity-lock-type) because it is handy to have the current version stored in the entity directly. The generator will create an additional entity for managing the log entries if set to `true`. Furthermore there is a history page generated which will be available as soon as more than one version of an entity exists. On this history page changes are shown for each version. If the entity has a detail action there is a preview link to display each version. You can also preview multiple versions at the same time and arrange the windows next to each other for easy comparison. Also there are functions to revert an entity to a previous version and to compare different versions using a diff view. Finally if there are deleted entities there is a possibility to inspect and undelete them.
 
 ![Change history page for loggable entity with revert functionality](images/generator_loggable_change_history.png "Change history page for loggable entity with revert functionality")
 
@@ -222,7 +222,7 @@ It has the following properties:
 
 ![Tree functionality with context menu and drag n drop](images/generator_tree.png "Tree functionality with context menu and drag n drop")
 
-* **standardFields** - A boolean specifying whether the standard fields extension is used or not. If set to `true` the entity will get four additional fields for storing the id of the user who created the item (`createdBy` join to `UserEntity`), the id of the user who did the last update (`updatedBy` join to `UserEntity`), as well as the creation and update dates (`createdDate` and `updatedDate`). This information will be included on [display](#display-action) and [edit](#edit-action) actions.
+* **standardFields** - A boolean specifying whether the standard fields extension is used or not. If set to `true` the entity will get four additional fields for storing the id of the user who created the item (`createdBy` join to `UserEntity`), the id of the user who did the last update (`updatedBy` join to `UserEntity`), as well as the creation and update dates (`createdDate` and `updatedDate`). This information will be included on [detail](#detail-action) and [edit](#edit-action) actions.
 * **workflow** - The workflow which is applied to this entity. The default value is `NONE`. See [workflow types](#entity-workflow-type) for more information.
 
 An entity has the following references in addition to the common [data object](#data-object) settings:
@@ -242,7 +242,7 @@ A field may have the following references:
 
 * **entity** - Reference to the owning [data object](#data-object).
 * **varContainer** - Reference to the owning [variable container](#variables).
-* **displayType** - Controls display-related settings for [view](#view-action) and [display](#display-action) pages. See [below](#field-display-type). The default value is `ALL`.
+* **displayType** - Controls display-related settings for [index](#index-action) and [detail](#detail-action) pages. See [below](#field-display-type). The default value is `ALL`.
 
 In the following sections all field types are explained in detail. Note that not all properties have an effect if a field is added to a variable container. For example several Doctrine extensions, like tree or translatable, work only with entities and not with variables.
 
@@ -252,16 +252,16 @@ Specifies where a specific field is shown and/or used.
 
 Can be one of the following options:
 
-* `NONE` - The field is neither shown on view nor display pages. It may also not be used for sorting on view pages.
-* `SORTING` - The field is neither shown on view nor display pages. It may be used for sorting on view pages though.
-* `VIEW` - The field is shown on view pages, but not on display pages. It may not be used for sorting on view pages.
-* `VIEW_SORTING` - The field is shown on view pages, but not on display pages. It may be used for sorting on view pages.
-* `DISPLAY` - The field is not shown on view pages, but on display pages. It may not be used for sorting on view pages.
-* `DISPLAY_SORTING` - The field is not shown on view pages, but on display pages. It may be used for sorting on view pages.
-* `VIEW_DISPLAY` - The field is shown on both view and display pages. It may not be used for sorting on view pages though.
-* `ALL` - Default value. The field is shown on both view and display pages. It may also be used for sorting on view pages.
+* `NONE` - The field is neither shown on index nor detail pages. It may also not be used for sorting on index pages.
+* `SORTING` - The field is neither shown on index nor detail pages. It may be used for sorting on index pages though.
+* `INDEX` - The field is shown on index pages, but not on detail pages. It may not be used for sorting on index pages.
+* `INDEX_SORTING` - The field is shown on index pages, but not on detail pages. It may be used for sorting on index pages.
+* `DETAIL` - The field is not shown on index pages, but on detail pages. It may not be used for sorting on index pages.
+* `DETAIL_SORTING` - The field is not shown on index pages, but on detail pages. It may be used for sorting on index pages.
+* `INDEX_DETAIL` - The field is shown on both index and detail pages. It may not be used for sorting on index pages though.
+* `ALL` - Default value. The field is shown on both index and detail pages. It may also be used for sorting on index pages.
 
-Note that this setting is ignored for [array fields](#array-field) and [object fields](#object-field). These are never shown on view pages.
+Note that this setting is ignored for [array fields](#array-field) and [object fields](#object-field). These are never shown on index pages.
 
 #### Derived field
 
@@ -302,9 +302,9 @@ Represents a field type for storing boolean values.
 
 A boolean field has the following properties in addition to the common [derived field](#derived-field) settings:
 
-* **ajaxTogglability** - Boolean indicating whether it is possible to switch this flag with ajax or not. If set to `true` all view and display pages will contain corresponding links instead of only simple state images.
+* **ajaxTogglability** - Boolean indicating whether it is possible to switch this flag with ajax or not. If set to `true` all index and detail pages will contain corresponding links instead of only simple state images.
 
-The generator will treat boolean values as checkbox input elements in [edit pages](#edit-action). For the output in [view](#view-action) and [display](#display-action) templates the `yesno` modifier is used to show an image indicating the boolean value (green check or red cross).
+The generator will treat boolean values as checkbox input elements in [edit pages](#edit-action). For the output in [index](#index-action) and [detail](#detail-action) templates the `yesno` modifier is used to show an image indicating the boolean value (green check or red cross).
 
 #### Abstract integer field
 
@@ -313,7 +313,7 @@ Represents an abstract integer field for grouping different implementations of t
 An abstract integer field has the following properties in addition to the common [derived field](#derived-field) settings:
 
 * **length** - The length of this field. This controls whether the Doctrine mapping type will be `integer` (5-11), `bigint` (> 11) or `smallint` (< 5). Default value is `11`.
-* **sortablePosition** - A boolean specifying whether this field stores the position for the [Sortable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/sortable.md) or not. If set to `true` this field will be used as default sorting criteria. In [view pages](#view-action) there is a drag n drop functionality offered for easy reordering.
+* **sortablePosition** - A boolean specifying whether this field stores the position for the [Sortable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/sortable.md) or not. If set to `true` this field will be used as default sorting criteria. In [index pages](#index-action) there is a drag n drop functionality offered for easy reordering.
 
 #### Integer field
 
@@ -322,15 +322,15 @@ Represents a field type for storing integer numbers.
 An integer field has the following properties in addition to the common [abstract integer field](#abstract-integer-field) settings:
 
 * **aggregateFor** - Aggregate field: one-to-many target alias and field name (syntax: `views.amount`) which causes the generator creating special methods for aggregation. More information can be found in [this article](https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/cookbook/aggregate-fields.html).
-* **counter** - A boolean whether this field should act as a counter. Default value is `false`. If set to `true` and the owning entity has a [display action](#display-action) each view of the detail page will be counted. This property can ideally be combined with `defaultValue "0", mandatory false, visible false`.
+* **counter** - A boolean whether this field should act as a counter. Default value is `false`. If set to `true` and the owning entity has a [detail action](#detail-action) each view of the detail page will be counted. This property can ideally be combined with `defaultValue "0", mandatory false, visible false`.
 * **maxValue** - Maximum value. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
 * **minValue** - Minimum value. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
 * **percentage** - A boolean specifying whether this field represents a percentage value or not. Default value is `false`.
 * **range** - A boolean specifying whether this field represents a range or not. Default value is `false`. In [edit forms](#edit-action) a range field is represented as a slider.
-* **unit** - An optional field unit which will be used in both [edit forms](#edit-action) and [display pages](#display-action). For example a field named `effort` could use a `unit` named `hours`. Units will be translated.
+* **unit** - An optional field unit which will be used in both [edit forms](#edit-action) and [detail pages](#detail-action). For example a field named `effort` could use a `unit` named `hours`. Units will be translated.
 * **version** - A boolean specifying whether this field should act as a version. Default value is `false`. If set to `true` the owning entity will need to use [optimistic locking](#entity-lock-type). If you need to track changes and manage versions you also need to activate `loggable` for the corresponding [entity](#entity).
 
-In [edit pages](#edit-action) the generator will use integer input elements as well as validation on client and server side. For the output in [view](#view-action) and [display](#display-action) templates the value will just be shown.
+In [edit pages](#edit-action) the generator will use integer input elements as well as validation on client and server side. For the output in [index](#index-action) and [detail](#detail-action) templates the value will just be shown.
 
 #### Number field
 
@@ -346,9 +346,9 @@ A number field has the following properties in addition to the common [derived f
 * **numberType** - Allows to define the number type for this field. Default value is `DECIMAL`. The available options are explained [below](#number-field-type).
 * **percentage** - A boolean specifying whether this field represents a percentage value or not. Default value is `false`.
 * **scale** - The amount of digits after the dot. Default value is `2`.
-* **unit** - An optional field unit which will be used in both [edit forms](#edit-action) and [display pages](#display-action). For example a field named `effort` could use a `unit` named `hours`. Units will be translated.
+* **unit** - An optional field unit which will be used in both [edit forms](#edit-action) and [detail pages](#detail-action). For example a field named `effort` could use a `unit` named `hours`. Units will be translated.
 
-In [edit pages](#edit-action) the generator will use number input elements as well as validation on client and server side. For the output in [view](#view-action) and [display](#display-action) templates the value will just be shown using a formatting filter.
+In [edit pages](#edit-action) the generator will use number input elements as well as validation on client and server side. For the output in [index](#index-action) and [detail](#detail-action) templates the value will just be shown using a formatting filter.
 
 #### Number field type
 
@@ -388,7 +388,7 @@ A string field has the following properties in addition to the common [abstract 
 * **ipTraceableChangeTriggerValue** - Optional value of field to use as change trigger (if type is `CHANGE`).
 * **length** - The length of this field. Default value is `255`.
 * **role** - Allows to define a semantic role for this field. Default value is `NONE`. The available options are explained [below](#string-role).
-* **unit** - An optional field unit which will be used in both [edit forms](#edit-action) and [display pages](#display-action). For example a field named `effort` could use a `unit` named `hours`. Units will be translated.
+* **unit** - An optional field unit which will be used in both [edit forms](#edit-action) and [detail pages](#detail-action). For example a field named `effort` could use a `unit` named `hours`. Units will be translated.
 
 In [edit pages](#edit-action) the generator will use single-line input elements for string fields - except you defined something else (using options like `role` or `isbn`). Other validations are added together and applied as well.
 
@@ -401,16 +401,16 @@ Can be one of the following options:
 * `NONE` - Default value. Means that the corresponding [string field](#string-field) just represents a string without special semantic.
 * `BIC` - A [BIC (business identifier code)](https://en.wikipedia.org/wiki/Business_Identifier_Code).
 * `COLOUR` - A html color code (like `#003399`). A colour picker is used in [edit pages](#edit-action) for convenient selection of colour codes.
-* `COUNTRY` - A [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) country code. A country selector is used in [edit pages](#edit-action). For the output in [view](#view-action) and [display](#display-action) templates an output modifier is used to display the full country name instead of the unreadable country code. If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
+* `COUNTRY` - A [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) country code. A country selector is used in [edit pages](#edit-action). For the output in [index](#index-action) and [detail](#detail-action) templates an output modifier is used to display the full country name instead of the unreadable country code. If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
 * `CREDIT_CARD` - A credit card number. By default all available card schemes provided by [Symfony validator](https://symfony.com/doc/current/reference/constraints/CardScheme.html#schemes) are allowed.
 * `CURRENCY` - A [3-letter ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency name. Possible example values are `USD` or `EUR`. In [edit forms](#edit-action) it will be rendered as a currency selector. If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
 * `DATE_INTERVAL` - An interval of time which is persisted as a [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601#Durations) duration string.
 * `HOSTNAME` - A host name including a top-level domain. Possible example value: `example.com`. Special top-level domains reserved in [RFC 2606](https://tools.ietf.org/html/rfc2606) (`.invalid`, `.localhost`, etc.) are excluded.
 * `IBAN` - A bank account number in [IBAN (International Bank Account Number)](https://en.wikipedia.org/wiki/International_Bank_Account_Number) format.
 * `ICON` - A [Font Awesome](https://fontawesome.com/) icon. An icon selector is provided on [edit pages](#edit-action).
-* `LANGUAGE` - An [Unicode language](http://site.icu-project.org/) identifier. Possible example values are `fr` or `zh-Hant`. A language selector is used in [edit pages](#edit-action). For the output in [view](#view-action) and [display](#display-action) templates an output modifier is used to display the full name instead of the unreadable language code. If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
+* `LANGUAGE` - An [Unicode language](http://site.icu-project.org/) identifier. Possible example values are `fr` or `zh-Hant`. A language selector is used in [edit pages](#edit-action). For the output in [index](#index-action) and [detail](#detail-action) templates an output modifier is used to display the full name instead of the unreadable language code. If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
 * `LOCALE` - A locale. Possible example values are `fr` ([ISO 639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)) or `fr_FR` (ISO 639-1 followed by [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) country code). The field will be rendered as a locale selector in [edit forms](#edit-action). If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
-* `PASSWORD` - A password. For this a password input element will be used instead of a normal one in [edit pages](#edit-action). Password fields are not shown on [view](#view-action) and [display](#display-action) pages for security reasons.
+* `PASSWORD` - A password. For this a password input element will be used instead of a normal one in [edit pages](#edit-action). Password fields are not shown on [index](#index-action) and [detail](#detail-action) pages for security reasons.
 * `PHONE_NUMBER` - A telephone number.
 * `TIME_ZONE` - A time zone. In [edit forms](#edit-action) such fields will be rendered using a time zone selector.
 * `UUID` - An [UUID (Universally Unique Identifier)](https://en.wikipedia.org/wiki/Universally_unique_identifier).
@@ -494,7 +494,7 @@ An user field has the following properties in addition to the common [abstract i
 * **blameableChangeTriggerValue** - Optional value of field to use as change trigger (if type is `CHANGE`).
 * **onAccountDeletion** - Controls how an application should change the field when users are deleted. Default value is `GUEST`. The available options are listed [here](#account-deletion-handler).
 
-In [edit pages](#edit-action) the generator will implement an auto completion element allowing searching users by their name. For the output in [view](#view-action) and [display](#display-action) templates the user name is shown and linked to the corresponding user profile in case a profile bundle has been set in the Settings bundle administration.
+In [edit pages](#edit-action) the generator will implement an auto completion element allowing searching users by their name. For the output in [index](#index-action) and [detail](#detail-action) templates the user name is shown and linked to the corresponding user profile in case a profile bundle has been set in the Users bundle configuration.
 
 #### Entity blameable type
 
@@ -518,7 +518,7 @@ An email field has the following properties in addition to the common [abstract 
 * **length** - The length of this field. Default value is `255`.
 * **validationMode** - Defines the pattern the email address is validated against. Valid values are [shown here](#email-validation-mode). Default value is `HTML5`.
 
-In [edit pages](#edit-action) the generator will use email input elements as well as validation on client and server side. For the output in [view](#view-action) and [display](#display-action) pages an icon will be shown linking the email address.
+In [edit pages](#edit-action) the generator will use email input elements as well as validation on client and server side. For the output in [index](#index-action) and [detail](#detail-action) pages an icon will be shown linking the email address.
 
 #### Email validation mode
 
@@ -538,7 +538,7 @@ An url field has the following properties in addition to the common [abstract st
 
 * **length** - The length of this field. Default value is `255`.
 
-In [edit pages](#edit-action) the generator will use url input elements as well as validation on client and server side. For the output in [view](#view-action) and [display](#display-action) pages an icon will be shown linking the url.
+In [edit pages](#edit-action) the generator will use url input elements as well as validation on client and server side. For the output in [index](#index-action) and [detail](#detail-action) pages an icon will be shown linking the url.
 
 #### Upload field
 
@@ -571,7 +571,7 @@ Image-specific settings (use **only** if you did not change `allowedExtensions`)
 
 In [edit pages](#edit-action) the generator will use upload input elements. If a field is mandatory the upload will be required when creating a new entity, but not when editing an existing one. If a field is optional (not mandatory) then it will be possible to delete existing uploads on editing.
 
-For the output in [view](#view-action) and [display](#display-action) pages a download link is shown together with the file size. If the file is an image then a small version of
+For the output in [index](#index-action) and [detail](#detail-action) pages a download link is shown together with the file size. If the file is an image then a small version of
 it is shown instead of a text link (on edit pages too by the way).
 
 If an application has any upload fields the generator creates an additional helper class containing methods for image processing. The generated application uses it to determine arguments for creating thumbnail preview images on demand with the help of the [Imagine library](https://imagine.readthedocs.io/en/latest/).
@@ -612,7 +612,7 @@ A list field may have the following references:
 
 * **items** - Allows referencing one or more [items](#list-field-item).
 
-The generator creates an additional class for handling the available list items centrally. Based on this information [edit pages](#edit-action) provide either a drop-down list (for single or multiple values depending on the `multiple` property), radio buttons (if `multiple` is set to `false` and `expanded` is set to `true`) or a checkbox list (if `multiple` and `expanded` are both set to `true`). For the output in [view](#view-action) and [display](#display-action) templates there is a filter generated which cares for showing the names instead of the raw option values.
+The generator creates an additional class for handling the available list items centrally. Based on this information [edit pages](#edit-action) provide either a drop-down list (for single or multiple values depending on the `multiple` property), radio buttons (if `multiple` is set to `false` and `expanded` is set to `true`) or a checkbox list (if `multiple` and `expanded` are both set to `true`). For the output in [index](#index-action) and [detail](#detail-action) templates there is a filter generated which cares for showing the names instead of the raw option values.
 
 #### List field item
 
@@ -637,7 +637,7 @@ An array field has the following properties in addition to the common [derived f
 * **min** - Minimum amount of items enforced to be present. The default value is `0`.
 * **max** - Maximum amount of items enforced to be present. The default value is `0` which means that no certain amount is enforced.
 
-The generator will exclude arrays for the output in [view](#view-action) templates. For [edit pages](#edit-action) and [display](#display-action) templates there is a simple implementation provided which might be sufficient for flat (non-nested) arrays though.
+The generator will exclude arrays for the output in [index](#index-action) templates. For [edit pages](#edit-action) and [detail](#detail-action) templates there is a simple implementation provided which might be sufficient for flat (non-nested) arrays though.
 
 #### Object field
 
@@ -645,7 +645,7 @@ Represents a field type for storing objects.
 
 An object field has no fields or references in addition to the common [derived field](#derived-field) settings.
 
-The generator will exclude objects in [edit pages](#edit-action) as well as for the output in [view](#view-action) and [display](#display-action) templates.
+The generator will exclude objects in [edit pages](#edit-action) as well as for the output in [index](#index-action) and [detail](#detail-action) templates.
 
 #### Datetime field
 
@@ -668,7 +668,7 @@ Note you can also use `now` as default value for date and time fields which resu
 
 The `past` and `future` properties are implemented as client-side and server-side validators.
 
-The generator will treat input values as date and/or time input elements in [edit pages](#edit-action). For the output in [view](#view-action) and [display](#display-action) templates a modifier is used to format the value according to the current locale.
+The generator will treat input values as date and/or time input elements in [edit pages](#edit-action). For the output in [index](#index-action) and [detail](#detail-action) templates a modifier is used to format the value according to the current locale.
 
 #### DateTime components
 
@@ -735,7 +735,7 @@ If an entity has a tree type other than `NONE` then the generator creates severa
 
 * An additional template for managing the tree in a hierarchy view.
 * An additional view plug-in for creating markup for [jsTree](https://www.jstree.com/).
-* An additional template included in display pages for showing different types of relatives (parents, children, and so on).
+* An additional template included in detail pages for showing different types of relatives (parents, children, and so on).
 * Some ajax functions used by the hierarchy view.
 * For closure: separate classes for the closure entities.
 
@@ -989,7 +989,7 @@ Can be one of the following options:
 * `INLINE` - Editing the other side includes choosing, creating and editing elements from this side.
 * `EMBEDDED` - Editing the other side allows embedded creation and editing of an element from this side.
 
-For each entity the generator creates some templates to be included in the [edit templates](#edit-action) of related entities (for example a display list and another one for edit). Depending on which edit mode is defined for a relationship the corresponding edit template (choose or edit) is included or not.
+For each entity the generator creates some templates to be included in the [edit templates](#edit-action) of related entities (for example a detail list and another one for edit). Depending on which edit mode is defined for a relationship the corresponding edit template (choose or edit) is included or not.
 
 * `NONE` means that there is no possibility to take influence on the association.
 * `CHOOSE` means that it is possible to select a related entity (using dropdowns, radio buttons, checkboxes or auto completion).
@@ -1048,9 +1048,8 @@ An action represents a controller function which can be called by the user. Ziku
 
 The following action types are available:
 
-* **Index action** - default function.
-* **View action** - processes a collection of entities.
-* **Display action** - shows a certain entity in detail.
+* **Index action** - default function; processes a collection of entities.
+* **Detail action** - shows a certain entity in detail.
 * **Edit action** - an action for editing an entity.
 * **Delete action** - an action for deleting an entity.
 * **Custom action** - for custom actions, like e[mySpecialFunction.
@@ -1061,19 +1060,15 @@ An action may have the following references:
 
 The generator creates sensitive default implementations for all action types except custom actions which do only return an empty template.
 
-It is possible to create special versions for all templates by adding a suffix which will be assigned by the `tpl` parameter. For example you can call `displayMyVersion.html.twig` by adding `&tpl=myVersion` to the url. Note this additional override capability is mainly intended for all actions which have a template for each entity and has therefore not been considered for index and custom actions yet.
+It is possible to create special versions for all templates by adding a suffix which will be assigned by the `tpl` parameter. For example you can call `detailMyVersion.html.twig` by adding `&tpl=myVersion` to the url. Note this additional override capability is mainly intended for all actions which have a template for each entity and has therefore not been considered for index and custom actions yet.
 
 #### Index action
 
-An index action implementation does either do a simple redirect to the view function or (if no view action is available) fetch a simple template file.
+An index action implementation offers a generic list view of multiple items which can be sorted and filtered. Also there are alternative template formats created for atom, csv, json, rss, xml and maybe kml support. Just add `&userssext=1` to the url or, even easier with shorturls, change `persons.html` to `persons.rss`.
 
-#### View action
+#### Detail action
 
-The view implementation offers a generic list view of multiple items which can be sorted and filtered. Also there are alternative template formats created for atom, csv, json, rss, xml and maybe kml support. Just add `&userssext=1` to the url or, even easier with shorturls, change `persons.html` to `persons.rss`.
-
-#### Display action
-
-A display action results in a generic detail view of an entity. Again there are alternative formats supported, like for example csv, json and xml.
+A detail action results in a generic detail view of an entity. Again there are alternative formats supported, like for example csv, json and xml.
 
 #### Edit action
 

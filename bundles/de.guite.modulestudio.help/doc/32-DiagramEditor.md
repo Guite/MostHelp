@@ -151,10 +151,6 @@ When a new entity is created, the editor needs to know three things: the name fo
 
 The modelling of entities is the most important step in defining the data layer, but this process is incomplete without defining the relationships between them which are represented by edges in the diagram. To add a relationship [use the palette](#using-the-tools-from-the-palette) like described above. The diagram editor cleverly determines the names for both sides of the relationship from the singular or plural names of the connected entities.
 
-#### Generator settings
-
-A settings container element allows you to take influence on the generator's behaviour. The details are described in the [generator reference](87-GeneratorReference.md#settings-container).
-
 ### Fields layer
 
 Inside a new entity you create several fields for persisting different properties of this entity.
