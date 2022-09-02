@@ -62,8 +62,6 @@ In addition, an application can configure several further properties to customis
 
 * **symfonyVersion** - The targeted Symfony version. See [below](#symfony-version).
 * **generateAccountApi** - A boolean specifying whether account panel integration should be generated or not. Default value is `true`.
-* **generateModerationPanel** - A boolean specifying whether a moderation panel should be generated or not. Requires at least one entity with a workflow including approval. Default value is `true`.
-* **generateExternalControllerAndFinder** - A boolean specifying whether a controller for external calls providing a generic finder component should be generated or not. Default value is `true`. Works only for entities containing either a [detail action](#detail-action) or at least one [upload field](#upload-field) supporting images.
 * **generateRssTemplates** - A boolean specifying whether RSS index templates should be generated or not. Default value is `true`.
 
 ![Example for RSS feed](images/generator_output_feed_rss.png "Example for RSS feed")

@@ -21,6 +21,7 @@
 * Removed attributable behavior.
 * Removed support for example data.
 * Removed support for authentication method skeletons.
+* Removed external controller and finder in favor of form-based relations.
 
 ### Generator changes
 
@@ -180,205 +181,13 @@
 * Zikula 3 only: custom application events are now represented by dedicated event classes.
 * For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.4.0).
 
-## ModuleStudio 1.3.2 (September 20, 2018)
-
-### Product / Tooling changes
-
-* Updated to Eclipse 2018-09 (4.9).
-* Added generic connection creation tool. Read more about that [here](32-DiagramEditor.md#palette-standard-tools).
-* Ensure all diagram layers are correctly displayed for newly added entities (#1199).
-
-### DSL / Modelling language changes
-
-* none
-
-### Generator changes
-
-* Added permission helper to support implementations of custom permission layers (#1187).
-* Re-enabled support for Content types in Zikula 2.x by migrating them to Content 5.
-* Fixed design problem with upload files handling (file names and file objects are stored in different fields now).
-* Allow normal creation of tree entities by selecting a parent.
-* Added item action for creating tree sub nodes.
-* Improved and fixed different possible drag n drop behaviours of tree nodes (including multi tree support).
-* Fixed behaviour of multiple trees on same page (searching, expanding/collapsing, etc.).
-* Reuse item actions also for tree context menus.
-* Updated check to avoid dragging tree root nodes.
-* Minor cosmetic improvements for tree pages.
-* Minor cleanup in ajax tree handler.
-* Enabled reuse functionality for entities with trees.
-* Fixed several issues in entity tree form type.
-* Fixed undefined variable in tree relatives macro.
-* Allow undeletion of loggable entities also without display action.
-* Refactored usage of deprecated service in item actions menu for loggable entities.
-* Call `postLoad` event handler for freshly initialised undeleted objects.
-* Improved permission checks for loggable history actions.
-* Added possibility to limit loggable history by amount of log entries or date intervals.
-* Fixed typo in `loggableHistoryActionInternal` signature.
-* Show latest loggable version as part of meta data during editing.
-* Introduced loggable helper class for reusing common logic and taking load from controllers.
-* Enhanced history and diff views showing array field details.
-* Added additional field for log entries for storing an extended description of the executed action which produced a log entry. This is shown in both the normal history view as well as the list of deleted items (which helps to identify a specific one).
-* Show user profile link and avatar for creator and last editor in history and diff views.
-* Made `parent` relation versionable for loggable entities with a tree in order to improve their undeletion.
-* Removed version annotation from root, lft, right and lvl properties to improve revert process.
-* Removed version annotation from translatable locale to avoid unrequired log entries.
-* Dynamically disable and reenable loggable listener when persisting translations to avoid unrequired log entries.
-* Added revision handling for translations (combining loggable with translatable).
-* Enhanced history and diff views showing changes per language for translatable entities.
-* Translatable performance fix.
-* Fallback fix for empty translation data.
-* Corrected route requirement for tree slugs containing slashes.
-* Improved behaviour or tree slug handlers and relative slug handlers.
-* Fixed unique slug handling in tree actions.
-* Improved form redirect behaviour, e.g. with regards to translatable slugs.
-* Provide unique slug in item actions and display sections for creating related items.
-* Fixed wrong arguments for ajax-based slug unique check.
-* Fixed handling of unique slugs for relation form presets.
-* Added support for `preFlush`, `onFlush` and `postFlush` Doctrine events in entity lifecycle listener.
-* Proper service injection into menu builder.
-* Added pre and post configuration events for amending or extending item actions menu (#1193).
-* Updated logic for title and description field name determination.
-* Applied default filters from `CollectionFilterHelper` also to selections of single entities by default.
-* Removed usages of param converters.
-* Prevent Imagine usage during SWF file handling.
-* Added configuration settings to control usage of moderation fields in edit forms of entities with standard fields.
-* Added configuration setting for whether only own entries should be shown on view pages by default or not.
-* Automatically preset language/locale fields in entity initialiser.
-* Added more differentiated subjects for workflow notification mails.
-* Improved image handling for PDF output.
-* Improved visualisation of boolean field states using bootstrap text classes.
-* Always show boolean fields on display pages.
-* Added custom messages for date related validation constraints.
-* Fixed dependency syntax in composer file.
-* Show a warning instead of an error during installation if category registries could not be created.
-* Added `raw` filter to JSON output.
-* Minor improvements for CSV and XML output.
-* Avoid confusing placeholder text for expanded relationship representations.
-* Improved handling of unidirectional one to one relationships.
-* Excluded fields used as custom join columns from edit forms.
-* Removed loading of unrequired bootstrap-jqueryui assets.
-* Logical fix in list entry validator.
-* Moved default sorting determination in controller helper into own method.
-* Added missing check in entity initialiser.
-* Fixed count queries with join conditions.
-* Improved dynamic checks for hook enablements.
-* Added sorting by updated date to list block, list content type, mailz and newsletter plugins.
-* Fixed slightly wrong help messages about minimum and maximum values.
-* Do not assume that table column exists for current sorting field.
-* Fixed and improved client-side date range validation.
-* Fixed several minor issues with relationship auto completion.
-* Avoid invalid item actions and display page sections for unidirectional many-to-many relationships.
-* Fixed wrong check if one-to-one relation already exists in item action menu (#1200).
-* Added a check for whether view action exists in templates for moderation block and moderation panel.
-* Fixed wrong handling of `enabledFinderTypes` setting in external controller (#1191).
-* Properly consider `mandatory` flag in relation editing inclusion templates.
-* Added missing remarks for text fields, email fields, url fields and object fields to technical docs.
-* Fixed client-side date and datetime resetting functionality.
-* Fixed detection of geolocation enablement.
-* Consider collection filtering and translation walker in search helper.
-* Trim leading and trailing regex slashes for client-side validation.
-* Avoid assigning invalid routes to processing hooks.
-* Fixed wrong method call for creating thumbnail images within auto completion.
-* Readded missing recover action for trashed data in 2.x targets.
-* Fixed wrong formatting of time fields in entity display helper (#1194).
-* Removed updated date from RSS item title.
-* Fixed wrong call to webmaster email address in RSS templates (#1197).
-* Avoid exception in archive helper when module has just been uninstalled.
-* Improved detection of whether magnific popup is available.
-* Cleanup for request access (use request stack as late as possible).
-* Fixed categories handling in list blocks.
-* Explicitly set translation domain for block form types.
-* Some fixes for example data creation.
-* Fixed typos related to example row handling (#1185).
-* For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.2).
-
-## ModuleStudio 1.3.1 (May 30, 2018)
-
-### Product / Tooling changes
-
-* Updated to Eclipse Oxygen.3 (4.7.3).
-* Force refresh after context menu actions for repositioning fields in diagram editor.
-* Build improvements for Mac OS - the product archive now contains a proper app bundle with a `ModuleStudio.app` directory.
-
-### DSL / Modelling language changes
-
-* Fixed wrong validation of minimum value constraint if no maximum value constraint is set.
-* Default value for `sourceEditing` property of many to one relationships is now `CHOOSE` instead of `NONE`.
-* The finder is now also supported for entities containing image upload fields but no display action (#1182).
-
-### Generator changes
-
-* Exclude many to one relationships from outgoing edit relations.
-* Updated some deprecated SPDX license identifiers in composer file.
-* Fixed typo in pending content listener.
-* Generate inline usage redirect in form handler only if needed.
-* Properly initialise image thumbnail options for display hooks template.
-* Logical fix for removing old upload files.
-* Added fallback check to list field transformer.
-* Fixed typo in tree slug handler annotation.
-* Avoid index column size too large on MySQL < 5.7 for log entries and translations (see [this issue](https://github.com/Atlantic18/DoctrineExtensions/issues/1904) and [this patch](https://github.com/Atlantic18/DoctrineExtensions/pull/1905) for the details).
-* Ensure custom view sorting is properly reflected in the pager.
-* The finder is now also supported for entities containing image upload fields but no display action (#1182).
-* Fixed workflow definition syntax for 2.x targets (#1184).
-* For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.1).
-
-## ModuleStudio 1.3.0 (Feb 1, 2018)
-
-### Product / Tooling changes
-
-* Updated to Eclipse Oxygen.2 (4.7.2).
-* Avoid broken diagram if problems with parsing textual model occur. Read more about that [here](32-DiagramEditor.md#visualisation-of-parsing-issues).
-* Fixed double palette entries after synchronising diagram after saving model changes in textual editors.
-
-### DSL / Modelling language changes
-
-* All non-UI parts of the DSL (like model parser, validation constraints, formatter) are now automatically tested (#1170).
-* Removed obsolete DSL elements (#1173).
-* Several fixes for relations from/to mapped super classes.
-* Fixed wrong validation logic regarding item actions settings.
-* Improved several relation-oriented validation constraints considering inheritance hierarchies.
-* Fixed non-working validation constraint to verify an entity has only one outgoing inheritance relationship.
-* Overhauled validation constraints for reserved slug field.
-* Added validation constraints with quick fixes for required minimum length of ISBN and ISSN fields.
-* Added validation constraint with quick fixes for minimum and maximum image pixels.
-* Added validation constraint for unique values of list items.
-* Several further fixes and improvements for the validation layer.
-* Allow dots, commas, slashes and brackets in text of list items.
-* Removed some unneeded validation constraints.
-
-### Generator changes
-
-* The generator is now automatically tested (#1170).
-* Added image EXIF data to upload field meta data (#1175).
-* Added auto-rotation of incorrectly oriented images (#1176).
-* Added missing separator for inheritance discriminator map.
-* Added generation of a `custom.css` file for easier addition of custom styles.
-* Fixed model to model transformation issue with mapped super classes.
-* Fixed several filter queries for variables in multiple containers.
-* Fixed regular expression for detecting Twig variables in documentation fields.
-* Consider query arguments in URI for repeated creations.
-* Reenabled `trashed` workflow state (#1177).
-* Minor fix for undeletion check during persisting log entries.
-* Define weight for loading magnific popup to ensure proper load order.
-* Avoid processing search value as normal collection filter.
-* Skip feature activation helper in quick navigation to prevent pager issues.
-* Added links to switch between only own and all entries on view pages.
-* Updated implementation of pending content listener.
-* Explicitly set translation domain in UI hook template.
-* Use default selection for sorting related items in quick navigation.
-* Fixed typo in ICS template.
-* Reactivated possibility to manually specify a slug value.
-* Show delete actions and delete submit button in edit forms with edit permissions if `ownerPermission` is enabled.
-* Simplified customisability of category-based permission checks behaviour.
-* Skip `handleCommand` action in form handler when cancel action is clicked.
-* Added missing readonly attribute to field form type options (#1179).
-* Prevent form validation when `cancel` button is used (#1180).
-* For more details see [closed tickets on GitHub](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.0).
-
 ## Older versions
 
 The following links point to the closed tickets on GitHub, as it makes not sense to pollute this changelog with such old things.
 
+* [ModuleStudio 1.3.2](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.2) (Sep 20, 2018)
+* [ModuleStudio 1.3.1](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.1) (May 30, 2018)
+* [ModuleStudio 1.3.0](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.3.0) (Feb 1, 2018)
 * [ModuleStudio 1.2.0](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.2.0) (Dec 16, 2017)
 * [ModuleStudio 1.1.0](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.1.0) (Nov 26, 2017)
 * [ModuleStudio 1.0.2](https://github.com/Guite/MostGenerator/issues?q=milestone%3A1.0.2) (Oct 3, 2017)

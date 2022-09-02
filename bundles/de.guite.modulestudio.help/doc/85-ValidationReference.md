@@ -80,7 +80,7 @@ The biggest part is a reference section listing all validation rules in detail a
 
 * Every field must have a name. Field name must have a length of at least two chars. Should have more than three chars.
 * Field names must be unique.
-* Field name is a reserved identifier (`ajax`, `external`, `theme`). These names are reserved.
+* Field name is a reserved identifier (`ajax`, `theme`). These names are reserved.
 * Field name is a reserved identifier (`_controller`, `_method`, `_locale`). These are reserved vars in the Symfony framework.
 * Field name is a reserved identifier (`workflowState`). This list field is added automatically by a model-to-model transformation before the actual generation happens.
 * Field name is a reserved database keyword. ModuleStudio prevents the usage of keywords which are reserved in some database systems. Background is that there are no column prefixes anymore. For a list of all keywords see [the following section](#reserved-database-keywords).
@@ -300,7 +300,7 @@ Includes basically all relationships in the data layer except inheritance.
 
 ### Controller
 
-* Entity name is a reserved identifier (`ajax`, `external`, `theme`). These names are reserved.
+* Entity name is a reserved identifier (`ajax`, `theme`). These names are reserved.
 * There must not exist more than one (`index` | `detail` | `edit` | `delete`) action in one entity.
 * Names of custom actions in one entity must be unique.
 
