@@ -47,7 +47,7 @@ Example base class:
 <?php
 namespace MyModule\Entity\Base;
 
-abstract class AbstractPersonEntity
+abstract class AbstractPerson
 {
     // generator code
 }
@@ -59,9 +59,9 @@ Example child class:
 <?php
 namespace MyModule\Entity;
 
-use MyModule\Entity\Base\AbstractPersonEntity;
+use MyModule\Entity\Base\AbstractPerson;
 
-class PersonEntity extends AbstractPersonEntity
+class Person extends AbstractPerson
 {
     // manual code
 }
@@ -83,9 +83,9 @@ Example inheriting base class:
 <?php
 namespace MyModule\Entity\Base;
 
-use MyModule\Entity\PersonEntity;
+use MyModule\Entity\Person;
 
-abstract class AbstractCustomerEntity extends PersonEntity
+abstract class AbstractCustomer extends Person
 {
     // generator code
 }
