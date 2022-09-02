@@ -86,7 +86,7 @@ The biggest part is a reference section listing all validation rules in detail a
 * Field name is a reserved database keyword. ModuleStudio prevents the usage of keywords which are reserved in some database systems. Background is that there are no column prefixes anymore. For a list of all keywords see [the following section](#reserved-database-keywords).
 * Mandatory fields may not be nullable, too. Occurs if you try to activate both `mandatory` and `nullable` properties for a field.
 * The default/minimum/maximum value is too long for the specified field length.
-* Fields using text or blob data types must not be unique (applies for text, array and object fields).
+* Fields using text or blob data types must not be unique (applies for text and array fields).
   
 Note all rules for name validation are applied not only to `name`, but also to the `dbName` property, too, if it is set for a certain field.
 

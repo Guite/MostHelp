@@ -22,6 +22,7 @@
 * Removed support for example data.
 * Removed support for authentication method skeletons.
 * Removed external controller and finder in favor of form-based relations.
+* Removing array fields and object fields (deprecated in DBAL 3.4) - simple array and JSON array fields are still available.
 
 ### Generator changes
 

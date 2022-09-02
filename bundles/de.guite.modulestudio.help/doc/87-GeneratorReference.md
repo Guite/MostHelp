@@ -259,7 +259,7 @@ Can be one of the following options:
 * `INDEX_DETAIL` - The field is shown on both index and detail pages. It may not be used for sorting on index pages though.
 * `ALL` - Default value. The field is shown on both index and detail pages. It may also be used for sorting on index pages.
 
-Note that this setting is ignored for [array fields](#array-field) and [object fields](#object-field). These are never shown on index pages.
+Note that this setting is ignored for [array fields](#array-field) which are never shown on index pages.
 
 #### Derived field
 
@@ -631,19 +631,11 @@ Represents a field type for storing arrays.
 
 An array field has the following properties in addition to the common [derived field](#derived-field) settings:
 
-* **arrayType** - Which [array type](#array-type) is used. Default value is `ARRAY`.
+* **arrayType** - Which [array type](#array-type) is used. Default value is `JSON`.
 * **min** - Minimum amount of items enforced to be present. The default value is `0`.
 * **max** - Maximum amount of items enforced to be present. The default value is `0` which means that no certain amount is enforced.
 
 The generator will exclude arrays for the output in [index](#index-action) templates. For [edit pages](#edit-action) and [detail](#detail-action) templates there is a simple implementation provided which might be sufficient for flat (non-nested) arrays though.
-
-#### Object field
-
-Represents a field type for storing objects.
-
-An object field has no fields or references in addition to the common [derived field](#derived-field) settings.
-
-The generator will exclude objects in [edit pages](#edit-action) as well as for the output in [index](#index-action) and [detail](#detail-action) templates.
 
 #### Datetime field
 
@@ -755,9 +747,8 @@ Represents different types of arrays used by Doctrine 2.
 
 Can be one of the following options:
 
-* `ARRAY` - A normal array (default).
+* `JSON` - A JSON array (default).
 * `SIMPLE_ARRAY` - A simple array represented by a comma-separated text field.
-* `JSON_ARRAY` - A JSON array.
 
 The generator transforms these values to the corresponding implementation as is. There are no differences made between the different array field types. So beside the actual entity class there won't be any code parts affected based on which array type you use.
 
