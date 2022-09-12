@@ -23,10 +23,16 @@
 * Removed support for authentication method skeletons.
 * Removed external controller and finder in favor of form-based relations.
 * Removing array fields and object fields (deprecated in DBAL 3.4) - simple array and JSON array fields are still available.
+* Replaced `displayType` and `visible` properties by dedicated flags `visibleOnIndex`, `visibleOnDetail`, `visibleOnNew`, `visibleOnEdit` and `visibleOnSort`.
+* Added `role` attribute to larger text fields which allows to distinguish plain text from coding languages and WYSIWYG editing.
+* Added `useAutoCompletion` flag for list fields.
+* Added datetime component `DATE_TIME_TZ` for DateTime objects with timezone.
+* Added new string roles for `CIDR`, `ISIN` and `ULID` validators.
 
 ### Generator changes
 
 * Generated bundles require at least PHP 8.1 and Symfony 5.4 (Zikula 4.0).
+* Generated bundles use and extend the concepts of EasyAdminBundle.
 * Use property type hints; remove unrequired casts in setter methods.
 * Use constructor property promotion.
 * Use native PHP attributes for validation constraints, route definitions, setter injections and ORM mappings.
@@ -37,8 +43,7 @@
 * Annotate Doctrine collection so PhpStorm can provide its generics support.
 * Fixed regression regarding filtering user fields.
 * Fixed exception when editing entities with allowed but unset specific creation date.
-* Fixed paths to Leaflet assets for geographical entities in Zikula 3 (#1243).
-* Fixed regressions in auto completion functionality in Zikula 3.
+* Fixed paths to Leaflet assets for geographical entities (#1243).
 * Use lazy-loaded Twig extensions.
 * Provide default values for default coordinate fields to prevent invalid form state.
 * Reset page number to 1 to avoid empty page if filters have been set.

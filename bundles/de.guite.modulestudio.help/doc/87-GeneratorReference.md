@@ -238,28 +238,16 @@ This base class has the following children at the moment:
 
 A field may have the following references:
 
+* **cssClass** - Optional specification of arbitrary css classes, used for [edit pages](#edit-action). Possible example value is `col-sm-6 col-lg-5 col-xxl-3`.
 * **entity** - Reference to the owning [data object](#data-object).
 * **varContainer** - Reference to the owning [variable container](#variables).
-* **displayType** - Controls display-related settings for [index](#index-action) and [detail](#detail-action) pages. See [below](#field-display-type). The default value is `ALL`.
+* **visibleOnIndex** - Whether the field is shown on [index](#index-action) pages or not. The default value is `true`.
+* **visibleOnDetail** - Whether the field is shown on [detail](#detail-action) pages or not. The default value is `true`.
+* **visibleOnNew** - Whether the field is shown on [edit](#edit-action) pages for new entities (entity creation forms) or not. The default value is `true`.
+* **visibleOnEdit** - Whether the field is shown on [edit](#edit-action) pages for existing entities (entity editing forms) or not. The default value is `true`.
+* **visibleOnSort** - Whether the field can be used for sorting on [index](#index-action) pages or not. The default value is `true`.
 
 In the following sections all field types are explained in detail. Note that not all properties have an effect if a field is added to a variable container. For example several Doctrine extensions, like tree or translatable, work only with entities and not with variables.
-
-#### Field display type
-
-Specifies where a specific field is shown and/or used.
-
-Can be one of the following options:
-
-* `NONE` - The field is neither shown on index nor detail pages. It may also not be used for sorting on index pages.
-* `SORTING` - The field is neither shown on index nor detail pages. It may be used for sorting on index pages though.
-* `INDEX` - The field is shown on index pages, but not on detail pages. It may not be used for sorting on index pages.
-* `INDEX_SORTING` - The field is shown on index pages, but not on detail pages. It may be used for sorting on index pages.
-* `DETAIL` - The field is not shown on index pages, but on detail pages. It may not be used for sorting on index pages.
-* `DETAIL_SORTING` - The field is not shown on index pages, but on detail pages. It may be used for sorting on index pages.
-* `INDEX_DETAIL` - The field is shown on both index and detail pages. It may not be used for sorting on index pages though.
-* `ALL` - Default value. The field is shown on both index and detail pages. It may also be used for sorting on index pages.
-
-Note that this setting is ignored for [array fields](#array-field) which are never shown on index pages.
 
 #### Derived field
 
@@ -267,7 +255,6 @@ Represents a field in the data layer which is mapped to a database column. A der
 
 A derived field has the following properties in addition to the common [field](#field) settings: 
 
-* **cssClass** - Optional specification of arbitrary css classes, used for [edit pages](#edit-action).
 * **dbName** - Name of the database column represented by this field. The default value is an empty string which means that the field name is used for the column, too. This property is primarily interesting for avoiding changes in the database schema when migrating legacy apps.
 * **defaultValue** - The default value of the field. This default value is used when instantiating a new entity instance, for example for creating new entities with the [edit action](#edit-action).
 * **mandatory** - A boolean specifying whether this field is mandatory or not. The default value is `true`.
@@ -280,7 +267,6 @@ A derived field has the following properties in addition to the common [field](#
 ![Edit form with translatable fields](images/generator_translatable.png "Edit form with translatable fields")
 
 * **unique** - A boolean specifying whether this field is unique or not. The default value is `false`. If set to `true` then an additional validator cares for enforcing the unique constraint on client and server side.
-* **visible** - Whether this field is visible in edit forms or not. Default value is `true`.
 
 All fields are implemented as entity class member vars. The following sections will look at the different field types in detail.
 
@@ -320,7 +306,7 @@ Represents a field type for storing integer numbers.
 An integer field has the following properties in addition to the common [abstract integer field](#abstract-integer-field) settings:
 
 * **aggregateFor** - Aggregate field: one-to-many target alias and field name (syntax: `views.amount`) which causes the generator creating special methods for aggregation. More information can be found in [this article](https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/cookbook/aggregate-fields.html).
-* **counter** - A boolean whether this field should act as a counter. Default value is `false`. If set to `true` and the owning entity has a [detail action](#detail-action) each view of the detail page will be counted. This property can ideally be combined with `defaultValue "0", mandatory false, visible false`.
+* **counter** - A boolean whether this field should act as a counter. Default value is `false`. If set to `true` and the owning entity has a [detail action](#detail-action) each view of the detail page will be counted. This property can ideally be combined with `defaultValue "0", mandatory false, visibleOnNew false, visibleOnEdit false`.
 * **maxValue** - Maximum value. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
 * **minValue** - Minimum value. If set to a value other than `0` then a validator will enforce this constraint on client and server side.
 * **percentage** - A boolean specifying whether this field represents a percentage value or not. Default value is `false`.
@@ -398,7 +384,8 @@ Can be one of the following options:
 
 * `NONE` - Default value. Means that the corresponding [string field](#string-field) just represents a string without special semantic.
 * `BIC` - A [BIC (business identifier code)](https://en.wikipedia.org/wiki/Business_Identifier_Code).
-* `COLOUR` - A html color code (like `#003399`). A colour picker is used in [edit pages](#edit-action) for convenient selection of colour codes.
+* `CIDR` - [CIDR (classless inter-domain routing)](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing).
+* `COLOUR` - A CSS colour code (different formats allowed). A colour picker is used in [edit pages](#edit-action) for convenient selection of colour codes.
 * `COUNTRY` - A [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) country code. A country selector is used in [edit pages](#edit-action). For the output in [index](#index-action) and [detail](#detail-action) templates an output modifier is used to display the full country name instead of the unreadable country code. If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
 * `CREDIT_CARD` - A credit card number. By default all available card schemes provided by [Symfony validator](https://symfony.com/doc/current/reference/constraints/CardScheme.html#schemes) are allowed.
 * `CURRENCY` - A [3-letter ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency name. Possible example values are `USD` or `EUR`. In [edit forms](#edit-action) it will be rendered as a currency selector. If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
@@ -406,14 +393,15 @@ Can be one of the following options:
 * `HOSTNAME` - A host name including a top-level domain. Possible example value: `example.com`. Special top-level domains reserved in [RFC 2606](https://tools.ietf.org/html/rfc2606) (`.invalid`, `.localhost`, etc.) are excluded.
 * `IBAN` - A bank account number in [IBAN (International Bank Account Number)](https://en.wikipedia.org/wiki/International_Bank_Account_Number) format.
 * `ICON` - A [Font Awesome](https://fontawesome.com/) icon. An icon selector is provided on [edit pages](#edit-action).
+* `ISIN` - An [ISIN (international securities identification number)](https://en.wikipedia.org/wiki/International_Securities_Identification_Number).
 * `LANGUAGE` - An [Unicode language](http://site.icu-project.org/) identifier. Possible example values are `fr` or `zh-Hant`. A language selector is used in [edit pages](#edit-action). For the output in [index](#index-action) and [detail](#detail-action) templates an output modifier is used to display the full name instead of the unreadable language code. If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
 * `LOCALE` - A locale. Possible example values are `fr` ([ISO 639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)) or `fr_FR` (ISO 639-1 followed by [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) country code). The field will be rendered as a locale selector in [edit forms](#edit-action). If the field is not `mandatory` the edit selector provides a placeholder entry named *All*.
 * `PASSWORD` - A password. For this a password input element will be used instead of a normal one in [edit pages](#edit-action). Password fields are not shown on [index](#index-action) and [detail](#detail-action) pages for security reasons.
 * `PHONE_NUMBER` - A telephone number.
 * `TIME_ZONE` - A time zone. In [edit forms](#edit-action) such fields will be rendered using a time zone selector.
+* `ULID` - An [ULID (Universally Unique Lexicographically Sortable Identifier)](https://github.com/ulid/spec).
 * `UUID` - An [UUID (Universally Unique Identifier)](https://en.wikipedia.org/wiki/Universally_unique_identifier).
 * `WEEK` - An [ISO 8601](https://en.wikipedia.org/wiki/ISO_week_date) week number. Possible example value is `2011-W17`. Represented by a [week form type](https://symfony.com/blog/new-in-symfony-4-4-week-form-type).
-
 
 #### ISBN style
 
@@ -478,8 +466,29 @@ Represents a field type for storing larger text.
 A text field has the following properties in addition to the common [abstract string field](#abstract-string-field) settings:
 
 * **length** - The length of this field. Default value is `2000`.
+* **role** - Allows to define a semantic role for this field. Default value is `PLAIN`. The available options are explained [below](#text-role).
 
-In [edit pages](#edit-action) the generator will use multi-line input elements (textarea).
+#### Text role
+
+Represents different semantic roles a [text field](#text-field) can have.
+
+Can be one of the following options:
+
+* `PLAIN` - Default value. Means that the corresponding [text field](#text-field) just represents a string without special semantic.
+* `HTML` - A text containing HTML tags.
+* `WYSIWYG` - A text containing HTML tags with WYSIWYG editor support.
+* `CODE_CSS` - A text containing CSS code.
+* `CODE_DOCKERFILE` - A text containing a Dockerfile.
+* `CODE_JS` - A text containing JavaScript code.
+* `CODE_MARKDOWN` - A text containing Markdown code.
+* `CODE_NGINX` - A text containing NGINX configuration.
+* `CODE_PHP` - A text containing PHP code.
+* `CODE_SHELL` - A text containing shell script.
+* `CODE_SQL` - A text containing SQL code.
+* `CODE_TWIG` - A text containing Twig template code.
+* `CODE_XML` - A text containing XML code.
+* `CODE_YAML` - A text containing YAML code.
+* `CODE_YAML_FM` - A text containing YAML frontmatter code.
 
 #### User field
 
@@ -605,6 +614,7 @@ A list field has the following properties in addition to the common [abstract st
 * **multiple** - A boolean specifying whether multiple items can be selected concurrently or not. The default value is `false`.
 * **min** - Minimum amount of values enforced to be selected (only if `multiple` is set to `true`). The default value is `0`.
 * **max** - Maximum amount of values enforced to be selected (only if `multiple` is set to `true`). The default value is `0`.
+* **useAutoCompletion** - Enable to create an auto completion field instead of a normal form field (dropdowns, checkboxes, radio buttons). The default value is `false`.
 
 A list field may have the following references:
 
@@ -667,6 +677,7 @@ Represents different types of [date and time fields](#datetime-field).
 Can be one of the following options:
 
 * `DATE_TIME` - Field stores date with time (default).
+* `DATE_TIME_TZ` - Field stores date with time and time zone.
 * `DATE` - Field stores date only.
 * `TIME` - Field stores time only.
 
