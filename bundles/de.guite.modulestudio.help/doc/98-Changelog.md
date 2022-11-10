@@ -11,7 +11,7 @@
 ### DSL / Modelling language changes
 
 * Reduced `slugLength` default and max value from 255 to 190 for better `utf8mb4` compatibility.
-* Target version is now a Symfony version (currently: `SF70`, `SF62`, `SF61`, `SF60`, `SF54`).
+* Target version is now a Symfony version (currently: `SF70`, `SF62`).
 * Removed obsolete application properties `generateMailzApi`, `generateNewsletterPlugin`, `generateTagSupport`.
 * Removed obsolete email field properties `checkMX`, `checkHost`.
 * Removed obsolete URL field property `checkDNS`.
