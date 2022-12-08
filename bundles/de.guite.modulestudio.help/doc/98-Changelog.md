@@ -4,7 +4,7 @@
 
 ### Product / Tooling changes
 
-* Updated to Eclipse 2022-09 (4.25).
+* Updated to Eclipse 2022-12 (4.26).
 * Updated included Java version from 14.0.1 to 15.0.2
 * Fixed problem preventing embedded textual editor to open properly.
 
@@ -31,7 +31,7 @@
 
 ### Generator changes
 
-* Generated bundles require at least PHP 8.1 and Symfony 5.4 (Zikula 4.0).
+* Generated bundles require at least PHP 8.1 and Symfony 6.2 (Zikula 4.0).
 * Generated bundles use and extend the concepts of EasyAdminBundle.
 * Use property type hints; remove unrequired casts in setter methods.
 * Use constructor property promotion.
