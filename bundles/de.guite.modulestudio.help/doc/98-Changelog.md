@@ -5,7 +5,7 @@
 ### Product / Tooling changes
 
 * Updated to Eclipse 2023-03 (4.27).
-* Updated included Java version from 14.0.1 to 15.0.2
+* Updated included Java version from 14.0.1 to 17.0.6
 * Fixed problem preventing embedded textual editor to open properly.
 
 ### DSL / Modelling language changes
