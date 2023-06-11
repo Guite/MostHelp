@@ -52,6 +52,7 @@
 * Updated structure for classes related to entities with inheritance relationships.
 * Provide `getDescription` helper method in `EntityDisplayHelper`.
 * Fixed an issue with `directParent` selection in tree relatives template.
+* Use `NotCompromisedPassword` validator for password fields.
 * Skip sending creator-related notification if creator has approval permissions (#1249).
 * Fixes for ICS templates (#1254).
 * Add missing cast to getter for decimal fields (#1257).
