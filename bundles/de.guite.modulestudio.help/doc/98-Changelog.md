@@ -28,6 +28,7 @@
 * Added `useAutoCompletion` flag for list fields.
 * Added datetime component `DATE_TIME_TZ` for DateTime objects with timezone.
 * Added new string roles for `CIDR`, `ISIN` and `ULID` validators.
+* Added support for fulltext indexes.
 
 ### Generator changes
 

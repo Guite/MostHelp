@@ -197,7 +197,7 @@ It has the following properties:
 * **identifierStrategy** - Whether and which [identifier strategy](#entity-identifier-strategy) is applied. The default value is `AUTO`.
 * **leading** - A boolean specifying whether this is the primary (and default) entity or not.
 * **lockType** - Whether and which [locking strategy](#entity-lock-type) is applied. The default value is `NONE`.
-* **loggable** - A boolean specifying whether the [Loggable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/loggable.md) for tracking changes and managing versions is used or not. If loggable is activated the DSL will also require adding a `version` field and [optimistic locking](#entity-lock-type) because it is handy to have the current version stored in the entity directly. The generator will create an additional entity for managing the log entries if set to `true`. Furthermore there is a history page generated which will be available as soon as more than one version of an entity exists. On this history page changes are shown for each version. If the entity has a detail action there is a preview link to display each version. You can also preview multiple versions at the same time and arrange the windows next to each other for easy comparison. Also there are functions to revert an entity to a previous version and to compare different versions using a diff view. Finally if there are deleted entities there is a possibility to inspect and undelete them.
+* **loggable** - A boolean specifying whether the [Loggable extension](https://github.com/doctrine-extensions/DoctrineExtensions/blob/main/doc/loggable.md) for tracking changes and managing versions is used or not. If loggable is activated the DSL will also require adding a `version` field and [optimistic locking](#entity-lock-type) because it is handy to have the current version stored in the entity directly. The generator will create an additional entity for managing the log entries if set to `true`. Furthermore there is a history page generated which will be available as soon as more than one version of an entity exists. On this history page changes are shown for each version. If the entity has a detail action there is a preview link to display each version. You can also preview multiple versions at the same time and arrange the windows next to each other for easy comparison. Also there are functions to revert an entity to a previous version and to compare different versions using a diff view. Finally if there are deleted entities there is a possibility to inspect and undelete them.
 
 ![Change history page for loggable entity with revert functionality](images/generator_loggable_change_history.png "Change history page for loggable entity with revert functionality")
 
@@ -208,7 +208,7 @@ It has the following properties:
 * **onAccountDeletionLastEditor** - Controls how an app should change the last editor when users are deleted. Only relevant if `standardFields` is enabled. Default value is `ADMIN`. The available options are listed [here](#account-deletion-handler).
 * **ownerPermission** - Whether users should be able to manage and edit their own data. Defines also whether the workflow should include a *deferred* state. See [workflow types](#entity-workflow-type) for more information. The default value is `false`. If `ownerPermission` is enabled the *edit* permission level allows editing and deleting only for "own" content. For editing also content from other users at least the *add* level is required then. In addition, the generator creates configuration options which allow to enable a *private mode*. This extends the owner-based filter also to viewing and accessing data. So with the private option enabled, every user may only see his own data.
 * **readOnly** - A boolean specifying whether this entity is read only or not. If set to `true` creating new entities will still be possible, but not editing them.
-* **slugLength** - Length of slug field. Defaults to `190`. An entity is [sluggable](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/sluggable.md) as soon as at least one of its fields has set `sluggablePosition` to a value greater than `0`. Depending on the `tree` setting (explained below) and existing relationships slug support will automatically be extended to utilise tree slug handlers or relative slug handlers. Relative slugs will only be used for now if both entities (connected by the corresponding relationship) have sluggable fields. If there are multiple relationships found where both sides are sluggable the first one will be used for each direction (relative slug handler vs. inversed relative slug handler).
+* **slugLength** - Length of slug field. Defaults to `190`. An entity is [sluggable](https://github.com/doctrine-extensions/DoctrineExtensions/blob/main/doc/sluggable.md) as soon as at least one of its fields has set `sluggablePosition` to a value greater than `0`. Depending on the `tree` setting (explained below) and existing relationships slug support will automatically be extended to utilise tree slug handlers or relative slug handlers. Relative slugs will only be used for now if both entities (connected by the corresponding relationship) have sluggable fields. If there are multiple relationships found where both sides are sluggable the first one will be used for each direction (relative slug handler vs. inversed relative slug handler).
 * **slugSeparator** - Separator which will separate words in slug. Default value is `-` like in Zikula, too.
 * **slugStyle** - Which [slug style](#entity-slug-style) is used. Default value is `LOWERCASE`.
 * **slugUnique** - A boolean specifying if the slug is unique or not. Default value is `true`.
@@ -258,8 +258,8 @@ A derived field has the following properties in addition to the common [field](#
 * **nullable** - A boolean specifying whether the field may be null or not. The default value is `false`. A nullable field may not be mandatory at the same time.
 * **primaryKey** - A boolean specifying whether this is a primary key field or not. Default value is `false`. Usually there is no need to enable this for any fields as the generator adds primary and foreign key fields automatically.
 * **readonly** - A boolean specifying whether this a read only field or not. The default value is `false`. If set to `true` then this field may not be changed during editing.
-* **sortableGroup** - A boolean specifying whether this field acts as grouping criteria for the [Sortable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/sortable.md). The default value is `false`.
-* **translatable** - A boolean specifying whether this field is translatable or not. The default value is `false`. If at least one field in an entity is translatable the generator creates an additional class for managing the translation entities (see [Translatable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/translatable.md) for more details). Overall support for translations in the application should get you started. For customisation you can override `TranslatableHelper` methods.
+* **sortableGroup** - A boolean specifying whether this field acts as grouping criteria for the [Sortable extension](https://github.com/doctrine-extensions/DoctrineExtensions/blob/main/doc/sortable.md). The default value is `false`.
+* **translatable** - A boolean specifying whether this field is translatable or not. The default value is `false`. If at least one field in an entity is translatable the generator creates an additional class for managing the translation entities (see [Translatable extension](https://github.com/doctrine-extensions/DoctrineExtensions/blob/main/doc/translatable.md) for more details). Overall support for translations in the application should get you started. For customisation you can override `TranslatableHelper` methods.
 
 ![Edit form with translatable fields](images/generator_translatable.png "Edit form with translatable fields")
 
@@ -294,7 +294,7 @@ Represents an abstract integer field for grouping different implementations of t
 An abstract integer field has the following properties in addition to the common [derived field](#derived-field) settings:
 
 * **length** - The length of this field. This controls whether the Doctrine mapping type will be `integer` (5-11), `bigint` (> 11) or `smallint` (< 5). Default value is `11`.
-* **sortablePosition** - A boolean specifying whether this field stores the position for the [Sortable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/sortable.md) or not. If set to `true` this field will be used as default sorting criteria. In [index pages](#index-action) there is a drag n drop functionality offered for easy reordering.
+* **sortablePosition** - A boolean specifying whether this field stores the position for the [Sortable extension](https://github.com/doctrine-extensions/DoctrineExtensions/blob/main/doc/sortable.md) or not. If set to `true` this field will be used as default sorting criteria. In [index pages](#index-action) there is a drag n drop functionality offered for easy reordering.
 
 #### Integer field
 
@@ -445,7 +445,7 @@ Can be one of the following options:
 
 #### Entity ipTraceable type
 
-Represents different events for triggering the [IpTraceable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/ip_traceable.md).
+Represents different events for triggering the [IpTraceable extension](https://github.com/doctrine-extensions/DoctrineExtensions/blob/main/doc/ip_traceable.md).
 
 Can be one of the following options:
 
@@ -502,7 +502,7 @@ In [edit pages](#edit-action) the generator will implement an auto completion el
 
 #### Entity blameable type
 
-Represents different events for triggering the [Blameable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/blameable.md).
+Represents different events for triggering the [Blameable extension](https://github.com/doctrine-extensions/DoctrineExtensions/blob/main/doc/blameable.md).
 
 Can be one of the following options:
 
@@ -721,7 +721,7 @@ The generator transforms these values to the corresponding implementation as is.
 
 #### Entity tree type
 
-Represents different tree strategies for entities (see [Tree extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/tree.md) for more details).
+Represents different tree strategies for entities (see [Tree extension](https://github.com/doctrine-extensions/DoctrineExtensions/blob/main/doc/tree.md) for more details).
 
 Can be one of the following options:
 
@@ -762,7 +762,7 @@ The generator transforms these values to the corresponding implementation as is.
 
 #### Entity timestampable type
 
-Represents different events for triggering the [Timestampable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/timestampable.md).
+Represents different events for triggering the [Timestampable extension](https://github.com/doctrine-extensions/DoctrineExtensions/blob/main/doc/timestampable.md).
 
 Can be one of the following options:
 
@@ -803,7 +803,8 @@ Represents different types of [entity indexes](#entity-index).
 Can be one of the following options:
 
 * `NORMAL` - Normal index (default).
-* `UNIQUE` - Unique constraint.
+* `UNIQUE` - Index with unique constraint.
+* `FULLTEXT` - Fulltext index.
 
 The generator transforms these values to the corresponding implementation as is. There are no differences made between the different index types. So beside the actual entity class there won't be any code parts affected based on which index type you use.
 
@@ -883,7 +884,7 @@ Represents many-to-one relationships.
 It includes the following properties in addition to the common [join relationship](#join-relationship) settings:
 
 * **primaryKey** - A boolean specifying whether the foreign key of this relation should act as a primary key. The default value is `false`. Please note that this has not been tested yet and probably won't be supported properly yet by the controller layers in the generated application.
-* **sortableGroup** - A boolean specifying whether the foreign key of this relation acts as grouping criteria for the [Sortable extension](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/sortable.md). The default value is `false`.
+* **sortableGroup** - A boolean specifying whether the foreign key of this relation acts as grouping criteria for the [Sortable extension](https://github.com/doctrine-extensions/DoctrineExtensions/blob/main/doc/sortable.md). The default value is `false`.
 
 #### Many to many relationship
 
