@@ -29,6 +29,7 @@
 * Added datetime component `DATE_TIME_TZ` for DateTime objects with timezone.
 * Added new string roles for `CIDR`, `ISIN` and `ULID` validators.
 * Added support for fulltext indexes.
+* Removed `TABLE` identifier strategy and added `ULID` instead.
 
 ### Generator changes
 

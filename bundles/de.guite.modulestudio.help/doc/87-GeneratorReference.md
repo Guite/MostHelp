@@ -684,15 +684,15 @@ Represents different strategies for identifier generation.
 
 Can be one of the following options:
 
-* `NONE` - No explicit strategy.
-* `AUTO` - Choose automatically.
+* `AUTO` - Choose automatically between `SEQUENCE` and `IDENTITY`.
 * `SEQUENCE` - Uses a database sequence.
-* `TABLE` - Uses a single-row database table and a hi/lo algorithm.
-* `IDENTITY` - Obtains IDs from special identity columns (auto_increment).
-* `UUID` - Generates universally unique identifiers.
+* `IDENTITY` - Uses special identity columns (auto_increment).
+* `NONE` - No explicit strategy.
+* `UUID` - Generates [universally unique identifiers](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+* `ULID` - Generates [universally unique lexicographically sortable identifiers](https://github.com/ulid/spec).
 * `CUSTOM` - Custom strategy.
 
-The generator transforms these values to the corresponding implementation as is. There are no differences made between the different strategies. So beside the actual entity class there won't be any code parts affected based on which identifier strategy you use.
+The generator transforms these values to the corresponding implementation as is (see [Doctrine docs](https://www.doctrine-project.org/projects/doctrine-orm/en/2.15/reference/basic-mapping.html#identifier-generation-strategies)). There are no differences made between the different strategies. So beside the actual entity class there won't be any code parts affected based on which identifier strategy you use. For `UUID` and `ULID` the Symfony UID component is utilized - like shown in the docs (for [UUID](https://symfony.com/doc/current/components/uid.html#storing-uuids-in-databases) and [ULID](https://symfony.com/doc/current/components/uid.html#storing-ulids-in-databases)).
 
 #### Entity change tracking policy
 
