@@ -10,7 +10,6 @@
 
 ### DSL / Modelling language changes
 
-* Reduced `slugLength` default and max value from 255 to 190 for better `utf8mb4` compatibility.
 * Target version is now a Symfony version (currently: `SF70`, `SF63`).
 * Removed obsolete application properties `generateMailzApi`, `generateNewsletterPlugin`, `generateTagSupport`.
 * Removed obsolete email field properties `checkMX`, `checkHost`.
@@ -30,10 +29,11 @@
 * Added new string roles for `CIDR`, `ISIN` and `ULID` validators.
 * Added support for fulltext indexes.
 * Removed `TABLE` identifier strategy and added `ULID` instead.
+* Reduced `slugLength` default and max value from 255 to 190 for better `utf8mb4` compatibility.
 
 ### Generator changes
 
-* Generated bundles require at least PHP 8.1 and Symfony 6.2 (Zikula 4.0).
+* Generated bundles require at least PHP 8.1 and Symfony 6.3 (Zikula 4.0).
 * Generated bundles use and extend the concepts of EasyAdminBundle.
 * Use property type hints; remove unrequired casts in setter methods.
 * Use constructor property promotion.
