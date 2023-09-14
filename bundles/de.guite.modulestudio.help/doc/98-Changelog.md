@@ -4,7 +4,7 @@
 
 ### Product / Tooling changes
 
-* Updated to Eclipse 2023-06 (4.28).
+* Updated to Eclipse 2023-09 (4.29).
 * Updated included Java version from 14.0.1 to 17.0.6
 * Fixed problem preventing embedded textual editor to open properly.
 
