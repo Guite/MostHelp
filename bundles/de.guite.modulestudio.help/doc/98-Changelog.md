@@ -4,7 +4,7 @@
 
 ### Product / Tooling changes
 
-* Updated to Eclipse 2023-09 (4.29).
+* Updated to Eclipse 2023-12 (4.30).
 * Updated included Java version from 14.0.1 to 17.0.6
 * Fixed problem preventing embedded textual editor to open properly.
 
@@ -33,7 +33,7 @@
 
 ### Generator changes
 
-* Generated bundles require at least PHP 8.1 and Symfony 6.3 (Zikula 4.0).
+* Generated bundles require at least PHP 8.2 and Symfony 7 (Zikula 4.0).
 * Generated bundles use and extend the concepts of EasyAdminBundle.
 * Use property type hints; remove unrequired casts in setter methods.
 * Use constructor property promotion.
