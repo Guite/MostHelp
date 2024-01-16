@@ -702,9 +702,8 @@ Can be one of the following options:
 
 * `DEFERRED_IMPLICIT` - Compare properties during commit (default). Convenient, but not good for performance.
 * `DEFERRED_EXPLICIT` - Scan only entities marked for change detection. Better performance, but no dirty checking.
-* `NOTIFY` - Assume that entities inform listeners about their changes.
 
-The generator transforms these values to the corresponding implementation as is. For `notify` the generator creates according notification calls within the entity setter methods.
+The generator transforms these values to the corresponding implementation as is.
 
 #### Entity lock type
 

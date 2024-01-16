@@ -21,7 +21,7 @@
 * Removed support for example data.
 * Removed support for authentication method skeletons.
 * Removed external controller and finder in favor of form-based relations.
-* Removing array fields and object fields (deprecated in DBAL 3.4) - simple array and JSON array fields are still available.
+* Removed array fields and object fields (deprecated in DBAL 3.4) - simple array and JSON array fields are still available.
 * Replaced `displayType` and `visible` properties by dedicated flags `visibleOnIndex`, `visibleOnDetail`, `visibleOnNew`, `visibleOnEdit` and `visibleOnSort`.
 * Added `role` attribute to larger text fields which allows to distinguish plain text from coding languages and WYSIWYG editing.
 * Added `useAutoCompletion` flag for list fields.
@@ -30,6 +30,7 @@
 * Added support for fulltext indexes.
 * Removed `TABLE` identifier strategy and added `ULID` instead.
 * Reduced `slugLength` default and max value from 255 to 190 for better `utf8mb4` compatibility.
+* Removed support for `notify` change tracking policy which is deprecated and will be removed in Doctrine ORM 3.0.
 
 ### Generator changes
 
