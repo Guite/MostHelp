@@ -23,14 +23,6 @@ The biggest part is a reference section listing all validation rules in detail a
 * Item action position both must not be enabled for index actions.
 * Item action icons flag must not be disabled if item action style is configured to use icons only.
 
-### Referred application
-
-* The imported application must have a name. Use the real name of the bundle being imported.
-* Please specify the minimum version for the dependency. The minimum version must conform to the pattern `x.y.z`.
-* Please specify the maximum version for the dependency. The maximum version must conform to the pattern `x.y.z`.
-* The minimum version must not be greater than the maximum version.
-* You need to specify the URI of the imported application's model file.
-
 ## Model layer
 
 ### Data object

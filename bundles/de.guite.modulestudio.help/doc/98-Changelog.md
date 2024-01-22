@@ -31,6 +31,7 @@
 * Removed `TABLE` identifier strategy and added `ULID` instead.
 * Reduced `slugLength` default and max value from 255 to 190 for better `utf8mb4` compatibility.
 * Removed support for `notify` change tracking policy which is deprecated and will be removed in Doctrine ORM 3.0.
+* Removed support for referred application in favour of manual amendments in `composer.json`.
 
 ### Generator changes
 

@@ -54,7 +54,6 @@ It includes the following basic properties which are mainly, but not only used t
 An application may furthermore have the following references:
 
 * **entities** - Allows referencing one or more [data objects](#data-object).
-* **referredApplications** - Allows referencing other applications. See [below](#referred-application).
 * **relations** - Allows referencing one or more [relationships](#relationship).
 * **variables** - Allows referencing one or more [variables](#variables).
 
@@ -131,29 +130,6 @@ Can be one of the following options:
 * `DROPDOWN` - Default value. A drop-down menu containing normal links/anchors with a label and optionally an icon.
 
 For all options except `ICON` the links contain a label and optionally an additional icon (depending on the `withIcons` flags). 
-
-#### Referred application
-
-Represents an application whose model file is being imported (e.g. to reference other entities or other extensions which are incorporated by api calls).
-
-An application reference has the following fields:
-
-* **minimumVersion** - The minimum version this reference applies for. Must conform to the pattern `x.y.z`.
-* **maximumVersion** - The maximum version this reference applies for. Must conform to the pattern `x.y.z`.
-* **importURI** - URI to imported model file.
-* **dependencyType** - The type of dependency which should be used for the referred application. See [below](#application-dependency-type).
-
-#### Application dependency type
-
-Specifies the kind of dependency to a certain application.
-
-Can be one of the following options:
-
-* `REQUIREMENT` - The bundle is required, for example to join related entities.
-* `RECOMMENDATION` - The bundle is recommended, for example to provide enhanced integration functionality.
-* `CONFLICT` - The bundle is in conflict with the modeled one, for example due to overlapping functionality.
-
-The generator uses this value in the corresponding bundle dependency created in the `composer.json` file.
 
 ## Data layer
 
