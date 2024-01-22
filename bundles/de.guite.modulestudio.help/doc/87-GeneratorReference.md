@@ -104,8 +104,8 @@ Specifies the Symfony version for which the application should be generated.
 
 Can be one of the following options:
 
-* `SF70` - Targets the last Symfony 7.0.x version.
-* `SF63` - Targets the last Symfony 6.2.x version. This is the default value.
+* `SF71` - Targets the last Symfony 7.1.x version.
+* `SF70` - Targets the last Symfony 7.0.x version. This is the default value.
 
 #### Item actions position
 

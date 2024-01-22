@@ -10,7 +10,7 @@
 
 ### DSL / Modelling language changes
 
-* Target version is now a Symfony version (currently: `SF70`, `SF63`).
+* Target version is now a Symfony version (currently: `SF71`, `SF70`).
 * Removed obsolete application properties `generateMailzApi`, `generateNewsletterPlugin`, `generateTagSupport`.
 * Removed obsolete email field properties `checkMX`, `checkHost`.
 * Removed obsolete URL field property `checkDNS`.
