@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2007-2023 Axel Guckelsberger
+ * Copyright (c) 2007-2024 Axel Guckelsberger
  */
 package de.guite.modulestudio.help.tests.manual
 
