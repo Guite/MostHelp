@@ -8,7 +8,7 @@ To prevent losing the [benefits of ModuleStudio](10-Introduction.md#benefits) in
 
 ### Keep consistent
 
-When using ModuleStudio then your model is not only some sort of bootstrapping or documentation artifact. The model describes or better **is** the real application. Thus it is important for the sustainable maintenance of an application that the model does not become obsolete. It should always represent the current functionality of the project, otherwise one has to do extra work, later, to return it to a consistent state. This is especially important when one wants to regenerate the code at some later date, for example, when a new generator version introduces bug-fixes, or supports a new Zikula version with improved functionality.
+When using ModuleStudio then your model is not only some sort of bootstrapping or documentation artifact. The model describes or better **is** the real application. Thus it is important for the sustainable maintenance of an application that the model does not become obsolete. It should always represent the current functionality of the project, otherwise one has to do extra work, later, to return it to a consistent state. This is especially important when one wants to regenerate the code at some later date, for example, when a new generator version introduces bug-fixes, or supports a new Symfony version with improved functionality.
 
 To avoid losing the abstraction of model-driven development all changes to functional project requirements should be applied to the model first. Therefore you should do all important changes (like renaming an entity or other amendments, adding or moving fields, introducing new configuration settings, etc.) on model level although it might look a bit inconvenient first. Do not let your model become obsolete, as this would mean losing lots of advantages. You will thank yourself when generating again with a newer version, because manually migrating applications to a new platform version can be tedious and error-prone.
 
@@ -111,9 +111,9 @@ Before committing the new version you can show the differences using `git diff`.
 
 ## Where to inject customisation
 
-### Understand the module structure
+### Understand the bundle structure
 
-If you do not know yet how a Zikula module is structured look at the [SpecModule](https://github.com/zikula/SpecModule) which acts as an example module demonstrating the main parts and what they are used for. Remember a Zikula module is a special kind of Symfony bundle, so you might check out [further web resources](89-WebResources.md#web-resources) to learn more about it.
+If you do not know yet how a Symfony bundle is structured, you might check out [further web resources](89-WebResources.md#web-resources) to learn more about it.
 
 ### Use overriding
 

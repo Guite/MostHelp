@@ -57,11 +57,10 @@ The rough steps of the generator workflow are as follows:
 
 1. Ask for input parameters (in particular the desired output folder).
 2. Empty output directory.
-3. Export dumps of editor diagrams.
-4. Read input model.
-5. Perform validation.
-6. Execute a model-to-model transformation. This adds primary and foreign key fields as well as other derived elements.
-7. Call the actual generator workflow.
+3. Read input model.
+4. Perform validation.
+5. Execute a model-to-model transformation. This adds primary and foreign key fields as well as other derived elements.
+6. Call the actual generator workflow.
 
 ## From model to generated artifacts
 

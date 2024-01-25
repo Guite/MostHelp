@@ -4,22 +4,19 @@ This section shows how to use ModuleStudio. Starting with a general demonstratio
 
 ## Basic usage
 
-ModuleStudio organises its models in projects. A project is simply a folder within the [workspace directory](15-Installation.md#the-workspace). Each project in ModuleStudio consists of three files:
+ModuleStudio organises its models in projects. A project is simply a folder within the [workspace directory](15-Installation.md#the-workspace). Each project in ModuleStudio consists of two files:
 
 * a `*.mostapp` file which stores the actual application model;
-* a `representations.aird` file containing data for how the model is displayed in the different editors;
 * a `.project` file for project meta data.
 
 You can always have only one project opened. If you create a new application or open a project, this causes the currently opened project being closed.
 
-The `mostapp` file is the primarily important one for storing and exchanging applications. It can [imported](20-GettingStarted.md#importing-model-files) into a new ModuleStudio project at any time, so you do not need to keep the representation file with it.
+The `mostapp` file is the primarily important one for storing and exchanging applications. It can [imported](20-GettingStarted.md#importing-model-files) into a new ModuleStudio project at any time.
 
 Besides the [main menu](#main-menu), the environment can be split into two areas.
 
-1. On the left side there are the *dashboard* view and the *editor* windows. The dashboard view provides you some quick links to commonly used actions from the [main menu](#main-menu); more details are described in the [views chapter](33-Views.md#dashboard-view). Editors contain the actual notation for changing the model. For the diagram editor this consists of a canvas as well as a *palette* with the available tools. This is where the actual modelling happens. The diagram editor's palette separates the available model elements into several groups, like *Relationships*, *Fields* or *Actions*. It is possible to have multiple elements at the same time in one model for each of these types. The visible groups and tools in the palette depends on which *layers* you have enabled in the diagram. More about these layers will be explained later.
+1. On the left side there are the *dashboard* view and the *editor* windows. The dashboard view provides you some quick links to commonly used actions from the [main menu](#main-menu); more details are described in the [views chapter](33-Views.md#dashboard-view). Editors contain the actual notation for changing the model.
 2. On the right side is an arrangement of different *views*. For example there is an [outline view](33-Views#outline-view) with a miniature display of the editor window and a [properties view](33-Views#properties-view) used to edit properties of model elements. You can change the views in multiple ways, for example you can close, reopen, resize and move them. All these different possible actions are described [below](#customising-the-ui).
-
-![Editor with palette and several views](images/ui_basic.png "Editor with palette and several views")
 
 ## Main menu
 
@@ -155,5 +152,3 @@ It is even possible to use multiple editors in parallel by arranging them next t
 ![Diagram editor and textual editor side by side](images/ui_multiple_editors.png "Diagram editor and textual editor side by side")
 
 Experiment with these options and use them to meet your personal workflow.
-
-One additional hint about editor synchronisation: If you changed a model, you need to save it to let ModuleStudio reflect the changes in other opened editors.

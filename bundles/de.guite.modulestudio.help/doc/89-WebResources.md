@@ -6,9 +6,12 @@ This chapter collects links to several manuals and further documentation you wil
 
 * You can find further information on the [ModuleStudio website](https://modulestudio.de/en).
 * The [generator project](https://github.com/Guite/MostGenerator) on GitHub contains the issue tracker where you can lookup and report bugs and feature requests.
-* Further support is available in the [Zikula Slack organisation](https://zikula.slack.com/) ([join](https://joinslack.ziku.la/)).
 * Our [vendor site](http://guite.de/en) of Guite (Guckelsberger Information Technology) is where you can ask for professional support.
 
-## Zikula and individual technologies
+## Target platform technologies
 
-* Different resources are collected at [this documentation page](https://ziku.la/en/documentation.html).
+* [Symfony](https://symfony.com/)
+* [Doctrine](https://www.doctrine-project.org) Collections, DBAL, ORM
+* [Twig](https://twig.symfony.com/)
+* [EasyAdminBundle](https://symfony.com/bundles/EasyAdminBundle/4.x/index.html)
+

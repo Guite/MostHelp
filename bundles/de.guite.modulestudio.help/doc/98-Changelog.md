@@ -6,7 +6,8 @@
 
 * Updated to Eclipse 2023-12 (4.30).
 * Updated included Java version from 14.0.1 to 17.0.6
-* Fixed problem preventing embedded textual editor to open properly.
+* Removed diagram editor in favour of textual editing.
+* Removed German translations.
 
 ### DSL / Modelling language changes
 

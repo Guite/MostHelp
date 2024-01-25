@@ -43,16 +43,14 @@ This user manual is going to provide all required information to work with Modul
 
 ## What is Zikula ?
 
-The Zikula Application Framework is a powerful solution for realising web applications and websites with the help of *modules* and *themes*. It essentially uses the following libraries:
+The Zikula Application Framework is a powerful solution for realising web applications. It includes technologies fostering a dynamic modular development paradigm which allows for rapid application development.
 
 * **Symfony:** a very popular set of reusable PHP components which offers many useful abstractions, like very powerful solutions for validation and web forms.
 * **Doctrine:** a set of libraries focused on database storage and object mapping.
 * **Twig:** a flexible, fast and secure template engine.
-* **jQuery, Bootstrap, Font Awesome:** well-known components for rapid realisation of responsive and interactive frontends.
+* **Bootstrap, Font Awesome:** well-known components for rapid realisation of responsive and interactive frontends.
 
-Since Zikula already provides many basic functions for running web projects, like management for users, groups and permissions as well as means for content management, custom modules can typically focus on implementing additional data structures and behaviour. And this is where ModuleStudio can help you. Whether you do a product database, a social network or a forum: they are different from a functional point of view only. Technically they are equally implemented!
-
-A module is basically very similarly structured as a Symfony bundle. Under the hood Zikula modules and themes are nothing else than special bundle types. The main difference here is that they can be installed, enabled, disabled and uninstalled on runtime using the extension and theme management modules in the Zikula administration area.
+Since Zikula already provides many basic functions for running web projects, like management for users, groups and permissions, custom extensions (Symfony bundles) can typically focus on implementing additional data structures and behaviour. And this is where ModuleStudio can help you. Whether you do a product database, a social network or a forum: they are different from a functional point of view only. Technically they are equally implemented!
 
 ## Component overview
 
@@ -65,18 +63,13 @@ The inner core of MOST is a domain-specific language (DSL) for Zikula extensions
 * **Meta model:** defines the essential concepts of the ModuleStudio language, that is which model elements may exist and how they are allowed to work with each other. This allows reusing the basic domain concepts at several places, like validation, editors, generators and so on. The meta model is not visible for the user, but used by other components in the background.
 * **Constraints:** there are [many validation rules](50-Validation.md#validation) to enrich the modelling language with more precise knowledge. These constraints ensure that the generator can only be started for valid models. For many common problems there are quick fixes offered proposing possible solutions to solve a certain error.
 
-### Editors
+### Editor
 
-The user interface consists of different types of editors which may include event different kinds of how information is described. The following list gives an impression about what is possible as well as the pros and cons. See the [user interface chapter](30-UserInterface.md#user-interface) for more detailed information about the ModuleStudio UI components.
-
-* **Graphical** notations are convenient for modelling edges between different nodes. They are not that well suited for creating huge lists of similar elements for instance. ModuleStudio offers a graphical editor for creating and changing models for describing different applications. This editor consists of different layers and is the primary editor of ModuleStudio. There is a dedicated chapter about the [diagram editor](32-DiagramEditor.md#diagram-editor).
-* **Textual** syntax is very nice for rapid creation of structures. It becomes less handy for relationships though. There is a dedicated chapter about the [textual editor](36-TextualEditor.md#textual-editor).
-* **Structural** views, for example trees, forms or tables, are another possible viewpoint for describing a model. ModuleStudio earlier included table editors, but these have been removed as their usability was rather clumsy.
-* **Hybrid** modelling is where ModuleStudio is heading to in future. This combines different kinds of editors in the same UI. One concrete use case is an [embedded textual editor](32-DiagramEditor.md#embedded-textual-editor) inside the graphical editor allowing to specify details within the context of a certain model element.
+The user interface of ModuleStudio includes a textual editor for describing the models. See the [user interface chapter](30-UserInterface.md#user-interface) for more detailed information about the ModuleStudio UI components. Also there is a dedicated chapter about the [textual editor](36-TextualEditor.md#textual-editor).
 
 ### Generator
 
-The generator creates source code for a Zikula extension from a given application model. You can read more about this in the [generator chapter](60-GeneratingApplications.md#generating-applications). Also important is another chapter about [customisation and maintenance](70-CustomisationAndMaintenance.md#customisation-and-maintenance) of generated applications.
+The generator creates source code for a Symfony bundle from a given application model. You can read more about this in the [generator chapter](60-GeneratingApplications.md#generating-applications). Also important is another chapter about [customisation and maintenance](70-CustomisationAndMaintenance.md#customisation-and-maintenance) of generated applications.
 
 ### Overview chart
 

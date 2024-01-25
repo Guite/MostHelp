@@ -1,11 +1,8 @@
 # Textual editor
 
-ModuleStudio also includes a textual syntax notation.
+ModuleStudio includes an editor that can be used for textual syntax notation.
 
-The textual editor can be used in two different ways:
-
-1. **Included in the diagram editor:** see [this section](32-DiagramEditor.md#embedded-textual-editor).
-2. **Standalone:** to use the textual editor in a separate window open it from either the dashboard view or the main menu.
+To use the textual editor open it from either the dashboard view or the main menu.
 
 ## Basic features of textual editor
 

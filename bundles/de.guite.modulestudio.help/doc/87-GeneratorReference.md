@@ -971,7 +971,7 @@ For each entity the generator creates some templates to be included in the [edit
 
 Example for inline editing:
 
-![Inline editing](images/example_inline_editing.png "Inline editing")
+![Inline editing](images/generator_example_inline_editing.png "Inline editing")
 
 Embedded editing is limited to single-valued relationship sides at the moment. So you can for example embed editing a category into editing an article, but not multiple categories.
 
@@ -1104,5 +1104,5 @@ If you need to use a more custom workflow or if you want to let several entities
 ### Further resources
 
 * [Symfony workflow component](https://symfony.com/doc/current/workflow.html)
-* [Zikula workflow additions](https://docs.ziku.la/Configuration/Workflows/index.html)
+* [Zikula workflow additions](https://github.com/zikula/core/blob/main/docs/Development/Misc/Workflows.md)
 

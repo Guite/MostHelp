@@ -8,7 +8,6 @@ The dashboard view is just a control panel providing you quick links to some com
 
 * ![New application](images/menu_file_new.png) New application - Starts the wizard for [creating a new model project](20-GettingStarted.md#create-your-first-application-in-10-minutes).
 * ![Open project](images/menu_file_open_project.png) Open project - Displays a dialog for selecting an existing project to open.
-* ![Diagram editor](images/menu_window_editors_diagram.png) Diagram editor - Opens the [diagram editor](32-DiagramEditor.md#diagram-editor).
 * ![Text editor](images/menu_window_editors_text.png) Text editor - Opens the [textual editor](36-TextualEditor.md#textual-editor).
 
 ## Error log view
@@ -76,8 +75,6 @@ The input field at the top allows for easy filtering. This allows you to rapidly
 
 The star, `*`, is a joker character, allowing you to search with more complicated patterns. Regarding this, an element is found if there is a word in its name or one of its attributes that match with the text in the filter, so if you want to search within words too, add `*` at the start of your pattern. Also, you can navigate along the matching elements with `↑` and `↓`, causing the diagram moving to the selected element immediately.
 
-When using the diagram editor it is also possible to use the outline view for hiding and revealing elements and/or their labels. More information can be found [here](32-DiagramEditor.md#hiding-and-showing-elements-and-labels).
-
 ## Properties view
 
 The properties view allows you to change the properties of model elements. Depending on your currently selected element it may contain no, one or multiple tabs. For most elements the following tabs are used:
@@ -129,7 +126,7 @@ If any quick fixes are available for a certain problem you can choose one of the
 
 ![Quick fix dialog](images/ui_views_problems_quickfix_dialog.png "Quick fix dialog")
 
-After you selected a proposed fix and clicked on the *Finish* button, the corresponding action will be performed on the model and validation will be executed again. Afterwards the changes should be reflected in the diagram and the problem should be gone.
+After you selected a proposed fix and clicked on the *Finish* button, the corresponding action will be performed on the model and validation will be executed again. Afterwards the changes should be reflected in the editor and the problem should be gone.
 
 ## Help view
 
