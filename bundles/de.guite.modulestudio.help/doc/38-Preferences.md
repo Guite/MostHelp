@@ -8,12 +8,6 @@ Here you can enable automatic save for the editors. You can specify an interval 
 
 ![AutoSave preferences](images/ui_preferences_autosave.png "AutoSave preferences")
 
-## Help preferences
-
-The help section allows you to change some context settings about how help information is displayed. For example you can specify that the [manual](30-UserInterface.md#help-system) should always be opened in an external web browser instead of the included one.
-
-![Help preferences](images/ui_preferences_help.png "Help preferences")
-
 ## ModuleStudio base preferences
 
 * *Default theme*: choose whether you like to have the light or dark [theme](30-UserInterface.md#themes) per default.

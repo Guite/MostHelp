@@ -112,19 +112,8 @@ Note that the display may not be correct immediately after switching the theme. 
 
 The help menu contains actions related to user assistance.
 
-* ![Manual](images/menu_help_manual.png) Manual - Opens the [help system](#help-system).
-* ![Search](images/menu_help_search.png) Search - Shows the [help view](33-Views.md#help-view) and opens the search function in it.
+* ![Manual](images/menu_help_manual.png) Manual - Opens this documentation in a web browser.
 * ![About](images/menu_help_about.png) About - Opens the About dialog.
-
-#### Help system
-
-While you can browse the entire help using the [help view](33-Views.md#help-view) only, you can also open the help system in a dedicated window using the *Help > Manual* main menu entry. This is particularly useful if you have a small screen and need the available space for the editor.
-
-The help system shows the manual using an internal web browser (you can also use an external instead by changing the [preferences](38-Preferences.md#preferences) accordingly).
-
-![The help system](images/ui_help_system.png "The help system")
-
-It is worth exploring the functionality offered by this included help. You can not only search for desired topics, there is also a keyword index. Also you can create and manage custom bookmarks for finding interesting sections again with ease.
 
 ## Main UI components
 
@@ -141,7 +130,7 @@ Most parts of the user interface can be customised, like one may expect from an 
 
 ![Views can be arbitrarily arranged](images/ui_view_arrangement.png "Views can be arbitrarily arranged")
 
-You can also close editors and views by clicking on the cross symbol on the top right of their heading tab. To reopen them again you need to use the corresponding entry of the *Window* [main menu](#window-menu) sub menus named *Editors* and *Views*. There is one exception: the [help view](33-Views.md#help-view) is reopened using the *Help* [main menu](#help-menu).
+You can also close editors and views by clicking on the cross symbol on the top right of their heading tab. To reopen them again you need to use the corresponding entry of the *Window* [main menu](#window-menu) sub menus named *Editors* and *Views*.
 
 Also you can minimise and maximise views by using the small icons at their top right corner. If a view is minimised their icons appear in a sidebar at the right of the application window. If you click on such an icon the view appears in a modal until the focus is lost again.
 
