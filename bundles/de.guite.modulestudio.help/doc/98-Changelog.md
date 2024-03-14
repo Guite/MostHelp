@@ -4,7 +4,7 @@
 
 ### Product / Tooling changes
 
-* Updated to Eclipse 2023-12 (4.30).
+* Updated to Eclipse 2024-03 (4.31).
 * Updated included Java version from 14.0.1 to 17.0.6
 * Removed diagram editor in favour of textual editing.
 * Removed German translations.
